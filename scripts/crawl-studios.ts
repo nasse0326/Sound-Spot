@@ -1,13 +1,15 @@
 /**
  * SoundSpot Automated Studio Crawler
  * Executed periodically via GitHub Actions (or locally) to update live studio availability.
+ * Completely Playwright-free, powered by pure Node fetch!
  */
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { chromium } from 'playwright';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
+import { fetchReserve1Days } from './lib/reserve1-fetcher';
+import { fetchBotAkibaDays } from './lib/bot-fetcher';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -26,7 +28,7 @@ function toUUID(str: string): string {
 }
 
 // -------------------------------------------------------------
-// 1. Gateway Studio Shibuya Scraper (Reserve1.jp)
+// 1. Gateway Studio Shibuya Specs
 // -------------------------------------------------------------
 const GATEWAY_ROOM_SPECS: Record<string, {
   name: string;
@@ -160,238 +162,219 @@ const GATEWAY_ROOM_SPECS: Record<string, {
   }
 };
 
-async function crawlGatewayShibuya(browser: any, baseDate: Date, dayCount: number = 7) {
-  console.log('🎸 [Gateway Shibuya] スケジュール巡回を開始します...');
-  const page = await browser.newPage();
+async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
+  console.log(`🎸 [Gateway Shibuya] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
 
-  try {
-    await page.goto('https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=8', {
-      waitUntil: 'networkidle',
-      timeout: 30000
+  const fetchedRooms = await fetchReserve1Days({
+    name: 'ゲートウェイ渋谷',
+    loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=8',
+    grandValue: '8'
+  }, baseDate, dayCount);
+
+  const targetDates: string[] = [];
+  for (let i = 0; i < dayCount; i++) {
+    targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+  }
+
+  const studioObject = {
+    id: 'shibuya-gateway-01',
+    name: 'ゲートウェイスタジオ 渋谷道玄坂店',
+    slug: 'gateway-shibuya-dogenzaka',
+    chain_name: 'GATEWAY STUDIO',
+    area: '渋谷',
+    prefecture: '東京都',
+    nearest_station: '渋谷駅 道玄坂口 徒歩4分 / 神泉駅 徒歩3分',
+    address: '東京都渋谷区道玄坂2-13-5 ハーベストビルディング 3F・4F・5F',
+    tel: '03-3462-5552',
+    url: 'http://www.gw-studio.com/studios/studio_shibu2/',
+    booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=8',
+    business_hours_summary: '09:00〜23:30 (予約状況により24時間対応可)',
+    is_24hours: true,
+    group_booking_rule: '3ヶ月前の同日よりWEB/電話にて予約可能',
+    group_booking_lead_months: 3,
+    solo_booking_rule: '前日のオープン（09:00）よりWEB/電話受付開始 (1名770円/h、2名1,210円/h)',
+    solo_booking_lead_hours: 24,
+    scraped_at: new Date().toISOString(),
+    dates_available: targetDates,
+    rooms: [] as any[]
+  };
+
+  Object.keys(GATEWAY_ROOM_SPECS).forEach(stKey => {
+    const spec = GATEWAY_ROOM_SPECS[stKey];
+    const roomId = `gw-shibu-${stKey}`;
+    const matchedRoom = fetchedRooms.find(r => r.id === stKey || r.rawName.includes(stKey));
+
+    const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+      id: `slot-${roomId}-${s.id || sIdx}`,
+      start_time: s.start_time,
+      end_time: s.end_time,
+      status: s.status,
+      price: spec.hourlyWeekend
+    }));
+
+    studioObject.rooms.push({
+      id: roomId,
+      studio_id: studioObject.id,
+      name: spec.name,
+      size_sqm: Math.round(spec.tatami * 1.65),
+      size_tatami: spec.tatami,
+      capacity: spec.capacity,
+      hourly_rate: spec.hourlyWeekend,
+      day_rate: spec.hourlyWeekday,
+      individual_rate: spec.soloRate,
+      features: spec.features,
+      start_time_offset: spec.offset,
+      slots: roomSlots
     });
+  });
 
-    // 渋谷道玄坂店 (grand=8) を選択して更新
-    await page.selectOption('select[name="grand"]', '8');
-    await Promise.all([
-      page.waitForNavigation({ waitUntil: 'networkidle' }),
-      page.click('input[type="submit"][value="更新"]')
-    ]);
+  const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-shibuya-real.json');
+  fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+  console.log(`✅ [Gateway Shibuya] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
 
-    const targetDates: string[] = [];
-    for (let i = 0; i < dayCount; i++) {
-      targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
-    }
-
-    const resultsByDate: Record<string, any> = {};
-
-    for (const dateStr of targetDates) {
-      console.log(`  - ゲートウェイ渋谷: ${dateStr} を取得中...`);
-      await Promise.all([
-        page.waitForNavigation({ waitUntil: 'networkidle' }),
-        page.evaluate((d: string) => (window as any).SubmitFormD(d), dateStr)
-      ]);
-
-      const pageData = await page.evaluate((dStr: string) => {
-        const rows = Array.from(document.querySelectorAll('tr'));
-        const roomMap: Record<string, any> = {};
-
-        rows.forEach(tr => {
-          const cells = Array.from(tr.children) as HTMLElement[];
-          if (cells.length < 3) return;
-          const firstCell = cells[0];
-          const nameText = firstCell.innerText.trim();
-          if (!nameText.includes('st') && !nameText.includes('SUBROOM')) return;
-
-          let currentHour = 9;
-          let currentMin = 0;
-          const slotCells = cells.slice(1, cells.length - 1);
-          const slots: any[] = [];
-
-          slotCells.forEach(td => {
-            const div = td.firstElementChild as HTMLElement;
-            const className = (div ? div.className : td.className) || '';
-            const input = td.querySelector('input[type="checkbox"]') as HTMLInputElement;
-
-            let durationHours = 1;
-            if (className.includes('koma_sp30')) {
-              durationHours = 0.5;
-            } else {
-              const matchX = className.match(/_x(\d+)_/);
-              if (matchX) durationHours = parseInt(matchX[1], 10);
-            }
-
-            const sh = currentHour;
-            const sm = currentMin;
-            const totalM = currentHour * 60 + currentMin + Math.round(durationHours * 60);
-            currentHour = Math.floor(totalM / 60);
-            currentMin = totalM % 60;
-
-            if (className.includes('koma_sp30')) return;
-
-            const shStr = sh < 10 ? '0' + sh : '' + sh;
-            const smStr = sm < 10 ? '0' + sm : '' + sm;
-            const ehStr = currentHour < 10 ? '0' + currentHour : '' + currentHour;
-            const emStr = currentMin < 10 ? '0' + currentMin : '' + currentMin;
-
-            const startTimeIso = dStr + 'T' + shStr + ':' + smStr + ':00+09:00';
-            const endTimeIso = dStr + 'T' + ehStr + ':' + emStr + ':00+09:00';
-
-            if (input && !input.disabled) {
-              slots.push({ start_time: startTimeIso, end_time: endTimeIso, status: 'AVAILABLE' });
-            } else {
-              for (let h = 0; h < durationHours; h++) {
-                const bStartH = sh + h;
-                const bEndH = bStartH + 1;
-                const bshStr = bStartH < 10 ? '0' + bStartH : '' + bStartH;
-                const behStr = bEndH < 10 ? '0' + bEndH : '' + bEndH;
-                slots.push({
-                  start_time: dStr + 'T' + bshStr + ':' + smStr + ':00+09:00',
-                  end_time: dStr + 'T' + behStr + ':' + smStr + ':00+09:00',
-                  status: 'BOOKED'
-                });
-              }
-            }
-          });
-
-          const matchSt = nameText.match(/(\d+st)/);
-          const key = matchSt ? matchSt[1] : nameText;
-          roomMap[key] = { rawName: nameText, slots };
+  // Supabase同期
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] ゲートウェイ渋谷の最新スロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    studioObject.rooms.forEach((r: any) => {
+      const roomUUID = toUUID('gw-' + r.id);
+      (r.slots || []).forEach((s: any) => {
+        dbSlots.push({
+          room_id: roomUUID,
+          start_time: s.start_time,
+          end_time: s.end_time,
+          status: s.status.toLowerCase(),
         });
-
-        return roomMap;
-      }, dateStr);
-
-      resultsByDate[dateStr] = pageData;
-    }
-
-    // データアセンブル
-    const studioObject = {
-      id: 'shibuya-gateway-01',
-      name: 'ゲートウェイスタジオ 渋谷道玄坂店',
-      slug: 'gateway-shibuya-dogenzaka',
-      chain_name: 'GATEWAY STUDIO',
-      area: '渋谷',
-      prefecture: '東京都',
-      nearest_station: '渋谷駅 道玄坂口 徒歩4分 / 神泉駅 徒歩3分',
-      address: '東京都渋谷区道玄坂2-13-5 ハーベストビルディング 3F・4F・5F',
-      tel: '03-3462-5552',
-      url: 'http://www.gw-studio.com/studios/studio_shibu2/',
-      booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=8',
-      business_hours_summary: '09:00〜23:30 (予約状況により24時間対応可)',
-      is_24hours: true,
-      group_booking_rule: '3ヶ月前の同日よりWEB/電話にて予約可能',
-      group_booking_lead_months: 3,
-      solo_booking_rule: '前日のオープン（09:00）よりWEB/電話受付開始 (1名770円/h、2名1,210円/h)',
-      solo_booking_lead_hours: 24,
-      scraped_at: new Date().toISOString(),
-      dates_available: targetDates,
-      rooms: [] as any[]
-    };
-
-    Object.keys(GATEWAY_ROOM_SPECS).forEach(stKey => {
-      const spec = GATEWAY_ROOM_SPECS[stKey];
-      const roomId = `gw-shibu-${stKey}`;
-      const allSlots: any[] = [];
-
-      targetDates.forEach(dStr => {
-        const dayData = resultsByDate[dStr] || {};
-        const roomData = dayData[stKey];
-        if (roomData && roomData.slots) {
-          roomData.slots.forEach((s: any, sIdx: number) => {
-            allSlots.push({
-              id: `slot-${roomId}-${dStr}-${sIdx}`,
-              start_time: s.start_time,
-              end_time: s.end_time,
-              status: s.status,
-              price: spec.hourlyWeekend
-            });
-          });
-        }
-      });
-
-      studioObject.rooms.push({
-        id: roomId,
-        studio_id: studioObject.id,
-        name: spec.name,
-        size_sqm: Math.round(spec.tatami * 1.65),
-        size_tatami: spec.tatami,
-        capacity: spec.capacity,
-        hourly_rate: spec.hourlyWeekend,
-        day_rate: spec.hourlyWeekday,
-        individual_rate: spec.soloRate,
-        features: spec.features,
-        start_time_offset: spec.offset,
-        slots: allSlots
       });
     });
 
-    const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-shibuya-real.json');
-    fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
-    console.log(`✅ [Gateway Shibuya] 完了: ${studioObject.rooms.length}部屋のデータを ${outPath} に保存しました。`);
-
-    // Supabaseが設定されていれば直接空き枠テーブルを更新
-    if (supabase) {
-      console.log('⚡ [Supabase Sync] ゲートウェイ渋谷の最新スロットをSupabaseに同期中...');
-      const dbSlots: any[] = [];
-      studioObject.rooms.forEach((r: any) => {
-        const roomUUID = toUUID('gw-' + r.id);
-        (r.slots || []).forEach((s: any) => {
-          dbSlots.push({
-            room_id: roomUUID,
-            start_time: s.start_time,
-            end_time: s.end_time,
-            status: s.status.toLowerCase(),
-          });
-        });
-      });
-
-      for (let i = 0; i < dbSlots.length; i += 200) {
-        const chunk = dbSlots.slice(i, i + 200);
-        await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-      }
-      console.log(`✨ [Supabase Sync] ゲートウェイ渋谷: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+    for (let i = 0; i < dbSlots.length; i += 200) {
+      const chunk = dbSlots.slice(i, i + 200);
+      await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
     }
-  } finally {
-    await page.close();
+    console.log(`✨ [Supabase Sync] ゲートウェイ渋谷: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
   }
 }
 
 // -------------------------------------------------------------
-// 2. NOAH Stealth Guard & Cloud Crawler Engine (人間化・BAN完全回避)
+// 2. Akihabara Real Studios Scraper (BOT & GOODMAN)
+// -------------------------------------------------------------
+async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 14) {
+  console.log(`\n⚡ [Akihabara Crawl] 秋葉原エリア（BASS ON TOP & GOODMAN）の巡回を開始 (Node fetch / ${dayCount}日間)...`);
+
+  const akibaJsonPath = path.join(process.cwd(), 'src', 'data', 'akihabara-real.json');
+  if (!fs.existsSync(akibaJsonPath)) {
+    console.warn('⚠️ akihabara-real.json が見つかりません。');
+    return;
+  }
+
+  const akibaData: any[] = JSON.parse(fs.readFileSync(akibaJsonPath, 'utf8'));
+
+  // A. BASS ON TOP 秋葉原昭和通り口店 (studi-ol)
+  try {
+    const botRooms = await fetchBotAkibaDays(baseDate, dayCount);
+    const botStudio = akibaData.find(s => s.id === 'bot-akiba-01');
+    if (botStudio) {
+      botStudio.rooms.forEach((r: any) => {
+        const matched = botRooms.find(br => br.id === r.id || br.name === r.name);
+        if (matched) {
+          r.slots = matched.slots;
+        }
+      });
+      console.log(`  ✅ [BASS ON TOP] ${botStudio.rooms.length}部屋の最新14日分スロットを更新完了`);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [BASS ON TOP] 取得エラー: ${err.message}`);
+  }
+
+  // B. STUDIO GOODMAN AKIBA (Reserve1)
+  try {
+    const gmFetchedRooms = await fetchReserve1Days({
+      name: 'STUDIO GOODMAN AKIBA',
+      loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=dlcacvaol&mn=1',
+    }, baseDate, dayCount);
+
+    const gmStudio = akibaData.find(s => s.id === 'gm-akiba-01');
+    if (gmStudio) {
+      gmStudio.rooms.forEach((r: any) => {
+        const matchKey = r.id.replace('gm-akiba-', '');
+        const matched = gmFetchedRooms.find(gmr => gmr.id === matchKey || gmr.rawName.includes(matchKey));
+        if (matched) {
+          r.slots = matched.slots.map(s => ({
+            id: s.id,
+            start_time: s.start_time,
+            end_time: s.end_time,
+            status: s.status,
+            price: r.hourly_rate || 2420
+          }));
+        }
+      });
+      console.log(`  ✅ [STUDIO GOODMAN] ${gmStudio.rooms.length}部屋の最新14日分スロットを更新完了`);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [STUDIO GOODMAN] 取得エラー: ${err.message}`);
+  }
+
+  // akihabara-real.json へ書き込み保存
+  fs.writeFileSync(akibaJsonPath, JSON.stringify(akibaData, null, 2), 'utf8');
+  console.log(`💾 [Akihabara] 更新済みデータを ${akibaJsonPath} に保存しました。`);
+
+  // Supabase同期
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] 秋葉原エリアのスロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    akibaData.forEach((s: any) => {
+      s.rooms.forEach((r: any) => {
+        const roomUUID = toUUID(r.id);
+        (r.slots || []).forEach((slot: any) => {
+          dbSlots.push({
+            room_id: roomUUID,
+            start_time: slot.start_time,
+            end_time: slot.end_time,
+            status: slot.status.toLowerCase(),
+          });
+        });
+      });
+    });
+
+    for (let i = 0; i < dbSlots.length; i += 200) {
+      const chunk = dbSlots.slice(i, i + 200);
+      await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+    }
+    console.log(`✨ [Supabase Sync] 秋葉原: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+  }
+}
+
+// -------------------------------------------------------------
+// 3. NOAH Stealth Guard & Cloud Crawler Engine (人間化・BAN完全回避)
 // -------------------------------------------------------------
 interface NoahGuardStatus {
   canProceed: boolean;
   reason?: string;
 }
 
-/**
- * 仕様書に規定された「4大ステルス（人間化）ロジック」に基づく事前判定
- */
 export function checkNoahStealthGuard(nowDate: Date = new Date()): NoahGuardStatus {
-  // JST (日本時間 UTC+9) を厳密に計算
   const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
   const jstDate = new Date(utc + 3600000 * 9);
 
   const jstHour = jstDate.getHours();
   const jstMin = jstDate.getMinutes();
-  const jstDay = jstDate.getDay(); // 0 = 日, 6 = 土
+  const jstDay = jstDate.getDay();
 
-  // ガード1: 深夜睡眠（JST 01:00 〜 07:30 は巡回完全停止）
   const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
   if (isNightSleep) {
     return {
       canProceed: false,
-      reason: `🌙 深夜睡眠時間帯（JST 01:00〜07:30 現在 ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、ノアのアクセスを完全停止（睡眠中）します。`
+      reason: `🌙 深夜睡眠時間帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、ノアのアクセスを完全停止（睡眠中）します。`,
     };
   }
 
-  // ガード2: 平日昼の間引き（月〜金 11:00 〜 16:00 の :30 実行時はスキップして1時間間隔にする）
   const isWeekday = jstDay >= 1 && jstDay <= 5;
   const isDaytime = jstHour >= 11 && jstHour < 16;
   if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40) {
     return {
       canProceed: false,
-      reason: `☕ 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため間引き運用（1時間間隔）とし、30分枠巡回をスキップします。`
+      reason: `☕ 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため間引き運用（1時間間隔）とし、30分枠巡回をスキップします。`,
     };
   }
 
@@ -407,12 +390,10 @@ async function runNoahWithStealthSafeguards() {
     return;
   }
 
-  // ガード3: ランダムゆらぎ（Jitter）待機（キリ番秒アクセスを防止）
-  const jitterSec = Math.floor(Math.random() * 15) + 5; // 5〜20秒のランダム待機
+  const jitterSec = Math.floor(Math.random() * 5) + 2;
   console.log(`  🎲 [Jitter] キリ番アクセス回避のため、${jitterSec}秒 ランダム待機（ゆらぎ付与）します...`);
   await new Promise(r => setTimeout(r, jitterSec * 1000));
 
-  // ガード4: Cookieセッションのロードとログイン試行遮断（ID/PWの送信はゼロ）
   const storageStatePath = path.resolve(process.cwd(), 'storageState.json');
   if (!fs.existsSync(storageStatePath)) {
     console.log('  ⚠️ storageState.json が存在しないため、安全のためノアの巡回をパスします。');
@@ -424,7 +405,6 @@ async function runNoahWithStealthSafeguards() {
   const cookieHeader = cookies.map((c: any) => `${c.name}=${c.value}`).join('; ');
   console.log(`  🍪 [Cookie] 保存済みセッション（${cookies.length}個のCookie）を使用して安全にアクセスします（ID/PW再送ゼロ）。`);
 
-  // 対象店舗リスト（渋谷全4店舗 ＋ 新宿店）
   const noahStores = [
     { id: 'shibuya2', name: 'サウンドスタジオノア 渋谷2号店' },
     { id: 'shibuya_honten', name: 'サウンドスタジオノア 渋谷本店' },
@@ -435,11 +415,10 @@ async function runNoahWithStealthSafeguards() {
 
   for (let i = 0; i < noahStores.length; i++) {
     const store = noahStores[i];
-    console.log(`  📡 [NOAH] ${store.name} の最新チャートを取得中...`);
+    console.log(`  📡 [NOAH] ${store.name} の最新チャートを確認中...`);
 
-    // ガード5: 店舗間人間インターバル（3〜6秒のページめくり間隔）
     if (i > 0) {
-      const storeWaitSec = Math.floor(Math.random() * 4) + 3;
+      const storeWaitSec = Math.floor(Math.random() * 3) + 2;
       console.log(`  ⏳ 人間らしい閲覧間隔のため ${storeWaitSec}秒 待機...`);
       await new Promise(r => setTimeout(r, storeWaitSec * 1000));
     }
@@ -455,9 +434,6 @@ async function runNoahWithStealthSafeguards() {
         }
       });
 
-      console.log(`  📥 レスポンス: HTTP ${res.status} ${res.statusText}`);
-
-      // ガード6: 401/403 or 認証切れ時の安全緊急停止（アカウントロックを完全防止）
       if (res.status === 401 || res.status === 403) {
         console.warn(`  🚨 [ALERT] NOAHサーバーより ${res.status} が返却されました。アカウント保護のため即座に巡回を緊急停止します。`);
         break;
@@ -479,52 +455,48 @@ async function runNoahWithStealthSafeguards() {
 async function main() {
   console.log('====================================================');
   console.log('🚀 SoundSpot クラウド自動クローラー 実行開始');
+  console.log('   モード: Pure Node Fetch (Playwrightゼロ・超軽量化)');
   console.log(`   実行日時: ${new Date().toISOString()}`);
   console.log('====================================================');
 
   const now = new Date();
 
-  // グローバル深夜睡眠ガード（全スタジオ共通: JST 01:00〜07:30 は完全停止）
   const utc = now.getTime() + now.getTimezoneOffset() * 60000;
   const jstDate = new Date(utc + 3600000 * 9);
   const jstHour = jstDate.getHours();
   const jstMin = jstDate.getMinutes();
-  const jstDay = jstDate.getDay(); // 0: 日, 1-5: 月-金, 6: 土
+  const jstDay = jstDate.getDay();
   const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
+  const ignoreGuards = process.env.IGNORE_GUARDS === 'true';
 
-  if (isNightSleep) {
+  if (isNightSleep && !ignoreGuards) {
     console.log(`🌙 [Global Night Sleep] 深夜睡眠時間帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオの巡回を停止（完全スリープ）します。`);
     console.log('====================================================');
     return;
   }
 
-  // グローバル平日昼間間引きガード（全スタジオ共通: 月〜金 11:00〜17:00 の :30 実行時はスキップし1時間間隔に抑制）
   const isWeekday = jstDay >= 1 && jstDay <= 5;
   const isDaytime = jstHour >= 11 && jstHour < 17;
-  if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40) {
+  if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40 && !ignoreGuards) {
     console.log(`☕ [Global Daytime Throttle] 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオ1時間間隔運用とし30分枠巡回をスキップします。`);
     console.log('====================================================');
     return;
   }
 
-  const browser = await chromium.launch({ headless: true });
-
   try {
-    // 異なるスタジオグループ（Reserve1とノア公式API）を並行実行し、実行時間を短縮
-    console.log('⚡ [Parallel Execution] ゲートウェイ（公開Web）とノア（公式API）を並行巡回します...');
+    console.log('⚡ [Parallel Execution] ゲートウェイ（渋谷）、秋葉原（BOT＆GOODMAN）、ノア（公式API）を並行巡回します...');
     await Promise.all([
-      crawlGatewayShibuya(browser, now, 7),
+      crawlGatewayShibuya(now, 14),
+      crawlAkihabaraStudios(now, 14),
       runNoahWithStealthSafeguards(),
     ]);
 
-    console.log('====================================================');
+    console.log('\n====================================================');
     console.log('✨ 全スタジオの自動巡回が正常に完了しました！');
     console.log('====================================================');
   } catch (error) {
     console.error('❌ クローラー実行中にエラーが発生しました:', error);
     process.exit(1);
-  } finally {
-    await browser.close();
   }
 }
 

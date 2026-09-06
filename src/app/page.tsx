@@ -25,7 +25,7 @@ import {
 export default function HomePage() {
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => format(today, 'yyyy-MM-dd'), [today]);
-  const maxDateStr = useMemo(() => format(addDays(today, 21), 'yyyy-MM-dd'), [today]);
+  const maxDateStr = useMemo(() => format(addDays(today, 14), 'yyyy-MM-dd'), [today]);
 
   // 検索フィルター状態
   const [filters, setFilters] = useState<SearchFilterParams>({

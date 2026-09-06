@@ -30,7 +30,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
 }) => {
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => format(today, 'yyyy-MM-dd'), [today]);
-  const maxDateStr = useMemo(() => format(addDays(today, 21), 'yyyy-MM-dd'), [today]);
+  const maxDateStr = useMemo(() => format(addDays(today, 14), 'yyyy-MM-dd'), [today]);
 
   const handleBookingTypeChange = (type: BookingType) => {
     onChange({ ...filters, bookingType: type });
@@ -107,7 +107,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
             className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 sm:py-2.5 text-sm text-slate-100 focus:outline-none focus:border-emerald-500 transition-colors [color-scheme:dark]"
           />
           <p className="text-[10px] text-slate-400 mt-1 flex items-center gap-1">
-            <span>※リアルタイム空き枠同期中: 本日〜3週間先まで</span>
+            <span>※リアルタイム空き枠同期中: 本日〜2週間先まで</span>
           </p>
         </div>
 
