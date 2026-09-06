@@ -510,11 +510,12 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
 
   try {
-    // 1. Gateway Studio Shibuya
-    await crawlGatewayShibuya(browser, now, 7);
-
-    // 2. NOAH Studio (Stealth Guarded)
-    await runNoahWithStealthSafeguards();
+    // 異なるスタジオグループ（Reserve1とノア公式API）を並行実行し、実行時間を短縮
+    console.log('⚡ [Parallel Execution] ゲートウェイ（公開Web）とノア（公式API）を並行巡回します...');
+    await Promise.all([
+      crawlGatewayShibuya(browser, now, 7),
+      runNoahWithStealthSafeguards(),
+    ]);
 
     console.log('====================================================');
     console.log('✨ 全スタジオの自動巡回が正常に完了しました！');

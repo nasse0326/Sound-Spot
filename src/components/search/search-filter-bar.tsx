@@ -196,7 +196,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
             onChange={(e) => onChange({ ...filters, area: e.target.value })}
             className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 sm:py-2.5 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-emerald-500"
           >
-            <option value="all">すべてのエリア（東京・千葉）</option>
+            <option value="all">すべてのエリア（渋谷・新宿・秋葉原）</option>
             {availableAreas.map((area) => (
               <option key={area} value={area}>
                 {area} エリア
