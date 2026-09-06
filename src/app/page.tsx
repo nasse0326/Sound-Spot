@@ -194,6 +194,13 @@ export default function HomePage() {
     setFilters({ ...filters, date: format(targetDate, 'yyyy-MM-dd') });
   };
 
+  // 対応スタジオ一覧モーダル表示イベント発火
+  const handleOpenSupportedStudios = (area?: string) => {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('soundspot:open-studios-modal', { detail: { area } }));
+    }
+  };
+
   return (
     <div className="space-y-6">
       {/* ヒーローセクション */}
@@ -205,32 +212,44 @@ export default function HomePage() {
           指定の日時・エリア・部屋の広さ・常設アンプから、今すぐ予約可能なスタジオを一括比較できます。
         </p>
 
-        {/* クイック日程ボタン */}
-        <div className="flex flex-wrap items-center gap-2 mt-3 text-xs">
-          <span className="text-slate-500 font-medium">ショートカット:</span>
+        {/* クイック日程ボタン & 対応スタジオショートカット */}
+        <div className="flex flex-wrap items-center justify-between gap-2 mt-3 text-xs">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-slate-500 font-medium">ショートカット:</span>
+            <button
+              onClick={() => handleQuickDate('today')}
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+            >
+              今日
+            </button>
+            <button
+              onClick={() => handleQuickDate('tomorrow')}
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+            >
+              明日
+            </button>
+            <button
+              onClick={() => handleQuickDate('sat')}
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+            >
+              今週末（土）
+            </button>
+            <button
+              onClick={() => handleQuickDate('sun')}
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+            >
+              今週末（日）
+            </button>
+          </div>
+
           <button
-            onClick={() => handleQuickDate('today')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition"
+            type="button"
+            onClick={() => handleOpenSupportedStudios()}
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/40 hover:bg-emerald-900/50 text-emerald-400 border border-emerald-800/60 transition cursor-pointer text-xs font-semibold"
           >
-            今日
-          </button>
-          <button
-            onClick={() => handleQuickDate('tomorrow')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition"
-          >
-            明日
-          </button>
-          <button
-            onClick={() => handleQuickDate('sat')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition"
-          >
-            今週末（土）
-          </button>
-          <button
-            onClick={() => handleQuickDate('sun')}
-            className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition"
-          >
-            今週末（日）
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>対応スタジオ一覧 (16店舗) を見る</span>
+            <span className="text-[10px] text-emerald-500">↗</span>
           </button>
         </div>
       </div>
