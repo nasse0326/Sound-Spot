@@ -41,7 +41,7 @@ export default function RootLayout({
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-slate-300">
                 <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
                 <span className="hidden sm:inline">稼働状況:</span>
-                <span className="font-semibold text-emerald-400">秋葉原 4店舗 / 36部屋 実データ稼働中</span>
+                <span className="font-semibold text-emerald-400">都内 6店舗 / 62部屋 実データ稼働中</span>
               </div>
             </div>
           </div>

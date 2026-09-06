@@ -140,6 +140,24 @@ flowchart TD
   - E2st (20帖), Cst+Sub (28帖), GSst (10帖), B1st (14帖), B2st (13帖), A1st (8帖), A2st (8帖), G1st (12帖), G2st (9.5帖), A3st (9帖), E1st (21帖), Booth1/2 (3帖)。
   - 00分開始と30分開始が混在。リアルタイムな空き枠データを同期。
 
+### 4.7 ゲートウェイスタジオ 渋谷道玄坂店 (GATEWAY STUDIO SHIBUYA)
+- **予約形態**: 公開Webカレンダー（Reserve1.jp / `lc=tlsccmeco&mn=8`）。
+- **認証仕様**: ゲストモードで**完全ログイン不要**。
+- **データ取得先**: 日別スケジュールテーブル（`member_select.php`、`SubmitFormD(dateStr)` フォーム送信による日別テーブルスクレイピング）。
+- **店舗特性（全12部屋）**:
+  - **3F**: 1st (15帖 :00), 2st (13帖 :00), 3st (10帖 :00), 4st (8帖 :00), 5st (8帖 Vo/Rec/Key :00), 6st (9帖 :30), 7st (12帖+専用ミーティングブース :30)
+  - **4F**: 8st (9帖 :30), 9st (9帖 :30), 10st (28帖 ゲネプロ特大 :00)
+  - **5F**: 11st (10帖 :30), 12st (18帖 :00)
+- **料金体系**:
+  - 通常練習: 8帖 ¥1,650〜¥2,310/h、10帖〜15帖 ¥1,980〜¥3,630/h、18帖 ¥2,860〜¥3,960/h、28帖特大 ¥3,300〜¥4,950/h。
+  - 個人練習: 1名 770円/h、2名 1,210円/h（全室一律、前日オープン09:00よりWEB/電話受付開始）。
+- **常設機材**:
+  - Marshall JCM900/JCM2000/JVM/DSL、Roland JC-120B、Fender Twin Reverb、Mesa/Boogie Dual Rectifier。
+  - Ampeg SVT-CL/VR/450H、Hartke 3500。
+  - Pearl Masters/RF PURE、Canopus Yaiba II 等。
+- **UI連携**:
+  - ノア渋谷2号店（14部屋）と合算され、渋谷エリアで合計26部屋の100%実データを横断検索・比較可能。
+
 ---
 
 ## 5. UI / タイムライン設計ロジック
@@ -436,10 +454,11 @@ flowchart TD
 | `scripts/capture-chart.ts` | スクリプト | ノアの内部APIからセッションを使ってスケジュール・部屋データを安全に取得するスクレイパー |
 | `src/data/akihabara-real.json` | データ | 秋葉原4スタジオ（BOT、GOODMAN、音楽館、NOAH）全36部屋の100%実データ（機材・料金・リアル空き枠） |
 | `src/lib/akiba-converter.ts` | コンバーター | 秋葉原実データJSONをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
-| `scripts/build-akiba-dataset.ts` | スクリプト | 秋葉原4スタジオの実データ（Studiol API, Reserve1, ajg.jp, NOAH）を収集・結合するバッチ |
+| `src/data/gateway-shibuya-real.json` | データ | ゲートウェイスタジオ渋谷道玄坂店 全12部屋・7日間の実データ（機材・料金・リアル空き枠 1,176スロット） |
+| `src/lib/gateway-converter.ts` | コンバーター | ゲートウェイ渋谷実データJSONをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
 | `src/data/noah-shibuya2-real.json` | データ | ノア渋谷2号店の全14部屋・3週間分の本物データ |
 | `src/lib/noah-converter.ts` | コンバーター | ノア独自のスケジュールJSONをアプリ共通の `RoomWithSlots` 形式に正規化変換するロジック |
-| `src/lib/mock-data.ts` | データソース | 全スタジオの統合データハブ。秋葉原4スタジオ実データ、ノア渋谷2実データ等を結合 |
+| `src/lib/mock-data.ts` | データソース | 全スタジオの統合データハブ。秋葉原4スタジオ（36部屋）、渋谷2スタジオ（26部屋、ノア渋谷2・ゲートウェイ渋谷）の実データを結合し都内62部屋の実データを配信 |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

@@ -2,9 +2,11 @@ import { Studio, Room, RoomEquipment, AvailabilitySlot, RoomWithSlots } from '@/
 import { format, addDays } from 'date-fns';
 import { getNoahShibuya2RealRooms } from './noah-converter';
 import { getAkihabaraRealRooms, AKIBA_STUDIOS } from './akiba-converter';
+import { GATEWAY_SHIBUYA_STUDIO, getGatewayShibuyaRealRooms } from './gateway-converter';
 
 export const MOCK_STUDIOS: Studio[] = [
   ...AKIBA_STUDIOS,
+  GATEWAY_SHIBUYA_STUDIO,
   {
     id: 'a0000000-0000-0000-0000-000000000001',
     name: 'SOUND STUDIO NOAH 渋谷2号店',
@@ -477,6 +479,9 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   // ノア渋谷2号店は実スクレイピングデータから全14部屋＆実スロットを生成
   const noahShibuya2RealRooms = getNoahShibuya2RealRooms(dateStr);
 
+  // ゲートウェイスタジオ渋谷道玄坂店は実スクレイピングデータから全12部屋＆実スロットを生成
+  const gatewayShibuyaRealRooms = getGatewayShibuyaRealRooms(dateStr);
+
   // 他店舗（PENTA新宿、ノア吉祥寺、PENTA千葉、柏音楽館）の部屋
   const otherRooms = MOCK_ROOMS
     .filter(room => room.studioId !== 'a0000000-0000-0000-0000-000000000001')
@@ -499,5 +504,5 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
       };
     });
 
-  return [...akibaRealRooms, ...noahShibuya2RealRooms, ...otherRooms];
+  return [...akibaRealRooms, ...noahShibuya2RealRooms, ...gatewayShibuyaRealRooms, ...otherRooms];
 }
