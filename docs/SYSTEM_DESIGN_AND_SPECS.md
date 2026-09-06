@@ -172,9 +172,10 @@ flowchart TD
 ### 4.5 スタジオ音楽館 アキバ店 (STUDIO ONGAKUKAN)
 - **予約形態**: 公開PHP予約システム（ajg.jp）。
 - **認証仕様**: `ReservationTop.php?id=Twb03vvjqn2fba1` より動的セッションコード（`sescode`）を自動発行。ログイン不要で閲覧可能。
-- **データ取得技術**: 軽量Node fetchパーサー（`scripts/lib/ongakukan-fetcher.ts`）。
-  - `ReservationDate.php?sescode=...&menuid=14&staffid=...` により、各部屋（`staffid=1, 2, 6, 7, 8, 12, 13`）の2週間カレンダーを2回呼び出し、向こう21日間（3週間分・計3,528スロット）を完全自動取得。
-  - ○（`AVAILABLE`）および ×（`BOOKED`）を機械判定。
+- **データ取得技術**: スタジオ別確定判定パーサー（`scripts/lib/ongakukan-fetcher.ts`）。
+  - `ReservationDate.php` のカレンダーは「全13室中、1室でも空いているか」の店舗全体指標であるため、空きのある候補コマに対して個別スタジオ選択画面 `ReservationStaff.php?sescode=...&date=YYYYMMDD&time=HHMM` を並行照会。
+  - 画面内の予約リンク（`ReservationEnq.php?staffid=X`）に当該部屋が含まれる場合のみ `AVAILABLE`、含まれない場合は `BOOKED` として部屋固有の空き状況を厳密確定。
+  - 向こう21日間（全7部屋 × 504枠 = 計3,528スロット）のリアルデータを完全同期。
 - **店舗特性（全7部屋・6帖〜50帖）**:
   - A〜G st（6帖〜15帖）およびMusic Inn（50帖）。毎時00分開始。
   - 公式料金テーブルより平日昼・土日祝料金および個人練習（前日21時受付開始）料金を完全反映。

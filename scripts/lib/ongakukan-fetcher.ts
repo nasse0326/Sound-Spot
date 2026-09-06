@@ -1,6 +1,6 @@
 /**
  * Pure Node fetch scraper for Studio Ongakukan (ajg.jp system)
- * Playwright-free, highly lightweight and fast.
+ * Accurately determines studio-specific availability using ReservationStaff.php
  */
 import { format, addDays, parse } from 'date-fns';
 
@@ -30,21 +30,19 @@ export const ONGAKUKAN_AKIBA_ROOMS: { id: string; name: string; staffId: number 
 ];
 
 /**
- * Parses a 14-day schedule table from ajg.jp ReservationDate.php
+ * Parses store-wide calendar to find candidate time slots where at least one room is available (○)
  */
-function parseScheduleHtml(html: string): { dates: string[]; slotsByDateAndHour: Record<string, Record<number, 'AVAILABLE' | 'BOOKED'>> } {
+function parseStoreWideCalendar(html: string): { dates: string[]; openSlotsByDateAndHour: Record<string, Record<number, boolean>> } {
   const trs = [...html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)];
   if (trs.length < 3) {
-    return { dates: [], slotsByDateAndHour: {} };
+    return { dates: [], openSlotsByDateAndHour: {} };
   }
 
-  // Row 0 usually contains year/month like "2026年9月"
   const row0Text = trs[0][1].replace(/<[^>]+>/g, ' ');
   const yearMonthMatch = row0Text.match(/(\d{4})年(\d{1,2})月/);
   const currentYear = yearMonthMatch ? parseInt(yearMonthMatch[1], 10) : new Date().getFullYear();
   let currentMonth = yearMonthMatch ? parseInt(yearMonthMatch[2], 10) : new Date().getMonth() + 1;
 
-  // Row 1 contains dates: e.g. "7 (月)", "8 (火)", ...
   const dateCells = [...trs[1][1].matchAll(/<(?:td|th)[^>]*>([\s\S]*?)<\/(?:td|th)>/gi)]
     .map(c => c[1].replace(/<[^>]+>/g, '').trim())
     .filter(c => c.length > 0);
@@ -56,7 +54,6 @@ function parseScheduleHtml(html: string): { dates: string[]; slotsByDateAndHour:
     const dayMatch = cell.match(/^(\d{1,2})/);
     if (dayMatch) {
       const dayNum = parseInt(dayMatch[1], 10);
-      // Month rollover (e.g. 31 -> 1)
       if (prevDayNum > 0 && dayNum < prevDayNum) {
         currentMonth++;
       }
@@ -67,12 +64,11 @@ function parseScheduleHtml(html: string): { dates: string[]; slotsByDateAndHour:
     }
   }
 
-  const slotsByDateAndHour: Record<string, Record<number, 'AVAILABLE' | 'BOOKED'>> = {};
+  const openSlotsByDateAndHour: Record<string, Record<number, boolean>> = {};
   parsedDates.forEach(d => {
-    slotsByDateAndHour[d] = {};
+    openSlotsByDateAndHour[d] = {};
   });
 
-  // Rows 2 onwards are hourly rows: "0:00", "1:00", ... "23:00"
   for (let r = 2; r < trs.length; r++) {
     const rowContent = trs[r][1];
     const cells = [...rowContent.matchAll(/<(?:td|th)[^>]*>([\s\S]*?)<\/(?:td|th)>/gi)]
@@ -91,25 +87,23 @@ function parseScheduleHtml(html: string): { dates: string[]; slotsByDateAndHour:
       const cellHtml = cells[c + 1];
       const cellText = cellHtml.replace(/<[^>]+>/g, '').trim();
 
-      if (cellText.includes('○') || cellHtml.includes('ReservationStaff.php')) {
-        slotsByDateAndHour[dateStr][hour] = 'AVAILABLE';
-      } else {
-        slotsByDateAndHour[dateStr][hour] = 'BOOKED';
-      }
+      // If '○' or link to ReservationStaff.php exists, at least 1 room is open
+      const isOpen = cellText.includes('○') || cellHtml.includes('ReservationStaff.php');
+      openSlotsByDateAndHour[dateStr][hour] = isOpen;
     }
   }
 
-  return { dates: parsedDates, slotsByDateAndHour };
+  return { dates: parsedDates, openSlotsByDateAndHour };
 }
 
 /**
- * Fetches 21 days of availability slots for all Ongakukan Akiba rooms.
+ * Fetches 21 days of accurate room-specific availability slots for Ongakukan Akiba.
  */
 export async function fetchOngakukanAkibaDays(
   baseDate: Date = new Date(),
   dayCount: number = 21
 ): Promise<OngakukanRoomData[]> {
-  console.log(`📡 [Ongakukan] 音楽館アキバ店のリアル空き枠を取得中 (Node fetch / ${dayCount}日間)...`);
+  console.log(`📡 [Ongakukan] 音楽館アキバ店のスタジオ別リアル空き枠を取得中 (ReservationStaff.php連携 / ${dayCount}日間)...`);
 
   const topUrl = 'https://www.ajg.jp/shop/ReservationTop.php?id=Twb03vvjqn2fba1';
   const resTop = await fetch(topUrl, {
@@ -126,80 +120,129 @@ export async function fetchOngakukanAkibaDays(
   }
   const sescode = sesMatch[1];
 
-  // Target dates list (ISO format)
+  // 1. 店舗全体カレンダーを取得（1回目: 14日分）
+  const dateUrl1 = `https://www.ajg.jp/shop/ReservationDate.php?sescode=${sescode}&menuid=14`;
+  const resDate1 = await fetch(dateUrl1, {
+    headers: { 'User-Agent': 'Mozilla/5.0', 'Cookie': cookieHeader }
+  });
+  const htmlDate1 = await resDate1.text();
+  const parsedCal1 = parseStoreWideCalendar(htmlDate1);
+
+  // 2. 店舗全体カレンダーを取得（2回目: 3週目以降）
+  const nextDayStr = format(addDays(baseDate, 14), 'yyyyMMdd');
+  const dateUrl2 = `https://www.ajg.jp/shop/ReservationDate.php?sescode=${sescode}&menuid=14&theday=${nextDayStr}`;
+  const resDate2 = await fetch(dateUrl2, {
+    headers: { 'User-Agent': 'Mozilla/5.0', 'Cookie': cookieHeader }
+  });
+  const htmlDate2 = await resDate2.text();
+  const parsedCal2 = parseStoreWideCalendar(htmlDate2);
+
+  const mergedOpenSlots: Record<string, Record<number, boolean>> = {
+    ...parsedCal1.openSlotsByDateAndHour,
+    ...parsedCal2.openSlotsByDateAndHour,
+  };
+
+  // Target date strings
   const targetDateStrings: string[] = [];
   for (let i = 0; i < dayCount; i++) {
     targetDateStrings.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
   }
 
+  // Identify all (date, hour) pairs that need studio resolution (i.e. where store is open '○')
+  const slotsToResolve: { dateStr: string; dateYmd: string; hour: number; timeParam: string }[] = [];
+  for (const dateStr of targetDateStrings) {
+    const hoursMap = mergedOpenSlots[dateStr];
+    if (!hoursMap) continue;
+
+    const dateYmd = dateStr.replace(/-/g, '');
+    for (let h = 0; h < 24; h++) {
+      if (hoursMap[h] === true) {
+        const timeParam = `${String(h).padStart(2, '0')}00`;
+        slotsToResolve.push({ dateStr, dateYmd, hour: h, timeParam });
+      }
+    }
+  }
+
+  console.log(`  🔍 [Ongakukan] 検証対象: ${slotsToResolve.length} コマのスタジオ別空き判定を実行します...`);
+
+  // Map to store available staffIds for each (dateStr, hour): Set<staffId>
+  const openStaffIdsMap: Record<string, Record<number, Set<number>>> = {};
+  targetDateStrings.forEach(d => {
+    openStaffIdsMap[d] = {};
+  });
+
+  // Resolve with polite concurrency (4 requests in parallel)
+  const CONCURRENCY = 4;
+  for (let i = 0; i < slotsToResolve.length; i += CONCURRENCY) {
+    const batch = slotsToResolve.slice(i, i + CONCURRENCY);
+    await Promise.all(
+      batch.map(async item => {
+        try {
+          const staffUrl = `https://www.ajg.jp/shop/ReservationStaff.php?sescode=${sescode}&p=&date=${item.dateYmd}&time=${item.timeParam}`;
+          const resStaff = await fetch(staffUrl, {
+            headers: { 'User-Agent': 'Mozilla/5.0', 'Cookie': cookieHeader }
+          });
+          const htmlStaff = await resStaff.text();
+
+          const openIds = new Set<number>();
+          const matches = [...htmlStaff.matchAll(/ReservationEnq\.php\?[^"']*staffid=(\d+)/gi)];
+          matches.forEach(m => {
+            openIds.add(parseInt(m[1], 10));
+          });
+
+          openStaffIdsMap[item.dateStr][item.hour] = openIds;
+        } catch (e: any) {
+          // On network error, treat as booked
+          openStaffIdsMap[item.dateStr][item.hour] = new Set<number>();
+        }
+      })
+    );
+
+    // Polite jitter pause between batches
+    if (i + CONCURRENCY < slotsToResolve.length) {
+      await new Promise(r => setTimeout(r, 120));
+    }
+  }
+
+  // Build final room slot objects
   const results: OngakukanRoomData[] = [];
 
   for (const room of ONGAKUKAN_AKIBA_ROOMS) {
-    try {
-      // 1. Fetch first 14 days
-      const url1 = `https://www.ajg.jp/shop/ReservationDate.php?sescode=${sescode}&menuid=14&staffid=${room.staffId}`;
-      const res1 = await fetch(url1, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-          'Cookie': cookieHeader
-        }
-      });
-      const html1 = await res1.text();
-      const parsed1 = parseScheduleHtml(html1);
+    const slots: OngakukanSlot[] = [];
 
-      // 2. Fetch 2nd two weeks (covering up to 21+ days)
-      const nextDayStr = format(addDays(baseDate, 14), 'yyyyMMdd');
-      const url2 = `https://www.ajg.jp/shop/ReservationDate.php?sescode=${sescode}&menuid=14&staffid=${room.staffId}&theday=${nextDayStr}`;
-      const res2 = await fetch(url2, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-          'Cookie': cookieHeader
-        }
-      });
-      const html2 = await res2.text();
-      const parsed2 = parseScheduleHtml(html2);
+    for (const dateStr of targetDateStrings) {
+      for (let h = 0; h < 24; h++) {
+        const availableStaffSet = openStaffIdsMap[dateStr]?.[h];
+        // If the store is closed/full or this room's staffId is not in availableStaffSet, it's BOOKED
+        const isAvailable = Boolean(availableStaffSet && availableStaffSet.has(room.staffId));
+        const status: 'AVAILABLE' | 'BOOKED' = isAvailable ? 'AVAILABLE' : 'BOOKED';
 
-      // Merge slot data
-      const mergedSlotsByDateAndHour: Record<string, Record<number, 'AVAILABLE' | 'BOOKED'>> = {
-        ...parsed1.slotsByDateAndHour,
-        ...parsed2.slotsByDateAndHour
-      };
+        const startIso = `${dateStr}T${String(h).padStart(2, '0')}:00:00+09:00`;
+        const nextHour = h + 1;
+        const endIso = nextHour === 24
+          ? `${format(addDays(parse(dateStr, 'yyyy-MM-dd', new Date()), 1), 'yyyy-MM-dd')}T00:00:00+09:00`
+          : `${dateStr}T${String(nextHour).padStart(2, '0')}:00:00+09:00`;
 
-      const slots: OngakukanSlot[] = [];
-
-      for (const dateStr of targetDateStrings) {
-        const hoursMap = mergedSlotsByDateAndHour[dateStr];
-        if (!hoursMap) continue;
-
-        for (let h = 0; h < 24; h++) {
-          const status = hoursMap[h] || 'BOOKED';
-          const startIso = `${dateStr}T${String(h).padStart(2, '0')}:00:00+09:00`;
-          const nextHour = h + 1;
-          const endIso = nextHour === 24
-            ? `${format(addDays(parse(dateStr, 'yyyy-MM-dd', new Date()), 1), 'yyyy-MM-dd')}T00:00:00+09:00`
-            : `${dateStr}T${String(nextHour).padStart(2, '0')}:00:00+09:00`;
-
-          const timeKey = `${dateStr.replace(/-/g, '')}-${String(h).padStart(2, '0')}00`;
-          slots.push({
-            id: `slot-${room.id}-${timeKey}`,
-            start_time: startIso,
-            end_time: endIso,
-            status: status
-          });
-        }
+        const timeKey = `${dateStr.replace(/-/g, '')}-${String(h).padStart(2, '0')}00`;
+        slots.push({
+          id: `slot-${room.id}-${timeKey}`,
+          start_time: startIso,
+          end_time: endIso,
+          status: status
+        });
       }
-
-      results.push({
-        id: room.id,
-        name: room.name,
-        staffId: room.staffId,
-        slots: slots
-      });
-
-      console.log(`  ✅ [Ongakukan] ${room.name}: ${slots.length} スロット取得完了`);
-    } catch (err: any) {
-      console.error(`  ❌ [Ongakukan] ${room.name} 取得失敗: ${err.message}`);
     }
+
+    const availableCount = slots.filter(s => s.status === 'AVAILABLE').length;
+    const bookedCount = slots.filter(s => s.status === 'BOOKED').length;
+    console.log(`  ✅ [Ongakukan] ${room.name}: 計${slots.length}枠 (○空き: ${availableCount}, ×予約済: ${bookedCount})`);
+
+    results.push({
+      id: room.id,
+      name: room.name,
+      staffId: room.staffId,
+      slots: slots
+    });
   }
 
   return results;
