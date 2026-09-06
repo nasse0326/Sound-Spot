@@ -485,10 +485,20 @@ async function main() {
   const jstDate = new Date(utc + 3600000 * 9);
   const jstHour = jstDate.getHours();
   const jstMin = jstDate.getMinutes();
+  const jstDay = jstDate.getDay(); // 0: 日, 1-5: 月-金, 6: 土
   const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
 
   if (isNightSleep) {
     console.log(`🌙 [Global Night Sleep] 深夜睡眠時間帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオの巡回を停止（完全スリープ）します。`);
+    console.log('====================================================');
+    return;
+  }
+
+  // グローバル平日昼間間引きガード（全スタジオ共通: 月〜金 11:00〜17:00 の :30 実行時はスキップし1時間間隔に抑制）
+  const isWeekday = jstDay >= 1 && jstDay <= 5;
+  const isDaytime = jstHour >= 11 && jstHour < 17;
+  if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40) {
+    console.log(`☕ [Global Daytime Throttle] 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオ1時間間隔運用とし30分枠巡回をスキップします。`);
     console.log('====================================================');
     return;
   }
