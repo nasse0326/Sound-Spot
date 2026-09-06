@@ -84,8 +84,8 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
             <span className="text-slate-300 font-medium">空き枠 (予約可)</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-slate-800 text-slate-500 text-[10px] border border-slate-700">
-              -
+            <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-slate-800 text-slate-400 font-bold text-[10px] border border-slate-700">
+              ×
             </span>
             <span className="text-slate-400">予約済み</span>
           </div>
@@ -355,7 +355,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                 ) : isAvailable ? (
                                   '○'
                                 ) : (
-                                  '-'
+                                  '×'
                                 )}
                               </button>
                             );
@@ -436,7 +436,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                               ) : isAvailable ? (
                                 <span className="text-[11px] font-bold text-emerald-400/90">○</span>
                               ) : (
-                                <span className="text-[10px] text-slate-600">-</span>
+                                <span className="text-[10px] font-bold text-slate-500">×</span>
                               )}
                             </button>
                           );

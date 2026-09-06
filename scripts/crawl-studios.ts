@@ -486,8 +486,8 @@ async function main() {
   try {
     console.log('⚡ [Parallel Execution] ゲートウェイ（渋谷）、秋葉原（BOT＆GOODMAN）、ノア（公式API）を並行巡回します...');
     await Promise.all([
-      crawlGatewayShibuya(now, 14),
-      crawlAkihabaraStudios(now, 14),
+      crawlGatewayShibuya(now, 21),
+      crawlAkihabaraStudios(now, 21),
       runNoahWithStealthSafeguards(),
     ]);
 
