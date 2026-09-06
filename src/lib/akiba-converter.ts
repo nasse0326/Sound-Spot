@@ -68,22 +68,18 @@ export function getAkihabaraRealRooms(targetDate: string): RoomWithSlots[] {
         additionalNotes: r.features.join('、'),
       };
 
-      // スロット変換（targetDate に合わせる）
-      const slots: AvailabilitySlot[] = (r.slots || []).map((slot: any) => {
-        // 日付の書き換え（検索した日付に合わせる）
-        const timePartStart = slot.start_time.split('T')[1];
-        const timePartEnd = slot.end_time.split('T')[1];
-        const startTime = `${targetDate}T${timePartStart}+09:00`;
-        const endTime = `${targetDate}T${timePartEnd}+09:00`;
+      // スロット変換（targetDate と一致する実データのみ取得。日付投影フォールバックは完全撤廃）
+      const matchingSlots = (r.slots || []).filter((slot: any) =>
+        slot.start_time.startsWith(targetDate)
+      );
 
-        return {
-          id: `slot-${r.id}-${targetDate}-${slot.id}`,
-          roomId: r.id,
-          startTime,
-          endTime,
-          status: slot.status.toLowerCase() as SlotStatus,
-        };
-      });
+      const slots: AvailabilitySlot[] = matchingSlots.map((slot: any) => ({
+        id: `slot-${r.id}-${slot.id}`,
+        roomId: r.id,
+        startTime: slot.start_time.includes('+') ? slot.start_time : `${slot.start_time}+09:00`,
+        endTime: slot.end_time.includes('+') ? slot.end_time : `${slot.end_time}+09:00`,
+        status: slot.status.toLowerCase() as SlotStatus,
+      }));
 
       result.push({
         id: r.id,

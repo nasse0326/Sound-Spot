@@ -165,22 +165,6 @@ export function getNoahShibuya2RealRooms(targetDateStr: string): RoomWithSlots[]
           });
         }
       }
-    } else {
-      // 日付が範囲外の場合の安全なフォールバック
-      for (let h = 6; h <= 23; h++) {
-        const sHour = String(h).padStart(2, '0');
-        const eHour = String(h + 1).padStart(2, '0');
-        const sMin = String(offset).padStart(2, '0');
-        const eMin = String(offset).padStart(2, '0');
-
-        slots.push({
-          id: `slot-${roomId}-${targetDateStr}-${h}`,
-          roomId,
-          startTime: `${targetDateStr}T${sHour}:${sMin}:00+09:00`,
-          endTime: `${targetDateStr}T${eHour}:${eMin}:00+09:00`,
-          status: 'available',
-        });
-      }
     }
 
     return {

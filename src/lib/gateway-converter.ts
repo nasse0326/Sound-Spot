@@ -40,34 +40,16 @@ export function getGatewayShibuyaRealRooms(targetDate: string): RoomWithSlots[] 
       additionalNotes: r.features.join('、'),
     };
 
-    // スロットの取得（指定日付に合わせる）
-    // gatewayDataJson に targetDate のスロットがあるか確認
+    // スロットの取得（targetDate と一致する実データのみ取得。日付投影フォールバックは完全撤廃）
     const matchingSlots = r.slots.filter((s: any) => s.start_time.startsWith(targetDate));
 
-    let slots: AvailabilitySlot[] = [];
-    if (matchingSlots.length > 0) {
-      slots = matchingSlots.map((slot: any) => ({
-        id: slot.id,
-        roomId: r.id,
-        startTime: slot.start_time,
-        endTime: slot.end_time,
-        status: slot.status.toLowerCase() as SlotStatus,
-      }));
-    } else {
-      // 日付がスクレイピング範囲外の場合は、本日(2026-09-06)のスロットパターンを対象日付に投影
-      const fallbackSlots = r.slots.filter((s: any) => s.start_time.startsWith('2026-09-06'));
-      slots = fallbackSlots.map((slot: any) => {
-        const timePartStart = slot.start_time.split('T')[1];
-        const timePartEnd = slot.end_time.split('T')[1];
-        return {
-          id: `slot-${r.id}-${targetDate}-${slot.id.split('-').pop()}`,
-          roomId: r.id,
-          startTime: `${targetDate}T${timePartStart}`,
-          endTime: `${targetDate}T${timePartEnd}`,
-          status: slot.status.toLowerCase() as SlotStatus,
-        };
-      });
-    }
+    const slots: AvailabilitySlot[] = matchingSlots.map((slot: any) => ({
+      id: slot.id,
+      roomId: r.id,
+      startTime: slot.start_time,
+      endTime: slot.end_time,
+      status: slot.status.toLowerCase() as SlotStatus,
+    }));
 
     result.push({
       id: r.id,
