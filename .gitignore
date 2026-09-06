@@ -35,7 +35,9 @@ next-env.d.ts
 # debug dumps and root exploration files
 /*.png
 /*.html
-/*.js
+/noah-booking.js
+/noah-chart-logic.js
+!/postcss.config.*
 /goodman-akiba-parsed.json
 /bot-akiba-schedules.json
 /noah-*-schedules.json
