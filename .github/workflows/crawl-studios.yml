@@ -1,0 +1,46 @@
+name: Auto Studio Crawler
+
+on:
+  schedule:
+    # 毎時 00分・30分に定期実行（約30分おき）
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # GitHubの画面から手動で即座に実行可能
+
+# リポジトリへのコミット＆プッシュ権限を付与
+permissions:
+  contents: write
+
+jobs:
+  crawl-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Studio Crawler
+        run: npm run crawl
+
+      - name: Commit and push updated studio data
+        run: |
+          git config --global user.name "SoundSpot Bot"
+          git config --global user.email "bot@soundspot.local"
+          git add src/data/
+          if git diff --staged --quiet; then
+            echo "No data changes detected. Skipping commit."
+          else
+            git commit -m "chore(data): auto-update studio availability via GitHub Actions [skip ci]"
+            git push origin main
+          fi

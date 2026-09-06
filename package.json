@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "tailwindcss -i ./src/app/tailwind-source.css -o ./src/app/globals.css && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "crawl": "tsx scripts/crawl-studios.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
@@ -27,6 +28,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "playwright": "^1.63.0",
+    "tsx": "^4.23.13",
     "typescript": "^5.8.2"
   }
 }

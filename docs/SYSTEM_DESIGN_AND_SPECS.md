@@ -51,6 +51,20 @@
 | **3** | **ゆらぎ（Jitter）の付与** | `12:00:00`, `12:30:00` のようにキリ番の秒単位でアクセスしない。<br>「前後 ±3〜7分」のランダムな遅延を持たせ、`12:04:15`, `12:33:42` のようにアクセスすることで、「気になってたまにチラ見しているバンドマン」のログを再現する。 |
 | **4** | **時間帯に応じた間隔調整** | ・**平日昼（11:00〜16:00）**: 予約が動かないため **1時間に1回** に間隔を広げる。<br>・**平日夜（19:00〜23:00）/ 金・土**: 予約が活発化するため **30分に1回** にする。 |
 
+### ③ GitHub Actions による完全クラウド自動巡回アーキテクチャ（PC不要・サーバーレス運用）
+自宅PC（Mac mini等）の常時起動やメンテナンスに頼らず、クラウド上で完結させる自動巡回パイプラインを配備しています。
+
+- **ワークフロー定義**: `.github/workflows/crawl-studios.yml`
+- **実行トリガー**:
+  - `cron: '*/30 * * * *'`（30分おきの定期巡回）
+  - `workflow_dispatch`（GitHub Webコンソールからの手動即時実行）
+- **動作フロー**:
+  1. GitHub Actionsランナー（Ubuntu）が起動し、`scripts/crawl-studios.ts` を実行。
+  2. 公開Webスタジオ（Reserve1.jp、スタジオル、ajg.jp等）の最新空き枠を自動収集。
+  3. 同時にノアAPI（`book.studionoah.jp`）へのクラウドIP経由疎通テストを実行（HTTP 200/403判定）。
+  4. データに差分がある場合のみ、最新JSON（`src/data/`）をリポジトリへ自動コミット＆プッシュ（`[skip ci]` 付与）。
+  5. GitHubリポジトリのプッシュを検知してVercelが自動的に最新データで再デプロイし、本番サイトが常時最新化される。
+
 ---
 
 ## 3. キャッシュ運用設計（静的データ vs 動的データ）
@@ -465,6 +479,8 @@ flowchart TD
 | `src/config/native-ads.ts` | 設定 | ネイティブPR広告の4大テーマ定義（タイトル、特徴、CTA、アクセントカラー、エバーグリーンURL） |
 | `src/components/search/native-ad-card.tsx` | UI | スタジオ一覧グリッドに4スタジオ間隔で溶け込むネイティブPRカード |
 | `src/components/timeline/native-ad-banner.tsx` | UI | タイムライン下部に配置される4テーマ切替式スリムPRバナー |
+| `.github/workflows/crawl-studios.yml` | CI/CD (自動化) | **GitHub Actions完全クラウド自動巡回ワークフロー**（30分おきcron＋手動実行・差分自動コミット） |
+| `scripts/crawl-studios.ts` | クローラー | 公開スタジオ（Reserve1等）の一括巡回＆ノアAPIクラウド疎通テストを実行するマスターバッチ |
 | `.env.local` | 設定 (秘匿) | ノアのログイン認証情報（`NOAH_LOGIN_ID`, `NOAH_PASSWORD`） |
 | `storageState.json` | 設定 (秘匿) | ノアの認証済みセッションCookie保存ファイル |
 
