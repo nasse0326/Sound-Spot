@@ -10,6 +10,8 @@ import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays } from './lib/bot-fetcher';
+import { fetchOngakukanAkibaDays } from './lib/ongakukan-fetcher';
+import { fetchNoahAkibaDays } from './lib/noah-fetcher';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -257,10 +259,10 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
 }
 
 // -------------------------------------------------------------
-// 2. Akihabara Real Studios Scraper (BOT & GOODMAN)
+// 2. Akihabara Real Studios Scraper (BOT / GOODMAN / 音楽館 / ノア)
 // -------------------------------------------------------------
-async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 14) {
-  console.log(`\n⚡ [Akihabara Crawl] 秋葉原エリア（BASS ON TOP & GOODMAN）の巡回を開始 (Node fetch / ${dayCount}日間)...`);
+async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
+  console.log(`\n⚡ [Akihabara Crawl] 秋葉原エリア（BOT / GOODMAN / 音楽館 / ノア）の巡回を開始 (Node fetch / ${dayCount}日間)...`);
 
   const akibaJsonPath = path.join(process.cwd(), 'src', 'data', 'akihabara-real.json');
   if (!fs.existsSync(akibaJsonPath)) {
@@ -281,7 +283,7 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 14) {
           r.slots = matched.slots;
         }
       });
-      console.log(`  ✅ [BASS ON TOP] ${botStudio.rooms.length}部屋の最新14日分スロットを更新完了`);
+      console.log(`  ✅ [BASS ON TOP] ${botStudio.rooms.length}部屋の最新スロットを更新完了`);
     }
   } catch (err: any) {
     console.error(`  ❌ [BASS ON TOP] 取得エラー: ${err.message}`);
@@ -309,10 +311,55 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 14) {
           }));
         }
       });
-      console.log(`  ✅ [STUDIO GOODMAN] ${gmStudio.rooms.length}部屋の最新14日分スロットを更新完了`);
+      console.log(`  ✅ [STUDIO GOODMAN] ${gmStudio.rooms.length}部屋の最新スロットを更新完了`);
     }
   } catch (err: any) {
     console.error(`  ❌ [STUDIO GOODMAN] 取得エラー: ${err.message}`);
+  }
+
+  // C. スタジオ音楽館 アキバ店 (ajg.jp)
+  try {
+    const ogRooms = await fetchOngakukanAkibaDays(baseDate, dayCount);
+    const ogStudio = akibaData.find(s => s.id === 'og-akiba-01');
+    if (ogStudio) {
+      ogStudio.rooms.forEach((r: any) => {
+        const matched = ogRooms.find(ogr => ogr.id === r.id || ogr.name.includes(r.name) || r.name.includes(ogr.name.split(' ')[0]));
+        if (matched && matched.slots.length > 0) {
+          r.slots = matched.slots.map(s => ({
+            ...s,
+            price: r.hourly_rate || 2200
+          }));
+        }
+      });
+      console.log(`  ✅ [スタジオ音楽館] ${ogStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了`);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [スタジオ音楽館] 取得エラー: ${err.message}`);
+  }
+
+  // D. サウンドスタジオノア 秋葉原店 (NOAH Official Schedule API)
+  const noahGuard = checkNoahStealthGuard();
+  if (!noahGuard.canProceed) {
+    console.log(`  ⏹️ [NOAH Akiba SKIP] ${noahGuard.reason}`);
+  } else {
+    try {
+      const noahRooms = await fetchNoahAkibaDays(baseDate, dayCount);
+      const noahStudio = akibaData.find(s => s.id === 'noah-akiba-01');
+      if (noahStudio) {
+        noahStudio.rooms.forEach((r: any) => {
+          const matched = noahRooms.find(nr => nr.id === r.id || nr.name === r.name);
+          if (matched && matched.slots.length > 0) {
+            r.slots = matched.slots.map(s => ({
+              ...s,
+              price: r.hourly_rate || 2640
+            }));
+          }
+        });
+        console.log(`  ✅ [ノア秋葉原店] ${noahStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了`);
+      }
+    } catch (err: any) {
+      console.error(`  ❌ [ノア秋葉原店] 取得エラー: ${err.message}`);
+    }
   }
 
   // akihabara-real.json へ書き込み保存
@@ -353,7 +400,11 @@ interface NoahGuardStatus {
   reason?: string;
 }
 
-export function checkNoahStealthGuard(nowDate: Date = new Date()): NoahGuardStatus {
+export function checkNoahStealthGuard(nowDate: Date = new Date(), ignoreGuards: boolean = false): NoahGuardStatus {
+  if (ignoreGuards || process.env.IGNORE_GUARDS === 'true') {
+    return { canProceed: true };
+  }
+
   const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
   const jstDate = new Date(utc + 3600000 * 9);
 
@@ -410,7 +461,8 @@ async function runNoahWithStealthSafeguards() {
     { id: 'shibuya_honten', name: 'サウンドスタジオノア 渋谷本店' },
     { id: 'shibuya1', name: 'サウンドスタジオノア 渋谷1号店' },
     { id: 'shibuya3', name: 'サウンドスタジオノア 渋谷3号店' },
-    { id: 'shinjuku', name: 'サウンドスタジオノア 新宿店' }
+    { id: 'shinjuku', name: 'サウンドスタジオノア 新宿店' },
+    { id: 'akihabara', name: 'サウンドスタジオノア 秋葉原店' }
   ];
 
   for (let i = 0; i < noahStores.length; i++) {
