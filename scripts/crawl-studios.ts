@@ -479,6 +479,20 @@ async function main() {
   console.log('====================================================');
 
   const now = new Date();
+
+  // グローバル深夜睡眠ガード（全スタジオ共通: JST 01:00〜07:30 は完全停止）
+  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+  const jstDate = new Date(utc + 3600000 * 9);
+  const jstHour = jstDate.getHours();
+  const jstMin = jstDate.getMinutes();
+  const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
+
+  if (isNightSleep) {
+    console.log(`🌙 [Global Night Sleep] 深夜睡眠時間帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオの巡回を停止（完全スリープ）します。`);
+    console.log('====================================================');
+    return;
+  }
+
   const browser = await chromium.launch({ headless: true });
 
   try {
