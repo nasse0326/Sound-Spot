@@ -4,8 +4,26 @@
  */
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { chromium } from 'playwright';
 import { format, addDays } from 'date-fns';
+import { createClient } from '@supabase/supabase-js';
+
+// Supabase client initialization (service_role or anon key)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+function toUUID(str: string): string {
+  const hash = crypto.createHash('md5').update(str).digest('hex');
+  return [
+    hash.substring(0, 8),
+    hash.substring(8, 12),
+    '4' + hash.substring(13, 16),
+    'a' + hash.substring(17, 20),
+    hash.substring(20, 32)
+  ].join('-');
+}
 
 // -------------------------------------------------------------
 // 1. Gateway Studio Shibuya Scraper (Reserve1.jp)
@@ -310,6 +328,29 @@ async function crawlGatewayShibuya(browser: any, baseDate: Date, dayCount: numbe
     const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-shibuya-real.json');
     fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
     console.log(`✅ [Gateway Shibuya] 完了: ${studioObject.rooms.length}部屋のデータを ${outPath} に保存しました。`);
+
+    // Supabaseが設定されていれば直接空き枠テーブルを更新
+    if (supabase) {
+      console.log('⚡ [Supabase Sync] ゲートウェイ渋谷の最新スロットをSupabaseに同期中...');
+      const dbSlots: any[] = [];
+      studioObject.rooms.forEach((r: any) => {
+        const roomUUID = toUUID('gw-' + r.id);
+        (r.slots || []).forEach((s: any) => {
+          dbSlots.push({
+            room_id: roomUUID,
+            start_time: s.start_time,
+            end_time: s.end_time,
+            status: s.status.toLowerCase(),
+          });
+        });
+      });
+
+      for (let i = 0; i < dbSlots.length; i += 200) {
+        const chunk = dbSlots.slice(i, i + 200);
+        await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+      }
+      console.log(`✨ [Supabase Sync] ゲートウェイ渋谷: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+    }
   } finally {
     await page.close();
   }

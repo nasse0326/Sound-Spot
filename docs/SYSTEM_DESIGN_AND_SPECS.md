@@ -90,10 +90,10 @@ flowchart TD
     end
 ```
 
-| データ種別 | 対象データ | 更新サイクル | 運用方針 |
+| データ種別 | 対象データ | 更新サイクル | 運用方針・保存先 |
 |---|---|---|---|
-| **静的スペック** | 部屋構成、帖数、アンプ/ドラム型番、基本料金、電話番号 | **半月〜1ヶ月に1回** | 内装工事や機材変更は滅多にないため、頻繁なクローリングは行わない。手動または月1回の定期バッチで取得。 |
-| **動的空き状況** | 各日付・各時間帯の予約枠（空き / 予約済） | **約30分おき** | 上記の「人間化ロジック」に基づき、バックグラウンドで穏やかに更新。画面には「※ 17:30時点（約30分おき更新）」と表示。 |
+| **静的スペック** | 部屋構成、帖数、アンプ/ドラム型番、基本料金、電話番号 | **半月〜1ヶ月に1回** | 内装工事や機材変更は滅多にないため、頻繁なクローリングは行わない。<br>**Supabase（`studios`, `rooms`, `room_equipments` テーブル）** に永続保持。 |
+| **動的空き状況** | 各日付・各時間帯の予約枠（空き / 予約済） | **約30分おき** | 上記の「6大ステルスロジック」に基づき、GitHub Actionsからバックグラウンドで穏やかに更新。<br>**Supabase（`availability_slots` テーブル）** へ直接Upsertし、Next.js APIルート（`/api/studios`）経由でクライアントへ即時配信。 |
 
 ---
 
@@ -481,8 +481,12 @@ flowchart TD
 | `src/config/native-ads.ts` | 設定 | ネイティブPR広告の4大テーマ定義（タイトル、特徴、CTA、アクセントカラー、エバーグリーンURL） |
 | `src/components/search/native-ad-card.tsx` | UI | スタジオ一覧グリッドに4スタジオ間隔で溶け込むネイティブPRカード |
 | `src/components/timeline/native-ad-banner.tsx` | UI | タイムライン下部に配置される4テーマ切替式スリムPRバナー |
-| `.github/workflows/crawl-studios.yml` | CI/CD (自動化) | **GitHub Actions完全クラウド自動巡回ワークフロー**（30分おきcron＋手動実行・差分自動コミット） |
-| `scripts/crawl-studios.ts` | クローラー | 公開スタジオ（Reserve1等）の一括巡回＆ノアAPIクラウド疎通テストを実行するマスターバッチ |
-| `.env.local` | 設定 (秘匿) | ノアのログイン認証情報（`NOAH_LOGIN_ID`, `NOAH_PASSWORD`） |
+| `src/lib/supabase/client.ts` | インフラ | Supabase クライアント定義（`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`） |
+| `src/lib/supabase/api.ts` | データ層 | Supabase からスタジオ・部屋・機材・空き枠スロットを一括結合取得し `RoomWithSlots` へ変換するAPI層 |
+| `src/app/api/studios/route.ts` | APIエンドポイント | `/api/studios` エンドポイント。Supabaseリアル空き枠データを最優先配信（フォールバック付き） |
+| `supabase/migrations/20260905000000_initial_schema.sql` | DB設計 | 本番SupabaseデータベースDDL定義（studios, rooms, room_equipments, availability_slots, RLSポリシー） |
+| `.github/workflows/crawl-studios.yml` | CI/CD (自動化) | **GitHub Actions完全クラウド自動巡回ワークフロー**（30分おきcron＋手動実行・差分自動コミット＋Supabaseシークレット注入） |
+| `scripts/crawl-studios.ts` | クローラー | 公開スタジオ（Reserve1等）の一括巡回、Supabaseへのリアルタイム直接同期、ノアAPIステルス疎通バッチ |
+| `.env.local` | 設定 (秘匿) | Supabase接続設定（`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`）およびノア認証情報 |
 | `storageState.json` | 設定 (秘匿) | ノアの認証済みセッションCookie保存ファイル |
 
