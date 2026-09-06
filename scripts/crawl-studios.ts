@@ -424,9 +424,13 @@ async function runNoahWithStealthSafeguards() {
   const cookieHeader = cookies.map((c: any) => `${c.name}=${c.value}`).join('; ');
   console.log(`  🍪 [Cookie] 保存済みセッション（${cookies.length}個のCookie）を使用して安全にアクセスします（ID/PW再送ゼロ）。`);
 
-  // 対象店舗リスト
+  // 対象店舗リスト（渋谷全4店舗 ＋ 新宿店）
   const noahStores = [
-    { id: 'shibuya2', name: 'サウンドスタジオノア 渋谷2号店' }
+    { id: 'shibuya2', name: 'サウンドスタジオノア 渋谷2号店' },
+    { id: 'shibuya_honten', name: 'サウンドスタジオノア 渋谷本店' },
+    { id: 'shibuya1', name: 'サウンドスタジオノア 渋谷1号店' },
+    { id: 'shibuya3', name: 'サウンドスタジオノア 渋谷3号店' },
+    { id: 'shinjuku', name: 'サウンドスタジオノア 新宿店' }
   ];
 
   for (let i = 0; i < noahStores.length; i++) {

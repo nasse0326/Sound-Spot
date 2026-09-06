@@ -174,8 +174,24 @@ flowchart TD
   - Marshall JCM900/JCM2000/JVM/DSL、Roland JC-120B、Fender Twin Reverb、Mesa/Boogie Dual Rectifier。
   - Ampeg SVT-CL/VR/450H、Hartke 3500。
   - Pearl Masters/RF PURE、Canopus Yaiba II 等。
+
+### 4.8 渋谷エリア完全網羅ネットワーク（全8店舗・計77部屋）
+- **対象店舗**:
+  - **SOUND STUDIO NOAH**: 渋谷本店（13部屋・`shibuya_honten`）、渋谷1号店（10部屋・`shibuya1`）、渋谷2号店（14部屋・`shibuya2`）、渋谷3号店（8部屋・`shibuya3`）
+  - **GATEWAY STUDIO**: 渋谷道玄坂店（12部屋・Reserve1.jp公開カレンダー）
+  - **STUDIO PENTA**: 渋谷シティサイド店（7部屋）、渋谷ジュークハウス店（7部屋）、渋谷ムーンサイド店（6部屋）
+- **運用方針**:
+  - ノア4店舗はセッションCookieを利用した内部API連携で全自動巡回。
+  - ペンタ3店舗は公式HPスペックによる「1スタジオ1カード集約 ＋ ワンタップ電話予約CTA（`tel:`）」で運用。
+
+### 4.9 新宿エリア主要スタジオネットワーク（全4店舗・計56部屋）
+- **対象店舗**:
+  - **SOUND STUDIO NOAH 新宿店**: 17部屋（西口サンゲンビル）。ノア最大級の旗艦店。内部API（`shinjuku`）で自動巡回。
+  - **STUDIO NODE 新宿店**: 12部屋。Reserve1.jp（`lc=llcvcamtc&mn=1`）を採用。
+  - **STUDIO PENTA 新宿店**: 19部屋（東口エビスビル）。都内屈指の大規模リハーサルスタジオ。電話予約CTA運用。
+  - **STUDIO PENTA 新宿南口店**: 8部屋。新宿南口徒歩3分。電話予約CTA運用。
 - **UI連携**:
-  - ノア渋谷2号店（14部屋）と合算され、渋谷エリアで合計26部屋の100%実データを横断検索・比較可能。
+  - エリア選択に「新宿」が追加され、渋谷・秋葉原・新宿の3大主要エリア（計16店舗・108部屋）のシームレスな横断比較が可能。
 
 ---
 
