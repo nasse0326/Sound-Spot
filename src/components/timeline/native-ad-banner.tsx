@@ -92,6 +92,17 @@ export const NativeAdBanner: React.FC = () => {
           <span>{currentAd.ctaText}</span>
           <ExternalLink className="w-3.5 h-3.5" />
         </a>
+        {currentAd.trackingPixel && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={currentAd.id}
+            src={currentAd.trackingPixel}
+            width={1}
+            height={1}
+            alt=""
+            className="hidden"
+          />
+        )}
       </div>
     </div>
   );

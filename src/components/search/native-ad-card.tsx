@@ -107,6 +107,16 @@ export const NativeAdCard: React.FC<NativeAdCardProps> = ({ ad }) => {
           <span>{ad.ctaText}</span>
           <ExternalLink className="w-3.5 h-3.5" />
         </a>
+        {ad.trackingPixel && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={ad.trackingPixel}
+            width={1}
+            height={1}
+            alt=""
+            className="hidden"
+          />
+        )}
       </div>
     </div>
   );
