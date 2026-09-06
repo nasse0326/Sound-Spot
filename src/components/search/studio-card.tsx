@@ -62,9 +62,10 @@ export const StudioCard: React.FC<StudioCardProps> = ({
     return checkRoomAvailability(room, targetStartTime, targetEndTime, allowAdjacent30Min);
   };
 
-  // スタジオ全体の空き部屋数
-  const availableCount = rooms.filter((r) => getRoomAvailability(r).isAvailable).length;
-  const hasSlots = rooms.some((r) => r.slots && r.slots.length > 0);
+  const roomAvails = rooms.map(getRoomAvailability);
+  const availableCount = roomAvails.filter((r) => r.isAvailable).length;
+  const isPhoneOnly = studio.chainName.includes('PENTA') || (!studio.bookingUrl && !!studio.tel);
+  const allUnfetched = !isPhoneOnly && roomAvails.every((r) => r.matchType === 'unfetched');
 
   // 価格帯サマリー（¥2,200〜3,500/h）
   const prices = rooms.map(getRoomPrice);
@@ -112,31 +113,35 @@ export const StudioCard: React.FC<StudioCardProps> = ({
 
           {/* 右上: 空き部屋数サマリー & 価格帯 */}
           <div className="text-right shrink-0">
-            {hasSlots ? (
-              <div className="mb-1">
-                <span className={`inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border ${
-                  availableCount > 0
-                    ? 'bg-emerald-950 text-emerald-300 border-emerald-700/60 shadow-sm shadow-emerald-950/40'
-                    : 'bg-rose-950/60 text-rose-300 border border-rose-800/50'
-                }`}>
-                  {availableCount > 0 ? (
-                    <>
-                      <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400" />
-                      <span>{availableCount}室 空き</span>
-                    </>
-                  ) : (
-                    <>
-                      <XCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-rose-400" />
-                      <span>満室</span>
-                    </>
-                  )}
-                </span>
-              </div>
-            ) : (
+            {isPhoneOnly ? (
               <div className="mb-1">
                 <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-amber-950/60 text-amber-300 border border-amber-800/50">
                   <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400" />
                   <span>電話予約</span>
+                </span>
+              </div>
+            ) : availableCount > 0 ? (
+              <div className="mb-1">
+                <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border bg-emerald-950 text-emerald-300 border-emerald-700/60 shadow-sm shadow-emerald-950/40">
+                  <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400" />
+                  <span>{availableCount}室 空き</span>
+                </span>
+              </div>
+            ) : allUnfetched ? (
+              <div className="mb-1">
+                <span 
+                  className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-medium px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-900 text-slate-400 border border-dashed border-slate-700/80"
+                  title="この日時の最新空き枠データは未取得です。公式WEBでご確認ください。"
+                >
+                  <span className="font-mono text-slate-500">—</span>
+                  <span>未同期</span>
+                </span>
+              </div>
+            ) : (
+              <div className="mb-1">
+                <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border bg-rose-950/60 text-rose-300 border border-rose-800/50">
+                  <XCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-rose-400" />
+                  <span>満室</span>
                 </span>
               </div>
             )}
@@ -231,6 +236,14 @@ export const StudioCard: React.FC<StudioCardProps> = ({
                   <span className="px-2 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-medium bg-amber-950/60 text-amber-300 border border-amber-800/50 flex items-center gap-1">
                     <span>要TEL</span>
                   </span>
+                ) : availResult.matchType === 'unfetched' ? (
+                  <span 
+                    className="px-2 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-medium bg-slate-900 text-slate-400 border border-dashed border-slate-700/80 flex items-center gap-1"
+                    title="この日時の空き枠データは未取得です。公式WEB予約サイトをご確認ください。"
+                  >
+                    <span className="font-mono text-slate-500">—</span>
+                    <span>未取得</span>
+                  </span>
                 ) : (
                   <span className="px-2 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-medium bg-slate-950 text-slate-500 border border-slate-800 flex items-center gap-1">
                     <XCircle className="w-3 h-3 text-slate-600" />
@@ -247,7 +260,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
 
       {/* 3. カード下部CTA（スマホ親指タップしやすいサイズ） */}
       <div className="p-2.5 sm:p-3 bg-slate-950/60 border-t border-slate-800/80">
-        {!hasSlots && studio.tel ? (
+        {isPhoneOnly && studio.tel ? (
           <a
             href={`tel:${studio.tel}`}
             className="w-full h-11 flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold rounded-xl bg-amber-500 active:bg-amber-600 hover:bg-amber-400 text-slate-950 shadow-md shadow-amber-500/10 transition"

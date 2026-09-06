@@ -2,10 +2,10 @@ import { RoomWithSlots, AvailabilitySlot } from '@/types/studio';
 
 export interface RoomAvailabilityMatch {
   isAvailable: boolean;
-  matchType: 'exact' | 'early30' | 'late30' | 'none' | 'phone_only';
+  matchType: 'exact' | 'early30' | 'late30' | 'none' | 'phone_only' | 'unfetched';
   matchedStartTime?: string; // e.g. 11:00, 10:30, 11:30
   matchedEndTime?: string;   // e.g. 12:00, 11:30, 12:30
-  label: string;             // e.g. 空き, 10:30~ 空き, 11:30~ 空き, 満室, 電話受付
+  label: string;             // e.g. 空き, 10:30~ 空き, 11:30~ 空き, 満室, 要TEL, 未取得
   availableCandidateTimes: string[]; // e.g. [10:30, 11:30]
 }
 
@@ -20,6 +20,23 @@ export function minutesToTimeString(minutes: number): string {
   const h = Math.floor(minutes / 60);
   const m = minutes % 60;
   return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+}
+
+/**
+ * Check if slot data exists for a specified window [startMin, endMin].
+ */
+export function hasSlotDataForWindow(slots: AvailabilitySlot[], startMin: number, endMin: number): boolean {
+  if (!slots || slots.length === 0) return false;
+  return slots.some((slot) => {
+    const sDate = new Date(slot.startTime);
+    const eDate = new Date(slot.endTime);
+    const sMin = sDate.getHours() * 60 + sDate.getMinutes();
+    let eMin = eDate.getHours() * 60 + eDate.getMinutes();
+    if (eMin === 0 && eDate.getDate() !== sDate.getDate()) {
+      eMin = 24 * 60;
+    }
+    return sMin < endMin && eMin > startMin;
+  });
 }
 
 /**
@@ -74,11 +91,21 @@ export function checkRoomAvailability(
   targetEndTime: string,
   allowAdjacent30Min: boolean = true
 ): RoomAvailabilityMatch {
+  const isPhoneOnly = room.studio?.chainName?.includes('PENTA') || (!room.studio?.bookingUrl && !!room.studio?.tel);
+
   if (!room.slots || room.slots.length === 0) {
+    if (isPhoneOnly) {
+      return {
+        isAvailable: false,
+        matchType: 'phone_only',
+        label: '要TEL',
+        availableCandidateTimes: [],
+      };
+    }
     return {
       isAvailable: false,
-      matchType: 'phone_only',
-      label: '電話受付',
+      matchType: 'unfetched',
+      label: '未取得',
       availableCandidateTimes: [],
     };
   }
@@ -100,24 +127,14 @@ export function checkRoomAvailability(
     };
   }
 
-  // If adjacent 30 min matching is disabled, stop here
-  if (!allowAdjacent30Min) {
-    return {
-      isAvailable: false,
-      matchType: 'none',
-      label: '満室',
-      availableCandidateTimes: [],
-    };
-  }
-
   // 2. Check early by 30 min: [targetStartMin - 30, targetStartMin - 30 + duration]
   const earlyStartMin = targetStartMin - 30;
-  const earlyAvailable = earlyStartMin >= 0 && isWindowAvailable(room.slots, earlyStartMin, earlyStartMin + duration);
+  const earlyAvailable = allowAdjacent30Min && earlyStartMin >= 0 && isWindowAvailable(room.slots, earlyStartMin, earlyStartMin + duration);
   const earlyTimeStr = minutesToTimeString(earlyStartMin);
 
   // 3. Check late by 30 min: [targetStartMin + 30, targetStartMin + 30 + duration]
   const lateStartMin = targetStartMin + 30;
-  const lateAvailable = lateStartMin + duration <= 24 * 60 && isWindowAvailable(room.slots, lateStartMin, lateStartMin + duration);
+  const lateAvailable = allowAdjacent30Min && lateStartMin + duration <= 24 * 60 && isWindowAvailable(room.slots, lateStartMin, lateStartMin + duration);
   const lateTimeStr = minutesToTimeString(lateStartMin);
 
   const candidateTimes: string[] = [];
@@ -154,6 +171,17 @@ export function checkRoomAvailability(
       matchedEndTime: minutesToTimeString(lateStartMin + duration),
       label: `${lateTimeStr}~ 空き`,
       availableCandidateTimes: [lateTimeStr],
+    };
+  }
+
+  // Check if slot data exists for exact target window
+  const hasExactData = hasSlotDataForWindow(room.slots, targetStartMin, targetStartMin + duration);
+  if (!hasExactData) {
+    return {
+      isAvailable: false,
+      matchType: 'unfetched',
+      label: '未取得',
+      availableCandidateTimes: [],
     };
   }
 

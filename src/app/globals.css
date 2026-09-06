@@ -1189,6 +1189,10 @@ video {
   border-color: rgb(146 64 14 / 0.7);
 }
 
+.border-amber-900\/40 {
+  border-color: rgb(120 53 15 / 0.4);
+}
+
 .border-blue-300 {
   --tw-border-opacity: 1;
   border-color: rgb(147 197 253 / var(--tw-border-opacity, 1));
@@ -1196,10 +1200,6 @@ video {
 
 .border-blue-500\/80 {
   border-color: rgb(59 130 246 / 0.8);
-}
-
-.border-blue-800\/40 {
-  border-color: rgb(30 64 175 / 0.4);
 }
 
 .border-blue-800\/60 {
@@ -1327,10 +1327,6 @@ video {
   border-color: rgb(30 41 59 / var(--tw-border-opacity, 1));
 }
 
-.border-slate-800\/30 {
-  border-color: rgb(30 41 59 / 0.3);
-}
-
 .border-slate-800\/40 {
   border-color: rgb(30 41 59 / 0.4);
 }
@@ -1376,6 +1372,14 @@ video {
 .bg-amber-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(69 26 3 / var(--tw-bg-opacity, 1));
+}
+
+.bg-amber-950\/20 {
+  background-color: rgb(69 26 3 / 0.2);
+}
+
+.bg-amber-950\/25 {
+  background-color: rgb(69 26 3 / 0.25);
 }
 
 .bg-amber-950\/60 {
@@ -1545,10 +1549,6 @@ video {
 
 .bg-slate-900\/50 {
   background-color: rgb(15 23 42 / 0.5);
-}
-
-.bg-slate-900\/60 {
-  background-color: rgb(15 23 42 / 0.6);
 }
 
 .bg-slate-900\/80 {
@@ -2209,6 +2209,12 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
 .ring-2 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -2233,6 +2239,11 @@ video {
 .ring-slate-500 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(100 116 139 / var(--tw-ring-opacity, 1));
+}
+
+.ring-slate-700 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(51 65 85 / var(--tw-ring-opacity, 1));
 }
 
 .filter {

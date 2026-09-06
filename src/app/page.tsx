@@ -23,7 +23,9 @@ import {
 } from 'lucide-react';
 
 export default function HomePage() {
-  const todayStr = format(new Date(), 'yyyy-MM-dd');
+  const today = useMemo(() => new Date(), []);
+  const todayStr = useMemo(() => format(today, 'yyyy-MM-dd'), [today]);
+  const maxDateStr = useMemo(() => format(addDays(today, 21), 'yyyy-MM-dd'), [today]);
 
   // 検索フィルター状態
   const [filters, setFilters] = useState<SearchFilterParams>({
@@ -40,6 +42,13 @@ export default function HomePage() {
     requireLongHours: false, // 24時間・長時間営業のみ
     allowAdjacent30Min: true, // 前後30分の枠も含めて検索（デフォルトON）
   });
+
+  const handleFiltersChange = (newFilters: SearchFilterParams) => {
+    let date = newFilters.date;
+    if (date < todayStr) date = todayStr;
+    if (date > maxDateStr) date = maxDateStr;
+    setFilters({ ...newFilters, date });
+  };
 
   // ビューモード: 'card' または 'timeline'
   const [viewMode, setViewMode] = useState<'card' | 'timeline'>('card');
@@ -103,10 +112,10 @@ export default function HomePage() {
         if (!isLong) return false;
       }
 
-      // 満室の部屋を非表示（指定時間帯および±30分枠に1つも空き枠がない部屋を除外）
-      if (hideFullyBooked && room.slots && room.slots.length > 0) {
+      // 満室の部屋を非表示（確定で満室の部屋のみ除外。未取得や電話受付は表示を維持）
+      if (hideFullyBooked) {
         const avail = checkRoomAvailability(room, filters.startTime, filters.endTime, filters.allowAdjacent30Min);
-        if (!avail.isAvailable) {
+        if (avail.matchType === 'none') {
           return false;
         }
       }
@@ -146,15 +155,16 @@ export default function HomePage() {
         return diff !== 0 ? diff : naturalOrder;
       }
 
-      // 'availability': 空き枠優先 (完全一致 > ±30分ズレ > 電話受付 > 満室)
+      // 'availability': 空き枠優先 (完全一致 > ±30分ズレ > 電話受付 > 未取得 > 満室)
       const aAvail = checkRoomAvailability(a, filters.startTime, filters.endTime, filters.allowAdjacent30Min);
       const bAvail = checkRoomAvailability(b, filters.startTime, filters.endTime, filters.allowAdjacent30Min);
 
       const getAvailScore = (res: typeof aAvail) => {
-        if (res.matchType === 'exact') return 3;
-        if (res.matchType === 'early30' || res.matchType === 'late30') return 2;
-        if (res.matchType === 'phone_only') return 1;
-        return 0;
+        if (res.matchType === 'exact') return 4;
+        if (res.matchType === 'early30' || res.matchType === 'late30') return 3;
+        if (res.matchType === 'phone_only') return 2;
+        if (res.matchType === 'unfetched') return 1;
+        return 0; // none (満室)
       };
 
       const scoreDiff = getAvailScore(bAvail) - getAvailScore(aAvail);
@@ -257,7 +267,7 @@ export default function HomePage() {
       {/* 検索・条件指定バー */}
       <SearchFilterBar
         filters={filters}
-        onChange={setFilters}
+        onChange={handleFiltersChange}
         availableAreas={availableAreas}
       />
 

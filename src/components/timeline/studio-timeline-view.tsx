@@ -27,8 +27,8 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
   onSelectTime,
   onOpenDetail,
 }) => {
-  // スロット（空き状況枠）が存在する部屋のみタイムラインに表示
-  const activeRooms = rooms.filter((r) => r.slots && r.slots.length > 0);
+  // 全部屋をタイムラインに表示（スロット未取得や電話予約も状態を明示）
+  const activeRooms = rooms;
 
   // スタジオごとに部屋をグループ化（スタジオ名の重複を排除）
   const studioGroups = useMemo(() => {
@@ -88,6 +88,18 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
               -
             </span>
             <span className="text-slate-400">予約済み</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-slate-950 text-slate-500 text-[10px] border border-dashed border-slate-700">
+              —
+            </span>
+            <span className="text-slate-400">データ未取得</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="inline-flex items-center justify-center px-1 h-4 rounded bg-amber-950/60 text-amber-300 text-[9px] font-bold border border-amber-800/50">
+              TEL
+            </span>
+            <span className="text-slate-400">電話受付</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-1.5 pl-2 border-l border-slate-700 text-slate-400">
@@ -287,12 +299,35 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             (slotStartMin >= targetStartMin + 30 && slotStartMin < targetEndMin + 30 && ((slotStartMin - (targetStartMin + 30)) % 60 === 0))
                           );
 
+                          const isPhoneOnly = room.studio.chainName.includes('PENTA') || (!room.studio.bookingUrl && !!room.studio.tel);
+
                           // 30分枠の最終コマの扱いに対応（23:30〜24:00）
                           if (isOffset30 && idx === HOURS.length - 1) {
-                            const slot = room.slots.find((s) => {
+                            const slot = room.slots?.find((s) => {
                               const d = new Date(s.startTime);
                               return d.getHours() === hour;
                             });
+
+                            if (!slot) {
+                              return (
+                                <div
+                                  key={hour}
+                                  className={`col-span-1 h-7 rounded-r border flex items-center justify-center text-[9px] select-none ${
+                                    isPhoneOnly
+                                      ? 'border-amber-900/40 bg-amber-950/25 text-amber-400 font-bold'
+                                      : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600'
+                                  }`}
+                                  title={
+                                    isPhoneOnly
+                                      ? `${room.studio.name} ${room.name} ${hour}:30〜24:00 - 電話予約店舗（公式へお電話でお問い合わせください）`
+                                      : `${room.studio.name} ${room.name} ${hour}:30〜24:00 - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
+                                  }
+                                >
+                                  {isPhoneOnly ? 'TEL' : '—'}
+                                </div>
+                              );
+                            }
+
                             const isAvailable = slot?.status === 'available';
 
                             return (
@@ -327,7 +362,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                           }
 
                           // 該当時間（hour）のスロットを探す
-                          const slot = room.slots.find((s) => {
+                          const slot = room.slots?.find((s) => {
                             const d = new Date(s.startTime);
                             return d.getHours() === hour;
                           });
@@ -339,15 +374,22 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             return (
                               <div
                                 key={hour}
-                                className={`col-span-2 h-7 rounded border flex items-center justify-center text-[10px] text-slate-600 ${
+                                className={`col-span-2 h-7 rounded border flex items-center justify-center select-none ${
+                                  isPhoneOnly
+                                    ? 'border-amber-900/40 bg-amber-950/20 text-amber-400/90 text-[9px] font-bold'
+                                    : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600 text-[10px]'
+                                } ${
                                   isExact
-                                    ? 'bg-slate-900/60 border-emerald-800/40'
-                                    : isAdjacent
-                                    ? 'bg-slate-900/60 border-blue-800/40'
-                                    : 'bg-slate-950/40 border-slate-800/30'
+                                    ? 'ring-1 ring-slate-700'
+                                    : ''
                                 }`}
+                                title={
+                                  isPhoneOnly
+                                    ? `${room.studio.name} ${room.name} ${slotTimeStr}〜 - 電話予約店舗（公式へお電話でお問い合わせください）`
+                                    : `${room.studio.name} ${room.name} ${slotTimeStr}〜 - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
+                                }
                               >
-                                -
+                                {isPhoneOnly ? 'TEL' : '—'}
                               </div>
                             );
                           }

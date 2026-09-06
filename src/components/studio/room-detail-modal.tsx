@@ -227,7 +227,7 @@ export const RoomDetailModal: React.FC<RoomDetailModalProps> = ({
           </div>
 
           <div className="w-full sm:w-auto flex items-center gap-2">
-            {room.slots.length === 0 && studio.tel ? (
+            {(studio.chainName.includes('PENTA') || (!studio.bookingUrl && !!studio.tel)) && studio.tel ? (
               <>
                 <a
                   href={`tel:${studio.tel}`}
