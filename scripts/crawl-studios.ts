@@ -316,41 +316,115 @@ async function crawlGatewayShibuya(browser: any, baseDate: Date, dayCount: numbe
 }
 
 // -------------------------------------------------------------
-// 2. NOAH Cloud Connectivity Test (Cloud IP verification)
+// 2. NOAH Stealth Guard & Cloud Crawler Engine (人間化・BAN完全回避)
 // -------------------------------------------------------------
-async function testNoahCloudConnectivity() {
-  console.log('🔍 [NOAH Cloud Check] クラウド環境からのNOAH API疎通テストを開始します...');
-  try {
-    const storageStatePath = path.resolve(process.cwd(), 'storageState.json');
-    const hasStorage = fs.existsSync(storageStatePath);
-    let cookieHeader = '';
-    if (hasStorage) {
-      const state = JSON.parse(fs.readFileSync(storageStatePath, 'utf-8'));
-      const cookies = state.cookies || [];
-      cookieHeader = cookies.map((c: any) => `${c.name}=${c.value}`).join('; ');
-      console.log(`  - storageState.json 検出: ${cookies.length} 個のCookieをロードしました`);
+interface NoahGuardStatus {
+  canProceed: boolean;
+  reason?: string;
+}
+
+/**
+ * 仕様書に規定された「4大ステルス（人間化）ロジック」に基づく事前判定
+ */
+export function checkNoahStealthGuard(nowDate: Date = new Date()): NoahGuardStatus {
+  // JST (日本時間 UTC+9) を厳密に計算
+  const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
+  const jstDate = new Date(utc + 3600000 * 9);
+
+  const jstHour = jstDate.getHours();
+  const jstMin = jstDate.getMinutes();
+  const jstDay = jstDate.getDay(); // 0 = 日, 6 = 土
+
+  // ガード1: 深夜睡眠（JST 01:00 〜 07:30 は巡回完全停止）
+  const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
+  if (isNightSleep) {
+    return {
+      canProceed: false,
+      reason: `🌙 深夜睡眠時間帯（JST 01:00〜07:30 現在 ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、ノアのアクセスを完全停止（睡眠中）します。`
+    };
+  }
+
+  // ガード2: 平日昼の間引き（月〜金 11:00 〜 16:00 の :30 実行時はスキップして1時間間隔にする）
+  const isWeekday = jstDay >= 1 && jstDay <= 5;
+  const isDaytime = jstHour >= 11 && jstHour < 16;
+  if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40) {
+    return {
+      canProceed: false,
+      reason: `☕ 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため間引き運用（1時間間隔）とし、30分枠巡回をスキップします。`
+    };
+  }
+
+  return { canProceed: true };
+}
+
+async function runNoahWithStealthSafeguards() {
+  console.log('\n🛡️ [NOAH Stealth Guard] 人間化・BAN回避判定を実行中...');
+
+  const guard = checkNoahStealthGuard();
+  if (!guard.canProceed) {
+    console.log(`  ⏹️ [SKIP] ${guard.reason}`);
+    return;
+  }
+
+  // ガード3: ランダムゆらぎ（Jitter）待機（キリ番秒アクセスを防止）
+  const jitterSec = Math.floor(Math.random() * 15) + 5; // 5〜20秒のランダム待機
+  console.log(`  🎲 [Jitter] キリ番アクセス回避のため、${jitterSec}秒 ランダム待機（ゆらぎ付与）します...`);
+  await new Promise(r => setTimeout(r, jitterSec * 1000));
+
+  // ガード4: Cookieセッションのロードとログイン試行遮断（ID/PWの送信はゼロ）
+  const storageStatePath = path.resolve(process.cwd(), 'storageState.json');
+  if (!fs.existsSync(storageStatePath)) {
+    console.log('  ⚠️ storageState.json が存在しないため、安全のためノアの巡回をパスします。');
+    return;
+  }
+
+  const state = JSON.parse(fs.readFileSync(storageStatePath, 'utf-8'));
+  const cookies = state.cookies || [];
+  const cookieHeader = cookies.map((c: any) => `${c.name}=${c.value}`).join('; ');
+  console.log(`  🍪 [Cookie] 保存済みセッション（${cookies.length}個のCookie）を使用して安全にアクセスします（ID/PW再送ゼロ）。`);
+
+  // 対象店舗リスト
+  const noahStores = [
+    { id: 'shibuya2', name: 'サウンドスタジオノア 渋谷2号店' }
+  ];
+
+  for (let i = 0; i < noahStores.length; i++) {
+    const store = noahStores[i];
+    console.log(`  📡 [NOAH] ${store.name} の最新チャートを取得中...`);
+
+    // ガード5: 店舗間人間インターバル（3〜6秒のページめくり間隔）
+    if (i > 0) {
+      const storeWaitSec = Math.floor(Math.random() * 4) + 3;
+      console.log(`  ⏳ 人間らしい閲覧間隔のため ${storeWaitSec}秒 待機...`);
+      await new Promise(r => setTimeout(r, storeWaitSec * 1000));
     }
 
-    const res = await fetch('https://www.studionoah.jp/noahweb/webs/render_chart/shibuya2', {
-      method: 'POST',
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-        'X-Requested-With': 'XMLHttpRequest',
-        'Referer': 'https://www.studionoah.jp/noahweb/webs/chart/',
-        ...(cookieHeader ? { 'Cookie': cookieHeader } : {})
+    try {
+      const res = await fetch(`https://www.studionoah.jp/noahweb/webs/render_chart/${store.id}`, {
+        method: 'POST',
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          'X-Requested-With': 'XMLHttpRequest',
+          'Referer': 'https://www.studionoah.jp/noahweb/webs/chart/',
+          'Cookie': cookieHeader
+        }
+      });
+
+      console.log(`  📥 レスポンス: HTTP ${res.status} ${res.statusText}`);
+
+      // ガード6: 401/403 or 認証切れ時の安全緊急停止（アカウントロックを完全防止）
+      if (res.status === 401 || res.status === 403) {
+        console.warn(`  🚨 [ALERT] NOAHサーバーより ${res.status} が返却されました。アカウント保護のため即座に巡回を緊急停止します。`);
+        break;
       }
-    });
 
-    console.log(`  - NOAH API レスポンスステータス: HTTP ${res.status} ${res.statusText}`);
-    if (res.status === 403) {
-      console.log('  ⚠️ 注意: NOAHサーバーがクラウド/データセンターIPを拒否（403 Forbidden）しました。');
-    } else if (res.status === 200) {
-      console.log(`  🎉 朗報: クラウド環境からのAPI呼び出しが成功しました (Status: 200 OK)！`);
-    } else {
-      console.log(`  ℹ️ レスポンスコード: ${res.status}`);
+      if (res.status === 200) {
+        console.log(`  ✅ [NOAH] ${store.name} のセッション通信が安全に完了しました。`);
+      }
+    } catch (err: any) {
+      console.error(`  ⚠️ [NOAH Error] 通信エラー: ${err.message}`);
+      break;
     }
-  } catch (err: any) {
-    console.log(`  ⚠️ NOAH API 接続エラー: ${err.message}`);
   }
 }
 
@@ -370,8 +444,8 @@ async function main() {
     // 1. Gateway Studio Shibuya
     await crawlGatewayShibuya(browser, now, 7);
 
-    // 2. Test NOAH cloud connectivity
-    await testNoahCloudConnectivity();
+    // 2. NOAH Studio (Stealth Guarded)
+    await runNoahWithStealthSafeguards();
 
     console.log('====================================================');
     console.log('✨ 全スタジオの自動巡回が正常に完了しました！');
