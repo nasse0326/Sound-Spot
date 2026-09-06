@@ -1,0 +1,5301 @@
+[
+  {
+    "id": "bot-akiba-01",
+    "name": "ベースオントップ 秋葉原昭和通り口店",
+    "slug": "bass-on-top-akihabara",
+    "area": "秋葉原",
+    "address": "東京都千代田区神田佐久間町3丁目37-1 文唱堂ビル B1F",
+    "tel": "03-5825-4544",
+    "url": "https://bassontop.tokyo.jp/band/akihabara/",
+    "affiliate_url": "https://studi-ol.com/shop/705",
+    "rooms": [
+      {
+        "id": "bot-akiba-3105",
+        "studio_id": "bot-akiba-01",
+        "name": "1st (17帖)",
+        "size_sqm": 28,
+        "capacity": 7,
+        "hourly_rate": 3600,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg SVT",
+          "Pearl Drums",
+          "15帖以上",
+          "セルフレコ対応"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-bot-3105-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3105-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "AVAILABLE",
+            "price": 3600
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3106",
+        "studio_id": "bot-akiba-01",
+        "name": "2st (9帖)",
+        "size_sqm": 15,
+        "capacity": 5,
+        "hourly_rate": 2800,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Ampeg",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-bot-3106-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3106-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 3000
+          },
+          {
+            "id": "slot-bot-3106-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "AVAILABLE",
+            "price": 3000
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3107",
+        "studio_id": "bot-akiba-01",
+        "name": "3st (9帖)",
+        "size_sqm": 15,
+        "capacity": 5,
+        "hourly_rate": 2800,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Ampeg",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-bot-3107-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3107-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 3000
+          },
+          {
+            "id": "slot-bot-3107-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "AVAILABLE",
+            "price": 3000
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3108",
+        "studio_id": "bot-akiba-01",
+        "name": "4st (15帖)",
+        "size_sqm": 25,
+        "capacity": 7,
+        "hourly_rate": 3600,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg SVT",
+          "Pearl Drums",
+          "15帖以上",
+          "セルフレコ対応"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-bot-3108-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3108-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 3500
+          },
+          {
+            "id": "slot-bot-3108-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "AVAILABLE",
+            "price": 3500
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3109",
+        "studio_id": "bot-akiba-01",
+        "name": "5st (15帖)",
+        "size_sqm": 25,
+        "capacity": 7,
+        "hourly_rate": 3600,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg SVT",
+          "Pearl Drums",
+          "15帖以上",
+          "セルフレコ対応"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-bot-3109-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "BOOKED",
+            "price": 3600
+          },
+          {
+            "id": "slot-bot-3109-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "AVAILABLE",
+            "price": 3500
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3110",
+        "studio_id": "bot-akiba-01",
+        "name": "6st (9帖)",
+        "size_sqm": 15,
+        "capacity": 5,
+        "hourly_rate": 2800,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Ampeg",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-bot-3110-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3110-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 3000
+          },
+          {
+            "id": "slot-bot-3110-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "AVAILABLE",
+            "price": 3000
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3111",
+        "studio_id": "bot-akiba-01",
+        "name": "7st (7帖)",
+        "size_sqm": 12,
+        "capacity": 2,
+        "hourly_rate": 2200,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Ampeg",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-bot-3111-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3111-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 2800
+          },
+          {
+            "id": "slot-bot-3111-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "AVAILABLE",
+            "price": 2800
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      },
+      {
+        "id": "bot-akiba-3112",
+        "studio_id": "bot-akiba-01",
+        "name": "Piano (3帖)",
+        "size_sqm": 5,
+        "capacity": 2,
+        "hourly_rate": 2200,
+        "individual_rate": 880,
+        "features": [
+          "アップライトピアノ常設",
+          "完全分煙"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-bot-3112-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-bot-3112-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 1400
+          },
+          {
+            "id": "slot-bot-3112-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 1400
+          },
+          {
+            "id": "slot-bot-3112-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "AVAILABLE",
+            "price": 1400
+          }
+        ],
+        "source_url": "https://studi-ol.com/shop/705"
+      }
+    ]
+  },
+  {
+    "id": "gm-akiba-01",
+    "name": "STUDIO GOODMAN AKIBA",
+    "slug": "studio-goodman-akiba",
+    "area": "秋葉原",
+    "address": "東京都千代田区神田佐久間町1-16 クレジデンス神田佐久間町 B1F",
+    "tel": "03-5846-9454",
+    "url": "https://studio.goodman2020.com/",
+    "affiliate_url": "https://studio.goodman2020.com/",
+    "rooms": [
+      {
+        "id": "gm-akiba-201st",
+        "studio_id": "gm-akiba-01",
+        "name": "201st (8帖)",
+        "size_sqm": 13,
+        "capacity": 5,
+        "hourly_rate": 2420,
+        "day_rate": 1980,
+        "individual_rate": 770,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-0-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-0-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-202st",
+        "studio_id": "gm-akiba-01",
+        "name": "202st (8帖)",
+        "size_sqm": 13,
+        "capacity": 5,
+        "hourly_rate": 2420,
+        "day_rate": 1980,
+        "individual_rate": 770,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-1-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "AVAILABLE",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "AVAILABLE",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-1-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-203st",
+        "studio_id": "gm-akiba-01",
+        "name": "203st (5帖・ドラム無し)",
+        "size_sqm": 8,
+        "capacity": 2,
+        "hourly_rate": 1540,
+        "day_rate": 1320,
+        "individual_rate": 660,
+        "features": [
+          "ボーカル・個人練習特化",
+          "キーボード常設"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-2-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "AVAILABLE",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          },
+          {
+            "id": "slot-gm-2-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 1540
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-204st",
+        "studio_id": "gm-akiba-01",
+        "name": "204st (10帖)",
+        "size_sqm": 17,
+        "capacity": 5,
+        "hourly_rate": 2640,
+        "day_rate": 2200,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-3-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-3-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-205st",
+        "studio_id": "gm-akiba-01",
+        "name": "205st (10帖)",
+        "size_sqm": 17,
+        "capacity": 5,
+        "hourly_rate": 2640,
+        "day_rate": 2200,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-4-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-gm-4-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-301st",
+        "studio_id": "gm-akiba-01",
+        "name": "301st (8帖)",
+        "size_sqm": 13,
+        "capacity": 5,
+        "hourly_rate": 2420,
+        "day_rate": 1980,
+        "individual_rate": 770,
+        "features": [
+          "Marshall JCM900",
+          "Roland JC-120",
+          "Pearl Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-5-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "AVAILABLE",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          },
+          {
+            "id": "slot-gm-5-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2420
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-302st",
+        "studio_id": "gm-akiba-01",
+        "name": "302st (14帖)",
+        "size_sqm": 23,
+        "capacity": 6,
+        "hourly_rate": 3080,
+        "day_rate": 2530,
+        "individual_rate": 990,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums",
+          "14帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-6-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-6-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-303st",
+        "studio_id": "gm-akiba-01",
+        "name": "303st (16帖)",
+        "size_sqm": 26,
+        "capacity": 6,
+        "hourly_rate": 3410,
+        "day_rate": 2860,
+        "individual_rate": 1100,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums",
+          "14帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-7-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-7-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-304st",
+        "studio_id": "gm-akiba-01",
+        "name": "304st (16帖)",
+        "size_sqm": 26,
+        "capacity": 6,
+        "hourly_rate": 3410,
+        "day_rate": 2860,
+        "individual_rate": 1100,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums",
+          "14帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-8-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          },
+          {
+            "id": "slot-gm-8-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3410
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      },
+      {
+        "id": "gm-akiba-305st",
+        "studio_id": "gm-akiba-01",
+        "name": "305st (14帖)",
+        "size_sqm": 23,
+        "capacity": 6,
+        "hourly_rate": 3080,
+        "day_rate": 2530,
+        "individual_rate": 990,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums",
+          "14帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-gm-9-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          },
+          {
+            "id": "slot-gm-9-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3080
+          }
+        ],
+        "source_url": "https://studio.goodman2020.com/"
+      }
+    ]
+  },
+  {
+    "id": "og-akiba-01",
+    "name": "スタジオ音楽館 アキバ店",
+    "slug": "studio-ongakukan-akiba",
+    "area": "秋葉原",
+    "address": "東京都千代田区外神田1-3-13 大森ビル 6F",
+    "tel": "03-3256-6955",
+    "url": "http://www.st-ongakukan.com/akihabara/akihabara.html",
+    "affiliate_url": "https://www.ajg.jp/shop/ReservationTop.php?id=Twb03vvjqn2fba1",
+    "rooms": [
+      {
+        "id": "og-akiba-Aスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Aスタジオ (6帖)",
+        "size_sqm": 10,
+        "capacity": 4,
+        "hourly_rate": 2200,
+        "day_rate": 1200,
+        "individual_rate": 660,
+        "features": [
+          "Marshall",
+          "Roland JC-120",
+          "Fender Twin Reverb",
+          "無料レンタル充実"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-0-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-og-0-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2200
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      },
+      {
+        "id": "og-akiba-Bスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Bスタジオ (15帖)",
+        "size_sqm": 25,
+        "capacity": 6,
+        "hourly_rate": 4070,
+        "day_rate": 2860,
+        "individual_rate": 660,
+        "features": [
+          "ギターアンプ4種常設",
+          "Marshall",
+          "Roland JC-120",
+          "Ampeg",
+          "広々12帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-1-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 4070
+          },
+          {
+            "id": "slot-og-1-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 4070
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      },
+      {
+        "id": "og-akiba-Cスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Cスタジオ (9帖)",
+        "size_sqm": 15,
+        "capacity": 4,
+        "hourly_rate": 3050,
+        "day_rate": 1980,
+        "individual_rate": 660,
+        "features": [
+          "Marshall",
+          "Roland JC-120",
+          "Fender Twin Reverb",
+          "無料レンタル充実"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-2-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 3050
+          },
+          {
+            "id": "slot-og-2-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3050
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      },
+      {
+        "id": "og-akiba-Dスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Dスタジオ (8帖)",
+        "size_sqm": 13,
+        "capacity": 4,
+        "hourly_rate": 2790,
+        "day_rate": 1650,
+        "individual_rate": 660,
+        "features": [
+          "Marshall",
+          "Roland JC-120",
+          "Fender Twin Reverb",
+          "無料レンタル充実"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-3-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 2790
+          },
+          {
+            "id": "slot-og-3-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2790
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      },
+      {
+        "id": "og-akiba-Eスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Eスタジオ (7帖)",
+        "size_sqm": 12,
+        "capacity": 4,
+        "hourly_rate": 2720,
+        "day_rate": 1460,
+        "individual_rate": 660,
+        "features": [
+          "Marshall",
+          "Roland JC-120",
+          "Fender Twin Reverb",
+          "無料レンタル充実"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-4-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 2720
+          },
+          {
+            "id": "slot-og-4-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2720
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      },
+      {
+        "id": "og-akiba-Gスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Gスタジオ (12帖)",
+        "size_sqm": 20,
+        "capacity": 6,
+        "hourly_rate": 3820,
+        "day_rate": 2200,
+        "individual_rate": 660,
+        "features": [
+          "ギターアンプ4種常設",
+          "Marshall",
+          "Roland JC-120",
+          "Ampeg",
+          "広々12帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-5-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 3820
+          },
+          {
+            "id": "slot-og-5-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3820
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      },
+      {
+        "id": "og-akiba-Music Innスタジオ",
+        "studio_id": "og-akiba-01",
+        "name": "Music Innスタジオ (50帖)",
+        "size_sqm": 83,
+        "capacity": 30,
+        "hourly_rate": 10640,
+        "day_rate": 7700,
+        "individual_rate": 660,
+        "features": [
+          "50帖超巨大スタジオ",
+          "ライブ・ゲネプロ対応",
+          "アンプ多数常設"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-og-6-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 10640
+          },
+          {
+            "id": "slot-og-6-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 10640
+          }
+        ],
+        "source_url": "http://www.st-ongakukan.com/akihabara/pr.html"
+      }
+    ]
+  },
+  {
+    "id": "noah-akiba-01",
+    "name": "サウンドスタジオノア 秋葉原店",
+    "slug": "sound-studio-noah-akihabara",
+    "area": "秋葉原",
+    "address": "東京都千代田区外神田6-14-8",
+    "tel": "03-5816-8383",
+    "url": "https://www.studionoah.jp/akihabara/",
+    "affiliate_url": "https://www.studionoah.jp/akihabara/",
+    "rooms": [
+      {
+        "id": "noah-akiba-A1st",
+        "studio_id": "noah-akiba-01",
+        "name": "A1st (8帖)",
+        "size_sqm": 13,
+        "capacity": 4,
+        "hourly_rate": 1760,
+        "day_rate": 1650,
+        "individual_rate": 770,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-0-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-0-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-A2st",
+        "studio_id": "noah-akiba-01",
+        "name": "A2st (8帖)",
+        "size_sqm": 13,
+        "capacity": 4,
+        "hourly_rate": 1760,
+        "day_rate": 1650,
+        "individual_rate": 770,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-1-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 1760
+          },
+          {
+            "id": "slot-noah-akiba-1-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 1760
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-A3st",
+        "studio_id": "noah-akiba-01",
+        "name": "A3st (9帖)",
+        "size_sqm": 15,
+        "capacity": 4,
+        "hourly_rate": 1870,
+        "day_rate": 1760,
+        "individual_rate": 770,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-2-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "AVAILABLE",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "AVAILABLE",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "AVAILABLE",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "AVAILABLE",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "AVAILABLE",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 1870
+          },
+          {
+            "id": "slot-noah-akiba-2-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "BOOKED",
+            "price": 1870
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-B1st",
+        "studio_id": "noah-akiba-01",
+        "name": "B1st (14帖)",
+        "size_sqm": 23,
+        "capacity": 6,
+        "hourly_rate": 2640,
+        "day_rate": 2420,
+        "individual_rate": 990,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-3-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "AVAILABLE",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 2640
+          },
+          {
+            "id": "slot-noah-akiba-3-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2640
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-B2st",
+        "studio_id": "noah-akiba-01",
+        "name": "B2st (13帖)",
+        "size_sqm": 21,
+        "capacity": 6,
+        "hourly_rate": 2530,
+        "day_rate": 2310,
+        "individual_rate": 990,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-4-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "AVAILABLE",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "AVAILABLE",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "AVAILABLE",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "AVAILABLE",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "AVAILABLE",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 2530
+          },
+          {
+            "id": "slot-noah-akiba-4-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "BOOKED",
+            "price": 2530
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-Cst+Sub",
+        "studio_id": "noah-akiba-01",
+        "name": "Cst+Sub (28帖)",
+        "size_sqm": 46,
+        "capacity": 8,
+        "hourly_rate": 4400,
+        "day_rate": 4180,
+        "individual_rate": 1320,
+        "features": [
+          "Marshall JVM410H",
+          "Roland JC-120",
+          "Ampeg SVT",
+          "DW Drums",
+          "ゲネプロ対応20帖以上"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-5-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "AVAILABLE",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "AVAILABLE",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "AVAILABLE",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "AVAILABLE",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "AVAILABLE",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 4400
+          },
+          {
+            "id": "slot-noah-akiba-5-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "BOOKED",
+            "price": 4400
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-E1st",
+        "studio_id": "noah-akiba-01",
+        "name": "E1st (21帖)",
+        "size_sqm": 35,
+        "capacity": 8,
+        "hourly_rate": 3300,
+        "day_rate": 3080,
+        "individual_rate": 1100,
+        "features": [
+          "Marshall JVM410H",
+          "Roland JC-120",
+          "Ampeg SVT",
+          "DW Drums",
+          "ゲネプロ対応20帖以上"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-6-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "AVAILABLE",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 3300
+          },
+          {
+            "id": "slot-noah-akiba-6-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 3300
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-E2st",
+        "studio_id": "noah-akiba-01",
+        "name": "E2st (20帖)",
+        "size_sqm": 33,
+        "capacity": 8,
+        "hourly_rate": 3190,
+        "day_rate": 2970,
+        "individual_rate": 1100,
+        "features": [
+          "Marshall JVM410H",
+          "Roland JC-120",
+          "Ampeg SVT",
+          "DW Drums",
+          "ゲネプロ対応20帖以上"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-7-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "AVAILABLE",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "AVAILABLE",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "AVAILABLE",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "AVAILABLE",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "AVAILABLE",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 3190
+          },
+          {
+            "id": "slot-noah-akiba-7-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "BOOKED",
+            "price": 3190
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-G1st",
+        "studio_id": "noah-akiba-01",
+        "name": "G1st (12帖)",
+        "size_sqm": 20,
+        "capacity": 6,
+        "hourly_rate": 2310,
+        "day_rate": 2200,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 0,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-8-6",
+            "start_time": "2026-09-05T06:00:00",
+            "end_time": "2026-09-05T07:00:00",
+            "status": "AVAILABLE",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-7",
+            "start_time": "2026-09-05T07:00:00",
+            "end_time": "2026-09-05T08:00:00",
+            "status": "AVAILABLE",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-8",
+            "start_time": "2026-09-05T08:00:00",
+            "end_time": "2026-09-05T09:00:00",
+            "status": "AVAILABLE",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-9",
+            "start_time": "2026-09-05T09:00:00",
+            "end_time": "2026-09-05T10:00:00",
+            "status": "AVAILABLE",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-10",
+            "start_time": "2026-09-05T10:00:00",
+            "end_time": "2026-09-05T11:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-11",
+            "start_time": "2026-09-05T11:00:00",
+            "end_time": "2026-09-05T12:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-12",
+            "start_time": "2026-09-05T12:00:00",
+            "end_time": "2026-09-05T13:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-13",
+            "start_time": "2026-09-05T13:00:00",
+            "end_time": "2026-09-05T14:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-14",
+            "start_time": "2026-09-05T14:00:00",
+            "end_time": "2026-09-05T15:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-15",
+            "start_time": "2026-09-05T15:00:00",
+            "end_time": "2026-09-05T16:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-16",
+            "start_time": "2026-09-05T16:00:00",
+            "end_time": "2026-09-05T17:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-17",
+            "start_time": "2026-09-05T17:00:00",
+            "end_time": "2026-09-05T18:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-18",
+            "start_time": "2026-09-05T18:00:00",
+            "end_time": "2026-09-05T19:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-19",
+            "start_time": "2026-09-05T19:00:00",
+            "end_time": "2026-09-05T20:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-20",
+            "start_time": "2026-09-05T20:00:00",
+            "end_time": "2026-09-05T21:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-21",
+            "start_time": "2026-09-05T21:00:00",
+            "end_time": "2026-09-05T22:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-22",
+            "start_time": "2026-09-05T22:00:00",
+            "end_time": "2026-09-05T23:00:00",
+            "status": "AVAILABLE",
+            "price": 2310
+          },
+          {
+            "id": "slot-noah-akiba-8-23",
+            "start_time": "2026-09-05T23:00:00",
+            "end_time": "2026-09-05T24:00:00",
+            "status": "BOOKED",
+            "price": 2310
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-GSst",
+        "studio_id": "noah-akiba-01",
+        "name": "GSst (10帖)",
+        "size_sqm": 17,
+        "capacity": 4,
+        "hourly_rate": 2200,
+        "day_rate": 2090,
+        "individual_rate": 880,
+        "features": [
+          "Marshall JCM2000",
+          "Roland JC-120",
+          "Ampeg",
+          "Canopus Drums"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-9-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 2200
+          },
+          {
+            "id": "slot-noah-akiba-9-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "BOOKED",
+            "price": 2200
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      },
+      {
+        "id": "noah-akiba-Booth1",
+        "studio_id": "noah-akiba-01",
+        "name": "Booth1 (3帖)",
+        "size_sqm": 5,
+        "capacity": 4,
+        "hourly_rate": 880,
+        "day_rate": 880,
+        "individual_rate": 880,
+        "features": [
+          "ボーカル録音専用",
+          "完全防音ブース"
+        ],
+        "start_time_offset": 30,
+        "slots": [
+          {
+            "id": "slot-noah-akiba-10-6",
+            "start_time": "2026-09-05T06:30:00",
+            "end_time": "2026-09-05T07:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-7",
+            "start_time": "2026-09-05T07:30:00",
+            "end_time": "2026-09-05T08:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-8",
+            "start_time": "2026-09-05T08:30:00",
+            "end_time": "2026-09-05T09:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-9",
+            "start_time": "2026-09-05T09:30:00",
+            "end_time": "2026-09-05T10:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-10",
+            "start_time": "2026-09-05T10:30:00",
+            "end_time": "2026-09-05T11:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-11",
+            "start_time": "2026-09-05T11:30:00",
+            "end_time": "2026-09-05T12:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-12",
+            "start_time": "2026-09-05T12:30:00",
+            "end_time": "2026-09-05T13:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-13",
+            "start_time": "2026-09-05T13:30:00",
+            "end_time": "2026-09-05T14:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-14",
+            "start_time": "2026-09-05T14:30:00",
+            "end_time": "2026-09-05T15:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-15",
+            "start_time": "2026-09-05T15:30:00",
+            "end_time": "2026-09-05T16:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-16",
+            "start_time": "2026-09-05T16:30:00",
+            "end_time": "2026-09-05T17:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-17",
+            "start_time": "2026-09-05T17:30:00",
+            "end_time": "2026-09-05T18:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-18",
+            "start_time": "2026-09-05T18:30:00",
+            "end_time": "2026-09-05T19:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-19",
+            "start_time": "2026-09-05T19:30:00",
+            "end_time": "2026-09-05T20:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-20",
+            "start_time": "2026-09-05T20:30:00",
+            "end_time": "2026-09-05T21:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-21",
+            "start_time": "2026-09-05T21:30:00",
+            "end_time": "2026-09-05T22:30:00",
+            "status": "BOOKED",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-22",
+            "start_time": "2026-09-05T22:30:00",
+            "end_time": "2026-09-05T23:30:00",
+            "status": "AVAILABLE",
+            "price": 880
+          },
+          {
+            "id": "slot-noah-akiba-10-23",
+            "start_time": "2026-09-05T23:30:00",
+            "end_time": "2026-09-05T24:30:00",
+            "status": "BOOKED",
+            "price": 880
+          }
+        ],
+        "source_url": "https://www.studionoah.jp/akihabara/"
+      }
+    ]
+  }
+]

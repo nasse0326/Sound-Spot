@@ -1,0 +1,42 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files & session data
+.env*.local
+.env
+storageState.json
+/auth/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# debug dumps and root exploration files
+/*.png
+/*.html
+/*.js
+/goodman-akiba-parsed.json
+/bot-akiba-schedules.json
+/noah-*-schedules.json
+/noah-*-studios.json
