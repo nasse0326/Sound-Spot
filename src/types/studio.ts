@@ -68,6 +68,7 @@ export interface SearchFilterParams {
   bookingType: BookingType;
   area: string; // "all" or "渋谷", "新宿", etc.
   minTatami: number;
+  tatamiRanges: string[]; // 'under9' | '10to12' | '13to15' | '16plus'
   requireJc120: boolean;
   requireMarshall: boolean;
   requireRecording: boolean;

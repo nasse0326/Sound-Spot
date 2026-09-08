@@ -1,516 +1,57 @@
-import { Studio, Room, RoomEquipment, AvailabilitySlot, RoomWithSlots } from '@/types/studio';
-import { getNoahShibuya2RealRooms } from './noah-converter';
+import { Studio, RoomWithSlots, AvailabilitySlot } from '@/types/studio';
 import { getAkihabaraRealRooms, AKIBA_STUDIOS } from './akiba-converter';
 import { GATEWAY_SHIBUYA_STUDIO, getGatewayShibuyaRealRooms } from './gateway-converter';
+import { getNodeShinjukuRealRooms, NODE_SHINJUKU_STUDIO } from './node-converter';
+import { getNoahAllTokyoRealRooms, NOAH_STUDIOS_META } from './noah-tokyo-converter';
+import { getPentaRealRooms, PENTA_STUDIOS } from './penta-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計16店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
+  // 秋葉原エリア (4店舗)
   ...AKIBA_STUDIOS,
+
+  // 渋谷エリア (8店舗)
   GATEWAY_SHIBUYA_STUDIO,
-  {
-    id: 'a0000000-0000-0000-0000-000000000001',
-    name: 'SOUND STUDIO NOAH 渋谷2号店',
-    chainName: 'SOUND STUDIO NOAH',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 ハチ公口 徒歩5分',
-    address: '東京都渋谷区宇田川町39-2 B1F',
-    tel: '03-3780-5766',
-    bookingUrl: 'https://www.studionoah.jp/shibuya2/',
-    websiteUrl: 'https://www.studionoah.jp/shibuya2/',
-    businessHoursSummary: '24時間営業 (朝6時〜モーニング枠あり)',
-    is24Hours: true,
-    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
-    groupBookingLeadMonths: 3,
-    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
-    soloBookingLeadHours: 27,
-  },
-  {
-    id: 'shibuya-noah-honten',
-    name: 'サウンドスタジオノア 渋谷本店',
-    chainName: 'SOUND STUDIO NOAH',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 ハチ公口 徒歩6分',
-    address: '東京都渋谷区宇田川町36-0 ビルディングB1F-4F',
-    tel: '03-5485-1441',
-    bookingUrl: 'https://www.studionoah.jp/shibuya_honten/',
-    websiteUrl: 'https://www.studionoah.jp/shibuya_honten/',
-    businessHoursSummary: '24時間営業',
-    is24Hours: true,
-    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
-    groupBookingLeadMonths: 3,
-    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
-    soloBookingLeadHours: 27,
-  },
-  {
-    id: 'shibuya-noah-1',
-    name: 'サウンドスタジオノア 渋谷1号店',
-    chainName: 'SOUND STUDIO NOAH',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 東口 徒歩3分',
-    address: '東京都渋谷区渋谷2-19-15 宮益坂ビルディングB1F',
-    tel: '03-5485-1441',
-    bookingUrl: 'https://www.studionoah.jp/shibuya1/',
-    websiteUrl: 'https://www.studionoah.jp/shibuya1/',
-    businessHoursSummary: '24時間営業',
-    is24Hours: true,
-    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
-    groupBookingLeadMonths: 3,
-    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
-    soloBookingLeadHours: 27,
-  },
-  {
-    id: 'shibuya-noah-3',
-    name: 'サウンドスタジオノア 渋谷3号店',
-    chainName: 'SOUND STUDIO NOAH',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 徒歩5分',
-    address: '東京都渋谷区道玄坂1-15-3 プリメーラ道玄坂B1F',
-    tel: '03-6416-3663',
-    bookingUrl: 'https://www.studionoah.jp/shibuya3/',
-    websiteUrl: 'https://www.studionoah.jp/shibuya3/',
-    businessHoursSummary: '24時間営業',
-    is24Hours: true,
-    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
-    groupBookingLeadMonths: 3,
-    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
-    soloBookingLeadHours: 27,
-  },
-  {
-    id: 'shibuya-penta-city',
-    name: 'スタジオペンタ 渋谷シティサイド店',
-    chainName: 'STUDIO PENTA',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 西口 徒歩3分',
-    address: '東京都渋谷区桜丘町24-2 第3富士商事ビルB1F',
-    tel: '03-3462-2811',
-    bookingUrl: 'https://studiopenta.jp/rehearsal/shibuyacityside/',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shibuyacityside/',
-    businessHoursSummary: '10:00〜24:00 (電話受付のみ)',
-    is24Hours: false,
-    groupBookingRule: '2ヶ月前より電話にて受付（オンライン予約非対応）',
-    groupBookingLeadMonths: 2,
-    soloBookingRule: '前日営業開始（10:00）より電話にて受付開始',
-    soloBookingLeadHours: 38,
-  },
-  {
-    id: 'shibuya-penta-juke',
-    name: 'スタジオペンタ 渋谷ジュークハウス店',
-    chainName: 'STUDIO PENTA',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 西口 徒歩4分',
-    address: '東京都渋谷区桜丘町15-17 登栄桜丘ビルB1F',
-    tel: '03-3462-2815',
-    bookingUrl: 'https://studiopenta.jp/rehearsal/shibuyajukehouse/',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shibuyajukehouse/',
-    businessHoursSummary: '10:00〜24:00 (電話受付のみ)',
-    is24Hours: false,
-    groupBookingRule: '2ヶ月前より電話にて受付（オンライン予約非対応）',
-    groupBookingLeadMonths: 2,
-    soloBookingRule: '前日営業開始（10:00）より電話にて受付開始',
-    soloBookingLeadHours: 38,
-  },
-  {
-    id: 'shibuya-penta-moon',
-    name: 'スタジオペンタ 渋谷ムーンサイド店',
-    chainName: 'STUDIO PENTA',
-    area: '渋谷',
-    prefecture: '東京都',
-    nearestStation: '渋谷駅 西口 徒歩5分',
-    address: '東京都渋谷区桜丘町14-10 渋谷コープB1F',
-    tel: '03-3462-2818',
-    bookingUrl: 'https://studiopenta.jp/rehearsal/shibuyamoonside/',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shibuyamoonside/',
-    businessHoursSummary: '10:00〜24:00 (電話受付のみ)',
-    is24Hours: false,
-    groupBookingRule: '2ヶ月前より電話にて受付（オンライン予約非対応）',
-    groupBookingLeadMonths: 2,
-    soloBookingRule: '前日営業開始（10:00）より電話にて受付開始',
-    soloBookingLeadHours: 38,
-  },
-  {
-    id: 'a0000000-0000-0000-0000-000000000002',
-    name: 'STUDIO PENTA 新宿店',
-    chainName: 'STUDIO PENTA',
-    area: '新宿',
-    prefecture: '東京都',
-    nearestStation: '新宿駅 東口 徒歩3分 / 新宿三丁目駅 徒歩2分',
-    address: '東京都新宿区新宿3-11-6 エビスビルB1F',
-    tel: '03-3351-3140',
-    bookingUrl: 'https://studiopenta.jp/rehearsal/shinjuku/',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shinjuku/',
-    businessHoursSummary: '10:00〜24:00 (電話受付のみ)',
-    is24Hours: false,
-    groupBookingRule: '2ヶ月前より電話にて受付（オンライン予約非対応）',
-    groupBookingLeadMonths: 2,
-    soloBookingRule: '前日営業開始（10:00）より電話にて受付開始',
-    soloBookingLeadHours: 38,
-  },
-  {
-    id: 'shinjuku-noah',
-    name: 'サウンドスタジオノア 新宿店',
-    chainName: 'SOUND STUDIO NOAH',
-    area: '新宿',
-    prefecture: '東京都',
-    nearestStation: '新宿駅 西口 徒歩4分 / 西新宿駅 徒歩2分',
-    address: '東京都新宿区西新宿1-3-14 新宿サンゲンビルB1F-7F',
-    tel: '03-5332-8366',
-    bookingUrl: 'https://www.studionoah.jp/shinjuku/',
-    websiteUrl: 'https://www.studionoah.jp/shinjuku/',
-    businessHoursSummary: '24時間営業',
-    is24Hours: true,
-    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
-    groupBookingLeadMonths: 3,
-    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
-    soloBookingLeadHours: 27,
-  },
-  {
-    id: 'shinjuku-node',
-    name: 'STUDIO NODE 新宿店',
-    chainName: 'STUDIO NODE',
-    area: '新宿',
-    prefecture: '東京都',
-    nearestStation: '新宿駅 西口 徒歩6分 / 西武新宿駅 徒歩3分',
-    address: '東京都新宿区西新宿7-16-12 YSビルB1F',
-    tel: '03-5386-3371',
-    bookingUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=llcvcamtc&mn=1&gr=3',
-    websiteUrl: 'http://www.studio-node.com/shinjuku/',
-    businessHoursSummary: '10:00〜24:00',
-    is24Hours: false,
-    groupBookingRule: 'WEBにて予約受付可能',
-    groupBookingLeadMonths: 2,
-    soloBookingRule: '前日よりWEB/電話にて受付開始',
-    soloBookingLeadHours: 24,
-  },
-  {
-    id: 'shinjuku-penta-south',
-    name: 'スタジオペンタ 新宿南口店',
-    chainName: 'STUDIO PENTA',
-    area: '新宿',
-    prefecture: '東京都',
-    nearestStation: '新宿駅 南口 徒歩3分',
-    address: '東京都渋谷区代々木2-10-8 ケイアイ新宿ビルB1F',
-    tel: '03-3350-5020',
-    bookingUrl: 'https://studiopenta.jp/rehearsal/shinjukuminamiguchi/',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shinjukuminamiguchi/',
-    businessHoursSummary: '10:00〜24:00 (電話受付のみ)',
-    is24Hours: false,
-    groupBookingRule: '2ヶ月前より電話にて受付（オンライン予約非対応）',
-    groupBookingLeadMonths: 2,
-    soloBookingRule: '前日営業開始（10:00）より電話にて受付開始',
-    soloBookingLeadHours: 38,
-  },
+  NOAH_STUDIOS_META['shibuya'],
+  NOAH_STUDIOS_META['shibuya1'],
+  NOAH_STUDIOS_META['shibuya2'],
+  NOAH_STUDIOS_META['shibuya3'],
+  PENTA_STUDIOS['shibuya-penta-city'],
+  PENTA_STUDIOS['shibuya-penta-juke'],
+  PENTA_STUDIOS['shibuya-penta-moon'],
+
+  // 新宿エリア (4店舗)
+  NOAH_STUDIOS_META['shinjuku'],
+  NODE_SHINJUKU_STUDIO,
+  PENTA_STUDIOS['shinjuku-penta-main'],
+  PENTA_STUDIOS['shinjuku-penta-south'],
 ];
 
-// 代表的な部屋スペック（スタジオ公式HPに基づく正規定義）
-// ※電話予約スタジオ（ペンタ）はオンライン予約システムが存在しないためダミースロットは生成せず、空スロット[]で電話CTAへ誘導します
-export const MOCK_ROOMS: Room[] = [
-  // 新宿ペンタ
-  {
-    id: 'penta-shinjuku-large',
-    studioId: 'a0000000-0000-0000-0000-000000000002',
-    name: 'LARGE (16帖 / 101〜103, 504st)',
-    floor: 'B1F',
-    sizeTatami: 16.0,
-    capacity: 6,
-    pricePerHourRegular: 3410,
-    pricePerHourDaytime: 2530,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: true,
-    startTimeOffset: 0,
-    imageUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop',
-  },
-  {
-    id: 'penta-shinjuku-medium',
-    studioId: 'a0000000-0000-0000-0000-000000000002',
-    name: 'MEDIUM (14帖 / 201〜503st)',
-    floor: 'B1F',
-    sizeTatami: 14.0,
-    capacity: 5,
-    pricePerHourRegular: 3190,
-    pricePerHourDaytime: 2200,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-    imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop',
-  },
-  // 新宿ペンタ南口
-  {
-    id: 'penta-shinjuku-south-1',
-    studioId: 'shinjuku-penta-south',
-    name: '1st (15帖)',
-    floor: 'B1F',
-    sizeTatami: 15.0,
-    capacity: 6,
-    pricePerHourRegular: 3300,
-    pricePerHourDaytime: 2310,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  {
-    id: 'penta-shinjuku-south-2',
-    studioId: 'shinjuku-penta-south',
-    name: '2st (12帖)',
-    floor: 'B1F',
-    sizeTatami: 12.0,
-    capacity: 5,
-    pricePerHourRegular: 2970,
-    pricePerHourDaytime: 2090,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // 渋谷ペンタ シティサイド
-  {
-    id: 'penta-shibuya-city-1',
-    studioId: 'shibuya-penta-city',
-    name: '1st (15帖)',
-    floor: 'B1F',
-    sizeTatami: 15.0,
-    capacity: 6,
-    pricePerHourRegular: 3410,
-    pricePerHourDaytime: 2420,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  {
-    id: 'penta-shibuya-city-2',
-    studioId: 'shibuya-penta-city',
-    name: '2st (12帖)',
-    floor: 'B1F',
-    sizeTatami: 12.0,
-    capacity: 5,
-    pricePerHourRegular: 2970,
-    pricePerHourDaytime: 2090,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // 渋谷ペンタ ジュークハウス
-  {
-    id: 'penta-shibuya-juke-1',
-    studioId: 'shibuya-penta-juke',
-    name: '1st (16帖)',
-    floor: 'B1F',
-    sizeTatami: 16.0,
-    capacity: 6,
-    pricePerHourRegular: 3520,
-    pricePerHourDaytime: 2530,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // 渋谷ペンタ ムーンサイド
-  {
-    id: 'penta-shibuya-moon-1',
-    studioId: 'shibuya-penta-moon',
-    name: '1st (14帖)',
-    floor: 'B1F',
-    sizeTatami: 14.0,
-    capacity: 5,
-    pricePerHourRegular: 3190,
-    pricePerHourDaytime: 2200,
-    pricePerHourSolo: 880,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // ノア 渋谷本店
-  {
-    id: 'noah-shibuya-honten-cs',
-    studioId: 'shibuya-noah-honten',
-    name: 'CSst (24帖)',
-    floor: '1F',
-    sizeTatami: 24.0,
-    capacity: 10,
-    pricePerHourRegular: 4950,
-    pricePerHourDaytime: 3850,
-    pricePerHourSolo: 1210,
-    hasMirror: true,
-    hasRecording: true,
-    startTimeOffset: 0,
-  },
-  {
-    id: 'noah-shibuya-honten-b1',
-    studioId: 'shibuya-noah-honten',
-    name: 'B1st (14帖)',
-    floor: 'B1F',
-    sizeTatami: 14.0,
-    capacity: 6,
-    pricePerHourRegular: 3520,
-    pricePerHourDaytime: 2420,
-    pricePerHourSolo: 990,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // ノア 渋谷1号店
-  {
-    id: 'noah-shibuya-1-est',
-    studioId: 'shibuya-noah-1',
-    name: 'Est (18帖)',
-    floor: 'B1F',
-    sizeTatami: 18.0,
-    capacity: 7,
-    pricePerHourRegular: 3960,
-    pricePerHourDaytime: 2860,
-    pricePerHourSolo: 1100,
-    hasMirror: true,
-    hasRecording: true,
-    startTimeOffset: 0,
-  },
-  // ノア 渋谷3号店
-  {
-    id: 'noah-shibuya-3-est',
-    studioId: 'shibuya-noah-3',
-    name: 'Est (16帖)',
-    floor: 'B1F',
-    sizeTatami: 16.0,
-    capacity: 6,
-    pricePerHourRegular: 3630,
-    pricePerHourDaytime: 2640,
-    pricePerHourSolo: 990,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // ノア 新宿店
-  {
-    id: 'noah-shinjuku-cst',
-    studioId: 'shinjuku-noah',
-    name: 'Cst (25帖)',
-    floor: '3F',
-    sizeTatami: 25.0,
-    capacity: 10,
-    pricePerHourRegular: 5170,
-    pricePerHourDaytime: 3960,
-    pricePerHourSolo: 1320,
-    hasMirror: true,
-    hasRecording: true,
-    startTimeOffset: 0,
-  },
-  {
-    id: 'noah-shinjuku-b1st',
-    studioId: 'shinjuku-noah',
-    name: 'B1st (18帖)',
-    floor: '2F',
-    sizeTatami: 18.0,
-    capacity: 7,
-    pricePerHourRegular: 3960,
-    pricePerHourDaytime: 2860,
-    pricePerHourSolo: 1100,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  // NODE 新宿店
-  {
-    id: 'node-shinjuku-1st',
-    studioId: 'shinjuku-node',
-    name: '1st (16帖)',
-    floor: 'B1F',
-    sizeTatami: 16.0,
-    capacity: 6,
-    pricePerHourRegular: 3300,
-    pricePerHourDaytime: 2200,
-    pricePerHourSolo: 770,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-  {
-    id: 'node-shinjuku-2st',
-    studioId: 'shinjuku-node',
-    name: '2st (14帖)',
-    floor: 'B1F',
-    sizeTatami: 14.0,
-    capacity: 5,
-    pricePerHourRegular: 2970,
-    pricePerHourDaytime: 1980,
-    pricePerHourSolo: 770,
-    hasMirror: true,
-    hasRecording: false,
-    startTimeOffset: 0,
-  },
-];
-
-export const MOCK_EQUIPMENTS: Record<string, RoomEquipment> = {
-  'penta-shinjuku-large': {
-    id: 'eq-penta-shinjuku-large',
-    roomId: 'penta-shinjuku-large',
-    guitarAmps: ['Roland JC-120', 'Marshall JCM900 4100', 'Mesa/Boogie Dual Rectifier'],
-    bassAmp: 'Ampeg SVT-3PRO + SVT-810E',
-    drumSet: 'TAMA Starclassic Performer',
-    isTwinPedalAllowed: true,
-    paSystem: 'YAMAHA EMX5016CF',
-    keyboards: ['KORG KROSS2-88'],
-    additionalNotes: 'ペンタ新宿店の大型フラッグシップ室。※予約・空き確認はお電話（03-3351-3140）にて受付中。',
-  },
-  'penta-shinjuku-medium': {
-    id: 'eq-penta-shinjuku-medium',
-    roomId: 'penta-shinjuku-medium',
-    guitarAmps: ['Roland JC-120', 'Marshall JCM900 4100'],
-    bassAmp: 'Hartke HA3500 + 410XL',
-    drumSet: 'Pearl Session Studio Classic',
-    isTwinPedalAllowed: true,
-    paSystem: 'YAMAHA EMX512SC',
-    keyboards: ['Roland Juno-DS61'],
-    additionalNotes: '使い勝手の良い14帖標準スタジオ。※お電話（03-3351-3140）にて予約受付。',
-  },
-};
-
-// 互換性のための空スロット関数（ダミーのランダムスロット生成は完全撤廃）
+// 互換性のための空スロット関数
 export function getMockSlotsForDate(_dateStr: string): Record<string, AvailabilitySlot[]> {
   return {};
 }
 
-// 部屋とスタジオ、機材、スロットを結合した正規リストを取得（ダミーデータ完全排除）
+/**
+ * 部屋とスタジオ、機材、スロットを結合した正規リストを取得（ダミーデータ完全排除）
+ * 秋葉原・渋谷・新宿の全16店舗・全165室以上を網羅
+ */
 export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
-  const studioMap = new Map(MOCK_STUDIOS.map(s => [s.id, s]));
+  // 1. 秋葉原エリア (4店舗 / 36部屋: BOT, GOODMAN, 音楽館, ノア秋葉原店)
+  const akibaRooms = getAkihabaraRealRooms(dateStr);
 
-  // 秋葉原エリアは4スタジオ（全36部屋）の実データを反映
-  const akibaRealRooms = getAkihabaraRealRooms(dateStr);
+  // 2. 渋谷ゲートウェイ (1店舗 / 12部屋)
+  const gatewayRooms = getGatewayShibuyaRealRooms(dateStr);
 
-  // ノア渋谷2号店は実スクレイピングデータから全14部屋＆実スロットを生成
-  const noahShibuya2RealRooms = getNoahShibuya2RealRooms(dateStr);
+  // 3. 新宿NODE (1店舗 / 4部屋)
+  const nodeRooms = getNodeShinjukuRealRooms(dateStr);
 
-  // ゲートウェイスタジオ渋谷道玄坂店は実スクレイピングデータから全12部屋＆実スロットを生成
-  const gatewayShibuyaRealRooms = getGatewayShibuyaRealRooms(dateStr);
+  // 4. ノア店舗群 (渋谷本店, 渋谷1号店, 渋谷2号店, 渋谷3号店, 新宿店: 計76部屋)
+  // ※秋葉原店はakibaRooms側で反映されるため除外して重複を防ぐ
+  const noahRooms = getNoahAllTokyoRealRooms(dateStr).filter(r => r.studioId !== 'akiba-noah');
 
-  // 他の正規対応スタジオ（渋谷・新宿のペンタ、ノア、NODE）
-  const otherRooms: RoomWithSlots[] = MOCK_ROOMS.map(room => {
-    const studio = studioMap.get(room.studioId) || MOCK_STUDIOS[0];
-    const equipment = MOCK_EQUIPMENTS[room.id] || {
-      id: `eq-${room.id}`,
-      roomId: room.id,
-      guitarAmps: ['Roland JC-120', 'Marshall JCM2000 DSL100'],
-      bassAmp: 'Ampeg SVT',
-      drumSet: 'Pearl Masters Studio',
-      isTwinPedalAllowed: true,
-      additionalNotes: studio.chainName.includes('PENTA') ? '※お電話にて空き確認・ご予約ください。' : '',
-    };
+  // 5. ペンタ店舗群 (渋谷シティ, 渋谷ジューク, 渋谷ムーン, 新宿店, 新宿南口店: 計37部屋)
+  const pentaRooms = getPentaRealRooms(dateStr);
 
-    return {
-      ...room,
-      studio,
-      equipment,
-      slots: [], // ダミースロットは作らず、リアルタイムAPI/電話予約のみで運用
-    };
-  });
-
-  return [...akibaRealRooms, ...noahShibuya2RealRooms, ...gatewayShibuyaRealRooms, ...otherRooms];
+  return [...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms];
 }

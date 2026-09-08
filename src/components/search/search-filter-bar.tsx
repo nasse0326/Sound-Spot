@@ -215,23 +215,59 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
           </select>
         </div>
 
-        {/* 部屋の広さ（畳数） */}
+        {/* 部屋の広さ（チェックボックス選択） */}
         <div>
-          <label className="block text-xs font-medium text-slate-400 mb-1 flex items-center gap-1.5">
-            <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-400" />
-            最低の広さ（畳数）
-          </label>
-          <select
-            value={filters.minTatami}
-            onChange={(e) => onChange({ ...filters, minTatami: Number(e.target.value) })}
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 sm:py-2.5 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-emerald-500"
-          >
-            <option value={0}>広さ指定なし</option>
-            <option value={10}>10帖以上（3〜4人）</option>
-            <option value={12}>12帖以上（4〜5人）</option>
-            <option value={15}>15帖以上（5〜6人・広々）</option>
-            <option value={18}>18帖以上（大編成 / REC）</option>
-          </select>
+          <div className="flex items-center justify-between mb-1">
+            <label className="text-xs font-medium text-slate-400 flex items-center gap-1.5">
+              <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-400" />
+              広さ指定（複数可）
+            </label>
+            {(filters.tatamiRanges && filters.tatamiRanges.length > 0) && (
+              <button
+                type="button"
+                onClick={() => onChange({ ...filters, tatamiRanges: [] })}
+                className="text-[10px] text-slate-400 hover:text-emerald-400 underline cursor-pointer"
+              >
+                クリア
+              </button>
+            )}
+          </div>
+          <div className="grid grid-cols-2 gap-1.5 bg-slate-950/80 p-1.5 rounded-xl border border-slate-800">
+            {[
+              { id: 'under9', label: '〜9帖' },
+              { id: '10to12', label: '10〜12帖' },
+              { id: '13to15', label: '13〜15帖' },
+              { id: '16plus', label: '16帖〜' },
+            ].map((opt) => {
+              const isChecked = filters.tatamiRanges?.includes(opt.id) ?? false;
+              return (
+                <button
+                  key={opt.id}
+                  type="button"
+                  onClick={() => {
+                    const current = filters.tatamiRanges || [];
+                    const updated = isChecked
+                      ? current.filter((item) => item !== opt.id)
+                      : [...current, opt.id];
+                    onChange({ ...filters, tatamiRanges: updated });
+                  }}
+                  className={`flex items-center justify-between px-2 py-1.5 rounded-lg text-xs transition-all text-left cursor-pointer border ${
+                    isChecked
+                      ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50 font-medium shadow-sm'
+                      : 'bg-slate-900/60 text-slate-400 border-slate-800/80 hover:border-slate-700 hover:text-slate-200'
+                  }`}
+                >
+                  <span className="font-medium text-[11px] sm:text-xs">{opt.label}</span>
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    readOnly
+                    className="w-3.5 h-3.5 rounded border-slate-700 text-emerald-500 accent-emerald-500 pointer-events-none"
+                  />
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 

@@ -1,0 +1,143 @@
+/**
+ * Pure Node fetch scraper for STUDIO NODE Shinjuku (studio-node.jp ASP system)
+ * Completely eliminates browser overhead and fetches 21 days of slot data.
+ */
+import { format, addDays } from 'date-fns';
+
+export interface NodeSlot {
+  id: string;
+  start_time: string;
+  end_time: string;
+  status: 'AVAILABLE' | 'BOOKED';
+  price?: number;
+}
+
+export interface NodeRoomData {
+  id: string;
+  name: string;
+  tatami: number;
+  offset: number;
+  slots: NodeSlot[];
+}
+
+export const NODE_ROOM_SPECS: Record<string, { id: string; name: string; tatami: number }> = {
+  '3Cst': { id: 'node-shinjuku-3Cst', name: '3Cst (10帖)', tatami: 10 },
+  '3Dst': { id: 'node-shinjuku-3Dst', name: '3Dst (16帖)', tatami: 16 },
+  '4Est': { id: 'node-shinjuku-4Est', name: '4Est (12帖)', tatami: 12 },
+  '4Fst': { id: 'node-shinjuku-4Fst', name: '4Fst (14帖)', tatami: 14 },
+};
+
+/**
+ * Fetches availability slots for STUDIO NODE Shinjuku for up to dayCount days.
+ */
+export async function fetchNodeShinjukuDays(
+  baseDate: Date = new Date(),
+  dayCount: number = 21
+): Promise<NodeRoomData[]> {
+  console.log(`📡 [STUDIO NODE 新宿店] リアルタイム空き状況を取得中 (Node fetch / ${dayCount}日間)...`);
+
+  const loginUrl = 'https://www.studio-node.jp/studio/member/VisitorLogin.php?lc=llcvcamtc&mn=1&gr=3';
+  const postUrl = 'https://www.studio-node.jp/studio/member/member_select.php';
+
+  const roomMap: Record<string, NodeRoomData> = {
+    '3Cst': { id: 'node-shinjuku-3Cst', name: '3Cst (10帖)', tatami: 10, offset: 0, slots: [] },
+    '3Dst': { id: 'node-shinjuku-3Dst', name: '3Dst (16帖)', tatami: 16, offset: 0, slots: [] },
+    '4Est': { id: 'node-shinjuku-4Est', name: '4Est (12帖)', tatami: 12, offset: 0, slots: [] },
+    '4Fst': { id: 'node-shinjuku-4Fst', name: '4Fst (14帖)', tatami: 14, offset: 0, slots: [] },
+  };
+
+  try {
+    const initRes = await fetch(loginUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)',
+      }
+    });
+
+    const setCookies = (initRes.headers as any).getSetCookie ? (initRes.headers as any).getSetCookie() : [initRes.headers.get('set-cookie') || ''];
+    const cookieHeader = setCookies.map((c: string) => c.split(';')[0]).filter(Boolean).join('; ');
+
+    const dateList: string[] = [];
+    for (let i = 0; i < dayCount; i++) {
+      dateList.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+    }
+
+    for (const dateStr of dateList) {
+      const form = new URLSearchParams();
+      form.append('office', '1020013');
+      form.append('grand', '3');
+      form.append('mngfg', '1');
+      form.append('rdate', dateStr);
+      form.append('member_select', '3');
+      form.append('sid', '');
+      form.append('day_btn', dateStr);
+      form.append('button', '更新');
+
+      try {
+        const res = await fetch(postUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)',
+            'Cookie': cookieHeader,
+            'Referer': loginUrl,
+          },
+          body: form.toString()
+        });
+
+        const buffer = await res.arrayBuffer();
+        const html = new TextDecoder('euc-jp').decode(buffer);
+
+        const trs = [...html.matchAll(/<tr[^>]*class=["']tr_base["'][^>]*>([\s\S]*?)<\/tr>/gi)];
+
+        for (const tr of trs) {
+          const rowHtml = tr[1];
+          let currentRoomKey = '';
+          for (const key of ['3Cst', '3Dst', '4Est', '4Fst']) {
+            if (rowHtml.includes(key)) {
+              currentRoomKey = key;
+              break;
+            }
+          }
+          if (!currentRoomKey || !roomMap[currentRoomKey]) continue;
+
+          const cells = [...rowHtml.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map(m => m[1]);
+
+          const availableHours = new Set<number>();
+          for (const c of cells) {
+            const valMatch = c.match(/name=["']c_v\[\]["'][^>]*value=["'](\d{2})(\d{2})["']/i);
+            if (valMatch) {
+              const slotIdx = parseInt(valMatch[2], 10);
+              const hour = 9 + slotIdx;
+              if (hour >= 10 && hour < 24) {
+                availableHours.add(hour);
+              }
+            }
+          }
+
+          for (let h = 10; h < 24; h++) {
+            const startHStr = String(h).padStart(2, '0');
+            const endHStr = String(h + 1).padStart(2, '0');
+            const isAvail = availableHours.has(h);
+
+            roomMap[currentRoomKey].slots.push({
+              id: `node-${currentRoomKey}-${dateStr}-${startHStr}`,
+              start_time: `${dateStr}T${startHStr}:00:00+09:00`,
+              end_time: `${dateStr}T${endHStr}:00:00+09:00`,
+              status: isAvail ? 'AVAILABLE' : 'BOOKED',
+            });
+          }
+        }
+      } catch (err: any) {
+        console.warn(`  ⚠️ [NODE] ${dateStr} の取得中にエラー: ${err.message}`);
+      }
+
+      await new Promise(r => setTimeout(r, 60));
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [NODE Error] ${err.message}`);
+  }
+
+  const results = Object.values(roomMap);
+  console.log(`  ✅ [STUDIO NODE 新宿店] 取得完了: ${results.length}部屋 (各${results[0]?.slots.length || 0}スロット)`);
+  return results;
+}

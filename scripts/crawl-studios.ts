@@ -11,7 +11,8 @@ import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays } from './lib/bot-fetcher';
 import { fetchOngakukanAkibaDays } from './lib/ongakukan-fetcher';
-import { fetchNoahAkibaDays } from './lib/noah-fetcher';
+import { fetchNoahAkibaDays, fetchAllNoahTokyoDays } from './lib/noah-fetcher';
+import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -432,16 +433,33 @@ export function checkNoahStealthGuard(nowDate: Date = new Date(), ignoreGuards: 
   return { canProceed: true };
 }
 
-async function runNoahWithStealthSafeguards() {
+async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
+  try {
+    console.log('\n📡 [STUDIO NODE 新宿店] 自動巡回を開始...');
+    const nodeRooms = await fetchNodeShinjukuDays(now, dayCount);
+    if (nodeRooms && nodeRooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/node-shinjuku-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms: nodeRooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [NODE] 新宿店の全スロットデータを ${outPath} に保存しました。`);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [NODE Crawl Error] ${err.message}`);
+  }
+}
+
+async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
   console.log('\n🛡️ [NOAH Stealth Guard] 人間化・BAN回避判定を実行中...');
 
   const guard = checkNoahStealthGuard();
-  if (!guard.canProceed) {
+  if (!guard.canProceed && process.env.IGNORE_GUARDS !== 'true') {
     console.log(`  ⏹️ [SKIP] ${guard.reason}`);
     return;
   }
 
-  const jitterSec = Math.floor(Math.random() * 5) + 2;
+  const jitterSec = Math.floor(Math.random() * 4) + 1;
   console.log(`  🎲 [Jitter] キリ番アクセス回避のため、${jitterSec}秒 ランダム待機（ゆらぎ付与）します...`);
   await new Promise(r => setTimeout(r, jitterSec * 1000));
 
@@ -451,53 +469,19 @@ async function runNoahWithStealthSafeguards() {
     return;
   }
 
-  const state = JSON.parse(fs.readFileSync(storageStatePath, 'utf-8'));
-  const cookies = state.cookies || [];
-  const cookieHeader = cookies.map((c: any) => `${c.name}=${c.value}`).join('; ');
-  console.log(`  🍪 [Cookie] 保存済みセッション（${cookies.length}個のCookie）を使用して安全にアクセスします（ID/PW再送ゼロ）。`);
-
-  const noahStores = [
-    { id: 'shibuya2', name: 'サウンドスタジオノア 渋谷2号店' },
-    { id: 'shibuya_honten', name: 'サウンドスタジオノア 渋谷本店' },
-    { id: 'shibuya1', name: 'サウンドスタジオノア 渋谷1号店' },
-    { id: 'shibuya3', name: 'サウンドスタジオノア 渋谷3号店' },
-    { id: 'shinjuku', name: 'サウンドスタジオノア 新宿店' },
-    { id: 'akihabara', name: 'サウンドスタジオノア 秋葉原店' }
-  ];
-
-  for (let i = 0; i < noahStores.length; i++) {
-    const store = noahStores[i];
-    console.log(`  📡 [NOAH] ${store.name} の最新チャートを確認中...`);
-
-    if (i > 0) {
-      const storeWaitSec = Math.floor(Math.random() * 3) + 2;
-      console.log(`  ⏳ 人間らしい閲覧間隔のため ${storeWaitSec}秒 待機...`);
-      await new Promise(r => setTimeout(r, storeWaitSec * 1000));
+  try {
+    console.log('  🚀 [NOAH Tokyo] ノア全6店舗（渋谷4店・新宿1店・秋葉原1店）の空き枠を一括取得中...');
+    const noahRooms = await fetchAllNoahTokyoDays(now, dayCount);
+    if (noahRooms && noahRooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/noah-tokyo-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms: noahRooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [NOAH] 全6店舗（計${noahRooms.length}部屋）のスロットデータを ${outPath} に保存しました。`);
     }
-
-    try {
-      const res = await fetch(`https://www.studionoah.jp/noahweb/webs/render_chart/${store.id}`, {
-        method: 'POST',
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-          'X-Requested-With': 'XMLHttpRequest',
-          'Referer': 'https://www.studionoah.jp/noahweb/webs/chart/',
-          'Cookie': cookieHeader
-        }
-      });
-
-      if (res.status === 401 || res.status === 403) {
-        console.warn(`  🚨 [ALERT] NOAHサーバーより ${res.status} が返却されました。アカウント保護のため即座に巡回を緊急停止します。`);
-        break;
-      }
-
-      if (res.status === 200) {
-        console.log(`  ✅ [NOAH] ${store.name} のセッション通信が安全に完了しました。`);
-      }
-    } catch (err: any) {
-      console.error(`  ⚠️ [NOAH Error] 通信エラー: ${err.message}`);
-      break;
-    }
+  } catch (err: any) {
+    console.error(`  ⚠️ [NOAH Error] 通信エラー: ${err.message}`);
   }
 }
 
@@ -536,11 +520,12 @@ async function main() {
   }
 
   try {
-    console.log('⚡ [Parallel Execution] ゲートウェイ（渋谷）、秋葉原（BOT＆GOODMAN）、ノア（公式API）を並行巡回します...');
+    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ・ノア4店）、新宿（NODE・ノア）、秋葉原（BOT・GOODMAN・音楽館・ノア）を並行巡回します...');
     await Promise.all([
       crawlGatewayShibuya(now, 21),
       crawlAkihabaraStudios(now, 21),
-      runNoahWithStealthSafeguards(),
+      crawlNodeShinjuku(now, 21),
+      runNoahWithStealthSafeguards(now, 21),
     ]);
 
     console.log('\n====================================================');

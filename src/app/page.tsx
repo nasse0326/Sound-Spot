@@ -35,6 +35,7 @@ export default function HomePage() {
     bookingType: 'band',
     area: '秋葉原',
     minTatami: 0,
+    tatamiRanges: [],
     requireJc120: false,
     requireMarshall: false,
     requireRecording: false,
@@ -81,8 +82,17 @@ export default function HomePage() {
         return false;
       }
 
-      // 最低畳数
-      if (filters.minTatami > 0 && room.sizeTatami < filters.minTatami) {
+      // 広さ（畳数）チェックボックス絞り込み
+      if (filters.tatamiRanges && filters.tatamiRanges.length > 0) {
+        const matchesRange = filters.tatamiRanges.some((range) => {
+          if (range === 'under9') return room.sizeTatami <= 9;
+          if (range === '10to12') return room.sizeTatami >= 10 && room.sizeTatami <= 12;
+          if (range === '13to15') return room.sizeTatami >= 13 && room.sizeTatami <= 15;
+          if (range === '16plus') return room.sizeTatami >= 16;
+          return false;
+        });
+        if (!matchesRange) return false;
+      } else if (filters.minTatami > 0 && room.sizeTatami < filters.minTatami) {
         return false;
       }
 
