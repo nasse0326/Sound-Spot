@@ -182,10 +182,11 @@ flowchart TD
 
 ### 4.6 サウンドスタジオノア 秋葉原店 (SOUND STUDIO NOAH)
 - **予約形態**: 独自Web予約システム（会員ログインセッション利用）。
-- **認証仕様**: 保存済みセッション（`storageState.json`）を用いたブラウザコンテキスト通信により、認証必須部屋（`chart_login_required_flg: 1`）を含む全室を完全取得。
+- **認証仕様**: 保存済みセッション（`storageState.json`）のCookieヘッダーを用いたPure Node fetch通信により、Playwright（ブラウザ起動）完全ゼロで認証必須部屋（`chart_login_required_flg: 1`）を含む全室を完全取得。
 - **データ取得技術**: スケジュールAPI取得モジュール（`scripts/lib/noah-fetcher.ts`）。
-  - `/noahweb/Chart/schedule?studio_id=...&searchdate=...` に対し、週ごとの月曜付で3週間分（向こう21日間・計5,544スロット）を一括取得。
+  - `/noahweb/Chart/schedule?studio_id=...&searchdate=...` に対し、純粋なNode fetchリクエストで週ごとの月曜付で3週間分（向こう21日間・計5,544スロット）を一括取得。
   - スロットの `is_booked`（`BOOKED`）および `is_bookable`（`AVAILABLE`）を直接判定。
+  - Playwrightおよびブラウザバイナリに依存しないため、GitHub Actions（Ubuntuランナー）上でも軽量・高速かつ安定して完全自動巡回が可能。
 - **店舗特性（全11部屋）**:
   - A1st (8帖 :00), A2st (8帖 :00), A3st (9帖 :30), B1st (14帖 :00), B2st (13帖 :30), Cst+Sub (28帖 :30), E1st (21帖 :00), E2st (20帖 :30), G1st (12帖 :00), GSst (10帖 :30), Booth1 (3帖 :30)。
   - 00分開始と30分開始が混在。向こう21日分のリアルタイムな空き枠データを完全同期。
