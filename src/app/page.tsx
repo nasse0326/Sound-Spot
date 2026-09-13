@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { SearchFilterBar } from '@/components/search/search-filter-bar';
 import { StudioCard } from '@/components/search/studio-card';
 import { StudioTimelineView } from '@/components/timeline/studio-timeline-view';
@@ -66,10 +66,37 @@ export default function HomePage() {
     return Array.from(new Set(MOCK_STUDIOS.map((s) => s.area)));
   }, []);
 
-  // 選択日時のスロット付き部屋データ
-  const allRooms = useMemo(() => {
-    return getMockRoomsWithSlots(filters.date);
+  // 選択日時のスロット付き部屋データ（初期値: ローカルキャッシュ、APIフェッチ完了後はDBリアルタイムデータ）
+  const [liveRooms, setLiveRooms] = useState<RoomWithSlots[]>(() => getMockRoomsWithSlots(filters.date));
+
+  // 日付変更時に初期ローカルデータで即時描画（体感遅延ゼロ化）
+  useEffect(() => {
+    setLiveRooms(getMockRoomsWithSlots(filters.date));
   }, [filters.date]);
+
+  // バックグラウンドで /api/studios から Supabase リアルタイムデータをフェッチ
+  useEffect(() => {
+    let isMounted = true;
+    const fetchLiveRooms = async () => {
+      try {
+        const res = await fetch(`/api/studios?date=${encodeURIComponent(filters.date)}&area=${encodeURIComponent(filters.area)}`);
+        if (res.ok) {
+          const json = await res.json();
+          if (isMounted && json.data && Array.isArray(json.data) && json.data.length > 0) {
+            setLiveRooms(json.data);
+          }
+        }
+      } catch (e) {
+        // エラー時は初期ローカルキャッシュが維持されるため安全
+      }
+    };
+    fetchLiveRooms();
+    return () => {
+      isMounted = false;
+    };
+  }, [filters.date, filters.area]);
+
+  const allRooms = liveRooms;
 
   // フィルタリング処理
   const filteredRooms = useMemo(() => {

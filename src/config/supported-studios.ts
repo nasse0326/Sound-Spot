@@ -18,7 +18,7 @@ export interface SupportedStudio {
 
 export const SUPPORTED_STUDIOS: SupportedStudio[] = [
   // -------------------------------------------------------------
-  // 渋谷エリア (8店舗 / 計77部屋)
+  // 渋谷エリア (8店舗 / 計87部屋)
   // -------------------------------------------------------------
   {
     id: 'shibuya-noah-honten',
@@ -158,15 +158,15 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
   },
 
   // -------------------------------------------------------------
-  // 新宿エリア (4店舗 / 計59部屋)
+  // 新宿エリア (3店舗 / 計47部屋)
   // -------------------------------------------------------------
   {
     id: 'shinjuku-noah',
     name: 'サウンドスタジオノア 新宿店',
     chainName: 'SOUND STUDIO NOAH',
     area: '新宿',
-    nearestStation: '新宿駅 西口 徒歩4分 / 西新宿駅 徒歩2分',
-    address: '東京都新宿区西新宿1-3-14 新宿サンゲンビルB1F-7F',
+    nearestStation: '新宿駅 西口 徒歩4分 / 新宿西口駅 徒歩3分',
+    address: '東京都新宿区西新宿1-3-14 新宿サンゲンビル1F-7F',
     roomCount: 21,
     syncType: 'web_api',
     syncLabel: 'リアルタイムWeb同期',
@@ -202,35 +202,35 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     nearestStation: '新宿駅 東口 徒歩3分 / 新宿三丁目駅 徒歩2分',
     address: '東京都新宿区新宿3-11-6 エビスビルB1F',
     roomCount: 19,
-    syncType: 'phone',
-    syncLabel: '電話予約スタジオ',
-    systemName: 'ワンタップ電話受付 (tel:)',
+    syncType: 'web_calendar',
+    syncLabel: '土日祝Web同期 / 平日電話',
+    systemName: 'ペンタ新宿 空き室ボード連携',
     is24Hours: false,
     businessHours: '10:00〜24:00',
     tel: '03-3351-3140',
     websiteUrl: 'https://studiopenta.jp/rehearsal/shinjuku/',
-    features: ['新宿東口屈指の19部屋', 'ワンタップ電話予約', '個人練習前日10時〜', '機材持ち込み歓迎'],
+    features: ['新宿東口屈指の19部屋', '土日祝リアルタイム空き状況', '平日ワンタップ電話予約', '個人練習前日10時〜'],
   },
   {
-    id: 'shinjuku-penta-south',
-    name: 'スタジオペンタ 新宿南口店',
-    chainName: 'STUDIO PENTA',
+    id: 'ongakukan-shinjuku-west',
+    name: 'スタジオ音楽館 新宿西口店',
+    chainName: 'スタジオ音楽館',
     area: '新宿',
-    nearestStation: '新宿駅 南口 徒歩3分',
-    address: '東京都渋谷区代々木2-10-8 ケイアイ新宿ビルB1F',
-    roomCount: 8,
-    syncType: 'phone',
-    syncLabel: '電話予約スタジオ',
-    systemName: 'ワンタップ電話受付 (tel:)',
+    nearestStation: '新宿駅 西口 徒歩2分 / 新宿西口駅 徒歩3分',
+    address: '東京都新宿区西新宿7-15-4 YSビルB2F',
+    roomCount: 7,
+    syncType: 'web_calendar',
+    syncLabel: 'リアルタイムWeb同期',
+    systemName: 'ajg.jp (自動巡回)',
     is24Hours: false,
-    businessHours: '10:00〜24:00',
-    tel: '03-3350-5020',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shinjukuminamiguchi/',
-    features: ['南口徒歩3分好アクセス', 'ワンタップ電話予約', '個人練習前日10時〜', '落ち着いたアットホーム空間'],
+    businessHours: '10:00〜24:00 (予約に応じ24時間営業対応)',
+    tel: '03-3368-0131',
+    websiteUrl: 'http://www.st-ongakukan.com/sinjukunishi/sinjukunishi.html',
+    features: ['西新宿駅近徒歩2分', '全室00分スタート', 'Web即時空き状況確認', '個人練習前日21時〜', '格安料金体系'],
   },
 
   // -------------------------------------------------------------
-  // 秋葉原エリア (4店舗 / 計36部屋)
+  // 秋葉原エリア (5店舗 / 計47部屋)
   // -------------------------------------------------------------
   {
     id: 'akiba-noah',
@@ -248,6 +248,23 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-5816-8383',
     websiteUrl: 'https://www.studionoah.jp/akihabara/',
     features: ['24時間営業', '中央通り直近', '00分/30分開始混在', '個人練習Web受付'],
+  },
+  {
+    id: 'noah-ochanomizu',
+    name: 'サウンドスタジオノア 御茶ノ水店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '秋葉原',
+    nearestStation: '御茶ノ水駅 御茶ノ水橋口 徒歩3分 / 神保町駅 A5出口 徒歩5分',
+    address: '東京都千代田区神田駿河台2丁目1-17',
+    roomCount: 11,
+    syncType: 'web_api',
+    syncLabel: 'リアルタイムWeb同期',
+    systemName: 'ノア公式API連携',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '03-6427-3361',
+    websiteUrl: 'https://www.studionoah.jp/ochanomizu/',
+    features: ['24時間営業', '明大通り沿い', '00分/30分開始混在', '個人練習Web受付', '駅チカ徒歩3分'],
   },
   {
     id: 'akiba-bot',

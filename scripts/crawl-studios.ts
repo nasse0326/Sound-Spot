@@ -10,9 +10,10 @@ import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays } from './lib/bot-fetcher';
-import { fetchOngakukanAkibaDays } from './lib/ongakukan-fetcher';
+import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays } from './lib/ongakukan-fetcher';
 import { fetchNoahAkibaDays, fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
+import { fetchPentaShinjukuDays, isWeekendOrHoliday } from './lib/penta-fetcher';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -40,6 +41,58 @@ function toUUID(str: string): string {
     'a' + hash.substring(17, 20),
     hash.substring(20, 32)
   ].join('-');
+}
+
+/**
+ * ユーザー指定スケジュール判定ガード
+ * 平日（月〜金、祝日除く）: 06:30, 11:45, 17:15, 21:30 (JST)
+ * 休日（土日）および祝日: 08:30, 13:00, 17:15, 21:30 (JST)
+ * GitHub Actionsの実行遅延（5〜20分程度）を吸収するため、前後ウィンドウで判定します。
+ */
+export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: boolean; reason?: string; isHolidayOrWeekend?: boolean } {
+  if (process.env.IGNORE_GUARDS === 'true') {
+    return { canProceed: true, reason: 'IGNORE_GUARDS=true のため即時実行します。' };
+  }
+
+  const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
+  const jstDate = new Date(utc + 3600000 * 9);
+  const jstDateStr = format(jstDate, 'yyyy-MM-dd');
+  const isWeekendHoliday = isWeekendOrHoliday(jstDateStr);
+
+  const currentMinutes = jstDate.getHours() * 60 + jstDate.getMinutes();
+
+  // 目標時刻（分換算）
+  // 06:30 -> 390
+  // 08:30 -> 510
+  // 11:45 -> 705
+  // 13:00 -> 780
+  // 17:15 -> 1035
+  // 21:30 -> 1290
+  const targets = isWeekendHoliday
+    ? [510, 780, 1035, 1290] // 休日・祝日
+    : [390, 705, 1035, 1290]; // 平日
+
+  // 各目標時刻に対して [-15分, +30分] の許容ウィンドウ
+  const isMatched = targets.some(target => {
+    return currentMinutes >= target - 15 && currentMinutes <= target + 30;
+  });
+
+  const jstTimeStr = `${String(jstDate.getHours()).padStart(2, '0')}:${String(jstDate.getMinutes()).padStart(2, '0')}`;
+  const dayType = isWeekendHoliday ? '休日・祝日' : '平日';
+
+  if (isMatched) {
+    return {
+      canProceed: true,
+      reason: `JST ${jstTimeStr} (${dayType}) は指定巡回スケジュール枠内に合致しています。`,
+      isHolidayOrWeekend: isWeekendHoliday,
+    };
+  }
+
+  return {
+    canProceed: false,
+    reason: `JST ${jstTimeStr} (${dayType}) は指定スケジュール（平日: 06:30, 11:45, 17:15, 21:30 / 休日祝日: 08:30, 13:00, 17:15, 21:30）の対象時間外のためスキップします。`,
+    isHolidayOrWeekend: isWeekendHoliday,
+  };
 }
 
 // -------------------------------------------------------------
@@ -425,23 +478,7 @@ export function checkNoahStealthGuard(nowDate: Date = new Date(), ignoreGuards: 
   const jstMin = jstDate.getMinutes();
   const jstDay = jstDate.getDay();
 
-  const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
-  if (isNightSleep) {
-    return {
-      canProceed: false,
-      reason: `🌙 深夜睡眠時間帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、ノアのアクセスを完全停止（睡眠中）します。`,
-    };
-  }
-
-  const isWeekday = jstDay >= 1 && jstDay <= 5;
-  const isDaytime = jstHour >= 11 && jstHour < 16;
-  if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40) {
-    return {
-      canProceed: false,
-      reason: `☕ 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため間引き運用（1時間間隔）とし、30分枠巡回をスキップします。`,
-    };
-  }
-
+  // クローラー全体のスケジュールガード（isScheduledCrawlTime）を通過していれば基本的に巡回可能
   return { canProceed: true };
 }
 
@@ -456,9 +493,112 @@ async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
         rooms: nodeRooms,
       }, null, 2), 'utf-8');
       console.log(`  💾 [NODE] 新宿店の全スロットデータを ${outPath} に保存しました。`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] STUDIO NODE 新宿店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        nodeRooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        for (let i = 0; i < dbSlots.length; i += 200) {
+          const chunk = dbSlots.slice(i, i + 200);
+          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+        }
+        console.log(`  ✨ [Supabase Sync] NODE新宿: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+      }
     }
   } catch (err: any) {
     console.error(`  ❌ [NODE Crawl Error] ${err.message}`);
+  }
+}
+
+async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
+  try {
+    console.log('\n📡 [スタジオペンタ 新宿店] リアルタイム空き状況ボードの自動巡回を開始...');
+    const pentaRooms = await fetchPentaShinjukuDays(now, dayCount);
+    if (pentaRooms && pentaRooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/penta-shinjuku-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms: pentaRooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [PENTA] 新宿店の全スロットデータを ${outPath} に保存しました。`);
+
+      if (supabase) {
+        const dbSlots: any[] = [];
+        for (const room of pentaRooms) {
+          const roomId = toUUID(`penta-shinjuku-${room.id}`);
+          for (const s of room.slots) {
+            // id: penta-shinjuku-101-2026-09-19-1000
+            const parts = s.id.split('-');
+            const date = parts.slice(parts.length - 4, parts.length - 1).join('-');
+            dbSlots.push({
+              id: toUUID(`penta-${s.id}`),
+              room_id: roomId,
+              date,
+              start_time: s.start_time,
+              end_time: s.end_time,
+              status: s.status,
+              created_at: new Date().toISOString(),
+              updated_at: new Date().toISOString(),
+            });
+          }
+        }
+        for (let i = 0; i < dbSlots.length; i += 200) {
+          const chunk = dbSlots.slice(i, i + 200);
+          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+        }
+        console.log(`✨ [Supabase Sync] ペンタ新宿: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [Penta Crawl Error] ${err.message}`);
+  }
+}
+
+async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- 6. スタジオ音楽館 新宿西口店 (ajg.jp) ---');
+  try {
+    const rooms = await fetchOngakukanShinjukuWestDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/ongakukan-shinjuku-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [スタジオ音楽館 新宿西口店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] 音楽館 新宿西口店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        for (let i = 0; i < dbSlots.length; i += 200) {
+          const chunk = dbSlots.slice(i, i + 200);
+          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+        }
+        console.log(`  ✨ [Supabase Sync] 音楽館 新宿西口店: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [音楽館新宿西口店 取得エラー] ${err.message}`);
   }
 }
 
@@ -477,12 +617,11 @@ async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
 
   const storageStatePath = path.resolve(process.cwd(), 'storageState.json');
   if (!fs.existsSync(storageStatePath)) {
-    console.log('  ⚠️ storageState.json が存在しないため、安全のためノアの巡回をパスします。');
-    return;
+    console.log('  ℹ️ storageState.json が存在しないため、認証情報があれば自動ログインし、なければログイン不要スタジオをゲスト巡回して既存キャッシュを保護します。');
   }
 
   try {
-    console.log('  🚀 [NOAH Tokyo] ノア全6店舗（渋谷4店・新宿1店・秋葉原1店）の空き枠を一括取得中...');
+    console.log('  🚀 [NOAH Tokyo] ノア全7店舗（渋谷4店・新宿1店・秋葉原1店・御茶ノ水1店）の空き枠を一括取得中...');
     const noahRooms = await fetchAllNoahTokyoDays(now, dayCount);
     if (noahRooms && noahRooms.length > 0) {
       const outPath = path.resolve(process.cwd(), 'src/data/noah-tokyo-real.json');
@@ -490,7 +629,28 @@ async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
         updatedAt: new Date().toISOString(),
         rooms: noahRooms,
       }, null, 2), 'utf-8');
-      console.log(`  💾 [NOAH] 全6店舗（計${noahRooms.length}部屋）のスロットデータを ${outPath} に保存しました。`);
+      console.log(`  💾 [NOAH] 全7店舗（計${noahRooms.length}部屋）のスロットデータを ${outPath} に保存しました。`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] ノア全店舗のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        noahRooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        for (let i = 0; i < dbSlots.length; i += 200) {
+          const chunk = dbSlots.slice(i, i + 200);
+          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+        }
+        console.log(`  ✨ [Supabase Sync] NOAH: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+      }
     }
   } catch (err: any) {
     console.error(`  ⚠️ [NOAH Error] 通信エラー: ${err.message}`);
@@ -508,35 +668,23 @@ async function main() {
   console.log('====================================================');
 
   const now = new Date();
-
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-  const jstDate = new Date(utc + 3600000 * 9);
-  const jstHour = jstDate.getHours();
-  const jstMin = jstDate.getMinutes();
-  const jstDay = jstDate.getDay();
-  const isNightSleep = (jstHour >= 1 && jstHour < 7) || (jstHour === 7 && jstMin < 30);
-  const ignoreGuards = process.env.IGNORE_GUARDS === 'true';
-
-  if (isNightSleep && !ignoreGuards) {
-    console.log(`🌙 [Global Night Sleep] 深夜睡眠時間帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオの巡回を停止（完全スリープ）します。`);
+  const scheduleCheck = isScheduledCrawlTime(now);
+  if (!scheduleCheck.canProceed) {
+    console.log(`⏹️ [Schedule Guard] ${scheduleCheck.reason}`);
+    console.log('   (手動実行やテスト時は IGNORE_GUARDS=true を指定することで即時実行可能です)');
     console.log('====================================================');
     return;
   }
-
-  const isWeekday = jstDay >= 1 && jstDay <= 5;
-  const isDaytime = jstHour >= 11 && jstHour < 17;
-  if (isWeekday && isDaytime && jstMin >= 20 && jstMin <= 40 && !ignoreGuards) {
-    console.log(`☕ [Global Daytime Throttle] 平日昼帯（JST ${jstHour}:${String(jstMin).padStart(2, '0')}）のため、全スタジオ1時間間隔運用とし30分枠巡回をスキップします。`);
-    console.log('====================================================');
-    return;
-  }
+  console.log(`⏰ [Schedule Guard] ${scheduleCheck.reason}`);
 
   try {
-    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ・ノア4店）、新宿（NODE・ノア）、秋葉原（BOT・GOODMAN・音楽館・ノア）を並行巡回します...');
+    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ・ノア4店）、新宿（NODE・ペンタ新宿・音楽館新宿西口・ノア）、秋葉原（BOT・GOODMAN・音楽館・ノア2店）を並行巡回します...');
     await Promise.all([
       crawlGatewayShibuya(now, 21),
       crawlAkihabaraStudios(now, 21),
       crawlNodeShinjuku(now, 21),
+      crawlPentaShinjuku(now, 21),
+      crawlOngakukanShinjuku(now, 21),
       runNoahWithStealthSafeguards(now, 21),
     ]);
 
@@ -549,4 +697,6 @@ async function main() {
   }
 }
 
-main();
+if (process.env.NODE_ENV !== 'test' && !process.env.IS_TEST_RUN) {
+  main();
+}

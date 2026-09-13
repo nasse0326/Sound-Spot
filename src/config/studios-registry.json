@@ -88,6 +88,19 @@
       "tel": "03-3255-0810"
     },
     {
+      "id": "noah-ochanomizu",
+      "name": "サウンドスタジオノア 御茶ノ水店",
+      "chainName": "SOUND STUDIO NOAH",
+      "area": "秋葉原",
+      "yamanoteSide": "east",
+      "nearestStation": "御茶ノ水駅 御茶ノ水橋口 徒歩3分 / 神保町駅 A5出口 徒歩5分",
+      "systemType": "noah",
+      "config": { "storeId": "ochanomizu" },
+      "roomCount": 11,
+      "is24Hours": true,
+      "tel": "03-6427-3361"
+    },
+    {
       "id": "shibuya-noah-honten",
       "name": "サウンドスタジオノア 渋谷本店",
       "chainName": "SOUND STUDIO NOAH",
@@ -231,18 +244,19 @@
       "tel": "03-3351-3140"
     },
     {
-      "id": "shinjuku-penta-south",
-      "name": "スタジオペンタ 新宿南口店",
-      "chainName": "STUDIO PENTA",
+      "id": "ongakukan-shinjuku-west",
+      "name": "スタジオ音楽館 新宿西口店",
+      "chainName": "スタジオ音楽館",
       "area": "新宿",
       "yamanoteSide": "west",
-      "nearestStation": "新宿駅 南口 徒歩3分",
-      "systemType": "phone_only",
-      "config": { "tel": "03-3350-5020" },
-      "roomCount": 8,
+      "nearestStation": "新宿駅 西口 徒歩2分 / 新宿西口駅 徒歩3分",
+      "systemType": "ajg",
+      "config": { "storeCode": "Fuoxajj8krt105m" },
+      "roomCount": 7,
       "is24Hours": false,
-      "tel": "03-3350-5020"
+      "tel": "03-3368-0131"
     },
+
     {
       "id": "takadanobaba-bot",
       "name": "ベースオントップ 高田馬場店",

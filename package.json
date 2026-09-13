@@ -7,7 +7,8 @@
     "build": "tailwindcss -i ./src/app/tailwind-source.css -o ./src/app/globals.css && next build",
     "start": "next start",
     "lint": "next lint",
-    "crawl": "tsx scripts/crawl-studios.ts"
+    "crawl": "tsx scripts/crawl-studios.ts",
+    "scan:noah": "tsx scripts/scan-noah-branch.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",

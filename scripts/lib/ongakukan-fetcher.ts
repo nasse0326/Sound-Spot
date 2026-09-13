@@ -19,7 +19,13 @@ export interface OngakukanRoomData {
   slots: OngakukanSlot[];
 }
 
-export const ONGAKUKAN_AKIBA_ROOMS: { id: string; name: string; staffId: number }[] = [
+export interface OngakukanRoomDef {
+  id: string;
+  name: string;
+  staffId: number;
+}
+
+export const ONGAKUKAN_AKIBA_ROOMS: OngakukanRoomDef[] = [
   { id: 'og-akiba-Aスタジオ', name: 'Aスタジオ (6帖)', staffId: 1 },
   { id: 'og-akiba-Bスタジオ', name: 'Bスタジオ (15帖)', staffId: 12 },
   { id: 'og-akiba-Cスタジオ', name: 'Cスタジオ (9帖)', staffId: 7 },
@@ -27,6 +33,16 @@ export const ONGAKUKAN_AKIBA_ROOMS: { id: string; name: string; staffId: number 
   { id: 'og-akiba-Eスタジオ', name: 'Eスタジオ (7帖)', staffId: 2 },
   { id: 'og-akiba-Gスタジオ', name: 'Gスタジオ (12帖)', staffId: 8 },
   { id: 'og-akiba-Music Innスタジオ', name: 'Music Innスタジオ (50帖)', staffId: 13 },
+];
+
+export const ONGAKUKAN_SHINJUKU_WEST_ROOMS: OngakukanRoomDef[] = [
+  { id: 'og-shinjuku-rhythm', name: 'Rhythm (9帖)', staffId: 1 },
+  { id: 'og-shinjuku-harmony', name: 'Harmony (10帖)', staffId: 2 },
+  { id: 'og-shinjuku-tone', name: 'Tone (11帖)', staffId: 3 },
+  { id: 'og-shinjuku-kick', name: 'Kick (13帖)', staffId: 4 },
+  { id: 'og-shinjuku-opus', name: 'Opus (17帖)', staffId: 5 },
+  { id: 'og-shinjuku-beat', name: 'Beat (20帖)', staffId: 6 },
+  { id: 'og-shinjuku-multiplex', name: 'Multiplex (22帖)', staffId: 7 },
 ];
 
 /**
@@ -97,15 +113,18 @@ function parseStoreWideCalendar(html: string): { dates: string[]; openSlotsByDat
 }
 
 /**
- * Fetches 21 days of accurate room-specific availability slots for Ongakukan Akiba.
+ * Generic fetcher for any Studio Ongakukan store using ajg.jp
  */
-export async function fetchOngakukanAkibaDays(
+export async function fetchOngakukanStoreDays(
+  storeId: string,
+  rooms: OngakukanRoomDef[],
+  storeLabel: string,
   baseDate: Date = new Date(),
   dayCount: number = 21
 ): Promise<OngakukanRoomData[]> {
-  console.log(`📡 [Ongakukan] 音楽館アキバ店のスタジオ別リアル空き枠を取得中 (ReservationStaff.php連携 / ${dayCount}日間)...`);
+  console.log(`📡 [Ongakukan] ${storeLabel}のスタジオ別リアル空き枠を取得中 (ReservationStaff.php連携 / ${dayCount}日間)...`);
 
-  const topUrl = 'https://www.ajg.jp/shop/ReservationTop.php?id=Twb03vvjqn2fba1';
+  const topUrl = `https://www.ajg.jp/shop/ReservationTop.php?id=${storeId}`;
   const resTop = await fetch(topUrl, {
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
@@ -207,7 +226,7 @@ export async function fetchOngakukanAkibaDays(
   // Build final room slot objects
   const results: OngakukanRoomData[] = [];
 
-  for (const room of ONGAKUKAN_AKIBA_ROOMS) {
+  for (const room of rooms) {
     const slots: OngakukanSlot[] = [];
 
     for (const dateStr of targetDateStrings) {
@@ -246,4 +265,36 @@ export async function fetchOngakukanAkibaDays(
   }
 
   return results;
+}
+
+/**
+ * Fetches 21 days of accurate room-specific availability slots for Ongakukan Akiba.
+ */
+export async function fetchOngakukanAkibaDays(
+  baseDate: Date = new Date(),
+  dayCount: number = 21
+): Promise<OngakukanRoomData[]> {
+  return fetchOngakukanStoreDays(
+    'Twb03vvjqn2fba1',
+    ONGAKUKAN_AKIBA_ROOMS,
+    '音楽館アキバ店',
+    baseDate,
+    dayCount
+  );
+}
+
+/**
+ * Fetches 21 days of accurate room-specific availability slots for Ongakukan Shinjuku West.
+ */
+export async function fetchOngakukanShinjukuWestDays(
+  baseDate: Date = new Date(),
+  dayCount: number = 21
+): Promise<OngakukanRoomData[]> {
+  return fetchOngakukanStoreDays(
+    'Fuoxajj8krt105m',
+    ONGAKUKAN_SHINJUKU_WEST_ROOMS,
+    '音楽館新宿西口店',
+    baseDate,
+    dayCount
+  );
 }
