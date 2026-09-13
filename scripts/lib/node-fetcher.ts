@@ -20,11 +20,14 @@ export interface NodeRoomData {
   slots: NodeSlot[];
 }
 
-export const NODE_ROOM_SPECS: Record<string, { id: string; name: string; tatami: number }> = {
-  '3Cst': { id: 'node-shinjuku-3Cst', name: '3Cst (10帖)', tatami: 10 },
-  '3Dst': { id: 'node-shinjuku-3Dst', name: '3Dst (16帖)', tatami: 16 },
-  '4Est': { id: 'node-shinjuku-4Est', name: '4Est (12帖)', tatami: 12 },
-  '4Fst': { id: 'node-shinjuku-4Fst', name: '4Fst (14帖)', tatami: 14 },
+export const NODE_ROOM_SPECS: Record<string, { id: string; name: string; tatami: number; offset: number }> = {
+  '3Cst': { id: 'node-shinjuku-3Cst', name: '3Cst (10帖)', tatami: 10, offset: 0 },
+  '3Dst': { id: 'node-shinjuku-3Dst', name: '3Dst (16帖)', tatami: 16, offset: 0 },
+  '4Est': { id: 'node-shinjuku-4Est', name: '4Est (12帖)', tatami: 12, offset: 0 },
+  '4Fst': { id: 'node-shinjuku-4Fst', name: '4Fst (14帖)', tatami: 14, offset: 0 },
+  '2Ast': { id: 'node-shinjuku-2Ast', name: '2Ast (9帖)', tatami: 9, offset: 30 },
+  '2Bst': { id: 'node-shinjuku-2Bst', name: '2Bst (11帖)', tatami: 11, offset: 30 },
+  '5Gst': { id: 'node-shinjuku-5Gst', name: '5Gst (26帖)', tatami: 26, offset: 30 },
 };
 
 /**
@@ -34,17 +37,23 @@ export async function fetchNodeShinjukuDays(
   baseDate: Date = new Date(),
   dayCount: number = 21
 ): Promise<NodeRoomData[]> {
-  console.log(`📡 [STUDIO NODE 新宿店] リアルタイム空き状況を取得中 (Node fetch / ${dayCount}日間)...`);
+  console.log(`📡 [STUDIO NODE 新宿店] リアルタイム空き状況を取得中 (Node fetch / 全7部屋 / ${dayCount}日間)...`);
 
   const loginUrl = 'https://www.studio-node.jp/studio/member/VisitorLogin.php?lc=llcvcamtc&mn=1&gr=3';
   const postUrl = 'https://www.studio-node.jp/studio/member/member_select.php';
 
-  const roomMap: Record<string, NodeRoomData> = {
-    '3Cst': { id: 'node-shinjuku-3Cst', name: '3Cst (10帖)', tatami: 10, offset: 0, slots: [] },
-    '3Dst': { id: 'node-shinjuku-3Dst', name: '3Dst (16帖)', tatami: 16, offset: 0, slots: [] },
-    '4Est': { id: 'node-shinjuku-4Est', name: '4Est (12帖)', tatami: 12, offset: 0, slots: [] },
-    '4Fst': { id: 'node-shinjuku-4Fst', name: '4Fst (14帖)', tatami: 14, offset: 0, slots: [] },
-  };
+  const roomKeys = Object.keys(NODE_ROOM_SPECS);
+  const roomMap: Record<string, NodeRoomData> = {};
+  for (const k of roomKeys) {
+    const spec = NODE_ROOM_SPECS[k];
+    roomMap[k] = {
+      id: spec.id,
+      name: spec.name,
+      tatami: spec.tatami,
+      offset: spec.offset,
+      slots: [],
+    };
+  }
 
   try {
     const initRes = await fetch(loginUrl, {
@@ -92,7 +101,7 @@ export async function fetchNodeShinjukuDays(
         for (const tr of trs) {
           const rowHtml = tr[1];
           let currentRoomKey = '';
-          for (const key of ['3Cst', '3Dst', '4Est', '4Fst']) {
+          for (const key of roomKeys) {
             if (rowHtml.includes(key)) {
               currentRoomKey = key;
               break;
@@ -102,27 +111,28 @@ export async function fetchNodeShinjukuDays(
 
           const cells = [...rowHtml.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map(m => m[1]);
 
-          const availableHours = new Set<number>();
+          const availableSlots = new Set<number>();
           for (const c of cells) {
             const valMatch = c.match(/name=["']c_v\[\]["'][^>]*value=["'](\d{2})(\d{2})["']/i);
             if (valMatch) {
               const slotIdx = parseInt(valMatch[2], 10);
-              const hour = 9 + slotIdx;
-              if (hour >= 10 && hour < 24) {
-                availableHours.add(hour);
-              }
+              availableSlots.add(slotIdx);
             }
           }
 
-          for (let h = 10; h < 24; h++) {
-            const startHStr = String(h).padStart(2, '0');
-            const endHStr = String(h + 1).padStart(2, '0');
-            const isAvail = availableHours.has(h);
+          const offset = roomMap[currentRoomKey].offset;
+          for (let slotIdx = 1; slotIdx <= 14; slotIdx++) {
+            const startH = 8 + slotIdx;
+            const endH = 9 + slotIdx;
+            const minStr = offset === 30 ? '30' : '00';
+            const startHStr = String(startH).padStart(2, '0');
+            const endHStr = String(endH).padStart(2, '0');
+            const isAvail = availableSlots.has(slotIdx);
 
             roomMap[currentRoomKey].slots.push({
-              id: `node-${currentRoomKey}-${dateStr}-${startHStr}`,
-              start_time: `${dateStr}T${startHStr}:00:00+09:00`,
-              end_time: `${dateStr}T${endHStr}:00:00+09:00`,
+              id: `node-${currentRoomKey}-${dateStr}-${startHStr}${minStr}`,
+              start_time: `${dateStr}T${startHStr}:${minStr}:00+09:00`,
+              end_time: `${dateStr}T${endHStr}:${minStr}:00+09:00`,
               status: isAvail ? 'AVAILABLE' : 'BOOKED',
             });
           }

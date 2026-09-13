@@ -158,7 +158,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
   },
 
   // -------------------------------------------------------------
-  // 新宿エリア (4店舗 / 計56部屋)
+  // 新宿エリア (4店舗 / 計59部屋)
   // -------------------------------------------------------------
   {
     id: 'shinjuku-noah',
@@ -184,7 +184,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     area: '新宿',
     nearestStation: '新宿駅 西口 徒歩6分 / 西武新宿駅 徒歩3分',
     address: '東京都新宿区西新宿7-16-12 YSビルB1F',
-    roomCount: 4,
+    roomCount: 7,
     syncType: 'web_calendar',
     syncLabel: 'リアルタイムWeb同期',
     systemName: 'studio-node.jp (自動巡回)',
@@ -192,7 +192,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     businessHours: '10:00〜24:00',
     tel: '03-5386-3371',
     websiteUrl: 'https://www.studio-node.com/HomeSH.html',
-    features: ['西新宿エリア', 'Web予約即時完結', '手頃な料金設定', 'ドラム設備充実'],
+    features: ['西新宿エリア', '00分/30分開始混在', 'Web予約即時完結', '手頃な料金設定', 'ドラム設備充実'],
   },
   {
     id: 'shinjuku-penta-main',
