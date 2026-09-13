@@ -71,9 +71,9 @@ export const PENTA_STUDIOS: Record<string, Studio> = {
     tel: '03-3351-3140',
     bookingUrl: 'https://studiopenta.jp/rehearsal/shinjuku/',
     websiteUrl: 'https://studiopenta.jp/rehearsal/shinjuku/',
-    businessHoursSummary: '10:00〜24:00 (土日祝はリアルタイム空き状況Web公開中 / 平日は電話受付)',
+    businessHoursSummary: '10:00〜24:00 (土日祝は空き状況Web公開中 / 平日は電話受付)',
     is24Hours: false,
-    groupBookingRule: '土日祝リアルタイム空き状況公開中 / 予約は電話にて受付',
+    groupBookingRule: '土日祝空き状況公開中 / 予約は電話にて受付',
     groupBookingLeadMonths: 2,
     soloBookingRule: '前日営業開始（10:00）より電話にて受付開始',
     soloBookingLeadHours: 38,
@@ -759,8 +759,8 @@ export function getPentaRealRooms(targetDateStr: string): RoomWithSlots[] {
       keyboards: def.keyboards,
       additionalNotes: `${def.notes || 'スタジオペンタ正規常設機材。'}${
         isShinjuku
-          ? `※土日祝日はリアルタイム空き状況をWeb公開中（平日またはご予約はお電話：${studio.tel}）。`
-          : `※電話予約店舗のため、リアルタイム空き確認・ご予約はお電話（${studio.tel}）にて承ります。`
+          ? `※土日祝日は空き状況をWeb公開中（平日またはご予約はお電話：${studio.tel}）。`
+          : `※電話予約店舗のため、空き確認・ご予約はお電話（${studio.tel}）にて承ります。`
       }`,
     };
 

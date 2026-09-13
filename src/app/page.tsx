@@ -34,6 +34,7 @@ export default function HomePage() {
     endTime: '15:00',
     bookingType: 'band',
     area: '秋葉原',
+    areas: ['秋葉原'],
     minTatami: 0,
     tatamiRanges: [],
     requireJc120: false,
@@ -66,7 +67,7 @@ export default function HomePage() {
     return Array.from(new Set(MOCK_STUDIOS.map((s) => s.area)));
   }, []);
 
-  // 選択日時のスロット付き部屋データ（初期値: ローカルキャッシュ、APIフェッチ完了後はDBリアルタイムデータ）
+  // 選択日時のスロット付き部屋データ（初期値: ローカルキャッシュ、APIフェッチ完了後は最新DBデータ）
   const [liveRooms, setLiveRooms] = useState<RoomWithSlots[]>(() => getMockRoomsWithSlots(filters.date));
 
   // 日付変更時に初期ローカルデータで即時描画（体感遅延ゼロ化）
@@ -74,12 +75,12 @@ export default function HomePage() {
     setLiveRooms(getMockRoomsWithSlots(filters.date));
   }, [filters.date]);
 
-  // バックグラウンドで /api/studios から Supabase リアルタイムデータをフェッチ
+  // バックグラウンドで /api/studios から最新データをフェッチ
   useEffect(() => {
     let isMounted = true;
     const fetchLiveRooms = async () => {
       try {
-        const res = await fetch(`/api/studios?date=${encodeURIComponent(filters.date)}&area=${encodeURIComponent(filters.area)}`);
+        const res = await fetch(`/api/studios?date=${encodeURIComponent(filters.date)}&area=all`);
         if (res.ok) {
           const json = await res.json();
           if (isMounted && json.data && Array.isArray(json.data) && json.data.length > 0) {
@@ -94,7 +95,7 @@ export default function HomePage() {
     return () => {
       isMounted = false;
     };
-  }, [filters.date, filters.area]);
+  }, [filters.date]);
 
   const allRooms = liveRooms;
 
@@ -104,8 +105,12 @@ export default function HomePage() {
     const targetEndH = parseInt(filters.endTime.split(':')[0], 10);
 
     return allRooms.filter((room) => {
-      // エリア
-      if (filters.area !== 'all' && room.studio.area !== filters.area) {
+      // エリア（複数選択チェックボックス対応）
+      if (filters.areas && filters.areas.length > 0) {
+        if (!filters.areas.includes(room.studio.area)) {
+          return false;
+        }
+      } else if (filters.area && filters.area !== 'all' && room.studio.area !== filters.area) {
         return false;
       }
 

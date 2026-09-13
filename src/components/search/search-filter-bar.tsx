@@ -107,7 +107,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
             className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 sm:py-2.5 text-sm text-slate-100 focus:outline-none focus:border-emerald-500 transition-colors [color-scheme:dark]"
           />
           <p className="text-[10px] text-slate-400 mt-1 flex items-center gap-1">
-            <span>※リアルタイム空き枠同期中: 本日〜3週間先まで</span>
+            <span>※空き情報: 本日〜3週間先まで</span>
           </p>
         </div>
 
@@ -195,24 +195,58 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
           </div>
         </div>
 
-        {/* エリア */}
+        {/* エリア指定（チェックボックス複数選択） */}
         <div>
-          <label className="block text-xs font-medium text-slate-400 mb-1 flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-            エリア・主要駅
-          </label>
-          <select
-            value={filters.area}
-            onChange={(e) => onChange({ ...filters, area: e.target.value })}
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 sm:py-2.5 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-emerald-500"
-          >
-            <option value="all">すべてのエリア（渋谷・新宿・秋葉原）</option>
-            {availableAreas.map((area) => (
-              <option key={area} value={area}>
-                {area} エリア
-              </option>
-            ))}
-          </select>
+          <div className="flex items-center justify-between mb-1">
+            <label className="text-xs font-medium text-slate-400 flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+              エリア（複数可）
+            </label>
+            {(filters.areas && filters.areas.length > 0) && (
+              <button
+                type="button"
+                onClick={() => onChange({ ...filters, areas: [], area: 'all' })}
+                className="text-[10px] text-slate-400 hover:text-emerald-400 underline cursor-pointer"
+              >
+                クリア
+              </button>
+            )}
+          </div>
+          <div className="grid grid-cols-3 gap-1.5 bg-slate-950/80 p-1.5 rounded-xl border border-slate-800">
+            {availableAreas.map((area) => {
+              const isChecked = filters.areas?.includes(area) ?? false;
+              return (
+                <button
+                  key={area}
+                  type="button"
+                  onClick={() => {
+                    const current = filters.areas || [];
+                    const updated = isChecked
+                      ? current.filter((item) => item !== area)
+                      : [...current, area];
+                    onChange({
+                      ...filters,
+                      areas: updated,
+                      area: updated.length === 1 ? updated[0] : 'all',
+                    });
+                  }}
+                  className={`flex items-center justify-between px-2 py-1.5 rounded-lg text-xs transition-all text-left cursor-pointer border ${
+                    isChecked
+                      ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50 font-medium shadow-sm'
+                      : 'bg-slate-900/60 text-slate-400 border-slate-800/80 hover:border-slate-700 hover:text-slate-200'
+                  }`}
+                >
+                  <span className="font-medium text-[11px] sm:text-xs truncate">{area}</span>
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    readOnly
+                    className="w-3.5 h-3.5 rounded border-slate-700 text-emerald-500 accent-emerald-500 pointer-events-none shrink-0"
+                  />
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* 部屋の広さ（チェックボックス選択） */}

@@ -134,7 +134,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
                   title="この日時の最新空き枠データは未取得です。公式WEBでご確認ください。"
                 >
                   <span className="font-mono text-slate-500">—</span>
-                  <span>未同期</span>
+                  <span>データ未取得</span>
                 </span>
               </div>
             ) : (

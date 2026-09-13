@@ -27,7 +27,7 @@ export default function RootLayout({
         <footer className="border-t border-slate-800/80 bg-slate-950 py-6 text-center text-xs text-slate-500">
           <p>© 2026 SoundSpot - 音楽スタジオ横断空き枠検索アプリ (MVP)</p>
           <p className="mt-1 text-slate-600">
-            ※空き状況はスタジオ公式サイトの情報を元に同期しています。予約完了は各スタジオの公式WEBサイトにて行ってください。
+            ※空き状況はスタジオ公式サイトの情報を元に定期取得・更新しています。予約完了は各スタジオの公式WEBサイトにて行ってください。
           </p>
         </footer>
       </body>

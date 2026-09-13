@@ -66,7 +66,8 @@ export interface SearchFilterParams {
   startTime: string; // "14:00"
   endTime: string;   // "15:00"
   bookingType: BookingType;
-  area: string; // "all" or "渋谷", "新宿", etc.
+  area?: string; // 後方互換用: "all" or "渋谷", "新宿", etc.
+  areas?: string[]; // 複数選択エリア: ['渋谷', '新宿'] 等（未選択時は全エリア）
   minTatami: number;
   tatamiRanges: string[]; // 'under9' | '10to12' | '13to15' | '16plus'
   requireJc120: boolean;

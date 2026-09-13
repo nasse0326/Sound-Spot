@@ -302,7 +302,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
               <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">予約連携仕様</span>
                 <p className="text-sm sm:text-base font-extrabold text-cyan-300 mt-0.5">10店 Web / 6店 電話</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-500">リアルタイム同期</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-500">定期更新</span>
               </div>
             </div>
 
@@ -368,7 +368,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                           ) : (
                             <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950/80 text-emerald-400 border border-emerald-800/60 flex items-center gap-1">
                               <Zap className="w-2.5 h-2.5 text-emerald-400" />
-                              リアルタイムWeb同期
+                              Web空き状況
                             </span>
                           )}
                         </div>
@@ -573,7 +573,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
             <div className="flex items-center gap-2 text-slate-400 text-[11px] sm:text-xs">
               <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
               <p className="leading-snug">
-                各スタジオ公式システムと定時自動同期。全16店舗の常設機材スペックを網羅しています。
+                各スタジオ公式システムから空き情報を定期取得。都内全17店舗の常設機材スペックを網羅しています。
               </p>
             </div>
             <button
