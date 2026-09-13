@@ -350,10 +350,8 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                   onClick={() => handleSlotClick(room, hour, 30)}
                                   title={`${room.studio.name} ${room.name} ${hour}:30〜24:00 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
                                   className={`col-span-1 h-7 rounded-r text-[9px] font-bold transition-all flex items-center justify-center cursor-pointer select-none ${
-                                    isExact
-                                      ? isAvailable
-                                        ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-md shadow-emerald-500/30 scale-[1.03] z-0'
-                                        : 'bg-slate-800 text-slate-400 ring-2 ring-slate-500 border border-slate-400 z-0'
+                                    isExact && isAvailable
+                                      ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-md shadow-emerald-500/30 scale-[1.03] z-0'
                                       : isAdjacent && isAvailable
                                       ? 'bg-blue-900/85 hover:bg-blue-800 text-blue-100 ring-2 ring-blue-400 border border-blue-300 shadow-md shadow-blue-500/30 scale-[1.02] z-0'
                                       : isAvailable
@@ -361,7 +359,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                       : 'bg-slate-850 hover:bg-slate-800 text-slate-600 border border-slate-800/60'
                                   }`}
                                 >
-                                  {isExact || isAdjacent ? (
+                                  {(isExact || isAdjacent) && isAvailable ? (
                                     <span className="tracking-tight text-[8px] font-mono font-bold">
                                       {hour}:30
                                     </span>
@@ -414,12 +412,8 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                 onClick={() => handleSlotClick(room, hour, offsetMin)}
                                 title={`${room.studio.name} ${room.name} - ${slotTimeStr}〜 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
                                 className={`col-span-2 h-7 rounded text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
-                                  isExact
-                                    ? isAvailable
-                                      ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-lg shadow-emerald-500/30 z-0 scale-[1.03]'
-                                      : isBooked
-                                      ? 'bg-slate-800 text-slate-400 ring-2 ring-slate-500 border border-slate-400 z-0'
-                                      : 'bg-amber-500/30 text-amber-200 ring-2 ring-amber-400 border border-amber-300 z-0'
+                                  isExact && isAvailable
+                                    ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-lg shadow-emerald-500/30 z-0 scale-[1.03]'
                                     : isAdjacent && isAvailable
                                     ? 'bg-blue-900/85 hover:bg-blue-800 text-blue-100 ring-2 ring-blue-400 border border-blue-300 shadow-lg shadow-blue-500/30 z-0 scale-[1.02]'
                                     : isAvailable
@@ -429,15 +423,13 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                     : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40'
                                 }`}
                               >
-                                {/* 完全一致（緑強調）または 前後30分候補（青強調）の表示 */}
-                                {isExact ? (
+                                {/* 完全一致（緑強調）または 前後30分候補（青強調）の表示（※空きがある場合のみ時刻表示） */}
+                                {isExact && isAvailable ? (
                                   <>
                                     <span className="tracking-tight text-[9px] font-mono font-bold text-emerald-200">
                                       {slotTimeStr}
                                     </span>
-                                    {isAvailable && (
-                                      <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                    )}
+                                    <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                                   </>
                                 ) : isAdjacent && isAvailable ? (
                                   <>
