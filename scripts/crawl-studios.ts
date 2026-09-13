@@ -62,19 +62,19 @@ export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: 
   const currentMinutes = jstDate.getHours() * 60 + jstDate.getMinutes();
 
   // 目標時刻（分換算）
-  // 06:30 -> 390
-  // 08:30 -> 510
-  // 11:45 -> 705
-  // 13:00 -> 780
-  // 17:15 -> 1035
-  // 21:30 -> 1290
+  // 06:33 -> 393
+  // 08:33 -> 513
+  // 11:48 -> 708
+  // 13:03 -> 783
+  // 17:18 -> 1038
+  // 21:33 -> 1293
   const targets = isWeekendHoliday
-    ? [510, 780, 1035, 1290] // 休日・祝日
-    : [390, 705, 1035, 1290]; // 平日
+    ? [513, 783, 1038, 1293] // 休日・祝日
+    : [393, 708, 1038, 1293]; // 平日
 
-  // 各目標時刻に対して [-15分, +30分] の許容ウィンドウ
+  // 各目標時刻に対して [-15分, +45分] の許容ウィンドウ（GitHub Actions のキュー遅延を余裕を持って吸収）
   const isMatched = targets.some(target => {
-    return currentMinutes >= target - 15 && currentMinutes <= target + 30;
+    return currentMinutes >= target - 15 && currentMinutes <= target + 45;
   });
 
   const jstTimeStr = `${String(jstDate.getHours()).padStart(2, '0')}:${String(jstDate.getMinutes()).padStart(2, '0')}`;
@@ -90,7 +90,7 @@ export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: 
 
   return {
     canProceed: false,
-    reason: `JST ${jstTimeStr} (${dayType}) は指定スケジュール（平日: 06:30, 11:45, 17:15, 21:30 / 休日祝日: 08:30, 13:00, 17:15, 21:30）の対象時間外のためスキップします。`,
+    reason: `JST ${jstTimeStr} (${dayType}) は指定スケジュール（平日: 06:33, 11:48, 17:18, 21:33 / 休日祝日: 08:33, 13:03, 17:18, 21:33）の対象時間外のためスキップします。`,
     isHolidayOrWeekend: isWeekendHoliday,
   };
 }
