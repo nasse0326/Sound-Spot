@@ -17,7 +17,19 @@ import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+let supabase: ReturnType<typeof createClient> | null = null;
+if (supabaseUrl && supabaseKey) {
+  try {
+    supabase = createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+  } catch (err: any) {
+    console.warn(`⚠️ [Supabase] クライアント初期化をスキップしました: ${err?.message}`);
+  }
+}
 
 function toUUID(str: string): string {
   const hash = crypto.createHash('md5').update(str).digest('hex');

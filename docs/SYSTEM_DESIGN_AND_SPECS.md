@@ -66,7 +66,8 @@
     - **深夜停止**: **全日 01:00 〜 07:30 JST は完全スリープ**（仮想マシン起動なし）。
   - `workflow_dispatch`: GitHub Webコンソールからの手動即時実行（いつでも可能）
 - **動作フロー**:
-  1. GitHub Actionsランナー（Ubuntu）が起動し、`scripts/crawl-studios.ts` を実行。
+  1. GitHub Actionsランナー（Ubuntu / **Node.js 22 LTS**）が起動し、`scripts/crawl-studios.ts` を実行。
+     - ※Supabase SDK最新版が要求するネイティブWebSocket（`globalThis.WebSocket`）に完全対応するため、ランナー環境をNode.js 22へ統一。
   2. **Playwright Chromium完全撤廃 ＆ 純粋Node fetch移行**:
      - Reserve1（ゲートウェイ渋谷、GOODMAN）およびスタジオル（BASS ON TOP）を、重厚なヘッドレスブラウザから軽量・高速な純粋 Node `fetch` ＋ `TextDecoder('euc-jp')` へ完全移行。
      - ヘッドレスブラウザの起動・DOM描画オーバーヘッドをゼロ化し、Chromiumダウンロード時間（35〜45秒）を丸ごと削減。
