@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { GlobalHeader } from '@/components/layout/global-header';
+import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 
 export const metadata: Metadata = {
   title: 'SoundSpot - 音楽スタジオ横断空き枠検索',
@@ -14,6 +16,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        {/* Google tag (gtag.js) */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+      </head>
       <body className="bg-[#0b0f17] text-slate-100 min-h-screen flex flex-col">
         {/* ヘッダーナビゲーション（稼働状況クリックで対応スタジオ一覧表示） */}
         <GlobalHeader />

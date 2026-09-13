@@ -13,6 +13,7 @@ import {
   Info,
   Clock
 } from 'lucide-react';
+import { sendGAEvent } from '@/lib/gtag';
 
 export interface StudioGroup {
   studio: Studio;
@@ -263,6 +264,13 @@ export const StudioCard: React.FC<StudioCardProps> = ({
         {isPhoneOnly && studio.tel ? (
           <a
             href={`tel:${studio.tel}`}
+            onClick={() => {
+              sendGAEvent({
+                action: 'click_phone_call',
+                category: 'booking',
+                label: `${studio.name} (${studio.tel})`,
+              });
+            }}
             className="w-full h-11 flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold rounded-xl bg-amber-500 active:bg-amber-600 hover:bg-amber-400 text-slate-950 shadow-md shadow-amber-500/10 transition"
           >
             <Phone className="w-4 h-4" />
@@ -273,6 +281,13 @@ export const StudioCard: React.FC<StudioCardProps> = ({
             href={studio.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              sendGAEvent({
+                action: 'click_official_booking',
+                category: 'booking',
+                label: studio.name,
+              });
+            }}
             className="w-full h-11 flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold rounded-xl bg-emerald-500 active:bg-emerald-600 hover:bg-emerald-400 text-slate-950 shadow-md shadow-emerald-500/10 transition"
           >
             <span>公式WEB予約を開く</span>

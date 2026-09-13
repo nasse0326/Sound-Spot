@@ -17,6 +17,7 @@
    - [7.1 会員登録状況＆システム特性一覧](#71-会員登録状況システム特性一覧)
    - [7.2 店舗別・最長予約枠 vs 実クローリング取得期間対照表](#72-店舗別最長予約枠-vs-実クローリング取得期間対照表)
 8. [主要ファイル・コード構成マップ](#8-主要ファイルコード構成マップ)
+9. [アクセス解析・イベント計測設計 (Google Analytics 4)](#9-アクセス解析イベント計測設計-google-analytics-4)
 
 ---
 
@@ -735,5 +736,26 @@ flowchart TD
 | `.github/workflows/crawl-studios.yml` | CI/CD (自動化) | **GitHub Actions完全クラウド自動巡回ワークフロー**（30分おきcron＋手動実行・差分自動コミット＋Supabaseシークレット注入） |
 | `scripts/crawl-studios.ts` | クローラー | 公開スタジオ（Reserve1等）の一括巡回、Supabaseへのリアルタイム直接同期、ノアAPIステルス疎通バッチ |
 | `.env.local` | 設定 (秘匿) | Supabase接続設定（`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`）およびノア認証情報 |
+| `src/lib/gtag.ts` | ユーティリティ | **Google Analytics (GA4) 計測モジュール**（ページビュー送信、公式予約クリック・電話発信クリック等のカスタムイベントトラッキング） |
 | `storageState.json` | 設定 (秘匿) | ノアの認証済みセッションCookie保存ファイル |
+
+---
+
+## 9. アクセス解析・イベント計測設計 (Google Analytics 4)
+
+ユーザーの利用動向や各スタジオへの送客効果を正確に可視化するため、**Google Analytics 4 (GA4)** を導入し、Next.js 15（App Router）の標準 `<Script>`（`afterInteractive`）でページ表示速度を犠牲にすることなく非同期読み込みを行います。
+
+### 9.1 計測パラメータ仕様
+- **測定ID**: `G-1X4KN493Q7`（環境変数 `NEXT_PUBLIC_GA_ID` で上書き・管理可能）
+- **読み込み方針**:
+  - `src/app/layout.tsx` の `<head>` 内で `afterInteractive` 戦略により遅延非同期ロード。
+  - 初期PV（Pageview）を自動計測。
+
+### 9.2 カスタムイベント計測一覧
+アプリ内の重要アクションを以下の仕様で自動トラッキングします：
+
+| イベント名 (`action`) | カテゴリ (`category`) | ラベル (`label`) | トリガー契機 | 分析目的 |
+|---|---|---|---|---|
+| `click_official_booking` | `booking` | `{スタジオ名}` (例: `サウンドスタジオノア 渋谷1号店`) | スタジオカードの「公式WEB予約を開く ↗」をクリック | 各スタジオ公式予約サイトへの送客数・スタジオ別需要の可視化 |
+| `click_phone_call` | `booking` | `{スタジオ名} ({電話番号})` (例: `スタジオペンタ 渋谷店 (03-3461-0000)`) | 電話専用スタジオカードの「電話で予約」ボタンをクリック | 電話問い合わせ件数の計測 |
 
