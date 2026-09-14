@@ -11,7 +11,7 @@ import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays } from './lib/bot-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays } from './lib/ongakukan-fetcher';
-import { fetchNoahAkibaDays, fetchAllNoahTokyoDays } from './lib/noah-fetcher';
+import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
 
@@ -41,6 +41,23 @@ function toUUID(str: string): string {
     'a' + hash.substring(17, 20),
     hash.substring(20, 32)
   ].join('-');
+}
+
+/**
+ * runNoahWithStealthSafeguards() が保存した noah-tokyo-real.json から
+ * 秋葉原店（storeKey: 'akihabara'）分のみを取り出す。
+ * NOAH秋葉原店への二重ライブアクセスを避けるためのキャッシュ読み出し専用ヘルパー。
+ */
+function loadNoahAkibaRoomsFromTokyoCache(): any[] {
+  const noahJsonPath = path.join(process.cwd(), 'src', 'data', 'noah-tokyo-real.json');
+  if (!fs.existsSync(noahJsonPath)) return [];
+  try {
+    const data = JSON.parse(fs.readFileSync(noahJsonPath, 'utf8'));
+    if (!Array.isArray(data.rooms)) return [];
+    return data.rooms.filter((r: any) => r.storeKey === 'akihabara');
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -394,21 +411,28 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
     console.error(`  ❌ [スタジオ音楽館] 取得エラー: ${err.message}`);
   }
 
-  // D. サウンドスタジオノア 秋葉原店 (NOAH Official Schedule API)
+  // D. サウンドスタジオノア 秋葉原店
+  // ※ NOAH秋葉原店の実データは runNoahWithStealthSafeguards() が全店舗まとめて
+  //   ライブ取得し noah-tokyo-real.json へ保存する。ここで再度ライブ取得すると
+  //   同一巡回サイクル内でNOAHサーバーへ二重・並行アクセスしてしまう
+  //  （店舗間ペーシング方針に反し、ログインセッションの競合も起こり得る）ため、
+  //   保存済みキャッシュから秋葉原店分だけ読み出して反映する。
   try {
-    const noahRooms = await fetchNoahAkibaDays(baseDate, dayCount);
+    const noahRooms = loadNoahAkibaRoomsFromTokyoCache();
     const noahStudio = akibaData.find(s => s.id === 'noah-akiba-01');
-    if (noahStudio) {
+    if (noahStudio && noahRooms.length > 0) {
       noahStudio.rooms.forEach((r: any) => {
         const matched = noahRooms.find(nr => nr.id === r.id || nr.name === r.name);
         if (matched && matched.slots.length > 0) {
-          r.slots = matched.slots.map(s => ({
+          r.slots = matched.slots.map((s: any) => ({
             ...s,
             price: r.hourly_rate || 2640
           }));
         }
       });
-      console.log(`  ✅ [ノア秋葉原店] ${noahStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了`);
+      console.log(`  ✅ [ノア秋葉原店] ${noahStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了（noah-tokyo-real.jsonキャッシュ経由）`);
+    } else {
+      console.log('  ℹ️ [ノア秋葉原店] noah-tokyo-real.json キャッシュが未生成のため、既存データを保持します。');
     }
   } catch (err: any) {
     console.error(`  ❌ [ノア秋葉原店] 取得エラー: ${err.message}`);
