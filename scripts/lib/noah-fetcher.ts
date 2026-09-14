@@ -131,13 +131,13 @@ export const NOAH_ALL_STORES: NoahStoreDef[] = [
     key: 'shinjuku',
     name: 'サウンドスタジオノア 新宿店',
     rooms: [
-      { id: 'noah-shinjuku-s1st', studioId: 204, name: 'S1st (22帖)', tatami: 22, offset: 0, loginRequired: false },
+      { id: 'noah-shinjuku-s1st', studioId: 204, name: 'S1st (22帖)', tatami: 22, offset: 30, loginRequired: false },
       { id: 'noah-shinjuku-s2st', studioId: 205, name: 'S2st (18帖)', tatami: 18, offset: 0, loginRequired: false },
       { id: 'noah-shinjuku-s3st', studioId: 206, name: 'S3st (16帖)', tatami: 16, offset: 0, loginRequired: false },
-      { id: 'noah-shinjuku-a1st', studioId: 207, name: 'A1st (15帖)', tatami: 15, offset: 0, loginRequired: false },
-      { id: 'noah-shinjuku-a2st', studioId: 208, name: 'A2st (14帖)', tatami: 14, offset: 0, loginRequired: false },
-      { id: 'noah-shinjuku-a3st', studioId: 209, name: 'A3st (13帖)', tatami: 13, offset: 0, loginRequired: false },
-      { id: 'noah-shinjuku-a5st', studioId: 210, name: 'A5st (12帖)', tatami: 12, offset: 0, loginRequired: false },
+      { id: 'noah-shinjuku-a1st', studioId: 207, name: 'A1st (15帖)', tatami: 15, offset: 30, loginRequired: false },
+      { id: 'noah-shinjuku-a2st', studioId: 208, name: 'A2st (14帖)', tatami: 14, offset: 30, loginRequired: false },
+      { id: 'noah-shinjuku-a3st', studioId: 209, name: 'A3st (13帖)', tatami: 13, offset: 30, loginRequired: false },
+      { id: 'noah-shinjuku-a5st', studioId: 210, name: 'A5st (12帖)', tatami: 12, offset: 30, loginRequired: false },
       { id: 'noah-shinjuku-a6st', studioId: 211, name: 'A6st (11帖)', tatami: 11, offset: 0, loginRequired: false },
       { id: 'noah-shinjuku-a7st', studioId: 212, name: 'A7st (10帖)', tatami: 10, offset: 0, loginRequired: false },
       { id: 'noah-shinjuku-g1st', studioId: 213, name: 'G1st (12帖)', tatami: 12, offset: 0, loginRequired: false },
@@ -283,14 +283,14 @@ export async function fetchNoahStoreDays(
   let cookieHeader = hasLoginRequiredRooms ? await getOrRefreshNoahCookie(false) : '';
 
   const startMonday = startOfWeek(baseDate, { weekStartsOn: 1 });
+  // 基準日からの21日間をいかなる曜日（日曜日含む）でも100%カバーするため、5週分（0, 7, 14, 21, 28日後）をフェッチ
   const mondays: string[] = [
     format(startMonday, 'yyyy/MM/dd'),
     format(addDays(startMonday, 7), 'yyyy/MM/dd'),
-    format(addDays(startMonday, 14), 'yyyy/MM/dd')
+    format(addDays(startMonday, 14), 'yyyy/MM/dd'),
+    format(addDays(startMonday, 21), 'yyyy/MM/dd'),
+    format(addDays(startMonday, 28), 'yyyy/MM/dd'),
   ];
-  if (dayCount > 21) {
-    mondays.push(format(addDays(startMonday, 21), 'yyyy/MM/dd'));
-  }
 
   const rawData: Record<number, any[]> = {};
 
@@ -361,22 +361,41 @@ export async function fetchNoahStoreDays(
           const startTimeStr = timeSlot.start_time;
           const endTimeStr = timeSlot.end_time;
 
-          const startIso = `${dateIso}T${startTimeStr}:00+09:00`;
-          let endIso: string;
-          const [sH] = startTimeStr.split(':').map(Number);
-          const [eH] = endTimeStr.split(':').map(Number);
-          if (eH < sH || (eH === 0 && sH >= 23)) {
-            const nextDayIso = format(addDays(new Date(dateIso), 1), 'yyyy-MM-dd');
-            endIso = `${nextDayIso}T${endTimeStr}:00+09:00`;
-          } else {
-            endIso = `${dateIso}T${endTimeStr}:00+09:00`;
+          let [sH, sM] = startTimeStr.split(':').map(Number);
+          let [eH, eM] = endTimeStr.split(':').map(Number);
+
+          // 24時以降の営業日時刻（例: 24:30 -> 翌日 00:30, 25:30 -> 翌日 01:30）を正規のISO日時に変換
+          const baseDateObj = new Date(`${dateIso}T00:00:00+09:00`);
+          let startDaysOffset = 0;
+          if (sH >= 24) {
+            startDaysOffset = Math.floor(sH / 24);
+            sH = sH % 24;
           }
+          const actualStartDateObj = addDays(baseDateObj, startDaysOffset);
+          const actualStartDateIso = format(actualStartDateObj, 'yyyy-MM-dd');
+          const normalizedStartTimeStr = `${String(sH).padStart(2, '0')}:${String(sM).padStart(2, '0')}`;
+          const startIso = `${actualStartDateIso}T${normalizedStartTimeStr}:00+09:00`;
+
+          // 終了時刻の正規化
+          let endDaysOffset = 0;
+          if (eH >= 24) {
+            endDaysOffset = Math.floor(eH / 24);
+            eH = eH % 24;
+          } else if (eH < sH || (eH === 0 && sH >= 23)) {
+            endDaysOffset = startDaysOffset + 1;
+          } else {
+            endDaysOffset = startDaysOffset;
+          }
+          const actualEndDateObj = addDays(baseDateObj, endDaysOffset);
+          const actualEndDateIso = format(actualEndDateObj, 'yyyy-MM-dd');
+          const normalizedEndTimeStr = `${String(eH).padStart(2, '0')}:${String(eM).padStart(2, '0')}`;
+          const endIso = `${actualEndDateIso}T${normalizedEndTimeStr}:00+09:00`;
 
           const isBooked = Boolean(timeSlot.is_booked);
           const isBookable = Boolean(timeSlot.is_bookable || timeSlot.web_reserve_flg || timeSlot.has_price);
           const status: 'AVAILABLE' | 'BOOKED' = (!isBooked && isBookable) ? 'AVAILABLE' : 'BOOKED';
 
-          const timeKey = `${dateIso.replace(/-/g, '')}-${startTimeStr.replace(':', '')}`;
+          const timeKey = `${actualStartDateIso.replace(/-/g, '')}-${normalizedStartTimeStr.replace(':', '')}`;
           const slotId = `slot-${room.id}-${timeKey}`;
 
           roomSlotsMap[timeKey] = {

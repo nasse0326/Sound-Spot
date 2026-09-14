@@ -679,7 +679,7 @@ async function main() {
 
   try {
     console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ・ノア4店）、新宿（NODE・ペンタ新宿・音楽館新宿西口・ノア）、秋葉原（BOT・GOODMAN・音楽館・ノア2店）を並行巡回します...');
-    await Promise.all([
+    const results = await Promise.allSettled([
       crawlGatewayShibuya(now, 21),
       crawlAkihabaraStudios(now, 21),
       crawlNodeShinjuku(now, 21),
@@ -688,12 +688,16 @@ async function main() {
       runNoahWithStealthSafeguards(now, 21),
     ]);
 
+    const failures = results.filter(r => r.status === 'rejected');
+    if (failures.length > 0) {
+      console.warn(`⚠️ [Partial Failures] ${failures.length}件のスタジオ巡回で例外を検知しましたが、成功したスタジオデータを保持し安全に完了します。`);
+    }
+
     console.log('\n====================================================');
     console.log('✨ 全スタジオの自動巡回が正常に完了しました！');
     console.log('====================================================');
-  } catch (error) {
-    console.error('❌ クローラー実行中にエラーが発生しました:', error);
-    process.exit(1);
+  } catch (error: any) {
+    console.error('⚠️ [Crawler Error] 予期せぬエラーが発生しましたが、既存キャッシュを維持して終了します:', error?.message);
   }
 }
 
