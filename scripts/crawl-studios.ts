@@ -44,23 +44,6 @@ function toUUID(str: string): string {
 }
 
 /**
- * runNoahWithStealthSafeguards() が保存した noah-tokyo-real.json から
- * 秋葉原店（storeKey: 'akihabara'）分のみを取り出す。
- * NOAH秋葉原店への二重ライブアクセスを避けるためのキャッシュ読み出し専用ヘルパー。
- */
-function loadNoahAkibaRoomsFromTokyoCache(): any[] {
-  const noahJsonPath = path.join(process.cwd(), 'src', 'data', 'noah-tokyo-real.json');
-  if (!fs.existsSync(noahJsonPath)) return [];
-  try {
-    const data = JSON.parse(fs.readFileSync(noahJsonPath, 'utf8'));
-    if (!Array.isArray(data.rooms)) return [];
-    return data.rooms.filter((r: any) => r.storeKey === 'akihabara');
-  } catch {
-    return [];
-  }
-}
-
-/**
  * 毎日固定スケジュール判定ガード
  * 曜日を問わず毎日 06:33, 11:48, 17:18, 21:33 (JST) の4回のみ巡回を許可します。
  * GitHub Actionsの実行遅延（5〜20分程度）を吸収するため、前後ウィンドウで判定します。
@@ -333,10 +316,11 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
 }
 
 // -------------------------------------------------------------
-// 2. Akihabara Real Studios Scraper (BOT / GOODMAN / 音楽館 / ノア)
+// 2. Akihabara Real Studios Scraper (BOT / GOODMAN / 音楽館)
+//    ※ NOAH秋葉原店は runNoahWithStealthSafeguards() 側で一括管理
 // -------------------------------------------------------------
 async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
-  console.log(`\n⚡ [Akihabara Crawl] 秋葉原エリア（BOT / GOODMAN / 音楽館 / ノア）の巡回を開始 (Node fetch / ${dayCount}日間)...`);
+  console.log(`\n⚡ [Akihabara Crawl] 秋葉原エリア（BOT / GOODMAN / 音楽館）の巡回を開始 (Node fetch / ${dayCount}日間)...`);
 
   const akibaJsonPath = path.join(process.cwd(), 'src', 'data', 'akihabara-real.json');
   if (!fs.existsSync(akibaJsonPath)) {
@@ -411,32 +395,12 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
     console.error(`  ❌ [スタジオ音楽館] 取得エラー: ${err.message}`);
   }
 
-  // D. サウンドスタジオノア 秋葉原店
-  // ※ NOAH秋葉原店の実データは runNoahWithStealthSafeguards() が全店舗まとめて
-  //   ライブ取得し noah-tokyo-real.json へ保存する。ここで再度ライブ取得すると
-  //   同一巡回サイクル内でNOAHサーバーへ二重・並行アクセスしてしまう
-  //  （店舗間ペーシング方針に反し、ログインセッションの競合も起こり得る）ため、
-  //   保存済みキャッシュから秋葉原店分だけ読み出して反映する。
-  try {
-    const noahRooms = loadNoahAkibaRoomsFromTokyoCache();
-    const noahStudio = akibaData.find(s => s.id === 'noah-akiba-01');
-    if (noahStudio && noahRooms.length > 0) {
-      noahStudio.rooms.forEach((r: any) => {
-        const matched = noahRooms.find(nr => nr.id === r.id || nr.name === r.name);
-        if (matched && matched.slots.length > 0) {
-          r.slots = matched.slots.map((s: any) => ({
-            ...s,
-            price: r.hourly_rate || 2640
-          }));
-        }
-      });
-      console.log(`  ✅ [ノア秋葉原店] ${noahStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了（noah-tokyo-real.jsonキャッシュ経由）`);
-    } else {
-      console.log('  ℹ️ [ノア秋葉原店] noah-tokyo-real.json キャッシュが未生成のため、既存データを保持します。');
-    }
-  } catch (err: any) {
-    console.error(`  ❌ [ノア秋葉原店] 取得エラー: ${err.message}`);
-  }
+  // ※ NOAH秋葉原店はここでは扱わない。ノア全店舗（秋葉原店含む）は
+  //   runNoahWithStealthSafeguards() が一括ライブ取得し noah-tokyo-real.json へ
+  //   保存する（src/config/noah-master.ts が単一の部屋マスター）。
+  //   ここで秋葉原店分を個別に扱うと、同一巡回サイクル内でNOAHサーバーへ
+  //   二重・並行アクセスしてしまうため、akihabara-real.json は
+  //   BOT/GOODMAN/音楽館の3スタジオのみを対象とする。
 
   // akihabara-real.json へ書き込み保存
   fs.writeFileSync(akibaJsonPath, JSON.stringify(akibaData, null, 2), 'utf8');
@@ -664,7 +628,7 @@ async function main() {
   console.log(`⏰ [Schedule Guard] ${scheduleCheck.reason}`);
 
   try {
-    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ・ノア4店）、新宿（NODE・ペンタ新宿・音楽館新宿西口・ノア）、秋葉原（BOT・GOODMAN・音楽館・ノア2店）を並行巡回します...');
+    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）、ノア全7店舗（渋谷4店・新宿・秋葉原・御茶ノ水を一括）を並行巡回します...');
     const results = await Promise.allSettled([
       crawlGatewayShibuya(now, 21),
       crawlAkihabaraStudios(now, 21),

@@ -140,21 +140,14 @@ flowchart TD
     ノア公式APIは「月曜始まりの1週間単位」でスケジュールを返却する仕様。基準日（何曜日であっても）から「本日〜21日先」を100%隙間なくカバーするため、基準週を含む **最大5週分（0, 7, 14, 21, 28日後）の月曜日** を走査して取得。境界日（21日目前後）のデータ欠落を完全に防止。
   - **深夜・早朝の24時以降時刻（24:30、25:30等）のISO 8601自動正規化**:
     24時間営業店舗において公式APIが返却する `24:30`, `25:30` などの営業日ベース表記を自動検知し、日付を翌日（+1日）に進め、正規の `00:30`, `01:30`（ISO 8601）に変換。ブラウザでの `Invalid Date` エラーによる表示欠落（ハイフン化）を根本排除。
-  - **秋葉原店の二重クロール防止**:
-    `scripts/crawl-studios.ts` の `crawlAkihabaraStudios()`（BOT/GOODMAN/音楽館/ノア秋葉原店）と `runNoahWithStealthSafeguards()`（ノア全7店舗）は `Promise.allSettled` で並行実行されるが、ノア秋葉原店は後者の一括取得に既に含まれる。前者側で個別にライブ再取得すると同一巡回サイクル内でノアサーバーへ二重・並行アクセスしてしまうため、`crawlAkihabaraStudios()` はノア秋葉原店分のみ `runNoahWithStealthSafeguards()` が保存した `src/data/noah-tokyo-real.json` から読み出して反映する（ライブ取得は行わない）。そのため秋葉原店のノア空き枠は、他の秋葉原スタジオ（BOT/GOODMAN/音楽館）より最大1巡回サイクル分（約6時間）古くなる場合があるが、これは既存のフェイルセーフ・キャッシュ方針と同等の許容範囲とする。
 - **将来の新店舗追加支援ツール (`scripts/scan-noah-branch.ts`)**:
-  - 新店舗（高田馬場・池袋・恵比寿・中野など）を導入する際、`npx tsx scripts/scan-noah-branch.ts <branch_key>` を実行するだけで、公式APIから部屋一覧、帖数、開始オフセット（00分/30分）、および `loginRequired` を瞬時に自動判定・TypeScriptコード生成可能。
-- **店舗特性（全7店舗・101部屋の内訳）**:
-  - **渋谷本店 (14室)**: ログイン不要 9室 (S, A1, A2, G1〜G3, Booth1, 2, Rec) / ログイン必須 5室 (B1〜B4, C)
-  - **渋谷1号店 (12室)**: ログイン不要 6室 (A1〜A3, A5, VoBooth, Rec) / ログイン必須 6室 (B1〜B3, B5, E1, E2)
-  - **渋谷2号店 (14室)**: ログイン不要 8室 (S, A1〜A3, G1〜G3, VoBooth) / ログイン必須 6室 (B1〜B3, E1, E2, C)
-  - **渋谷3号店 (15室)**: ログイン不要 13室 (A1〜A4, DJ1〜3, Booth1〜4, Rec2室) / ログイン必須 2室 (C, E)
-  - **新宿店 (21室)**: ログイン不要 13室 (S1〜S3, A1〜A7, G1〜G3, Rec) / ログイン必須 8室 (B1〜B3, E1〜E3, CS, F)
-    - ※`S1st`, `A1st`〜`A3st`, `A5st`, `B1st`〜`B3st`, `E1st`〜`E3st` の計11部屋は30分開始（`:30`）スロット。
-  - **秋葉原店 (14室)**: ログイン不要 9室 (A1〜A3, G1, G2, GS, Booth1, 2, Rec) / ログイン必須 5室 (B1, B2, C+Sub, E1, E2)
-  - **御茶ノ水店 (11室)**: ログイン不要 6室 (Booth, A1, A2, G, A3, A5) / ログイン必須 5室 (C, B1, E, B2, B3)
-- **開始オフセット**:
-  - 00分開始部屋 / 30分開始部屋が混在（タイムラインでは紫色の `:30` バッジおよび30分シフトグリッド表示に自動マッピング）。
+  - 新店舗（高田馬場・池袋・恵比寿・中野など）を導入する際、`npx tsx scripts/scan-noah-branch.ts <branch_key>` を実行するだけで、公式APIから部屋一覧、帖数、開始オフセット（00分/30分）、`loginRequired`、実料金（`regular_price`/`person_price`）を瞬時に自動判定・取得可能。
+- **部屋マスターの単一化 (`src/config/noah-master.ts`) と実データへの全面刷新（2026-09-14）**:
+  - 従来、部屋マスター（`studioId`・畳数・開始オフセット・ログイン要否）は `scripts/lib/noah-fetcher.ts`（クロール用）と `src/lib/noah-tokyo-converter.ts`（表示用）の2ファイルに手動で複製されており、IDがズレると該当部屋のスロットが静かに空になるリスクがあった。両者が読み込む単一の `src/config/noah-master.ts` に統合。
+  - 統合と同時に、7店舗・101部屋すべてのデータを公式予約API（`/noahweb/Chart/studios?b[]=<branch_id>`、`scan-noah-branch.ts`と同じ機構）および各店舗公式サイトの `/<branch>/gear/` ページから再取得し、**畳数・開始オフセット・実料金（土日祝/平日昼/個人練習）・実機材（ギターアンプ/ベースアンプ/ドラムセット）を全面的に実データへ置き換えた**。
+  - 刷新前の部屋マスターは畳数・開始オフセットが大幅に誤っていたことが判明している（例: 渋谷本店Cst相当の部屋は「10帖」と記載されていたが実際は「27帖」、A1st等は「:00開始」と記載されていたが実際は「:30開始」）。原因は特定できていないが、初期データ投入時の誤りである可能性が高い。料金・機材についても、秋葉原店以外の6店舗はこれまで畳数から自動計算した近似値・汎用機材名で代用しており、実データではなかった。
+  - 部屋ごとの詳細な畳数・オフセット・ログイン要否・実料金・実機材は `src/config/noah-master.ts` 本体を参照のこと（このドキュメントとの二重管理を避けるため、部屋単位の値はここには転記しない）。
+  - ノア秋葉原店は本セクション（NOAH専用クロール）に完全統合済み。以前存在した「`crawlAkihabaraStudios()`側で秋葉原店のノアデータだけ個別に扱う」処理（ライブ再取得・キャッシュ読み出しのいずれも）は廃止し、`akihabara-real.json` は BOT/GOODMAN/音楽館の3スタジオのみを対象とする。これにより、同一巡回サイクル内でノアサーバーへ秋葉原店分だけ二重アクセスする問題も解消された。
 
 ### 4.2 スタジオペンタ (PENTA)
 - **店舗構成と実態調査結果**:
@@ -679,7 +672,7 @@ flowchart TD
 | **サウンドスタジオノア 渋谷2号店** | 渋谷 | ノア独自Web API | **3ヶ月前の1日〜** / 前日21:00〜 | **直近 21日間 (3週間分)** | `render_chart` APIで一括返却 |
 | **サウンドスタジオノア 渋谷3号店** | 渋谷 | ノア独自Web API | **3ヶ月前の1日〜** / 前日21:00〜 | **直近 21日間 (3週間分)** | `render_chart` APIで一括返却 |
 | **サウンドスタジオノア 新宿店** | 新宿 | ノア独自Web API | **3ヶ月前の1日〜** / 前日21:00〜 | **直近 21日間 (3週間分)** | `render_chart` APIで一括返却 |
-| **サウンドスタジオノア 秋葉原店** | 秋葉原 | ノア独自Web API | **3ヶ月前の1日〜** / 前日21:00〜 | **直近 21日間 (3週間分)** | `scripts/lib/noah-fetcher.ts`（全11部屋・5,544スロット完全同期） |
+| **サウンドスタジオノア 秋葉原店** | 秋葉原 | ノア独自Web API | **3ヶ月前の1日〜** / 前日21:00〜 | **直近 21日間 (3週間分)** | `scripts/lib/noah-fetcher.ts`（全14部屋・部屋マスターは `src/config/noah-master.ts`） |
 | **ゲートウェイスタジオ 渋谷道玄坂店** | 渋谷 | Reserve1.jp (公開Web) | **3ヶ月前の同日〜** / 前日09:00〜 | **直近 21日間 (3週間分)** | 軽量Node fetch（3,528スロット取得） |
 | **STUDIO NODE 新宿店** | 新宿 | studio-node.jp (公開Web) | **2ヶ月前の同日〜** / 3日前〜 | **直近 21日間 (3週間分)** | 軽量Node fetch（全7部屋・2,058スロット完全同期） |
 | **STUDIO GOODMAN AKIBA** | 秋葉原 | Reserve1.jp (公開Web) | **2ヶ月前の同日〜** / 前日〜 | **直近 21日間 (3週間分)** | 軽量Node fetch（4,670スロット取得） |
@@ -714,7 +707,8 @@ flowchart TD
 | `scripts/lib/reserve1-fetcher.ts` | モジュール | **Reserve1 ASP用超軽量スクレイパー**（Node fetch / GOODMAN、ゲートウェイ渋谷） |
 | `scripts/lib/bot-fetcher.ts` | モジュール | **BASS ON TOP（スタジオル）用超軽量スクレイパー**（Node fetch / 秋葉原昭和通り口店） |
 | `scripts/lib/ongakukan-fetcher.ts` | モジュール | **スタジオ音楽館（ajg.jp）用超軽量スクレイパー**（Node fetch / アキバ店・新宿西口店両対応・全室21日間自動パース） |
-| `scripts/lib/noah-fetcher.ts` | モジュール | **サウンドスタジオノア用スクレイパー**（公式Schedule API / 都内全7店舗・101部屋・21日間自動パース） |
+| `src/config/noah-master.ts` | 設定 (マスター・単一の真実源) | **ノア全7店舗・101部屋の部屋マスター**（`studioId`・畳数・開始オフセット・ログイン要否・実料金・実機材）。`scripts/lib/noah-fetcher.ts`（クロール）と `src/lib/noah-tokyo-converter.ts`（表示）の双方がここを読み込む |
+| `scripts/lib/noah-fetcher.ts` | モジュール | **サウンドスタジオノア用スクレイパー**（公式Schedule API / 都内全7店舗・101部屋・21日間自動パース。部屋マスターは `src/config/noah-master.ts` を参照） |
 | `scripts/lib/node-fetcher.ts` | モジュール | **STUDIO NODE 新宿店用スクレイパー**（Node fetch / 全7部屋・00分/30分開始混在・21日間自動パース） |
 | `scripts/lib/penta-fetcher.ts` | モジュール | **スタジオペンタ新宿店用スクレイパー**（Supabase Edge Functions KV-API / 全19部屋・土日祝リアルタイム空き状況自動パース） |
 | `src/data/penta-shinjuku-real.json` | データ | スタジオペンタ新宿店 全19部屋・土日祝日の実データ（機材・料金・リアルタイム空き状況スロット） |
@@ -723,12 +717,12 @@ flowchart TD
 | `src/lib/ongakukan-shinjuku-converter.ts` | コンバーター | スタジオ音楽館 新宿西口店の実データをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
 | `src/data/node-shinjuku-real.json` | データ | STUDIO NODE 新宿店 全7部屋・21日間の実データ（機材・料金・リアル空き枠 2,058スロット） |
 | `src/lib/node-converter.ts` | コンバーター | STUDIO NODE 新宿店の実データをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
-| `src/data/akihabara-real.json` | データ | 秋葉原4スタジオ（BOT、GOODMAN、音楽館、NOAH）全36部屋の100%実データ（機材・料金・リアル空き枠 16,766スロット） |
+| `src/data/akihabara-real.json` | データ | 秋葉原3スタジオ（BOT、GOODMAN、音楽館）全22部屋の100%実データ（機材・料金・リアル空き枠）。NOAH秋葉原店は `src/config/noah-master.ts` / `src/data/noah-tokyo-real.json` 側に完全統合済み |
 | `src/lib/akiba-converter.ts` | コンバーター | 秋葉原実データJSONをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
 | `src/data/gateway-shibuya-real.json` | データ | ゲートウェイスタジオ渋谷道玄坂店 全12部屋・21日間の実データ（機材・料金・リアル空き枠 3,528スロット） |
 | `src/lib/gateway-converter.ts` | コンバーター | ゲートウェイ渋谷実データJSONをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
 | `src/data/noah-tokyo-real.json` | データ | ノア都内全7店舗（渋谷4店、新宿1店、秋葉原2店）全101部屋・21日間の実データ |
-| `src/lib/noah-tokyo-converter.ts` | コンバーター | ノア全7店舗の実データをアプリ共通の `RoomWithSlots` 形式に正規化変換するロジック（ログイン要否2系統対応） |
+| `src/lib/noah-tokyo-converter.ts` | コンバーター | ノア全7店舗（秋葉原店含む）の実データをアプリ共通の `RoomWithSlots` 形式に正規化変換するロジック。部屋マスター・実料金・実機材は `src/config/noah-master.ts` を参照 |
 | `src/lib/mock-data.ts` | データソース | 全スタジオの統合データハブ。ダミーデータを全廃し、都内17店舗（渋谷・新宿・秋葉原）の実データ・正規スペックのみを配信 |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |

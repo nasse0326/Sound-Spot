@@ -10,6 +10,7 @@ import { getOngakukanShinjukuRealRooms, ONGAKUKAN_SHINJUKU_STUDIO } from './onga
 export const MOCK_STUDIOS: Studio[] = [
   // 秋葉原エリア (5店舗)
   ...AKIBA_STUDIOS,
+  NOAH_STUDIOS_META['akihabara'],
   NOAH_STUDIOS_META['ochanomizu'],
 
   // 渋谷エリア (8店舗)
@@ -39,7 +40,7 @@ export function getMockSlotsForDate(_dateStr: string): Record<string, Availabili
  * 秋葉原・渋谷・新宿の全15店舗・全170室を網羅
  */
 export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
-  // 1. 秋葉原エリア (4店舗 / 36部屋: BOT 8室, GOODMAN 10室, 音楽館 7室, ノア秋葉原店 11室/14枠)
+  // 1. 秋葉原エリア（NOAH以外）(3店舗 / 22部屋: BOT 8室, GOODMAN 10室, 音楽館 7室)
   const akibaRooms = getAkihabaraRealRooms(dateStr);
 
   // 2. 渋谷ゲートウェイ (1店舗 / 12部屋)
@@ -48,9 +49,9 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   // 3. 新宿NODE (1店舗 / 7部屋)
   const nodeRooms = getNodeShinjukuRealRooms(dateStr);
 
-  // 4. ノア店舗群 (渋谷本店 14室, 渋谷1号店 12室, 渋谷2号店 14室, 渋谷3号店 15室, 新宿店 21室: 計76部屋)
-  // ※秋葉原店はakibaRooms側で反映されるため除外して重複を防ぐ
-  const noahRooms = getNoahAllTokyoRealRooms(dateStr).filter(r => r.studioId !== 'akiba-noah');
+  // 4. ノア店舗群 (渋谷4店・新宿店・秋葉原店・御茶ノ水店: 計101部屋)
+  // ※NOAH秋葉原店もこちらから供給される（akihabara-real.jsonには含まれない）
+  const noahRooms = getNoahAllTokyoRealRooms(dateStr);
 
   // 5. ペンタ店舗群 (渋谷シティ 7室, 渋谷ジューク 7室, 渋谷ムーン 6室, 新宿店 19室: 計39部屋)
   const pentaRooms = getPentaRealRooms(dateStr);
