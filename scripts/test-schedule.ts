@@ -5,20 +5,26 @@ import { isWeekendOrHoliday } from './lib/penta-fetcher';
 function testSchedules() {
   console.log('🧪 スケジュール判定ガードのテスト開始...');
 
-  // 1. 平日テスト (2026-09-14 月曜日 / 平日)
-  console.log('\n--- 1. 平日テスト (2026-09-14 月曜日) ---');
-  const weekdayTests = [
-    { time: '2026-09-14T06:33:00+09:00', expected: true, label: '平日 06:33 (定刻)' },
-    { time: '2026-09-14T06:45:00+09:00', expected: true, label: '平日 06:45 (12分遅延)' },
-    { time: '2026-09-14T08:33:00+09:00', expected: false, label: '平日 08:33 (休日専用枠のためスキップ対象)' },
-    { time: '2026-09-14T11:48:00+09:00', expected: true, label: '平日 11:48 (定刻)' },
-    { time: '2026-09-14T13:03:00+09:00', expected: false, label: '平日 13:03 (休日専用枠のためスキップ対象)' },
-    { time: '2026-09-14T17:18:00+09:00', expected: true, label: '平日 17:18 (定刻)' },
-    { time: '2026-09-14T21:33:00+09:00', expected: true, label: '平日 21:33 (定刻)' },
-    { time: '2026-09-14T03:00:00+09:00', expected: false, label: '平日 03:00 (深夜外枠スキップ)' },
+  // 1. 毎日共通 4回判定テスト (平日・休日問わず定刻＆遅延の判定)
+  console.log('\n--- 毎日固定4回テスト (06:33, 11:48, 17:18, 21:33) ---');
+  const tests = [
+    { time: '2026-09-14T06:33:00+09:00', expected: true, label: '朝枠 06:33 (定刻)' },
+    { time: '2026-09-14T06:45:00+09:00', expected: true, label: '朝枠 06:45 (12分遅延)' },
+    { time: '2026-09-14T08:33:00+09:00', expected: false, label: '08:33 (対象外時間スキップ)' },
+    { time: '2026-09-14T11:48:00+09:00', expected: true, label: '昼枠 11:48 (定刻)' },
+    { time: '2026-09-14T13:03:00+09:00', expected: false, label: '13:03 (対象外時間スキップ)' },
+    { time: '2026-09-14T17:18:00+09:00', expected: true, label: '夕方枠 17:18 (定刻)' },
+    { time: '2026-09-14T17:35:00+09:00', expected: true, label: '夕方枠 17:35 (17分遅延)' },
+    { time: '2026-09-14T21:33:00+09:00', expected: true, label: '夜枠 21:33 (定刻)' },
+    { time: '2026-09-14T03:00:00+09:00', expected: false, label: '03:00 (深夜外枠スキップ)' },
+    // 休日でも同じ4枠で動作することを確認
+    { time: '2026-09-20T06:33:00+09:00', expected: true, label: '休日 朝枠 06:33 (定刻)' },
+    { time: '2026-09-20T11:48:00+09:00', expected: true, label: '休日 昼枠 11:48 (定刻)' },
+    { time: '2026-09-20T17:18:00+09:00', expected: true, label: '休日 夕方枠 17:18 (定刻)' },
+    { time: '2026-09-20T21:33:00+09:00', expected: true, label: '休日 夜枠 21:33 (定刻)' },
   ];
 
-  for (const t of weekdayTests) {
+  for (const t of tests) {
     const d = new Date(t.time);
     const res = isScheduledCrawlTime(d);
     const ok = res.canProceed === t.expected;
@@ -26,41 +32,7 @@ function testSchedules() {
     if (!ok) throw new Error(`Test failed for ${t.label}`);
   }
 
-  // 2. 休日・祝日テスト (2026-09-20 日曜日 / 休日)
-  console.log('\n--- 2. 休日テスト (2026-09-20 日曜日) ---');
-  const holidayTests = [
-    { time: '2026-09-20T06:33:00+09:00', expected: false, label: '休日 06:33 (平日専用枠のためスキップ対象)' },
-    { time: '2026-09-20T08:33:00+09:00', expected: true, label: '休日 08:33 (定刻)' },
-    { time: '2026-09-20T08:50:00+09:00', expected: true, label: '休日 08:50 (17分遅延)' },
-    { time: '2026-09-20T11:48:00+09:00', expected: false, label: '休日 11:48 (平日専用枠のためスキップ対象)' },
-    { time: '2026-09-20T13:03:00+09:00', expected: true, label: '休日 13:03 (定刻)' },
-    { time: '2026-09-20T17:18:00+09:00', expected: true, label: '休日 17:18 (定刻)' },
-    { time: '2026-09-20T21:33:00+09:00', expected: true, label: '休日 21:33 (定刻)' },
-  ];
-
-  for (const t of holidayTests) {
-    const d = new Date(t.time);
-    const res = isScheduledCrawlTime(d);
-    const ok = res.canProceed === t.expected;
-    console.log(`  ${ok ? '✅' : '❌'} [${t.label}] canProceed: ${res.canProceed} (期待値: ${t.expected}) - ${res.reason}`);
-    if (!ok) throw new Error(`Test failed for ${t.label}`);
-  }
-
-  // 3. 祝日判定テスト (2026-09-21 敬老の日 / 祝日)
-  console.log('\n--- 3. 祝日テスト (2026-09-21 月曜祝日・敬老の日) ---');
-  const isKeiroHoliday = isWeekendOrHoliday('2026-09-21');
-  console.log(`  敬老の日 (2026-09-21) 祝日判定: ${isKeiroHoliday ? '✅ 祝日判定OK' : '❌ 祝日判定NG'}`);
-  if (!isKeiroHoliday) throw new Error('2026-09-21 should be holiday');
-
-  const keiroRes0833 = isScheduledCrawlTime(new Date('2026-09-21T08:33:00+09:00'));
-  console.log(`  敬老の日 08:33 (休日スケジュール適用): canProceed = ${keiroRes0833.canProceed} (期待値: true)`);
-  if (!keiroRes0833.canProceed) throw new Error('Holiday 08:33 should proceed');
-
-  const keiroRes0633 = isScheduledCrawlTime(new Date('2026-09-21T06:33:00+09:00'));
-  console.log(`  敬老の日 06:33 (平日スケジュール除外): canProceed = ${keiroRes0633.canProceed} (期待値: false)`);
-  if (keiroRes0633.canProceed) throw new Error('Holiday 06:33 should NOT proceed');
-
-  console.log('\n🎉 全てのスケジュール判定・祝日判定テストを完全にパスしました！');
+  console.log('\n🎉 毎日固定4回のスケジュール判定テストを完全にパスしました！');
 }
 
 testSchedules();
