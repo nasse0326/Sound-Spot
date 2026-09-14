@@ -13,7 +13,7 @@ import { fetchBotAkibaDays } from './lib/bot-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays } from './lib/ongakukan-fetcher';
 import { fetchNoahAkibaDays, fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
-import { fetchPentaShinjukuDays, isWeekendOrHoliday } from './lib/penta-fetcher';
+import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -44,20 +44,17 @@ function toUUID(str: string): string {
 }
 
 /**
- * ユーザー指定スケジュール判定ガード
- * 平日（月〜金、祝日除く）: 06:30, 11:45, 17:15, 21:30 (JST)
- * 休日（土日）および祝日: 08:30, 13:00, 17:15, 21:30 (JST)
+ * 毎日固定スケジュール判定ガード
+ * 曜日を問わず毎日 06:33, 11:48, 17:18, 21:33 (JST) の4回のみ巡回を許可します。
  * GitHub Actionsの実行遅延（5〜20分程度）を吸収するため、前後ウィンドウで判定します。
  */
-export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: boolean; reason?: string; isHolidayOrWeekend?: boolean } {
+export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: boolean; reason?: string } {
   if (process.env.IGNORE_GUARDS === 'true') {
     return { canProceed: true, reason: 'IGNORE_GUARDS=true のため即時実行します。' };
   }
 
   const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
   const jstDate = new Date(utc + 3600000 * 9);
-  const jstDateStr = format(jstDate, 'yyyy-MM-dd');
-  const isWeekendHoliday = isWeekendOrHoliday(jstDateStr);
 
   const currentMinutes = jstDate.getHours() * 60 + jstDate.getMinutes();
 
@@ -79,14 +76,12 @@ export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: 
     return {
       canProceed: true,
       reason: `JST ${jstTimeStr} は毎日定時巡回スケジュール枠（06:33, 11:48, 17:18, 21:33）内に合致しています。`,
-      isHolidayOrWeekend: isWeekendHoliday,
     };
   }
 
   return {
     canProceed: false,
     reason: `JST ${jstTimeStr} は毎日定時巡回スケジュール（06:33, 11:48, 17:18, 21:33）の対象時間外のためスキップします。`,
-    isHolidayOrWeekend: isWeekendHoliday,
   };
 }
 
@@ -313,7 +308,8 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
 
     for (let i = 0; i < dbSlots.length; i += 200) {
       const chunk = dbSlots.slice(i, i + 200);
-      await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+      const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+      if (error) console.error(`  ❌ [Supabase Sync] ゲートウェイ渋谷チャンク同期エラー: ${error.message}`);
     }
     console.log(`✨ [Supabase Sync] ゲートウェイ渋谷: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
   }
@@ -399,28 +395,23 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
   }
 
   // D. サウンドスタジオノア 秋葉原店 (NOAH Official Schedule API)
-  const noahGuard = checkNoahStealthGuard();
-  if (!noahGuard.canProceed) {
-    console.log(`  ⏹️ [NOAH Akiba SKIP] ${noahGuard.reason}`);
-  } else {
-    try {
-      const noahRooms = await fetchNoahAkibaDays(baseDate, dayCount);
-      const noahStudio = akibaData.find(s => s.id === 'noah-akiba-01');
-      if (noahStudio) {
-        noahStudio.rooms.forEach((r: any) => {
-          const matched = noahRooms.find(nr => nr.id === r.id || nr.name === r.name);
-          if (matched && matched.slots.length > 0) {
-            r.slots = matched.slots.map(s => ({
-              ...s,
-              price: r.hourly_rate || 2640
-            }));
-          }
-        });
-        console.log(`  ✅ [ノア秋葉原店] ${noahStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了`);
-      }
-    } catch (err: any) {
-      console.error(`  ❌ [ノア秋葉原店] 取得エラー: ${err.message}`);
+  try {
+    const noahRooms = await fetchNoahAkibaDays(baseDate, dayCount);
+    const noahStudio = akibaData.find(s => s.id === 'noah-akiba-01');
+    if (noahStudio) {
+      noahStudio.rooms.forEach((r: any) => {
+        const matched = noahRooms.find(nr => nr.id === r.id || nr.name === r.name);
+        if (matched && matched.slots.length > 0) {
+          r.slots = matched.slots.map(s => ({
+            ...s,
+            price: r.hourly_rate || 2640
+          }));
+        }
+      });
+      console.log(`  ✅ [ノア秋葉原店] ${noahStudio.rooms.length}部屋の最新${dayCount}日分スロットを更新完了`);
     }
+  } catch (err: any) {
+    console.error(`  ❌ [ノア秋葉原店] 取得エラー: ${err.message}`);
   }
 
   // akihabara-real.json へ書き込み保存
@@ -447,35 +438,18 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
 
     for (let i = 0; i < dbSlots.length; i += 200) {
       const chunk = dbSlots.slice(i, i + 200);
-      await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+      const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+      if (error) console.error(`  ❌ [Supabase Sync] 秋葉原チャンク同期エラー: ${error.message}`);
     }
     console.log(`✨ [Supabase Sync] 秋葉原: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
   }
 }
 
 // -------------------------------------------------------------
-// 3. NOAH Stealth Guard & Cloud Crawler Engine (人間化・BAN完全回避)
+// 3. Cloud Crawler Engine (人間化・BAN完全回避)
 // -------------------------------------------------------------
-interface NoahGuardStatus {
-  canProceed: boolean;
-  reason?: string;
-}
-
-export function checkNoahStealthGuard(nowDate: Date = new Date(), ignoreGuards: boolean = false): NoahGuardStatus {
-  if (ignoreGuards || process.env.IGNORE_GUARDS === 'true') {
-    return { canProceed: true };
-  }
-
-  const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
-  const jstDate = new Date(utc + 3600000 * 9);
-
-  const jstHour = jstDate.getHours();
-  const jstMin = jstDate.getMinutes();
-  const jstDay = jstDate.getDay();
-
-  // クローラー全体のスケジュールガード（isScheduledCrawlTime）を通過していれば基本的に巡回可能
-  return { canProceed: true };
-}
+// NOAH向けの個別ガードは廃止済み。実行可否は main() 冒頭の
+// isScheduledCrawlTime() による毎日固定4回スケジュール判定のみで一元管理する。
 
 async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
   try {
@@ -505,7 +479,8 @@ async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
         });
         for (let i = 0; i < dbSlots.length; i += 200) {
           const chunk = dbSlots.slice(i, i + 200);
-          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          if (error) console.error(`  ❌ [Supabase Sync] NODE新宿チャンク同期エラー: ${error.message}`);
         }
         console.log(`  ✨ [Supabase Sync] NODE新宿: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
       }
@@ -528,28 +503,24 @@ async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
       console.log(`  💾 [PENTA] 新宿店の全スロットデータを ${outPath} に保存しました。`);
 
       if (supabase) {
+        // 平日はスタッフ非運用のためスロット自体が生成されず、pentaRooms全体が空になる日もある
+        // （ペンタは電話予約主体で、新宿店のみ土日祝限定でこのボードを公開しているため正常な挙動）。
         const dbSlots: any[] = [];
         for (const room of pentaRooms) {
           const roomId = toUUID(`penta-shinjuku-${room.id}`);
           for (const s of room.slots) {
-            // id: penta-shinjuku-101-2026-09-19-1000
-            const parts = s.id.split('-');
-            const date = parts.slice(parts.length - 4, parts.length - 1).join('-');
             dbSlots.push({
-              id: toUUID(`penta-${s.id}`),
               room_id: roomId,
-              date,
               start_time: s.start_time,
               end_time: s.end_time,
-              status: s.status,
-              created_at: new Date().toISOString(),
-              updated_at: new Date().toISOString(),
+              status: s.status.toLowerCase(),
             });
           }
         }
         for (let i = 0; i < dbSlots.length; i += 200) {
           const chunk = dbSlots.slice(i, i + 200);
-          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          if (error) console.error(`  ❌ [Supabase Sync] ペンタ新宿チャンク同期エラー: ${error.message}`);
         }
         console.log(`✨ [Supabase Sync] ペンタ新宿: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
       }
@@ -587,7 +558,8 @@ async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
         });
         for (let i = 0; i < dbSlots.length; i += 200) {
           const chunk = dbSlots.slice(i, i + 200);
-          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          if (error) console.error(`  ❌ [Supabase Sync] 音楽館新宿西口店チャンク同期エラー: ${error.message}`);
         }
         console.log(`  ✨ [Supabase Sync] 音楽館 新宿西口店: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
       }
@@ -598,13 +570,7 @@ async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
 }
 
 async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
-  console.log('\n🛡️ [NOAH Stealth Guard] 人間化・BAN回避判定を実行中...');
-
-  const guard = checkNoahStealthGuard();
-  if (!guard.canProceed && process.env.IGNORE_GUARDS !== 'true') {
-    console.log(`  ⏹️ [SKIP] ${guard.reason}`);
-    return;
-  }
+  console.log('\n🛡️ [NOAH Stealth Guard] 人間化ロジック（ゆらぎ付与）を適用して巡回を開始します...');
 
   const jitterSec = Math.floor(Math.random() * 4) + 1;
   console.log(`  🎲 [Jitter] キリ番アクセス回避のため、${jitterSec}秒 ランダム待機（ゆらぎ付与）します...`);
@@ -642,7 +608,8 @@ async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
         });
         for (let i = 0; i < dbSlots.length; i += 200) {
           const chunk = dbSlots.slice(i, i + 200);
-          await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+          if (error) console.error(`  ❌ [Supabase Sync] NOAHチャンク同期エラー: ${error.message}`);
         }
         console.log(`  ✨ [Supabase Sync] NOAH: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
       }
