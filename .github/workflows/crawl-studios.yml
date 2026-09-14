@@ -44,6 +44,9 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           NOAH_LOGIN_ID: ${{ secrets.NOAH_LOGIN_ID }}
           NOAH_PASSWORD: ${{ secrets.NOAH_PASSWORD }}
+          # 手動実行(workflow_dispatch)時は毎日固定4回スケジュールガードを無視して即時巡回する。
+          # cronによる定時実行時は引き続きガードを適用する。
+          IGNORE_GUARDS: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
         run: npm run crawl
 
       - name: Commit and push updated studio data
