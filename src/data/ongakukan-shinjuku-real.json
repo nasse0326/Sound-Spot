@@ -1,155 +1,11 @@
 {
-  "updatedAt": "2026-09-14T15:00:28.823Z",
+  "updatedAt": "2026-09-15T11:19:00.427Z",
   "rooms": [
     {
       "id": "og-shinjuku-rhythm",
       "name": "Rhythm (9帖)",
       "staffId": 1,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-rhythm-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -232,43 +88,43 @@
           "id": "slot-og-shinjuku-rhythm-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-1500",
           "start_time": "2026-09-15T15:00:00+09:00",
           "end_time": "2026-09-15T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-1600",
           "start_time": "2026-09-15T16:00:00+09:00",
           "end_time": "2026-09-15T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-1800",
           "start_time": "2026-09-15T18:00:00+09:00",
           "end_time": "2026-09-15T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-1900",
           "start_time": "2026-09-15T19:00:00+09:00",
           "end_time": "2026-09-15T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-2000",
@@ -286,13 +142,13 @@
           "id": "slot-og-shinjuku-rhythm-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260916-0000",
@@ -2002,13 +1858,13 @@
           "id": "slot-og-shinjuku-rhythm-20260927-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260927-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-rhythm-20260927-2200",
@@ -3029,6 +2885,150 @@
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-rhythm-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -3037,150 +3037,6 @@
       "name": "Harmony (10帖)",
       "staffId": 2,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-harmony-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-harmony-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -3263,13 +3119,13 @@
           "id": "slot-og-shinjuku-harmony-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260915-1500",
@@ -3287,19 +3143,19 @@
           "id": "slot-og-shinjuku-harmony-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260915-1800",
           "start_time": "2026-09-15T18:00:00+09:00",
           "end_time": "2026-09-15T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260915-1900",
           "start_time": "2026-09-15T19:00:00+09:00",
           "end_time": "2026-09-15T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260915-2000",
@@ -3317,13 +3173,13 @@
           "id": "slot-og-shinjuku-harmony-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260916-0000",
@@ -3833,13 +3689,13 @@
           "id": "slot-og-shinjuku-harmony-20260919-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260919-1300",
           "start_time": "2026-09-19T13:00:00+09:00",
           "end_time": "2026-09-19T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20260919-1400",
@@ -5987,13 +5843,13 @@
           "id": "slot-og-shinjuku-harmony-20261004-1100",
           "start_time": "2026-10-04T11:00:00+09:00",
           "end_time": "2026-10-04T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20261004-1200",
           "start_time": "2026-10-04T12:00:00+09:00",
           "end_time": "2026-10-04T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20261004-1300",
@@ -6011,13 +5867,13 @@
           "id": "slot-og-shinjuku-harmony-20261004-1500",
           "start_time": "2026-10-04T15:00:00+09:00",
           "end_time": "2026-10-04T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20261004-1600",
           "start_time": "2026-10-04T16:00:00+09:00",
           "end_time": "2026-10-04T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-harmony-20261004-1700",
@@ -6060,6 +5916,150 @@
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-harmony-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -6068,150 +6068,6 @@
       "name": "Tone (11帖)",
       "staffId": 3,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-tone-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-tone-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -6294,43 +6150,43 @@
           "id": "slot-og-shinjuku-tone-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-1500",
           "start_time": "2026-09-15T15:00:00+09:00",
           "end_time": "2026-09-15T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-1600",
           "start_time": "2026-09-15T16:00:00+09:00",
           "end_time": "2026-09-15T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-1800",
           "start_time": "2026-09-15T18:00:00+09:00",
           "end_time": "2026-09-15T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-1900",
           "start_time": "2026-09-15T19:00:00+09:00",
           "end_time": "2026-09-15T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-2000",
@@ -6348,13 +6204,13 @@
           "id": "slot-og-shinjuku-tone-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260916-0000",
@@ -7632,13 +7488,13 @@
           "id": "slot-og-shinjuku-tone-20260924-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260924-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260924-2200",
@@ -8352,13 +8208,13 @@
           "id": "slot-og-shinjuku-tone-20260929-2000",
           "start_time": "2026-09-29T20:00:00+09:00",
           "end_time": "2026-09-29T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260929-2100",
           "start_time": "2026-09-29T21:00:00+09:00",
           "end_time": "2026-09-29T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-tone-20260929-2200",
@@ -9091,6 +8947,150 @@
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-tone-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -9099,150 +9099,6 @@
       "name": "Kick (13帖)",
       "staffId": 4,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-kick-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-kick-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -9325,37 +9181,37 @@
           "id": "slot-og-shinjuku-kick-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-1500",
           "start_time": "2026-09-15T15:00:00+09:00",
           "end_time": "2026-09-15T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-1600",
           "start_time": "2026-09-15T16:00:00+09:00",
           "end_time": "2026-09-15T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-1800",
           "start_time": "2026-09-15T18:00:00+09:00",
           "end_time": "2026-09-15T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-1900",
@@ -9373,19 +9229,19 @@
           "id": "slot-og-shinjuku-kick-20260915-2100",
           "start_time": "2026-09-15T21:00:00+09:00",
           "end_time": "2026-09-15T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-kick-20260916-0000",
@@ -12122,6 +11978,150 @@
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-kick-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -12130,150 +12130,6 @@
       "name": "Opus (17帖)",
       "staffId": 5,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-opus-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-opus-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -12356,43 +12212,43 @@
           "id": "slot-og-shinjuku-opus-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-1500",
           "start_time": "2026-09-15T15:00:00+09:00",
           "end_time": "2026-09-15T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-1600",
           "start_time": "2026-09-15T16:00:00+09:00",
           "end_time": "2026-09-15T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-1800",
           "start_time": "2026-09-15T18:00:00+09:00",
           "end_time": "2026-09-15T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-1900",
           "start_time": "2026-09-15T19:00:00+09:00",
           "end_time": "2026-09-15T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-2000",
@@ -12410,13 +12266,13 @@
           "id": "slot-og-shinjuku-opus-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-opus-20260916-0000",
@@ -15153,6 +15009,150 @@
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-opus-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -15161,150 +15161,6 @@
       "name": "Beat (20帖)",
       "staffId": 6,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-beat-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-beat-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -15387,43 +15243,43 @@
           "id": "slot-og-shinjuku-beat-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-1500",
           "start_time": "2026-09-15T15:00:00+09:00",
           "end_time": "2026-09-15T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-1600",
           "start_time": "2026-09-15T16:00:00+09:00",
           "end_time": "2026-09-15T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-1800",
           "start_time": "2026-09-15T18:00:00+09:00",
           "end_time": "2026-09-15T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-1900",
           "start_time": "2026-09-15T19:00:00+09:00",
           "end_time": "2026-09-15T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-2000",
@@ -15441,13 +15297,13 @@
           "id": "slot-og-shinjuku-beat-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-beat-20260916-0000",
@@ -18184,6 +18040,150 @@
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-beat-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -18192,150 +18192,6 @@
       "name": "Multiplex (22帖)",
       "staffId": 7,
       "slots": [
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0000",
-          "start_time": "2026-09-14T00:00:00+09:00",
-          "end_time": "2026-09-14T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0100",
-          "start_time": "2026-09-14T01:00:00+09:00",
-          "end_time": "2026-09-14T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0200",
-          "start_time": "2026-09-14T02:00:00+09:00",
-          "end_time": "2026-09-14T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0300",
-          "start_time": "2026-09-14T03:00:00+09:00",
-          "end_time": "2026-09-14T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0400",
-          "start_time": "2026-09-14T04:00:00+09:00",
-          "end_time": "2026-09-14T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0500",
-          "start_time": "2026-09-14T05:00:00+09:00",
-          "end_time": "2026-09-14T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0600",
-          "start_time": "2026-09-14T06:00:00+09:00",
-          "end_time": "2026-09-14T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0700",
-          "start_time": "2026-09-14T07:00:00+09:00",
-          "end_time": "2026-09-14T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0800",
-          "start_time": "2026-09-14T08:00:00+09:00",
-          "end_time": "2026-09-14T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-0900",
-          "start_time": "2026-09-14T09:00:00+09:00",
-          "end_time": "2026-09-14T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1000",
-          "start_time": "2026-09-14T10:00:00+09:00",
-          "end_time": "2026-09-14T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1100",
-          "start_time": "2026-09-14T11:00:00+09:00",
-          "end_time": "2026-09-14T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1200",
-          "start_time": "2026-09-14T12:00:00+09:00",
-          "end_time": "2026-09-14T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1300",
-          "start_time": "2026-09-14T13:00:00+09:00",
-          "end_time": "2026-09-14T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1400",
-          "start_time": "2026-09-14T14:00:00+09:00",
-          "end_time": "2026-09-14T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1500",
-          "start_time": "2026-09-14T15:00:00+09:00",
-          "end_time": "2026-09-14T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1600",
-          "start_time": "2026-09-14T16:00:00+09:00",
-          "end_time": "2026-09-14T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1700",
-          "start_time": "2026-09-14T17:00:00+09:00",
-          "end_time": "2026-09-14T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1800",
-          "start_time": "2026-09-14T18:00:00+09:00",
-          "end_time": "2026-09-14T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-1900",
-          "start_time": "2026-09-14T19:00:00+09:00",
-          "end_time": "2026-09-14T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-2000",
-          "start_time": "2026-09-14T20:00:00+09:00",
-          "end_time": "2026-09-14T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-2100",
-          "start_time": "2026-09-14T21:00:00+09:00",
-          "end_time": "2026-09-14T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-2200",
-          "start_time": "2026-09-14T22:00:00+09:00",
-          "end_time": "2026-09-14T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-shinjuku-multiplex-20260914-2300",
-          "start_time": "2026-09-14T23:00:00+09:00",
-          "end_time": "2026-09-15T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-0000",
           "start_time": "2026-09-15T00:00:00+09:00",
@@ -18418,31 +18274,31 @@
           "id": "slot-og-shinjuku-multiplex-20260915-1300",
           "start_time": "2026-09-15T13:00:00+09:00",
           "end_time": "2026-09-15T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-1400",
           "start_time": "2026-09-15T14:00:00+09:00",
           "end_time": "2026-09-15T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-1500",
           "start_time": "2026-09-15T15:00:00+09:00",
           "end_time": "2026-09-15T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-1600",
           "start_time": "2026-09-15T16:00:00+09:00",
           "end_time": "2026-09-15T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-1700",
           "start_time": "2026-09-15T17:00:00+09:00",
           "end_time": "2026-09-15T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-1800",
@@ -18466,19 +18322,19 @@
           "id": "slot-og-shinjuku-multiplex-20260915-2100",
           "start_time": "2026-09-15T21:00:00+09:00",
           "end_time": "2026-09-15T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260916-0000",
@@ -18748,13 +18604,13 @@
           "id": "slot-og-shinjuku-multiplex-20260917-2000",
           "start_time": "2026-09-17T20:00:00+09:00",
           "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260917-2100",
           "start_time": "2026-09-17T21:00:00+09:00",
           "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-shinjuku-multiplex-20260917-2200",
@@ -21214,6 +21070,150 @@
           "id": "slot-og-shinjuku-multiplex-20261004-2300",
           "start_time": "2026-10-04T23:00:00+09:00",
           "end_time": "2026-10-05T00:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0000",
+          "start_time": "2026-10-05T00:00:00+09:00",
+          "end_time": "2026-10-05T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0100",
+          "start_time": "2026-10-05T01:00:00+09:00",
+          "end_time": "2026-10-05T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0200",
+          "start_time": "2026-10-05T02:00:00+09:00",
+          "end_time": "2026-10-05T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0300",
+          "start_time": "2026-10-05T03:00:00+09:00",
+          "end_time": "2026-10-05T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0400",
+          "start_time": "2026-10-05T04:00:00+09:00",
+          "end_time": "2026-10-05T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0500",
+          "start_time": "2026-10-05T05:00:00+09:00",
+          "end_time": "2026-10-05T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0600",
+          "start_time": "2026-10-05T06:00:00+09:00",
+          "end_time": "2026-10-05T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0700",
+          "start_time": "2026-10-05T07:00:00+09:00",
+          "end_time": "2026-10-05T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0800",
+          "start_time": "2026-10-05T08:00:00+09:00",
+          "end_time": "2026-10-05T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-0900",
+          "start_time": "2026-10-05T09:00:00+09:00",
+          "end_time": "2026-10-05T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1000",
+          "start_time": "2026-10-05T10:00:00+09:00",
+          "end_time": "2026-10-05T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1100",
+          "start_time": "2026-10-05T11:00:00+09:00",
+          "end_time": "2026-10-05T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1200",
+          "start_time": "2026-10-05T12:00:00+09:00",
+          "end_time": "2026-10-05T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1300",
+          "start_time": "2026-10-05T13:00:00+09:00",
+          "end_time": "2026-10-05T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1400",
+          "start_time": "2026-10-05T14:00:00+09:00",
+          "end_time": "2026-10-05T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1500",
+          "start_time": "2026-10-05T15:00:00+09:00",
+          "end_time": "2026-10-05T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1600",
+          "start_time": "2026-10-05T16:00:00+09:00",
+          "end_time": "2026-10-05T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1700",
+          "start_time": "2026-10-05T17:00:00+09:00",
+          "end_time": "2026-10-05T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1800",
+          "start_time": "2026-10-05T18:00:00+09:00",
+          "end_time": "2026-10-05T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-1900",
+          "start_time": "2026-10-05T19:00:00+09:00",
+          "end_time": "2026-10-05T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-2000",
+          "start_time": "2026-10-05T20:00:00+09:00",
+          "end_time": "2026-10-05T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-2100",
+          "start_time": "2026-10-05T21:00:00+09:00",
+          "end_time": "2026-10-05T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-2200",
+          "start_time": "2026-10-05T22:00:00+09:00",
+          "end_time": "2026-10-05T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-shinjuku-multiplex-20261005-2300",
+          "start_time": "2026-10-05T23:00:00+09:00",
+          "end_time": "2026-10-06T00:00:00+09:00",
           "status": "AVAILABLE"
         }
       ]
