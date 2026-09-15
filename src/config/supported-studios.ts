@@ -2,7 +2,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -316,5 +316,94 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-3255-0810',
     websiteUrl: 'https://www.studiocan.co.jp/akiba/',
     features: ['電気街口徒歩3分', '50帖大型Music Innあり', '個人練習21時受付', 'リーズナブルな料金'],
+  },
+
+  // -------------------------------------------------------------
+  // 高田馬場エリア (5店舗 / 計53部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'noah-takadanobaba',
+    name: 'サウンドスタジオノア 高田馬場店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '高田馬場',
+    nearestStation: '高田馬場駅 徒歩3分',
+    address: '東京都豊島区高田3-15-7',
+    roomCount: 15,
+    syncType: 'web_api',
+    syncLabel: 'Web空き状況',
+    systemName: 'ノア公式API連携',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '03-3985-6761',
+    websiteUrl: 'https://www.studionoah.jp/baba/',
+    features: ['24時間営業', '駅徒歩3分', '00分/30分開始混在', '個人練習Web受付'],
+  },
+  {
+    id: 'gateway-takadanobaba-3rd',
+    name: 'ゲートウェイスタジオ 高田馬場3号店',
+    chainName: 'GATEWAY STUDIO',
+    area: '高田馬場',
+    nearestStation: '高田馬場駅 徒歩3分',
+    address: '東京都新宿区高田馬場1-28-6 和光ビルB棟',
+    roomCount: 15,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'Reserve1.jp (自動巡回)',
+    is24Hours: true,
+    businessHours: '10:00〜23:00 (予約状況により24時間対応可)',
+    tel: '03-3200-9997',
+    websiteUrl: 'http://www.gw-studio.com/studios/studio_baba3rd/index',
+    features: ['都内最大級15部屋', '00分/15分/30分/45分開始混在', 'ツインドラム完備室あり', '学割10%'],
+  },
+  {
+    id: 'ongakukan-takadanobaba',
+    name: 'スタジオ音楽館 馬場駅前店',
+    chainName: 'スタジオ音楽館',
+    area: '高田馬場',
+    nearestStation: '高田馬場駅 徒歩1分',
+    address: '東京都新宿区高田馬場1丁目34-8大輝ビル地下1階',
+    roomCount: 6,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'ajg.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '13:00〜22:00 (予約に応じ24時間対応可)',
+    tel: '03-6278-9288',
+    websiteUrl: 'http://www.st-ongakukan.com/takadanobabaekimae/takadanobabaekimae.html',
+    features: ['駅一番近い徒歩1分', '23畳スタジオライブ対応', '個人練習前日21時〜', '格安料金体系'],
+  },
+  {
+    id: 'bot-takadanobaba',
+    name: 'ベースオントップ 高田馬場店',
+    chainName: 'BASS ON TOP',
+    area: '高田馬場',
+    nearestStation: '高田馬場駅 戸山口 徒歩1分',
+    address: '東京都新宿区高田馬場1-33-14 サンフラワービル4F',
+    roomCount: 11,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'スタジオル連携',
+    is24Hours: true,
+    businessHours: '24時間営業（年末年始は除く）',
+    tel: '03-3203-9502',
+    websiteUrl: 'https://www.bassontop.co.jp/band/takadanobaba/',
+    features: ['駅徒歩1分', '24時間営業', '独立モニター完備室あり', '00分/30分開始混在'],
+  },
+  {
+    id: 'bazooka-takadanobaba',
+    name: 'BAZOOKA STUDIO',
+    chainName: 'BAZOOKA STUDIO',
+    area: '高田馬場',
+    nearestStation: '高田馬場駅 徒歩2分',
+    address: '東京都新宿区高田馬場3-3-3 三優ビルB1F',
+    roomCount: 6,
+    syncType: 'phone',
+    syncLabel: '要事前会員登録（Web/電話予約）',
+    systemName: 'ReserveMart (会員限定・自動巡回非対応)',
+    is24Hours: false,
+    businessHours: '要問い合わせ（深夜リハーサルは電話予約）',
+    tel: '03-3360-3377',
+    websiteUrl: 'https://bazookastudio.com/',
+    features: ['駅徒歩2分', 'NATAL/CANOPUSドラム常設', 'レコーディング3部屋も併設', 'Web予約は要会員登録'],
   },
 ];

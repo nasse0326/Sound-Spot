@@ -194,4 +194,26 @@ export const NOAH_ALL_STORES: NoahStoreMaster[] = [
       { id: 'noah-ochanomizu-est', studioId: 3020, name: 'Est (15帖)', tatami: 15, offset: 30, loginRequired: true, priceRegular: 4070, priceDaytime: 2860, priceSolo: 990, guitarAmps: [JCM900, JC120], bassAmp: 'orange 4stroke LTD + OBC810', drumSet: "DW Collector's Series" },
     ],
   },
+  // 8. 高田馬場店 (15室)
+  {
+    key: 'takadanobaba',
+    name: 'サウンドスタジオノア 高田馬場店',
+    rooms: [
+      { id: 'noah-takadanobaba-a1st', studioId: 116, name: 'A1st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2860, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg B2RE', drumSet: 'Pearl MSX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-a2st', studioId: 117, name: 'A2st (9帖)', tatami: 9, offset: 0, loginRequired: false, priceRegular: 2970, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg VENTURE V3', drumSet: 'Pearl MSX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-a3st', studioId: 118, name: 'A3st (8帖)', tatami: 8, offset: 30, loginRequired: false, priceRegular: 2860, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'Pearl MSX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-a5st', studioId: 119, name: 'A5st (8帖)', tatami: 8, offset: 30, loginRequired: false, priceRegular: 2860, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS Little Mark Rocker 500', drumSet: 'SAKAE The Almighty' },
+      { id: 'noah-takadanobaba-g1st', studioId: 120, name: 'G1st (11帖)', tatami: 11, offset: 0, loginRequired: false, priceRegular: 3190, priceDaytime: 1870, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'Pearl MSX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-g2st', studioId: 121, name: 'G2st (11帖)', tatami: 11, offset: 30, loginRequired: false, priceRegular: 3190, priceDaytime: 1870, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS Little Mark Rocker 500', drumSet: 'SAKAE The Almighty Birch (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-b1st', studioId: 122, name: 'B1st (14帖)', tatami: 14, offset: 0, loginRequired: true, priceRegular: 3520, priceDaytime: 2200, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS Little Mark Vintage + Standard108HR', drumSet: 'SAKAE the Almighty (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-b2st', studioId: 123, name: 'B2st (14帖)', tatami: 14, offset: 30, loginRequired: true, priceRegular: 3520, priceDaytime: 2200, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'YAMAHA Recording Custom (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-b3st', studioId: 124, name: 'B3st (14帖)', tatami: 14, offset: 30, loginRequired: true, priceRegular: 3520, priceDaytime: 2200, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'Pearl MMX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-est', studioId: 125, name: 'Est (17帖)', tatami: 17, offset: 0, loginRequired: true, priceRegular: 3850, priceDaytime: 2750, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-450H', drumSet: 'Pearl Reference series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-fst', studioId: 126, name: 'Fst (21帖)', tatami: 21, offset: 0, loginRequired: true, priceRegular: 4290, priceDaytime: 3080, priceSolo: 990, guitarAmps: [JCM900, "Fender Twin Reverb '65", JC120], bassAmp: 'Fender TB600 Head + 810 Cabinet', drumSet: 'SONOR SQ1 Series (10"HT+12"LT+16"FT+22"BD)' },
+      { id: 'noah-takadanobaba-cstsub', studioId: 127, name: 'Cst+Sub (30帖+5帖)', tatami: 30, offset: 0, loginRequired: true, priceRegular: 5940, priceDaytime: 4180, priceSolo: 1100, guitarAmps: [JCM900, "Fender Twin Reverb '65", JC120], bassAmp: 'Ampeg SVT 450H/SVT810E', drumSet: "DW Collector's Maple Set (12x9,13x10,16x14,22x18)" },
+      { id: 'noah-takadanobaba-booth1', studioId: 128, name: 'Booth.1 (3帖)', tatami: 3, offset: 0, loginRequired: false, priceRegular: 770, priceDaytime: 770, priceSolo: 770, guitarAmps: [], bassAmp: '', drumSet: '' },
+      { id: 'noah-takadanobaba-booth2', studioId: 130, name: 'Booth.2 (4帖)', tatami: 4, offset: 30, loginRequired: false, priceRegular: 770, priceDaytime: 770, priceSolo: 770, guitarAmps: [JC120], bassAmp: '', drumSet: '' },
+      { id: 'noah-takadanobaba-recbooth', studioId: 129, name: 'REC.Booth (5帖)', tatami: 5, offset: 30, loginRequired: false, priceRegular: 1760, priceDaytime: 1540, priceSolo: 880, guitarAmps: [], bassAmp: '', drumSet: '' },
+    ],
+  },
 ];

@@ -25,6 +25,15 @@ export interface Reserve1Config {
   loginUrl: string;
   grandValue?: string;
   roomSpecs?: Record<string, any>;
+  /** カレンダー表の最初の列が何時始まりか（店舗により異なる。未指定時は9時=既存店舗互換のデフォルト） */
+  openHour?: number;
+}
+
+/**
+ * 全角英数字を半角に変換する（Reserve1の一部店舗は部屋ラベルを全角で出力するため）。
+ */
+function toHalfWidth(s: string): string {
+  return s.replace(/[０-９Ａ-Ｚａ-ｚ]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0));
 }
 
 export async function fetchReserve1Days(
@@ -113,14 +122,20 @@ export async function fetchReserve1Days(
         if (cells.length < 3) continue;
 
         const firstCell = cells[0].replace(/<[^>]*>/g, '').trim();
-        if (!firstCell.includes('st') && !firstCell.includes('SUBROOM')) continue;
 
-        let currentHour = 9;
+        // 従来形式（渋谷/秋葉原ゲートウェイ・GOODMAN等）: "1st", "2st" のように末尾が st
+        const stMatch = firstCell.match(/(\d+st)/) || firstCell.match(/([A-Za-z0-9]+st)/);
+        // 高田馬場3号店等の新形式: "２階／２B（１０畳）00分～" や "５C／ツインドラム45分～" のように
+        // 全角の「部屋番号+アルファベット」コードが部屋名の先頭付近に含まれる
+        const codeMatch = firstCell.match(/([0-9０-９]+[A-Za-zＡ-Ｚａ-ｚ])/);
+
+        if (!stMatch && !codeMatch && !firstCell.includes('SUBROOM')) continue;
+
+        let currentHour = config.openHour ?? 9;
         let currentMin = 0;
         const slotCells = cells.slice(1, cells.length - 1);
 
-        const matchKey = firstCell.match(/(\d+st)/) || firstCell.match(/([A-Za-z0-9]+st)/);
-        const roomKey = matchKey ? matchKey[1] : firstCell;
+        const roomKey = stMatch ? stMatch[1] : (codeMatch ? toHalfWidth(codeMatch[1]).toUpperCase() : firstCell);
 
         if (!roomMap[roomKey]) {
           roomMap[roomKey] = { rawName: firstCell, slots: [] };
@@ -130,9 +145,14 @@ export async function fetchReserve1Days(
           const classMatch = cellContent.match(/class=["']([^"']+)["']/i);
           const className = classMatch ? classMatch[1] : '';
 
+          // koma_spN: 部屋ごとの開始オフセット調整用の端数（N分）フィラーセル。
+          // 高田馬場3号店ではkoma_sp15（15分開始）等、30分以外の端数も使われるため、
+          // 30分決め打ちではなく一般化してNをそのまま読み取る。
           let durationHours = 1;
-          if (className.includes('koma_sp30')) {
-            durationHours = 0.5;
+          const spMatch = className.match(/koma_sp(\d+)/);
+          const isFillerCell = Boolean(spMatch);
+          if (isFillerCell) {
+            durationHours = parseInt(spMatch![1], 10) / 60;
           } else {
             const matchX = className.match(/_x(\d+)_/);
             if (matchX) durationHours = parseInt(matchX[1], 10);
@@ -144,7 +164,7 @@ export async function fetchReserve1Days(
           currentHour = Math.floor(totalM / 60);
           currentMin = totalM % 60;
 
-          if (className.includes('koma_sp30')) continue;
+          if (isFillerCell) continue;
 
           const shStr = sh < 10 ? '0' + sh : '' + sh;
           const smStr = sm < 10 ? '0' + sm : '' + sm;

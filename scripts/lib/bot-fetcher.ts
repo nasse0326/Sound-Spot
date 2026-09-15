@@ -38,12 +38,32 @@ const BOT_AKIBA_ROOMS = [
   { id: 'bot-akiba-3112', roomIdNum: 3112, name: 'Piano (3帖)', size_sqm: 5, capacity: 2, hourly_rate: 2200, day_rate: 1750, individual_rate: 880, start_time_offset: 0, features: ['YAMAHA アップライトピアノ', 'ドラム無し', '個人練習特化'] },
 ];
 
-export async function fetchBotAkibaDays(
+export interface BotRoomSpec {
+  id: string;
+  roomIdNum: number;
+  name: string;
+  size_sqm: number;
+  capacity: number;
+  hourly_rate: number;
+  day_rate?: number;
+  night_rate?: number;
+  individual_rate: number;
+  start_time_offset: number;
+  features: string[];
+}
+
+/**
+ * studi-ol.com を使う任意のBASS ON TOP系列店舗向けの汎用フェッチャー。
+ * 店舗ごとのshopUrl（studi-ol.com/shop/<id>）と部屋定義を渡すだけで使い回せる。
+ */
+export async function fetchBotStoreDays(
+  shopUrl: string,
+  rooms: BotRoomSpec[],
+  storeLabel: string,
   baseDate: Date,
   dayCount: number = 14
 ): Promise<BotRoomData[]> {
-  console.log(`📡 [BASS ON TOP] 秋葉原昭和通り口店の高速取得（Node fetch / ${dayCount}日間）を開始...`);
-  const shopUrl = 'https://studi-ol.com/shop/705';
+  console.log(`📡 [BASS ON TOP] ${storeLabel}の高速取得（Node fetch / ${dayCount}日間）を開始...`);
 
   const res1 = await fetch(shopUrl, {
     headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
@@ -65,7 +85,7 @@ export async function fetchBotAkibaDays(
 
   const resultRooms: BotRoomData[] = [];
 
-  for (const r of BOT_AKIBA_ROOMS) {
+  for (const r of rooms) {
     try {
       const postRes = await fetch('https://studi-ol.com/get_schedule_room', {
         method: 'POST',
@@ -155,4 +175,32 @@ export async function fetchBotAkibaDays(
 
   console.log(`  ✅ [BASS ON TOP] ${resultRooms.length}部屋、計${resultRooms.reduce((a, b) => a + b.slots.length, 0)}スロット取得完了`);
   return resultRooms;
+}
+
+export async function fetchBotAkibaDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/705', BOT_AKIBA_ROOMS, '秋葉原昭和通り口店', baseDate, dayCount);
+}
+
+export const BOT_TAKADANOBABA_ROOMS: BotRoomSpec[] = [
+  { id: 'bot-baba-501', roomIdNum: 2919, name: '501 (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 3100, day_rate: 2300, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums'] },
+  { id: 'bot-baba-502', roomIdNum: 2920, name: '502 (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 3100, day_rate: 2300, individual_rate: 700, start_time_offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums', '30分スタート'] },
+  { id: 'bot-baba-503', roomIdNum: 2921, name: '503 (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 3100, day_rate: 2300, individual_rate: 700, start_time_offset: 30, features: ['Marshall JCM800', 'Roland JC-120', 'Ampeg SVT-450', 'Pearl Drums', '30分スタート'] },
+  { id: 'bot-baba-504', roomIdNum: 2922, name: '504 (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 3100, day_rate: 2300, individual_rate: 700, start_time_offset: 0, features: ['Marshall JVM210H', 'Roland JC-120', 'Hartke HA5500', 'Pearl Drums'] },
+  { id: 'bot-baba-505', roomIdNum: 2923, name: '505 (15帖)', size_sqm: 25, capacity: 6, hourly_rate: 3500, day_rate: 2800, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450', 'dw CL series Drums', '15帖以上', '独立モニター完備'] },
+  { id: 'bot-baba-506', roomIdNum: 2924, name: '506 (15帖)', size_sqm: 25, capacity: 6, hourly_rate: 3500, day_rate: 2800, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', 'Fender Twin Reverb', 'dw CL series Drums', '15帖以上', '独立モニター完備'] },
+  { id: 'bot-baba-507', roomIdNum: 2925, name: '507 (8.5帖)', size_sqm: 14, capacity: 3, hourly_rate: 2800, day_rate: 1900, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Hartke HA5500', 'Pearl Drums'] },
+  { id: 'bot-baba-508', roomIdNum: 2926, name: '508 (8.5帖)', size_sqm: 14, capacity: 3, hourly_rate: 2800, day_rate: 1900, individual_rate: 700, start_time_offset: 0, features: ['Marshall DSL40CR', 'Roland JC-120', 'Hartke HA5500', 'Pearl Drums'] },
+  { id: 'bot-baba-509', roomIdNum: 2927, name: '509 (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 2800, day_rate: 1900, individual_rate: 700, start_time_offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums', '30分スタート'] },
+  { id: 'bot-baba-510', roomIdNum: 2928, name: '510 (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 2800, day_rate: 1900, individual_rate: 700, start_time_offset: 30, features: ['Marshall JCM800', 'Roland JC-120', 'Ampeg SVT-450', 'Pearl Drums', '30分スタート'] },
+  { id: 'bot-baba-511', roomIdNum: 2929, name: '511 (10帖)', size_sqm: 17, capacity: 4, hourly_rate: 3100, day_rate: 2300, individual_rate: 700, start_time_offset: 30, features: ['Marshall JVM210H', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums', '30分スタート'] },
+];
+
+export async function fetchBotTakadanobabaDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/681', BOT_TAKADANOBABA_ROOMS, '高田馬場店', baseDate, dayCount);
 }

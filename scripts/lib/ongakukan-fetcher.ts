@@ -45,6 +45,19 @@ export const ONGAKUKAN_SHINJUKU_WEST_ROOMS: OngakukanRoomDef[] = [
   { id: 'og-shinjuku-multiplex', name: 'Multiplex (22帖)', staffId: 7 },
 ];
 
+// 高田馬場駅前店は全8スタジオを謳っているが、通常のバンド練習予約フロー
+// （ReservationStaff.php）で実際に予約枠として出現するのはstaffid 2〜7の6室のみ
+// （45日間・全時間帯を走査して確認）。staffid 1と8は「23畳」のスタジオライブ
+// 特別イベント枠等、通常の時間予約グリッド外で運用されている可能性が高いため対象外とする。
+export const ONGAKUKAN_TAKADANOBABA_ROOMS: OngakukanRoomDef[] = [
+  { id: 'og-baba-break', name: 'Break (7帖)', staffId: 2 },
+  { id: 'og-baba-conect', name: 'Conect (7帖・30分スタート)', staffId: 3 },
+  { id: 'og-baba-digi', name: 'Digi (11帖)', staffId: 4 },
+  { id: 'og-baba-elegy', name: 'Elegy (13帖)', staffId: 5 },
+  { id: 'og-baba-flash', name: 'Flash (14帖)', staffId: 6 },
+  { id: 'og-baba-grosso', name: 'Grosso (15帖)', staffId: 7 },
+];
+
 /**
  * Parses store-wide calendar to find candidate time slots where at least one room is available (○)
  */
@@ -294,6 +307,22 @@ export async function fetchOngakukanShinjukuWestDays(
     'Fuoxajj8krt105m',
     ONGAKUKAN_SHINJUKU_WEST_ROOMS,
     '音楽館新宿西口店',
+    baseDate,
+    dayCount
+  );
+}
+
+/**
+ * Fetches 21 days of accurate room-specific availability slots for Ongakukan Takadanobaba (馬場駅前店).
+ */
+export async function fetchOngakukanTakadanobabaDays(
+  baseDate: Date = new Date(),
+  dayCount: number = 21
+): Promise<OngakukanRoomData[]> {
+  return fetchOngakukanStoreDays(
+    'Pnpa4ff1gt9m22p',
+    ONGAKUKAN_TAKADANOBABA_ROOMS,
+    '音楽館 馬場駅前店',
     baseDate,
     dayCount
   );

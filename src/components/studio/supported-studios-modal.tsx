@@ -131,7 +131,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
 
   // エリアごとの店舗数
   const areaCounts = useMemo(() => {
-    const counts = { all: SUPPORTED_STUDIOS.length, '渋谷': 0, '新宿': 0, '秋葉原': 0 };
+    const counts = { all: SUPPORTED_STUDIOS.length, '渋谷': 0, '新宿': 0, '秋葉原': 0, '高田馬場': 0 };
     SUPPORTED_STUDIOS.forEach((st) => {
       if (st.area in counts) {
         counts[st.area as keyof typeof counts]++;
@@ -189,7 +189,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                     稼働中スタジオ
                   </span>
                   <span className="text-[11px] text-slate-400 hidden sm:inline">
-                    都内3大エリア・16店舗 / {totalRooms}部屋 実データ対応
+                    都内4エリア・21店舗 / {totalRooms}部屋 実データ対応
                   </span>
                 </div>
                 <h2 className="text-base sm:text-xl font-black tracking-tight text-white mt-1 truncate">
@@ -256,6 +256,17 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                 >
                   秋葉原 ({areaCounts['秋葉原']})
                 </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedArea('高田馬場')}
+                  className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
+                    selectedArea === '高田馬場'
+                      ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
+                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                  }`}
+                >
+                  高田馬場 ({areaCounts['高田馬場']})
+                </button>
               </div>
 
               {/* 検索入力（機材名・アンプ検索にも対応） */}
@@ -286,8 +297,8 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
               <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">対応エリア</span>
-                <p className="text-sm sm:text-base font-extrabold text-white mt-0.5">3 エリア</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-500">渋谷・新宿・秋葉原</span>
+                <p className="text-sm sm:text-base font-extrabold text-white mt-0.5">4 エリア</p>
+                <span className="text-[9px] sm:text-[10px] text-slate-500">渋谷・新宿・秋葉原・高田馬場</span>
               </div>
               <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">対応スタジオ数</span>

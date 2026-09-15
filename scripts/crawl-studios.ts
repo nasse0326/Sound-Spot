@@ -8,8 +8,8 @@ import path from 'path';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
-import { fetchBotAkibaDays } from './lib/bot-fetcher';
-import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays } from './lib/ongakukan-fetcher';
+import { fetchBotAkibaDays, fetchBotTakadanobabaDays } from './lib/bot-fetcher';
+import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
@@ -249,6 +249,128 @@ const GATEWAY_ROOM_SPECS: Record<string, {
     features: ['Marshall JVM210H', 'Mesa/Boogie Dual Rectifier', 'Roland JC-120B', 'Ampeg SVT-VR', 'Canopus Yaiba II', '15帖以上', 'セルフレコ対応']
   }
 };
+
+// -------------------------------------------------------------
+// 1b. Gateway Studio Takadanobaba 3rd Specs
+//     ※ 高田馬場3号店はカレンダー表の開始列が10:00で、部屋によって
+//        00分/15分/30分/45分の4種類の開始オフセットが混在する特殊な店舗
+//        （reserve1-fetcher.ts側にopenHour設定と汎用端数フィラー処理を追加して対応）
+// -------------------------------------------------------------
+const GATEWAY_BABA_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  features: string[];
+}> = {
+  '2B': { name: '2B (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1375, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums'] },
+  '2D': { name: '2D (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 2860, hourlyWeekday: 1870, soloRate: 700, offset: 0, features: ['Marshall DSL100H', 'Roland JC-120', 'HUGHES&KETTNER TRIAMP MKII', 'Pearl Drums', 'セルフレコ対応'] },
+  '3B': { name: '3B (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1375, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums'] },
+  '3D': { name: '3D (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 2860, hourlyWeekday: 1870, soloRate: 700, offset: 0, features: ['Marshall DSL100H', 'Roland JC-120', 'HUGHES&KETTNER TRIAMP MKII', 'Pearl Drums', 'セルフレコ対応'] },
+  '2A': { name: '2A (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2750, hourlyWeekday: 1650, soloRate: 700, offset: 30, features: ['Marshall JCM2000', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Drums', '30分スタート'] },
+  '2C': { name: '2C (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1375, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums', '30分スタート'] },
+  '3A': { name: '3A (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2750, hourlyWeekday: 1650, soloRate: 700, offset: 30, features: ['Marshall JCM2000', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Drums', '30分スタート'] },
+  '3C': { name: '3C (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1375, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums', '30分スタート'] },
+  '1A': { name: '1A (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2750, hourlyWeekday: 1650, soloRate: 700, offset: 15, features: ['Marshall JCM2000', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Drums', '15分スタート'] },
+  '4A': { name: '4A (16帖)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 15, features: ['Marshall JVM410H', 'Roland JC-120', 'Mesa/Boogie Dual Rectifier', 'Pearl Masters', '15帖以上', '15分スタート'] },
+  '4C': { name: '4C (16帖)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 15, features: ['Marshall JVM410H', 'Roland JC-120', "Fender Twin Reverb '65", 'Pearl Masters', '15帖以上', '15分スタート'] },
+  '5B': { name: '5B (16帖・ダンス兼用)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 0, features: ['Marshall JVM410H', 'Roland JC-120', 'Ampeg SVT-CL', 'Pearl Masters', '15帖以上', 'ダンスルーム兼用'] },
+  '4B': { name: '4B (16帖)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 45, features: ['Marshall JVM410H', 'Roland JC-120', 'Mesa/Boogie Dual Rectifier', 'Pearl Masters', '15帖以上', '45分スタート'] },
+  '5A': { name: '5A (16帖)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 45, features: ['Marshall JVM410H', 'Roland JC-120', "Fender Twin Reverb '65", 'Pearl Masters', '15帖以上', '45分スタート'] },
+  '5C': { name: '5C (16帖・ツインドラム)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 45, features: ['Marshall JVM410H', 'Roland JC-120', 'ツインドラムセット常設', 'Pearl Masters x2', '15帖以上', '45分スタート'] },
+};
+
+export async function crawlGatewayTakadanobaba(baseDate: Date, dayCount: number = 14) {
+  console.log(`🎸 [Gateway 高田馬場3号店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
+
+  const fetchedRooms = await fetchReserve1Days({
+    name: 'ゲートウェイ高田馬場3号店',
+    loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=4',
+    openHour: 10,
+  }, baseDate, dayCount);
+
+  const targetDates: string[] = [];
+  for (let i = 0; i < dayCount; i++) {
+    targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+  }
+
+  const studioObject = {
+    id: 'gateway-takadanobaba-3rd',
+    name: 'ゲートウェイスタジオ 高田馬場3号店',
+    slug: 'gateway-takadanobaba-3rd',
+    chain_name: 'GATEWAY STUDIO',
+    area: '高田馬場',
+    prefecture: '東京都',
+    nearest_station: '高田馬場駅 徒歩3分',
+    address: '東京都新宿区高田馬場1-28-6 和光ビルB棟',
+    tel: '03-3200-9997',
+    url: 'http://www.gw-studio.com/studios/studio_baba3rd/index',
+    booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=4',
+    business_hours_summary: '10:00〜23:00 (予約状況により24時間対応可)',
+    is_24hours: true,
+    group_booking_rule: '3ヶ月前の同日よりWEB/電話にて予約可能',
+    group_booking_lead_months: 3,
+    solo_booking_rule: '前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)',
+    solo_booking_lead_hours: 24,
+    scraped_at: new Date().toISOString(),
+    dates_available: targetDates,
+    rooms: [] as any[]
+  };
+
+  Object.keys(GATEWAY_BABA_ROOM_SPECS).forEach(stKey => {
+    const spec = GATEWAY_BABA_ROOM_SPECS[stKey];
+    const roomId = `gw-baba-${stKey.toLowerCase()}`;
+    const matchedRoom = fetchedRooms.find(r => r.id === stKey);
+
+    const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+      id: `slot-${roomId}-${s.id || sIdx}`,
+      start_time: s.start_time,
+      end_time: s.end_time,
+      status: s.status,
+      price: spec.hourlyWeekend
+    }));
+
+    studioObject.rooms.push({
+      id: roomId,
+      studio_id: studioObject.id,
+      name: spec.name,
+      size_sqm: Math.round(spec.tatami * 1.65),
+      size_tatami: spec.tatami,
+      capacity: spec.capacity,
+      hourly_rate: spec.hourlyWeekend,
+      day_rate: spec.hourlyWeekday,
+      individual_rate: spec.soloRate,
+      features: spec.features,
+      start_time_offset: spec.offset,
+      slots: roomSlots
+    });
+  });
+
+  const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-takadanobaba-real.json');
+  fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+  console.log(`✅ [Gateway 高田馬場3号店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] ゲートウェイ高田馬場3号店の最新スロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    studioObject.rooms.forEach((r: any) => {
+      const roomUUID = toUUID(r.id);
+      (r.slots || []).forEach((s: any) => {
+        dbSlots.push({
+          room_id: roomUUID,
+          start_time: s.start_time,
+          end_time: s.end_time,
+          status: s.status.toLowerCase(),
+        });
+      });
+    });
+
+    await upsertAvailabilitySlots('ゲートウェイ高田馬場3号店', dbSlots);
+  }
+}
 
 async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
   console.log(`🎸 [Gateway Shibuya] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
@@ -528,6 +650,74 @@ async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
   }
 }
 
+export async function crawlOngakukanTakadanobaba(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- 音楽館 馬場駅前店 (ajg.jp) ---');
+  try {
+    const rooms = await fetchOngakukanTakadanobabaDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/ongakukan-takadanobaba-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [音楽館 馬場駅前店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] 音楽館 馬場駅前店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('音楽館馬場駅前店', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [音楽館 馬場駅前店 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlBotTakadanobaba(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- BASS ON TOP 高田馬場店 (studi-ol.com) ---');
+  try {
+    const rooms = await fetchBotTakadanobabaDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/bot-takadanobaba-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [BASS ON TOP 高田馬場店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] BASS ON TOP 高田馬場店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('BOT高田馬場店', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [BASS ON TOP 高田馬場店 取得エラー] ${err.message}`);
+  }
+}
+
 async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
   console.log('\n--- 6. スタジオ音楽館 新宿西口店 (ajg.jp) ---');
   try {
@@ -634,7 +824,7 @@ async function main() {
   console.log(`⏰ [Schedule Guard] ${scheduleCheck.reason}`);
 
   try {
-    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）を並行巡回します（ノアはローカル環境実行時のみ、渋谷4店・新宿・秋葉原・御茶ノ水を一括巡回）...');
+    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）、高田馬場（ゲートウェイ・BOT・音楽館）を並行巡回します（ノアはローカル環境実行時のみ、渋谷4店・新宿・秋葉原・御茶ノ水・高田馬場を一括巡回）...');
     const results = await Promise.allSettled([
       crawlGatewayShibuya(now, 21),
       crawlAkihabaraStudios(now, 21),
@@ -642,6 +832,9 @@ async function main() {
       crawlPentaShinjuku(now, 21),
       crawlOngakukanShinjuku(now, 21),
       runNoahWithStealthSafeguards(now, 21),
+      crawlGatewayTakadanobaba(now, 21),
+      crawlOngakukanTakadanobaba(now, 21),
+      crawlBotTakadanobaba(now, 21),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

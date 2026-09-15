@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS rooms (
     price_per_hour_solo INT NOT NULL,        -- 個人練習1名あたりの料金 円/h
     has_mirror BOOLEAN NOT NULL DEFAULT true,-- 全面鏡の有無
     has_recording BOOLEAN NOT NULL DEFAULT false, -- セルフREC設備有無
-    start_time_offset INT NOT NULL DEFAULT 0 CHECK (start_time_offset IN (0, 30)), -- 0: 00分開始, 30: 30分開始
+    start_time_offset INT NOT NULL DEFAULT 0 CHECK (start_time_offset IN (0, 15, 30, 45)), -- 0/15/30/45分開始（高田馬場エリアの一部店舗は15分・45分始まりの部屋も実在する）
     image_url TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT now()

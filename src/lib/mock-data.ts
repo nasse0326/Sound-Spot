@@ -5,6 +5,10 @@ import { getNodeShinjukuRealRooms, NODE_SHINJUKU_STUDIO } from './node-converter
 import { getNoahAllTokyoRealRooms, NOAH_STUDIOS_META } from './noah-tokyo-converter';
 import { getPentaRealRooms, PENTA_STUDIOS } from './penta-converter';
 import { getOngakukanShinjukuRealRooms, ONGAKUKAN_SHINJUKU_STUDIO } from './ongakukan-shinjuku-converter';
+import { getGatewayTakadanobabaRealRooms, GATEWAY_TAKADANOBABA_STUDIO } from './gateway-takadanobaba-converter';
+import { getOngakukanTakadanobabaRealRooms, ONGAKUKAN_TAKADANOBABA_STUDIO } from './ongakukan-takadanobaba-converter';
+import { getBotTakadanobabaRealRooms, BOT_TAKADANOBABA_STUDIO } from './bot-takadanobaba-converter';
+import { getBazookaRooms, BAZOOKA_STUDIO } from './bazooka-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -28,6 +32,13 @@ export const MOCK_STUDIOS: Studio[] = [
   NODE_SHINJUKU_STUDIO,
   PENTA_STUDIOS['shinjuku-penta-main'],
   ONGAKUKAN_SHINJUKU_STUDIO,
+
+  // 高田馬場エリア (5店舗)
+  NOAH_STUDIOS_META['takadanobaba'],
+  GATEWAY_TAKADANOBABA_STUDIO,
+  ONGAKUKAN_TAKADANOBABA_STUDIO,
+  BOT_TAKADANOBABA_STUDIO,
+  BAZOOKA_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -59,5 +70,14 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   // 6. 音楽館 新宿西口店 (1店舗 / 7部屋)
   const ongakukanShinjukuRooms = getOngakukanShinjukuRealRooms(dateStr);
 
-  return [...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms];
+  // 7. 高田馬場エリア (4店舗 / ゲートウェイ15室・音楽館6室・BOT11室・BAZOOKA6室 ※ノアは上記noahRoomsに含む)
+  const gatewayBabaRooms = getGatewayTakadanobabaRealRooms(dateStr);
+  const ongakukanBabaRooms = getOngakukanTakadanobabaRealRooms(dateStr);
+  const botBabaRooms = getBotTakadanobabaRealRooms(dateStr);
+  const bazookaRooms = getBazookaRooms();
+
+  return [
+    ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
+    ...gatewayBabaRooms, ...ongakukanBabaRooms, ...botBabaRooms, ...bazookaRooms,
+  ];
 }

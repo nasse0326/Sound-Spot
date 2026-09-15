@@ -9,6 +9,7 @@ import { NativeAdCard } from '@/components/search/native-ad-card';
 import { NativeAdBanner } from '@/components/timeline/native-ad-banner';
 import { NATIVE_ADS } from '@/config/native-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
+import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
 import { checkRoomAvailability } from '@/lib/slot-utils';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
@@ -300,7 +301,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/40 hover:bg-emerald-900/50 text-emerald-400 border border-emerald-800/60 transition cursor-pointer text-xs font-semibold"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>対応スタジオ一覧 (16店舗) を見る</span>
+            <span>対応スタジオ一覧 ({SUPPORTED_STUDIOS.length}店舗) を見る</span>
             <span className="text-[10px] text-emerald-500">↗</span>
           </button>
         </div>

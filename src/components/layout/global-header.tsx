@@ -3,10 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { Music, Radio, ChevronRight, Store } from 'lucide-react';
 import { SupportedStudiosModal } from '@/components/studio/supported-studios-modal';
+import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 
 export const GlobalHeader: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [initialArea, setInitialArea] = useState<string>('all');
+  const studioCount = SUPPORTED_STUDIOS.length;
+  const roomCount = SUPPORTED_STUDIOS.reduce((acc, st) => acc + st.roomCount, 0);
 
   // グローバルイベントによるモーダル開閉対応（Topページ内のボタン等からも開けるようにする）
   useEffect(() => {
@@ -57,13 +60,13 @@ export const GlobalHeader: React.FC = () => {
                 setIsModalOpen(true);
               }}
               className="group flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 hover:border-emerald-500/60 text-slate-300 hover:text-white transition-all shadow-sm hover:shadow-emerald-950/40 cursor-pointer text-left"
-              title="クリックして現在対応している16店舗・169部屋のスタジオ一覧を表示"
+              title={`クリックして現在対応している${studioCount}店舗・${roomCount}部屋のスタジオ一覧を表示`}
             >
               <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse group-hover:scale-110 transition-transform flex-shrink-0" />
               <div className="flex items-center gap-1.5 flex-wrap sm:flex-nowrap">
                 <span className="text-slate-400 hidden md:inline">稼働状況:</span>
                 <span className="font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors whitespace-nowrap">
-                  都内 16店舗 / 169部屋 稼働中
+                  都内 {studioCount}店舗 / {roomCount}部屋 稼働中
                 </span>
                 <span className="inline-flex items-center gap-0.5 text-[10px] font-semibold text-slate-400 group-hover:text-emerald-300 pl-1.5 border-l border-slate-700">
                   <span>一覧を見る</span>
