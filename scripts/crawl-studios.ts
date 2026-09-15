@@ -563,6 +563,12 @@ async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
 }
 
 async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
+      + 'ノアのクローリングはGitHub上では実行しません。ノアの巡回はローカル環境から `npm run crawl` を実行してください。');
+    return;
+  }
+
   console.log('\n🛡️ [NOAH Stealth Guard] 人間化ロジック（ゆらぎ付与）を適用して巡回を開始します...');
 
   const jitterSec = Math.floor(Math.random() * 4) + 1;
@@ -628,7 +634,7 @@ async function main() {
   console.log(`⏰ [Schedule Guard] ${scheduleCheck.reason}`);
 
   try {
-    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）、ノア全7店舗（渋谷4店・新宿・秋葉原・御茶ノ水を一括）を並行巡回します...');
+    console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）を並行巡回します（ノアはローカル環境実行時のみ、渋谷4店・新宿・秋葉原・御茶ノ水を一括巡回）...');
     const results = await Promise.allSettled([
       crawlGatewayShibuya(now, 21),
       crawlAkihabaraStudios(now, 21),
