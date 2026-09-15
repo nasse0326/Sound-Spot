@@ -3,6 +3,7 @@
  * Fully eliminates Playwright browser overhead.
  */
 import { format, addDays } from 'date-fns';
+import { toIsoWithRollover } from './time-utils';
 
 export interface Reserve1RoomSlot {
   id: string;
@@ -147,11 +148,9 @@ export async function fetchReserve1Days(
 
           const shStr = sh < 10 ? '0' + sh : '' + sh;
           const smStr = sm < 10 ? '0' + sm : '' + sm;
-          const ehStr = currentHour < 10 ? '0' + currentHour : '' + currentHour;
-          const emStr = currentMin < 10 ? '0' + currentMin : '' + currentMin;
 
-          const startTimeIso = `${targetDate}T${shStr}:${smStr}:00+09:00`;
-          const endTimeIso = `${targetDate}T${ehStr}:${emStr}:00+09:00`;
+          const startTimeIso = toIsoWithRollover(targetDate, sh, sm);
+          const endTimeIso = toIsoWithRollover(targetDate, currentHour, currentMin);
 
           const hasCheckbox = cellContent.includes('type="checkbox"') || cellContent.includes("type='checkbox'");
           const isDisabled = cellContent.includes('disabled');
@@ -167,12 +166,11 @@ export async function fetchReserve1Days(
             for (let h = 0; h < durationHours; h++) {
               const bStartH = sh + h;
               const bEndH = bStartH + 1;
-              const bshStr = bStartH < 10 ? '0' + bStartH : '' + bStartH;
-              const behStr = bEndH < 10 ? '0' + bEndH : '' + bEndH;
+              const bshStr = (bStartH % 24) < 10 ? '0' + (bStartH % 24) : '' + (bStartH % 24);
               roomMap[roomKey].slots.push({
                 id: `slot-${roomKey}-${targetDate}-${bshStr}${smStr}`,
-                start_time: `${targetDate}T${bshStr}:${smStr}:00+09:00`,
-                end_time: `${targetDate}T${behStr}:${smStr}:00+09:00`,
+                start_time: toIsoWithRollover(targetDate, bStartH, sm),
+                end_time: toIsoWithRollover(targetDate, bEndH, sm),
                 status: 'BOOKED',
               });
             }

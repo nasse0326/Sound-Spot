@@ -3,6 +3,7 @@
  * Fully eliminates Playwright browser overhead.
  */
 import { format, addDays } from 'date-fns';
+import { toIsoWithRollover } from './time-utils';
 
 export interface BotRoomSlot {
   id: string;
@@ -100,11 +101,9 @@ export async function fetchBotAkibaDays(
         for (let h = 6; h < 24; h++) {
           const sHour = String(h).padStart(2, '0');
           const sMin = String(offsetMin).padStart(2, '0');
-          const eHour = String(h + 1).padStart(2, '0');
-          const eMin = sMin;
 
-          const startTimeIso = `${dateStr}T${sHour}:${sMin}:00+09:00`;
-          const endTimeIso = `${dateStr}T${eHour}:${eMin}:00+09:00`;
+          const startTimeIso = toIsoWithRollover(dateStr, h, offsetMin);
+          const endTimeIso = toIsoWithRollover(dateStr, h + 1, offsetMin);
 
           // matching event in studiol
           // event format: "2026-09-13 14:00:00"

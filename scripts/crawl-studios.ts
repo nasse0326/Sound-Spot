@@ -37,8 +37,18 @@ if (supabaseUrl && supabaseKey) {
  * 以前は個々のチャンクが全て失敗しても「同期完了！」と表示してしまっていたため、
  * 実際の成否をラベル付きでログ出力するよう共通化。
  */
-async function upsertAvailabilitySlots(label: string, dbSlots: any[]): Promise<void> {
-  if (!supabase || dbSlots.length === 0) return;
+async function upsertAvailabilitySlots(label: string, rawDbSlots: any[]): Promise<void> {
+  if (!supabase || rawDbSlots.length === 0) return;
+
+  // 深夜営業（24時以降）のロールオーバー処理により、日をまたいだ2つの取得が
+  // 同一のroom_id/start_time/end_timeを指すことがある。同一チャンク内に主キーの
+  // 重複があると「ON CONFLICT DO UPDATE command cannot affect row a second time」で
+  // チャンク全体が失敗するため、事前に重複除去する（後勝ちで問題ない）。
+  const dedupMap = new Map<string, any>();
+  for (const slot of rawDbSlots) {
+    dedupMap.set(`${slot.room_id}|${slot.start_time}|${slot.end_time}`, slot);
+  }
+  const dbSlots = [...dedupMap.values()];
 
   let failedCount = 0;
   let firstError: string | null = null;
