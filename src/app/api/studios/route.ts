@@ -12,10 +12,19 @@ export async function GET(request: NextRequest) {
   try {
     const supabaseRooms = await getRoomsWithSlotsFromSupabase(dateStr, area);
     if (supabaseRooms && supabaseRooms.length > 0) {
-      return NextResponse.json({
-        source: 'supabase',
-        data: supabaseRooms,
-      });
+      // rooms/studiosマスター（seed.sqlの固定UUID）とクローラーが書き込むroom_id
+      // （src/config内の各部屋idから決定的生成したUUID）が一致しない部屋が多数あり、
+      // 大半の部屋でスロット同期に失敗している状態がある。部屋自体は取得できても
+      // スロットがほぼ空という不完全なデータをそのまま返すと「空き無し」に見えて
+      // しまうため、十分な割合でスロットが揃っている場合のみSupabaseソースを信頼する。
+      const roomsWithSlots = supabaseRooms.filter((r) => r.slots && r.slots.length > 0).length;
+      if (roomsWithSlots >= supabaseRooms.length * 0.5) {
+        return NextResponse.json({
+          source: 'supabase',
+          data: supabaseRooms,
+        });
+      }
+      console.warn(`Supabase data incomplete (${roomsWithSlots}/${supabaseRooms.length} rooms have slots), falling back to mock data.`);
     }
   } catch (e) {
     console.warn('Failed to query Supabase, falling back to mock data:', e);

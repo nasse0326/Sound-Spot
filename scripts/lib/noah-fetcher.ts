@@ -179,7 +179,9 @@ export async function fetchNoahStoreDays(
         failureCount++;
         firstFailureSample ??= `${st.name}: ${e.message}`;
       }
-      await new Promise(r => setTimeout(r, 40));
+      // リクエスト間隔: 過去にGitHub ActionsのIPからHTTP 403（ブロック）を受けたため、
+      // 40ms(高頻度)から人間の操作速度に近い間隔へ引き上げてサーバー負荷を抑える。
+      await new Promise(r => setTimeout(r, 250));
     }
   }
 
@@ -313,8 +315,8 @@ export async function fetchAllNoahTokyoDays(
   for (const store of NOAH_ALL_STORES) {
     const storeResults = await fetchNoahStoreDays(store.key, baseDate, dayCount);
     allResults.push(...storeResults);
-    // 人間らしい待機間隔
-    await new Promise(r => setTimeout(r, 200));
+    // 店舗切り替え時の待機間隔（人間らしいアクセスに近づけBAN対策を強化）
+    await new Promise(r => setTimeout(r, 1500));
   }
 
   console.log(`✨ [NOAH Tokyo] ノア全${NOAH_ALL_STORES.length}店舗の取得完了: 計${allResults.length}部屋`);
