@@ -131,6 +131,8 @@ export async function fetchNoahStoreDays(
   ];
 
   const rawData: Record<number, any[]> = {};
+  let failureCount = 0;
+  let firstFailureSample: string | null = null;
 
   for (const st of store.rooms) {
     rawData[st.studioId] = [];
@@ -169,12 +171,21 @@ export async function fetchNoahStoreDays(
           rawData[st.studioId].push(json);
         } else {
           rawData[st.studioId].push({ error: `HTTP ${res.status}` });
+          failureCount++;
+          firstFailureSample ??= `${st.name}: HTTP ${res.status}`;
         }
       } catch (e: any) {
         rawData[st.studioId].push({ error: e.message });
+        failureCount++;
+        firstFailureSample ??= `${st.name}: ${e.message}`;
       }
       await new Promise(r => setTimeout(r, 40));
     }
+  }
+
+  if (failureCount > 0) {
+    const totalRequests = store.rooms.length * mondays.length;
+    console.error(`  ⚠️ [NOAH Fetch] ${store.name}: ${failureCount}/${totalRequests}件のリクエストが失敗しました（例: ${firstFailureSample}）`);
   }
 
   const targetDateStrings: string[] = [];

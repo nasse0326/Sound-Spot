@@ -44,6 +44,37 @@ function toUUID(str: string): string {
 }
 
 /**
+ * availability_slotsへ200件ずつupsertし、実際の成功/失敗件数を正しく報告する。
+ * 以前は個々のチャンクが全て失敗しても「同期完了！」と表示してしまっていたため、
+ * 実際の成否をラベル付きでログ出力するよう共通化。
+ */
+async function upsertAvailabilitySlots(label: string, dbSlots: any[]): Promise<void> {
+  if (!supabase || dbSlots.length === 0) return;
+
+  let failedCount = 0;
+  let firstError: string | null = null;
+
+  for (let i = 0; i < dbSlots.length; i += 200) {
+    const chunk = dbSlots.slice(i, i + 200);
+    const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+    if (error) {
+      failedCount += chunk.length;
+      firstError ??= error.message;
+      console.error(`  ❌ [Supabase Sync] ${label}チャンク同期エラー: ${error.message}`);
+    }
+  }
+
+  const succeeded = dbSlots.length - failedCount;
+  if (failedCount === 0) {
+    console.log(`✨ [Supabase Sync] ${label}: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+  } else if (succeeded > 0) {
+    console.warn(`  ⚠️ [Supabase Sync] ${label}: ${succeeded}/${dbSlots.length}件のみ同期成功（${failedCount}件失敗、例: ${firstError}）`);
+  } else {
+    console.error(`  ❌ [Supabase Sync] ${label}: 全${dbSlots.length}件が同期失敗しました（例: ${firstError}）`);
+  }
+}
+
+/**
  * 毎日固定スケジュール判定ガード
  * 曜日を問わず毎日 06:33, 11:48, 17:18, 21:33 (JST) の4回のみ巡回を許可します。
  * GitHub Actionsの実行遅延（5〜20分程度）を吸収するため、前後ウィンドウで判定します。
@@ -306,12 +337,7 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
       });
     });
 
-    for (let i = 0; i < dbSlots.length; i += 200) {
-      const chunk = dbSlots.slice(i, i + 200);
-      const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-      if (error) console.error(`  ❌ [Supabase Sync] ゲートウェイ渋谷チャンク同期エラー: ${error.message}`);
-    }
-    console.log(`✨ [Supabase Sync] ゲートウェイ渋谷: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+    await upsertAvailabilitySlots('ゲートウェイ渋谷', dbSlots);
   }
 }
 
@@ -424,12 +450,7 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
       });
     });
 
-    for (let i = 0; i < dbSlots.length; i += 200) {
-      const chunk = dbSlots.slice(i, i + 200);
-      const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-      if (error) console.error(`  ❌ [Supabase Sync] 秋葉原チャンク同期エラー: ${error.message}`);
-    }
-    console.log(`✨ [Supabase Sync] 秋葉原: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+    await upsertAvailabilitySlots('秋葉原', dbSlots);
   }
 }
 
@@ -465,12 +486,7 @@ async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
             });
           });
         });
-        for (let i = 0; i < dbSlots.length; i += 200) {
-          const chunk = dbSlots.slice(i, i + 200);
-          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-          if (error) console.error(`  ❌ [Supabase Sync] NODE新宿チャンク同期エラー: ${error.message}`);
-        }
-        console.log(`  ✨ [Supabase Sync] NODE新宿: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+        await upsertAvailabilitySlots('NODE新宿', dbSlots);
       }
     }
   } catch (err: any) {
@@ -505,12 +521,7 @@ async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
             });
           }
         }
-        for (let i = 0; i < dbSlots.length; i += 200) {
-          const chunk = dbSlots.slice(i, i + 200);
-          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-          if (error) console.error(`  ❌ [Supabase Sync] ペンタ新宿チャンク同期エラー: ${error.message}`);
-        }
-        console.log(`✨ [Supabase Sync] ペンタ新宿: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+        await upsertAvailabilitySlots('ペンタ新宿', dbSlots);
       }
     }
   } catch (err: any) {
@@ -544,12 +555,7 @@ async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
             });
           });
         });
-        for (let i = 0; i < dbSlots.length; i += 200) {
-          const chunk = dbSlots.slice(i, i + 200);
-          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-          if (error) console.error(`  ❌ [Supabase Sync] 音楽館新宿西口店チャンク同期エラー: ${error.message}`);
-        }
-        console.log(`  ✨ [Supabase Sync] 音楽館 新宿西口店: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+        await upsertAvailabilitySlots('音楽館新宿西口店', dbSlots);
       }
     }
   } catch (err: any) {
@@ -594,12 +600,7 @@ async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
             });
           });
         });
-        for (let i = 0; i < dbSlots.length; i += 200) {
-          const chunk = dbSlots.slice(i, i + 200);
-          const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-          if (error) console.error(`  ❌ [Supabase Sync] NOAHチャンク同期エラー: ${error.message}`);
-        }
-        console.log(`  ✨ [Supabase Sync] NOAH: ${dbSlots.length}件のスロットをDBへ直接同期完了！`);
+        await upsertAvailabilitySlots('NOAH', dbSlots);
       }
     }
   } catch (err: any) {

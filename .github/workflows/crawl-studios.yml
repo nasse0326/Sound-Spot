@@ -39,6 +39,10 @@ jobs:
       - name: Run Studio Crawler (Pure Node fetch)
         continue-on-error: true
         env:
+          # GitHub Actionsランナーの一部の外部ホスト（Supabase等）向けIPv6経路が不安定で
+          # Node18+のfetch(undici)が "TypeError: fetch failed" で失敗する既知の問題を回避するため、
+          # DNS解決順をIPv4優先に固定する。
+          NODE_OPTIONS: '--dns-result-order=ipv4first'
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
