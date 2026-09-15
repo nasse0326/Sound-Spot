@@ -319,7 +319,7 @@ BEGIN
     'http://www.st-ongakukan.com/sinjukunishi/sinjukunishi.html'
   ) ON CONFLICT (id) DO NOTHING;
 
-  -- 2. 部屋マスター (188部屋)
+  -- 2. 部屋マスター (191部屋、canonical idベースで再生成)
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
     '712a2eb2-2c0e-4a6c-ac92-7be381e080c2',
@@ -672,160 +672,6 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    'd17b04a7-ec41-4075-ab69-df2c8ac8c9f3',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'A1st (8帖)',
-    NULL,
-    8,
-    4,
-    1760,
-    1650,
-    770,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '9c46418e-fbb5-46b8-a601-6e454d7aa024',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'A2st (8帖)',
-    NULL,
-    8,
-    4,
-    1760,
-    1650,
-    770,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '71b86197-5941-4b52-a4b6-f9e0532b1a7d',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'A3st (9帖)',
-    NULL,
-    9,
-    4,
-    1870,
-    1760,
-    770,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '20f20a28-6e09-4adc-a230-b9f923c4e8b9',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'B1st (14帖)',
-    NULL,
-    14,
-    6,
-    2640,
-    2420,
-    990,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '1aaaf8af-86d6-4f6a-a20a-37d6edd0c1f0',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'B2st (13帖)',
-    NULL,
-    13,
-    6,
-    2530,
-    2310,
-    990,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '07c1a711-04d7-4574-aab9-4004b05e2ac5',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'Cst+Sub (28帖)',
-    NULL,
-    28,
-    8,
-    4400,
-    4180,
-    1320,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '81ec7e78-3097-45b1-ae85-b903149e1741',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'E1st (21帖)',
-    NULL,
-    21,
-    8,
-    3300,
-    3080,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '137fd230-4e36-4c74-a79c-baef38fd40aa',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'E2st (20帖)',
-    NULL,
-    20,
-    8,
-    3190,
-    2970,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '83dc87b5-68e4-446f-ade5-ad8d1216e1bd',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'G1st (12帖)',
-    NULL,
-    12,
-    6,
-    2310,
-    2200,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'fa545ee6-7a4e-4bc1-ab01-d6e4bfdc2589',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'GSst (10帖)',
-    NULL,
-    10,
-    4,
-    2200,
-    2090,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '913c246b-2211-45de-a026-ff6ac5d9f74e',
-    '87d744c8-ff3f-42f8-a830-e232ecf402df',
-    'Booth1 (3帖)',
-    NULL,
-    3,
-    4,
-    880,
-    880,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
     '37004b0a-c16e-472f-a623-b12b6422d05f',
     '73fef806-5c35-4b06-a41b-e0b22c47d973',
     '1st (15帖)',
@@ -1092,1225 +938,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '4a5ffb74-0ea9-4800-a18e-e16337f9a84d',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'Sst (18帖)',
-    'B1F-4F',
-    18,
-    8,
-    5280,
-    3960,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '0a71e054-2db3-456e-aa96-24f62f1247aa',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'A1st (15帖)',
-    'B1F-4F',
-    15,
-    6,
-    4620,
-    3520,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '37d628cf-d078-4a0f-a1c5-cb78c54b2237',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'A2st (13帖)',
-    'B1F-4F',
-    13,
-    5,
-    4070,
-    3080,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '708992bd-38d0-443b-a9fc-22c0ac365c89',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'B1st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'c8847f55-f477-4570-a5cc-5747af2fa505',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'B2st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'b8dc28f5-ca28-445d-af2a-902414393883',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'B3st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '53d24a61-8a94-4ee7-ab80-7e801f9092c3',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'B4st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'd7dff647-1383-4d83-a56d-3878c7094294',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'Cst (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '0e4efa8b-f93c-43a6-a471-d65da6058b9b',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'G1st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '89903f20-3886-496c-ad90-494b431acfe2',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'G2st (8帖)',
-    'B1F-4F',
-    8,
-    3,
-    2970,
-    2200,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'f87e769e-7574-43d7-a3a7-72c71440e3cd',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'G3st (8帖)',
-    'B1F-4F',
-    8,
-    3,
-    2970,
-    2200,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '5d5987d6-81dd-4463-af36-c27bb2c0db5a',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'Booth1 (4帖)',
-    'B1F-4F',
-    4,
-    2,
-    1980,
-    1540,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'c2602fae-f223-4efc-a8c8-5600d484637a',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'Booth2 (3帖)',
-    'B1F-4F',
-    3,
-    2,
-    1760,
-    1320,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'ce4965cc-bedf-457d-a8a3-4e21ea9ce8cb',
-    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
-    'Rec Booth (5帖)',
-    'B1F-4F',
-    5,
-    2,
-    2200,
-    1650,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'b0606ba9-a0a6-4293-a1b4-1439f89995d0',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'A1st (15帖)',
-    'B1F-4F',
-    15,
-    6,
-    4620,
-    3520,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '6213987c-af79-4dc6-af31-953d3c2eae59',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'A2st (13帖)',
-    'B1F-4F',
-    13,
-    5,
-    4070,
-    3080,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '9a870c6a-d15a-4d38-a048-c02f64c6b3ac',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'A3st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'fd1535e3-e1fd-410a-ac89-387a36452a5c',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'A5st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'b1b739c4-c3d1-4a5e-a16f-6a7c95b761f9',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'B1st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'e21770e9-e22d-4c98-a5c0-3e24d071df50',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'B2st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '9292692b-63fb-4a07-aa76-b3abd080afa0',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'B3st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'e5f1a378-f589-4a23-abbe-c2312506a404',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'B5st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '3234cb26-8d2a-458f-af77-fc01c5ad7640',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'E1st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '45ce0638-8a6e-4490-a8e5-efe73d71de94',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'E2st (8帖)',
-    'B1F-4F',
-    8,
-    3,
-    2970,
-    2200,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '50ca3504-77e5-4f90-a91d-4ef30b1891ef',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'VoBooth (4帖)',
-    'B1F-4F',
-    4,
-    2,
-    1980,
-    1540,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '66c0151a-f6df-48f1-aafe-a70718a63cf2',
-    '77470cad-194b-4203-ad8d-ed00d3959820',
-    'RecStudio (6帖)',
-    'B1F-4F',
-    6,
-    2,
-    2420,
-    1870,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '1c06ae8b-d763-4c30-acd8-14e1a23db13f',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'Sst (17帖)',
-    'B1F-4F',
-    17,
-    7,
-    5060,
-    3850,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'f19dd1d5-fcc5-4dae-ab11-b53dfa24b413',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'A1st (15帖)',
-    'B1F-4F',
-    15,
-    6,
-    4620,
-    3520,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '686c9882-4f6d-4cb2-a90e-ed30de33c322',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'A2st (13帖)',
-    'B1F-4F',
-    13,
-    5,
-    4070,
-    3080,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '1595267d-dc24-451b-a420-c559a74807f9',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'A3st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '23c6e4c0-2570-4e2e-a714-9339a664351c',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'G1st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '224e586c-39c5-460c-a283-0f4340b8469a',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'G2st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '968c2952-f674-4855-acee-6a24d982ea77',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'G3st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'fb4f53e8-ca1b-4da4-a6b6-226934bbfcce',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'B1st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '923d95f7-eb66-4c3c-a5dc-e19bfd30d355',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'B2st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'dae16e59-070c-46c6-a4ce-424acd42c722',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'B3st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '0bcc7d80-1a57-4982-ab67-c65a82ecc2d6',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'E1st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '8364d67d-6de8-4c1b-a70d-9d6e89bef490',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'E2st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '94354240-95e7-46e7-a3aa-b9e89906cec2',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'Cst (8帖)',
-    'B1F-4F',
-    8,
-    3,
-    2970,
-    2200,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'da2435c5-6c82-4b1a-a3fc-844f4411b222',
-    '6629e62e-92db-432c-abe8-fc561094ed83',
-    'VoBooth (3帖)',
-    'B1F-4F',
-    3,
-    2,
-    1760,
-    1320,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '6fc0c3f6-e13b-40da-ad6f-e1cdc5bfa0cc',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'A1st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '05bcdee6-c576-4178-ad69-ad489206f105',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'A2st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '65a89f10-6570-4946-a763-4a0786313ae0',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'A3st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '9251ac9c-22e3-42f8-ad8f-20ee6e2baf64',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'A4st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'd38aaabb-ddc3-4ddb-afc2-e22947cc7aab',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'Cst (15帖)',
-    'B1F-4F',
-    15,
-    6,
-    4620,
-    3520,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'f037846b-f9bf-402e-adef-52b53259d265',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'Est (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '9947d99d-4791-4961-af25-b32392ca03f0',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'DJ 1st (6帖)',
-    'B1F-4F',
-    6,
-    2,
-    2420,
-    1870,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '344ee7d0-57b0-4436-a4e6-35593a11865d',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'DJ 2st (6帖)',
-    'B1F-4F',
-    6,
-    2,
-    2420,
-    1870,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '8a28b25f-a5cb-4deb-ab0e-07fad13e4ffe',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'DJ 3st (6帖)',
-    'B1F-4F',
-    6,
-    2,
-    2420,
-    1870,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '573b9772-4b4a-420b-aa84-fe0c52b11a05',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'Booth1 (4帖)',
-    'B1F-4F',
-    4,
-    2,
-    1980,
-    1540,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '43ec5944-f044-4be7-a746-146d806677be',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'Booth2 (3帖)',
-    'B1F-4F',
-    3,
-    2,
-    1760,
-    1320,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '44eaa8c3-8612-4fd0-a662-28b07891ec5d',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'Booth3 (3帖)',
-    'B1F-4F',
-    3,
-    2,
-    1760,
-    1320,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'a74efd97-b868-4eb6-a4dc-663637e70ad5',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'Booth4 (3帖)',
-    'B1F-4F',
-    3,
-    2,
-    1760,
-    1320,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'd768deaf-a1ca-46e5-ac30-45d73b277fcc',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'RecBooth (5帖)',
-    'B1F-4F',
-    5,
-    2,
-    2200,
-    1650,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'd6280852-4816-4a0e-a5a0-762ce8eafd3a',
-    '8305bf22-0927-4678-ace9-58be7dbbf602',
-    'RecStudioBooth (7帖)',
-    'B1F-4F',
-    7,
-    3,
-    2640,
-    1980,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '6533019b-fd2b-4d8a-aebd-b56ab224e6c9',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'S1st (22帖)',
-    'B1F-4F',
-    22,
-    10,
-    6270,
-    4730,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '54b0db7f-be43-4ec5-a5ba-ef2af688e6e4',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'S2st (18帖)',
-    'B1F-4F',
-    18,
-    8,
-    5280,
-    3960,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '22555425-4419-4377-a622-18ee665619b0',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'S3st (16帖)',
-    'B1F-4F',
-    16,
-    7,
-    4840,
-    3630,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '3980a7b0-3b56-4f66-a67c-ee7178704557',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'A1st (15帖)',
-    'B1F-4F',
-    15,
-    6,
-    4620,
-    3520,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'ab6343c8-63ac-4a91-a14f-fc13000d7787',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'A2st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '2ba2719c-85f6-4f57-a7e2-0186912d1e72',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'A3st (13帖)',
-    'B1F-4F',
-    13,
-    5,
-    4070,
-    3080,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '4561b432-5fed-410e-ad62-66975be1d700',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'A5st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '020848cf-8bc0-4949-a864-136f7c0c8958',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'A6st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '21728d58-0a2f-4098-a168-3399f7df950e',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'A7st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '15eb1f23-6c10-4f75-ae71-7b6fd2c73b70',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'G1st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '6d150cc0-3fbd-4758-a9db-f841ecbd0a6f',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'G2st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '66c3c1b7-23d8-4ebd-a2e3-73eadbbaefb1',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'G3st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '6f48a19d-ea14-4ecf-a6b2-8a53e52b1a57',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'B1st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '08e75658-60c5-428c-ad95-339733493a22',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'B2st (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'a7e05898-4164-4676-ab35-f1e025b787dd',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'B3st (10帖)',
-    'B1F-4F',
-    10,
-    4,
-    3410,
-    2530,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '59dfe699-342c-4134-a593-e6d1b1746667',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'E1st (11帖)',
-    'B1F-4F',
-    11,
-    5,
-    3630,
-    2750,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '3305287e-91a8-404e-af5f-cc780dd476b8',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'E2st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '1cb23559-e4ba-4ffe-a3d4-77bfa3df9d35',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'E3st (8帖)',
-    'B1F-4F',
-    8,
-    3,
-    2970,
-    2200,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '139685cd-4f49-408c-ac1e-a792c7ac4eda',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'CSst (25帖)',
-    'B1F-4F',
-    25,
-    10,
-    6600,
-    4950,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'f569322e-230e-40a6-af4a-8558fe281de8',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'Fst (13帖)',
-    'B1F-4F',
-    13,
-    5,
-    4070,
-    3080,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'eae2e123-8205-4639-afaa-daa7a10d5cd5',
-    '3f69a610-bb51-4607-ada3-72de92ee2c33',
-    'RecStudio (8帖)',
-    'B1F-4F',
-    8,
-    3,
-    2970,
-    2200,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'd236c685-eb13-4bf0-a2e7-f20a8fcddcc8',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'Booth (4帖)',
-    'B1F-4F',
-    4,
-    2,
-    1980,
-    1540,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'f14d626d-c1d1-407c-aaac-8b56f0adc0ea',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'A1st (8.5帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'afad3f14-8068-43e4-a8a9-96636d515d09',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'A2st (8.5帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '892cfbe1-78aa-40e5-a7e1-4d81463adffc',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'Cst (18帖)',
-    'B1F-4F',
-    18,
-    8,
-    5280,
-    3960,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '8013d52f-98a6-492a-a6ee-f4d9d33cc743',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'Gst (12帖)',
-    'B1F-4F',
-    12,
-    5,
-    3850,
-    2860,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'c31796b9-7051-4051-ab84-92ca2a943e1b',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'B1st (13帖)',
-    'B1F-4F',
-    13,
-    5,
-    4070,
-    3080,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'ce717ec8-2b6b-4dff-a718-6a992b502c72',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'A3st (8.5帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '7f9b520b-fe11-4dca-ac15-920787760df2',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'A5st (9帖)',
-    'B1F-4F',
-    9,
-    4,
-    3190,
-    2420,
-    880,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'eed1ebb1-d6d4-4ea5-a4b2-2a4dca51806d',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'Est (15帖)',
-    'B1F-4F',
-    15,
-    6,
-    4620,
-    3520,
-    1100,
-    30
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '431b51df-8abe-4c82-a959-46e753388a3f',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'B2st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    '3dfa9a10-d175-43ac-a57a-2c8d36a3221c',
-    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
-    'B3st (14帖)',
-    'B1F-4F',
-    14,
-    6,
-    4400,
-    3300,
-    1100,
-    0
-  ) ON CONFLICT (id) DO NOTHING;
-
-  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
-  VALUES (
-    'e7df1a49-e966-4cbc-ac4b-4e04a0728b60',
+    '1dee2a1f-2c5f-4ee2-a7ad-5f56c8b848cf',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '1st (16帖)',
     'B1F',
@@ -2324,7 +952,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '62d85c00-343e-419a-a20b-fc9e25736133',
+    '3f46c527-bb4e-4ce0-a35f-41ef250d588d',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '2st (14帖)',
     'B1F',
@@ -2338,7 +966,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '563db1d8-3259-4554-a794-6b3a17e7ca4c',
+    '4a5442e5-db1a-485a-a9fd-6f96b8b3fc73',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '3st (12帖)',
     'B1F',
@@ -2352,7 +980,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    'd07faab7-64a0-4ed2-a467-f040d67f07c6',
+    '1e3aa452-4e59-4940-ae17-a4b1bee2a01f',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '4st (10帖)',
     'B1F',
@@ -2366,7 +994,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    'b184b83d-7c3d-48a7-af04-aa4a390b7e03',
+    '78176e4f-46f1-4696-a330-a12c009f465e',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '5st (9帖)',
     'B1F',
@@ -2380,7 +1008,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    'e8ac9ef2-344d-4452-a211-b77e787d3d9c',
+    'c4cf7615-fbe7-4d4f-a9d0-8c02cd70850d',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '6st (8帖)',
     'B1F',
@@ -2394,7 +1022,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '074a0ac1-4f2a-4ded-aeab-76b534f428d4',
+    '24285d17-c9da-4ddb-a58a-3db9431c916f',
     '230f823c-11fc-4770-a3f9-3bb769a0bcfc',
     '7st (7帖)',
     'B1F',
@@ -2408,7 +1036,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    'fa7f37ad-c3a6-4c24-a1df-30561f9feab8',
+    '04f03644-0fb0-4fa8-adc2-94dbf27cd3e5',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '1st (16帖)',
     'B1F',
@@ -2422,7 +1050,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '9b229f1d-8168-4b09-ab53-b3a9a7dab44f',
+    'adf42b54-0259-4a11-a2f2-7e872befb348',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '2st (15帖)',
     'B1F',
@@ -2436,7 +1064,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    'dc811606-26a9-46ed-ae15-00cf144baf68',
+    '04050895-e9d3-4722-a9f6-9e4af75d3587',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '3st (13帖)',
     'B1F',
@@ -2450,7 +1078,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '11c252f1-c358-4500-a456-659ae2ac6e8a',
+    'ac4ac5e6-f00b-4e05-ab48-d74ba2cc26ed',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '4st (12帖)',
     'B1F',
@@ -2464,7 +1092,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '75ea60c4-a804-48cf-ad81-652b91cff742',
+    'f0bde9b4-fc64-4064-ae53-905167605840',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '5st (10帖)',
     'B1F',
@@ -2478,7 +1106,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '6a30cce5-b0f1-47fb-a330-23fff513c9b1',
+    '60ab4f5b-f9e4-4ff9-a080-fc3c228d3e3b',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '6st (8帖)',
     'B1F',
@@ -2492,7 +1120,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '31c5900d-5331-4f5c-a042-30dcd529ebc8',
+    '5cd9d4c7-6327-4be2-a05a-9d71019dfd36',
     'feac07ff-504a-47a8-a504-390b3fa58406',
     '7st (7帖)',
     'B1F',
@@ -2506,7 +1134,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '0ace9d72-b6f4-428d-acc4-8090853878df',
+    '4cdef0c2-3aa4-4fa1-abac-b7b730cbfda2',
     '4d810a77-a37e-49e7-a279-1e4fbd51f543',
     '1st (15帖)',
     'B1F',
@@ -2520,7 +1148,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '7d4877c1-4b44-4876-a4e3-46d0688cb26c',
+    '12b83934-ce9b-4ebb-a31c-82c5167a5ded',
     '4d810a77-a37e-49e7-a279-1e4fbd51f543',
     '2st (13帖)',
     'B1F',
@@ -2534,7 +1162,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '39e2172b-04f1-44d7-a78e-5d4b53c2dfa9',
+    'c5ace017-38df-4e49-a2cb-eb1a9bf81962',
     '4d810a77-a37e-49e7-a279-1e4fbd51f543',
     '3st (11帖)',
     'B1F',
@@ -2548,7 +1176,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '129c3f86-4245-4392-a4f2-df6fb5cb4434',
+    '2fc4481c-981b-445d-a354-be0c624ac8d1',
     '4d810a77-a37e-49e7-a279-1e4fbd51f543',
     '4st (10帖)',
     'B1F',
@@ -2562,7 +1190,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '60c2a2cd-c13f-40a2-a463-43d8c5b6d543',
+    'b66e8df4-f27e-4573-a216-b4841f5f4228',
     '4d810a77-a37e-49e7-a279-1e4fbd51f543',
     '5st (8帖)',
     'B1F',
@@ -2576,7 +1204,7 @@ BEGIN
 
   INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
   VALUES (
-    '5f779fec-e93a-4568-a045-a610c1d19687',
+    'ad87cfac-d7db-4bd3-aea2-0842fac48575',
     '4d810a77-a37e-49e7-a279-1e4fbd51f543',
     '6st (7帖)',
     'B1F',
@@ -2952,7 +1580,1421 @@ BEGIN
     0
   ) ON CONFLICT (id) DO NOTHING;
 
-  -- 3. 常設機材マスター (188件)
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '7d0f2e6f-dc50-437f-aec2-7621abb86272',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'A1st (7帖)',
+    NULL,
+    7,
+    3,
+    2970,
+    1760,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '254e17bd-0fa0-4b36-abab-7c1c1495c291',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'A2st (7帖)',
+    NULL,
+    7,
+    3,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'e96c8ac9-232a-4aac-a038-0f603861b3de',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'B1st (16帖)',
+    NULL,
+    16,
+    7,
+    4290,
+    2970,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '8425f42e-1ce8-402a-a94e-4ebcebc586fd',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'B2st (15帖)',
+    NULL,
+    15,
+    7,
+    4070,
+    2750,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '0149a7b4-d635-4dee-acba-2d8af5d9e919',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'B3st (15帖)',
+    NULL,
+    15,
+    7,
+    4070,
+    2750,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '66903210-c071-41f9-ab2a-502ae2fac96e',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'B4st (14帖)',
+    NULL,
+    14,
+    6,
+    3960,
+    2640,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd2898a5c-b9b3-4b07-a9e9-74e333b4361c',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'Cst (27帖)',
+    NULL,
+    27,
+    12,
+    5500,
+    3850,
+    1100,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'da60b5c8-6d96-4097-af3d-960d6e22a1ad',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'G1st (12帖)',
+    NULL,
+    12,
+    5,
+    3410,
+    2310,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'e424232e-5239-43fd-abb1-71e757450360',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'G2st (10帖)',
+    NULL,
+    10,
+    5,
+    3300,
+    2200,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'a2820c89-889b-45b3-af28-068e58c5d9f3',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'G3st (11帖)',
+    NULL,
+    11,
+    5,
+    3300,
+    2200,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd0030609-378e-4f04-a7aa-866248f8e7ad',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'Sst (6帖)',
+    NULL,
+    6,
+    3,
+    2750,
+    1540,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'b2b11b70-d643-4e1a-a024-42626ee6c1a4',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'DJ Booth1 (4帖)',
+    NULL,
+    4,
+    2,
+    1870,
+    1870,
+    1870,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'b8b6fbd2-7b90-487a-aac9-1e27554f0cc7',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'Booth2 (4.5帖)',
+    NULL,
+    5,
+    2,
+    770,
+    770,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '5eb85076-fa63-436d-ad2c-44331dbb00ab',
+    'edf663f7-6e46-46f2-a44a-d6b28cc68c6a',
+    'REC STUDIO (4.5帖)',
+    NULL,
+    5,
+    2,
+    2310,
+    1870,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'b0606ba9-a0a6-4293-a1b4-1439f89995d0',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'A1st (9帖)',
+    NULL,
+    9,
+    4,
+    2860,
+    1650,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '6213987c-af79-4dc6-af31-953d3c2eae59',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'A2st (10帖)',
+    NULL,
+    10,
+    5,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '9a870c6a-d15a-4d38-a048-c02f64c6b3ac',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'A3st (8帖)',
+    NULL,
+    8,
+    4,
+    2750,
+    1540,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'fd1535e3-e1fd-410a-ac89-387a36452a5c',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'A5st (10帖)',
+    NULL,
+    10,
+    5,
+    2970,
+    1760,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'b1b739c4-c3d1-4a5e-a16f-6a7c95b761f9',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'B1st (12帖)',
+    NULL,
+    12,
+    5,
+    3300,
+    2090,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'e21770e9-e22d-4c98-a5c0-3e24d071df50',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'B2st (12帖)',
+    NULL,
+    12,
+    5,
+    3300,
+    2090,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '9292692b-63fb-4a07-aa76-b3abd080afa0',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'B3st (14帖)',
+    NULL,
+    14,
+    6,
+    3520,
+    2310,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'e5f1a378-f589-4a23-abbe-c2312506a404',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'B5st (11帖)',
+    NULL,
+    11,
+    5,
+    3300,
+    1980,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '3234cb26-8d2a-458f-af77-fc01c5ad7640',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'E1st (16帖)',
+    NULL,
+    16,
+    7,
+    3850,
+    2530,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '45ce0638-8a6e-4490-a8e5-efe73d71de94',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'E2st+Sub (17帖)',
+    NULL,
+    17,
+    8,
+    3960,
+    2750,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '50ca3504-77e5-4f90-a91d-4ef30b1891ef',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'Vo.Booth (3帖)',
+    NULL,
+    3,
+    2,
+    770,
+    770,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '3eda195a-3536-43e4-a4a1-baf53978538c',
+    '77470cad-194b-4203-ad8d-ed00d3959820',
+    'R/P STUDIO (6帖)',
+    NULL,
+    6,
+    3,
+    2420,
+    1980,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '1c06ae8b-d763-4c30-acd8-14e1a23db13f',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'Sst (7帖)',
+    NULL,
+    7,
+    3,
+    2530,
+    1650,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'f19dd1d5-fcc5-4dae-ab11-b53dfa24b413',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'A1st (8帖)',
+    NULL,
+    8,
+    4,
+    2860,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '686c9882-4f6d-4cb2-a90e-ed30de33c322',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'A2st (8帖)',
+    NULL,
+    8,
+    4,
+    2860,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '1595267d-dc24-451b-a420-c559a74807f9',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'A3st (8帖)',
+    NULL,
+    8,
+    4,
+    2860,
+    1760,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '23c6e4c0-2570-4e2e-a714-9339a664351c',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'G1st (10帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    2090,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '224e586c-39c5-460c-a283-0f4340b8469a',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'G2st (10帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    2090,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '968c2952-f674-4855-acee-6a24d982ea77',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'G3st (11帖)',
+    NULL,
+    11,
+    5,
+    3300,
+    2200,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'fb4f53e8-ca1b-4da4-a6b6-226934bbfcce',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'B1st (13帖)',
+    NULL,
+    13,
+    6,
+    3740,
+    2530,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '923d95f7-eb66-4c3c-a5dc-e19bfd30d355',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'B2st (14帖)',
+    NULL,
+    14,
+    6,
+    3850,
+    2640,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'dae16e59-070c-46c6-a4ce-424acd42c722',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'B3st (14帖)',
+    NULL,
+    14,
+    6,
+    3850,
+    2640,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '0bcc7d80-1a57-4982-ab67-c65a82ecc2d6',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'E1st (16帖)',
+    NULL,
+    16,
+    7,
+    4180,
+    2860,
+    1100,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '8364d67d-6de8-4c1b-a70d-9d6e89bef490',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'E2st (16帖)',
+    NULL,
+    16,
+    7,
+    4180,
+    2860,
+    1100,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '94354240-95e7-46e7-a3aa-b9e89906cec2',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'Cst (22帖)',
+    NULL,
+    22,
+    10,
+    5060,
+    3520,
+    1100,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'da2435c5-6c82-4b1a-a3fc-844f4411b222',
+    '6629e62e-92db-432c-abe8-fc561094ed83',
+    'Vo.Booth (3帖)',
+    NULL,
+    3,
+    2,
+    770,
+    770,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '6fc0c3f6-e13b-40da-ad6f-e1cdc5bfa0cc',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'A1st (8帖)',
+    NULL,
+    8,
+    4,
+    2970,
+    1760,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '05bcdee6-c576-4178-ad69-ad489206f105',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'A2st (8帖)',
+    NULL,
+    8,
+    4,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '65a89f10-6570-4946-a763-4a0786313ae0',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'A3st (8帖)',
+    NULL,
+    8,
+    4,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '9251ac9c-22e3-42f8-ad8f-20ee6e2baf64',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'A4st (8帖)',
+    NULL,
+    8,
+    4,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd38aaabb-ddc3-4ddb-afc2-e22947cc7aab',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Cst (22帖)',
+    NULL,
+    22,
+    10,
+    5280,
+    3740,
+    1100,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'f037846b-f9bf-402e-adef-52b53259d265',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Est (15帖)',
+    NULL,
+    15,
+    7,
+    3960,
+    2640,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'c1b260d5-e440-4f20-a2d7-06c9c1600e49',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'DJ1st (3.5帖)',
+    NULL,
+    4,
+    2,
+    1980,
+    1980,
+    1980,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'faecd22f-6a76-4513-a4b6-f81c191b237f',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'DJ2st (3.5帖)',
+    NULL,
+    4,
+    2,
+    1980,
+    1980,
+    1980,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'e0d4de61-dcda-4638-a0fa-d6eab179084a',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'DJ3st (8帖)',
+    NULL,
+    8,
+    4,
+    3630,
+    2860,
+    2200,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '573b9772-4b4a-420b-aa84-fe0c52b11a05',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Booth1 (3.5帖)',
+    NULL,
+    4,
+    2,
+    880,
+    880,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '43ec5944-f044-4be7-a746-146d806677be',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Booth2 (3.5帖)',
+    NULL,
+    4,
+    2,
+    880,
+    880,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '44eaa8c3-8612-4fd0-a662-28b07891ec5d',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Booth3 (3帖)',
+    NULL,
+    3,
+    2,
+    880,
+    880,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'a74efd97-b868-4eb6-a4dc-663637e70ad5',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Booth4 (3.5帖)',
+    NULL,
+    4,
+    2,
+    880,
+    880,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd768deaf-a1ca-46e5-ac30-45d73b277fcc',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'Rec.booth (4帖)',
+    NULL,
+    4,
+    2,
+    2310,
+    1870,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd6280852-4816-4a0e-a5a0-762ce8eafd3a',
+    '8305bf22-0927-4678-ace9-58be7dbbf602',
+    'REC STUDIO (11帖)',
+    NULL,
+    11,
+    5,
+    2640,
+    2200,
+    1650,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '6533019b-fd2b-4d8a-aebd-b56ab224e6c9',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'S1st (7帖)',
+    NULL,
+    7,
+    3,
+    2640,
+    1870,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '54b0db7f-be43-4ec5-a5ba-ef2af688e6e4',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'S2st (7帖)',
+    NULL,
+    7,
+    3,
+    2530,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '22555425-4419-4377-a622-18ee665619b0',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'S3st (7帖)',
+    NULL,
+    7,
+    3,
+    2530,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '3980a7b0-3b56-4f66-a67c-ee7178704557',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'A1st (9帖)',
+    NULL,
+    9,
+    4,
+    3080,
+    1980,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'ab6343c8-63ac-4a91-a14f-fc13000d7787',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'A2st (10帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    2090,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '2ba2719c-85f6-4f57-a7e2-0186912d1e72',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'A3st (10帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    2090,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '4561b432-5fed-410e-ad62-66975be1d700',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'A5st (10帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    2090,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '020848cf-8bc0-4949-a864-136f7c0c8958',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'A6st (9帖)',
+    NULL,
+    9,
+    4,
+    3080,
+    1980,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '21728d58-0a2f-4098-a168-3399f7df950e',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'A7st (9帖)',
+    NULL,
+    9,
+    4,
+    3080,
+    1980,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '15eb1f23-6c10-4f75-ae71-7b6fd2c73b70',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'G1st (11帖)',
+    NULL,
+    11,
+    5,
+    3300,
+    2200,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '6d150cc0-3fbd-4758-a9db-f841ecbd0a6f',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'G2st (11帖)',
+    NULL,
+    11,
+    5,
+    3300,
+    2200,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '66c3c1b7-23d8-4ebd-a2e3-73eadbbaefb1',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'G3st (11帖)',
+    NULL,
+    11,
+    5,
+    3300,
+    2200,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '6f48a19d-ea14-4ecf-a6b2-8a53e52b1a57',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'B1st (12帖)',
+    NULL,
+    12,
+    5,
+    3520,
+    2310,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '08e75658-60c5-428c-ad95-339733493a22',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'B2st (12帖)',
+    NULL,
+    12,
+    5,
+    3520,
+    2310,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'a7e05898-4164-4676-ab35-f1e025b787dd',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'B3st (13帖)',
+    NULL,
+    13,
+    6,
+    3630,
+    2420,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '59dfe699-342c-4134-a593-e6d1b1746667',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'E1st (18帖)',
+    NULL,
+    18,
+    8,
+    4510,
+    3300,
+    1100,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '3305287e-91a8-404e-af5f-cc780dd476b8',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'E2st (15帖)',
+    NULL,
+    15,
+    7,
+    4070,
+    2860,
+    1100,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '1cb23559-e4ba-4ffe-a3d4-77bfa3df9d35',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'E3st (16帖)',
+    NULL,
+    16,
+    7,
+    4180,
+    2970,
+    1100,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '139685cd-4f49-408c-ac1e-a792c7ac4eda',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'CSst+Sub (30帖)',
+    NULL,
+    30,
+    14,
+    6380,
+    4400,
+    1320,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'f569322e-230e-40a6-af4a-8558fe281de8',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'Fst (14帖)',
+    NULL,
+    14,
+    6,
+    3960,
+    2750,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '1b7ca359-8081-412d-a8e0-9d5723ac3b9c',
+    '3f69a610-bb51-4607-ada3-72de92ee2c33',
+    'REC STUDIO (6帖)',
+    NULL,
+    6,
+    3,
+    2200,
+    1980,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '85224de3-98a2-43e7-a1b3-ae7119dd9565',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'A1st (8帖)',
+    NULL,
+    8,
+    4,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '491a3591-821c-446f-a500-4530309a49e4',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'A2st (8帖)',
+    NULL,
+    8,
+    4,
+    2970,
+    1760,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '0934ca19-30e4-4dcf-ae96-9156af433141',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'A3st (9帖)',
+    NULL,
+    9,
+    4,
+    3080,
+    1870,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '8e7b899c-8131-4585-a4f4-2cc978999701',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'G1st (12帖)',
+    NULL,
+    12,
+    5,
+    3410,
+    2310,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '9cc060a8-c688-40c7-ac55-875f83532f5a',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'G2st (9.5帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    1980,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'c25faf74-4481-414b-ad48-e8e28957775a',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'GSst (10帖)',
+    NULL,
+    10,
+    5,
+    3190,
+    2090,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '2050b4cd-ac53-4a73-ae44-1e938eb4f771',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'REC.booth (5帖)',
+    NULL,
+    5,
+    2,
+    1650,
+    1430,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '61408f39-68ef-499d-a19b-040bba32b3ee',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'B1st (14帖)',
+    NULL,
+    14,
+    6,
+    3850,
+    2640,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '43614990-1111-43b9-a6b2-59e3abc32259',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'B2st (13帖)',
+    NULL,
+    13,
+    6,
+    3740,
+    2530,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd34b0dc8-2fd8-4e06-a199-dfe00605d145',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'E1st (21帖)',
+    NULL,
+    21,
+    10,
+    4510,
+    3300,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '027254a9-94a6-4958-a18f-816257f362e1',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'E2st (20帖)',
+    NULL,
+    20,
+    9,
+    4510,
+    3300,
+    990,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '5d5bba86-7db2-49df-add9-f27f222d7e8e',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'Cst+Sub (24帖)',
+    NULL,
+    24,
+    11,
+    5720,
+    4070,
+    1210,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'b1a5bbb0-9ba2-4e67-afad-d8fdf0d02c70',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'Booth1 (3帖)',
+    NULL,
+    3,
+    2,
+    770,
+    770,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'b04149a9-81aa-48f4-aa13-b04959c9d204',
+    '87d744c8-ff3f-42f8-a830-e232ecf402df',
+    'Booth2 (3帖)',
+    NULL,
+    3,
+    2,
+    770,
+    770,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'd236c685-eb13-4bf0-a2e7-f20a8fcddcc8',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'Booth (4帖)',
+    NULL,
+    4,
+    2,
+    880,
+    880,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'f14d626d-c1d1-407c-aaac-8b56f0adc0ea',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'A1st (8.5帖)',
+    NULL,
+    9,
+    4,
+    2970,
+    1870,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'afad3f14-8068-43e4-a8a9-96636d515d09',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'A2st (8.5帖)',
+    NULL,
+    9,
+    4,
+    2970,
+    1870,
+    770,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'ce717ec8-2b6b-4dff-a718-6a992b502c72',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'A3st (8.5帖)',
+    NULL,
+    9,
+    4,
+    2970,
+    1870,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '7f9b520b-fe11-4dca-ac15-920787760df2',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'A5st (9帖)',
+    NULL,
+    9,
+    4,
+    2970,
+    1870,
+    770,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '8013d52f-98a6-492a-a6ee-f4d9d33cc743',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'Gst (12帖)',
+    NULL,
+    12,
+    5,
+    3300,
+    2200,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '892cfbe1-78aa-40e5-a7e1-4d81463adffc',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'Cst (18帖)',
+    NULL,
+    18,
+    8,
+    4620,
+    3300,
+    1100,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'c31796b9-7051-4051-ab84-92ca2a943e1b',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'B1st (13帖)',
+    NULL,
+    13,
+    6,
+    3740,
+    2640,
+    880,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '431b51df-8abe-4c82-a959-46e753388a3f',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'B2st (14帖)',
+    NULL,
+    14,
+    6,
+    3850,
+    2750,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    '3dfa9a10-d175-43ac-a57a-2c8d36a3221c',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'B3st (14帖)',
+    NULL,
+    14,
+    6,
+    3850,
+    2750,
+    880,
+    0
+  ) ON CONFLICT (id) DO NOTHING;
+
+  INSERT INTO rooms (id, studio_id, name, floor, size_tatami, capacity, price_per_hour_regular, price_per_hour_daytime, price_per_hour_solo, start_time_offset)
+  VALUES (
+    'eed1ebb1-d6d4-4ea5-a4b2-2a4dca51806d',
+    'e1a6b4be-8b25-4d58-a4bb-ac1bc55fd0a8',
+    'Est (15帖)',
+    NULL,
+    15,
+    7,
+    4070,
+    2860,
+    990,
+    30
+  ) ON CONFLICT (id) DO NOTHING;
+
+  -- 3. 常設機材マスター (191件)
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
     '712a2eb2-2c0e-4a6c-ac92-7be381e080c2',
@@ -3230,127 +3272,6 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    'd17b04a7-ec41-4075-ab69-df2c8ac8c9f3',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '9c46418e-fbb5-46b8-a601-6e454d7aa024',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '71b86197-5941-4b52-a4b6-f9e0532b1a7d',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '20f20a28-6e09-4adc-a230-b9f923c4e8b9',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '1aaaf8af-86d6-4f6a-a20a-37d6edd0c1f0',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '07c1a711-04d7-4574-aab9-4004b05e2ac5',
-    '{"Marshall JVM410H","Roland JC-120"}',
-    'Ampeg SVT',
-    'DW Drums',
-    true,
-    '{}',
-    'Marshall JVM410H、Roland JC-120、Ampeg SVT、DW Drums、ゲネプロ対応20帖以上'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '81ec7e78-3097-45b1-ae85-b903149e1741',
-    '{"Marshall JVM410H","Roland JC-120"}',
-    'Ampeg SVT',
-    'DW Drums',
-    true,
-    '{}',
-    'Marshall JVM410H、Roland JC-120、Ampeg SVT、DW Drums、ゲネプロ対応20帖以上'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '137fd230-4e36-4c74-a79c-baef38fd40aa',
-    '{"Marshall JVM410H","Roland JC-120"}',
-    'Ampeg SVT',
-    'DW Drums',
-    true,
-    '{}',
-    'Marshall JVM410H、Roland JC-120、Ampeg SVT、DW Drums、ゲネプロ対応20帖以上'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '83dc87b5-68e4-446f-ade5-ad8d1216e1bd',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'fa545ee6-7a4e-4bc1-ab01-d6e4bfdc2589',
-    '{"Marshall JCM2000","Roland JC-120"}',
-    'Ampeg',
-    'Canopus Drums',
-    true,
-    '{}',
-    'Marshall JCM2000、Roland JC-120、Ampeg、Canopus Drums'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '913c246b-2211-45de-a026-ff6ac5d9f74e',
-    '{}',
-    'Ampeg / Bass Amp',
-    'Standard Drum Set',
-    true,
-    '{}',
-    'ボーカル録音専用、完全防音ブース'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
     '37004b0a-c16e-472f-a623-b12b6422d05f',
     '{"Marshall JCM2000","Roland JC-120B"}',
     'Ampeg SVT-450H',
@@ -3560,964 +3481,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '4a5ffb74-0ea9-4800-a18e-e16337f9a84d',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '0a71e054-2db3-456e-aa96-24f62f1247aa',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '37d628cf-d078-4a0f-a1c5-cb78c54b2237',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '708992bd-38d0-443b-a9fc-22c0ac365c89',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'c8847f55-f477-4570-a5cc-5747af2fa505',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'b8dc28f5-ca28-445d-af2a-902414393883',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '53d24a61-8a94-4ee7-ab80-7e801f9092c3',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'd7dff647-1383-4d83-a56d-3878c7094294',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '0e4efa8b-f93c-43a6-a471-d65da6058b9b',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '89903f20-3886-496c-ad90-494b431acfe2',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'f87e769e-7574-43d7-a3a7-72c71440e3cd',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '5d5987d6-81dd-4463-af36-c27bb2c0db5a',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'c2602fae-f223-4efc-a8c8-5600d484637a',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'ce4965cc-bedf-457d-a8a3-4e21ea9ce8cb',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'b0606ba9-a0a6-4293-a1b4-1439f89995d0',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '6213987c-af79-4dc6-af31-953d3c2eae59',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '9a870c6a-d15a-4d38-a048-c02f64c6b3ac',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'fd1535e3-e1fd-410a-ac89-387a36452a5c',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'b1b739c4-c3d1-4a5e-a16f-6a7c95b761f9',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'e21770e9-e22d-4c98-a5c0-3e24d071df50',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '9292692b-63fb-4a07-aa76-b3abd080afa0',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'e5f1a378-f589-4a23-abbe-c2312506a404',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '3234cb26-8d2a-458f-af77-fc01c5ad7640',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '45ce0638-8a6e-4490-a8e5-efe73d71de94',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '50ca3504-77e5-4f90-a91d-4ef30b1891ef',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '66c0151a-f6df-48f1-aafe-a70718a63cf2',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '1c06ae8b-d763-4c30-acd8-14e1a23db13f',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'f19dd1d5-fcc5-4dae-ab11-b53dfa24b413',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '686c9882-4f6d-4cb2-a90e-ed30de33c322',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '1595267d-dc24-451b-a420-c559a74807f9',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '23c6e4c0-2570-4e2e-a714-9339a664351c',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '224e586c-39c5-460c-a283-0f4340b8469a',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '968c2952-f674-4855-acee-6a24d982ea77',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'fb4f53e8-ca1b-4da4-a6b6-226934bbfcce',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '923d95f7-eb66-4c3c-a5dc-e19bfd30d355',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'dae16e59-070c-46c6-a4ce-424acd42c722',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '0bcc7d80-1a57-4982-ab67-c65a82ecc2d6',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '8364d67d-6de8-4c1b-a70d-9d6e89bef490',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '94354240-95e7-46e7-a3aa-b9e89906cec2',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'da2435c5-6c82-4b1a-a3fc-844f4411b222',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '6fc0c3f6-e13b-40da-ad6f-e1cdc5bfa0cc',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '05bcdee6-c576-4178-ad69-ad489206f105',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '65a89f10-6570-4946-a763-4a0786313ae0',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '9251ac9c-22e3-42f8-ad8f-20ee6e2baf64',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'd38aaabb-ddc3-4ddb-afc2-e22947cc7aab',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'f037846b-f9bf-402e-adef-52b53259d265',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '9947d99d-4791-4961-af25-b32392ca03f0',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '344ee7d0-57b0-4436-a4e6-35593a11865d',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '8a28b25f-a5cb-4deb-ab0e-07fad13e4ffe',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '573b9772-4b4a-420b-aa84-fe0c52b11a05',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '43ec5944-f044-4be7-a746-146d806677be',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '44eaa8c3-8612-4fd0-a662-28b07891ec5d',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'a74efd97-b868-4eb6-a4dc-663637e70ad5',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'd768deaf-a1ca-46e5-ac30-45d73b277fcc',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'd6280852-4816-4a0e-a5a0-762ce8eafd3a',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '6533019b-fd2b-4d8a-aebd-b56ab224e6c9',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '54b0db7f-be43-4ec5-a5ba-ef2af688e6e4',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '22555425-4419-4377-a622-18ee665619b0',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '3980a7b0-3b56-4f66-a67c-ee7178704557',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'ab6343c8-63ac-4a91-a14f-fc13000d7787',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '2ba2719c-85f6-4f57-a7e2-0186912d1e72',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '4561b432-5fed-410e-ad62-66975be1d700',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '020848cf-8bc0-4949-a864-136f7c0c8958',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '21728d58-0a2f-4098-a168-3399f7df950e',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '15eb1f23-6c10-4f75-ae71-7b6fd2c73b70',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '6d150cc0-3fbd-4758-a9db-f841ecbd0a6f',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '66c3c1b7-23d8-4ebd-a2e3-73eadbbaefb1',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '6f48a19d-ea14-4ecf-a6b2-8a53e52b1a57',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '08e75658-60c5-428c-ad95-339733493a22',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'a7e05898-4164-4676-ab35-f1e025b787dd',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '59dfe699-342c-4134-a593-e6d1b1746667',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '3305287e-91a8-404e-af5f-cc780dd476b8',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '1cb23559-e4ba-4ffe-a3d4-77bfa3df9d35',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '139685cd-4f49-408c-ac1e-a792c7ac4eda',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'f569322e-230e-40a6-af4a-8558fe281de8',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'eae2e123-8205-4639-afaa-daa7a10d5cd5',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'd236c685-eb13-4bf0-a2e7-f20a8fcddcc8',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    '※セルフレコーディング・ボーカル・個人練習に最適な防音ブースです。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'f14d626d-c1d1-407c-aaac-8b56f0adc0ea',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'afad3f14-8068-43e4-a8a9-96636d515d09',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '892cfbe1-78aa-40e5-a7e1-4d81463adffc',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '8013d52f-98a6-492a-a6ee-f4d9d33cc743',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'c31796b9-7051-4051-ab84-92ca2a943e1b',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'ce717ec8-2b6b-4dff-a718-6a992b502c72',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '7f9b520b-fe11-4dca-ac15-920787760df2',
-    '{"Roland JC-120","Marshall JCM2000 DSL100"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Masters Custom',
-    true,
-    '{}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'eed1ebb1-d6d4-4ea5-a4b2-2a4dca51806d',
-    '{"Roland JC-120","Marshall JVM210H + 1960A","Fender 65 Twin Reverb"}',
-    'Ampeg SVT-4PRO + SVT-810E',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '431b51df-8abe-4c82-a959-46e753388a3f',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    '3dfa9a10-d175-43ac-a57a-2c8d36a3221c',
-    '{"Roland JC-120","Marshall JVM210H + 1960A"}',
-    'Ampeg SVT-450H + SVT-410HLF',
-    'Pearl Reference Pure',
-    true,
-    '{"Roland RD-88"}',
-    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
-  ) ON CONFLICT (room_id) DO NOTHING;
-
-  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
-  VALUES (
-    'e7df1a49-e966-4cbc-ac4b-4e04a0728b60',
+    '1dee2a1f-2c5f-4ee2-a7ad-5f56c8b848cf',
     '{"Roland JC-120","Marshall JCM2000 DSL100","Mesa/Boogie Dual Rectifier"}',
     'Ampeg SVT-3PRO + SVT-810E',
     'Pearl Masters Studio',
@@ -4528,7 +3492,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '62d85c00-343e-419a-a20b-fc9e25736133',
+    '3f46c527-bb4e-4ce0-a35f-41ef250d588d',
     '{"Roland JC-120","Marshall JCM900 4100"}',
     'Hartke HA3500 + 410XL',
     'Pearl Session Custom',
@@ -4539,7 +3503,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '563db1d8-3259-4554-a794-6b3a17e7ca4c',
+    '4a5442e5-db1a-485a-a9fd-6f96b8b3fc73',
     '{"Roland JC-120","Marshall DSL100H"}',
     'Ampeg SVT-350',
     'TAMA Starclassic',
@@ -4550,7 +3514,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    'd07faab7-64a0-4ed2-a467-f040d67f07c6',
+    '1e3aa452-4e59-4940-ae17-a4b1bee2a01f',
     '{"Roland JC-120","Marshall DSL40CR"}',
     'Hartke HA2500',
     'Pearl Export',
@@ -4561,7 +3525,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    'b184b83d-7c3d-48a7-af04-aa4a390b7e03',
+    '78176e4f-46f1-4696-a330-a12c009f465e',
     '{"Roland JC-120","Marshall DSL20HR"}',
     'Hartke HA2500',
     'Pearl Export',
@@ -4572,7 +3536,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    'e8ac9ef2-344d-4452-a211-b77e787d3d9c',
+    'c4cf7615-fbe7-4d4f-a9d0-8c02cd70850d',
     '{"Roland JC-120","Marshall JTM45"}',
     'Fender Bassman',
     'Canopus Yaiba',
@@ -4583,7 +3547,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '074a0ac1-4f2a-4ded-aeab-76b534f428d4',
+    '24285d17-c9da-4ddb-a58a-3db9431c916f',
     '{"Roland JC-120","VOX AC15"}',
     'Hartke HD150',
     'TAMA Club-JAM',
@@ -4594,7 +3558,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    'fa7f37ad-c3a6-4c24-a1df-30561f9feab8',
+    '04f03644-0fb0-4fa8-adc2-94dbf27cd3e5',
     '{"Roland JC-120","Marshall JCM2000 DSL100","Hughes & Kettner TriAmp"}',
     'Ampeg SVT-4PRO + 810E',
     'Pearl Masters Premium',
@@ -4605,7 +3569,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '9b229f1d-8168-4b09-ab53-b3a9a7dab44f',
+    'adf42b54-0259-4a11-a2f2-7e872befb348',
     '{"Roland JC-120","Marshall JCM900 4100"}',
     'Hartke HA3500 + 410XL',
     'TAMA Starclassic',
@@ -4616,7 +3580,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    'dc811606-26a9-46ed-ae15-00cf144baf68',
+    '04050895-e9d3-4722-a9f6-9e4af75d3587',
     '{"Roland JC-120","Marshall DSL100H"}',
     'Ampeg SVT-350',
     'Pearl Session Custom',
@@ -4627,7 +3591,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '11c252f1-c358-4500-a456-659ae2ac6e8a',
+    'ac4ac5e6-f00b-4e05-ab48-d74ba2cc26ed',
     '{"Roland JC-120","Marshall DSL40CR"}',
     'Hartke HA2500',
     'Pearl Export',
@@ -4638,7 +3602,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '75ea60c4-a804-48cf-ad81-652b91cff742',
+    'f0bde9b4-fc64-4064-ae53-905167605840',
     '{"Roland JC-120","Marshall DSL20HR"}',
     'Hartke HA2500',
     'Pearl Export',
@@ -4649,7 +3613,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '6a30cce5-b0f1-47fb-a330-23fff513c9b1',
+    '60ab4f5b-f9e4-4ff9-a080-fc3c228d3e3b',
     '{"Roland JC-120","Fender Blues Junior"}',
     'Hartke HD150',
     'TAMA Club-JAM',
@@ -4660,7 +3624,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '31c5900d-5331-4f5c-a042-30dcd529ebc8',
+    '5cd9d4c7-6327-4be2-a05a-9d71019dfd36',
     '{"Roland JC-120","VOX AC15"}',
     'Hartke HD150',
     'TAMA Club-JAM',
@@ -4671,7 +3635,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '0ace9d72-b6f4-428d-acc4-8090853878df',
+    '4cdef0c2-3aa4-4fa1-abac-b7b730cbfda2',
     '{"Roland JC-120","Marshall JCM2000 DSL100"}',
     'Ampeg SVT-3PRO',
     'Pearl Masters Studio',
@@ -4682,7 +3646,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '7d4877c1-4b44-4876-a4e3-46d0688cb26c',
+    '12b83934-ce9b-4ebb-a31c-82c5167a5ded',
     '{"Roland JC-120","Marshall JCM900 4100"}',
     'Hartke HA3500',
     'Pearl Session Custom',
@@ -4693,7 +3657,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '39e2172b-04f1-44d7-a78e-5d4b53c2dfa9',
+    'c5ace017-38df-4e49-a2cb-eb1a9bf81962',
     '{"Roland JC-120","Marshall DSL100H"}',
     'Ampeg SVT-350',
     'TAMA Starclassic',
@@ -4704,7 +3668,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '129c3f86-4245-4392-a4f2-df6fb5cb4434',
+    '2fc4481c-981b-445d-a354-be0c624ac8d1',
     '{"Roland JC-120","Marshall DSL40CR"}',
     'Hartke HA2500',
     'Pearl Export',
@@ -4715,7 +3679,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '60c2a2cd-c13f-40a2-a463-43d8c5b6d543',
+    'b66e8df4-f27e-4573-a216-b4841f5f4228',
     '{"Roland JC-120","Fender Pro Junior"}',
     'Hartke HD150',
     'TAMA Club-JAM',
@@ -4726,7 +3690,7 @@ BEGIN
 
   INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
   VALUES (
-    '5f779fec-e93a-4568-a045-a610c1d19687',
+    'ad87cfac-d7db-4bd3-aea2-0842fac48575',
     '{"Roland JC-120","VOX AC15"}',
     'Hartke HD150',
     'TAMA Club-JAM',
@@ -5019,6 +3983,1117 @@ BEGIN
     true,
     '{"Roland RD-88"}',
     'スタジオ音楽館 新宿西口店 標準高品位機材常設。全室00分スタート。個人練習は前日夜21時よりWeb受付。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '7d0f2e6f-dc50-437f-aec2-7621abb86272',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark IV + ST104HF',
+    'SONOR SQ1 Series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '254e17bd-0fa0-4b36-abab-7c1c1495c291',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg V7+ Venture VB-410',
+    'Pearl MASTERS MAPLE',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'e96c8ac9-232a-4aac-a038-0f603861b3de',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + SVT-810E',
+    'SAKAE Evolved',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '8425f42e-1ce8-402a-a94e-4ebcebc586fd',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark Vintage + ST108HR',
+    'YAMAHA Recording Custom',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '0149a7b4-d635-4dee-acba-2d8af5d9e919',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'AGUILAR TONE HAMMER 500 V2 + DB810',
+    'SONOR SQ1 Series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '66903210-c071-41f9-ab2a-502ae2fac96e',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + SVT-810E',
+    'SAKAE Evolved',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd2898a5c-b9b3-4b07-a9e9-74e333b4361c',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120","Fender ToneMaster Twin Reverb"}',
+    'Ampeg SVT-3PRO + SVT-810E',
+    'YAMAHA Recording Custom',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'da60b5c8-6d96-4097-af3d-960d6e22a1ad',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + SVT-810E',
+    'CANOPUS YAIBA II',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'e424232e-5239-43fd-abb1-71e757450360',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg V7+ SVT-810E',
+    'CANOPUS YAIBA II',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'a2820c89-889b-45b3-af28-068e58c5d9f3',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Orange 4 Stroke 500 LTD + OBC810',
+    'CANOPUS YAIBA II',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd0030609-378e-4f04-a7aa-866248f8e7ad',
+    '{"Roland JC-120"}',
+    'Markbass Little Mark IV + ST104HF',
+    'CANOPUS YAIBA II',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'b2b11b70-d643-4e1a-a024-42626ee6c1a4',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'b8b6fbd2-7b90-487a-aac9-1e27554f0cc7',
+    '{"Roland JC-120"}',
+    '',
+    '',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '5eb85076-fa63-436d-ad2c-44331dbb00ab',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'b0606ba9-a0a6-4293-a1b4-1439f89995d0',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark IV + ST104HF',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '6213987c-af79-4dc6-af31-953d3c2eae59',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-350H',
+    'Pearl MMX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '9a870c6a-d15a-4d38-a048-c02f64c6b3ac',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H',
+    'Pearl MRP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'fd1535e3-e1fd-410a-ac89-387a36452a5c',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'ORANGE 4-STROKE-300 & OBC410+OBC115',
+    'Pearl MCX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'b1b739c4-c3d1-4a5e-a16f-6a7c95b761f9',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-350H',
+    'Pearl MSX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'e21770e9-e22d-4c98-a5c0-3e24d071df50',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO',
+    'Pearl MRX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '9292692b-63fb-4a07-aa76-b3abd080afa0',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'e5f1a378-f589-4a23-abbe-c2312506a404',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '3234cb26-8d2a-458f-af77-fc01c5ad7640',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H',
+    'Pearl RF series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '45ce0638-8a6e-4490-a8e5-efe73d71de94',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    't.c.electronic RH750',
+    'DW Collector''s series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '50ca3504-77e5-4f90-a91d-4ef30b1891ef',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '3eda195a-3536-43e4-a4a1-baf53978538c',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '1c06ae8b-d763-4c30-acd8-14e1a23db13f',
+    '{"Marshall JCM900 4100+1960A"}',
+    'MarkBass Little Mark III & STD104HF',
+    'CANOPUS R.F.M SET',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'f19dd1d5-fcc5-4dae-ab11-b53dfa24b413',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark IV & STD104HF',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '686c9882-4f6d-4cb2-a90e-ed30de33c322',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT610HLF',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '1595267d-dc24-451b-a420-c559a74807f9',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT610HLF',
+    'Pearl MCX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '23c6e4c0-2570-4e2e-a714-9339a664351c',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg Venture V7',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '224e586c-39c5-460c-a283-0f4340b8469a',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT810E',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '968c2952-f674-4855-acee-6a24d982ea77',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT610HLF',
+    'Pearl MCX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'fb4f53e8-ca1b-4da4-a6b6-226934bbfcce',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark Vintage1000 58R & STD108HR',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '923d95f7-eb66-4c3c-a5dc-e19bfd30d355',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT810E',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'dae16e59-070c-46c6-a4ce-424acd42c722',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT810E',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '0bcc7d80-1a57-4982-ab67-c65a82ecc2d6',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-450H & SVT-810E',
+    'DW Collector''s Maple Set',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '8364d67d-6de8-4c1b-a70d-9d6e89bef490',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H & SVT810E',
+    'Pearl Reference series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '94354240-95e7-46e7-a3aa-b9e89906cec2',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120","Fender Twin Reverb ''65"}',
+    'Ampeg SVT-450H & SVT810E',
+    'SONOR SQ1 Series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'da2435c5-6c82-4b1a-a3fc-844f4411b222',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '6fc0c3f6-e13b-40da-ad6f-e1cdc5bfa0cc',
+    '{"Positive Grid REACTOR 100"}',
+    'Markbass Little Mark 58R + Standard104HR',
+    'YAMAHA Live Custom Hybrid Oak',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '05bcdee6-c576-4178-ad69-ad489206f105',
+    '{"Fender Hot Rod DeVille 212 IV"}',
+    'Ampeg Venture V3 + SVT-410HLF',
+    'Pearl Session Studio Select',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '65a89f10-6570-4946-a763-4a0786313ae0',
+    '{"Positive Grid REACTOR 100"}',
+    'FENDER Rumble 800 HD + RUMBLE 210 CAB',
+    'SAKAE Evolved Japan Custom Drum',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '9251ac9c-22e3-42f8-ad8f-20ee6e2baf64',
+    '{"Fender Hot Rod DeVille 212 IV"}',
+    'HARTKE LH1000 + HyDrive HL410',
+    'Pearl Session Studio Select',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd38aaabb-ddc3-4ddb-afc2-e22947cc7aab',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120","Fender Tone Master Twin Reverb"}',
+    'Ampeg SVT-3PRO + SVT-810HLF',
+    'YAMAHA Recording Custom',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'f037846b-f9bf-402e-adef-52b53259d265',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'ASHDOWN RM 800 EVOIII + RM 414T EVOIII',
+    'CANOPUS Birch Series Studio kit Plus',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'c1b260d5-e440-4f20-a2d7-06c9c1600e49',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'faecd22f-6a76-4513-a4b6-f81c191b237f',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'e0d4de61-dcda-4638-a0fa-d6eab179084a',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '573b9772-4b4a-420b-aa84-fe0c52b11a05',
+    '{"Positive Grid REACTOR 50","Spark 2 + Spark CAB"}',
+    '',
+    '',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '43ec5944-f044-4be7-a746-146d806677be',
+    '{"Positive Grid REACTOR 50","Spark 2 + Spark CAB"}',
+    '',
+    '',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '44eaa8c3-8612-4fd0-a662-28b07891ec5d',
+    '{"Positive Grid REACTOR 50","Spark 2 + Spark CAB"}',
+    '',
+    '',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'a74efd97-b868-4eb6-a4dc-663637e70ad5',
+    '{"Positive Grid REACTOR 50","Spark 2 + Spark CAB"}',
+    '',
+    '',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd768deaf-a1ca-46e5-ac30-45d73b277fcc',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd6280852-4816-4a0e-a5a0-762ce8eafd3a',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '6533019b-fd2b-4d8a-aebd-b56ab224e6c9',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'markbass little mark iv + Standard104HF',
+    'Pearl MCX series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '54b0db7f-be43-4ec5-a5ba-ef2af688e6e4',
+    '{"Marshall JCM900 4100+1960A"}',
+    'DARKGLASS Microtubes900 + DG410C',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '22555425-4419-4377-a622-18ee665619b0',
+    '{"Marshall JCM900 4100+1960A"}',
+    'Markbass Little Mark Tube + Standard104HF',
+    'Pearl MRP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '3980a7b0-3b56-4f66-a67c-ee7178704557',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark Tube + Standard104HF',
+    'Pearl RFP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'ab6343c8-63ac-4a91-a14f-fc13000d7787',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '2ba2719c-85f6-4f57-a7e2-0186912d1e72',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '4561b432-5fed-410e-ad62-66975be1d700',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '020848cf-8bc0-4949-a864-136f7c0c8958',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'Pearl RFP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '21728d58-0a2f-4098-a168-3399f7df950e',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark Tube + Standard104HF',
+    'Pearl MRP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '15eb1f23-6c10-4f75-ae71-7b6fd2c73b70',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Markbass Little Mark IV',
+    'Pearl RFP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '6d150cc0-3fbd-4758-a9db-f841ecbd0a6f',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'EBS Classic 450 + Classic 810',
+    'Pearl RF series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '66c3c1b7-23d8-4ebd-a2e3-73eadbbaefb1',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'EBS Reidmar502 + ClassicLine810',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '6f48a19d-ea14-4ecf-a6b2-8a53e52b1a57',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark Rocker 500 + Standard108HR',
+    'Pearl RF series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '08e75658-60c5-428c-ad95-339733493a22',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'SONOR SQ1 Series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'a7e05898-4164-4676-ab35-f1e025b787dd',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'aguilar TONE HAMMER500 + DB810',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '59dfe699-342c-4134-a593-e6d1b1746667',
+    '{"Fender Twin Reverb","Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + 810E',
+    'DW Collector''s Set',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '3305287e-91a8-404e-af5f-cc780dd476b8',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'YAMAHA Recording Custom',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '1cb23559-e4ba-4ffe-a3d4-77bfa3df9d35',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark Vintage',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '139685cd-4f49-408c-ac1e-a792c7ac4eda',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT450H + 810E',
+    'DW Collector''s Series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'f569322e-230e-40a6-af4a-8558fe281de8',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Darkglass ALPHA·OMEGA 900 + DG410N',
+    'SJC tour series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '1b7ca359-8081-412d-a8e0-9d5723ac3b9c',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '85224de3-98a2-43e7-a1b3-ae7119dd9565',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS LMR500',
+    'Pearl MRP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '491a3591-821c-446f-a500-4530309a49e4',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Hartke LX8500 + 4.5XL',
+    'Pearl MMP series (12"+13"+16"+22")',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '0934ca19-30e4-4dcf-ae96-9156af433141',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark IV + Standard104HF',
+    'Pearl MMP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '8e7b899c-8131-4585-a4f4-2cc978999701',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark IV + 108HR',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '9cc060a8-c688-40c7-ac55-875f83532f5a',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS LM250 + 108HR',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'c25faf74-4481-414b-ad48-e8e28957775a',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + 810',
+    'SAKAE The Almighty',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '2050b4cd-ac53-4a73-ae44-1e938eb4f771',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '61408f39-68ef-499d-a19b-040bba32b3ee',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark Vintage',
+    'LUDWIG Classic Maple series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '43614990-1111-43b9-a6b2-59e3abc32259',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + 810',
+    'Pearl Reference PURE series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd34b0dc8-2fd8-4e06-a199-dfe00605d145',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'EBS HD360 + ProLine810',
+    'Pearl RFP series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '027254a9-94a6-4958-a18f-816257f362e1',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120"}',
+    'MARKBASS LMR500 + 108HR',
+    'SONOR ProLite series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '5d5bba86-7db2-49df-add9-f27f222d7e8e',
+    '{"Marshall JCM2000 DSL100+1960A","Roland JC-120","Fender Twin Reverb 65"}',
+    'MARKBASS Vintage + 108HR',
+    'DW Collector''s Maple Set',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'b1a5bbb0-9ba2-4e67-afad-d8fdf0d02c70',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'b04149a9-81aa-48f4-aa13-b04959c9d204',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'd236c685-eb13-4bf0-a2e7-f20a8fcddcc8',
+    '{}',
+    '(バンド用アンプ設備なし)',
+    '(ドラムセットなし)',
+    true,
+    '{}',
+    '個人練習・ボーカル録音・DJ機材利用等に特化した小型ブースです。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'f14d626d-c1d1-407c-aaac-8b56f0adc0ea',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Aguilar Tone Hammer 500 + DB410',
+    'SAKAE Evolved',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'afad3f14-8068-43e4-a8a9-96636d515d09',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Darkglass MICROTUBES 500V2 + DG410N + DG210N',
+    'PEARL REFERENCE PURE',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'ce717ec8-2b6b-4dff-a718-6a992b502c72',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + PN-410HLF',
+    'Gretsch Limited Edition USA Custom 5 Piece',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '7f9b520b-fe11-4dca-ac15-920787760df2',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark Vintage + STANDARD104HF',
+    'CANOPUS YAIBA II',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '8013d52f-98a6-492a-a6ee-f4d9d33cc743',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'PJB BP800 + 6B9T',
+    'PEARL Masters Maple GUM',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '892cfbe1-78aa-40e5-a7e1-4d81463adffc',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + SVT810E',
+    'DW Collector''s Maple Set',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'c31796b9-7051-4051-ab84-92ca2a943e1b',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark IV + STANDARD108HR',
+    'PEARL MRS',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '431b51df-8abe-4c82-a959-46e753388a3f',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'Ampeg SVT-3PRO + SVT810E',
+    'SONOR SQ1',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    '3dfa9a10-d175-43ac-a57a-2c8d36a3221c',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'MARKBASS Little Mark IV + STANDARD108HR',
+    'TAMA Starclassic Maple series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時00分スタート。'
+  ) ON CONFLICT (room_id) DO NOTHING;
+
+  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)
+  VALUES (
+    'eed1ebb1-d6d4-4ea5-a4b2-2a4dca51806d',
+    '{"Marshall JCM900 4100+1960A","Roland JC-120"}',
+    'orange 4stroke LTD + OBC810',
+    'DW Collector''s Series',
+    true,
+    '{}',
+    'サウンドスタジオノア標準高品位機材常設。開始時間: 毎時30分スタート。'
   ) ON CONFLICT (room_id) DO NOTHING;
 
 END $$;

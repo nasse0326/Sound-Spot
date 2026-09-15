@@ -5473,7 +5473,7 @@
             "id": "slot-bot-akiba-3107-2026-09-15-2200",
             "start_time": "2026-09-15T22:00:00+09:00",
             "end_time": "2026-09-15T23:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2800
           },
           {
@@ -8182,14 +8182,14 @@
             "id": "slot-bot-akiba-3108-2026-09-16-1000",
             "start_time": "2026-09-16T10:00:00+09:00",
             "end_time": "2026-09-16T11:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3600
           },
           {
             "id": "slot-bot-akiba-3108-2026-09-16-1100",
             "start_time": "2026-09-16T11:00:00+09:00",
             "end_time": "2026-09-16T12:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3600
           },
           {
@@ -13542,14 +13542,14 @@
             "id": "slot-bot-akiba-3110-2026-09-16-1430",
             "start_time": "2026-09-16T14:30:00+09:00",
             "end_time": "2026-09-16T15:30:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2800
           },
           {
             "id": "slot-bot-akiba-3110-2026-09-16-1530",
             "start_time": "2026-09-16T15:30:00+09:00",
             "end_time": "2026-09-16T16:30:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2800
           },
           {
@@ -16207,7 +16207,7 @@
             "id": "slot-bot-akiba-3111-2026-09-16-1430",
             "start_time": "2026-09-16T14:30:00+09:00",
             "end_time": "2026-09-16T15:30:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2200
           },
           {
@@ -25003,14 +25003,14 @@
             "id": "slot-202st-2026-09-15-2200",
             "start_time": "2026-09-15T22:00:00+09:00",
             "end_time": "2026-09-15T23:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2420
           },
           {
             "id": "slot-202st-2026-09-15-2300",
             "start_time": "2026-09-15T23:00:00+09:00",
             "end_time": "2026-09-15T24:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2420
           },
           {
@@ -25136,14 +25136,14 @@
             "id": "slot-202st-2026-09-16-2400",
             "start_time": "2026-09-16T24:00:00+09:00",
             "end_time": "2026-09-16T25:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2420
           },
           {
             "id": "slot-202st-2026-09-16-2500",
             "start_time": "2026-09-16T25:00:00+09:00",
             "end_time": "2026-09-16T26:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2420
           },
           {
@@ -25178,13 +25178,6 @@
             "id": "slot-202st-2026-09-16-3000",
             "start_time": "2026-09-16T30:00:00+09:00",
             "end_time": "2026-09-16T31:00:00+09:00",
-            "status": "BOOKED",
-            "price": 2420
-          },
-          {
-            "id": "slot-202st-2026-09-16-3100",
-            "start_time": "2026-09-16T31:00:00+09:00",
-            "end_time": "2026-09-16T32:00:00+09:00",
             "status": "BOOKED",
             "price": 2420
           },
@@ -45602,21 +45595,21 @@
             "id": "slot-303st-2026-09-16-1900",
             "start_time": "2026-09-16T19:00:00+09:00",
             "end_time": "2026-09-16T20:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
             "id": "slot-303st-2026-09-16-2000",
             "start_time": "2026-09-16T20:00:00+09:00",
             "end_time": "2026-09-16T21:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
             "id": "slot-303st-2026-09-16-2100",
             "start_time": "2026-09-16T21:00:00+09:00",
             "end_time": "2026-09-16T22:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
@@ -45637,7 +45630,7 @@
             "id": "slot-303st-2026-09-16-2400",
             "start_time": "2026-09-16T24:00:00+09:00",
             "end_time": "2026-09-16T25:00:00+09:00",
-            "status": "BOOKED",
+            "status": "AVAILABLE",
             "price": 3410
           },
           {
@@ -45651,20 +45644,13 @@
             "id": "slot-303st-2026-09-16-2600",
             "start_time": "2026-09-16T26:00:00+09:00",
             "end_time": "2026-09-16T27:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
             "id": "slot-303st-2026-09-16-2700",
             "start_time": "2026-09-16T27:00:00+09:00",
             "end_time": "2026-09-16T28:00:00+09:00",
-            "status": "BOOKED",
-            "price": 3410
-          },
-          {
-            "id": "slot-303st-2026-09-16-2800",
-            "start_time": "2026-09-16T28:00:00+09:00",
-            "end_time": "2026-09-16T29:00:00+09:00",
             "status": "BOOKED",
             "price": 3410
           },
@@ -49515,76 +49501,27 @@
             "id": "slot-304st-2026-09-24-2500",
             "start_time": "2026-09-24T25:00:00+09:00",
             "end_time": "2026-09-24T26:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
             "id": "slot-304st-2026-09-24-2600",
             "start_time": "2026-09-24T26:00:00+09:00",
             "end_time": "2026-09-24T27:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
             "id": "slot-304st-2026-09-24-2700",
             "start_time": "2026-09-24T27:00:00+09:00",
             "end_time": "2026-09-24T28:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3410
           },
           {
             "id": "slot-304st-2026-09-24-2800",
             "start_time": "2026-09-24T28:00:00+09:00",
             "end_time": "2026-09-24T29:00:00+09:00",
-            "status": "AVAILABLE",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-2900",
-            "start_time": "2026-09-24T29:00:00+09:00",
-            "end_time": "2026-09-24T30:00:00+09:00",
-            "status": "AVAILABLE",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-3000",
-            "start_time": "2026-09-24T30:00:00+09:00",
-            "end_time": "2026-09-24T31:00:00+09:00",
-            "status": "AVAILABLE",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-3100",
-            "start_time": "2026-09-24T31:00:00+09:00",
-            "end_time": "2026-09-24T32:00:00+09:00",
-            "status": "AVAILABLE",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-3200",
-            "start_time": "2026-09-24T32:00:00+09:00",
-            "end_time": "2026-09-24T33:00:00+09:00",
-            "status": "AVAILABLE",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-3300",
-            "start_time": "2026-09-24T33:00:00+09:00",
-            "end_time": "2026-09-24T34:00:00+09:00",
-            "status": "AVAILABLE",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-3400",
-            "start_time": "2026-09-24T34:00:00+09:00",
-            "end_time": "2026-09-24T35:00:00+09:00",
-            "status": "BOOKED",
-            "price": 3410
-          },
-          {
-            "id": "slot-304st-2026-09-24-3500",
-            "start_time": "2026-09-24T35:00:00+09:00",
-            "end_time": "2026-09-24T36:00:00+09:00",
             "status": "BOOKED",
             "price": 3410
           },
@@ -51559,21 +51496,21 @@
             "id": "slot-305st-2026-09-15-2500",
             "start_time": "2026-09-15T25:00:00+09:00",
             "end_time": "2026-09-15T26:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3080
           },
           {
             "id": "slot-305st-2026-09-15-2600",
             "start_time": "2026-09-15T26:00:00+09:00",
             "end_time": "2026-09-15T27:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3080
           },
           {
             "id": "slot-305st-2026-09-15-2700",
             "start_time": "2026-09-15T27:00:00+09:00",
             "end_time": "2026-09-15T28:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3080
           },
           {
@@ -58318,7 +58255,7 @@
             "id": "slot-og-akiba-Bスタジオ-20260916-0000",
             "start_time": "2026-09-16T00:00:00+09:00",
             "end_time": "2026-09-16T01:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 4070
           },
           {
@@ -58353,35 +58290,35 @@
             "id": "slot-og-akiba-Bスタジオ-20260916-0500",
             "start_time": "2026-09-16T05:00:00+09:00",
             "end_time": "2026-09-16T06:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 4070
           },
           {
             "id": "slot-og-akiba-Bスタジオ-20260916-0600",
             "start_time": "2026-09-16T06:00:00+09:00",
             "end_time": "2026-09-16T07:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 4070
           },
           {
             "id": "slot-og-akiba-Bスタジオ-20260916-0700",
             "start_time": "2026-09-16T07:00:00+09:00",
             "end_time": "2026-09-16T08:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 4070
           },
           {
             "id": "slot-og-akiba-Bスタジオ-20260916-0800",
             "start_time": "2026-09-16T08:00:00+09:00",
             "end_time": "2026-09-16T09:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 4070
           },
           {
             "id": "slot-og-akiba-Bスタジオ-20260916-0900",
             "start_time": "2026-09-16T09:00:00+09:00",
             "end_time": "2026-09-16T10:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 4070
           },
           {
@@ -61866,7 +61803,7 @@
             "id": "slot-og-akiba-Cスタジオ-20260916-0000",
             "start_time": "2026-09-16T00:00:00+09:00",
             "end_time": "2026-09-16T01:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3050
           },
           {
@@ -61901,35 +61838,35 @@
             "id": "slot-og-akiba-Cスタジオ-20260916-0500",
             "start_time": "2026-09-16T05:00:00+09:00",
             "end_time": "2026-09-16T06:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3050
           },
           {
             "id": "slot-og-akiba-Cスタジオ-20260916-0600",
             "start_time": "2026-09-16T06:00:00+09:00",
             "end_time": "2026-09-16T07:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3050
           },
           {
             "id": "slot-og-akiba-Cスタジオ-20260916-0700",
             "start_time": "2026-09-16T07:00:00+09:00",
             "end_time": "2026-09-16T08:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3050
           },
           {
             "id": "slot-og-akiba-Cスタジオ-20260916-0800",
             "start_time": "2026-09-16T08:00:00+09:00",
             "end_time": "2026-09-16T09:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3050
           },
           {
             "id": "slot-og-akiba-Cスタジオ-20260916-0900",
             "start_time": "2026-09-16T09:00:00+09:00",
             "end_time": "2026-09-16T10:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3050
           },
           {
@@ -65414,7 +65351,7 @@
             "id": "slot-og-akiba-Dスタジオ-20260916-0000",
             "start_time": "2026-09-16T00:00:00+09:00",
             "end_time": "2026-09-16T01:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2790
           },
           {
@@ -65449,35 +65386,35 @@
             "id": "slot-og-akiba-Dスタジオ-20260916-0500",
             "start_time": "2026-09-16T05:00:00+09:00",
             "end_time": "2026-09-16T06:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2790
           },
           {
             "id": "slot-og-akiba-Dスタジオ-20260916-0600",
             "start_time": "2026-09-16T06:00:00+09:00",
             "end_time": "2026-09-16T07:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2790
           },
           {
             "id": "slot-og-akiba-Dスタジオ-20260916-0700",
             "start_time": "2026-09-16T07:00:00+09:00",
             "end_time": "2026-09-16T08:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2790
           },
           {
             "id": "slot-og-akiba-Dスタジオ-20260916-0800",
             "start_time": "2026-09-16T08:00:00+09:00",
             "end_time": "2026-09-16T09:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2790
           },
           {
             "id": "slot-og-akiba-Dスタジオ-20260916-0900",
             "start_time": "2026-09-16T09:00:00+09:00",
             "end_time": "2026-09-16T10:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2790
           },
           {
@@ -68962,7 +68899,7 @@
             "id": "slot-og-akiba-Eスタジオ-20260916-0000",
             "start_time": "2026-09-16T00:00:00+09:00",
             "end_time": "2026-09-16T01:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2720
           },
           {
@@ -68997,35 +68934,35 @@
             "id": "slot-og-akiba-Eスタジオ-20260916-0500",
             "start_time": "2026-09-16T05:00:00+09:00",
             "end_time": "2026-09-16T06:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2720
           },
           {
             "id": "slot-og-akiba-Eスタジオ-20260916-0600",
             "start_time": "2026-09-16T06:00:00+09:00",
             "end_time": "2026-09-16T07:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2720
           },
           {
             "id": "slot-og-akiba-Eスタジオ-20260916-0700",
             "start_time": "2026-09-16T07:00:00+09:00",
             "end_time": "2026-09-16T08:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2720
           },
           {
             "id": "slot-og-akiba-Eスタジオ-20260916-0800",
             "start_time": "2026-09-16T08:00:00+09:00",
             "end_time": "2026-09-16T09:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2720
           },
           {
             "id": "slot-og-akiba-Eスタジオ-20260916-0900",
             "start_time": "2026-09-16T09:00:00+09:00",
             "end_time": "2026-09-16T10:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 2720
           },
           {
@@ -72511,7 +72448,7 @@
             "id": "slot-og-akiba-Gスタジオ-20260916-0000",
             "start_time": "2026-09-16T00:00:00+09:00",
             "end_time": "2026-09-16T01:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3820
           },
           {
@@ -72546,35 +72483,35 @@
             "id": "slot-og-akiba-Gスタジオ-20260916-0500",
             "start_time": "2026-09-16T05:00:00+09:00",
             "end_time": "2026-09-16T06:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3820
           },
           {
             "id": "slot-og-akiba-Gスタジオ-20260916-0600",
             "start_time": "2026-09-16T06:00:00+09:00",
             "end_time": "2026-09-16T07:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3820
           },
           {
             "id": "slot-og-akiba-Gスタジオ-20260916-0700",
             "start_time": "2026-09-16T07:00:00+09:00",
             "end_time": "2026-09-16T08:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3820
           },
           {
             "id": "slot-og-akiba-Gスタジオ-20260916-0800",
             "start_time": "2026-09-16T08:00:00+09:00",
             "end_time": "2026-09-16T09:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3820
           },
           {
             "id": "slot-og-akiba-Gスタジオ-20260916-0900",
             "start_time": "2026-09-16T09:00:00+09:00",
             "end_time": "2026-09-16T10:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 3820
           },
           {
@@ -76058,7 +75995,7 @@
             "id": "slot-og-akiba-Music Innスタジオ-20260916-0000",
             "start_time": "2026-09-16T00:00:00+09:00",
             "end_time": "2026-09-16T01:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 10640
           },
           {
@@ -76093,35 +76030,35 @@
             "id": "slot-og-akiba-Music Innスタジオ-20260916-0500",
             "start_time": "2026-09-16T05:00:00+09:00",
             "end_time": "2026-09-16T06:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 10640
           },
           {
             "id": "slot-og-akiba-Music Innスタジオ-20260916-0600",
             "start_time": "2026-09-16T06:00:00+09:00",
             "end_time": "2026-09-16T07:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 10640
           },
           {
             "id": "slot-og-akiba-Music Innスタジオ-20260916-0700",
             "start_time": "2026-09-16T07:00:00+09:00",
             "end_time": "2026-09-16T08:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 10640
           },
           {
             "id": "slot-og-akiba-Music Innスタジオ-20260916-0800",
             "start_time": "2026-09-16T08:00:00+09:00",
             "end_time": "2026-09-16T09:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 10640
           },
           {
             "id": "slot-og-akiba-Music Innスタジオ-20260916-0900",
             "start_time": "2026-09-16T09:00:00+09:00",
             "end_time": "2026-09-16T10:00:00+09:00",
-            "status": "AVAILABLE",
+            "status": "BOOKED",
             "price": 10640
           },
           {

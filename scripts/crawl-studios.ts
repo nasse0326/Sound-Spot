@@ -5,7 +5,6 @@
  */
 import fs from 'fs';
 import path from 'path';
-import crypto from 'crypto';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
@@ -14,6 +13,7 @@ import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays } from './lib/o
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
+import { toUUID } from './lib/id-utils';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -30,17 +30,6 @@ if (supabaseUrl && supabaseKey) {
   } catch (err: any) {
     console.warn(`⚠️ [Supabase] クライアント初期化をスキップしました: ${err?.message}`);
   }
-}
-
-function toUUID(str: string): string {
-  const hash = crypto.createHash('md5').update(str).digest('hex');
-  return [
-    hash.substring(0, 8),
-    hash.substring(8, 12),
-    '4' + hash.substring(13, 16),
-    'a' + hash.substring(17, 20),
-    hash.substring(20, 32)
-  ].join('-');
 }
 
 /**
@@ -326,7 +315,7 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
     console.log('⚡ [Supabase Sync] ゲートウェイ渋谷の最新スロットをSupabaseに同期中...');
     const dbSlots: any[] = [];
     studioObject.rooms.forEach((r: any) => {
-      const roomUUID = toUUID('gw-' + r.id);
+      const roomUUID = toUUID(r.id);
       (r.slots || []).forEach((s: any) => {
         dbSlots.push({
           room_id: roomUUID,
@@ -511,7 +500,7 @@ async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
         // （ペンタは電話予約主体で、新宿店のみ土日祝限定でこのボードを公開しているため正常な挙動）。
         const dbSlots: any[] = [];
         for (const room of pentaRooms) {
-          const roomId = toUUID(`penta-shinjuku-${room.id}`);
+          const roomId = toUUID(room.id);
           for (const s of room.slots) {
             dbSlots.push({
               room_id: roomId,

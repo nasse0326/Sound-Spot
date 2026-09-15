@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T11:25:00.374Z",
+  "updatedAt": "2026-09-15T12:48:05.694Z",
   "rooms": [
     {
       "id": "node-shinjuku-3Cst",
@@ -3627,7 +3627,7 @@
           "id": "node-4Est-2026-09-15-2100",
           "start_time": "2026-09-15T21:00:00+09:00",
           "end_time": "2026-09-15T22:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-4Est-2026-09-15-2200",
@@ -5399,7 +5399,7 @@
           "id": "node-4Fst-2026-09-15-2100",
           "start_time": "2026-09-15T21:00:00+09:00",
           "end_time": "2026-09-15T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-4Fst-2026-09-15-2200",
@@ -5591,13 +5591,13 @@
           "id": "node-4Fst-2026-09-18-1100",
           "start_time": "2026-09-18T11:00:00+09:00",
           "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-4Fst-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-4Fst-2026-09-18-1300",

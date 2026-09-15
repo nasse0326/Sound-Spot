@@ -68,7 +68,7 @@
   - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`
   - `NOAH_LOGIN_ID`, `NOAH_PASSWORD`: ノア自動再ログイン用認証情報
 - **Vercel ビルド枠消費ゼロ化（アーキテクチャ刷新）**:
-  1. クローラーが取得した都内17店舗・188部屋の最新空き枠データを、Supabase の `availability_slots` テーブルへ直接一括Upsert同期。
+  1. クローラーが取得した都内17店舗・191部屋の最新空き枠データを、Supabase の `availability_slots` テーブルへ直接一括Upsert同期。
   2. Git へのコミットには `[skip ci]` を付与（Vercelの自動フルビルドをスキップ）。
   3. フロントエンド（`src/app/page.tsx`）は `/api/studios` 経由で最新DBデータを動的に取得。初期描画時はローカルキャッシュをフォールバックとして即座に描画（表示遅延・ちらつきゼロ）。
   4. ➔ **Vercelの月間ビルド枠（300回等の制限）の消費を完全に「ゼロ」に抑えつつ、定時巡回による自動データ更新を実現！**
@@ -113,7 +113,12 @@ flowchart TD
 > **デモ用ダミーデータの完全排除方針**:
 > 初回プロトタイプ検証用に使用していたダミースタジオ（吉祥寺・千葉・柏）および乱数ハッシュによる架空スロット生成ロジックは**完全に撤廃**しました。
 > また、初期プロトタイプ開発時の残骸データであった架空の「スタジオペンタ 新宿南口店」や初期モックUUID・不要コンバーターを完全削除しました。
-> 現在SoundSpotに登録・表示されるスタジオは、都内3大エリア（渋谷 8店舗・新宿 4店舗・秋葉原 5店舗）の**実在する17店舗・188部屋の公式スペックおよび実データ（公式API・公開カレンダー巡回・リアルタイム空き状況ボード・電話受付）のみ**で純粋に構成されています。
+> 現在SoundSpotに登録・表示されるスタジオは、都内3大エリア（渋谷 8店舗・新宿 4店舗・秋葉原 5店舗）の**実在する17店舗・191部屋の公式スペックおよび実データ（公式API・公開カレンダー巡回・リアルタイム空き状況ボード・電話受付）のみ**で純粋に構成されています。
+
+> **`rooms.id` ⇔ `availability_slots.room_id` の採番方式統一（2026-09-15）**:
+> `supabase/seed.sql`（`rooms`/`room_equipments`の静的マスター）と、クローラーが書き込む`availability_slots.room_id`は、以前は別々の方法でUUIDが割り当てられており、Gateway渋谷以外のほぼ全店舗でIDが一致せず外部キー制約違反でスロット同期が静かに失敗していた（`/api/studios`がSupabase由来の「部屋はあるがスロットが空」のデータをそのまま返してしまう問題も併発）。
+> `scripts/lib/id-utils.ts`の`toUUID(canonicalId)`に採番方式を一本化し、各クローラー（Gateway・Penta等に存在した二重プレフィックスのバグも含め）が使う`canonicalId`文字列と、`supabase/seed.sql`が`rooms.id`を生成する際の入力文字列を完全に一致させた。今後、部屋を追加・変更する際は各スタジオのマスターデータ（`src/config/noah-master.ts`や各`*-real.json`）の`id`フィールドを変更したら、`supabase/seed.sql`側も対応する`toUUID(id)`で再生成すること。
+> 併せて、PostgRESTの1クエリ最大1000行制限により1日分のスロットが1000件を超える場合にデータが欠落する問題（`src/lib/supabase/api.ts`）も`range`によるページングで解消した。
 
 ---
 
@@ -703,6 +708,7 @@ flowchart TD
 | `docs/SYSTEM_DESIGN_AND_SPECS.md` | ドキュメント | **本ドキュメント**（設計仕様・運用ルール・エリア調査マップ） |
 | `src/config/supported-studios.ts` | 設定 (マスター) | **都内17店舗（渋谷・新宿・秋葉原）の対応スタジオ定義データ**（エリア、部屋数、連携方式、設備、営業時間、連絡先） |
 | `scripts/crawl-studios.ts` | スクリプト | **自動定期巡回クローラー統合エントリーポイント**（渋谷・新宿・秋葉原の全スタジオをスライディングウィンドウ21日間で自動巡回・DB/JSON同期） |
+| `scripts/lib/id-utils.ts` | モジュール (単一の真実源) | **`rooms.id` / `availability_slots.room_id`共通の決定的UUID採番関数**（`toUUID(canonicalId)`）。`scripts/crawl-studios.ts`と`supabase/seed.sql`生成の両方がこの関数の入出力に一致させる前提 |
 | `scripts/crawl-ongakukan-shinjuku.ts` | スクリプト | **スタジオ音楽館 新宿西口店専用巡回スクリプト**（ajg.jp / 21日間全7部屋自動パース） |
 | `scripts/lib/reserve1-fetcher.ts` | モジュール | **Reserve1 ASP用超軽量スクレイパー**（Node fetch / GOODMAN、ゲートウェイ渋谷） |
 | `scripts/lib/bot-fetcher.ts` | モジュール | **BASS ON TOP（スタジオル）用超軽量スクレイパー**（Node fetch / 秋葉原昭和通り口店） |

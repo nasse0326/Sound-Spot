@@ -31,14 +31,29 @@ export async function getRoomsWithSlotsFromSupabase(targetDate: string, area: st
     }
 
     // 2. 指定日のスロットを取得 (JST 00:00〜23:59:59 に相当する範囲)
+    // PostgRESTは1回のクエリで最大1000行までしか返さないため、1日分のスロットが
+    // 1000件を超える場合（全店舗合計では容易に超える）に備えてrangeでページングする。
     const startRange = `${targetDate}T00:00:00+09:00`;
     const endRange = `${targetDate}T23:59:59+09:00`;
 
-    const { data: slotsData, error: slotsError } = await supabase
-      .from('availability_slots')
-      .select('*')
-      .gte('start_time', startRange)
-      .lte('start_time', endRange);
+    let slotsData: any[] = [];
+    let slotsError: any = null;
+    const pageSize = 1000;
+    for (let from = 0; ; from += pageSize) {
+      const { data: page, error } = await supabase
+        .from('availability_slots')
+        .select('*')
+        .gte('start_time', startRange)
+        .lte('start_time', endRange)
+        .range(from, from + pageSize - 1);
+      if (error) {
+        slotsError = error;
+        break;
+      }
+      if (!page || page.length === 0) break;
+      slotsData = slotsData.concat(page);
+      if (page.length < pageSize) break;
+    }
 
     const slotsByRoomId: Record<string, AvailabilitySlot[]> = {};
     if (!slotsError && slotsData) {

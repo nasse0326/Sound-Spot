@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T11:58:55.739Z",
+  "updatedAt": "2026-09-15T12:51:14.153Z",
   "rooms": [
     {
       "id": "noah-shibuya-a1",
@@ -254,7 +254,7 @@
           "id": "slot-noah-shibuya-a1-20260916-1630",
           "start_time": "2026-09-16T16:30:00+09:00",
           "end_time": "2026-09-16T17:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-a1-20260916-1730",
@@ -410,13 +410,13 @@
           "id": "slot-noah-shibuya-a1-20260917-1830",
           "start_time": "2026-09-17T18:30:00+09:00",
           "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-a1-20260917-1930",
           "start_time": "2026-09-17T19:30:00+09:00",
           "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-a1-20260917-2030",
@@ -3259,19 +3259,19 @@
           "id": "slot-noah-shibuya-a2-20260916-1100",
           "start_time": "2026-09-16T11:00:00+09:00",
           "end_time": "2026-09-16T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-a2-20260916-1200",
           "start_time": "2026-09-16T12:00:00+09:00",
           "end_time": "2026-09-16T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-a2-20260916-1300",
           "start_time": "2026-09-16T13:00:00+09:00",
           "end_time": "2026-09-16T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-a2-20260916-1400",
@@ -10825,13 +10825,13 @@
           "id": "slot-noah-shibuya-g2-20260926-1200",
           "start_time": "2026-09-26T12:00:00+09:00",
           "end_time": "2026-09-26T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-g2-20260926-1300",
           "start_time": "2026-09-26T13:00:00+09:00",
           "end_time": "2026-09-26T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-g2-20260926-1400",
@@ -15449,7 +15449,7 @@
           "id": "slot-noah-shibuya-s-20260916-1100",
           "start_time": "2026-09-16T11:00:00+09:00",
           "end_time": "2026-09-16T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-s-20260916-1200",
@@ -15479,19 +15479,19 @@
           "id": "slot-noah-shibuya-s-20260916-1600",
           "start_time": "2026-09-16T16:00:00+09:00",
           "end_time": "2026-09-16T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-s-20260916-1700",
           "start_time": "2026-09-16T17:00:00+09:00",
           "end_time": "2026-09-16T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-s-20260916-1800",
           "start_time": "2026-09-16T18:00:00+09:00",
           "end_time": "2026-09-16T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-s-20260916-1900",
@@ -21525,13 +21525,13 @@
           "id": "slot-noah-shibuya-booth2-20260916-1230",
           "start_time": "2026-09-16T12:30:00+09:00",
           "end_time": "2026-09-16T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-booth2-20260916-1330",
           "start_time": "2026-09-16T13:30:00+09:00",
           "end_time": "2026-09-16T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-booth2-20260916-1430",
@@ -24560,13 +24560,13 @@
           "id": "slot-noah-shibuya-recstudio-20260916-1230",
           "start_time": "2026-09-16T12:30:00+09:00",
           "end_time": "2026-09-16T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-recstudio-20260916-1330",
           "start_time": "2026-09-16T13:30:00+09:00",
           "end_time": "2026-09-16T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya-recstudio-20260916-1430",
@@ -36688,7 +36688,7 @@
           "id": "slot-noah-shibuya1-a5st-20260916-1030",
           "start_time": "2026-09-16T10:30:00+09:00",
           "end_time": "2026-09-16T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya1-a5st-20260916-1130",
@@ -36724,7 +36724,7 @@
           "id": "slot-noah-shibuya1-a5st-20260916-1630",
           "start_time": "2026-09-16T16:30:00+09:00",
           "end_time": "2026-09-16T17:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya1-a5st-20260916-1730",
@@ -36742,7 +36742,7 @@
           "id": "slot-noah-shibuya1-a5st-20260916-1930",
           "start_time": "2026-09-16T19:30:00+09:00",
           "end_time": "2026-09-16T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya1-a5st-20260916-2030",
@@ -48918,13 +48918,13 @@
           "id": "slot-noah-shibuya2-a1st-20260916-1500",
           "start_time": "2026-09-16T15:00:00+09:00",
           "end_time": "2026-09-16T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a1st-20260916-1600",
           "start_time": "2026-09-16T16:00:00+09:00",
           "end_time": "2026-09-16T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a1st-20260916-1700",
@@ -51929,7 +51929,7 @@
           "id": "slot-noah-shibuya2-a2st-20260916-1100",
           "start_time": "2026-09-16T11:00:00+09:00",
           "end_time": "2026-09-16T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a2st-20260916-1200",
@@ -51971,13 +51971,13 @@
           "id": "slot-noah-shibuya2-a2st-20260916-1800",
           "start_time": "2026-09-16T18:00:00+09:00",
           "end_time": "2026-09-16T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a2st-20260916-1900",
           "start_time": "2026-09-16T19:00:00+09:00",
           "end_time": "2026-09-16T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a2st-20260916-2000",
@@ -55000,13 +55000,13 @@
           "id": "slot-noah-shibuya2-a3st-20260916-1730",
           "start_time": "2026-09-16T17:30:00+09:00",
           "end_time": "2026-09-16T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a3st-20260916-1830",
           "start_time": "2026-09-16T18:30:00+09:00",
           "end_time": "2026-09-16T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a3st-20260916-1930",
@@ -55294,13 +55294,13 @@
           "id": "slot-noah-shibuya2-a3st-20260918-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a3st-20260918-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-a3st-20260918-2030",
@@ -61064,7 +61064,7 @@
           "id": "slot-noah-shibuya2-g2st-20260916-1600",
           "start_time": "2026-09-16T16:00:00+09:00",
           "end_time": "2026-09-16T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-g2st-20260916-1700",
@@ -61088,7 +61088,7 @@
           "id": "slot-noah-shibuya2-g2st-20260916-2000",
           "start_time": "2026-09-16T20:00:00+09:00",
           "end_time": "2026-09-16T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya2-g2st-20260916-2100",
@@ -79310,19 +79310,19 @@
           "id": "slot-noah-shibuya3-a4st-20260916-1200",
           "start_time": "2026-09-16T12:00:00+09:00",
           "end_time": "2026-09-16T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-a4st-20260916-1300",
           "start_time": "2026-09-16T13:00:00+09:00",
           "end_time": "2026-09-16T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-a4st-20260916-1400",
           "start_time": "2026-09-16T14:00:00+09:00",
           "end_time": "2026-09-16T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-a4st-20260916-1500",
@@ -88477,19 +88477,19 @@
           "id": "slot-noah-shibuya3-dj3-20260916-1930",
           "start_time": "2026-09-16T19:30:00+09:00",
           "end_time": "2026-09-16T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-dj3-20260916-2030",
           "start_time": "2026-09-16T20:30:00+09:00",
           "end_time": "2026-09-16T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-dj3-20260916-2130",
           "start_time": "2026-09-16T21:30:00+09:00",
           "end_time": "2026-09-16T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-dj3-20260916-2230",
@@ -93060,13 +93060,13 @@
           "id": "slot-noah-shibuya3-booth1-20260927-1300",
           "start_time": "2026-09-27T13:00:00+09:00",
           "end_time": "2026-09-27T14:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-noah-shibuya3-booth1-20260927-1400",
           "start_time": "2026-09-27T14:00:00+09:00",
           "end_time": "2026-09-27T15:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-noah-shibuya3-booth1-20260927-1500",
@@ -103604,13 +103604,13 @@
           "id": "slot-noah-shibuya3-recbooth-20260916-1130",
           "start_time": "2026-09-16T11:30:00+09:00",
           "end_time": "2026-09-16T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-recbooth-20260916-1230",
           "start_time": "2026-09-16T12:30:00+09:00",
           "end_time": "2026-09-16T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shibuya3-recbooth-20260916-1330",
@@ -109662,7 +109662,7 @@
           "id": "slot-noah-shinjuku-s1st-20260916-0930",
           "start_time": "2026-09-16T09:30:00+09:00",
           "end_time": "2026-09-16T10:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-s1st-20260916-1030",
@@ -115798,7 +115798,7 @@
           "id": "slot-noah-shinjuku-s3st-20260916-2000",
           "start_time": "2026-09-16T20:00:00+09:00",
           "end_time": "2026-09-16T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-s3st-20260916-2100",
@@ -118809,13 +118809,13 @@
           "id": "slot-noah-shinjuku-a1st-20260916-1630",
           "start_time": "2026-09-16T16:30:00+09:00",
           "end_time": "2026-09-16T17:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a1st-20260916-1730",
           "start_time": "2026-09-16T17:30:00+09:00",
           "end_time": "2026-09-16T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a1st-20260916-1830",
@@ -121730,7 +121730,7 @@
           "id": "slot-noah-shinjuku-a2st-20260915-2130",
           "start_time": "2026-09-15T21:30:00+09:00",
           "end_time": "2026-09-15T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a2st-20260915-2230",
@@ -124885,13 +124885,13 @@
           "id": "slot-noah-shinjuku-a3st-20260916-1730",
           "start_time": "2026-09-16T17:30:00+09:00",
           "end_time": "2026-09-16T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a3st-20260916-1830",
           "start_time": "2026-09-16T18:30:00+09:00",
           "end_time": "2026-09-16T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a3st-20260916-1930",
@@ -127920,7 +127920,7 @@
           "id": "slot-noah-shinjuku-a5st-20260916-1730",
           "start_time": "2026-09-16T17:30:00+09:00",
           "end_time": "2026-09-16T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a5st-20260916-1830",
@@ -129942,7 +129942,7 @@
           "id": "slot-noah-shinjuku-a5st-20260930-1830",
           "start_time": "2026-09-30T18:30:00+09:00",
           "end_time": "2026-09-30T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a5st-20260930-1930",
@@ -134566,19 +134566,19 @@
           "id": "slot-noah-shinjuku-a7st-20260920-1700",
           "start_time": "2026-09-20T17:00:00+09:00",
           "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a7st-20260920-1800",
           "start_time": "2026-09-20T18:00:00+09:00",
           "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a7st-20260920-1900",
           "start_time": "2026-09-20T19:00:00+09:00",
           "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-a7st-20260920-2000",
@@ -136911,7 +136911,7 @@
           "id": "slot-noah-shinjuku-g1st-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-g1st-20260915-2300",
@@ -143083,19 +143083,19 @@
           "id": "slot-noah-shinjuku-g3st-20260916-1500",
           "start_time": "2026-09-16T15:00:00+09:00",
           "end_time": "2026-09-16T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-g3st-20260916-1600",
           "start_time": "2026-09-16T16:00:00+09:00",
           "end_time": "2026-09-16T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-g3st-20260916-1700",
           "start_time": "2026-09-16T17:00:00+09:00",
           "end_time": "2026-09-16T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-g3st-20260916-1800",
@@ -146180,19 +146180,19 @@
           "id": "slot-noah-shinjuku-recstudio-20260916-1200",
           "start_time": "2026-09-16T12:00:00+09:00",
           "end_time": "2026-09-16T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-recstudio-20260916-1300",
           "start_time": "2026-09-16T13:00:00+09:00",
           "end_time": "2026-09-16T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-recstudio-20260916-1400",
           "start_time": "2026-09-16T14:00:00+09:00",
           "end_time": "2026-09-16T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-shinjuku-recstudio-20260916-1500",
@@ -155303,7 +155303,7 @@
           "id": "slot-noah-akihabara-a3st-20260916-1530",
           "start_time": "2026-09-16T15:30:00+09:00",
           "end_time": "2026-09-16T16:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-a3st-20260916-1630",
@@ -157883,13 +157883,13 @@
           "id": "slot-noah-akihabara-a3st-20261004-1330",
           "start_time": "2026-10-04T13:30:00+09:00",
           "end_time": "2026-10-04T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-a3st-20261004-1430",
           "start_time": "2026-10-04T14:30:00+09:00",
           "end_time": "2026-10-04T15:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-a3st-20261004-1530",
@@ -158320,25 +158320,25 @@
           "id": "slot-noah-akihabara-g1st-20260916-1200",
           "start_time": "2026-09-16T12:00:00+09:00",
           "end_time": "2026-09-16T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g1st-20260916-1300",
           "start_time": "2026-09-16T13:00:00+09:00",
           "end_time": "2026-09-16T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g1st-20260916-1400",
           "start_time": "2026-09-16T14:00:00+09:00",
           "end_time": "2026-09-16T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g1st-20260916-1500",
           "start_time": "2026-09-16T15:00:00+09:00",
           "end_time": "2026-09-16T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g1st-20260916-1600",
@@ -161265,7 +161265,7 @@
           "id": "slot-noah-akihabara-g2st-20260915-2130",
           "start_time": "2026-09-15T21:30:00+09:00",
           "end_time": "2026-09-15T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g2st-20260915-2230",
@@ -161325,7 +161325,7 @@
           "id": "slot-noah-akihabara-g2st-20260916-0730",
           "start_time": "2026-09-16T07:30:00+09:00",
           "end_time": "2026-09-16T08:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g2st-20260916-0830",
@@ -161355,19 +161355,19 @@
           "id": "slot-noah-akihabara-g2st-20260916-1230",
           "start_time": "2026-09-16T12:30:00+09:00",
           "end_time": "2026-09-16T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g2st-20260916-1330",
           "start_time": "2026-09-16T13:30:00+09:00",
           "end_time": "2026-09-16T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g2st-20260916-1430",
           "start_time": "2026-09-16T14:30:00+09:00",
           "end_time": "2026-09-16T15:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g2st-20260916-1530",
@@ -161409,7 +161409,7 @@
           "id": "slot-noah-akihabara-g2st-20260916-2130",
           "start_time": "2026-09-16T21:30:00+09:00",
           "end_time": "2026-09-16T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-g2st-20260916-2230",
@@ -164306,13 +164306,13 @@
           "id": "slot-noah-akihabara-gsst-20260915-2200",
           "start_time": "2026-09-15T22:00:00+09:00",
           "end_time": "2026-09-15T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-gsst-20260915-2300",
           "start_time": "2026-09-15T23:00:00+09:00",
           "end_time": "2026-09-16T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-gsst-20260916-0000",
@@ -164444,13 +164444,13 @@
           "id": "slot-noah-akihabara-gsst-20260916-2100",
           "start_time": "2026-09-16T21:00:00+09:00",
           "end_time": "2026-09-16T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-gsst-20260916-2200",
           "start_time": "2026-09-16T22:00:00+09:00",
           "end_time": "2026-09-16T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-gsst-20260916-2300",
@@ -174547,7 +174547,7 @@
           "id": "slot-noah-akihabara-booth2-20260923-1130",
           "start_time": "2026-09-23T11:30:00+09:00",
           "end_time": "2026-09-23T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-akihabara-booth2-20260923-1230",
@@ -185661,13 +185661,13 @@
           "id": "slot-noah-ochanomizu-a3st-20260916-0830",
           "start_time": "2026-09-16T08:30:00+09:00",
           "end_time": "2026-09-16T09:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-a3st-20260916-0930",
           "start_time": "2026-09-16T09:30:00+09:00",
           "end_time": "2026-09-16T10:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-a3st-20260916-1030",
@@ -185715,13 +185715,13 @@
           "id": "slot-noah-ochanomizu-a3st-20260916-1730",
           "start_time": "2026-09-16T17:30:00+09:00",
           "end_time": "2026-09-16T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-a3st-20260916-1830",
           "start_time": "2026-09-16T18:30:00+09:00",
           "end_time": "2026-09-16T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-a3st-20260916-1930",
@@ -188894,13 +188894,13 @@
           "id": "slot-noah-ochanomizu-a5st-20260917-1730",
           "start_time": "2026-09-17T17:30:00+09:00",
           "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-a5st-20260917-1830",
           "start_time": "2026-09-17T18:30:00+09:00",
           "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-a5st-20260917-1930",
@@ -191803,13 +191803,13 @@
           "id": "slot-noah-ochanomizu-gst-20260916-2030",
           "start_time": "2026-09-16T20:30:00+09:00",
           "end_time": "2026-09-16T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-gst-20260916-2130",
           "start_time": "2026-09-16T21:30:00+09:00",
           "end_time": "2026-09-16T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-noah-ochanomizu-gst-20260916-2230",
