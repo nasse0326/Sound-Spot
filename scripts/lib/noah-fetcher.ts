@@ -105,7 +105,8 @@ async function getOrRefreshNoahCookie(forceRefresh: boolean = false): Promise<st
 export async function fetchNoahStoreDays(
   storeKey: string,
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = 21,
+  roomFilter?: (room: NoahRoomMaster) => boolean
 ): Promise<NoahRoomData[]> {
   const store = NOAH_ALL_STORES.find(s => s.key === storeKey);
   if (!store) {
@@ -113,11 +114,14 @@ export async function fetchNoahStoreDays(
     return [];
   }
 
+  const targetRooms = roomFilter ? store.rooms.filter(roomFilter) : store.rooms;
+  if (targetRooms.length === 0) return [];
+
   const existingSlotsMap = loadExistingNoahSlotsMap();
-  console.log(`📡 [NOAH] ${store.name} のリアル空き枠を取得中 (Node fetch / ${dayCount}日間 / ${store.rooms.length}部屋)...`);
+  console.log(`📡 [NOAH] ${store.name} のリアル空き枠を取得中 (Node fetch / ${dayCount}日間 / ${targetRooms.length}部屋)...`);
 
   // 店舗内にログイン必須部屋がある場合、Cookieを事前取得/リフレッシュ
-  const hasLoginRequiredRooms = store.rooms.some(r => r.loginRequired);
+  const hasLoginRequiredRooms = targetRooms.some(r => r.loginRequired);
   let cookieHeader = hasLoginRequiredRooms ? await getOrRefreshNoahCookie(false) : '';
 
   const startMonday = startOfWeek(baseDate, { weekStartsOn: 1 });
@@ -134,7 +138,7 @@ export async function fetchNoahStoreDays(
   let failureCount = 0;
   let firstFailureSample: string | null = null;
 
-  for (const st of store.rooms) {
+  for (const st of targetRooms) {
     rawData[st.studioId] = [];
     // ログイン必須部屋のみCookieを付与。ログイン不要部屋はゲストアクセスで100%確実に取得！
     const effectiveCookie = st.loginRequired ? cookieHeader : '';
@@ -155,20 +159,30 @@ export async function fetchNoahStoreDays(
         };
 
         let res = await fetchSchedule(effectiveCookie);
+        let json: any = res.status === 200 ? await res.json() : null;
 
-        // ログイン必須部屋で失敗した場合、Cookie強制再取得して1回リトライ
-        if (st.loginRequired && res.status !== 200 && process.env.NOAH_LOGIN_ID) {
-          console.log(`⚠️ [NOAH Retry] ${st.name} のアクセスに失敗 (HTTP ${res.status})。セッション自動修復を実行します...`);
+        // ログイン必須部屋の場合、NOAH側はセッション切れでもHTTP 200のまま
+        // 「ログインしてください」相当の別形式レスポンスを返すことがあり、
+        // HTTPステータスだけではセッション切れを検知できない。
+        // 期待するdate配列が無い場合もセッション切れとみなし、強制再取得して1回リトライする。
+        const looksSessionInvalid = st.loginRequired && (res.status !== 200 || !json?.date || !Array.isArray(json.date));
+
+        if (looksSessionInvalid && process.env.NOAH_LOGIN_ID) {
+          console.log(`⚠️ [NOAH Retry] ${st.name} のアクセスに失敗（HTTP ${res.status}／セッション切れの可能性）。セッション自動修復を実行します...`);
           const newCookie = await getOrRefreshNoahCookie(true);
           if (newCookie) {
             cookieHeader = newCookie;
             res = await fetchSchedule(newCookie);
+            json = res.status === 200 ? await res.json() : null;
           }
         }
 
-        if (res.status === 200) {
-          const json = await res.json();
+        if (res.status === 200 && json) {
           rawData[st.studioId].push(json);
+          if (st.loginRequired && (!json.date || !Array.isArray(json.date))) {
+            failureCount++;
+            firstFailureSample ??= `${st.name}: セッション切れ（想定外のレスポンス形式）`;
+          }
         } else {
           rawData[st.studioId].push({ error: `HTTP ${res.status}` });
           failureCount++;
@@ -186,7 +200,7 @@ export async function fetchNoahStoreDays(
   }
 
   if (failureCount > 0) {
-    const totalRequests = store.rooms.length * mondays.length;
+    const totalRequests = targetRooms.length * mondays.length;
     console.error(`  ⚠️ [NOAH Fetch] ${store.name}: ${failureCount}/${totalRequests}件のリクエストが失敗しました（例: ${firstFailureSample}）`);
   }
 
@@ -197,7 +211,7 @@ export async function fetchNoahStoreDays(
 
   const results: NoahRoomData[] = [];
 
-  for (const room of store.rooms) {
+  for (const room of targetRooms) {
     const weeks = rawData[room.studioId] || [];
     const roomSlotsMap: Record<string, NoahSlot> = {};
 
