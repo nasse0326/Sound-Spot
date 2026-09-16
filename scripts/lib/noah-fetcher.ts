@@ -7,6 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { format, addDays, startOfWeek } from 'date-fns';
 import { loginNoah } from './noah-login';
+import { toIsoWithRollover } from './time-utils';
 import { NOAH_ALL_STORES, NoahRoomMaster, NoahStoreMaster } from '../../src/config/noah-master';
 
 export interface NoahSlot {
@@ -229,17 +230,21 @@ export async function fetchNoahStoreDays(
           let [sH, sM] = startTimeStr.split(':').map(Number);
           let [eH, eM] = endTimeStr.split(':').map(Number);
 
-          // 24時以降の営業日時刻（例: 24:30 -> 翌日 00:30, 25:30 -> 翌日 01:30）を正規のISO日時に変換
-          const baseDateObj = new Date(`${dateIso}T00:00:00+09:00`);
+          // 24時以降の営業日時刻（例: 24:30 -> 翌日 00:30, 25:30 -> 翌日 01:30）を正規のISO日時に変換。
+          // 以前はここで`new Date(`${dateIso}T00:00:00+09:00`)`を作り、date-fnsのaddDays+format
+          // （＝実行環境のローカルタイムゾーン基準）で日付を読み戻していたため、GitHub Actions等
+          // JST以外のタイムゾーンで実行すると日付が1日早くズレるバグがあった（他のフェッチャーの
+          // toIsoWithRolloverと同根の不具合。現在NOAHの巡回はGITHUB_ACTIONS判定でスキップされて
+          // いるため本番データはまだ実害を受けていないが、念のため同じ安全な実装に統一する）。
+          // オフセット計算そのものは従来通りで、最終的なISO文字列組み立てだけを
+          // タイムゾーン非依存のtoIsoWithRolloverに委譲する。
           let startDaysOffset = 0;
           if (sH >= 24) {
             startDaysOffset = Math.floor(sH / 24);
             sH = sH % 24;
           }
-          const actualStartDateObj = addDays(baseDateObj, startDaysOffset);
-          const actualStartDateIso = format(actualStartDateObj, 'yyyy-MM-dd');
+          const startIso = toIsoWithRollover(dateIso, sH + startDaysOffset * 24, sM);
           const normalizedStartTimeStr = `${String(sH).padStart(2, '0')}:${String(sM).padStart(2, '0')}`;
-          const startIso = `${actualStartDateIso}T${normalizedStartTimeStr}:00+09:00`;
 
           // 終了時刻の正規化
           let endDaysOffset = 0;
@@ -251,16 +256,14 @@ export async function fetchNoahStoreDays(
           } else {
             endDaysOffset = startDaysOffset;
           }
-          const actualEndDateObj = addDays(baseDateObj, endDaysOffset);
-          const actualEndDateIso = format(actualEndDateObj, 'yyyy-MM-dd');
+          const endIso = toIsoWithRollover(dateIso, eH + endDaysOffset * 24, eM);
           const normalizedEndTimeStr = `${String(eH).padStart(2, '0')}:${String(eM).padStart(2, '0')}`;
-          const endIso = `${actualEndDateIso}T${normalizedEndTimeStr}:00+09:00`;
 
           const isBooked = Boolean(timeSlot.is_booked);
           const isBookable = Boolean(timeSlot.is_bookable || timeSlot.web_reserve_flg || timeSlot.has_price);
           const status: 'AVAILABLE' | 'BOOKED' = (!isBooked && isBookable) ? 'AVAILABLE' : 'BOOKED';
 
-          const timeKey = `${actualStartDateIso.replace(/-/g, '')}-${normalizedStartTimeStr.replace(':', '')}`;
+          const timeKey = `${startIso.slice(0, 10).replace(/-/g, '')}-${normalizedStartTimeStr.replace(':', '')}`;
           const slotId = `slot-${room.id}-${timeKey}`;
 
           roomSlotsMap[timeKey] = {

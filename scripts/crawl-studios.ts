@@ -83,6 +83,12 @@ export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: 
     return { canProceed: true, reason: 'IGNORE_GUARDS=true のため即時実行します。' };
   }
 
+  // 実行環境のローカルタイムゾーンに依存せずJST時刻を求めるトリック:
+  // getTimezoneOffset()でいったんUTC epochへ正規化してから+9時間するため、
+  // 直後のgetHours()/getMinutes()（ローカルタイムゾーン基準）が返す値は
+  // 常にJSTの壁時計時刻と一致する（実行環境がUTCでもJSTでも結果は変わらない）。
+  // 一見「ローカル基準のgetHours()を使っているのに大丈夫か」と誤解しやすいが、
+  // 上のgetTimezoneOffset()による正規化とちょうど打ち消し合う形になっている。
   const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
   const jstDate = new Date(utc + 3600000 * 9);
 

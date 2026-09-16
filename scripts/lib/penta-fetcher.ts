@@ -5,6 +5,7 @@
  */
 
 import { format, addDays } from 'date-fns';
+import { toIsoWithRollover } from './time-utils';
 
 const EDGE_URL = 'https://haphgzntwgrpecdkqdxj.supabase.co/functions/v1/kv-api';
 const ANON_KEY = 'sb_publishable_PrzDhRxppQe_1rV51V2ulg_e-tZlEJi';
@@ -136,24 +137,17 @@ export function isWeekendOrHoliday(dateStr: string): boolean {
 /**
  * 06:00基準のtick（30分刻み）を ISO文字列 ("YYYY-MM-DDTHH:mm:00+09:00") に変換
  * tick 0 = 06:00, tick 8 = 10:00, tick 36 = 24:00 (翌日00:00)
+ *
+ * 以前はここで独自にDateオブジェクトの生成・ローカルタイムゾーン基準のgetDate()等を
+ * 使って日付を組み立てており、GitHub Actions（UTC実行）で全ての日付が1日早くズレる
+ * バグがあった（手元のJST設定PCでは再現しないため長期間気づかれなかった）。
+ * 実行環境のタイムゾーンに依存しない共通関数toIsoWithRolloverに委譲する。
  */
 function tickToDateTime(dateStr: string, tick: number): string {
   const totalMinutes = 6 * 60 + tick * 30;
-  const daysToAdd = Math.floor(totalMinutes / (24 * 60));
-  const remainingMinutes = totalMinutes % (24 * 60);
-  const hours = Math.floor(remainingMinutes / 60);
-  const minutes = remainingMinutes % 60;
-
-  const baseD = new Date(`${dateStr}T00:00:00+09:00`);
-  if (daysToAdd > 0) {
-    baseD.setDate(baseD.getDate() + daysToAdd);
-  }
-  const yStr = baseD.getFullYear();
-  const mStr = String(baseD.getMonth() + 1).padStart(2, '0');
-  const dStr = String(baseD.getDate()).padStart(2, '0');
-  const hStr = String(hours).padStart(2, '0');
-  const minStr = String(minutes).padStart(2, '0');
-  return `${yStr}-${mStr}-${dStr}T${hStr}:${minStr}:00+09:00`;
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  return toIsoWithRollover(dateStr, hours, minutes);
 }
 
 /**
