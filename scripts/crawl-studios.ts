@@ -378,6 +378,133 @@ export async function crawlGatewayTakadanobaba(baseDate: Date, dayCount: number 
   }
 }
 
+// -------------------------------------------------------------
+// 1c. Gateway Studio Ikebukuro (5F・6F) Specs
+//     ※ 同一建物・同一tel・同一Reserve1カレンダー(lc=tlsccmeco&mn=3&gr=1)を
+//        5F(A〜G)/6F(1〜8+SUBROOM)で共有する店舗（渋谷ゲートウェイの
+//        3F・4F・5F統合と同じ扱い）。公式サイトの各フロア「料金」ページ
+//        （https://www.gw-studio.com/studios/studio_iken(5f)/price）と
+//        実カレンダーのroom_id/開始オフセットを直接突き合わせて確認済み。
+// -------------------------------------------------------------
+const GATEWAY_IKEBUKURO_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  features: string[];
+}> = {
+  '1st': { name: '1st (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium'] },
+  '2st': { name: '2st (8帖)', tatami: 8, capacity: 4, hourlyWeekend: 2310, hourlyWeekday: 1320, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  '3st': { name: '3st (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  '4st': { name: '4st (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  '5st': { name: '5st (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1540, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  '6st': { name: '6st (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1540, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium'] },
+  '7st': { name: '7st (18帖)', tatami: 18, capacity: 9, hourlyWeekend: 3740, hourlyWeekday: 2640, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '音反応LEDフラッシュライト設置'] },
+  '8st': { name: '8st (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Reference', 'Subルーム併設'] },
+  'SUBROOM': { name: 'Sub Room (3帖)', tatami: 3, capacity: 2, hourlyWeekend: 700, hourlyWeekday: 700, soloRate: 700, offset: 0, features: ['DTM用モニタースピーカー', 'ミニミキサー', 'セルフレコーディング対応', '個人練習/マンツーマンレッスン向け'] },
+  'Ast': { name: 'Ast (18帖)', tatami: 18, capacity: 9, hourlyWeekend: 3740, hourlyWeekday: 2640, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Reference'] },
+  'Bst': { name: 'Bst (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  'Cst': { name: 'Cst (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  'Dst': { name: 'Dst (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1540, soloRate: 700, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium', '30分スタート'] },
+  'Est': { name: 'Est (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2530, hourlyWeekday: 1540, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium'] },
+  'Fst': { name: 'Fst (18帖)', tatami: 18, capacity: 9, hourlyWeekend: 3740, hourlyWeekday: 2640, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Reference'] },
+  'Gst': { name: 'Gst (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium'] },
+};
+
+export async function crawlGatewayIkebukuro(baseDate: Date, dayCount: number = 21) {
+  console.log(`🎸 [Gateway 池袋北口店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
+
+  const fetchedRooms = await fetchReserve1Days({
+    name: 'ゲートウェイ池袋北口店',
+    loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=1',
+    openHour: 10,
+  }, baseDate, dayCount);
+
+  const targetDates: string[] = [];
+  for (let i = 0; i < dayCount; i++) {
+    targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+  }
+
+  const studioObject = {
+    id: 'gateway-ikebukuro-kitaguchi',
+    name: 'ゲートウェイスタジオ 池袋北口店',
+    slug: 'gateway-ikebukuro-kitaguchi',
+    chain_name: 'GATEWAY STUDIO',
+    area: '池袋',
+    prefecture: '東京都',
+    nearest_station: '池袋駅 北口 徒歩2分',
+    address: '東京都豊島区西池袋1-43-7 福住ビル5F・6F',
+    tel: '03-5396-1119',
+    url: 'https://www.gw-studio.com/studios/studio_iken/index',
+    booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=1',
+    business_hours_summary: '月〜金・祝10:00〜23:00 / 土日9:30〜23:00',
+    is_24hours: false,
+    group_booking_rule: '2ヶ月前よりWEB/電話にて予約可能',
+    group_booking_lead_months: 2,
+    solo_booking_rule: '前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)',
+    solo_booking_lead_hours: 24,
+    scraped_at: new Date().toISOString(),
+    dates_available: targetDates,
+    rooms: [] as any[]
+  };
+
+  Object.keys(GATEWAY_IKEBUKURO_ROOM_SPECS).forEach(stKey => {
+    const spec = GATEWAY_IKEBUKURO_ROOM_SPECS[stKey];
+    const roomId = `gw-ike-${stKey.toLowerCase()}`;
+    const matchedRoom = stKey === 'SUBROOM'
+      ? fetchedRooms.find(r => r.rawName.includes('SUBROOM'))
+      : fetchedRooms.find(r => r.id === stKey);
+
+    const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+      id: `slot-${roomId}-${s.id || sIdx}`,
+      start_time: s.start_time,
+      end_time: s.end_time,
+      status: s.status,
+      price: spec.hourlyWeekend
+    }));
+
+    studioObject.rooms.push({
+      id: roomId,
+      studio_id: studioObject.id,
+      name: spec.name,
+      size_sqm: Math.round(spec.tatami * 1.65),
+      size_tatami: spec.tatami,
+      capacity: spec.capacity,
+      hourly_rate: spec.hourlyWeekend,
+      day_rate: spec.hourlyWeekday,
+      individual_rate: spec.soloRate,
+      features: spec.features,
+      start_time_offset: spec.offset,
+      slots: roomSlots
+    });
+  });
+
+  const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-ikebukuro-real.json');
+  fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+  console.log(`✅ [Gateway 池袋北口店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] ゲートウェイ池袋北口店の最新スロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    studioObject.rooms.forEach((r: any) => {
+      const roomUUID = toUUID(r.id);
+      (r.slots || []).forEach((s: any) => {
+        dbSlots.push({
+          room_id: roomUUID,
+          start_time: s.start_time,
+          end_time: s.end_time,
+          status: s.status.toLowerCase(),
+        });
+      });
+    });
+
+    await upsertAvailabilitySlots('ゲートウェイ池袋北口店', dbSlots);
+  }
+}
+
 async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
   console.log(`🎸 [Gateway Shibuya] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
 
@@ -878,6 +1005,7 @@ async function main() {
       crawlOngakukanTakadanobaba(now, 21),
       crawlBotTakadanobaba(now, 21),
       crawlBotIkebukuro(now, 21),
+      crawlGatewayIkebukuro(now, 21),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

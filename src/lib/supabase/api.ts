@@ -89,7 +89,9 @@ export async function getRoomsWithSlotsFromSupabase(targetDate: string, area: st
         groupBookingLeadMonths: st.group_booking_lead_months || 3,
         soloBookingRule: st.solo_booking_rule,
         soloBookingLeadHours: st.solo_booking_lead_hours || 24,
-        is24Hours: st.name.includes('ノア') || st.name.includes('ゲートウェイ'),
+        // ゲートウェイは渋谷・高田馬場3号店のみ「予約状況により24時間対応可」。
+        // 池袋北口店は公式サイト記載の営業時間が10:00〜23:00(土日9:30〜)で24h対応の記載が無いため除外。
+        is24Hours: st.name.includes('ノア') || (st.name.includes('ゲートウェイ') && !st.name.includes('池袋')),
       };
 
       const eq = r.equipment;

@@ -11,6 +11,7 @@ import { getBotTakadanobabaRealRooms, BOT_TAKADANOBABA_STUDIO } from './bot-taka
 import { getBazookaRooms, BAZOOKA_STUDIO } from './bazooka-converter';
 import { getBotIkebukuroRealRooms, BOT_IKEBUKURO_STUDIO } from './bot-ikebukuro-converter';
 import { getVivoRooms, VIVO_STUDIO } from './vivo-converter';
+import { getGatewayIkebukuroRealRooms, GATEWAY_IKEBUKURO_STUDIO } from './gateway-ikebukuro-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -42,12 +43,13 @@ export const MOCK_STUDIOS: Studio[] = [
   BOT_TAKADANOBABA_STUDIO,
   BAZOOKA_STUDIO,
 
-  // 池袋エリア (5店舗)
+  // 池袋エリア (6店舗)
   NOAH_STUDIOS_META['ikebukuro'],
   BOT_IKEBUKURO_STUDIO,
   PENTA_STUDIOS['ikebukuro-penta-main'],
   PENTA_STUDIOS['ikebukuro-penta-hands'],
   VIVO_STUDIO,
+  GATEWAY_IKEBUKURO_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -85,14 +87,15 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const botBabaRooms = getBotTakadanobabaRealRooms(dateStr);
   const bazookaRooms = getBazookaRooms();
 
-  // 8. 池袋エリア (5店舗 / ノアは上記noahRoomsに、ペンタ2店舗は上記pentaRoomsに含む。
-  //    BOT池袋西口店とVivo Sound Studioのみ個別に追加する)
+  // 8. 池袋エリア (6店舗 / ノアは上記noahRoomsに、ペンタ2店舗は上記pentaRoomsに含む。
+  //    BOT池袋西口店・Vivo Sound Studio・ゲートウェイ池袋北口店のみ個別に追加する)
   const botIkebukuroRooms = getBotIkebukuroRealRooms(dateStr);
   const vivoRooms = getVivoRooms();
+  const gatewayIkebukuroRooms = getGatewayIkebukuroRealRooms(dateStr);
 
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...gatewayBabaRooms, ...ongakukanBabaRooms, ...botBabaRooms, ...bazookaRooms,
-    ...botIkebukuroRooms, ...vivoRooms,
+    ...botIkebukuroRooms, ...vivoRooms, ...gatewayIkebukuroRooms,
   ];
 }

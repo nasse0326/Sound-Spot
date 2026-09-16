@@ -408,7 +408,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
   },
 
   // -------------------------------------------------------------
-  // 池袋エリア (5店舗 / 計35部屋)
+  // 池袋エリア (6店舗 / 計51部屋)
   // -------------------------------------------------------------
   {
     id: 'ikebukuro-noah',
@@ -494,5 +494,22 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-5391-3411',
     websiteUrl: 'https://vivo-studio.jp/',
     features: ['グランドピアノ常設室あり', 'アップライトピアノ常設室あり', 'レコーディングブース併設', '電話/LINE予約のみ'],
+  },
+  {
+    id: 'gateway-ikebukuro-kitaguchi',
+    name: 'ゲートウェイスタジオ 池袋北口店',
+    chainName: 'GATEWAY STUDIO',
+    area: '池袋',
+    nearestStation: '池袋駅 北口 徒歩2分',
+    address: '東京都豊島区西池袋1-43-7 福住ビル5F・6F',
+    roomCount: 16,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'Reserve1.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '月〜金・祝10:00〜23:00 / 土日9:30〜23:00',
+    tel: '03-5396-1119',
+    websiteUrl: 'https://www.gw-studio.com/studios/studio_iken/index',
+    features: ['池袋地域最大級16部屋', '5F・6F 2フロア構成', '00分/30分開始混在', 'Subルーム(個人練習向け)あり'],
   },
 ];
