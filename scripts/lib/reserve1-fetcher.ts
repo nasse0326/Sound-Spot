@@ -128,11 +128,30 @@ export async function fetchReserve1Days(
       const buffer = await res.arrayBuffer();
       const html = decoder.decode(buffer);
 
+      // 店舗（実際にはテンプレート）によって、1マスが表す実時間の幅が異なる
+      // （渋谷/高田馬場ゲートウェイ=1マス60分、GOODMAN AKIBA=1マス30分、等）。
+      // ヘッダー行の全角コロン付き時刻ラベル（例:「10：00」「10：30」）を先頭から2つ拾い、
+      // その差分から実際のマス幅を都度検出する。決め打ちの60分だと、30分刻みテンプレートの
+      // 店舗で全スロットの時刻が縮尺違いのままズレて記録されてしまう（GOODMAN AKIBAで実際に発生）。
+      const headerTimeMatches = [...html.matchAll(/(\d{1,2})：(\d{2})/g)];
+      let columnMinutes = 60;
+      if (headerTimeMatches.length >= 3) {
+        const toMin = (m: RegExpMatchArray) => parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+        const diff = toMin(headerTimeMatches[2]) - toMin(headerTimeMatches[0]);
+        if (diff > 0 && diff <= 60) columnMinutes = diff;
+      }
+
       const trMatches = [...html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)];
 
       for (const tr of trMatches) {
         const rowHtml = tr[1];
-        const cells = [...rowHtml.matchAll(/<(?:td|th)[^>]*>([\s\S]*?)<\/(?:td|th)>/gi)].map(m => m[1]);
+        // タグ自身が持つ属性（class・colspan等）とセル内部のHTMLの両方を保持する。
+        // 渋谷/高田馬場ゲートウェイはclassをセル内部の<div>にも複製しているため内部HTMLだけで
+        // 判定できていたが、GOODMAN AKIBAは<td class="..." colspan="...">のように<td>自身に
+        // class/colspanを持たせる構造で、内部HTMLしか見ていないとこれらを一切検出できなかった。
+        const cellMatches = [...rowHtml.matchAll(/<(?:td|th)([^>]*)>([\s\S]*?)<\/(?:td|th)>/gi)];
+        const cells = cellMatches.map(m => m[2]);
+        const cellAttrs = cellMatches.map(m => m[1]);
         if (cells.length < 3) continue;
 
         const firstCell = cells[0].replace(/<[^>]*>/g, '').trim();
@@ -148,6 +167,7 @@ export async function fetchReserve1Days(
         let currentHour = config.openHour;
         let currentMin = 0;
         const slotCells = cells.slice(1, cells.length - 1);
+        const slotAttrs = cellAttrs.slice(1, cellAttrs.length - 1);
 
         const roomKey = stMatch ? stMatch[1] : (codeMatch ? toHalfWidth(codeMatch[1]).toUpperCase() : firstCell);
 
@@ -155,59 +175,83 @@ export async function fetchReserve1Days(
           roomMap[roomKey] = { rawName: firstCell, slots: [] };
         }
 
-        for (const cellContent of slotCells) {
-          const classMatch = cellContent.match(/class=["']([^"']+)["']/i);
+        // Pass 1: 実際のマス幅（columnMinutes）通りに、この行の生ステータスを
+        // 細かい粒度のまま区間として集める（フィラーセルは時刻を進めるだけでスキップ）。
+        // 1マス=60分のテンプレート（渋谷/高田馬場ゲートウェイ）ではこれが従来通りそのまま
+        // 1時間ごとの区間になるが、1マス=30分のGOODMAN AKIBAではまず30分単位の区間になる。
+        const segments: { startMin: number; endMin: number; available: boolean }[] = [];
+
+        for (let cellIdx = 0; cellIdx < slotCells.length; cellIdx++) {
+          const cellContent = slotCells[cellIdx];
+          const attrs = slotAttrs[cellIdx];
+          // classは<td>自身に付く店舗（GOODMAN AKIBA等）とセル内部の<div>に付く店舗
+          // （渋谷/高田馬場ゲートウェイ等）の両方があるため、両方から探す。
+          const classMatch = (attrs + ' ' + cellContent).match(/class=["']([^"']+)["']/i);
           const className = classMatch ? classMatch[1] : '';
 
           // koma_spN: 部屋ごとの開始オフセット調整用の端数（N分）フィラーセル。
           // 高田馬場3号店ではkoma_sp15（15分開始）等、30分以外の端数も使われるため、
-          // 30分決め打ちではなく一般化してNをそのまま読み取る。
+          // 30分決め打ちではなく一般化してNをそのまま読み取る。この値は常に「分」単位の
+          // 実時間なので、マス幅（columnMinutes）に関わらずそのまま使う。
           let durationHours = 1;
           const spMatch = className.match(/koma_sp(\d+)/);
           const isFillerCell = Boolean(spMatch);
           if (isFillerCell) {
             durationHours = parseInt(spMatch![1], 10) / 60;
           } else {
+            // マス連結幅は店舗（テンプレート）により表現方法が異なる:
+            // ・渋谷/高田馬場ゲートウェイ: class名に埋め込み（例: koma_03_x3_stt → 3マス分）
+            // ・GOODMAN AKIBA: <td>自身のcolspan属性（例: colspan="4" → 4マス分）
+            // どちらの経路で来ても「実際に何マス分か」を求めた上でcolumnMinutesを掛ける。
             const matchX = className.match(/_x(\d+)_/);
-            if (matchX) durationHours = parseInt(matchX[1], 10);
+            const colspanMatch = attrs.match(/colspan=["']?(\d+)["']?/i);
+            const spanColumns = matchX ? parseInt(matchX[1], 10) : (colspanMatch ? parseInt(colspanMatch[1], 10) : 1);
+            durationHours = (spanColumns * columnMinutes) / 60;
           }
 
-          const sh = currentHour;
-          const sm = currentMin;
-          const totalM = currentHour * 60 + currentMin + Math.round(durationHours * 60);
+          const startMin = currentHour * 60 + currentMin;
+          const totalM = startMin + Math.round(durationHours * 60);
           currentHour = Math.floor(totalM / 60);
           currentMin = totalM % 60;
 
           if (isFillerCell) continue;
 
-          const shStr = sh < 10 ? '0' + sh : '' + sh;
-          const smStr = sm < 10 ? '0' + sm : '' + sm;
-
-          const startTimeIso = toIsoWithRollover(targetDate, sh, sm);
-          const endTimeIso = toIsoWithRollover(targetDate, currentHour, currentMin);
-
           const hasCheckbox = cellContent.includes('type="checkbox"') || cellContent.includes("type='checkbox'");
           const isDisabled = cellContent.includes('disabled');
 
-          if (hasCheckbox && !isDisabled) {
+          segments.push({ startMin, endMin: totalM, available: hasCheckbox && !isDisabled });
+        }
+
+        // Pass 2: 集めた区間を、実際の予約単位である「1時間」ごとのスロットに集約する
+        // （タイムライン表示・部屋の開始オフセットは1時間単位を前提にしているため）。
+        // 1マス=60分のテンプレートではこの集約はそのまま1区間=1スロットになるだけで
+        // 従来と同じ結果になるが、1マス=30分のGOODMAN AKIBAのように1時間の前半だけ
+        // 予約済みで後半が空き（あるいはその逆）という区間がある場合は、その1時間全体を
+        // 「予約済み」として扱う（半分だけ空いていても、その1時間丸ごとの新規予約はできないため）。
+        if (segments.length > 0) {
+          const rowStartMin = segments[0].startMin;
+          const rowEndMin = segments[segments.length - 1].endMin;
+          for (let bStart = rowStartMin; bStart < rowEndMin; bStart += 60) {
+            const bEnd = bStart + 60;
+            const overlapping = segments.filter(s => s.startMin < bEnd && s.endMin > bStart);
+            if (overlapping.length === 0) continue;
+            const coverageStart = Math.min(...overlapping.map(s => s.startMin));
+            const coverageEnd = Math.max(...overlapping.map(s => s.endMin));
+            const fullyAvailable = coverageStart <= bStart && coverageEnd >= bEnd && overlapping.every(s => s.available);
+
+            const bStartH = Math.floor(bStart / 60);
+            const bStartM = bStart % 60;
+            const bEndH = Math.floor(bEnd / 60);
+            const bEndM = bEnd % 60;
+            const bshStr = (bStartH % 24) < 10 ? '0' + (bStartH % 24) : '' + (bStartH % 24);
+            const bsmStr = bStartM < 10 ? '0' + bStartM : '' + bStartM;
+
             roomMap[roomKey].slots.push({
-              id: `slot-${roomKey}-${targetDate}-${shStr}${smStr}`,
-              start_time: startTimeIso,
-              end_time: endTimeIso,
-              status: 'AVAILABLE',
+              id: `slot-${roomKey}-${targetDate}-${bshStr}${bsmStr}`,
+              start_time: toIsoWithRollover(targetDate, bStartH, bStartM),
+              end_time: toIsoWithRollover(targetDate, bEndH, bEndM),
+              status: fullyAvailable ? 'AVAILABLE' : 'BOOKED',
             });
-          } else {
-            for (let h = 0; h < durationHours; h++) {
-              const bStartH = sh + h;
-              const bEndH = bStartH + 1;
-              const bshStr = (bStartH % 24) < 10 ? '0' + (bStartH % 24) : '' + (bStartH % 24);
-              roomMap[roomKey].slots.push({
-                id: `slot-${roomKey}-${targetDate}-${bshStr}${smStr}`,
-                start_time: toIsoWithRollover(targetDate, bStartH, sm),
-                end_time: toIsoWithRollover(targetDate, bEndH, sm),
-                status: 'BOOKED',
-              });
-            }
           }
         }
       }
