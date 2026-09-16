@@ -222,17 +222,17 @@ export async function fetchReserve1Days(
           segments.push({ startMin, endMin: totalM, available: hasCheckbox && !isDisabled });
         }
 
-        // Pass 2: 集めた区間を、実際の予約単位である「1時間」ごとのスロットに集約する
-        // （タイムライン表示・部屋の開始オフセットは1時間単位を前提にしているため）。
-        // 1マス=60分のテンプレートではこの集約はそのまま1区間=1スロットになるだけで
-        // 従来と同じ結果になるが、1マス=30分のGOODMAN AKIBAのように1時間の前半だけ
-        // 予約済みで後半が空き（あるいはその逆）という区間がある場合は、その1時間全体を
-        // 「予約済み」として扱う（半分だけ空いていても、その1時間丸ごとの新規予約はできないため）。
+        // Pass 2: 集めた区間を、このテンプレートの実際のマス幅（columnMinutes）単位の
+        // スロットに正規化する。GOODMAN AKIBAは実際に「最低1時間から・以降30分刻みで
+        // 延長可能（1.5時間等も予約できる）」という運用のため、30分刻みのまま保持しないと
+        // 1時間丸めでは表現できない組み合わせ（例: 12:00-13:30の1.5時間）が予約可能と
+        // 判定できなくなる。1マス=60分のテンプレート（渋谷/高田馬場ゲートウェイ）では
+        // このマス幅がそのまま1時間になるため、従来と同じ1時間単位の結果になる。
         if (segments.length > 0) {
           const rowStartMin = segments[0].startMin;
           const rowEndMin = segments[segments.length - 1].endMin;
-          for (let bStart = rowStartMin; bStart < rowEndMin; bStart += 60) {
-            const bEnd = bStart + 60;
+          for (let bStart = rowStartMin; bStart < rowEndMin; bStart += columnMinutes) {
+            const bEnd = bStart + columnMinutes;
             const overlapping = segments.filter(s => s.startMin < bEnd && s.endMin > bStart);
             if (overlapping.length === 0) continue;
             const coverageStart = Math.min(...overlapping.map(s => s.startMin));

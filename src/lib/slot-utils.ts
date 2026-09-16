@@ -142,14 +142,19 @@ export function checkRoomAvailability(
   const duration = Math.max(60, targetEndMin - targetStartMin);
 
   // 1. Check exact match: [targetStartMin, targetStartMin + duration]
-  // ただし、この部屋の実際の開始オフセット（0/15/30/45分）に乗っていない検索時刻に対しては
+  // ただし、この部屋が実際に開始できる時刻（startTimeOffsetを起点に
+  // bookingStartGranularityMinutes刻みの各点）に乗っていない検索時刻に対しては
   // 「完全一致」を名乗らせない。isWindowAvailableは重なり合う複数スロットの和集合が
   // 連続していれば true を返すため、例えば15分開始の部屋に対して00分ちょうどで検索すると
   // 前後2つの実スロット（13:15-14:15と14:15-15:15）がどちらも空いているだけで
   // 「14:00ちょうどに空きあり」という誤った完全一致判定になってしまう
   // （実際にはこの部屋は14:00という時刻では予約できない）。
+  // bookingStartGranularityMinutes省略時は60分刻み（毎時startTimeOffset分のみ）が
+  // 従来通りのデフォルト。GOODMAN AKIBAのように30分刻みで:00/:30どちらからでも
+  // 開始できる部屋はgranularity=30を指定することで、:30の検索も正しく「一致」になる。
   const roomOffset = room.startTimeOffset || 0;
-  const isAlignedToRoomGrid = targetStartMin % 60 === roomOffset;
+  const granularity = room.bookingStartGranularityMinutes || 60;
+  const isAlignedToRoomGrid = (((targetStartMin - roomOffset) % granularity) + granularity) % granularity === 0;
   const exactAvailable = isAlignedToRoomGrid && isWindowAvailable(room.slots, targetStartMin, targetStartMin + duration);
   if (exactAvailable) {
     return {

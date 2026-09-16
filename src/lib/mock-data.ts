@@ -51,7 +51,7 @@ export function getMockSlotsForDate(_dateStr: string): Record<string, Availabili
  * 秋葉原・渋谷・新宿の全15店舗・全170室を網羅
  */
 export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
-  // 1. 秋葉原エリア（NOAH以外）(3店舗 / 22部屋: BOT 8室, GOODMAN 10室, 音楽館 7室)
+  // 1. 秋葉原エリア（NOAH以外）(3店舗 / 23部屋: BOT 8室, GOODMAN 11室, 音楽館 7室)
   const akibaRooms = getAkihabaraRealRooms(dateStr);
 
   // 2. 渋谷ゲートウェイ (1店舗 / 12部屋)

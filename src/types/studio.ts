@@ -45,6 +45,15 @@ export interface Room {
   hasMirror: boolean;
   hasRecording: boolean;
   startTimeOffset: number; // 0 for :00, 30 for :30
+  /**
+   * この部屋が実際に開始できる時刻の刻み幅（分）。省略時は60（=毎時00分など、
+   * startTimeOffsetで指定した1点のみが有効な開始時刻）として扱う。
+   * GOODMAN AKIBAのように「:00からでも:30からでも開始できる」店舗は30を指定する
+   * （startTimeOffsetは0のままで、そこから30分刻みで有効、という意味になる）。
+   * startTimeOffsetが「常に固定の1点でしか開始できない」場合と、この値が
+   * 「その点から刻み幅ごとに複数の開始時刻がある」場合とで意味が異なる点に注意。
+   */
+  bookingStartGranularityMinutes?: number;
   orderIndex?: number;
   imageUrl?: string;
   equipment?: RoomEquipment;

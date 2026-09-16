@@ -93,6 +93,9 @@ export function getAkihabaraRealRooms(targetDate: string): RoomWithSlots[] {
         hasMirror: true,
         hasRecording: r.features.some((f: string) => f.includes('レコーディング') || f.includes('録音')),
         startTimeOffset: r.start_time_offset || 0,
+        // GOODMAN AKIBAは実際の予約カレンダーが30分刻み（:00/:30どちらからでも開始でき、
+        // 最低1時間から30分刻みで延長可能）なため、他店舗の「毎時1点のみ」とは区別する。
+        bookingStartGranularityMinutes: s.name.toUpperCase().includes('GOODMAN') ? 30 : undefined,
         orderIndex: result.length,
         imageUrl: s.name.includes('ノア')
           ? 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80'

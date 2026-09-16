@@ -117,6 +117,10 @@ export async function getRoomsWithSlotsFromSupabase(targetDate: string, area: st
         hasMirror: r.has_mirror,
         hasRecording: r.has_recording,
         startTimeOffset: r.start_time_offset,
+        // GOODMAN AKIBAは実際の予約カレンダーが30分刻み（:00/:30どちらからでも開始でき、
+        // 最低1時間から30分刻みで延長可能）なため、他店舗の「毎時1点のみ」とは区別する。
+        // DBスキーマに列を追加するほどでもない例外なので、is24Hoursと同様に店舗名で判定する。
+        bookingStartGranularityMinutes: st.name === 'STUDIO GOODMAN AKIBA' ? 30 : undefined,
         studio,
         equipment,
         slots: slotsByRoomId[r.id] || [],
