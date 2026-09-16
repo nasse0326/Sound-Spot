@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34d399" />
+      <stop offset="1" stop-color="#2dd4bf" />
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#bg)" />
+
+  <!-- サウンド・イコライザーバー -->
+  <rect x="14" y="30" width="8" height="18" rx="4" fill="#062e26" />
+  <rect x="28" y="18" width="8" height="30" rx="4" fill="#062e26" />
+  <rect x="42" y="26" width="8" height="22" rx="4" fill="#062e26" />
+
+  <!-- 「空きあり(ライブ)」を示すピングドット -->
+  <circle cx="49" cy="15" r="8.5" fill="#0b0f17" />
+  <circle cx="49" cy="15" r="5.5" fill="#bef264" />
+</svg>
