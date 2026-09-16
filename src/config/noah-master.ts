@@ -216,4 +216,22 @@ export const NOAH_ALL_STORES: NoahStoreMaster[] = [
       { id: 'noah-takadanobaba-recbooth', studioId: 129, name: 'REC.Booth (5帖)', tatami: 5, offset: 30, loginRequired: false, priceRegular: 1760, priceDaytime: 1540, priceSolo: 880, guitarAmps: [], bassAmp: '', drumSet: '' },
     ],
   },
+  // 9. 池袋店 (11室) - scripts/scan-noah-branch.ts ikebukuro (branch_id=13) で実データ確認済み
+  {
+    key: 'ikebukuro',
+    name: 'サウンドスタジオノア 池袋店',
+    rooms: [
+      { id: 'noah-ikebukuro-sst', studioId: 142, name: 'Sst (6.5帖)', tatami: 6.5, offset: 0, loginRequired: false, priceRegular: 2300, priceDaytime: 1500, priceSolo: 700, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-450H', drumSet: 'Pearl MMX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-a1st', studioId: 143, name: 'A1st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2600, priceDaytime: 1600, priceSolo: 700, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg Venture V3', drumSet: 'Pearl MMX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-a2st', studioId: 144, name: 'A2st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2600, priceDaytime: 1600, priceSolo: 700, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS BIG BANG', drumSet: 'SAKAE The Almighty (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-a3st', studioId: 145, name: 'A3st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2600, priceDaytime: 1600, priceSolo: 700, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'Pearl MMX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-a5st', studioId: 146, name: 'A5st (10帖)', tatami: 10, offset: 0, loginRequired: false, priceRegular: 2800, priceDaytime: 1700, priceSolo: 700, guitarAmps: [JCM900, JC120], bassAmp: 'EBS Classic 450', drumSet: 'SAKAE The Almighty' },
+      { id: 'noah-ikebukuro-b1st', studioId: 147, name: 'B1st (14帖)', tatami: 14, offset: 0, loginRequired: true, priceRegular: 3300, priceDaytime: 2200, priceSolo: 800, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'YAMAHA Absolute Hybrid Maple (10"HT+12"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-b2st', studioId: 148, name: 'B2st (13帖)', tatami: 13, offset: 0, loginRequired: true, priceRegular: 3200, priceDaytime: 2100, priceSolo: 800, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'Pearl MMX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-e1stsub', studioId: 149, name: 'E1st+Sub (20帖)', tatami: 20, offset: 0, loginRequired: true, priceRegular: 4600, priceDaytime: 3200, priceSolo: 900, guitarAmps: [`${JCM900} ×2台`, JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: "DW Collector's Maple Set (10\"HT+12\"HT+13\"LT+16\"FT+22\"BD)" },
+      { id: 'noah-ikebukuro-e2stsub', studioId: 150, name: 'E2st+Sub (16帖)', tatami: 16, offset: 0, loginRequired: true, priceRegular: 3700, priceDaytime: 2600, priceSolo: 900, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS Little Mark IV 300', drumSet: 'Pearl Reference series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-ikebukuro-booth1', studioId: 151, name: 'Booth1 (3帖)', tatami: 3, offset: 0, loginRequired: false, priceRegular: 700, priceDaytime: 700, priceSolo: 700, guitarAmps: [], bassAmp: '', drumSet: '' },
+      { id: 'noah-ikebukuro-booth2', studioId: 3273, name: 'Booth2 (2.5帖)', tatami: 2.5, offset: 30, loginRequired: false, priceRegular: 700, priceDaytime: 700, priceSolo: 700, guitarAmps: [], bassAmp: '', drumSet: '' },
+    ],
+  },
 ];

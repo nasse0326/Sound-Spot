@@ -204,3 +204,23 @@ export async function fetchBotTakadanobabaDays(
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/681', BOT_TAKADANOBABA_ROOMS, '高田馬場店', baseDate, dayCount);
 }
+
+// room_idはstudi-ol.com/shop/2355のページソース内<li room-id="...">から実値を確認済み
+// （表示上の1st〜7stの並び順とroom_idの対応、およびstartTime属性による開始オフセットも
+// 同じ<li>タグ内に明記されているため、位置合わせの推測なしに直接特定できた）。
+export const BOT_IKEBUKURO_ROOMS: BotRoomSpec[] = [
+  { id: 'bot-ikebukuro-1st', roomIdNum: 4406, name: '1st (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 3200, day_rate: 2500, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums'] },
+  { id: 'bot-ikebukuro-2st', roomIdNum: 4407, name: '2st (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 3200, day_rate: 2500, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM800', 'Roland JC-120', 'Ampeg SVT-450', 'Pearl Drums'] },
+  { id: 'bot-ikebukuro-3st', roomIdNum: 4408, name: '3st (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 3200, day_rate: 2500, individual_rate: 700, start_time_offset: 0, features: ['Marshall JVM210H', 'Roland JC-120', 'Hartke HA5500', 'Pearl Drums'] },
+  { id: 'bot-ikebukuro-4st', roomIdNum: 4409, name: '4st (16帖)', size_sqm: 27, capacity: 6, hourly_rate: 3800, day_rate: 3100, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-3pro', 'dw CL series Drums', 'キーボード2台常設', '15帖以上'] },
+  { id: 'bot-ikebukuro-5st', roomIdNum: 4410, name: '5st (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 3200, day_rate: 2500, individual_rate: 700, start_time_offset: 0, features: ['Marshall DSL100H', 'Roland JC-120', 'Ampeg SVT-3pro', 'Pearl Drums'] },
+  { id: 'bot-ikebukuro-6st', roomIdNum: 4411, name: '6st (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 3200, day_rate: 2500, individual_rate: 700, start_time_offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'Hartke HA5500', 'Pearl Drums', '30分スタート'] },
+  { id: 'bot-ikebukuro-7st', roomIdNum: 4412, name: '7st (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 3200, day_rate: 2500, individual_rate: 700, start_time_offset: 30, features: ['Marshall DSL40CR', 'Roland JC-120', 'Ampeg SVT-450', 'Pearl Drums', '30分スタート'] },
+];
+
+export async function fetchBotIkebukuroDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/2355', BOT_IKEBUKURO_ROOMS, '池袋西口店', baseDate, dayCount);
+}

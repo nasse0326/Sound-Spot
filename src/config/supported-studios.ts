@@ -2,7 +2,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -405,5 +405,94 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-3360-3377',
     websiteUrl: 'https://bazookastudio.com/',
     features: ['駅徒歩2分', 'NATAL/CANOPUSドラム常設', 'レコーディング3部屋も併設', 'Web予約は要会員登録'],
+  },
+
+  // -------------------------------------------------------------
+  // 池袋エリア (5店舗 / 計35部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'ikebukuro-noah',
+    name: 'サウンドスタジオノア 池袋店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '池袋',
+    nearestStation: '池袋駅 徒歩5分',
+    address: '東京都豊島区東池袋2-63-1',
+    roomCount: 11,
+    syncType: 'web_api',
+    syncLabel: 'ノア公式APIリアルタイム連携',
+    systemName: 'ノア公式API連携',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '03-5951-8400',
+    websiteUrl: 'https://www.studionoah.jp/ikebukuro/',
+    features: ['駅徒歩5分', '3ピース向けSst完備', '大型E1st+Sub(20帖)あり', 'ボーカルブース2室'],
+  },
+  {
+    id: 'ikebukuro-bot',
+    name: 'ベースオントップ 池袋西口店',
+    chainName: 'BASS ON TOP',
+    area: '池袋',
+    nearestStation: '池袋駅 西口 徒歩3分',
+    address: '東京都豊島区西池袋1-10-1 ISOビルB1F',
+    roomCount: 7,
+    syncType: 'web_calendar',
+    syncLabel: 'スタジオルAPI連携',
+    systemName: 'スタジオルAPI連携',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '03-5992-7720',
+    websiteUrl: 'https://www.bassontop.co.jp/band/ikebukuro-nishiguchi/',
+    features: ['西口徒歩3分', '2025年12月リニューアル', 'キーボード2台常設室あり', '00分/30分開始混在'],
+  },
+  {
+    id: 'ikebukuro-penta-main',
+    name: 'スタジオペンタ池袋店',
+    chainName: 'STUDIO PENTA',
+    area: '池袋',
+    nearestStation: 'JR池袋駅 東口 徒歩5分',
+    address: '東京都豊島区南池袋2-47-8',
+    roomCount: 5,
+    syncType: 'phone',
+    syncLabel: '電話予約のみ',
+    systemName: '電話受付',
+    is24Hours: false,
+    businessHours: '10:00〜24:00',
+    tel: '03-3981-5540',
+    websiteUrl: 'https://studiopenta.jp/rehearsal/ikebukuro/',
+    features: ['池袋エリア最古参', '東口徒歩5分', 'ヴィンテージアンプ完備', '電話/店頭予約のみ'],
+  },
+  {
+    id: 'ikebukuro-penta-hands',
+    name: 'スタジオペンタ池袋ハンズサイド',
+    chainName: 'STUDIO PENTA',
+    area: '池袋',
+    nearestStation: 'JR池袋駅 東口 徒歩5分',
+    address: '東京都豊島区東池袋1-26-4',
+    roomCount: 8,
+    syncType: 'phone',
+    syncLabel: '電話/LINE予約のみ',
+    systemName: '電話・LINE受付',
+    is24Hours: false,
+    businessHours: '10:00〜24:00',
+    tel: '03-3981-4436',
+    websiteUrl: 'https://studiopenta.jp/rehearsal/hands/',
+    features: ['全8部屋', '20帖の大型室あり', 'LINE予約対応', '電話/LINE/店頭予約のみ'],
+  },
+  {
+    id: 'ikebukuro-vivo',
+    name: 'Vivo Sound Studio',
+    chainName: 'Vivo Sound Studio',
+    area: '池袋',
+    nearestStation: '池袋駅 西口 徒歩2分',
+    address: '東京都豊島区池袋2-47-3 キウレイコンビルB1',
+    roomCount: 4,
+    syncType: 'phone',
+    syncLabel: '電話/LINE予約のみ',
+    systemName: '電話・LINE受付 (自動巡回非対応)',
+    is24Hours: false,
+    businessHours: '平日12:00〜24:00 / 土日祝10:00〜24:00',
+    tel: '03-5391-3411',
+    websiteUrl: 'https://vivo-studio.jp/',
+    features: ['グランドピアノ常設室あり', 'アップライトピアノ常設室あり', 'レコーディングブース併設', '電話/LINE予約のみ'],
   },
 ];

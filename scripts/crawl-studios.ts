@@ -8,7 +8,7 @@ import path from 'path';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
-import { fetchBotAkibaDays, fetchBotTakadanobabaDays } from './lib/bot-fetcher';
+import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays } from './lib/bot-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -692,6 +692,40 @@ export async function crawlOngakukanTakadanobaba(baseDate: Date, dayCount: numbe
   }
 }
 
+export async function crawlBotIkebukuro(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- ベースオントップ 池袋西口店 (studi-ol.com) ---');
+  try {
+    const rooms = await fetchBotIkebukuroDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/bot-ikebukuro-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [BASS ON TOP 池袋西口店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] BASS ON TOP 池袋西口店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('BOT池袋西口店', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [BASS ON TOP 池袋西口店 取得エラー] ${err.message}`);
+  }
+}
+
 export async function crawlBotTakadanobaba(baseDate: Date, dayCount: number = 21) {
   console.log('\n--- BASS ON TOP 高田馬場店 (studi-ol.com) ---');
   try {
@@ -843,6 +877,7 @@ async function main() {
       crawlGatewayTakadanobaba(now, 21),
       crawlOngakukanTakadanobaba(now, 21),
       crawlBotTakadanobaba(now, 21),
+      crawlBotIkebukuro(now, 21),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

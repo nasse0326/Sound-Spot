@@ -153,6 +153,24 @@ export const NOAH_STUDIOS_META: Record<string, Studio> = {
     soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
     soloBookingLeadHours: 27,
   },
+  ikebukuro: {
+    id: 'noah-ikebukuro',
+    name: 'サウンドスタジオノア 池袋店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '池袋',
+    prefecture: '東京都',
+    nearestStation: '池袋駅 徒歩5分',
+    address: '東京都豊島区東池袋2-63-1',
+    tel: '03-5951-8400',
+    bookingUrl: 'https://www.studionoah.jp/ikebukuro/',
+    websiteUrl: 'https://www.studionoah.jp/ikebukuro/',
+    businessHoursSummary: '24時間営業',
+    is24Hours: true,
+    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
+    groupBookingLeadMonths: 3,
+    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
+    soloBookingLeadHours: 27,
+  },
 };
 
 /**
