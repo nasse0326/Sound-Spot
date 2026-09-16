@@ -273,6 +273,105 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                       const offsetMin = room.startTimeOffset || 0;
                       const offsetCols = offsetMin / 15; // 0,1,2,3
                       const isLastRoom = rIdx === group.rooms.length - 1;
+                      // GOODMAN AKIBAのように「:00からでも:30からでも開始できる」部屋
+                      // （bookingStartGranularityMinutes === 30）は、固定の1点オフセットではなく
+                      // 1時間を:00側/:30側の2つの独立した半コマとして描画する必要がある。
+                      const granularity = room.bookingStartGranularityMinutes || 60;
+                      const isHalfHourGranularity = granularity === 30;
+
+                      // 1コマ分のセルを描画する共通ロジック（1時間=4カラムの通常部屋も、
+                      // 30分刻み部屋の半コマ=2カラムも、この関数で共用する）。
+                      const renderCell = (
+                        slotStartMin: number,
+                        spanCols: number,
+                        keyId: string,
+                        roundRight: boolean,
+                        titleTimeRange: string
+                      ) => {
+                        const cellHour = Math.floor(slotStartMin / 60);
+                        const cellMinute = slotStartMin % 60;
+                        const slotTimeStr = `${String(cellHour).padStart(2, '0')}:${String(cellMinute).padStart(2, '0')}`;
+
+                        // 完全一致判定 (開始時間が検索条件と完全一致: 緑強調)。
+                        // この部屋の実際の開始刻み幅（granularity）ごとに判定することで、
+                        // 30分刻み部屋（GOODMAN AKIBA等）の1.5時間一致（例: 11:00開始で
+                        // 11:00/11:30/12:00の3コマとも一致対象）を漏れなく緑強調できる。
+                        const isExact = slotStartMin >= targetStartMin && slotStartMin < targetEndMin && ((slotStartMin - targetStartMin) % granularity === 0);
+                        // 前後30分以内ズレ判定 (:00/:30グリッド前提を置かず、この部屋の実際の
+                        // 開始時刻が検索時刻の±30分以内に収まっていれば候補として青強調する)
+                        const isAdjacent = allowAdjacent30Min && !isExact && Math.abs(slotStartMin - targetStartMin) <= 30;
+                        const isPhoneOnly = room.studio.chainName.includes('PENTA') || (!room.studio.bookingUrl && !!room.studio.tel);
+
+                        const slot = room.slots?.find((s) => {
+                          const d = new Date(s.startTime);
+                          return d.getHours() === cellHour && d.getMinutes() === cellMinute;
+                        });
+
+                        if (!slot) {
+                          return (
+                            <div
+                              key={keyId}
+                              style={{ gridColumn: `span ${spanCols} / span ${spanCols}` }}
+                              className={`h-7 ${roundRight ? 'rounded-r' : 'rounded'} border flex items-center justify-center select-none ${
+                                isPhoneOnly
+                                  ? 'border-amber-900/40 bg-amber-950/20 text-amber-400/90 text-[9px] font-bold'
+                                  : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600 text-[10px]'
+                              } ${isExact ? 'ring-1 ring-slate-700' : ''}`}
+                              title={
+                                isPhoneOnly
+                                  ? `${room.studio.name} ${room.name} ${titleTimeRange} - 電話予約店舗（公式へお電話でお問い合わせください）`
+                                  : `${room.studio.name} ${room.name} ${titleTimeRange} - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
+                              }
+                            >
+                              {isPhoneOnly ? 'TEL' : '—'}
+                            </div>
+                          );
+                        }
+
+                        const isAvailable = slot.status === 'available';
+                        const isBooked = slot.status === 'booked';
+
+                        return (
+                          <button
+                            key={keyId}
+                            type="button"
+                            onClick={() => handleSlotClick(room, cellHour, cellMinute)}
+                            style={{ gridColumn: `span ${spanCols} / span ${spanCols}` }}
+                            title={`${room.studio.name} ${room.name} ${titleTimeRange} (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
+                            className={`h-7 ${roundRight ? 'rounded-r' : 'rounded'} text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
+                              isExact && isAvailable
+                                ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-lg shadow-emerald-500/30 z-0 scale-[1.03]'
+                                : isAdjacent && isAvailable
+                                ? 'bg-blue-900/85 hover:bg-blue-800 text-blue-100 ring-2 ring-blue-400 border border-blue-300 shadow-lg shadow-blue-500/30 z-0 scale-[1.02]'
+                                : isAvailable
+                                ? 'bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-300 border border-emerald-500/40 hover:scale-[1.02]'
+                                : isBooked
+                                ? 'bg-slate-850 hover:bg-slate-800 text-slate-600 border border-slate-800/50'
+                                : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40'
+                            }`}
+                          >
+                            {isExact && isAvailable ? (
+                              <>
+                                <span className={`tracking-tight ${spanCols <= 2 ? 'text-[8px]' : 'text-[9px]'} font-mono font-bold text-emerald-200`}>
+                                  {slotTimeStr}
+                                </span>
+                                <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                              </>
+                            ) : isAdjacent && isAvailable ? (
+                              <>
+                                <span className={`tracking-tight ${spanCols <= 2 ? 'text-[8px]' : 'text-[9px]'} font-mono font-bold text-blue-200`}>
+                                  {slotTimeStr}
+                                </span>
+                                <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                              </>
+                            ) : isAvailable ? (
+                              <span className="text-[11px] font-bold text-emerald-400/90">○</span>
+                            ) : (
+                              <span className="text-[10px] font-bold text-slate-500">×</span>
+                            )}
+                          </button>
+                        );
+                      };
 
                       return (
                         <div
@@ -314,166 +413,42 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             </span>
                           </div>
 
-                          {/* 開始オフセットがある場合：先頭に該当分数（15分刻み）の空きスペーサー */}
-                          {offsetCols > 0 && (
-                            <div
-                              className="h-7 border-r border-dashed border-slate-800/40 bg-slate-950/20"
-                              style={{ gridColumn: `span ${offsetCols} / span ${offsetCols}` }}
-                            />
-                          )}
-
-                          {/* 各コマ（1時間枠 = 4カラム分・15分単位）の描画 */}
-                          {HOURS.map((hour, idx) => {
-                            const slotStartMin = hour * 60 + offsetMin;
-                            const slotTimeStr = `${String(hour).padStart(2, '0')}:${String(offsetMin).padStart(2, '0')}`;
-
-                            // 完全一致判定 (開始時間が検索条件と完全一致: 緑強調)
-                            const isExact = slotStartMin >= targetStartMin && slotStartMin < targetEndMin && ((slotStartMin - targetStartMin) % 60 === 0);
-
-                            // 前後30分以内ズレ判定 (:00/:30グリッド前提を置かず、この部屋の実際の
-                            // 開始時刻が検索時刻の±30分以内に収まっていれば候補として青強調する。
-                            // これにより:15/:45等の変則オフセットの部屋も正しく候補に上がる)
-                            const isAdjacent = allowAdjacent30Min && !isExact && Math.abs(slotStartMin - targetStartMin) <= 30;
-
-                            const isPhoneOnly = room.studio.chainName.includes('PENTA') || (!room.studio.bookingUrl && !!room.studio.tel);
-
-                            // オフセット付き部屋の最終コマの扱いに対応（例: 23:15〜24:00, 23:30〜24:00等）
-                            // スペーサーで先頭をずらした分、末尾のコマはoffsetCols分だけ幅を詰める。
-                            if (offsetCols > 0 && idx === HOURS.length - 1) {
-                              const tailSpan = 4 - offsetCols;
-                              const slotLabel = `${hour}:${String(offsetMin).padStart(2, '0')}`;
-                              const slot = room.slots?.find((s) => {
-                                const d = new Date(s.startTime);
-                                return d.getHours() === hour && d.getMinutes() === offsetMin;
-                              });
-
-                              if (!slot) {
-                                return (
-                                  <div
-                                    key={hour}
-                                    style={{ gridColumn: `span ${tailSpan} / span ${tailSpan}` }}
-                                    className={`h-7 rounded-r border flex items-center justify-center text-[9px] select-none ${
-                                      isPhoneOnly
-                                        ? 'border-amber-900/40 bg-amber-950/25 text-amber-400 font-bold'
-                                        : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600'
-                                    }`}
-                                    title={
-                                      isPhoneOnly
-                                        ? `${room.studio.name} ${room.name} ${slotLabel}〜24:00 - 電話予約店舗（公式へお電話でお問い合わせください）`
-                                        : `${room.studio.name} ${room.name} ${slotLabel}〜24:00 - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
-                                    }
-                                  >
-                                    {isPhoneOnly ? 'TEL' : '—'}
-                                  </div>
-                                );
-                              }
-
-                              const isAvailable = slot?.status === 'available';
-
-                              return (
-                                <button
-                                  key={hour}
-                                  type="button"
-                                  onClick={() => handleSlotClick(room, hour, offsetMin)}
-                                  style={{ gridColumn: `span ${tailSpan} / span ${tailSpan}` }}
-                                  title={`${room.studio.name} ${room.name} ${slotLabel}〜24:00 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
-                                  className={`h-7 rounded-r text-[9px] font-bold transition-all flex items-center justify-center cursor-pointer select-none ${
-                                    isExact && isAvailable
-                                      ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-md shadow-emerald-500/30 scale-[1.03] z-0'
-                                      : isAdjacent && isAvailable
-                                      ? 'bg-blue-900/85 hover:bg-blue-800 text-blue-100 ring-2 ring-blue-400 border border-blue-300 shadow-md shadow-blue-500/30 scale-[1.02] z-0'
-                                      : isAvailable
-                                      ? 'bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-300 border border-emerald-500/40'
-                                      : 'bg-slate-850 hover:bg-slate-800 text-slate-600 border border-slate-800/60'
-                                  }`}
-                                >
-                                  {(isExact || isAdjacent) && isAvailable ? (
-                                    <span className="tracking-tight text-[8px] font-mono font-bold">
-                                      {slotLabel}
-                                    </span>
-                                  ) : isAvailable ? (
-                                    '○'
-                                  ) : (
-                                    '×'
-                                  )}
-                                </button>
-                              );
-                            }
-
-                            // 該当時間（hour）・該当分（offsetMin）のスロットを探す
-                            const slot = room.slots?.find((s) => {
-                              const d = new Date(s.startTime);
-                              return d.getHours() === hour && d.getMinutes() === offsetMin;
-                            });
-
-                            const isAvailable = slot?.status === 'available';
-                            const isBooked = slot?.status === 'booked';
-
-                            if (!slot) {
-                              return (
+                          {isHalfHourGranularity ? (
+                            // 30分刻み部屋: 1時間=4カラムを:00側/:30側の2カラムずつに分けて
+                            // それぞれ独立に空き状況を描画する（スペーサー・末尾調整は不要＝
+                            // オフセットは常に0のため、通常のオフセット部屋の仕組みとは別経路）。
+                            HOURS.map((hour) => (
+                              <React.Fragment key={hour}>
+                                {renderCell(hour * 60 + offsetMin, 2, `${hour}-a`, false, `${String(hour).padStart(2, '0')}:${String(offsetMin).padStart(2, '0')}〜`)}
+                                {renderCell(hour * 60 + offsetMin + 30, 2, `${hour}-b`, false, `${String(hour).padStart(2, '0')}:${String(offsetMin + 30).padStart(2, '0')}〜`)}
+                              </React.Fragment>
+                            ))
+                          ) : (
+                            <>
+                              {/* 開始オフセットがある場合：先頭に該当分数（15分刻み）の空きスペーサー */}
+                              {offsetCols > 0 && (
                                 <div
-                                  key={hour}
-                                  className={`col-span-4 h-7 rounded border flex items-center justify-center select-none ${
-                                    isPhoneOnly
-                                      ? 'border-amber-900/40 bg-amber-950/20 text-amber-400/90 text-[9px] font-bold'
-                                      : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600 text-[10px]'
-                                  } ${
-                                    isExact
-                                      ? 'ring-1 ring-slate-700'
-                                      : ''
-                                  }`}
-                                  title={
-                                    isPhoneOnly
-                                      ? `${room.studio.name} ${room.name} ${slotTimeStr}〜 - 電話予約店舗（公式へお電話でお問い合わせください）`
-                                      : `${room.studio.name} ${room.name} ${slotTimeStr}〜 - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
-                                  }
-                                >
-                                  {isPhoneOnly ? 'TEL' : '—'}
-                                </div>
-                              );
-                            }
+                                  className="h-7 border-r border-dashed border-slate-800/40 bg-slate-950/20"
+                                  style={{ gridColumn: `span ${offsetCols} / span ${offsetCols}` }}
+                                />
+                              )}
 
-                            return (
-                              <button
-                                key={hour}
-                                type="button"
-                                onClick={() => handleSlotClick(room, hour, offsetMin)}
-                                title={`${room.studio.name} ${room.name} - ${slotTimeStr}〜 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
-                                className={`col-span-4 h-7 rounded text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
-                                  isExact && isAvailable
-                                    ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-lg shadow-emerald-500/30 z-0 scale-[1.03]'
-                                    : isAdjacent && isAvailable
-                                    ? 'bg-blue-900/85 hover:bg-blue-800 text-blue-100 ring-2 ring-blue-400 border border-blue-300 shadow-lg shadow-blue-500/30 z-0 scale-[1.02]'
-                                    : isAvailable
-                                    ? 'bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-300 border border-emerald-500/40 hover:scale-[1.02]'
-                                    : isBooked
-                                    ? 'bg-slate-850 hover:bg-slate-800 text-slate-600 border border-slate-800/50'
-                                    : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40'
-                                }`}
-                              >
-                                {/* 完全一致（緑強調）または 前後30分候補（青強調）の表示（※空きがある場合のみ時刻表示） */}
-                                {isExact && isAvailable ? (
-                                  <>
-                                    <span className="tracking-tight text-[9px] font-mono font-bold text-emerald-200">
-                                      {slotTimeStr}
-                                    </span>
-                                    <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                  </>
-                                ) : isAdjacent && isAvailable ? (
-                                  <>
-                                    <span className="tracking-tight text-[9px] font-mono font-bold text-blue-200">
-                                      {slotTimeStr}
-                                    </span>
-                                    <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-                                  </>
-                                ) : isAvailable ? (
-                                  <span className="text-[11px] font-bold text-emerald-400/90">○</span>
-                                ) : (
-                                  <span className="text-[10px] font-bold text-slate-500">×</span>
-                                )}
-                              </button>
-                            );
-                          })}
+                              {/* 各コマ（1時間枠 = 4カラム分・15分単位）の描画 */}
+                              {HOURS.map((hour, idx) => {
+                                const slotStartMin = hour * 60 + offsetMin;
+                                const slotTimeStr = `${String(hour).padStart(2, '0')}:${String(offsetMin).padStart(2, '0')}`;
+
+                                // オフセット付き部屋の最終コマの扱いに対応（例: 23:15〜24:00, 23:30〜24:00等）
+                                // スペーサーで先頭をずらした分、末尾のコマはoffsetCols分だけ幅を詰める。
+                                if (offsetCols > 0 && idx === HOURS.length - 1) {
+                                  const tailSpan = 4 - offsetCols;
+                                  return renderCell(slotStartMin, tailSpan, `${hour}`, true, `${slotTimeStr}〜24:00`);
+                                }
+
+                                return renderCell(slotStartMin, 4, `${hour}`, false, `${slotTimeStr}〜`);
+                              })}
+                            </>
+                          )}
                         </div>
                       );
                     })}
