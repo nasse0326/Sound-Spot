@@ -157,8 +157,14 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
         </div>
       </div>
 
-      {/* タイムライン横スクロール領域（左右パディングpx-0によりsticky left-0が左端に完全に密着） */}
-      <div className="overflow-x-auto pb-4 pt-1">
+      {/*
+        タイムライン縦横スクロール領域（左右パディングpx-0によりsticky left-0が左端に完全に密着）。
+        overflow-x-autoだけだとCSS仕様上overflow-yも暗黙にautoへ昇格するが、この要素自体の高さが
+        中身に合わせて伸びきってしまい実質スクロールしないため、その暗黙のoverflow-y挙動を
+        max-h + overflow-y-autoとして明示的に使う形にし、sticky top-0のヘッダーが「ページ全体」ではなく
+        「この枠内」で正しく機能する（＝スクロールしてもヘッダーが常に見える）ようにしている。
+      */}
+      <div className="overflow-x-auto overflow-y-auto max-h-[70vh] pb-4 pt-1">
         <div 
           className={`${showEarlyMorning ? 'min-w-[1000px] sm:min-w-[1300px]' : 'min-w-[860px] sm:min-w-[1100px]'} [--col-room-w:135px] sm:[--col-room-w:220px]`}
         >
@@ -324,11 +330,10 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             // 完全一致判定 (開始時間が検索条件と完全一致: 緑強調)
                             const isExact = slotStartMin >= targetStartMin && slotStartMin < targetEndMin && ((slotStartMin - targetStartMin) % 60 === 0);
 
-                            // 前後30分ズレ判定 (開始時間が -30分 または +30分 ズレ: 青強調)
-                            const isAdjacent = allowAdjacent30Min && !isExact && (
-                              (slotStartMin >= targetStartMin - 30 && slotStartMin < targetEndMin - 30 && ((slotStartMin - (targetStartMin - 30)) % 60 === 0)) ||
-                              (slotStartMin >= targetStartMin + 30 && slotStartMin < targetEndMin + 30 && ((slotStartMin - (targetStartMin + 30)) % 60 === 0))
-                            );
+                            // 前後30分以内ズレ判定 (:00/:30グリッド前提を置かず、この部屋の実際の
+                            // 開始時刻が検索時刻の±30分以内に収まっていれば候補として青強調する。
+                            // これにより:15/:45等の変則オフセットの部屋も正しく候補に上がる)
+                            const isAdjacent = allowAdjacent30Min && !isExact && Math.abs(slotStartMin - targetStartMin) <= 30;
 
                             const isPhoneOnly = room.studio.chainName.includes('PENTA') || (!room.studio.bookingUrl && !!room.studio.tel);
 

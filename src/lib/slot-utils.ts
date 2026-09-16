@@ -83,6 +83,33 @@ export function isWindowAvailable(slots: AvailabilitySlot[], startMin: number, e
 }
 
 /**
+ * Find real available slot start times within ±toleranceMin of targetStartMin that can
+ * host the full requested duration, based on the room's actual slot data (not an assumed
+ * :00/:30 grid). This is what lets rooms with unusual offsets (:15, :45, etc.) surface as
+ * "close enough" candidates instead of only ever matching an exact ±30 minute grid point.
+ */
+function findNearbyAvailableStarts(
+  slots: AvailabilitySlot[],
+  targetStartMin: number,
+  duration: number,
+  toleranceMin: number = 30
+): number[] {
+  const candidates = new Set<number>();
+  for (const slot of slots) {
+    if (slot.status !== 'available') continue;
+    const d = new Date(slot.startTime);
+    const startMin = d.getHours() * 60 + d.getMinutes();
+    if (startMin === targetStartMin) continue; // exact match is handled separately
+    if (Math.abs(startMin - targetStartMin) <= toleranceMin) {
+      candidates.add(startMin);
+    }
+  }
+  return [...candidates]
+    .filter((startMin) => isWindowAvailable(slots, startMin, startMin + duration))
+    .sort((a, b) => a - b);
+}
+
+/**
  * Check room availability with optional ±30 minute tolerance.
  */
 export function checkRoomAvailability(
@@ -115,7 +142,15 @@ export function checkRoomAvailability(
   const duration = Math.max(60, targetEndMin - targetStartMin);
 
   // 1. Check exact match: [targetStartMin, targetStartMin + duration]
-  const exactAvailable = isWindowAvailable(room.slots, targetStartMin, targetStartMin + duration);
+  // ただし、この部屋の実際の開始オフセット（0/15/30/45分）に乗っていない検索時刻に対しては
+  // 「完全一致」を名乗らせない。isWindowAvailableは重なり合う複数スロットの和集合が
+  // 連続していれば true を返すため、例えば15分開始の部屋に対して00分ちょうどで検索すると
+  // 前後2つの実スロット（13:15-14:15と14:15-15:15）がどちらも空いているだけで
+  // 「14:00ちょうどに空きあり」という誤った完全一致判定になってしまう
+  // （実際にはこの部屋は14:00という時刻では予約できない）。
+  const roomOffset = room.startTimeOffset || 0;
+  const isAlignedToRoomGrid = targetStartMin % 60 === roomOffset;
+  const exactAvailable = isAlignedToRoomGrid && isWindowAvailable(room.slots, targetStartMin, targetStartMin + duration);
   if (exactAvailable) {
     return {
       isAvailable: true,
@@ -127,51 +162,23 @@ export function checkRoomAvailability(
     };
   }
 
-  // 2. Check early by 30 min: [targetStartMin - 30, targetStartMin - 30 + duration]
-  const earlyStartMin = targetStartMin - 30;
-  const earlyAvailable = allowAdjacent30Min && earlyStartMin >= 0 && isWindowAvailable(room.slots, earlyStartMin, earlyStartMin + duration);
-  const earlyTimeStr = minutesToTimeString(earlyStartMin);
-
-  // 3. Check late by 30 min: [targetStartMin + 30, targetStartMin + 30 + duration]
-  const lateStartMin = targetStartMin + 30;
-  const lateAvailable = allowAdjacent30Min && lateStartMin + duration <= 24 * 60 && isWindowAvailable(room.slots, lateStartMin, lateStartMin + duration);
-  const lateTimeStr = minutesToTimeString(lateStartMin);
-
-  const candidateTimes: string[] = [];
-  if (earlyAvailable) candidateTimes.push(earlyTimeStr);
-  if (lateAvailable) candidateTimes.push(lateTimeStr);
-
-  if (earlyAvailable && lateAvailable) {
-    return {
-      isAvailable: true,
-      matchType: 'early30',
-      matchedStartTime: earlyTimeStr,
-      matchedEndTime: minutesToTimeString(earlyStartMin + duration),
-      label: `${earlyTimeStr}/${lateTimeStr}~ 空き`,
-      availableCandidateTimes: candidateTimes,
-    };
-  }
-
-  if (earlyAvailable) {
-    return {
-      isAvailable: true,
-      matchType: 'early30',
-      matchedStartTime: earlyTimeStr,
-      matchedEndTime: minutesToTimeString(earlyStartMin + duration),
-      label: `${earlyTimeStr}~ 空き`,
-      availableCandidateTimes: [earlyTimeStr],
-    };
-  }
-
-  if (lateAvailable) {
-    return {
-      isAvailable: true,
-      matchType: 'late30',
-      matchedStartTime: lateTimeStr,
-      matchedEndTime: minutesToTimeString(lateStartMin + duration),
-      label: `${lateTimeStr}~ 空き`,
-      availableCandidateTimes: [lateTimeStr],
-    };
+  // 2. ±30分以内の実スロットを直接スキャン（:00/:30グリッド前提を排除し、
+  //    :15/:45等の変則的な開始オフセットの部屋も候補として正しく拾えるようにする）
+  if (allowAdjacent30Min) {
+    const nearbyStarts = findNearbyAvailableStarts(room.slots, targetStartMin, duration, 30);
+    if (nearbyStarts.length > 0) {
+      const candidateTimes = nearbyStarts.map(minutesToTimeString);
+      const firstStart = nearbyStarts[0];
+      const matchType = firstStart < targetStartMin ? 'early30' : 'late30';
+      return {
+        isAvailable: true,
+        matchType,
+        matchedStartTime: candidateTimes[0],
+        matchedEndTime: minutesToTimeString(firstStart + duration),
+        label: `${candidateTimes.join('/')}~ 空き`,
+        availableCandidateTimes: candidateTimes,
+      };
+    }
   }
 
   // Check if slot data exists for exact target window
