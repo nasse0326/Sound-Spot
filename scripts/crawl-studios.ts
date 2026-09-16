@@ -499,6 +499,7 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
     const gmFetchedRooms = await fetchReserve1Days({
       name: 'STUDIO GOODMAN AKIBA',
       loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=dlcacvaol&mn=1',
+      openHour: 10, // 実カレンダーは10:00始まり（デフォルトの9:00のままだと全スロットが1時間早くズレる）
     }, baseDate, dayCount);
 
     const gmStudio = akibaData.find(s => s.id === 'gm-akiba-01');

@@ -290,7 +290,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     area: '秋葉原',
     nearestStation: '秋葉原駅 昭和通り口 徒歩5分 / 岩本町駅 徒歩3分',
     address: '東京都千代田区神田佐久間町3-21-7 熊谷ビルB1F-3F',
-    roomCount: 10,
+    roomCount: 11,
     syncType: 'web_calendar',
     syncLabel: 'Web空き状況',
     systemName: 'Reserve1.jp (自動巡回)',
