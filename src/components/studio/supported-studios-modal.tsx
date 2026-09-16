@@ -193,7 +193,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                     稼働中スタジオ
                   </span>
                   <span className="text-[11px] text-slate-400 hidden sm:inline">
-                    都内4エリア・21店舗 / {totalRooms}部屋 実データ対応
+                    都内4エリア・{areaCounts.all}店舗 / {totalRooms}部屋 実データ対応
                   </span>
                 </div>
                 <h2 className="text-base sm:text-xl font-black tracking-tight text-white mt-1 truncate">

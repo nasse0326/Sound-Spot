@@ -120,10 +120,14 @@ export async function fetchNodeShinjukuDays(
             }
           }
 
+          // 実カレンダーは10:00始まり・22:00-23:00終わりの13コマ（slotIdx 1が10:00〜11:00に対応）。
+          // 以前は8時始まり・14コマとして扱っており、実在しない9:00枠を生成した上で
+          // 全スロットの時刻を1時間早くズラしてしまっていた（実際のチェックボックスvalue
+          // "01xx"のxxで検証済み）。
           const offset = roomMap[currentRoomKey].offset;
-          for (let slotIdx = 1; slotIdx <= 14; slotIdx++) {
-            const startH = 8 + slotIdx;
-            const endH = 9 + slotIdx;
+          for (let slotIdx = 1; slotIdx <= 13; slotIdx++) {
+            const startH = 9 + slotIdx;
+            const endH = 10 + slotIdx;
             const minStr = offset === 30 ? '30' : '00';
             const startHStr = String(startH).padStart(2, '0');
             const endHStr = String(endH).padStart(2, '0');

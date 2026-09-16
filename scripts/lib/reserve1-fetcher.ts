@@ -25,8 +25,14 @@ export interface Reserve1Config {
   loginUrl: string;
   grandValue?: string;
   roomSpecs?: Record<string, any>;
-  /** カレンダー表の最初の列が何時始まりか（店舗により異なる。未指定時は9時=既存店舗互換のデフォルト） */
-  openHour?: number;
+  /**
+   * カレンダー表の最初の列が何時始まりか（店舗により異なり、9時とは限らない）。
+   * 過去にSTUDIO GOODMAN AKIBAでこれを省略した結果、実際は10時始まりのカレンダーを
+   * 9時始まりとして扱ってしまい、全スロットの時刻が1時間ズレる不具合が発生した。
+   * 同じ事故を防ぐため、新規追加時は必ず実カレンダーを目視確認の上で明示指定すること
+   * （安全に見える既定値は用意しない）。
+   */
+  openHour: number;
 }
 
 /**
@@ -72,8 +78,16 @@ export async function fetchReserve1Days(
     if (optMatch) {
       baseFormData.append(sm[1], optMatch[1]);
     } else {
+      // <select>にselected指定が無い場合、先頭のoptionを暗黙に採用する。
+      // 通常は無害だが、店舗によっては複数拠点/複数フロアを束ねる分岐select
+      // （grand等）がこの経路に依存していることがあり、サイト側のHTML構造が
+      // 変わると気づかないまま別の拠点/カレンダーを取得してしまう恐れがある。
+      // 挙動は変えず、せめてログで気づけるようにしておく。
       const firstOpt = sm[2].match(/<option[^>]*value=["']?([^"'>]*)["']?/i);
-      if (firstOpt) baseFormData.append(sm[1], firstOpt[1]);
+      if (firstOpt) {
+        console.warn(`  ⚠️ [Reserve1] ${config.name}: <select name="${sm[1]}"> にselected指定が無く、先頭のoption(value="${firstOpt[1]}")を暗黙採用しました。サイト側の変更で意図しない値になっていないか確認してください。`);
+        baseFormData.append(sm[1], firstOpt[1]);
+      }
     }
   }
 
@@ -131,7 +145,7 @@ export async function fetchReserve1Days(
 
         if (!stMatch && !codeMatch && !firstCell.includes('SUBROOM')) continue;
 
-        let currentHour = config.openHour ?? 9;
+        let currentHour = config.openHour;
         let currentMin = 0;
         const slotCells = cells.slice(1, cells.length - 1);
 

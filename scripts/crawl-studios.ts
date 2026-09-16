@@ -378,7 +378,8 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
   const fetchedRooms = await fetchReserve1Days({
     name: 'ゲートウェイ渋谷',
     loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=8',
-    grandValue: '8'
+    grandValue: '8',
+    openHour: 9, // 実カレンダーは9:00始まり（旧デフォルト値と同じだが、以後は全店舗で明示必須にする）
   }, baseDate, dayCount);
 
   const targetDates: string[] = [];
