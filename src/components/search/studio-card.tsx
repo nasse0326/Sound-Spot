@@ -160,7 +160,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
         {rooms.map((room) => {
           const price = getRoomPrice(room);
           const availResult = getRoomAvailability(room);
-          const isOffset30 = room.startTimeOffset === 30;
+          const offsetMin = room.startTimeOffset || 0;
 
           return (
             <div
@@ -178,11 +178,15 @@ export const StudioCard: React.FC<StudioCardProps> = ({
                     {room.sizeTatami}帖
                   </span>
                   <span className={`text-[9px] sm:text-[10px] font-mono px-1.5 py-0.2 rounded ${
-                    isOffset30
+                    offsetMin === 15
+                      ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-800/60'
+                      : offsetMin === 30
                       ? 'bg-purple-950/80 text-purple-300 border border-purple-800/60'
+                      : offsetMin === 45
+                      ? 'bg-rose-950/80 text-rose-300 border border-rose-800/60'
                       : 'bg-blue-950/80 text-blue-300 border border-blue-800/60'
                   }`}>
-                    {isOffset30 ? ':30' : ':00'}
+                    :{String(offsetMin).padStart(2, '0')}
                   </span>
                 </div>
 

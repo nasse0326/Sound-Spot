@@ -92,7 +92,7 @@ export function getAkihabaraRealRooms(targetDate: string): RoomWithSlots[] {
         pricePerHourSolo: r.individual_rate || 800,
         hasMirror: true,
         hasRecording: r.features.some((f: string) => f.includes('レコーディング') || f.includes('録音')),
-        startTimeOffset: (r.start_time_offset === 30 ? 30 : 0) as 0 | 30,
+        startTimeOffset: r.start_time_offset || 0,
         orderIndex: result.length,
         imageUrl: s.name.includes('ノア')
           ? 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80'

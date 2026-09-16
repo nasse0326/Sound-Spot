@@ -62,7 +62,7 @@ export function getGatewayShibuyaRealRooms(targetDate: string): RoomWithSlots[] 
       pricePerHourSolo: r.individual_rate || 770,
       hasMirror: true,
       hasRecording: r.features.some((f: string) => f.includes('レコ') || f.includes('録音')),
-      startTimeOffset: (r.start_time_offset === 30 ? 30 : 0) as 0 | 30,
+      startTimeOffset: r.start_time_offset || 0,
       orderIndex: idx,
       studio: GATEWAY_SHIBUYA_STUDIO,
       equipment,

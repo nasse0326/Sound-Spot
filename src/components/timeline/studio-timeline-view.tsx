@@ -104,10 +104,16 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
             </div>
 
             <div className="hidden sm:flex items-center gap-1.5 pl-2 border-l border-slate-700 text-slate-400">
+              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-800/60">
+                :15
+              </span>
               <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-purple-950/80 text-purple-300 border border-purple-800/60">
                 :30
               </span>
-              <span className="text-[11px]">時差枠 (毎時30分開始)</span>
+              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-rose-950/80 text-rose-300 border border-rose-800/60">
+                :45
+              </span>
+              <span className="text-[11px]">時差枠 (毎時15/30/45分開始の部屋あり)</span>
             </div>
 
             {/* 強調ハイライト枠の凡例（緑＝完全一致、青＝前後30分枠） */}
@@ -160,7 +166,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
           <div 
             className="grid text-xs font-semibold text-slate-400 pb-2 border-b border-slate-800 items-center sticky top-0 bg-slate-900 z-40"
             style={{
-              gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 2}, minmax(0, 1fr))`
+              gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 4}, minmax(0, 1fr))`
             }}
           >
             {/* 部屋一覧固定列（スマホ135px / PC220px、完全不透明bg-slate-900、z-50） */}
@@ -173,9 +179,9 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
               const hEndMin = (hour + 1) * 60;
               const isTargetHour = hStartMin < targetEndMin && hEndMin > targetStartMin;
               return (
-                <div 
-                  key={hour} 
-                  className={`col-span-2 text-left pl-1 font-mono text-[11px] border-l transition-colors ${
+                <div
+                  key={hour}
+                  className={`col-span-4 text-left pl-1 font-mono text-[11px] border-l transition-colors ${
                     isTargetHour 
                       ? 'text-emerald-300 font-bold bg-emerald-950/30 border-emerald-600/60 rounded-t' 
                       : 'text-slate-400 border-slate-800/80'
@@ -202,7 +208,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                   <div 
                     className="grid py-1.5 bg-slate-800 border-b border-slate-700/80 items-center text-xs rounded-t-xl"
                     style={{
-                      gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 2}, minmax(0, 1fr))`
+                      gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 4}, minmax(0, 1fr))`
                     }}
                   >
                     {/* スタジオ名 & 24hバッジ（完全不透明 bg-slate-800, z-30 で固定、左端密着） */}
@@ -227,7 +233,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                     {/* スタジオ補足情報（駅・部屋数・公式予約リンク、横スクロール時にスタジオ名の裏へ潜り込む） */}
                     <div 
                       className="flex items-center justify-between text-[11px] text-slate-400 pl-3 pr-2 min-w-0"
-                      style={{ gridColumn: `2 / span ${HOURS.length * 2}` }}
+                      style={{ gridColumn: `2 / span ${HOURS.length * 4}` }}
                     >
                       <div className="flex items-center gap-2 truncate">
                         <span className="flex items-center gap-1 text-slate-400 truncate">
@@ -255,7 +261,11 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                   {/* 各部屋の行 */}
                   <div className="divide-y divide-slate-800/40">
                     {group.rooms.map((room, rIdx) => {
-                      const isOffset30 = room.startTimeOffset === 30;
+                      // 部屋ごとの開始オフセット（0/15/30/45分）。1コマ=15分（4コマ/時間）の
+                      // グリッド上で、オフセット分だけ先頭にスペーサーを入れて全体をずらすことで
+                      // どの開始分の部屋でも正確な時刻位置に描画する。
+                      const offsetMin = room.startTimeOffset || 0;
+                      const offsetCols = offsetMin / 15; // 0,1,2,3
                       const isLastRoom = rIdx === group.rooms.length - 1;
 
                       return (
@@ -265,7 +275,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             isLastRoom ? 'rounded-b-xl' : ''
                           }`}
                           style={{
-                            gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 2}, minmax(0, 1fr))`
+                            gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 4}, minmax(0, 1fr))`
                           }}
                         >
                           {/* 部屋情報（完全不透明 bg-slate-900, z-20 で固定、左端密着、右側境界線でスロットを遮断） */}
@@ -281,9 +291,15 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                               <span className="text-[9px] sm:text-[10px] text-slate-400 bg-slate-800 px-1 py-0.2 rounded shrink-0">
                                 {room.sizeTatami}帖
                               </span>
-                              {isOffset30 && (
-                                <span className="px-1 py-0.2 rounded font-mono text-[8px] sm:text-[9px] font-bold bg-purple-950 text-purple-300 border border-purple-800/60 shrink-0">
-                                  :30
+                              {offsetMin !== 0 && (
+                                <span className={`px-1 py-0.2 rounded font-mono text-[8px] sm:text-[9px] font-bold shrink-0 ${
+                                  offsetMin === 15
+                                    ? 'bg-cyan-950 text-cyan-300 border border-cyan-800/60'
+                                    : offsetMin === 45
+                                    ? 'bg-rose-950 text-rose-300 border border-rose-800/60'
+                                    : 'bg-purple-950 text-purple-300 border border-purple-800/60'
+                                }`}>
+                                  :{String(offsetMin).padStart(2, '0')}
                                 </span>
                               )}
                             </div>
@@ -292,14 +308,16 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             </span>
                           </div>
 
-                          {/* 30分開始枠の場合：先頭の30分（1マス分）の空きスペーサー */}
-                          {isOffset30 && (
-                            <div className="col-span-1 h-7 border-r border-dashed border-slate-800/40 bg-slate-950/20" />
+                          {/* 開始オフセットがある場合：先頭に該当分数（15分刻み）の空きスペーサー */}
+                          {offsetCols > 0 && (
+                            <div
+                              className="h-7 border-r border-dashed border-slate-800/40 bg-slate-950/20"
+                              style={{ gridColumn: `span ${offsetCols} / span ${offsetCols}` }}
+                            />
                           )}
 
-                          {/* 各コマ（1時間枠 = 2カラム分）の描画 */}
+                          {/* 各コマ（1時間枠 = 4カラム分・15分単位）の描画 */}
                           {HOURS.map((hour, idx) => {
-                            const offsetMin = isOffset30 ? 30 : 0;
                             const slotStartMin = hour * 60 + offsetMin;
                             const slotTimeStr = `${String(hour).padStart(2, '0')}:${String(offsetMin).padStart(2, '0')}`;
 
@@ -314,26 +332,30 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
 
                             const isPhoneOnly = room.studio.chainName.includes('PENTA') || (!room.studio.bookingUrl && !!room.studio.tel);
 
-                            // 30分枠の最終コマの扱いに対応（23:30〜24:00）
-                            if (isOffset30 && idx === HOURS.length - 1) {
+                            // オフセット付き部屋の最終コマの扱いに対応（例: 23:15〜24:00, 23:30〜24:00等）
+                            // スペーサーで先頭をずらした分、末尾のコマはoffsetCols分だけ幅を詰める。
+                            if (offsetCols > 0 && idx === HOURS.length - 1) {
+                              const tailSpan = 4 - offsetCols;
+                              const slotLabel = `${hour}:${String(offsetMin).padStart(2, '0')}`;
                               const slot = room.slots?.find((s) => {
                                 const d = new Date(s.startTime);
-                                return d.getHours() === hour;
+                                return d.getHours() === hour && d.getMinutes() === offsetMin;
                               });
 
                               if (!slot) {
                                 return (
                                   <div
                                     key={hour}
-                                    className={`col-span-1 h-7 rounded-r border flex items-center justify-center text-[9px] select-none ${
+                                    style={{ gridColumn: `span ${tailSpan} / span ${tailSpan}` }}
+                                    className={`h-7 rounded-r border flex items-center justify-center text-[9px] select-none ${
                                       isPhoneOnly
                                         ? 'border-amber-900/40 bg-amber-950/25 text-amber-400 font-bold'
                                         : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600'
                                     }`}
                                     title={
                                       isPhoneOnly
-                                        ? `${room.studio.name} ${room.name} ${hour}:30〜24:00 - 電話予約店舗（公式へお電話でお問い合わせください）`
-                                        : `${room.studio.name} ${room.name} ${hour}:30〜24:00 - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
+                                        ? `${room.studio.name} ${room.name} ${slotLabel}〜24:00 - 電話予約店舗（公式へお電話でお問い合わせください）`
+                                        : `${room.studio.name} ${room.name} ${slotLabel}〜24:00 - 空き枠データ未取得（公式WEB予約サイトをご確認ください）`
                                     }
                                   >
                                     {isPhoneOnly ? 'TEL' : '—'}
@@ -347,9 +369,10 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                 <button
                                   key={hour}
                                   type="button"
-                                  onClick={() => handleSlotClick(room, hour, 30)}
-                                  title={`${room.studio.name} ${room.name} ${hour}:30〜24:00 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
-                                  className={`col-span-1 h-7 rounded-r text-[9px] font-bold transition-all flex items-center justify-center cursor-pointer select-none ${
+                                  onClick={() => handleSlotClick(room, hour, offsetMin)}
+                                  style={{ gridColumn: `span ${tailSpan} / span ${tailSpan}` }}
+                                  title={`${room.studio.name} ${room.name} ${slotLabel}〜24:00 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
+                                  className={`h-7 rounded-r text-[9px] font-bold transition-all flex items-center justify-center cursor-pointer select-none ${
                                     isExact && isAvailable
                                       ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-md shadow-emerald-500/30 scale-[1.03] z-0'
                                       : isAdjacent && isAvailable
@@ -361,7 +384,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                 >
                                   {(isExact || isAdjacent) && isAvailable ? (
                                     <span className="tracking-tight text-[8px] font-mono font-bold">
-                                      {hour}:30
+                                      {slotLabel}
                                     </span>
                                   ) : isAvailable ? (
                                     '○'
@@ -372,10 +395,10 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                               );
                             }
 
-                            // 該当時間（hour）のスロットを探す
+                            // 該当時間（hour）・該当分（offsetMin）のスロットを探す
                             const slot = room.slots?.find((s) => {
                               const d = new Date(s.startTime);
-                              return d.getHours() === hour;
+                              return d.getHours() === hour && d.getMinutes() === offsetMin;
                             });
 
                             const isAvailable = slot?.status === 'available';
@@ -385,7 +408,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                               return (
                                 <div
                                   key={hour}
-                                  className={`col-span-2 h-7 rounded border flex items-center justify-center select-none ${
+                                  className={`col-span-4 h-7 rounded border flex items-center justify-center select-none ${
                                     isPhoneOnly
                                       ? 'border-amber-900/40 bg-amber-950/20 text-amber-400/90 text-[9px] font-bold'
                                       : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600 text-[10px]'
@@ -411,7 +434,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                 type="button"
                                 onClick={() => handleSlotClick(room, hour, offsetMin)}
                                 title={`${room.studio.name} ${room.name} - ${slotTimeStr}〜 (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
-                                className={`col-span-2 h-7 rounded text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
+                                className={`col-span-4 h-7 rounded text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
                                   isExact && isAvailable
                                     ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-lg shadow-emerald-500/30 z-0 scale-[1.03]'
                                     : isAdjacent && isAvailable

@@ -88,7 +88,7 @@ export const RoomDetailModal: React.FC<RoomDetailModalProps> = ({
             <span className="text-xs text-slate-400">定員 ~{room.capacity}名</span>
             <span>•</span>
             <span className="text-xs bg-slate-800/80 px-2 py-0.5 rounded text-amber-300 font-mono">
-              {room.startTimeOffset === 0 ? '毎時 00分スタート' : '毎時 30分スタート'}
+              毎時 {String(room.startTimeOffset || 0).padStart(2, '0')}分スタート
             </span>
           </div>
         </div>
