@@ -6,6 +6,7 @@ import { StudioCard } from '@/components/search/studio-card';
 import { StudioTimelineView } from '@/components/timeline/studio-timeline-view';
 import { RoomDetailModal } from '@/components/studio/room-detail-modal';
 import { NativeAdCard } from '@/components/search/native-ad-card';
+import { SidebarBannerAd } from '@/components/search/sidebar-banner-ad';
 import { NativeAdBanner } from '@/components/timeline/native-ad-banner';
 import { NATIVE_ADS } from '@/config/native-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
@@ -411,28 +412,38 @@ export default function HomePage() {
           </button>
         </div>
       ) : viewMode === 'card' ? (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {studioGroups.map((group, index) => (
-            <React.Fragment key={group.studio.id}>
-              <StudioCard
-                studioGroup={group}
-                bookingType={filters.bookingType}
-                targetDate={filters.date}
-                targetStartTime={filters.startTime}
-                targetEndTime={filters.endTime}
-                allowAdjacent30Min={filters.allowAdjacent30Min}
-                onOpenDetail={setSelectedRoom}
-              />
-              {/* 4スタジオごとにネイティブPRカードを自然に挿入 */}
-              {(index + 1) % 4 === 0 && (
-                <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 4) % NATIVE_ADS.length]} />
-              )}
-            </React.Fragment>
-          ))}
-          {/* スタジオ数が4件未満の場合でも、末尾に1つ自然に提案 */}
-          {studioGroups.length > 0 && studioGroups.length < 4 && (
-            <NativeAdCard ad={NATIVE_ADS[0]} />
-          )}
+        <div className="flex flex-col lg:flex-row gap-5 items-start">
+          {/* スタジオごとに部屋数が大きく異なる（4〜21室）ため、2カラムで隣同士の高さを
+              揃えようとすると常にどちらかが間延びして見えていた。1カラムの縦積みに統一し、
+              PC側で余る横幅は右のバナー広告レールに充てる。 */}
+          <div className="flex-1 min-w-0 w-full max-w-2xl mx-auto lg:mx-0 space-y-4">
+            {studioGroups.map((group, index) => (
+              <React.Fragment key={group.studio.id}>
+                <StudioCard
+                  studioGroup={group}
+                  bookingType={filters.bookingType}
+                  targetDate={filters.date}
+                  targetStartTime={filters.startTime}
+                  targetEndTime={filters.endTime}
+                  allowAdjacent30Min={filters.allowAdjacent30Min}
+                  onOpenDetail={setSelectedRoom}
+                />
+                {/* 4スタジオごとにネイティブPRカードを自然に挿入 */}
+                {(index + 1) % 4 === 0 && (
+                  <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 4) % NATIVE_ADS.length]} />
+                )}
+              </React.Fragment>
+            ))}
+            {/* スタジオ数が4件未満の場合でも、末尾に1つ自然に提案 */}
+            {studioGroups.length > 0 && studioGroups.length < 4 && (
+              <NativeAdCard ad={NATIVE_ADS[0]} />
+            )}
+          </div>
+
+          {/* PCのみ: 余った横幅にバナー広告レール（スクロール追従） */}
+          <aside className="hidden lg:block w-[320px] shrink-0 sticky top-6">
+            <SidebarBannerAd />
+          </aside>
         </div>
       ) : (
         <div className="space-y-4">

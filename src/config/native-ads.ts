@@ -68,6 +68,23 @@ export const NATIVE_ADS: NativeAdItem[] = [
     accentColor: 'cyan',
   },
   {
+    id: 'kaitoriya-tradein',
+    badge: 'PR・機材高価買取',
+    categoryName: '楽器の買取屋さん',
+    title: '出張査定、最短30分で楽器・機材をまとめて査定',
+    tagline: '自宅にいながら無料の出張見積もり！スタジオ代・新機材の購入資金作りに',
+    description: '使わなくなったギター・ベース・エフェクターを自宅で出張査定。しつこい営業なしで、その場で買取金額を提示。',
+    features: [
+      { label: '最短30分', detail: '申し込みから最短30分で無料の出張見積もりに対応' },
+      { label: '出張査定無料', detail: '見積もり・キャンセルいずれも費用は一切かからない' },
+      { label: 'まとめ買取OK', detail: '弦楽器からアンプ・エフェクターまで機材種別を問わず査定' },
+    ],
+    ctaText: '無料の出張見積もりを申し込む',
+    ctaUrl: 'https://px.a8.net/svt/ejp?a8mat=4BC4QR+4Y0MNM+5VHC+5YJRM',
+    trackingPixel: 'https://www17.a8.net/0.gif?a8mat=4BC4QR+4Y0MNM+5VHC+5YJRM',
+    accentColor: 'amber',
+  },
+  {
     id: 'tunecore-distribution',
     badge: 'PR・音源リリース',
     categoryName: '世界音楽配信 (TuneCore)',
