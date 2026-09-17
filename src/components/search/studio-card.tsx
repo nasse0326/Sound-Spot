@@ -1,15 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Studio, RoomWithSlots, BookingType } from '@/types/studio';
 import { checkRoomAvailability } from '@/lib/slot-utils';
-import { 
-  MapPin, 
-  ExternalLink, 
-  Phone, 
-  CheckCircle2, 
-  XCircle, 
+import {
+  MapPin,
+  ExternalLink,
+  Phone,
+  CheckCircle2,
+  XCircle,
   ChevronRight,
+  ChevronDown,
   Info,
   Clock
 } from 'lucide-react';
@@ -28,6 +29,8 @@ interface StudioCardProps {
   targetEndTime: string;
   allowAdjacent30Min?: boolean;
   onOpenDetail: (room: RoomWithSlots) => void;
+  /** trueの場合、ヘッダーのみの1行表示になり、クリックで部屋一覧を開閉する（PC向け実験モード） */
+  compact?: boolean;
 }
 
 export const StudioCard: React.FC<StudioCardProps> = ({
@@ -38,8 +41,11 @@ export const StudioCard: React.FC<StudioCardProps> = ({
   targetEndTime,
   allowAdjacent30Min = true,
   onOpenDetail,
+  compact = false,
 }) => {
   const { studio, rooms } = studioGroup;
+  const [expanded, setExpanded] = useState(false);
+  const showBody = !compact || expanded;
 
   // 曜日・時間帯に応じた動的料金判定
   const dateObj = new Date(targetDate);
@@ -76,7 +82,43 @@ export const StudioCard: React.FC<StudioCardProps> = ({
   return (
     <div className="bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl shadow-xl transition-all duration-200 overflow-hidden flex flex-col justify-between">
       {/* 1. スタジオヘッダー（店舗情報・営業時間・最寄り駅・公式予約リンク） */}
-      <div className="p-3.5 sm:p-5 pb-3 sm:pb-4 border-b border-slate-800/80 bg-slate-950/40">
+      <div
+        className={`p-3.5 sm:p-5 pb-3 sm:pb-4 ${showBody ? 'border-b border-slate-800/80' : ''} bg-slate-950/40 ${compact ? 'cursor-pointer select-none hover:bg-slate-900/60 transition-colors' : ''}`}
+        onClick={compact ? () => setExpanded((v) => !v) : undefined}
+      >
+        {compact && !expanded ? (
+          /* 1行表示モード（実験的PC向けレイアウト）: スタジオ単位のサマリーのみを1行で表示し、
+             クリックで部屋一覧を開閉する。部屋数が4〜21室と店舗ごとに大きく異なるため、
+             1画面によりく多くのスタジオを俯瞰できるようにする狙い。 */
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0 flex-1 flex items-center gap-2">
+              <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 shrink-0">
+                {studio.chainName}
+              </span>
+              <span className="text-sm font-bold text-white truncate">{studio.name}</span>
+              <span className="text-[11px] text-slate-500 truncate hidden md:flex items-center gap-1">
+                <MapPin className="w-3 h-3 text-slate-600 shrink-0" />
+                {studio.nearestStation}
+              </span>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              {isPhoneOnly ? (
+                <span className="text-[11px] font-semibold text-amber-300">電話予約</span>
+              ) : availableCount > 0 ? (
+                <span className="text-[11px] font-bold text-emerald-300">{availableCount}室 空き</span>
+              ) : allUnfetched ? (
+                <span className="text-[11px] text-slate-400">データ未取得</span>
+              ) : (
+                <span className="text-[11px] font-bold text-rose-300">満室</span>
+              )}
+              <span className="text-xs font-mono text-slate-300">
+                ¥{minPrice.toLocaleString()}{minPrice !== maxPrice ? `〜` : ''}
+                <span className="text-[10px] text-slate-500 font-normal">/h</span>
+              </span>
+              <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
+            </div>
+          </div>
+        ) : (
         <div className="flex items-start justify-between gap-2.5 sm:gap-3">
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 flex-wrap mb-1">
@@ -152,10 +194,17 @@ export const StudioCard: React.FC<StudioCardProps> = ({
               <span className="text-[9px] sm:text-[10px] text-slate-500 font-normal">/h</span>
             </div>
           </div>
+
+          {compact && (
+            <ChevronDown className="w-4 h-4 text-slate-500 shrink-0 rotate-180 transition-transform mt-1" />
+          )}
         </div>
+        )}
       </div>
 
       {/* 2. 部屋一覧リスト（スマホでタップしやすいスリム行デザイン） */}
+      {showBody && (
+      <>
       <div className="p-2 sm:p-3 divide-y divide-slate-800/60 flex-1">
         {rooms.map((room) => {
           const price = getRoomPrice(room);
@@ -299,6 +348,8 @@ export const StudioCard: React.FC<StudioCardProps> = ({
           </a>
         )}
       </div>
+      </>
+      )}
     </div>
   );
 };

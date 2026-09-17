@@ -14,10 +14,11 @@ import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
 import { checkRoomAvailability } from '@/lib/slot-utils';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
-import { 
-  LayoutGrid, 
-  AlignLeft, 
-  Sparkles, 
+import {
+  LayoutGrid,
+  AlignLeft,
+  List,
+  Sparkles,
   SlidersHorizontal,
   ArrowUpDown,
   Search,
@@ -60,6 +61,8 @@ export default function HomePage() {
   const [hideFullyBooked, setHideFullyBooked] = useState<boolean>(true);
   // ソート順: 'standard' | 'availability' | 'priceAsc' | 'sizeDesc'
   const [sortBy, setSortBy] = useState<'standard' | 'availability' | 'priceAsc' | 'sizeDesc'>('standard');
+  // PC向け実験: カード表示を1行サマリー表示にするかどうか（クリックで個別に部屋一覧を展開）
+  const [compactCardView, setCompactCardView] = useState<boolean>(false);
 
   // 詳細モーダル用
   const [selectedRoom, setSelectedRoom] = useState<RoomWithSlots | null>(null);
@@ -386,6 +389,24 @@ export default function HomePage() {
               タイムライン
             </button>
           </div>
+
+          {/* PC限定の実験機能: カード表示を1行サマリー表示に切り替え（スタジオごとの部屋数差が
+              4〜21室と大きく、PCの広い画面でより多くのスタジオを見渡せるか試す目的） */}
+          {viewMode === 'card' && (
+            <button
+              type="button"
+              onClick={() => setCompactCardView(!compactCardView)}
+              className={`hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
+                compactCardView
+                  ? 'bg-cyan-950/80 text-cyan-300 border-cyan-700/80 shadow-sm shadow-cyan-950/40 hover:bg-cyan-900/60'
+                  : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700'
+              }`}
+              title="スタジオを1行サマリー表示にし、クリックで部屋一覧を開閉します（実験的機能）"
+            >
+              <List className="w-3.5 h-3.5" />
+              <span>{compactCardView ? '1行表示中' : '1行表示に切替'}</span>
+            </button>
+          )}
         </div>
       </div>
 
@@ -427,6 +448,7 @@ export default function HomePage() {
                   targetEndTime={filters.endTime}
                   allowAdjacent30Min={filters.allowAdjacent30Min}
                   onOpenDetail={setSelectedRoom}
+                  compact={compactCardView}
                 />
                 {/* 4スタジオごとにネイティブPRカードを自然に挿入 */}
                 {(index + 1) % 4 === 0 && (

@@ -1,12 +1,21 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NATIVE_ADS, NativeAdItem } from '@/config/native-ads';
 import { ExternalLink, Sparkles } from 'lucide-react';
 
 export const NativeAdBanner: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
   const currentAd = NATIVE_ADS[activeTab] || NATIVE_ADS[0];
+
+  // 8秒おきに次の広告へ自動ローテーション（タブクリックでの手動切り替えも引き続き可能）
+  useEffect(() => {
+    if (NATIVE_ADS.length < 2) return;
+    const timer = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % NATIVE_ADS.length);
+    }, 8000);
+    return () => clearInterval(timer);
+  }, []);
 
   const getBorderColor = (color: NativeAdItem['accentColor']) => {
     switch (color) {
