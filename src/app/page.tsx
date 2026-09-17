@@ -390,8 +390,8 @@ export default function HomePage() {
             </button>
           </div>
 
-          {/* PC限定の実験機能: カード表示を1行サマリー表示に切り替え（スタジオごとの部屋数差が
-              4〜21室と大きく、PCの広い画面でより多くのスタジオを見渡せるか試す目的） */}
+          {/* PC限定の実験機能: 各部屋の行を「部屋名・畳数・機材・料金・空き状況」を
+              1行にまとめた高密度表示に切り替える（スタジオヘッダーは通常表示のまま） */}
           {viewMode === 'card' && (
             <button
               type="button"
@@ -401,10 +401,10 @@ export default function HomePage() {
                   ? 'bg-cyan-950/80 text-cyan-300 border-cyan-700/80 shadow-sm shadow-cyan-950/40 hover:bg-cyan-900/60'
                   : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700'
               }`}
-              title="スタジオを1行サマリー表示にし、クリックで部屋一覧を開閉します（実験的機能）"
+              title="各部屋を、部屋名・畳数・機材・料金・空き状況をまとめた1行表示にします（実験的機能）"
             >
               <List className="w-3.5 h-3.5" />
-              <span>{compactCardView ? '1行表示中' : '1行表示に切替'}</span>
+              <span>{compactCardView ? '部屋を1行表示中' : '部屋を1行表示に切替'}</span>
             </button>
           )}
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Studio, RoomWithSlots, BookingType } from '@/types/studio';
 import { checkRoomAvailability } from '@/lib/slot-utils';
 import {
@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   XCircle,
   ChevronRight,
-  ChevronDown,
   Info,
   Clock
 } from 'lucide-react';
@@ -29,7 +28,8 @@ interface StudioCardProps {
   targetEndTime: string;
   allowAdjacent30Min?: boolean;
   onOpenDetail: (room: RoomWithSlots) => void;
-  /** trueの場合、ヘッダーのみの1行表示になり、クリックで部屋一覧を開閉する（PC向け実験モード） */
+  /** trueの場合、各部屋の行を「部屋名・畳数・機材・料金・空き状況」を1行にまとめた
+   *  コンパクト表示にする（PC向け実験モード）。スタジオヘッダー自体は通常表示のまま。 */
   compact?: boolean;
 }
 
@@ -44,8 +44,6 @@ export const StudioCard: React.FC<StudioCardProps> = ({
   compact = false,
 }) => {
   const { studio, rooms } = studioGroup;
-  const [expanded, setExpanded] = useState(false);
-  const showBody = !compact || expanded;
 
   // 曜日・時間帯に応じた動的料金判定
   const dateObj = new Date(targetDate);
@@ -82,43 +80,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
   return (
     <div className="bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl shadow-xl transition-all duration-200 overflow-hidden flex flex-col justify-between">
       {/* 1. スタジオヘッダー（店舗情報・営業時間・最寄り駅・公式予約リンク） */}
-      <div
-        className={`p-3.5 sm:p-5 pb-3 sm:pb-4 ${showBody ? 'border-b border-slate-800/80' : ''} bg-slate-950/40 ${compact ? 'cursor-pointer select-none hover:bg-slate-900/60 transition-colors' : ''}`}
-        onClick={compact ? () => setExpanded((v) => !v) : undefined}
-      >
-        {compact && !expanded ? (
-          /* 1行表示モード（実験的PC向けレイアウト）: スタジオ単位のサマリーのみを1行で表示し、
-             クリックで部屋一覧を開閉する。部屋数が4〜21室と店舗ごとに大きく異なるため、
-             1画面によりく多くのスタジオを俯瞰できるようにする狙い。 */
-          <div className="flex items-center justify-between gap-3">
-            <div className="min-w-0 flex-1 flex items-center gap-2">
-              <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 shrink-0">
-                {studio.chainName}
-              </span>
-              <span className="text-sm font-bold text-white truncate">{studio.name}</span>
-              <span className="text-[11px] text-slate-500 truncate hidden md:flex items-center gap-1">
-                <MapPin className="w-3 h-3 text-slate-600 shrink-0" />
-                {studio.nearestStation}
-              </span>
-            </div>
-            <div className="flex items-center gap-3 shrink-0">
-              {isPhoneOnly ? (
-                <span className="text-[11px] font-semibold text-amber-300">電話予約</span>
-              ) : availableCount > 0 ? (
-                <span className="text-[11px] font-bold text-emerald-300">{availableCount}室 空き</span>
-              ) : allUnfetched ? (
-                <span className="text-[11px] text-slate-400">データ未取得</span>
-              ) : (
-                <span className="text-[11px] font-bold text-rose-300">満室</span>
-              )}
-              <span className="text-xs font-mono text-slate-300">
-                ¥{minPrice.toLocaleString()}{minPrice !== maxPrice ? `〜` : ''}
-                <span className="text-[10px] text-slate-500 font-normal">/h</span>
-              </span>
-              <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
-            </div>
-          </div>
-        ) : (
+      <div className="p-3.5 sm:p-5 pb-3 sm:pb-4 border-b border-slate-800/80 bg-slate-950/40">
         <div className="flex items-start justify-between gap-2.5 sm:gap-3">
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 flex-wrap mb-1">
@@ -194,22 +156,94 @@ export const StudioCard: React.FC<StudioCardProps> = ({
               <span className="text-[9px] sm:text-[10px] text-slate-500 font-normal">/h</span>
             </div>
           </div>
-
-          {compact && (
-            <ChevronDown className="w-4 h-4 text-slate-500 shrink-0 rotate-180 transition-transform mt-1" />
-          )}
         </div>
-        )}
       </div>
 
-      {/* 2. 部屋一覧リスト（スマホでタップしやすいスリム行デザイン） */}
-      {showBody && (
-      <>
+      {/* 2. 部屋一覧リスト（スマホでタップしやすいスリム行デザイン。compact指定時はPCで
+          部屋名・畳数・機材・料金・空き状況を1行にまとめた高密度表示にする） */}
       <div className="p-2 sm:p-3 divide-y divide-slate-800/60 flex-1">
         {rooms.map((room) => {
           const price = getRoomPrice(room);
           const availResult = getRoomAvailability(room);
           const offsetMin = room.startTimeOffset || 0;
+          const ampTags = room.equipment.guitarAmps.slice(0, 2).map((amp) =>
+            amp.replace('Roland ', '').replace('Marshall ', 'M/')
+          );
+
+          if (compact) {
+            return (
+              <div
+                key={room.id}
+                onClick={() => onOpenDetail(room)}
+                className="py-2 px-2.5 sm:px-3 rounded-xl hover:bg-slate-800/50 active:bg-slate-800/80 transition-all flex items-center gap-3 cursor-pointer group"
+              >
+                {/* 1行: 部屋名・畳数・開始分・機材・料金・空き状況を横並びで凝縮 */}
+                <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                  <span className="text-xs font-bold text-white group-hover:text-emerald-400 transition shrink-0">
+                    {room.name}
+                  </span>
+                  <span className="text-[10px] font-semibold text-slate-300 bg-slate-800/90 px-1.5 py-0.2 rounded border border-slate-700/60 shrink-0">
+                    {room.sizeTatami}帖
+                  </span>
+                  <span className={`text-[9px] font-mono px-1.5 py-0.2 rounded shrink-0 ${
+                    offsetMin === 15
+                      ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-800/60'
+                      : offsetMin === 30
+                      ? 'bg-purple-950/80 text-purple-300 border border-purple-800/60'
+                      : offsetMin === 45
+                      ? 'bg-rose-950/80 text-rose-300 border border-rose-800/60'
+                      : 'bg-blue-950/80 text-blue-300 border border-blue-800/60'
+                  }`}>
+                    :{String(offsetMin).padStart(2, '0')}
+                  </span>
+                  <span className="text-[11px] text-slate-500 truncate">
+                    {ampTags.join(' / ')}
+                    {room.hasRecording && (
+                      <span className="text-purple-400 font-medium ml-1.5">REC</span>
+                    )}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2.5 shrink-0">
+                  <span className="text-xs font-black text-emerald-400 font-mono">
+                    ¥{price.toLocaleString()}
+                    <span className="text-[9px] text-slate-500 font-normal">/h</span>
+                  </span>
+
+                  {availResult.matchType === 'exact' ? (
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-600/80 flex items-center gap-1">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                      <span>空き</span>
+                    </span>
+                  ) : availResult.matchType === 'early30' || availResult.matchType === 'late30' ? (
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-950 text-blue-300 border border-blue-500/80 flex items-center gap-1">
+                      <CheckCircle2 className="w-3 h-3 text-blue-400" />
+                      <span>
+                        {availResult.availableCandidateTimes.length > 1
+                          ? `${availResult.availableCandidateTimes.join('/')}~`
+                          : `${availResult.matchedStartTime}~`}
+                      </span>
+                    </span>
+                  ) : availResult.matchType === 'phone_only' ? (
+                    <span className="px-2 py-0.5 rounded-md text-[9px] font-medium bg-amber-950/60 text-amber-300 border border-amber-800/50">
+                      要TEL
+                    </span>
+                  ) : availResult.matchType === 'unfetched' ? (
+                    <span className="px-2 py-0.5 rounded-md text-[9px] font-medium bg-slate-900 text-slate-400 border border-dashed border-slate-700/80">
+                      未取得
+                    </span>
+                  ) : (
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-950 text-slate-500 border border-slate-800 flex items-center gap-1">
+                      <XCircle className="w-3 h-3 text-slate-600" />
+                      <span>満室</span>
+                    </span>
+                  )}
+
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-slate-300 transition group-hover:translate-x-0.5" />
+                </div>
+              </div>
+            );
+          }
 
           return (
             <div
@@ -241,9 +275,9 @@ export const StudioCard: React.FC<StudioCardProps> = ({
 
                 {/* 主要アンプタグ */}
                 <div className="flex items-center gap-1 mt-1 text-[10px] sm:text-[11px] text-slate-400 truncate">
-                  {room.equipment.guitarAmps.slice(0, 2).map((amp, idx) => (
+                  {ampTags.map((amp, idx) => (
                     <span key={idx} className="bg-slate-950/70 px-1.5 py-0.2 rounded text-slate-400 border border-slate-800/80">
-                      {amp.replace('Roland ', '').replace('Marshall ', 'M/')}
+                      {amp}
                     </span>
                   ))}
                   {room.hasRecording && (
@@ -348,8 +382,6 @@ export const StudioCard: React.FC<StudioCardProps> = ({
           </a>
         )}
       </div>
-      </>
-      )}
     </div>
   );
 };
