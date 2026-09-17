@@ -256,8 +256,9 @@ export async function fetchReserve1Days(
         }
       }
 
-      // 礼儀正しいウェイト（50ms）
-      await new Promise(r => setTimeout(r, 50));
+      // 礼儀正しいウェイト（100ms）。GitHub Actions側は実測30秒未満で完走しており
+      // 時間的な余裕があるため、より人間らしいペースへ倍増した。
+      await new Promise(r => setTimeout(r, 100));
     } catch (err: any) {
       console.error(`  ❌ [${config.name}] ${targetDate} 取得エラー:`, err.message);
     }

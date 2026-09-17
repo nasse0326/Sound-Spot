@@ -166,8 +166,9 @@ export async function fetchBotStoreDays(
         slots,
       });
 
-      // 50ms wait
-      await new Promise(res => setTimeout(res, 50));
+      // 礼儀正しいウェイト（100ms）。GitHub Actions側は実測30秒未満で完走しており
+      // 時間的な余裕があるため、より人間らしいペースへ倍増した。
+      await new Promise(res => setTimeout(res, 100));
     } catch (err: any) {
       console.error(`  ❌ [BASS ON TOP] Room ${r.name} エラー:`, err.message);
     }

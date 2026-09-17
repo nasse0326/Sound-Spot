@@ -145,7 +145,9 @@ export async function fetchNodeShinjukuDays(
         console.warn(`  ⚠️ [NODE] ${dateStr} の取得中にエラー: ${err.message}`);
       }
 
-      await new Promise(r => setTimeout(r, 60));
+      // 礼儀正しいウェイト（120ms）。GitHub Actions側は実測30秒未満で完走しており
+      // 時間的な余裕があるため、より人間らしいペースへ倍増した。
+      await new Promise(r => setTimeout(r, 120));
     }
   } catch (err: any) {
     console.error(`  ❌ [NODE Error] ${err.message}`);

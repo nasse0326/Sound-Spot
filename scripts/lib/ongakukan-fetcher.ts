@@ -230,9 +230,10 @@ export async function fetchOngakukanStoreDays(
       })
     );
 
-    // Polite jitter pause between batches
+    // Polite jitter pause between batches（240ms）。GitHub Actions側は実測30秒未満で
+    // 完走しており時間的な余裕があるため、より人間らしいペースへ倍増した。
     if (i + CONCURRENCY < slotsToResolve.length) {
-      await new Promise(r => setTimeout(r, 120));
+      await new Promise(r => setTimeout(r, 240));
     }
   }
 
