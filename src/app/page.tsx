@@ -435,9 +435,10 @@ export default function HomePage() {
       ) : viewMode === 'card' ? (
         <div className="flex flex-col lg:flex-row gap-5 items-start">
           {/* スタジオごとに部屋数が大きく異なる（4〜21室）ため、2カラムで隣同士の高さを
-              揃えようとすると常にどちらかが間延びして見えていた。1カラムの縦積みに統一し、
-              PC側で余る横幅は右のバナー広告レールに充てる。 */}
-          <div className="flex-1 min-w-0 w-full max-w-2xl mx-auto lg:mx-0 space-y-4">
+              揃えようとすると常にどちらかが間延びして見えていた。1カラムの縦積みに統一。
+              PC(lg+)ではバナー広告レールを右端に固定し、リスト側はmax-w-noneでその手前まで
+              目一杯広げる（モバイル/タブレットはサイドバーが無いのでmax-w-2xlのまま維持）。 */}
+          <div className="flex-1 min-w-0 w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0 space-y-4">
             {studioGroups.map((group, index) => (
               <React.Fragment key={group.studio.id}>
                 <StudioCard

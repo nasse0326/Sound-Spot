@@ -688,10 +688,6 @@ video {
   margin-left: 0.25rem;
 }
 
-.ml-1\.5 {
-  margin-left: 0.375rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -2933,6 +2929,10 @@ body {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:max-w-none {
+    max-width: none;
   }
 
   .lg\:grid-cols-4 {
