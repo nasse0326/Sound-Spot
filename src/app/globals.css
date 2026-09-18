@@ -1535,6 +1535,10 @@ video {
   background-color: rgb(59 7 100 / var(--tw-bg-opacity, 1));
 }
 
+.bg-purple-950\/50 {
+  background-color: rgb(59 7 100 / 0.5);
+}
+
 .bg-purple-950\/80 {
   background-color: rgb(59 7 100 / 0.8);
 }
@@ -2922,6 +2926,10 @@ body {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:hidden {

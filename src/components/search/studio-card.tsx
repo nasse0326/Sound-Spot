@@ -166,13 +166,105 @@ export const StudioCard: React.FC<StudioCardProps> = ({
           );
 
           return (
-            <div
-              key={room.id}
+            <React.Fragment key={room.id}>
+              {/* スマホ（lg未満）: 従来の2行表示（部屋名・帖数・開始分の行 ＋ アンプタグの行） */}
+              <div
+                onClick={() => onOpenDetail(room)}
+                className="lg:hidden py-2.5 px-2.5 sm:px-3 rounded-xl hover:bg-slate-800/50 active:bg-slate-800/80 transition-all flex items-center justify-between gap-2 sm:gap-3 cursor-pointer group"
+              >
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                    <span className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-400 transition truncate">
+                      {room.name}
+                    </span>
+                    <span className="text-[10px] sm:text-xs font-semibold text-slate-300 bg-slate-800/90 px-1.5 py-0.2 rounded border border-slate-700/60">
+                      {room.sizeTatami}帖
+                    </span>
+                    <span className={`text-[9px] sm:text-[10px] font-mono px-1.5 py-0.2 rounded ${
+                      offsetMin === 15
+                        ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-800/60'
+                        : offsetMin === 30
+                        ? 'bg-purple-950/80 text-purple-300 border border-purple-800/60'
+                        : offsetMin === 45
+                        ? 'bg-rose-950/80 text-rose-300 border border-rose-800/60'
+                        : 'bg-blue-950/80 text-blue-300 border border-blue-800/60'
+                    }`}>
+                      :{String(offsetMin).padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1 mt-1 text-[10px] sm:text-[11px] text-slate-400 truncate">
+                    {ampTags.map((amp, idx) => (
+                      <span key={idx} className="bg-slate-950/70 px-1.5 py-0.2 rounded text-slate-400 border border-slate-800/80">
+                        {amp}
+                      </span>
+                    ))}
+                    {room.hasRecording && (
+                      <span className="text-[9px] sm:text-[10px] text-purple-400 font-medium bg-purple-950/50 px-1 rounded">
+                        REC
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                  <div className="text-right">
+                    <div className="text-xs sm:text-sm font-black text-emerald-400 font-mono">
+                      ¥{price.toLocaleString()}
+                      <span className="text-[9px] sm:text-[10px] text-slate-500 font-normal">/h</span>
+                    </div>
+                    {durationHours > 1 && (
+                      <div className="text-[9px] sm:text-[10px] text-slate-500 font-mono">
+                        計¥{(price * durationHours).toLocaleString()}
+                      </div>
+                    )}
+                  </div>
+
+                  {availResult.matchType === 'exact' ? (
+                    <span className="px-2 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-600/80 flex items-center gap-1 shadow-sm shadow-emerald-950/40">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                      <span>空き</span>
+                    </span>
+                  ) : availResult.matchType === 'early30' || availResult.matchType === 'late30' ? (
+                    <span
+                      className="px-2 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-bold bg-blue-950 text-blue-300 border border-blue-500/80 flex items-center gap-1 shadow-sm shadow-blue-950/40"
+                      title={`指定時間(${targetStartTime})から前後30分ズレた枠に空きがあります (${availResult.availableCandidateTimes.join(', ')}~)`}
+                    >
+                      <CheckCircle2 className="w-3 h-3 text-blue-400" />
+                      <span>
+                        {availResult.availableCandidateTimes.length > 1
+                          ? `${availResult.availableCandidateTimes.join('/')}~ 空き`
+                          : `${availResult.matchedStartTime}~ 空き`}
+                      </span>
+                    </span>
+                  ) : availResult.matchType === 'phone_only' ? (
+                    <span className="px-2 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-medium bg-amber-950/60 text-amber-300 border border-amber-800/50 flex items-center gap-1">
+                      <span>要TEL</span>
+                    </span>
+                  ) : availResult.matchType === 'unfetched' ? (
+                    <span
+                      className="px-2 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-medium bg-slate-900 text-slate-400 border border-dashed border-slate-700/80 flex items-center gap-1"
+                      title="この日時の空き枠データは未取得です。公式WEB予約サイトをご確認ください。"
+                    >
+                      <span className="font-mono text-slate-500">—</span>
+                      <span>未取得</span>
+                    </span>
+                  ) : (
+                    <span className="px-2 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-medium bg-slate-950 text-slate-500 border border-slate-800 flex items-center gap-1">
+                      <XCircle className="w-3 h-3 text-slate-600" />
+                      <span>満室</span>
+                    </span>
+                  )}
+
+                  <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-600 group-hover:text-slate-300 transition group-hover:translate-x-0.5" />
+                </div>
+              </div>
+
+              {/* PC（lg以上）: 1行表示（部屋名・畳数・機材・料金・空き状況を1行に凝縮） */}
+              <div
               onClick={() => onOpenDetail(room)}
-              className="py-3 px-3 rounded-xl hover:bg-slate-800/50 active:bg-slate-800/80 transition-all flex flex-wrap items-center gap-x-3 gap-y-1.5 cursor-pointer group"
+              className="hidden lg:flex flex-wrap py-3 px-3 rounded-xl hover:bg-slate-800/50 active:bg-slate-800/80 transition-all items-center gap-x-3 gap-y-1.5 cursor-pointer group"
             >
-              {/* 1行: 部屋名・畳数・開始分・機材・料金・空き状況を横並びで凝縮
-                  （画面が狭く収まりきらない場合のみ、price/空き状況ブロックが折り返す） */}
               <div className="flex items-center gap-2 min-w-0 flex-1">
                 <span className="text-base font-bold text-white group-hover:text-emerald-400 transition shrink-0">
                   {room.name}
@@ -244,6 +336,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
                 <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-slate-300 transition group-hover:translate-x-0.5" />
               </div>
             </div>
+            </React.Fragment>
           );
         })}
       </div>
