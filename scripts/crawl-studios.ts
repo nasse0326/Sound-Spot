@@ -3,6 +3,14 @@
  * Executed periodically via GitHub Actions (or locally) to update live studio availability.
  * Completely Playwright-free, powered by pure Node fetch!
  */
+// tsxは.env.localを自動読み込みしないため明示的にロードする。ローカル実行時に
+// NOAH_LOGIN_ID/PASSWORD等が空文字のままになり、ログイン必須部屋が常にセッション切れ
+// 扱いになって自動再ログインが一度も発火しない不具合の原因だった。GitHub Actions側は
+// env:ブロックで直接環境変数を注入しており.env.localファイル自体が存在しないため、
+// dotenv.config()はファイル無しでも例外を投げず静かに無視される（安全）。
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+
 import fs from 'fs';
 import path from 'path';
 import { format, addDays } from 'date-fns';

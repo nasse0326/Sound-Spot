@@ -9,6 +9,38 @@ export interface RoomAvailabilityMatch {
   availableCandidateTimes: string[]; // e.g. [10:30, 11:30]
 }
 
+/**
+ * 部屋名の自然順ソート比較関数（"A1st", "A2st", "B1st", "Cst", "REC.STUDIO",
+ * "1st", "202st" のように、店舗ごとに命名規則は違ってもアルファベット+数字の
+ * 組み合わせで意味のある順番になっていることが多いため、数字部分を桁数無視で
+ * 数値比較する（"A2st"は"A10st"より前）。畳数表記の"(6帖)"部分も含めて比較する
+ * が、部屋名本体が先に差分を生むため実用上は無視して問題ない。
+ */
+export function naturalCompareRoomNames(a: string, b: string): number {
+  const tokenize = (s: string) => s.match(/\d+|\D+/g) || [];
+  const aTokens = tokenize(a);
+  const bTokens = tokenize(b);
+  const len = Math.max(aTokens.length, bTokens.length);
+
+  for (let i = 0; i < len; i++) {
+    const aTok = aTokens[i];
+    const bTok = bTokens[i];
+    if (aTok === undefined) return -1;
+    if (bTok === undefined) return 1;
+
+    const aNum = /^\d+$/.test(aTok) ? Number(aTok) : null;
+    const bNum = /^\d+$/.test(bTok) ? Number(bTok) : null;
+
+    if (aNum !== null && bNum !== null) {
+      if (aNum !== bNum) return aNum - bNum;
+    } else {
+      const cmp = aTok.localeCompare(bTok);
+      if (cmp !== 0) return cmp;
+    }
+  }
+  return 0;
+}
+
 // Convert HH:MM string to minutes from 00:00
 export function timeStringToMinutes(timeStr: string): number {
   const [h, m] = timeStr.split(':').map(Number);

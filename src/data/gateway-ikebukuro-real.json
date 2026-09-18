@@ -16,9 +16,8 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-17T02:08:14.945Z",
+  "scraped_at": "2026-09-18T13:16:02.007Z",
   "dates_available": [
-    "2026-09-17",
     "2026-09-18",
     "2026-09-19",
     "2026-09-20",
@@ -38,7 +37,8 @@
     "2026-10-04",
     "2026-10-05",
     "2026-10-06",
-    "2026-10-07"
+    "2026-10-07",
+    "2026-10-08"
   ],
   "rooms": [
     {
@@ -59,111 +59,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-1st-slot-1st-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
@@ -203,7 +98,7 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-1500",
           "start_time": "2026-09-18T15:00:00+09:00",
           "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -217,21 +112,21 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-1700",
           "start_time": "2026-09-18T17:00:00+09:00",
           "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-1800",
           "start_time": "2026-09-18T18:00:00+09:00",
           "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-1900",
           "start_time": "2026-09-18T19:00:00+09:00",
           "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -259,14 +154,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-18-0000",
           "start_time": "2026-09-19T00:00:00+09:00",
           "end_time": "2026-09-19T01:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -280,14 +175,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -497,14 +392,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-21-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-21-1300",
           "start_time": "2026-09-21T13:00:00+09:00",
           "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -595,14 +490,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-22-1100",
           "start_time": "2026-09-22T11:00:00+09:00",
           "end_time": "2026-09-22T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-22-1200",
           "start_time": "2026-09-22T12:00:00+09:00",
           "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -931,14 +826,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-25-1400",
           "start_time": "2026-09-25T14:00:00+09:00",
           "end_time": "2026-09-25T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-25-1500",
           "start_time": "2026-09-25T15:00:00+09:00",
           "end_time": "2026-09-25T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -1232,35 +1127,35 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-28-1200",
           "start_time": "2026-09-28T12:00:00+09:00",
           "end_time": "2026-09-28T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-28-1300",
           "start_time": "2026-09-28T13:00:00+09:00",
           "end_time": "2026-09-28T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-28-1400",
           "start_time": "2026-09-28T14:00:00+09:00",
           "end_time": "2026-09-28T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-28-1500",
           "start_time": "2026-09-28T15:00:00+09:00",
           "end_time": "2026-09-28T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-28-1600",
           "start_time": "2026-09-28T16:00:00+09:00",
           "end_time": "2026-09-28T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -1407,14 +1302,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-29-2200",
           "start_time": "2026-09-29T22:00:00+09:00",
           "end_time": "2026-09-29T23:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-09-29-2300",
           "start_time": "2026-09-29T23:00:00+09:00",
           "end_time": "2026-09-30T00:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3190
         },
         {
@@ -1799,14 +1694,14 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-10-03-1800",
           "start_time": "2026-10-03T18:00:00+09:00",
           "end_time": "2026-10-03T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-1st-slot-1st-2026-10-03-1900",
           "start_time": "2026-10-03T19:00:00+09:00",
           "end_time": "2026-10-03T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -2263,6 +2158,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-1st-slot-1st-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
         }
       ]
     },
@@ -2286,111 +2286,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
-          "id": "slot-gw-ike-2st-slot-2st-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2310
-        },
-        {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -2401,14 +2296,14 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-18-1130",
           "start_time": "2026-09-18T11:30:00+09:00",
           "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2485,7 +2380,7 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-18-2330",
           "start_time": "2026-09-18T23:30:00+09:00",
           "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2499,7 +2394,7 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-19-1030",
           "start_time": "2026-09-19T10:30:00+09:00",
           "end_time": "2026-09-19T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2527,7 +2422,7 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-19-1430",
           "start_time": "2026-09-19T14:30:00+09:00",
           "end_time": "2026-09-19T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2562,7 +2457,7 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-19-1930",
           "start_time": "2026-09-19T19:30:00+09:00",
           "end_time": "2026-09-19T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2576,7 +2471,7 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-19-2130",
           "start_time": "2026-09-19T21:30:00+09:00",
           "end_time": "2026-09-19T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2625,14 +2520,14 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-20-1330",
           "start_time": "2026-09-20T13:30:00+09:00",
           "end_time": "2026-09-20T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-20-1430",
           "start_time": "2026-09-20T14:30:00+09:00",
           "end_time": "2026-09-20T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -2898,14 +2793,14 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-22-2230",
           "start_time": "2026-09-22T22:30:00+09:00",
           "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-22-2330",
           "start_time": "2026-09-22T23:30:00+09:00",
           "end_time": "2026-09-23T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -3283,21 +3178,21 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-26-1730",
           "start_time": "2026-09-26T17:30:00+09:00",
           "end_time": "2026-09-26T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-26-1830",
           "start_time": "2026-09-26T18:30:00+09:00",
           "end_time": "2026-09-26T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-26-1930",
           "start_time": "2026-09-26T19:30:00+09:00",
           "end_time": "2026-09-26T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -3311,14 +3206,14 @@
           "id": "slot-gw-ike-2st-slot-2st-2026-09-26-2130",
           "start_time": "2026-09-26T21:30:00+09:00",
           "end_time": "2026-09-26T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-ike-2st-slot-2st-2026-09-26-2230",
           "start_time": "2026-09-26T22:30:00+09:00",
           "end_time": "2026-09-26T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -4489,6 +4384,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2310
+        },
+        {
+          "id": "slot-gw-ike-2st-slot-2st-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2310
         }
       ]
     },
@@ -4512,111 +4512,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-3st-slot-3st-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -4627,21 +4522,21 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1130",
           "start_time": "2026-09-18T11:30:00+09:00",
           "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1330",
           "start_time": "2026-09-18T13:30:00+09:00",
           "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4655,7 +4550,7 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1530",
           "start_time": "2026-09-18T15:30:00+09:00",
           "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4676,14 +4571,14 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-18-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4767,7 +4662,7 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-19-1630",
           "start_time": "2026-09-19T16:30:00+09:00",
           "end_time": "2026-09-19T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4788,7 +4683,7 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-19-1930",
           "start_time": "2026-09-19T19:30:00+09:00",
           "end_time": "2026-09-19T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4802,21 +4697,21 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-19-2130",
           "start_time": "2026-09-19T21:30:00+09:00",
           "end_time": "2026-09-19T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-19-2230",
           "start_time": "2026-09-19T22:30:00+09:00",
           "end_time": "2026-09-19T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-19-2330",
           "start_time": "2026-09-19T23:30:00+09:00",
           "end_time": "2026-09-20T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4837,14 +4732,14 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-20-1130",
           "start_time": "2026-09-20T11:30:00+09:00",
           "end_time": "2026-09-20T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-20-1230",
           "start_time": "2026-09-20T12:30:00+09:00",
           "end_time": "2026-09-20T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -5012,14 +4907,14 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-21-2130",
           "start_time": "2026-09-21T21:30:00+09:00",
           "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-21-2230",
           "start_time": "2026-09-21T22:30:00+09:00",
           "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -5481,14 +5376,14 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-26-1330",
           "start_time": "2026-09-26T13:30:00+09:00",
           "end_time": "2026-09-26T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-26-1430",
           "start_time": "2026-09-26T14:30:00+09:00",
           "end_time": "2026-09-26T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -5509,14 +5404,14 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-26-1730",
           "start_time": "2026-09-26T17:30:00+09:00",
           "end_time": "2026-09-26T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-3st-slot-3st-2026-09-26-1830",
           "start_time": "2026-09-26T18:30:00+09:00",
           "end_time": "2026-09-26T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -6715,6 +6610,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-3st-slot-3st-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
         }
       ]
     },
@@ -6738,111 +6738,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-4st-slot-4st-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -6853,42 +6748,42 @@
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1130",
           "start_time": "2026-09-18T11:30:00+09:00",
           "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1330",
           "start_time": "2026-09-18T13:30:00+09:00",
           "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1430",
           "start_time": "2026-09-18T14:30:00+09:00",
           "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1530",
           "start_time": "2026-09-18T15:30:00+09:00",
           "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1630",
           "start_time": "2026-09-18T16:30:00+09:00",
           "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -6902,14 +6797,14 @@
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -6923,7 +6818,7 @@
           "id": "slot-gw-ike-4st-slot-4st-2026-09-18-2130",
           "start_time": "2026-09-18T21:30:00+09:00",
           "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -6951,7 +6846,7 @@
           "id": "slot-gw-ike-4st-slot-4st-2026-09-19-1030",
           "start_time": "2026-09-19T10:30:00+09:00",
           "end_time": "2026-09-19T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -7098,14 +6993,14 @@
           "id": "slot-gw-ike-4st-slot-4st-2026-09-20-1630",
           "start_time": "2026-09-20T16:30:00+09:00",
           "end_time": "2026-09-20T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-20-1730",
           "start_time": "2026-09-20T17:30:00+09:00",
           "end_time": "2026-09-20T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -7763,14 +7658,14 @@
           "id": "slot-gw-ike-4st-slot-4st-2026-09-26-2130",
           "start_time": "2026-09-26T21:30:00+09:00",
           "end_time": "2026-09-26T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-4st-slot-4st-2026-09-26-2230",
           "start_time": "2026-09-26T22:30:00+09:00",
           "end_time": "2026-09-26T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -8941,6 +8836,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-4st-slot-4st-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
         }
       ]
     },
@@ -8964,111 +8964,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-5st-slot-5st-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -9079,63 +8974,63 @@
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1130",
           "start_time": "2026-09-18T11:30:00+09:00",
           "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1330",
           "start_time": "2026-09-18T13:30:00+09:00",
           "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1430",
           "start_time": "2026-09-18T14:30:00+09:00",
           "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1530",
           "start_time": "2026-09-18T15:30:00+09:00",
           "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1630",
           "start_time": "2026-09-18T16:30:00+09:00",
           "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1730",
           "start_time": "2026-09-18T17:30:00+09:00",
           "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -9149,21 +9044,21 @@
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-2130",
           "start_time": "2026-09-18T21:30:00+09:00",
           "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-2230",
           "start_time": "2026-09-18T22:30:00+09:00",
           "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-18-2330",
           "start_time": "2026-09-18T23:30:00+09:00",
           "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -9177,14 +9072,14 @@
           "id": "slot-gw-ike-5st-slot-5st-2026-09-19-1030",
           "start_time": "2026-09-19T10:30:00+09:00",
           "end_time": "2026-09-19T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-19-1130",
           "start_time": "2026-09-19T11:30:00+09:00",
           "end_time": "2026-09-19T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -9233,14 +9128,14 @@
           "id": "slot-gw-ike-5st-slot-5st-2026-09-19-1830",
           "start_time": "2026-09-19T18:30:00+09:00",
           "end_time": "2026-09-19T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-19-1930",
           "start_time": "2026-09-19T19:30:00+09:00",
           "end_time": "2026-09-19T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -9254,14 +9149,14 @@
           "id": "slot-gw-ike-5st-slot-5st-2026-09-19-2130",
           "start_time": "2026-09-19T21:30:00+09:00",
           "end_time": "2026-09-19T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-5st-slot-5st-2026-09-19-2230",
           "start_time": "2026-09-19T22:30:00+09:00",
           "end_time": "2026-09-19T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -11167,6 +11062,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-5st-slot-5st-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
         }
       ]
     },
@@ -11189,111 +11189,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-6st-slot-6st-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
           "id": "slot-gw-ike-6st-slot-6st-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -11304,14 +11199,14 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-18-1100",
           "start_time": "2026-09-18T11:00:00+09:00",
           "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-6st-slot-6st-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -11395,7 +11290,7 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-18-0000",
           "start_time": "2026-09-19T00:00:00+09:00",
           "end_time": "2026-09-19T01:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -11409,7 +11304,7 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -11486,14 +11381,14 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-19-2200",
           "start_time": "2026-09-19T22:00:00+09:00",
           "end_time": "2026-09-19T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-6st-slot-6st-2026-09-19-2300",
           "start_time": "2026-09-19T23:00:00+09:00",
           "end_time": "2026-09-20T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -11514,14 +11409,14 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-20-1100",
           "start_time": "2026-09-20T11:00:00+09:00",
           "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-6st-slot-6st-2026-09-20-1200",
           "start_time": "2026-09-20T12:00:00+09:00",
           "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -11549,7 +11444,7 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-20-1600",
           "start_time": "2026-09-20T16:00:00+09:00",
           "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -12389,14 +12284,14 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-09-28-1600",
           "start_time": "2026-09-28T16:00:00+09:00",
           "end_time": "2026-09-28T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-6st-slot-6st-2026-09-28-1700",
           "start_time": "2026-09-28T17:00:00+09:00",
           "end_time": "2026-09-28T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -12739,21 +12634,21 @@
           "id": "slot-gw-ike-6st-slot-6st-2026-10-01-2100",
           "start_time": "2026-10-01T21:00:00+09:00",
           "end_time": "2026-10-01T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-6st-slot-6st-2026-10-01-2200",
           "start_time": "2026-10-01T22:00:00+09:00",
           "end_time": "2026-10-01T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-6st-slot-6st-2026-10-01-2300",
           "start_time": "2026-10-01T23:00:00+09:00",
           "end_time": "2026-10-02T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -13392,6 +13287,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-6st-slot-6st-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
         }
       ]
     },
@@ -13415,111 +13415,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-7st-slot-7st-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
           "id": "slot-gw-ike-7st-slot-7st-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -13530,14 +13425,14 @@
           "id": "slot-gw-ike-7st-slot-7st-2026-09-18-1100",
           "start_time": "2026-09-18T11:00:00+09:00",
           "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-7st-slot-7st-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -13551,7 +13446,7 @@
           "id": "slot-gw-ike-7st-slot-7st-2026-09-18-1400",
           "start_time": "2026-09-18T14:00:00+09:00",
           "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -13614,14 +13509,14 @@
           "id": "slot-gw-ike-7st-slot-7st-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-7st-slot-7st-2026-09-18-0000",
           "start_time": "2026-09-19T00:00:00+09:00",
           "end_time": "2026-09-19T01:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -14174,28 +14069,28 @@
           "id": "slot-gw-ike-7st-slot-7st-2026-09-24-1300",
           "start_time": "2026-09-24T13:00:00+09:00",
           "end_time": "2026-09-24T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-7st-slot-7st-2026-09-24-1400",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-7st-slot-7st-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-7st-slot-7st-2026-09-24-1600",
           "start_time": "2026-09-24T16:00:00+09:00",
           "end_time": "2026-09-24T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -15618,6 +15513,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-7st-slot-7st-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
         }
       ]
     },
@@ -15641,111 +15641,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-8st-slot-8st-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
           "id": "slot-gw-ike-8st-slot-8st-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -15756,21 +15651,21 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-09-18-1100",
           "start_time": "2026-09-18T11:00:00+09:00",
           "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-8st-slot-8st-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-8st-slot-8st-2026-09-18-1300",
           "start_time": "2026-09-18T13:00:00+09:00",
           "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -15784,7 +15679,7 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-09-18-1500",
           "start_time": "2026-09-18T15:00:00+09:00",
           "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -15812,7 +15707,7 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-09-18-1900",
           "start_time": "2026-09-18T19:00:00+09:00",
           "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -15861,14 +15756,14 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-8st-slot-8st-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -15917,7 +15812,7 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-09-19-1900",
           "start_time": "2026-09-19T19:00:00+09:00",
           "end_time": "2026-09-19T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -15931,7 +15826,7 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-09-19-2100",
           "start_time": "2026-09-19T21:00:00+09:00",
           "end_time": "2026-09-19T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -17844,6 +17739,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-8st-slot-8st-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
         }
       ]
     },
@@ -17866,111 +17866,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
-          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 700
-        },
-        {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -17981,63 +17876,63 @@
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1100",
           "start_time": "2026-09-18T11:00:00+09:00",
           "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1300",
           "start_time": "2026-09-18T13:00:00+09:00",
           "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1400",
           "start_time": "2026-09-18T14:00:00+09:00",
           "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1500",
           "start_time": "2026-09-18T15:00:00+09:00",
           "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1600",
           "start_time": "2026-09-18T16:00:00+09:00",
           "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1700",
           "start_time": "2026-09-18T17:00:00+09:00",
           "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1800",
           "start_time": "2026-09-18T18:00:00+09:00",
           "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-1900",
           "start_time": "2026-09-18T19:00:00+09:00",
           "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
@@ -18051,28 +17946,28 @@
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-2100",
           "start_time": "2026-09-18T21:00:00+09:00",
           "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-2200",
           "start_time": "2026-09-18T22:00:00+09:00",
           "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-18-0000",
           "start_time": "2026-09-19T00:00:00+09:00",
           "end_time": "2026-09-19T01:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
@@ -18086,7 +17981,7 @@
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
@@ -18429,28 +18324,28 @@
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-22-1500",
           "start_time": "2026-09-22T15:00:00+09:00",
           "end_time": "2026-09-22T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-22-1600",
           "start_time": "2026-09-22T16:00:00+09:00",
           "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-22-1700",
           "start_time": "2026-09-22T17:00:00+09:00",
           "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-09-22-1800",
           "start_time": "2026-09-22T18:00:00+09:00",
           "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
@@ -19633,7 +19528,7 @@
           "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-03-2200",
           "start_time": "2026-10-03T22:00:00+09:00",
           "end_time": "2026-10-03T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 700
         },
         {
@@ -20069,6 +19964,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "AVAILABLE",
           "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
+        },
+        {
+          "id": "slot-gw-ike-subroom-slot-６階／SUBROOM（3畳00分～-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 700
         }
       ]
     },
@@ -20091,111 +20091,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-ast-slot-Ast-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -20213,21 +20108,21 @@
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-18-1300",
           "start_time": "2026-09-18T13:00:00+09:00",
           "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-18-1400",
           "start_time": "2026-09-18T14:00:00+09:00",
           "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -20283,14 +20178,14 @@
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-18-2200",
           "start_time": "2026-09-18T22:00:00+09:00",
           "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -20311,14 +20206,14 @@
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -20360,14 +20255,14 @@
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-19-1800",
           "start_time": "2026-09-19T18:00:00+09:00",
           "end_time": "2026-09-19T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-19-1900",
           "start_time": "2026-09-19T19:00:00+09:00",
           "end_time": "2026-09-19T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -21333,14 +21228,14 @@
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-28-2200",
           "start_time": "2026-09-28T22:00:00+09:00",
           "end_time": "2026-09-28T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-ast-slot-Ast-2026-09-28-2300",
           "start_time": "2026-09-28T23:00:00+09:00",
           "end_time": "2026-09-29T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -22294,6 +22189,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "BOOKED",
           "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-ast-slot-Ast-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
         }
       ]
     },
@@ -22317,111 +22317,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-bst-slot-Bst-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -22439,56 +22334,56 @@
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1330",
           "start_time": "2026-09-18T13:30:00+09:00",
           "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1430",
           "start_time": "2026-09-18T14:30:00+09:00",
           "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1530",
           "start_time": "2026-09-18T15:30:00+09:00",
           "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1630",
           "start_time": "2026-09-18T16:30:00+09:00",
           "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1730",
           "start_time": "2026-09-18T17:30:00+09:00",
           "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-18-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -22586,14 +22481,14 @@
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-19-1830",
           "start_time": "2026-09-19T18:30:00+09:00",
           "end_time": "2026-09-19T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-19-1930",
           "start_time": "2026-09-19T19:30:00+09:00",
           "end_time": "2026-09-19T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -22607,7 +22502,7 @@
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-19-2130",
           "start_time": "2026-09-19T21:30:00+09:00",
           "end_time": "2026-09-19T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -24520,6 +24415,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-bst-slot-Bst-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
         }
       ]
     },
@@ -24543,111 +24543,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-cst-slot-Cst-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -24665,56 +24560,56 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1330",
           "start_time": "2026-09-18T13:30:00+09:00",
           "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1430",
           "start_time": "2026-09-18T14:30:00+09:00",
           "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1530",
           "start_time": "2026-09-18T15:30:00+09:00",
           "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1630",
           "start_time": "2026-09-18T16:30:00+09:00",
           "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1730",
           "start_time": "2026-09-18T17:30:00+09:00",
           "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -24728,14 +24623,14 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-2130",
           "start_time": "2026-09-18T21:30:00+09:00",
           "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-18-2230",
           "start_time": "2026-09-18T22:30:00+09:00",
           "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -24777,7 +24672,7 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-19-1330",
           "start_time": "2026-09-19T13:30:00+09:00",
           "end_time": "2026-09-19T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -24833,14 +24728,14 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-19-2130",
           "start_time": "2026-09-19T21:30:00+09:00",
           "end_time": "2026-09-19T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-19-2230",
           "start_time": "2026-09-19T22:30:00+09:00",
           "end_time": "2026-09-19T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -24917,14 +24812,14 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-20-1830",
           "start_time": "2026-09-20T18:30:00+09:00",
           "end_time": "2026-09-20T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-20-1930",
           "start_time": "2026-09-20T19:30:00+09:00",
           "end_time": "2026-09-20T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -25498,21 +25393,21 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-26-1130",
           "start_time": "2026-09-26T11:30:00+09:00",
           "end_time": "2026-09-26T12:30:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-26-1230",
           "start_time": "2026-09-26T12:30:00+09:00",
           "end_time": "2026-09-26T13:30:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-26-1330",
           "start_time": "2026-09-26T13:30:00+09:00",
           "end_time": "2026-09-26T14:30:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3190
         },
         {
@@ -25883,14 +25778,14 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-29-2130",
           "start_time": "2026-09-29T21:30:00+09:00",
           "end_time": "2026-09-29T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-09-29-2230",
           "start_time": "2026-09-29T22:30:00+09:00",
           "end_time": "2026-09-29T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -26746,6 +26641,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-cst-slot-Cst-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
         }
       ]
     },
@@ -26769,111 +26769,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1030",
-          "start_time": "2026-09-17T10:30:00+09:00",
-          "end_time": "2026-09-17T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1130",
-          "start_time": "2026-09-17T11:30:00+09:00",
-          "end_time": "2026-09-17T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1230",
-          "start_time": "2026-09-17T12:30:00+09:00",
-          "end_time": "2026-09-17T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1330",
-          "start_time": "2026-09-17T13:30:00+09:00",
-          "end_time": "2026-09-17T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1430",
-          "start_time": "2026-09-17T14:30:00+09:00",
-          "end_time": "2026-09-17T15:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1530",
-          "start_time": "2026-09-17T15:30:00+09:00",
-          "end_time": "2026-09-17T16:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1630",
-          "start_time": "2026-09-17T16:30:00+09:00",
-          "end_time": "2026-09-17T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1730",
-          "start_time": "2026-09-17T17:30:00+09:00",
-          "end_time": "2026-09-17T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1830",
-          "start_time": "2026-09-17T18:30:00+09:00",
-          "end_time": "2026-09-17T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-1930",
-          "start_time": "2026-09-17T19:30:00+09:00",
-          "end_time": "2026-09-17T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-2030",
-          "start_time": "2026-09-17T20:30:00+09:00",
-          "end_time": "2026-09-17T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-2130",
-          "start_time": "2026-09-17T21:30:00+09:00",
-          "end_time": "2026-09-17T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-2230",
-          "start_time": "2026-09-17T22:30:00+09:00",
-          "end_time": "2026-09-17T23:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-2330",
-          "start_time": "2026-09-17T23:30:00+09:00",
-          "end_time": "2026-09-18T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-dst-slot-Dst-2026-09-17-0030",
-          "start_time": "2026-09-18T00:30:00+09:00",
-          "end_time": "2026-09-18T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1030",
           "start_time": "2026-09-18T10:30:00+09:00",
           "end_time": "2026-09-18T11:30:00+09:00",
@@ -26891,28 +26786,28 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1230",
           "start_time": "2026-09-18T12:30:00+09:00",
           "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1330",
           "start_time": "2026-09-18T13:30:00+09:00",
           "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1430",
           "start_time": "2026-09-18T14:30:00+09:00",
           "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1530",
           "start_time": "2026-09-18T15:30:00+09:00",
           "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -26933,14 +26828,14 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1830",
           "start_time": "2026-09-18T18:30:00+09:00",
           "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-18-1930",
           "start_time": "2026-09-18T19:30:00+09:00",
           "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -26996,7 +26891,7 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-19-1230",
           "start_time": "2026-09-19T12:30:00+09:00",
           "end_time": "2026-09-19T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -27024,7 +26919,7 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-19-1630",
           "start_time": "2026-09-19T16:30:00+09:00",
           "end_time": "2026-09-19T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -27045,7 +26940,7 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-19-1930",
           "start_time": "2026-09-19T19:30:00+09:00",
           "end_time": "2026-09-19T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -27059,7 +26954,7 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-19-2130",
           "start_time": "2026-09-19T21:30:00+09:00",
           "end_time": "2026-09-19T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -27129,28 +27024,28 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-20-1630",
           "start_time": "2026-09-20T16:30:00+09:00",
           "end_time": "2026-09-20T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-20-1730",
           "start_time": "2026-09-20T17:30:00+09:00",
           "end_time": "2026-09-20T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-20-1830",
           "start_time": "2026-09-20T18:30:00+09:00",
           "end_time": "2026-09-20T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-20-1930",
           "start_time": "2026-09-20T19:30:00+09:00",
           "end_time": "2026-09-20T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -27584,14 +27479,14 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-24-2130",
           "start_time": "2026-09-24T21:30:00+09:00",
           "end_time": "2026-09-24T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-24-2230",
           "start_time": "2026-09-24T22:30:00+09:00",
           "end_time": "2026-09-24T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -28972,6 +28867,111 @@
           "end_time": "2026-10-08T01:30:00+09:00",
           "status": "BOOKED",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1030",
+          "start_time": "2026-10-08T10:30:00+09:00",
+          "end_time": "2026-10-08T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1130",
+          "start_time": "2026-10-08T11:30:00+09:00",
+          "end_time": "2026-10-08T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1230",
+          "start_time": "2026-10-08T12:30:00+09:00",
+          "end_time": "2026-10-08T13:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1330",
+          "start_time": "2026-10-08T13:30:00+09:00",
+          "end_time": "2026-10-08T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1430",
+          "start_time": "2026-10-08T14:30:00+09:00",
+          "end_time": "2026-10-08T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1530",
+          "start_time": "2026-10-08T15:30:00+09:00",
+          "end_time": "2026-10-08T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1630",
+          "start_time": "2026-10-08T16:30:00+09:00",
+          "end_time": "2026-10-08T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1730",
+          "start_time": "2026-10-08T17:30:00+09:00",
+          "end_time": "2026-10-08T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1830",
+          "start_time": "2026-10-08T18:30:00+09:00",
+          "end_time": "2026-10-08T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-1930",
+          "start_time": "2026-10-08T19:30:00+09:00",
+          "end_time": "2026-10-08T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-2030",
+          "start_time": "2026-10-08T20:30:00+09:00",
+          "end_time": "2026-10-08T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-2130",
+          "start_time": "2026-10-08T21:30:00+09:00",
+          "end_time": "2026-10-08T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-2230",
+          "start_time": "2026-10-08T22:30:00+09:00",
+          "end_time": "2026-10-08T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-2330",
+          "start_time": "2026-10-08T23:30:00+09:00",
+          "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-dst-slot-Dst-2026-10-08-0030",
+          "start_time": "2026-10-09T00:30:00+09:00",
+          "end_time": "2026-10-09T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
         }
       ]
     },
@@ -28994,111 +28994,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-ike-est-slot-Est-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -29116,21 +29011,21 @@
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-1300",
           "start_time": "2026-09-18T13:00:00+09:00",
           "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-1400",
           "start_time": "2026-09-18T14:00:00+09:00",
           "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -29144,7 +29039,7 @@
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-1600",
           "start_time": "2026-09-18T16:00:00+09:00",
           "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -29186,14 +29081,14 @@
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-2200",
           "start_time": "2026-09-18T22:00:00+09:00",
           "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-est-slot-Est-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -29214,21 +29109,21 @@
           "id": "slot-gw-ike-est-slot-Est-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-est-slot-Est-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-est-slot-Est-2026-09-19-1300",
           "start_time": "2026-09-19T13:00:00+09:00",
           "end_time": "2026-09-19T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -29263,7 +29158,7 @@
           "id": "slot-gw-ike-est-slot-Est-2026-09-19-1800",
           "start_time": "2026-09-19T18:00:00+09:00",
           "end_time": "2026-09-19T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -31197,6 +31092,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "BOOKED",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-ike-est-slot-Est-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
         }
       ]
     },
@@ -31219,111 +31219,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
-          "id": "slot-gw-ike-fst-slot-Fst-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3740
-        },
-        {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -31341,28 +31236,28 @@
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-1300",
           "start_time": "2026-09-18T13:00:00+09:00",
           "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-1400",
           "start_time": "2026-09-18T14:00:00+09:00",
           "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-1500",
           "start_time": "2026-09-18T15:00:00+09:00",
           "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -31390,7 +31285,7 @@
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-1900",
           "start_time": "2026-09-18T19:00:00+09:00",
           "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -31404,21 +31299,21 @@
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-2100",
           "start_time": "2026-09-18T21:00:00+09:00",
           "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-2200",
           "start_time": "2026-09-18T22:00:00+09:00",
           "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -31439,28 +31334,28 @@
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1100",
           "start_time": "2026-09-19T11:00:00+09:00",
           "end_time": "2026-09-19T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1300",
           "start_time": "2026-09-19T13:00:00+09:00",
           "end_time": "2026-09-19T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1400",
           "start_time": "2026-09-19T14:00:00+09:00",
           "end_time": "2026-09-19T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -31481,21 +31376,21 @@
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1700",
           "start_time": "2026-09-19T17:00:00+09:00",
           "end_time": "2026-09-19T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1800",
           "start_time": "2026-09-19T18:00:00+09:00",
           "end_time": "2026-09-19T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
           "id": "slot-gw-ike-fst-slot-Fst-2026-09-19-1900",
           "start_time": "2026-09-19T19:00:00+09:00",
           "end_time": "2026-09-19T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3740
         },
         {
@@ -33422,6 +33317,111 @@
           "end_time": "2026-10-08T01:00:00+09:00",
           "status": "BOOKED",
           "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3740
+        },
+        {
+          "id": "slot-gw-ike-fst-slot-Fst-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3740
         }
       ]
     },
@@ -33444,111 +33444,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1000",
-          "start_time": "2026-09-17T10:00:00+09:00",
-          "end_time": "2026-09-17T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1100",
-          "start_time": "2026-09-17T11:00:00+09:00",
-          "end_time": "2026-09-17T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1200",
-          "start_time": "2026-09-17T12:00:00+09:00",
-          "end_time": "2026-09-17T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1300",
-          "start_time": "2026-09-17T13:00:00+09:00",
-          "end_time": "2026-09-17T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1400",
-          "start_time": "2026-09-17T14:00:00+09:00",
-          "end_time": "2026-09-17T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1500",
-          "start_time": "2026-09-17T15:00:00+09:00",
-          "end_time": "2026-09-17T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1600",
-          "start_time": "2026-09-17T16:00:00+09:00",
-          "end_time": "2026-09-17T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1700",
-          "start_time": "2026-09-17T17:00:00+09:00",
-          "end_time": "2026-09-17T18:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1800",
-          "start_time": "2026-09-17T18:00:00+09:00",
-          "end_time": "2026-09-17T19:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-1900",
-          "start_time": "2026-09-17T19:00:00+09:00",
-          "end_time": "2026-09-17T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-2000",
-          "start_time": "2026-09-17T20:00:00+09:00",
-          "end_time": "2026-09-17T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-2100",
-          "start_time": "2026-09-17T21:00:00+09:00",
-          "end_time": "2026-09-17T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-2200",
-          "start_time": "2026-09-17T22:00:00+09:00",
-          "end_time": "2026-09-17T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-2300",
-          "start_time": "2026-09-17T23:00:00+09:00",
-          "end_time": "2026-09-18T00:00:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3190
-        },
-        {
-          "id": "slot-gw-ike-gst-slot-Gst-2026-09-17-0000",
-          "start_time": "2026-09-18T00:00:00+09:00",
-          "end_time": "2026-09-18T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3190
-        },
-        {
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-1000",
           "start_time": "2026-09-18T10:00:00+09:00",
           "end_time": "2026-09-18T11:00:00+09:00",
@@ -33566,14 +33461,14 @@
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-1200",
           "start_time": "2026-09-18T12:00:00+09:00",
           "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-1300",
           "start_time": "2026-09-18T13:00:00+09:00",
           "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -33601,21 +33496,21 @@
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-1700",
           "start_time": "2026-09-18T17:00:00+09:00",
           "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-1800",
           "start_time": "2026-09-18T18:00:00+09:00",
           "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-1900",
           "start_time": "2026-09-18T19:00:00+09:00",
           "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -33629,21 +33524,21 @@
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-2100",
           "start_time": "2026-09-18T21:00:00+09:00",
           "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-2200",
           "start_time": "2026-09-18T22:00:00+09:00",
           "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-gst-slot-Gst-2026-09-18-2300",
           "start_time": "2026-09-18T23:00:00+09:00",
           "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -35645,6 +35540,111 @@
           "id": "slot-gw-ike-gst-slot-Gst-2026-10-07-0000",
           "start_time": "2026-10-08T00:00:00+09:00",
           "end_time": "2026-10-08T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1000",
+          "start_time": "2026-10-08T10:00:00+09:00",
+          "end_time": "2026-10-08T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1100",
+          "start_time": "2026-10-08T11:00:00+09:00",
+          "end_time": "2026-10-08T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1200",
+          "start_time": "2026-10-08T12:00:00+09:00",
+          "end_time": "2026-10-08T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1300",
+          "start_time": "2026-10-08T13:00:00+09:00",
+          "end_time": "2026-10-08T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1400",
+          "start_time": "2026-10-08T14:00:00+09:00",
+          "end_time": "2026-10-08T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1500",
+          "start_time": "2026-10-08T15:00:00+09:00",
+          "end_time": "2026-10-08T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1600",
+          "start_time": "2026-10-08T16:00:00+09:00",
+          "end_time": "2026-10-08T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1700",
+          "start_time": "2026-10-08T17:00:00+09:00",
+          "end_time": "2026-10-08T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1800",
+          "start_time": "2026-10-08T18:00:00+09:00",
+          "end_time": "2026-10-08T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-1900",
+          "start_time": "2026-10-08T19:00:00+09:00",
+          "end_time": "2026-10-08T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-2000",
+          "start_time": "2026-10-08T20:00:00+09:00",
+          "end_time": "2026-10-08T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-2100",
+          "start_time": "2026-10-08T21:00:00+09:00",
+          "end_time": "2026-10-08T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-2200",
+          "start_time": "2026-10-08T22:00:00+09:00",
+          "end_time": "2026-10-08T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-2300",
+          "start_time": "2026-10-08T23:00:00+09:00",
+          "end_time": "2026-10-09T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3190
+        },
+        {
+          "id": "slot-gw-ike-gst-slot-Gst-2026-10-08-0000",
+          "start_time": "2026-10-09T00:00:00+09:00",
+          "end_time": "2026-10-09T01:00:00+09:00",
           "status": "BOOKED",
           "price": 3190
         }

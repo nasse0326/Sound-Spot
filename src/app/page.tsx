@@ -15,7 +15,7 @@ import { HORIZONTAL_BANNER_ADS } from '@/config/banner-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
-import { checkRoomAvailability } from '@/lib/slot-utils';
+import { checkRoomAvailability, naturalCompareRoomNames } from '@/lib/slot-utils';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
 import {
   AlignLeft,
@@ -181,8 +181,10 @@ export default function HomePage() {
     const isDaytime = !isWeekend && targetStartH < 18;
 
     return list.sort((a, b) => {
-      // 共通のスタジオ・部屋標準順比較（公式の部屋番号・アルファベット・フロア順）
-      const naturalOrder = (a.orderIndex ?? 999) - (b.orderIndex ?? 999);
+      // 共通のスタジオ・部屋標準順比較（部屋名のA~Z・0~9を自然順ソート。
+      // 各店舗の命名規則はバラバラだが、公式サイト上の掲載順もアルファベット・数字の
+      // 昇順であることが多いため、orderIndex（登録順の連番）ではなく部屋名自体を比較する）
+      const naturalOrder = naturalCompareRoomNames(a.name, b.name) || ((a.orderIndex ?? 999) - (b.orderIndex ?? 999));
 
       if (sortBy === 'standard') {
         return naturalOrder;
@@ -222,6 +224,20 @@ export default function HomePage() {
     });
   }, [filteredRooms, sortBy, filters.startTime, filters.endTime, filters.bookingType, filters.allowAdjacent30Min]);
 
+  // エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）
+  const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢'];
+
+  // スタジオごとの部屋総数（現在の絞り込み条件に左右されないよう、日付以外の
+  // フィルタを適用する前のallRoomsから算出。サイズ/機材/満室非表示等の絞り込みで
+  // カードの並び順がガタガタ変わらないようにするため）
+  const studioRoomCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const room of allRooms) {
+      counts.set(room.studio.id, (counts.get(room.studio.id) ?? 0) + 1);
+    }
+    return counts;
+  }, [allRooms]);
+
   // スタジオ単位で部屋をグループ化（案1: 1スタジオ＝1カード）
   const studioGroups = useMemo(() => {
     const map = new Map<string, { studio: any; rooms: RoomWithSlots[] }>();
@@ -234,8 +250,23 @@ export default function HomePage() {
       map.get(sId)!.rooms.push(room);
     }
 
-    return Array.from(map.values());
-  }, [sortedRooms]);
+    const groups = Array.from(map.values());
+
+    // 標準順（sortBy === 'standard'）の時だけ、エリア→そのエリア内の部屋数が多い順に
+    // スタジオカードを並べ替える。価格・広さ・空き枠優先ソートの時は、部屋単位の
+    // 並び替え結果をそのままスタジオの並びにも反映させたいので触らない。
+    if (sortBy === 'standard') {
+      groups.sort((a, b) => {
+        const areaDiff = AREA_DISPLAY_ORDER.indexOf(a.studio.area) - AREA_DISPLAY_ORDER.indexOf(b.studio.area);
+        if (areaDiff !== 0) return areaDiff;
+        const countDiff = (studioRoomCounts.get(b.studio.id) ?? 0) - (studioRoomCounts.get(a.studio.id) ?? 0);
+        if (countDiff !== 0) return countDiff;
+        return a.studio.id.localeCompare(b.studio.id);
+      });
+    }
+
+    return groups;
+  }, [sortedRooms, sortBy, studioRoomCounts]);
 
   // クイック日付プリセット
   const handleQuickDate = (type: 'today' | 'tomorrow' | 'sat' | 'sun') => {
