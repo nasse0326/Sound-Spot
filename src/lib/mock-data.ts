@@ -12,6 +12,12 @@ import { getBazookaRooms, BAZOOKA_STUDIO } from './bazooka-converter';
 import { getBotIkebukuroRealRooms, BOT_IKEBUKURO_STUDIO } from './bot-ikebukuro-converter';
 import { getVivoRooms, VIVO_STUDIO } from './vivo-converter';
 import { getGatewayIkebukuroRealRooms, GATEWAY_IKEBUKURO_STUDIO } from './gateway-ikebukuro-converter';
+import {
+  getAndysRealRooms, ANDYS_STUDIO,
+  getStandbyRealRooms, STANDBY_STUDIO,
+  getGourdislandWestRealRooms, GOURDISLAND_WEST_STUDIO,
+  getGourdislandSouthRealRooms, GOURDISLAND_SOUTH_STUDIO,
+} from './shimokitazawa-studiol-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -50,6 +56,13 @@ export const MOCK_STUDIOS: Studio[] = [
   PENTA_STUDIOS['ikebukuro-penta-hands'],
   VIVO_STUDIO,
   GATEWAY_IKEBUKURO_STUDIO,
+
+  // 下北沢エリア (5店舗)
+  NOAH_STUDIOS_META['shimokitazawa'],
+  ANDYS_STUDIO,
+  STANDBY_STUDIO,
+  GOURDISLAND_WEST_STUDIO,
+  GOURDISLAND_SOUTH_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -93,9 +106,17 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const vivoRooms = getVivoRooms();
   const gatewayIkebukuroRooms = getGatewayIkebukuroRealRooms(dateStr);
 
+  // 9. 下北沢エリア (5店舗 / ノアは上記noahRoomsに含む。ANDY'S・STANDBY・
+  //    ガードアイランド下北沢ウエスト/南口の4店舗を個別に追加する)
+  const andysRooms = getAndysRealRooms(dateStr);
+  const standbyRooms = getStandbyRealRooms(dateStr);
+  const gourdislandWestRooms = getGourdislandWestRealRooms(dateStr);
+  const gourdislandSouthRooms = getGourdislandSouthRealRooms(dateStr);
+
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...gatewayBabaRooms, ...ongakukanBabaRooms, ...botBabaRooms, ...bazookaRooms,
     ...botIkebukuroRooms, ...vivoRooms, ...gatewayIkebukuroRooms,
+    ...andysRooms, ...standbyRooms, ...gourdislandWestRooms, ...gourdislandSouthRooms,
   ];
 }

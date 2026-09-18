@@ -225,3 +225,74 @@ export async function fetchBotIkebukuroDays(
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/2355', BOT_IKEBUKURO_ROOMS, '池袋西口店', baseDate, dayCount);
 }
+
+// 以下、下北沢エリア追加分。BASS ON TOP系列ではないが、同じstudi-ol.com ASPを
+// 使っておりログイン不要でカレンダーが閲覧できることをブラウザで実地確認済み。
+// features配列は他店舗と異なり、"BASS::"/"DRUM::"プレフィックス方式で明示する
+// （ALBIT/GALLIEN-KRUEGER/Trace Elliot等、既存コンバータのAmpeg/Hartke/Drums
+// キーワード一致では拾えないブランドが多いため、専用コンバータ側で
+// プレフィックスを剥がして正確にguitarAmps/bassAmp/drumSetへ振り分ける）。
+
+// room_idはstudi-ol.com/shop/587のページソース内<li room-id="...">から実値を確認済み
+export const ANDYS_ROOMS: BotRoomSpec[] = [
+  { id: 'andys-bst', roomIdNum: 2350, name: 'Bst (16帖)', size_sqm: 26, capacity: 10, hourly_rate: 1980, day_rate: 1980, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM2000 DSL-100/1960', 'Fender TwinAmp', 'Roland JC120', 'BASS::Ampeg SWR750x/Megoliath', 'DRUM::YAMAHA Maple Custom Absolute'] },
+  { id: 'andys-cst', roomIdNum: 2351, name: 'Cst (14帖)', size_sqm: 23, capacity: 10, hourly_rate: 1980, day_rate: 1980, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM2000 DSL-100/1960', 'Fender TwinAmp', 'Roland JC120', 'BASS::Ampeg SVT-4PRO/SVT810E', 'DRUM::YAMAHA Maple Custom Absolute'] },
+];
+
+export async function fetchAndysDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/587', ANDYS_ROOMS, 'ANDY\'S STUDIO', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/767のページソース内<li room-id="...">から実値を確認済み。
+// ELS(レコーディング専用ルーム)は時間単価ではなくパッケージ料金制(ボーカルREC5500円、
+// バンドREC8800円/6時間〜)のため、他室と同じhourly_rateモデルに合わず対象外とした。
+export const STANDBY_ROOMS: BotRoomSpec[] = [
+  { id: 'standby-a', roomIdNum: 3382, name: 'Aスタジオ (14帖)', size_sqm: 23, capacity: 8, hourly_rate: 3200, day_rate: 2400, individual_rate: 1000, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC120', 'BASS::Ampeg SVT-4PRO+810', 'DRUM::Pearl BN series(12"13"16"22") / MEINL CUSTOM DARK series'] },
+  { id: 'standby-b', roomIdNum: 3383, name: 'Bスタジオ (11帖)', size_sqm: 18, capacity: 7, hourly_rate: 3000, day_rate: 2200, individual_rate: 1000, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC120', 'BASS::GALLIEN-KRUEGER 1001RB-II / Ampeg SVT-810E', 'DRUM::Pearl BN series(12"13"16"22") / Paiste PST-7'] },
+  { id: 'standby-c', roomIdNum: 3633, name: 'Cスタジオ (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2800, day_rate: 2000, individual_rate: 1000, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC120', 'BASS::Acoustic SET', 'DRUM::Pearl Vision series(12"13"16"22") / Paiste PST-5'] },
+  { id: 'standby-d', roomIdNum: 4426, name: 'Dスタジオ (10帖・鏡なし)', size_sqm: 17, capacity: 2, hourly_rate: 1800, day_rate: 1800, individual_rate: 1000, start_time_offset: 0, features: ['Dr.Z CarmenGhia Xotic Mod.(レコーディング用)', 'BASS::Ampeg SVT-4PRO+810 / SUNN Vintage Cabinet(レコーディング用)', 'DRUM::TAMA DRUM SET / Pearl DRUM SET(レコーディング用)'] },
+];
+
+export async function fetchStandbyDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/767', STANDBY_ROOMS, 'STANDBY MUSIC STUDIO', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/539のページソース内<li room-id="...">から実値を確認済み
+export const GOURDISLAND_WEST_ROOMS: BotRoomSpec[] = [
+  { id: 'gourdisland-west-1st', roomIdNum: 2142, name: '1st (12帖)', size_sqm: 20, capacity: 10, hourly_rate: 2830, day_rate: 2100, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'Fender', 'BASS::Ampeg', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-west-2st', roomIdNum: 2143, name: '2st (10帖)', size_sqm: 17, capacity: 10, hourly_rate: 2620, day_rate: 1880, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::ALBIT B-280', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-west-3st', roomIdNum: 2144, name: '3st (10帖)', size_sqm: 17, capacity: 10, hourly_rate: 2620, day_rate: 1880, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::GALLIEN-KRUEGER 400RB III', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-west-4st', roomIdNum: 2145, name: '4st (12帖)', size_sqm: 20, capacity: 10, hourly_rate: 2830, day_rate: 2100, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'Fender', 'BASS::Ampeg', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-west-5st', roomIdNum: 2146, name: '5st (10帖)', size_sqm: 17, capacity: 10, hourly_rate: 2100, day_rate: 1470, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::Trace Elliot GP12 AH400', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-west-6st', roomIdNum: 2147, name: '6st (10帖)', size_sqm: 17, capacity: 10, hourly_rate: 2620, day_rate: 1880, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::Ampeg', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+];
+
+export async function fetchGourdislandWestDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/539', GOURDISLAND_WEST_ROOMS, 'ガードアイランドスタジオ下北沢ウエスト店', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/591のページソース内<li room-id="...">から実値を確認済み
+export const GOURDISLAND_SOUTH_ROOMS: BotRoomSpec[] = [
+  { id: 'gourdisland-south-ast', roomIdNum: 2377, name: 'Ast (9帖)', size_sqm: 15, capacity: 10, hourly_rate: 2420, day_rate: 1700, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::Trace Elliot AH300', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-south-bst', roomIdNum: 2378, name: 'Bst (9帖)', size_sqm: 15, capacity: 10, hourly_rate: 2420, day_rate: 1700, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::PEAVEY Session Bass', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-south-cst', roomIdNum: 2379, name: 'Cst (12帖)', size_sqm: 20, capacity: 10, hourly_rate: 2620, day_rate: 1940, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'Fender', 'BASS::Ampeg', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-south-dst', roomIdNum: 2380, name: 'Dst (12帖)', size_sqm: 20, capacity: 10, hourly_rate: 2620, day_rate: 1940, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'Fender', 'BASS::Ampeg', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-south-est', roomIdNum: 2381, name: 'Est (9帖)', size_sqm: 15, capacity: 10, hourly_rate: 2420, day_rate: 1700, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::Trace Elliot AH300SMC', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+  { id: 'gourdisland-south-fst', roomIdNum: 2382, name: 'Fst (9帖)', size_sqm: 15, capacity: 10, hourly_rate: 2420, day_rate: 1700, individual_rate: 570, start_time_offset: 0, features: ['Marshall', 'Roland JC-120', 'BASS::Ampeg', 'DRUM::Pearl Standard Maple(BD22"/FT16"/TT13"&12") / Sabian AA Rock'] },
+];
+
+export async function fetchGourdislandSouthDays(
+  baseDate: Date,
+  dayCount: number = 14
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/591', GOURDISLAND_SOUTH_ROOMS, 'ガードアイランドスタジオ下北沢南口店', baseDate, dayCount);
+}

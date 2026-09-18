@@ -234,4 +234,27 @@ export const NOAH_ALL_STORES: NoahStoreMaster[] = [
       { id: 'noah-ikebukuro-booth2', studioId: 3273, name: 'Booth2 (2.5帖)', tatami: 2.5, offset: 30, loginRequired: false, priceRegular: 700, priceDaytime: 700, priceSolo: 700, guitarAmps: [], bassAmp: '', drumSet: '' },
     ],
   },
+  // 10. 下北沢店 (16室) - scripts/scan-noah-branch.ts shimokitazawa (branch_id=9) で実データ確認済み
+  {
+    key: 'shimokitazawa',
+    name: 'サウンドスタジオノア 下北沢店',
+    rooms: [
+      { id: 'noah-shimokitazawa-a1st', studioId: 92, name: 'A1st (6帖)', tatami: 6, offset: 0, loginRequired: false, priceRegular: 2310, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JC120], bassAmp: 'Markbass Little Mark 250 + Standard 104HF', drumSet: 'CANOPUS 刃 SERIES' },
+      { id: 'noah-shimokitazawa-a2st', studioId: 93, name: 'A2st (8帖)', tatami: 8, offset: 30, loginRequired: false, priceRegular: 2530, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro + SVT610HF', drumSet: 'Pearl MSX series' },
+      { id: 'noah-shimokitazawa-a3st', studioId: 94, name: 'A3st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2530, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Markbass Little Mark Vintage + Standard 104HF', drumSet: 'SAKAE The Almighty Birch' },
+      { id: 'noah-shimokitazawa-g2st', studioId: 95, name: 'G2st (10帖)', tatami: 10, offset: 30, loginRequired: false, priceRegular: 2750, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro + SVT810E', drumSet: 'Pearl Reference series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-shimokitazawa-g3st', studioId: 96, name: 'G3st (12帖)', tatami: 12, offset: 0, loginRequired: false, priceRegular: 2970, priceDaytime: 1980, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS Little Mark Rocker 500 + Standard 108HR', drumSet: 'Pearl Carbonply Maple series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-shimokitazawa-b1st', studioId: 97, name: 'B1st (15帖)', tatami: 15, offset: 0, loginRequired: true, priceRegular: 3740, priceDaytime: 2640, priceSolo: 880, guitarAmps: ['Fender Twin Reverb 65"', JCM900, JC120], bassAmp: 'Ampeg SVT450H + SVT810E', drumSet: 'SAKAE The Almighty' },
+      { id: 'noah-shimokitazawa-b2st', studioId: 98, name: 'B2st (15帖)', tatami: 15, offset: 30, loginRequired: true, priceRegular: 3520, priceDaytime: 2420, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'Darkglass Electronics MICROTUBES 900 + DS-210C/DG-410C', drumSet: 'Pearl Reference Pure (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-shimokitazawa-b3st', studioId: 99, name: 'B3st (13帖)', tatami: 13, offset: 0, loginRequired: true, priceRegular: 3190, priceDaytime: 2200, priceSolo: 880, guitarAmps: ['Fender Twin Reverb 65"', JCM900, JC120], bassAmp: 'Ampeg SVT450H + SVT810E', drumSet: "DW Collector's Maple Set (12x9,13x10,16x14,22x18)" },
+      { id: 'noah-shimokitazawa-est', studioId: 100, name: 'Est (17帖)', tatami: 17, offset: 0, loginRequired: true, priceRegular: 3960, priceDaytime: 2970, priceSolo: 990, guitarAmps: ['Fender Twin Reverb 65"', JCM900, JC120], bassAmp: 'Ampeg SVT450H + SVT810E', drumSet: 'YAMAHA Recording Custom (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-shimokitazawa-recstudio', studioId: 101, name: 'REC.STUDIO (6帖)', tatami: 6, offset: 0, loginRequired: false, priceRegular: 2090, priceDaytime: 1980, priceSolo: 880, guitarAmps: [], bassAmp: '', drumSet: '' },
+      { id: 'noah-shimokitazawa-b4st', studioId: 3250, name: 'B4st (14帖)', tatami: 14, offset: 30, loginRequired: true, priceRegular: 3630, priceDaytime: 2530, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg Venture V7 + SVT-810E', drumSet: 'YAMAHA Recording Custom SOB (HT10,LO12,FT16,BD22)' },
+      { id: 'noah-shimokitazawa-cst', studioId: 3251, name: 'Cst (24帖)', tatami: 24, offset: 30, loginRequired: true, priceRegular: 5170, priceDaytime: 3630, priceSolo: 1100, guitarAmps: [JCM900, JC120, 'Fender USA 65 Twin Reverb'], bassAmp: 'Ampeg Venture V7 + SVT-810E', drumSet: 'SONOR SQ1 GTB (HT10,LO12,FT16,BD22)' },
+      { id: 'noah-shimokitazawa-b5st', studioId: 3252, name: 'B5st (16帖)', tatami: 16, offset: 0, loginRequired: true, priceRegular: 3850, priceDaytime: 2750, priceSolo: 880, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS LITTLE MARK IV + Standard 108', drumSet: 'TAMA Starclassic Walnut/Birch SAF (HT10,LO12,FT16,BD22)' },
+      { id: 'noah-shimokitazawa-a4st', studioId: 3253, name: 'A4st (8.5帖)', tatami: 9, offset: 0, loginRequired: false, priceRegular: 2750, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg 3pro SVT-410HLF', drumSet: 'Pearl SESSION STUDIO SELECT (HT10,LO12,FT14,BD20)' },
+      { id: 'noah-shimokitazawa-a5st', studioId: 3254, name: 'A5st (7.5帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2640, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg 3pro SVT-410HLF', drumSet: 'CANOPUS Birch Series Studio kit Plus White Satin (HT10,LO12,FT14,BD20)' },
+      { id: 'noah-shimokitazawa-a6st', studioId: 3256, name: 'A6st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2750, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS LITTLE MARK IV Standard 104 HR', drumSet: 'TAMA Starclassic Walnut/Birch LPO (HT10,LO12,FT16,BD22)' },
+    ],
+  },
 ];

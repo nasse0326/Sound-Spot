@@ -2,7 +2,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -511,5 +511,94 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-5396-1119',
     websiteUrl: 'https://www.gw-studio.com/studios/studio_iken/index',
     features: ['池袋地域最大級16部屋', '5F・6F 2フロア構成', '00分/30分開始混在', 'Subルーム(個人練習向け)あり'],
+  },
+
+  // -------------------------------------------------------------
+  // 下北沢エリア (5店舗 / 計34部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'noah-shimokitazawa',
+    name: 'サウンドスタジオノア 下北沢店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '下北沢',
+    nearestStation: '下北沢駅 徒歩5分',
+    address: '東京都世田谷区北沢3-20-17',
+    roomCount: 16,
+    syncType: 'web_api',
+    syncLabel: 'ノア公式APIリアルタイム連携',
+    systemName: 'ノア公式API連携',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '03-3466-0058',
+    websiteUrl: 'https://www.studionoah.jp/shimokita/',
+    features: ['24時間営業', '大型Cst(24帖)あり', 'セルフレコブース', '00分/30分開始混在'],
+  },
+  {
+    id: 'andys-studio',
+    name: "ANDY'S STUDIO",
+    chainName: "ANDY'S STUDIO",
+    area: '下北沢',
+    nearestStation: '下北沢駅 徒歩5分',
+    address: '東京都世田谷区代沢5-29-15 SYビル2F',
+    roomCount: 2,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'スタジオル (studi-ol.com)',
+    is24Hours: false,
+    businessHours: '11:00〜24:00',
+    tel: '03-5432-3805',
+    websiteUrl: 'http://www.andys.jp/',
+    features: ['旧楽器店ANDY\'S MUSIC跡地', 'レコーディング対応', '個人練習は電話予約のみ'],
+  },
+  {
+    id: 'standby-studio',
+    name: 'STANDBY MUSIC STUDIO',
+    chainName: 'STANDBY MUSIC STUDIO',
+    area: '下北沢',
+    nearestStation: '下北沢駅 徒歩1分',
+    address: '東京都世田谷区北沢2丁目12-10 SSビル1階',
+    roomCount: 4,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'スタジオル (studi-ol.com)',
+    is24Hours: false,
+    businessHours: '10:00〜23:00',
+    tel: '03-5481-7433',
+    websiteUrl: 'https://standby-studio.com/',
+    features: ['駅徒歩1分', '全室DYNACORD POWERMATE常設', 'SSL AWS-900レコーディングルーム併設(ELS)'],
+  },
+  {
+    id: 'gourdisland-west-studio',
+    name: 'ガードアイランドスタジオ 下北沢ウエスト店',
+    chainName: 'Gourdisland Studio',
+    area: '下北沢',
+    nearestStation: '下北沢駅 西口 徒歩0分',
+    address: '東京都世田谷区北沢2-23-10',
+    roomCount: 6,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'スタジオル (studi-ol.com)',
+    is24Hours: true,
+    businessHours: '24時間営業（予約なしの場合23:00閉店）',
+    tel: '03-5430-3334',
+    websiteUrl: 'http://gourdisland-music.jp/shimokitawest/',
+    features: ['駅西口徒歩0分', '全室壁面ミラー付き', '10帖/12帖の6部屋'],
+  },
+  {
+    id: 'gourdisland-south-studio',
+    name: 'ガードアイランドスタジオ 下北沢南口店',
+    chainName: 'Gourdisland Studio',
+    area: '下北沢',
+    nearestStation: '下北沢駅 徒歩2分',
+    address: '東京都世田谷区北沢2-13-6 3F',
+    roomCount: 6,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'スタジオル (studi-ol.com)',
+    is24Hours: false,
+    businessHours: '平日10:00〜23:00 / 土日祝9:00〜22:00',
+    tel: '03-3414-9833',
+    websiteUrl: 'http://gourdisland-music.jp/shimokitazawa/',
+    features: ['駅徒歩2分', '学割・早割あり', '9帖/12帖の6部屋'],
   },
 ];

@@ -171,6 +171,24 @@ export const NOAH_STUDIOS_META: Record<string, Studio> = {
     soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
     soloBookingLeadHours: 27,
   },
+  shimokitazawa: {
+    id: 'noah-shimokitazawa',
+    name: 'サウンドスタジオノア 下北沢店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '下北沢',
+    prefecture: '東京都',
+    nearestStation: '下北沢駅 徒歩5分',
+    address: '東京都世田谷区北沢3-20-17',
+    tel: '03-3466-0058',
+    bookingUrl: 'https://www.studionoah.jp/shimokita/',
+    websiteUrl: 'https://www.studionoah.jp/shimokita/',
+    businessHoursSummary: '24時間営業',
+    is24Hours: true,
+    groupBookingRule: '3ヶ月前の1日よりWEB予約可能',
+    groupBookingLeadMonths: 3,
+    soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
+    soloBookingLeadHours: 27,
+  },
 };
 
 /**

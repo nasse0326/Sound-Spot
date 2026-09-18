@@ -8,7 +8,7 @@ import path from 'path';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
-import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays } from './lib/bot-fetcher';
+import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays } from './lib/bot-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -921,6 +921,142 @@ async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
   }
 }
 
+export async function crawlAndys(baseDate: Date, dayCount: number = 21) {
+  console.log("\n--- ANDY'S STUDIO 下北沢店 (studi-ol.com) ---");
+  try {
+    const rooms = await fetchAndysDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/andys-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [ANDY'S STUDIO] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log("  ⚡ [Supabase Sync] ANDY'S STUDIOのスロットをSupabaseに同期中...");
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots("ANDY'S STUDIO", dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [ANDY'S STUDIO 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlStandby(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- STANDBY MUSIC STUDIO 下北沢店 (studi-ol.com) ---');
+  try {
+    const rooms = await fetchStandbyDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/standby-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [STANDBY MUSIC STUDIO] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] STANDBY MUSIC STUDIOのスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('STANDBY MUSIC STUDIO', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [STANDBY MUSIC STUDIO 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlGourdislandWest(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- ガードアイランドスタジオ下北沢ウエスト店 (studi-ol.com) ---');
+  try {
+    const rooms = await fetchGourdislandWestDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/gourdisland-west-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [ガードアイランド下北沢ウエスト店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] ガードアイランド下北沢ウエスト店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('ガードアイランド下北沢ウエスト店', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [ガードアイランド下北沢ウエスト店 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlGourdislandSouth(baseDate: Date, dayCount: number = 21) {
+  console.log('\n--- ガードアイランドスタジオ下北沢南口店 (studi-ol.com) ---');
+  try {
+    const rooms = await fetchGourdislandSouthDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/gourdisland-south-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [ガードアイランド下北沢南口店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] ガードアイランド下北沢南口店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('ガードアイランド下北沢南口店', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [ガードアイランド下北沢南口店 取得エラー] ${err.message}`);
+  }
+}
+
 async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
   if (process.env.GITHUB_ACTIONS === 'true') {
     console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
@@ -1006,6 +1142,10 @@ async function main() {
       crawlBotTakadanobaba(now, 21),
       crawlBotIkebukuro(now, 21),
       crawlGatewayIkebukuro(now, 21),
+      crawlAndys(now, 21),
+      crawlStandby(now, 21),
+      crawlGourdislandWest(now, 21),
+      crawlGourdislandSouth(now, 21),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');
