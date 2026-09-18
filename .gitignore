@@ -10,6 +10,11 @@
 /.next/
 /out/
 
+# cloudflare (opennext/wrangler build output & local state)
+/.open-next/
+/.wrangler/
+cloudflare-env.d.ts
+
 # production
 /build
 
