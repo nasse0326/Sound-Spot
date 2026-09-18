@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "soundspot",
+  "name": "sound-spot",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-09-18",
   "compatibility_flags": ["nodejs_compat"],
@@ -10,5 +10,10 @@
   },
   "observability": {
     "enabled": true
+  },
+  "vars": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://iucvuzrobnxbjmcgcjqn.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_B3ISSf9vHqSNsGhu9IVJaQ_bFJccILB",
+    "NEXT_PUBLIC_GA_ID": "G-1X4KN493Q7"
   }
 }
