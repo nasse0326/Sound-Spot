@@ -17,8 +17,14 @@ const getBadgeClasses = (color: BannerAdItem['accentColor']) => {
   }
 };
 
-export const SidebarBannerAd: React.FC = () => {
-  const [activeIdx, setActiveIdx] = useState(0);
+interface SidebarBannerAdProps {
+  /** ローテーション開始位置。複数枠を並べる際にずらして渡すことで同時に同じ広告主が
+   *  重複表示されないようにする。 */
+  startIndex?: number;
+}
+
+export const SidebarBannerAd: React.FC<SidebarBannerAdProps> = ({ startIndex = 0 }) => {
+  const [activeIdx, setActiveIdx] = useState(startIndex);
   const ad = SIDEBAR_ROTATION_ADS[activeIdx] || SIDEBAR_ROTATION_ADS[0];
 
   // 8秒おきに次の広告主へ自動ローテーション

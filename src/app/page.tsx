@@ -8,14 +8,16 @@ import { RoomDetailModal } from '@/components/studio/room-detail-modal';
 import { NativeAdCard } from '@/components/search/native-ad-card';
 import { SidebarBannerAd } from '@/components/search/sidebar-banner-ad';
 import { NativeAdBanner } from '@/components/timeline/native-ad-banner';
+import { MobileHorizontalAdBanner } from '@/components/timeline/mobile-horizontal-ad-banner';
+import { HorizontalBannerAd } from '@/components/common/horizontal-banner-ad';
 import { NATIVE_ADS } from '@/config/native-ads';
+import { HORIZONTAL_BANNER_ADS } from '@/config/banner-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
 import { checkRoomAvailability } from '@/lib/slot-utils';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
 import {
-  LayoutGrid,
   AlignLeft,
   List,
   Sparkles,
@@ -61,8 +63,6 @@ export default function HomePage() {
   const [hideFullyBooked, setHideFullyBooked] = useState<boolean>(true);
   // ソート順: 'standard' | 'availability' | 'priceAsc' | 'sizeDesc'
   const [sortBy, setSortBy] = useState<'standard' | 'availability' | 'priceAsc' | 'sizeDesc'>('standard');
-  // PC向け実験: カード表示を1行サマリー表示にするかどうか（クリックで個別に部屋一覧を展開）
-  const [compactCardView, setCompactCardView] = useState<boolean>(false);
 
   // 詳細モーダル用
   const [selectedRoom, setSelectedRoom] = useState<RoomWithSlots | null>(null);
@@ -364,7 +364,7 @@ export default function HomePage() {
             </select>
           </div>
 
-          {/* カード vs タイムライン 切り替え */}
+          {/* リスト vs タイムライン 切り替え */}
           <div className="flex bg-slate-900 p-1 rounded-xl border border-slate-800">
             <button
               onClick={() => setViewMode('card')}
@@ -374,8 +374,8 @@ export default function HomePage() {
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
-              <LayoutGrid className="w-3.5 h-3.5" />
-              カード
+              <List className="w-3.5 h-3.5" />
+              リスト
             </button>
             <button
               onClick={() => setViewMode('timeline')}
@@ -389,24 +389,6 @@ export default function HomePage() {
               タイムライン
             </button>
           </div>
-
-          {/* PC限定の実験機能: 各部屋の行を「部屋名・畳数・機材・料金・空き状況」を
-              1行にまとめた高密度表示に切り替える（スタジオヘッダーは通常表示のまま） */}
-          {viewMode === 'card' && (
-            <button
-              type="button"
-              onClick={() => setCompactCardView(!compactCardView)}
-              className={`hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
-                compactCardView
-                  ? 'bg-cyan-950/80 text-cyan-300 border-cyan-700/80 shadow-sm shadow-cyan-950/40 hover:bg-cyan-900/60'
-                  : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700'
-              }`}
-              title="各部屋を、部屋名・畳数・機材・料金・空き状況をまとめた1行表示にします（実験的機能）"
-            >
-              <List className="w-3.5 h-3.5" />
-              <span>{compactCardView ? '部屋を1行表示中' : '部屋を1行表示に切替'}</span>
-            </button>
-          )}
         </div>
       </div>
 
@@ -449,23 +431,39 @@ export default function HomePage() {
                   targetEndTime={filters.endTime}
                   allowAdjacent30Min={filters.allowAdjacent30Min}
                   onOpenDetail={setSelectedRoom}
-                  compact={compactCardView}
                 />
-                {/* 4スタジオごとにネイティブPRカードを自然に挿入 */}
+                {/* PC: 4スタジオごとにネイティブPRカードを自然に挿入 */}
                 {(index + 1) % 4 === 0 && (
-                  <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 4) % NATIVE_ADS.length]} />
+                  <div className="hidden lg:block">
+                    <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 4) % NATIVE_ADS.length]} />
+                  </div>
+                )}
+                {/* スマホ: 3スタジオごとに横長バナー広告を挿入（テキスト広告の代わり） */}
+                {(index + 1) % 3 === 0 && HORIZONTAL_BANNER_ADS.length > 0 && (
+                  <div className="lg:hidden">
+                    <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[Math.floor(index / 3) % HORIZONTAL_BANNER_ADS.length]} />
+                  </div>
                 )}
               </React.Fragment>
             ))}
-            {/* スタジオ数が4件未満の場合でも、末尾に1つ自然に提案 */}
+            {/* スタジオ数が4件未満の場合でも、末尾に1つ自然に提案（PC） */}
             {studioGroups.length > 0 && studioGroups.length < 4 && (
-              <NativeAdCard ad={NATIVE_ADS[0]} />
+              <div className="hidden lg:block">
+                <NativeAdCard ad={NATIVE_ADS[0]} />
+              </div>
+            )}
+            {/* スタジオ数が3件未満の場合でも、末尾に1つ自然に提案（スマホ） */}
+            {studioGroups.length > 0 && studioGroups.length < 3 && HORIZONTAL_BANNER_ADS.length > 0 && (
+              <div className="lg:hidden">
+                <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[0]} />
+              </div>
             )}
           </div>
 
-          {/* PCのみ: 余った横幅にバナー広告レール（スクロール追従） */}
-          <aside className="hidden lg:block w-[320px] shrink-0 sticky top-6">
-            <SidebarBannerAd />
+          {/* PCのみ: 余った横幅にバナー広告レール2枠（スクロール追従・それぞれ独立ローテーション） */}
+          <aside className="hidden lg:block w-[320px] shrink-0 sticky top-6 space-y-4">
+            <SidebarBannerAd startIndex={0} />
+            <SidebarBannerAd startIndex={1} />
           </aside>
         </div>
       ) : (
@@ -481,7 +479,13 @@ export default function HomePage() {
             onSelectTime={(startTime, endTime) => setFilters({ ...filters, startTime, endTime })}
             onOpenDetail={setSelectedRoom}
           />
-          <NativeAdBanner />
+          {/* PC: 手動タブ切替つきのテキスト広告 / スマホ: 自動切替のみの横長バナー */}
+          <div className="hidden lg:block">
+            <NativeAdBanner />
+          </div>
+          <div className="lg:hidden">
+            <MobileHorizontalAdBanner />
+          </div>
         </div>
       )}
 

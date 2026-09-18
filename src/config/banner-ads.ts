@@ -74,3 +74,8 @@ export const BANNER_ADS: BannerAdItem[] = [
 // サイドバー（300px幅想定）のローテーション対象は縦長比率が近い300x250のみ。
 // 468x60はここでは使わず、横長スロットが用意でき次第そちらで使う。
 export const SIDEBAR_ROTATION_ADS = BANNER_ADS.filter((ad) => ad.width === 300 && ad.height === 250);
+
+// スマホのタイムライン下部・カード(リスト)フィード内の横長スロット向け。
+// アスペクト比が横長（幅/高さ >= 3）の素材を対象とする。現時点では468x60の
+// 石橋楽器店のみだが、320x50・320x100等が追加されても自動的にここに含まれる。
+export const HORIZONTAL_BANNER_ADS = BANNER_ADS.filter((ad) => ad.width / ad.height >= 3);
