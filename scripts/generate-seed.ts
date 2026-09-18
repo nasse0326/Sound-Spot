@@ -16,7 +16,7 @@ function toUUID(str: string): string {
 }
 
 function escapeSql(str: string | null | undefined): string {
-  if (!str) return 'NULL';
+  if (str === null || str === undefined) return 'NULL';
   return `'${str.replace(/'/g, "''")}'`;
 }
 
@@ -88,9 +88,10 @@ function generateSeedSql() {
   for (const r of allRooms) {
     const rId = toUUID(r.id);
     const eq = r.equipment;
-    const gAmps = (eq.guitarAmps || []).map(a => `"${a.replace(/"/g, '\\"')}"`).join(',');
+    const escapeArrayElement = (s: string) => s.replace(/"/g, '\\"').replace(/'/g, "''");
+    const gAmps = (eq.guitarAmps || []).map(a => `"${escapeArrayElement(a)}"`).join(',');
     const gAmpsSql = `'{${gAmps}}'`;
-    const keys = (eq.keyboards || []).map(k => `"${k.replace(/"/g, '\\"')}"`).join(',');
+    const keys = (eq.keyboards || []).map(k => `"${escapeArrayElement(k)}"`).join(',');
     const keysSql = `'{${keys}}'`;
 
     lines.push(`  INSERT INTO room_equipments (room_id, guitar_amps, bass_amp, drum_set, is_twin_pedal_allowed, keyboards, additional_notes)`);

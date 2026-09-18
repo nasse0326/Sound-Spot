@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getRoomsWithSlotsFromSupabase } from '@/lib/supabase/api';
 import { getMockRoomsWithSlots } from '@/lib/mock-data';
+import { toUUID } from '@/lib/id-utils';
 import { format } from 'date-fns';
 
 export async function GET(request: NextRequest) {
@@ -29,7 +30,9 @@ export async function GET(request: NextRequest) {
       // すり抜けて「全店舗網羅済み」と誤判定される（新規エリアがまるごと欠落したまま返って
       // しまう）。モック側が知っている全スタジオがSupabase側にも存在するか確認し、
       // 1件でも丸ごと欠けていればモックへフォールバックする。
-      const expectedStudioIds = new Set(filtered.map((r) => r.studio.id));
+      // Supabase側のstudios.idはseed.sql生成時にtoUUID(元のslug)へ変換済みのため、
+      // モック側のslug idと直接比較すると常に不一致になる。比較前にtoUUID()で揃える。
+      const expectedStudioIds = new Set(filtered.map((r) => toUUID(r.studio.id)));
       const supabaseStudioIds = new Set(supabaseRooms.map((r) => r.studio.id));
       const missingStudioCount = [...expectedStudioIds].filter((id) => !supabaseStudioIds.has(id)).length;
 
