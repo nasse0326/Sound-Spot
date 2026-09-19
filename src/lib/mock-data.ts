@@ -26,7 +26,7 @@ export const MOCK_STUDIOS: Studio[] = [
   NOAH_STUDIOS_META['akihabara'],
   NOAH_STUDIOS_META['ochanomizu'],
 
-  // 渋谷エリア (8店舗)
+  // 渋谷エリア (7店舗。スタジオペンタ渋谷ムーンサイド店は2025年4月29日閉店のためデータから除外)
   GATEWAY_SHIBUYA_STUDIO,
   NOAH_STUDIOS_META['shibuya'],
   NOAH_STUDIOS_META['shibuya1'],
@@ -34,7 +34,6 @@ export const MOCK_STUDIOS: Studio[] = [
   NOAH_STUDIOS_META['shibuya3'],
   PENTA_STUDIOS['shibuya-penta-city'],
   PENTA_STUDIOS['shibuya-penta-juke'],
-  PENTA_STUDIOS['shibuya-penta-moon'],
 
   // 新宿エリア (4店舗)
   NOAH_STUDIOS_META['shinjuku'],

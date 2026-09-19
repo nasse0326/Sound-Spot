@@ -18,7 +18,8 @@ export interface SupportedStudio {
 
 export const SUPPORTED_STUDIOS: SupportedStudio[] = [
   // -------------------------------------------------------------
-  // 渋谷エリア (8店舗 / 計87部屋)
+  // 渋谷エリア (7店舗 / 計81部屋)
+  // ※スタジオペンタ渋谷ムーンサイド店は2025年4月29日閉店のため掲載終了
   // -------------------------------------------------------------
   {
     id: 'shibuya-noah-honten',
@@ -34,7 +35,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: true,
     businessHours: '24時間営業',
     tel: '03-5485-1441',
-    websiteUrl: 'https://www.studionoah.jp/shibuya_honten/',
+    websiteUrl: 'https://www.studionoah.jp/shibuya/',
     features: ['24時間営業', '大型リハ対応', '個人練習Web受付', 'セルフレコブース'],
   },
   {
@@ -102,7 +103,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: false,
     businessHours: '10:00〜23:00',
     tel: '03-3462-5552',
-    websiteUrl: 'http://www.gw-studio.com/studio/st_shibuya.html',
+    websiteUrl: 'http://www.gw-studio.com/studios/studio_shibu2/',
     features: ['00分/30分開始混在', '個人練習770円/h', '28帖ゲネプロスタジオ'],
   },
   {
@@ -119,7 +120,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: false,
     businessHours: '10:00〜24:00',
     tel: '03-3462-2811',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shibuyacityside/',
+    websiteUrl: 'https://studiopenta.jp/rehearsal/city/',
     features: ['桜丘町徒歩3分', 'ワンタップ電話予約', '個人練習前日10時〜', 'ビンテージアンプ常設'],
   },
   {
@@ -136,27 +137,9 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: false,
     businessHours: '10:00〜24:00',
     tel: '03-3462-2815',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shibuyajukehouse/',
+    websiteUrl: 'https://studiopenta.jp/rehearsal/juke/',
     features: ['西口徒歩4分', 'ワンタップ電話予約', '個人練習前日10時〜', '名物スタッフ常駐'],
   },
-  {
-    id: 'shibuya-penta-moon',
-    name: 'スタジオペンタ 渋谷ムーンサイド店',
-    chainName: 'STUDIO PENTA',
-    area: '渋谷',
-    nearestStation: '渋谷駅 西口 徒歩5分',
-    address: '東京都渋谷区桜丘町14-10 渋谷コープB1F',
-    roomCount: 6,
-    syncType: 'phone',
-    syncLabel: '電話予約スタジオ',
-    systemName: 'ワンタップ電話受付 (tel:)',
-    is24Hours: false,
-    businessHours: '10:00〜24:00',
-    tel: '03-3462-2818',
-    websiteUrl: 'https://studiopenta.jp/rehearsal/shibuyamoonside/',
-    features: ['ワンタップ電話予約', '桜丘町静音環境', '個人練習前日10時〜', '丁寧な機材メンテ'],
-  },
-
   // -------------------------------------------------------------
   // 新宿エリア (4店舗 / 計54部屋)
   // -------------------------------------------------------------
@@ -267,7 +250,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     features: ['24時間営業', '明大通り沿い', '00分/30分開始混在', '個人練習Web受付', '駅チカ徒歩3分'],
   },
   {
-    id: 'akiba-bot',
+    id: 'bot-akiba-01',
     name: 'ベースオントップ 秋葉原昭和通り口店',
     chainName: 'BASS ON TOP',
     area: '秋葉原',
@@ -280,11 +263,11 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: false,
     businessHours: '10:00〜24:00 (平日), 09:00〜24:00 (土日祝)',
     tel: '03-5829-9944',
-    websiteUrl: 'https://bassontop.tokyo.jp/studio/akihabara/',
+    websiteUrl: 'https://bassontop.tokyo.jp/band/akihabara/',
     features: ['昭和通り口徒歩2分', '全室完全00分スタート', 'ピアノ常設室あり', '充実の設備'],
   },
   {
-    id: 'akiba-goodman',
+    id: 'gm-akiba-01',
     name: 'STUDIO GOODMAN AKIBA',
     chainName: 'STUDIO GOODMAN',
     area: '秋葉原',
@@ -297,11 +280,11 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: false,
     businessHours: '10:00〜24:00',
     tel: '03-3862-9010',
-    websiteUrl: 'https://clubgoodman.com/studio.html',
+    websiteUrl: 'https://studio.goodman2020.com/',
     features: ['老舗ライブハウス併設', '全室00分スタート', '個人練習前日予約可能', '名機アンプ多数'],
   },
   {
-    id: 'akiba-ongakukan',
+    id: 'og-akiba-01',
     name: 'スタジオ音楽館 アキバ店',
     chainName: 'スタジオ音楽館',
     area: '秋葉原',
@@ -314,7 +297,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     is24Hours: false,
     businessHours: '10:00〜24:00',
     tel: '03-3255-0810',
-    websiteUrl: 'https://www.studiocan.co.jp/akiba/',
+    websiteUrl: 'http://www.st-ongakukan.com/akihabara/akihabara.html',
     features: ['電気街口徒歩3分', '50帖大型Music Innあり', '個人練習21時受付', 'リーズナブルな料金'],
   },
 
@@ -411,7 +394,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
   // 池袋エリア (6店舗 / 計51部屋)
   // -------------------------------------------------------------
   {
-    id: 'ikebukuro-noah',
+    id: 'noah-ikebukuro',
     name: 'サウンドスタジオノア 池袋店',
     chainName: 'SOUND STUDIO NOAH',
     area: '池袋',
@@ -428,7 +411,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     features: ['駅徒歩5分', '3ピース向けSst完備', '大型E1st+Sub(20帖)あり', 'ボーカルブース2室'],
   },
   {
-    id: 'ikebukuro-bot',
+    id: 'bot-ikebukuro',
     name: 'ベースオントップ 池袋西口店',
     chainName: 'BASS ON TOP',
     area: '池袋',
@@ -479,7 +462,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     features: ['全8部屋', '20帖の大型室あり', 'LINE予約対応', '電話/LINE/店頭予約のみ'],
   },
   {
-    id: 'ikebukuro-vivo',
+    id: 'vivo-ikebukuro',
     name: 'Vivo Sound Studio',
     chainName: 'Vivo Sound Studio',
     area: '池袋',
