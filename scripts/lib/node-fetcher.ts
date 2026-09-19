@@ -3,6 +3,7 @@
  * Completely eliminates browser overhead and fetches 21 days of slot data.
  */
 import { format, addDays } from 'date-fns';
+import { CRAWL_DAY_COUNT } from '../../src/config/crawl-schedule';
 
 export interface NodeSlot {
   id: string;
@@ -35,7 +36,7 @@ export const NODE_ROOM_SPECS: Record<string, { id: string; name: string; tatami:
  */
 export async function fetchNodeShinjukuDays(
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<NodeRoomData[]> {
   console.log(`📡 [STUDIO NODE 新宿店] リアルタイム空き状況を取得中 (Node fetch / 全7部屋 / ${dayCount}日間)...`);
 

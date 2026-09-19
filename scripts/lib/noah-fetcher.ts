@@ -9,6 +9,7 @@ import { format, addDays, startOfWeek } from 'date-fns';
 import { loginNoah } from './noah-login';
 import { toIsoWithRollover } from './time-utils';
 import { NOAH_ALL_STORES, NoahRoomMaster, NoahStoreMaster } from '../../src/config/noah-master';
+import { CRAWL_DAY_COUNT } from '../../src/config/crawl-schedule';
 
 export interface NoahSlot {
   id: string;
@@ -106,7 +107,7 @@ async function getOrRefreshNoahCookie(forceRefresh: boolean = false): Promise<st
 export async function fetchNoahStoreDays(
   storeKey: string,
   baseDate: Date = new Date(),
-  dayCount: number = 21,
+  dayCount: number = CRAWL_DAY_COUNT,
   roomFilter?: (room: NoahRoomMaster) => boolean
 ): Promise<NoahRoomData[]> {
   const store = NOAH_ALL_STORES.find(s => s.key === storeKey);
@@ -314,7 +315,7 @@ export async function fetchNoahStoreDays(
  */
 export async function fetchNoahAkibaDays(
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<NoahRoomData[]> {
   return fetchNoahStoreDays('akihabara', baseDate, dayCount);
 }
@@ -324,7 +325,7 @@ export async function fetchNoahAkibaDays(
  */
 export async function fetchAllNoahTokyoDays(
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<NoahRoomData[]> {
   console.log(`🚀 [NOAH Tokyo] ノア全${NOAH_ALL_STORES.length}店舗の一括クローリングを開始 (${dayCount}日間)...`);
   const allResults: NoahRoomData[] = [];

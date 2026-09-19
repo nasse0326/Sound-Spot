@@ -3,6 +3,7 @@
 import React, { useMemo } from 'react';
 import { SearchFilterParams, BookingType } from '@/types/studio';
 import { format, addDays } from 'date-fns';
+import { CRAWL_DAY_COUNT } from '@/config/crawl-schedule';
 import { 
   Calendar, 
   Clock, 
@@ -30,7 +31,9 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
 }) => {
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => format(today, 'yyyy-MM-dd'), [today]);
-  const maxDateStr = useMemo(() => format(addDays(today, 21), 'yyyy-MM-dd'), [today]);
+  // CRAWL_DAY_COUNTは「今日を含めてN日分」を表す（クローラーは今日〜今日+(N-1)日目を取得）。
+  // ピッカーの上限は実際にクロールされる最終日と一致させる必要があるためN-1日後とする。
+  const maxDateStr = useMemo(() => format(addDays(today, CRAWL_DAY_COUNT - 1), 'yyyy-MM-dd'), [today]);
 
   const handleBookingTypeChange = (type: BookingType) => {
     onChange({ ...filters, bookingType: type });

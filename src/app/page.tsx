@@ -16,6 +16,7 @@ import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
 import { checkRoomAvailability, naturalCompareRoomNames } from '@/lib/slot-utils';
+import { CRAWL_DAY_COUNT } from '@/config/crawl-schedule';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
 import {
   AlignLeft,
@@ -30,7 +31,9 @@ import {
 export default function HomePage() {
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => format(today, 'yyyy-MM-dd'), [today]);
-  const maxDateStr = useMemo(() => format(addDays(today, 21), 'yyyy-MM-dd'), [today]);
+  // CRAWL_DAY_COUNTは「今日を含めてN日分」を表す（クローラーは今日〜今日+(N-1)日目を取得）。
+  // ピッカーの上限は実際にクロールされる最終日と一致させる必要があるためN-1日後とする。
+  const maxDateStr = useMemo(() => format(addDays(today, CRAWL_DAY_COUNT - 1), 'yyyy-MM-dd'), [today]);
 
   // 検索フィルター状態
   const [filters, setFilters] = useState<SearchFilterParams>({

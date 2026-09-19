@@ -6,6 +6,7 @@
 
 import { format, addDays } from 'date-fns';
 import { toIsoWithRollover } from './time-utils';
+import { CRAWL_DAY_COUNT } from '../../src/config/crawl-schedule';
 
 const EDGE_URL = 'https://haphgzntwgrpecdkqdxj.supabase.co/functions/v1/kv-api';
 const ANON_KEY = 'sb_publishable_PrzDhRxppQe_1rV51V2ulg_e-tZlEJi';
@@ -187,7 +188,7 @@ async function fetchDayBlocks(dateStr: string): Promise<PentaKVBlock[]> {
  */
 export async function fetchPentaShinjukuDays(
   baseDate: Date,
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<PentaRoomData[]> {
   console.log(`📡 [スタジオペンタ新宿店] リアルタイム空き状況ボード（Supabase KV / ${dayCount}日間）の取得を開始...`);
 

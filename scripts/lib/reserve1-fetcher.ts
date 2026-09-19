@@ -4,6 +4,7 @@
  */
 import { format, addDays } from 'date-fns';
 import { toIsoWithRollover } from './time-utils';
+import { CRAWL_DAY_COUNT } from '../../src/config/crawl-schedule';
 
 export interface Reserve1RoomSlot {
   id: string;
@@ -45,7 +46,7 @@ function toHalfWidth(s: string): string {
 export async function fetchReserve1Days(
   config: Reserve1Config,
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<Reserve1RoomData[]> {
   console.log(`📡 [Reserve1] ${config.name} の高速取得（Node fetch / ${dayCount}日間）を開始...`);
 

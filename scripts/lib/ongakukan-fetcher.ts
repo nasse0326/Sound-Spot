@@ -3,6 +3,7 @@
  * Accurately determines studio-specific availability using ReservationStaff.php
  */
 import { format, addDays, parse } from 'date-fns';
+import { CRAWL_DAY_COUNT } from '../../src/config/crawl-schedule';
 
 export interface OngakukanSlot {
   id: string;
@@ -133,7 +134,7 @@ export async function fetchOngakukanStoreDays(
   rooms: OngakukanRoomDef[],
   storeLabel: string,
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<OngakukanRoomData[]> {
   console.log(`📡 [Ongakukan] ${storeLabel}のスタジオ別リアル空き枠を取得中 (ReservationStaff.php連携 / ${dayCount}日間)...`);
 
@@ -286,7 +287,7 @@ export async function fetchOngakukanStoreDays(
  */
 export async function fetchOngakukanAkibaDays(
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<OngakukanRoomData[]> {
   return fetchOngakukanStoreDays(
     'Twb03vvjqn2fba1',
@@ -302,7 +303,7 @@ export async function fetchOngakukanAkibaDays(
  */
 export async function fetchOngakukanShinjukuWestDays(
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<OngakukanRoomData[]> {
   return fetchOngakukanStoreDays(
     'Fuoxajj8krt105m',
@@ -318,7 +319,7 @@ export async function fetchOngakukanShinjukuWestDays(
  */
 export async function fetchOngakukanTakadanobabaDays(
   baseDate: Date = new Date(),
-  dayCount: number = 21
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<OngakukanRoomData[]> {
   return fetchOngakukanStoreDays(
     'Pnpa4ff1gt9m22p',

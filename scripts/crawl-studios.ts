@@ -22,6 +22,7 @@ import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
 import { toUUID } from './lib/id-utils';
+import { CRAWL_DAY_COUNT } from '../src/config/crawl-schedule';
 
 // Supabase client initialization (service_role or anon key)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -297,7 +298,7 @@ const GATEWAY_BABA_ROOM_SPECS: Record<string, {
   '5C': { name: '5C (16帖・ツインドラム)', tatami: 16, capacity: 8, hourlyWeekend: 2970, hourlyWeekday: 2090, soloRate: 700, offset: 45, features: ['Marshall JVM410H', 'Roland JC-120', 'ツインドラムセット常設', 'Pearl Masters x2', '15帖以上', '45分スタート'] },
 };
 
-export async function crawlGatewayTakadanobaba(baseDate: Date, dayCount: number = 14) {
+export async function crawlGatewayTakadanobaba(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log(`🎸 [Gateway 高田馬場3号店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
 
   const fetchedRooms = await fetchReserve1Days({
@@ -422,7 +423,7 @@ const GATEWAY_IKEBUKURO_ROOM_SPECS: Record<string, {
   'Gst': { name: 'Gst (14帖)', tatami: 14, capacity: 7, hourlyWeekend: 3190, hourlyWeekday: 2090, soloRate: 700, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'Ampeg SVT-450H', 'Pearl Masters Premium'] },
 };
 
-export async function crawlGatewayIkebukuro(baseDate: Date, dayCount: number = 21) {
+export async function crawlGatewayIkebukuro(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log(`🎸 [Gateway 池袋北口店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
 
   const fetchedRooms = await fetchReserve1Days({
@@ -513,7 +514,7 @@ export async function crawlGatewayIkebukuro(baseDate: Date, dayCount: number = 2
   }
 }
 
-async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
+async function crawlGatewayShibuya(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log(`🎸 [Gateway Shibuya] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
 
   const fetchedRooms = await fetchReserve1Days({
@@ -608,7 +609,7 @@ async function crawlGatewayShibuya(baseDate: Date, dayCount: number = 14) {
 // 2. Akihabara Real Studios Scraper (BOT / GOODMAN / 音楽館)
 //    ※ NOAH秋葉原店は runNoahWithStealthSafeguards() 側で一括管理
 // -------------------------------------------------------------
-async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
+async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log(`\n⚡ [Akihabara Crawl] 秋葉原エリア（BOT / GOODMAN / 音楽館）の巡回を開始 (Node fetch / ${dayCount}日間)...`);
 
   const akibaJsonPath = path.join(process.cwd(), 'src', 'data', 'akihabara-real.json');
@@ -724,7 +725,7 @@ async function crawlAkihabaraStudios(baseDate: Date, dayCount: number = 21) {
 // NOAH向けの個別ガードは廃止済み。実行可否は main() 冒頭の
 // isScheduledCrawlTime() による毎日固定4回スケジュール判定のみで一元管理する。
 
-async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
+async function crawlNodeShinjuku(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   try {
     console.log('\n📡 [STUDIO NODE 新宿店] 自動巡回を開始...');
     const nodeRooms = await fetchNodeShinjukuDays(now, dayCount);
@@ -758,7 +759,7 @@ async function crawlNodeShinjuku(now: Date, dayCount: number = 21) {
   }
 }
 
-async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
+async function crawlPentaShinjuku(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   try {
     console.log('\n📡 [スタジオペンタ 新宿店] リアルタイム空き状況ボードの自動巡回を開始...');
     const pentaRooms = await fetchPentaShinjukuDays(now, dayCount);
@@ -793,7 +794,7 @@ async function crawlPentaShinjuku(now: Date, dayCount: number = 21) {
   }
 }
 
-export async function crawlOngakukanTakadanobaba(baseDate: Date, dayCount: number = 21) {
+export async function crawlOngakukanTakadanobaba(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- 音楽館 馬場駅前店 (ajg.jp) ---');
   try {
     const rooms = await fetchOngakukanTakadanobabaDays(baseDate, dayCount);
@@ -827,7 +828,7 @@ export async function crawlOngakukanTakadanobaba(baseDate: Date, dayCount: numbe
   }
 }
 
-export async function crawlBotIkebukuro(baseDate: Date, dayCount: number = 21) {
+export async function crawlBotIkebukuro(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- ベースオントップ 池袋西口店 (studi-ol.com) ---');
   try {
     const rooms = await fetchBotIkebukuroDays(baseDate, dayCount);
@@ -861,7 +862,7 @@ export async function crawlBotIkebukuro(baseDate: Date, dayCount: number = 21) {
   }
 }
 
-export async function crawlBotTakadanobaba(baseDate: Date, dayCount: number = 21) {
+export async function crawlBotTakadanobaba(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- BASS ON TOP 高田馬場店 (studi-ol.com) ---');
   try {
     const rooms = await fetchBotTakadanobabaDays(baseDate, dayCount);
@@ -895,7 +896,7 @@ export async function crawlBotTakadanobaba(baseDate: Date, dayCount: number = 21
   }
 }
 
-async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
+async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- 6. スタジオ音楽館 新宿西口店 (ajg.jp) ---');
   try {
     const rooms = await fetchOngakukanShinjukuWestDays(baseDate, dayCount);
@@ -929,7 +930,7 @@ async function crawlOngakukanShinjuku(baseDate: Date, dayCount: number = 21) {
   }
 }
 
-export async function crawlAndys(baseDate: Date, dayCount: number = 21) {
+export async function crawlAndys(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log("\n--- ANDY'S STUDIO 下北沢店 (studi-ol.com) ---");
   try {
     const rooms = await fetchAndysDays(baseDate, dayCount);
@@ -963,7 +964,7 @@ export async function crawlAndys(baseDate: Date, dayCount: number = 21) {
   }
 }
 
-export async function crawlStandby(baseDate: Date, dayCount: number = 21) {
+export async function crawlStandby(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- STANDBY MUSIC STUDIO 下北沢店 (studi-ol.com) ---');
   try {
     const rooms = await fetchStandbyDays(baseDate, dayCount);
@@ -997,7 +998,7 @@ export async function crawlStandby(baseDate: Date, dayCount: number = 21) {
   }
 }
 
-export async function crawlGourdislandWest(baseDate: Date, dayCount: number = 21) {
+export async function crawlGourdislandWest(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- ガードアイランドスタジオ下北沢ウエスト店 (studi-ol.com) ---');
   try {
     const rooms = await fetchGourdislandWestDays(baseDate, dayCount);
@@ -1031,7 +1032,7 @@ export async function crawlGourdislandWest(baseDate: Date, dayCount: number = 21
   }
 }
 
-export async function crawlGourdislandSouth(baseDate: Date, dayCount: number = 21) {
+export async function crawlGourdislandSouth(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   console.log('\n--- ガードアイランドスタジオ下北沢南口店 (studi-ol.com) ---');
   try {
     const rooms = await fetchGourdislandSouthDays(baseDate, dayCount);
@@ -1065,7 +1066,7 @@ export async function crawlGourdislandSouth(baseDate: Date, dayCount: number = 2
   }
 }
 
-async function runNoahWithStealthSafeguards(now: Date, dayCount: number = 21) {
+async function runNoahWithStealthSafeguards(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   if (process.env.GITHUB_ACTIONS === 'true') {
     console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
       + 'ノアのクローリングはGitHub上では実行しません。ノアの巡回はローカル環境から `npm run crawl` を実行してください。');
@@ -1139,21 +1140,21 @@ async function main() {
   try {
     console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）、高田馬場（ゲートウェイ・BOT・音楽館）を並行巡回します（ノアはローカル環境実行時のみ、渋谷4店・新宿・秋葉原・御茶ノ水・高田馬場を一括巡回）...');
     const results = await Promise.allSettled([
-      crawlGatewayShibuya(now, 21),
-      crawlAkihabaraStudios(now, 21),
-      crawlNodeShinjuku(now, 21),
-      crawlPentaShinjuku(now, 21),
-      crawlOngakukanShinjuku(now, 21),
-      runNoahWithStealthSafeguards(now, 21),
-      crawlGatewayTakadanobaba(now, 21),
-      crawlOngakukanTakadanobaba(now, 21),
-      crawlBotTakadanobaba(now, 21),
-      crawlBotIkebukuro(now, 21),
-      crawlGatewayIkebukuro(now, 21),
-      crawlAndys(now, 21),
-      crawlStandby(now, 21),
-      crawlGourdislandWest(now, 21),
-      crawlGourdislandSouth(now, 21),
+      crawlGatewayShibuya(now, CRAWL_DAY_COUNT),
+      crawlAkihabaraStudios(now, CRAWL_DAY_COUNT),
+      crawlNodeShinjuku(now, CRAWL_DAY_COUNT),
+      crawlPentaShinjuku(now, CRAWL_DAY_COUNT),
+      crawlOngakukanShinjuku(now, CRAWL_DAY_COUNT),
+      runNoahWithStealthSafeguards(now, CRAWL_DAY_COUNT),
+      crawlGatewayTakadanobaba(now, CRAWL_DAY_COUNT),
+      crawlOngakukanTakadanobaba(now, CRAWL_DAY_COUNT),
+      crawlBotTakadanobaba(now, CRAWL_DAY_COUNT),
+      crawlBotIkebukuro(now, CRAWL_DAY_COUNT),
+      crawlGatewayIkebukuro(now, CRAWL_DAY_COUNT),
+      crawlAndys(now, CRAWL_DAY_COUNT),
+      crawlStandby(now, CRAWL_DAY_COUNT),
+      crawlGourdislandWest(now, CRAWL_DAY_COUNT),
+      crawlGourdislandSouth(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

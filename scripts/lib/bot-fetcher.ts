@@ -4,6 +4,7 @@
  */
 import { format, addDays } from 'date-fns';
 import { toIsoWithRollover } from './time-utils';
+import { CRAWL_DAY_COUNT } from '../../src/config/crawl-schedule';
 
 export interface BotRoomSlot {
   id: string;
@@ -61,7 +62,7 @@ export async function fetchBotStoreDays(
   rooms: BotRoomSpec[],
   storeLabel: string,
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   console.log(`📡 [BASS ON TOP] ${storeLabel}の高速取得（Node fetch / ${dayCount}日間）を開始...`);
 
@@ -180,7 +181,7 @@ export async function fetchBotStoreDays(
 
 export async function fetchBotAkibaDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/705', BOT_AKIBA_ROOMS, '秋葉原昭和通り口店', baseDate, dayCount);
 }
@@ -201,7 +202,7 @@ export const BOT_TAKADANOBABA_ROOMS: BotRoomSpec[] = [
 
 export async function fetchBotTakadanobabaDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/681', BOT_TAKADANOBABA_ROOMS, '高田馬場店', baseDate, dayCount);
 }
@@ -221,7 +222,7 @@ export const BOT_IKEBUKURO_ROOMS: BotRoomSpec[] = [
 
 export async function fetchBotIkebukuroDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/2355', BOT_IKEBUKURO_ROOMS, '池袋西口店', baseDate, dayCount);
 }
@@ -241,7 +242,7 @@ export const ANDYS_ROOMS: BotRoomSpec[] = [
 
 export async function fetchAndysDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/587', ANDYS_ROOMS, 'ANDY\'S STUDIO', baseDate, dayCount);
 }
@@ -258,7 +259,7 @@ export const STANDBY_ROOMS: BotRoomSpec[] = [
 
 export async function fetchStandbyDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/767', STANDBY_ROOMS, 'STANDBY MUSIC STUDIO', baseDate, dayCount);
 }
@@ -275,7 +276,7 @@ export const GOURDISLAND_WEST_ROOMS: BotRoomSpec[] = [
 
 export async function fetchGourdislandWestDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/539', GOURDISLAND_WEST_ROOMS, 'ガードアイランドスタジオ下北沢ウエスト店', baseDate, dayCount);
 }
@@ -292,7 +293,7 @@ export const GOURDISLAND_SOUTH_ROOMS: BotRoomSpec[] = [
 
 export async function fetchGourdislandSouthDays(
   baseDate: Date,
-  dayCount: number = 14
+  dayCount: number = CRAWL_DAY_COUNT
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/591', GOURDISLAND_SOUTH_ROOMS, 'ガードアイランドスタジオ下北沢南口店', baseDate, dayCount);
 }
