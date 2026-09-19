@@ -10,6 +10,7 @@ import { SidebarBannerAd } from '@/components/search/sidebar-banner-ad';
 import { NativeAdBanner } from '@/components/timeline/native-ad-banner';
 import { MobileHorizontalAdBanner } from '@/components/timeline/mobile-horizontal-ad-banner';
 import { HorizontalBannerAd } from '@/components/common/horizontal-banner-ad';
+import { HowToUseGuide } from '@/components/common/how-to-use-guide';
 import { NATIVE_ADS } from '@/config/native-ads';
 import { HORIZONTAL_BANNER_ADS } from '@/config/banner-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
@@ -344,6 +345,9 @@ export default function HomePage() {
           </button>
         </div>
       </div>
+
+      {/* 使い方ガイド（一度閉じると再訪時は非表示） */}
+      <HowToUseGuide />
 
       {/* 検索・条件指定バー */}
       <SearchFilterBar
