@@ -451,17 +451,19 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                         <button
                           type="button"
                           onClick={() => toggleExpand(studio.id)}
-                          className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-800/90 hover:border-emerald-600/50 text-xs font-bold text-slate-200 hover:text-white transition cursor-pointer group"
+                          className="w-full flex items-center justify-between gap-2 flex-wrap px-3 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-800/90 hover:border-emerald-600/50 text-xs font-bold text-slate-200 hover:text-white transition cursor-pointer group"
                         >
-                          <span className="flex items-center gap-1.5">
-                            <Music className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+                          {/* 左右どちらのテキストも折り返さず一塊のまま扱い、幅が足りない場合は
+                              右側のラベルごと2段目に落とす（文字やアイコンの途中で崩れるのを防ぐ） */}
+                          <span className="flex items-center gap-1.5 whitespace-nowrap">
+                            <Music className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform flex-shrink-0" />
                             <span>常設部屋・機材一覧（全 {rooms.length || studio.roomCount} 部屋）</span>
                           </span>
-                          <span className="flex items-center gap-1 text-slate-400 group-hover:text-emerald-400 text-[11px]">
+                          <span className="flex items-center gap-1 text-slate-400 group-hover:text-emerald-400 text-[11px] whitespace-nowrap">
                             {isExpanded ? (
-                              <>閉じる <ChevronUp className="w-3.5 h-3.5" /></>
+                              <>閉じる <ChevronUp className="w-3.5 h-3.5 flex-shrink-0" /></>
                             ) : (
-                              <>部屋・アンプを見る <ChevronDown className="w-3.5 h-3.5" /></>
+                              <>詳細を見る <ChevronDown className="w-3.5 h-3.5 flex-shrink-0" /></>
                             )}
                           </span>
                         </button>
