@@ -466,28 +466,30 @@ export default function HomePage() {
                   allowAdjacent30Min={filters.allowAdjacent30Min}
                   onOpenDetail={setSelectedRoom}
                 />
-                {/* PC: 4スタジオごとにネイティブPRカードを自然に挿入 */}
-                {(index + 1) % 4 === 0 && (
+                {/* PC: 7スタジオごとにネイティブPRカードを自然に挿入
+                    （以前は4件に1件と頻度が高すぎたため間隔を空けた） */}
+                {(index + 1) % 7 === 0 && (
                   <div className="hidden lg:block">
-                    <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 4) % NATIVE_ADS.length]} />
+                    <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 7) % NATIVE_ADS.length]} />
                   </div>
                 )}
-                {/* スマホ: 3スタジオごとに横長バナー広告を挿入（テキスト広告の代わり） */}
-                {(index + 1) % 3 === 0 && HORIZONTAL_BANNER_ADS.length > 0 && (
+                {/* スマホ: 5スタジオごとに横長バナー広告を挿入（テキスト広告の代わり。
+                    以前は3件に1件と頻度が高すぎたため間隔を空けた） */}
+                {(index + 1) % 5 === 0 && HORIZONTAL_BANNER_ADS.length > 0 && (
                   <div className="lg:hidden">
-                    <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[Math.floor(index / 3) % HORIZONTAL_BANNER_ADS.length]} />
+                    <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[Math.floor(index / 5) % HORIZONTAL_BANNER_ADS.length]} />
                   </div>
                 )}
               </React.Fragment>
             ))}
-            {/* スタジオ数が4件未満の場合でも、末尾に1つ自然に提案（PC） */}
-            {studioGroups.length > 0 && studioGroups.length < 4 && (
+            {/* スタジオ数が7件未満の場合でも、末尾に1つ自然に提案（PC） */}
+            {studioGroups.length > 0 && studioGroups.length < 7 && (
               <div className="hidden lg:block">
                 <NativeAdCard ad={NATIVE_ADS[0]} />
               </div>
             )}
-            {/* スタジオ数が3件未満の場合でも、末尾に1つ自然に提案（スマホ） */}
-            {studioGroups.length > 0 && studioGroups.length < 3 && HORIZONTAL_BANNER_ADS.length > 0 && (
+            {/* スタジオ数が5件未満の場合でも、末尾に1つ自然に提案（スマホ） */}
+            {studioGroups.length > 0 && studioGroups.length < 5 && HORIZONTAL_BANNER_ADS.length > 0 && (
               <div className="lg:hidden">
                 <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[0]} />
               </div>

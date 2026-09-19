@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { 
   X, 
   Search, 
@@ -46,6 +46,19 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
   // 詳細表示する部屋
   const [detailRoom, setDetailRoom] = useState<RoomWithSlots | null>(null);
 
+  // エリアタブの横スクロール発見性向上用（下北沢等が画面外にあることに気づけないため、
+  // まだ続きがある側にだけフェードを出す）
+  const areaTabsRef = useRef<HTMLDivElement>(null);
+  const [showLeftFade, setShowLeftFade] = useState(false);
+  const [showRightFade, setShowRightFade] = useState(false);
+
+  const updateAreaTabsFade = () => {
+    const el = areaTabsRef.current;
+    if (!el) return;
+    setShowLeftFade(el.scrollLeft > 4);
+    setShowRightFade(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  };
+
   // 本日の日付基準で全店舗の部屋・機材スペックを取得
   const todayStr = useMemo(() => format(new Date(), 'yyyy-MM-dd'), []);
   const allRooms = useMemo(() => getMockRoomsWithSlots(todayStr), [todayStr]);
@@ -84,6 +97,18 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
       setSelectedArea(initialArea);
     }
   }, [isOpen, initialArea]);
+
+  // モーダルを開いた直後・リサイズ時にエリアタブのフェード表示を再計算
+  useEffect(() => {
+    if (!isOpen) return;
+    // モーダルのマウント直後はまだレイアウト確定前のことがあるため次フレームで計測
+    const raf = requestAnimationFrame(updateAreaTabsFade);
+    window.addEventListener('resize', updateAreaTabsFade);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', updateAreaTabsFade);
+    };
+  }, [isOpen]);
 
   // フィルタリング処理（店舗名・駅名・エリア・常設機材名での検索に対応）
   const filteredStudios = useMemo(() => {
@@ -214,8 +239,14 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
 
             {/* フィルター＆検索バー（コンパクト） */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 mt-3">
-              {/* エリアタブ */}
-              <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 sm:pb-0 scrollbar-none">
+              {/* エリアタブ（下北沢等が横スクロールしないと見えないことに気づきにくいため、
+                  続きがある側にだけ薄いフェードを重ねてスクロール可能なことを示す） */}
+              <div className="relative min-w-0">
+              <div
+                ref={areaTabsRef}
+                onScroll={updateAreaTabsFade}
+                className="flex items-center gap-1.5 overflow-x-auto pb-0.5 sm:pb-0 scrollbar-none"
+              >
                 <button
                   type="button"
                   onClick={() => setSelectedArea('all')}
@@ -293,6 +324,13 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                 >
                   下北沢 ({areaCounts['下北沢']})
                 </button>
+              </div>
+              {showLeftFade && (
+                <div className="pointer-events-none absolute left-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-r from-slate-950/90 to-transparent" />
+              )}
+              {showRightFade && (
+                <div className="pointer-events-none absolute right-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-l from-slate-950/90 to-transparent" />
+              )}
               </div>
 
               {/* 検索入力（機材名・アンプ検索にも対応） */}
