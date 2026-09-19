@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T02:40:15.239Z",
+  "updatedAt": "2026-09-19T12:32:58.264Z",
   "rooms": [
     {
       "id": "bot-ikebukuro-1st",
@@ -147,7 +147,7 @@
           "id": "slot-bot-ikebukuro-1st-2026-09-20-0600",
           "start_time": "2026-09-20T06:00:00+09:00",
           "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -203,14 +203,14 @@
           "id": "slot-bot-ikebukuro-1st-2026-09-20-1400",
           "start_time": "2026-09-20T14:00:00+09:00",
           "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-bot-ikebukuro-1st-2026-09-20-1500",
           "start_time": "2026-09-20T15:00:00+09:00",
           "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -574,14 +574,14 @@
           "id": "slot-bot-ikebukuro-1st-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-bot-ikebukuro-1st-2026-09-23-1400",
           "start_time": "2026-09-23T14:00:00+09:00",
           "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -1764,14 +1764,14 @@
           "id": "slot-bot-ikebukuro-1st-2026-10-02-2100",
           "start_time": "2026-10-02T21:00:00+09:00",
           "end_time": "2026-10-02T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-bot-ikebukuro-1st-2026-10-02-2200",
           "start_time": "2026-10-02T22:00:00+09:00",
           "end_time": "2026-10-02T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -2662,6 +2662,132 @@
           "end_time": "2026-10-10T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-1st-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
         }
       ]
     },
@@ -2804,7 +2930,7 @@
           "id": "slot-bot-ikebukuro-2st-2026-09-19-2300",
           "start_time": "2026-09-19T23:00:00+09:00",
           "end_time": "2026-09-20T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -2839,7 +2965,7 @@
           "id": "slot-bot-ikebukuro-2st-2026-09-20-1000",
           "start_time": "2026-09-20T10:00:00+09:00",
           "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -5324,6 +5450,132 @@
           "id": "slot-bot-ikebukuro-2st-2026-10-09-2300",
           "start_time": "2026-10-09T23:00:00+09:00",
           "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-2st-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3200
         }
@@ -7988,6 +8240,132 @@
           "id": "slot-bot-ikebukuro-3st-2026-10-09-2300",
           "start_time": "2026-10-09T23:00:00+09:00",
           "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-3st-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3200
         }
@@ -10656,6 +11034,132 @@
           "end_time": "2026-10-10T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
+        },
+        {
+          "id": "slot-bot-ikebukuro-4st-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3800
         }
       ]
     },
@@ -10854,7 +11358,7 @@
           "id": "slot-bot-ikebukuro-5st-2026-09-20-1300",
           "start_time": "2026-09-20T13:00:00+09:00",
           "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -11351,14 +11855,14 @@
           "id": "slot-bot-ikebukuro-5st-2026-09-24-1200",
           "start_time": "2026-09-24T12:00:00+09:00",
           "end_time": "2026-09-24T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-bot-ikebukuro-5st-2026-09-24-1300",
           "start_time": "2026-09-24T13:00:00+09:00",
           "end_time": "2026-09-24T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -13320,6 +13824,132 @@
           "end_time": "2026-10-10T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-5st-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
         }
       ]
     },
@@ -13491,7 +14121,7 @@
           "id": "slot-bot-ikebukuro-6st-2026-09-20-0930",
           "start_time": "2026-09-20T09:30:00+09:00",
           "end_time": "2026-09-20T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -13568,14 +14198,14 @@
           "id": "slot-bot-ikebukuro-6st-2026-09-20-2030",
           "start_time": "2026-09-20T20:30:00+09:00",
           "end_time": "2026-09-20T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-bot-ikebukuro-6st-2026-09-20-2130",
           "start_time": "2026-09-20T21:30:00+09:00",
           "end_time": "2026-09-20T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -14065,14 +14695,14 @@
           "id": "slot-bot-ikebukuro-6st-2026-09-24-1930",
           "start_time": "2026-09-24T19:30:00+09:00",
           "end_time": "2026-09-24T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-bot-ikebukuro-6st-2026-09-24-2030",
           "start_time": "2026-09-24T20:30:00+09:00",
           "end_time": "2026-09-24T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -15143,7 +15773,7 @@
           "id": "slot-bot-ikebukuro-6st-2026-10-03-1130",
           "start_time": "2026-10-03T11:30:00+09:00",
           "end_time": "2026-10-03T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -15985,6 +16615,132 @@
           "end_time": "2026-10-10T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-0630",
+          "start_time": "2026-10-10T06:30:00+09:00",
+          "end_time": "2026-10-10T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-0730",
+          "start_time": "2026-10-10T07:30:00+09:00",
+          "end_time": "2026-10-10T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-0830",
+          "start_time": "2026-10-10T08:30:00+09:00",
+          "end_time": "2026-10-10T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-0930",
+          "start_time": "2026-10-10T09:30:00+09:00",
+          "end_time": "2026-10-10T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1030",
+          "start_time": "2026-10-10T10:30:00+09:00",
+          "end_time": "2026-10-10T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1130",
+          "start_time": "2026-10-10T11:30:00+09:00",
+          "end_time": "2026-10-10T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1230",
+          "start_time": "2026-10-10T12:30:00+09:00",
+          "end_time": "2026-10-10T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1330",
+          "start_time": "2026-10-10T13:30:00+09:00",
+          "end_time": "2026-10-10T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1430",
+          "start_time": "2026-10-10T14:30:00+09:00",
+          "end_time": "2026-10-10T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1530",
+          "start_time": "2026-10-10T15:30:00+09:00",
+          "end_time": "2026-10-10T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1630",
+          "start_time": "2026-10-10T16:30:00+09:00",
+          "end_time": "2026-10-10T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1730",
+          "start_time": "2026-10-10T17:30:00+09:00",
+          "end_time": "2026-10-10T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1830",
+          "start_time": "2026-10-10T18:30:00+09:00",
+          "end_time": "2026-10-10T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-1930",
+          "start_time": "2026-10-10T19:30:00+09:00",
+          "end_time": "2026-10-10T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-2030",
+          "start_time": "2026-10-10T20:30:00+09:00",
+          "end_time": "2026-10-10T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-2130",
+          "start_time": "2026-10-10T21:30:00+09:00",
+          "end_time": "2026-10-10T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-2230",
+          "start_time": "2026-10-10T22:30:00+09:00",
+          "end_time": "2026-10-10T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-6st-2026-10-10-2330",
+          "start_time": "2026-10-10T23:30:00+09:00",
+          "end_time": "2026-10-11T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
         }
       ]
     },
@@ -16121,7 +16877,7 @@
           "id": "slot-bot-ikebukuro-7st-2026-09-19-2230",
           "start_time": "2026-09-19T22:30:00+09:00",
           "end_time": "2026-09-19T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -18648,6 +19404,132 @@
           "id": "slot-bot-ikebukuro-7st-2026-10-09-2330",
           "start_time": "2026-10-09T23:30:00+09:00",
           "end_time": "2026-10-10T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-0630",
+          "start_time": "2026-10-10T06:30:00+09:00",
+          "end_time": "2026-10-10T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-0730",
+          "start_time": "2026-10-10T07:30:00+09:00",
+          "end_time": "2026-10-10T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-0830",
+          "start_time": "2026-10-10T08:30:00+09:00",
+          "end_time": "2026-10-10T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-0930",
+          "start_time": "2026-10-10T09:30:00+09:00",
+          "end_time": "2026-10-10T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1030",
+          "start_time": "2026-10-10T10:30:00+09:00",
+          "end_time": "2026-10-10T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1130",
+          "start_time": "2026-10-10T11:30:00+09:00",
+          "end_time": "2026-10-10T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1230",
+          "start_time": "2026-10-10T12:30:00+09:00",
+          "end_time": "2026-10-10T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1330",
+          "start_time": "2026-10-10T13:30:00+09:00",
+          "end_time": "2026-10-10T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1430",
+          "start_time": "2026-10-10T14:30:00+09:00",
+          "end_time": "2026-10-10T15:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1530",
+          "start_time": "2026-10-10T15:30:00+09:00",
+          "end_time": "2026-10-10T16:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1630",
+          "start_time": "2026-10-10T16:30:00+09:00",
+          "end_time": "2026-10-10T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1730",
+          "start_time": "2026-10-10T17:30:00+09:00",
+          "end_time": "2026-10-10T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1830",
+          "start_time": "2026-10-10T18:30:00+09:00",
+          "end_time": "2026-10-10T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-1930",
+          "start_time": "2026-10-10T19:30:00+09:00",
+          "end_time": "2026-10-10T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-2030",
+          "start_time": "2026-10-10T20:30:00+09:00",
+          "end_time": "2026-10-10T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-2130",
+          "start_time": "2026-10-10T21:30:00+09:00",
+          "end_time": "2026-10-10T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-2230",
+          "start_time": "2026-10-10T22:30:00+09:00",
+          "end_time": "2026-10-10T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-bot-ikebukuro-7st-2026-10-10-2330",
+          "start_time": "2026-10-10T23:30:00+09:00",
+          "end_time": "2026-10-11T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 3200
         }

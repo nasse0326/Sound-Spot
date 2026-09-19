@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T02:40:14.337Z",
+  "updatedAt": "2026-09-19T12:32:57.128Z",
   "rooms": [
     {
       "id": "standby-a",
@@ -84,21 +84,21 @@
           "id": "slot-standby-a-2026-09-19-1500",
           "start_time": "2026-09-19T15:00:00+09:00",
           "end_time": "2026-09-19T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-09-19-1600",
           "start_time": "2026-09-19T16:00:00+09:00",
           "end_time": "2026-09-19T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-09-19-1700",
           "start_time": "2026-09-19T17:00:00+09:00",
           "end_time": "2026-09-19T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -217,28 +217,28 @@
           "id": "slot-standby-a-2026-09-20-1600",
           "start_time": "2026-09-20T16:00:00+09:00",
           "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-09-20-1700",
           "start_time": "2026-09-20T17:00:00+09:00",
           "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-09-20-1800",
           "start_time": "2026-09-20T18:00:00+09:00",
           "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-09-20-1900",
           "start_time": "2026-09-20T19:00:00+09:00",
           "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -2662,6 +2662,132 @@
           "end_time": "2026-10-10T00:00:00+09:00",
           "status": "BOOKED",
           "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3200
+        },
+        {
+          "id": "slot-standby-a-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3200
         }
       ]
     },
@@ -2727,35 +2853,35 @@
           "id": "slot-standby-b-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-1300",
           "start_time": "2026-09-19T13:00:00+09:00",
           "end_time": "2026-09-19T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-1400",
           "start_time": "2026-09-19T14:00:00+09:00",
           "end_time": "2026-09-19T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-1500",
           "start_time": "2026-09-19T15:00:00+09:00",
           "end_time": "2026-09-19T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-1600",
           "start_time": "2026-09-19T16:00:00+09:00",
           "end_time": "2026-09-19T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
@@ -2769,28 +2895,28 @@
           "id": "slot-standby-b-2026-09-19-1800",
           "start_time": "2026-09-19T18:00:00+09:00",
           "end_time": "2026-09-19T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-1900",
           "start_time": "2026-09-19T19:00:00+09:00",
           "end_time": "2026-09-19T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-2000",
           "start_time": "2026-09-19T20:00:00+09:00",
           "end_time": "2026-09-19T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-standby-b-2026-09-19-2100",
           "start_time": "2026-09-19T21:00:00+09:00",
           "end_time": "2026-09-19T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
@@ -2888,7 +3014,7 @@
           "id": "slot-standby-b-2026-09-20-1700",
           "start_time": "2026-09-20T17:00:00+09:00",
           "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
@@ -5326,6 +5452,132 @@
           "end_time": "2026-10-10T00:00:00+09:00",
           "status": "BOOKED",
           "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3000
+        },
+        {
+          "id": "slot-standby-b-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3000
         }
       ]
     },
@@ -5391,28 +5643,28 @@
           "id": "slot-standby-c-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-standby-c-2026-09-19-1300",
           "start_time": "2026-09-19T13:00:00+09:00",
           "end_time": "2026-09-19T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-standby-c-2026-09-19-1400",
           "start_time": "2026-09-19T14:00:00+09:00",
           "end_time": "2026-09-19T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-standby-c-2026-09-19-1500",
           "start_time": "2026-09-19T15:00:00+09:00",
           "end_time": "2026-09-19T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -5447,7 +5699,7 @@
           "id": "slot-standby-c-2026-09-19-2000",
           "start_time": "2026-09-19T20:00:00+09:00",
           "end_time": "2026-09-19T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -7990,6 +8242,132 @@
           "end_time": "2026-10-10T00:00:00+09:00",
           "status": "BOOKED",
           "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-standby-c-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
         }
       ]
     },
@@ -8054,70 +8432,70 @@
           "id": "slot-standby-d-2026-09-19-1200",
           "start_time": "2026-09-19T12:00:00+09:00",
           "end_time": "2026-09-19T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1300",
           "start_time": "2026-09-19T13:00:00+09:00",
           "end_time": "2026-09-19T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1400",
           "start_time": "2026-09-19T14:00:00+09:00",
           "end_time": "2026-09-19T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1500",
           "start_time": "2026-09-19T15:00:00+09:00",
           "end_time": "2026-09-19T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1600",
           "start_time": "2026-09-19T16:00:00+09:00",
           "end_time": "2026-09-19T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1700",
           "start_time": "2026-09-19T17:00:00+09:00",
           "end_time": "2026-09-19T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1800",
           "start_time": "2026-09-19T18:00:00+09:00",
           "end_time": "2026-09-19T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-1900",
           "start_time": "2026-09-19T19:00:00+09:00",
           "end_time": "2026-09-19T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-2000",
           "start_time": "2026-09-19T20:00:00+09:00",
           "end_time": "2026-09-19T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-19-2100",
           "start_time": "2026-09-19T21:00:00+09:00",
           "end_time": "2026-09-19T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
@@ -8222,21 +8600,21 @@
           "id": "slot-standby-d-2026-09-20-1800",
           "start_time": "2026-09-20T18:00:00+09:00",
           "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-20-1900",
           "start_time": "2026-09-20T19:00:00+09:00",
           "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-standby-d-2026-09-20-2000",
           "start_time": "2026-09-20T20:00:00+09:00",
           "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
@@ -10651,6 +11029,132 @@
           "id": "slot-standby-d-2026-10-09-2300",
           "start_time": "2026-10-09T23:00:00+09:00",
           "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "BOOKED",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-0600",
+          "start_time": "2026-10-10T06:00:00+09:00",
+          "end_time": "2026-10-10T07:00:00+09:00",
+          "status": "BOOKED",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-0700",
+          "start_time": "2026-10-10T07:00:00+09:00",
+          "end_time": "2026-10-10T08:00:00+09:00",
+          "status": "BOOKED",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-0800",
+          "start_time": "2026-10-10T08:00:00+09:00",
+          "end_time": "2026-10-10T09:00:00+09:00",
+          "status": "BOOKED",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-0900",
+          "start_time": "2026-10-10T09:00:00+09:00",
+          "end_time": "2026-10-10T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1000",
+          "start_time": "2026-10-10T10:00:00+09:00",
+          "end_time": "2026-10-10T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1100",
+          "start_time": "2026-10-10T11:00:00+09:00",
+          "end_time": "2026-10-10T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1200",
+          "start_time": "2026-10-10T12:00:00+09:00",
+          "end_time": "2026-10-10T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1300",
+          "start_time": "2026-10-10T13:00:00+09:00",
+          "end_time": "2026-10-10T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1400",
+          "start_time": "2026-10-10T14:00:00+09:00",
+          "end_time": "2026-10-10T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1500",
+          "start_time": "2026-10-10T15:00:00+09:00",
+          "end_time": "2026-10-10T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1600",
+          "start_time": "2026-10-10T16:00:00+09:00",
+          "end_time": "2026-10-10T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1700",
+          "start_time": "2026-10-10T17:00:00+09:00",
+          "end_time": "2026-10-10T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1800",
+          "start_time": "2026-10-10T18:00:00+09:00",
+          "end_time": "2026-10-10T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-1900",
+          "start_time": "2026-10-10T19:00:00+09:00",
+          "end_time": "2026-10-10T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-2000",
+          "start_time": "2026-10-10T20:00:00+09:00",
+          "end_time": "2026-10-10T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-2100",
+          "start_time": "2026-10-10T21:00:00+09:00",
+          "end_time": "2026-10-10T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-2200",
+          "start_time": "2026-10-10T22:00:00+09:00",
+          "end_time": "2026-10-10T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 1800
+        },
+        {
+          "id": "slot-standby-d-2026-10-10-2300",
+          "start_time": "2026-10-10T23:00:00+09:00",
+          "end_time": "2026-10-11T00:00:00+09:00",
           "status": "BOOKED",
           "price": 1800
         }
