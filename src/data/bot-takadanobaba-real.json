@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T13:16:00.032Z",
+  "updatedAt": "2026-09-19T02:40:16.956Z",
   "rooms": [
     {
       "id": "bot-baba-501",
@@ -18,143 +18,17 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-bot-baba-501-2026-09-18-0600",
-          "start_time": "2026-09-18T06:00:00+09:00",
-          "end_time": "2026-09-18T07:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-0700",
-          "start_time": "2026-09-18T07:00:00+09:00",
-          "end_time": "2026-09-18T08:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-0800",
-          "start_time": "2026-09-18T08:00:00+09:00",
-          "end_time": "2026-09-18T09:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-0900",
-          "start_time": "2026-09-18T09:00:00+09:00",
-          "end_time": "2026-09-18T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1000",
-          "start_time": "2026-09-18T10:00:00+09:00",
-          "end_time": "2026-09-18T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1100",
-          "start_time": "2026-09-18T11:00:00+09:00",
-          "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1200",
-          "start_time": "2026-09-18T12:00:00+09:00",
-          "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1300",
-          "start_time": "2026-09-18T13:00:00+09:00",
-          "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1400",
-          "start_time": "2026-09-18T14:00:00+09:00",
-          "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1500",
-          "start_time": "2026-09-18T15:00:00+09:00",
-          "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1600",
-          "start_time": "2026-09-18T16:00:00+09:00",
-          "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1700",
-          "start_time": "2026-09-18T17:00:00+09:00",
-          "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1800",
-          "start_time": "2026-09-18T18:00:00+09:00",
-          "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-1900",
-          "start_time": "2026-09-18T19:00:00+09:00",
-          "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-2000",
-          "start_time": "2026-09-18T20:00:00+09:00",
-          "end_time": "2026-09-18T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-2100",
-          "start_time": "2026-09-18T21:00:00+09:00",
-          "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-2200",
-          "start_time": "2026-09-18T22:00:00+09:00",
-          "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-501-2026-09-18-2300",
-          "start_time": "2026-09-18T23:00:00+09:00",
-          "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
           "id": "slot-bot-baba-501-2026-09-19-0600",
           "start_time": "2026-09-19T06:00:00+09:00",
           "end_time": "2026-09-19T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-19-0700",
           "start_time": "2026-09-19T07:00:00+09:00",
           "end_time": "2026-09-19T08:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -287,28 +161,28 @@
           "id": "slot-bot-baba-501-2026-09-20-0800",
           "start_time": "2026-09-20T08:00:00+09:00",
           "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-20-0900",
           "start_time": "2026-09-20T09:00:00+09:00",
           "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-20-1000",
           "start_time": "2026-09-20T10:00:00+09:00",
           "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-20-1100",
           "start_time": "2026-09-20T11:00:00+09:00",
           "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -364,28 +238,28 @@
           "id": "slot-bot-baba-501-2026-09-20-1900",
           "start_time": "2026-09-20T19:00:00+09:00",
           "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-20-2000",
           "start_time": "2026-09-20T20:00:00+09:00",
           "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-20-2100",
           "start_time": "2026-09-20T21:00:00+09:00",
           "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-20-2200",
           "start_time": "2026-09-20T22:00:00+09:00",
           "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -420,14 +294,14 @@
           "id": "slot-bot-baba-501-2026-09-21-0900",
           "start_time": "2026-09-21T09:00:00+09:00",
           "end_time": "2026-09-21T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-501-2026-09-21-1000",
           "start_time": "2026-09-21T10:00:00+09:00",
           "end_time": "2026-09-21T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -2662,6 +2536,132 @@
           "end_time": "2026-10-09T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-0600",
+          "start_time": "2026-10-09T06:00:00+09:00",
+          "end_time": "2026-10-09T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-0700",
+          "start_time": "2026-10-09T07:00:00+09:00",
+          "end_time": "2026-10-09T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-0800",
+          "start_time": "2026-10-09T08:00:00+09:00",
+          "end_time": "2026-10-09T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-0900",
+          "start_time": "2026-10-09T09:00:00+09:00",
+          "end_time": "2026-10-09T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1000",
+          "start_time": "2026-10-09T10:00:00+09:00",
+          "end_time": "2026-10-09T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1100",
+          "start_time": "2026-10-09T11:00:00+09:00",
+          "end_time": "2026-10-09T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1200",
+          "start_time": "2026-10-09T12:00:00+09:00",
+          "end_time": "2026-10-09T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1300",
+          "start_time": "2026-10-09T13:00:00+09:00",
+          "end_time": "2026-10-09T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1400",
+          "start_time": "2026-10-09T14:00:00+09:00",
+          "end_time": "2026-10-09T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1500",
+          "start_time": "2026-10-09T15:00:00+09:00",
+          "end_time": "2026-10-09T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1600",
+          "start_time": "2026-10-09T16:00:00+09:00",
+          "end_time": "2026-10-09T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1700",
+          "start_time": "2026-10-09T17:00:00+09:00",
+          "end_time": "2026-10-09T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1800",
+          "start_time": "2026-10-09T18:00:00+09:00",
+          "end_time": "2026-10-09T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-1900",
+          "start_time": "2026-10-09T19:00:00+09:00",
+          "end_time": "2026-10-09T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-2000",
+          "start_time": "2026-10-09T20:00:00+09:00",
+          "end_time": "2026-10-09T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-2100",
+          "start_time": "2026-10-09T21:00:00+09:00",
+          "end_time": "2026-10-09T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-2200",
+          "start_time": "2026-10-09T22:00:00+09:00",
+          "end_time": "2026-10-09T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-501-2026-10-09-2300",
+          "start_time": "2026-10-09T23:00:00+09:00",
+          "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
         }
       ]
     },
@@ -2683,136 +2683,10 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-bot-baba-502-2026-09-18-0630",
-          "start_time": "2026-09-18T06:30:00+09:00",
-          "end_time": "2026-09-18T07:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-0730",
-          "start_time": "2026-09-18T07:30:00+09:00",
-          "end_time": "2026-09-18T08:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-0830",
-          "start_time": "2026-09-18T08:30:00+09:00",
-          "end_time": "2026-09-18T09:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-0930",
-          "start_time": "2026-09-18T09:30:00+09:00",
-          "end_time": "2026-09-18T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1030",
-          "start_time": "2026-09-18T10:30:00+09:00",
-          "end_time": "2026-09-18T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1130",
-          "start_time": "2026-09-18T11:30:00+09:00",
-          "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1230",
-          "start_time": "2026-09-18T12:30:00+09:00",
-          "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1330",
-          "start_time": "2026-09-18T13:30:00+09:00",
-          "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1430",
-          "start_time": "2026-09-18T14:30:00+09:00",
-          "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1530",
-          "start_time": "2026-09-18T15:30:00+09:00",
-          "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1630",
-          "start_time": "2026-09-18T16:30:00+09:00",
-          "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1730",
-          "start_time": "2026-09-18T17:30:00+09:00",
-          "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1830",
-          "start_time": "2026-09-18T18:30:00+09:00",
-          "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-1930",
-          "start_time": "2026-09-18T19:30:00+09:00",
-          "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-2030",
-          "start_time": "2026-09-18T20:30:00+09:00",
-          "end_time": "2026-09-18T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-2130",
-          "start_time": "2026-09-18T21:30:00+09:00",
-          "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-2230",
-          "start_time": "2026-09-18T22:30:00+09:00",
-          "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-502-2026-09-18-2330",
-          "start_time": "2026-09-18T23:30:00+09:00",
-          "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3100
-        },
-        {
           "id": "slot-bot-baba-502-2026-09-19-0630",
           "start_time": "2026-09-19T06:30:00+09:00",
           "end_time": "2026-09-19T07:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -2833,7 +2707,7 @@
           "id": "slot-bot-baba-502-2026-09-19-0930",
           "start_time": "2026-09-19T09:30:00+09:00",
           "end_time": "2026-09-19T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -2945,14 +2819,14 @@
           "id": "slot-bot-baba-502-2026-09-20-0730",
           "start_time": "2026-09-20T07:30:00+09:00",
           "end_time": "2026-09-20T08:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-502-2026-09-20-0830",
           "start_time": "2026-09-20T08:30:00+09:00",
           "end_time": "2026-09-20T09:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -2973,21 +2847,21 @@
           "id": "slot-bot-baba-502-2026-09-20-1130",
           "start_time": "2026-09-20T11:30:00+09:00",
           "end_time": "2026-09-20T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-502-2026-09-20-1230",
           "start_time": "2026-09-20T12:30:00+09:00",
           "end_time": "2026-09-20T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-502-2026-09-20-1330",
           "start_time": "2026-09-20T13:30:00+09:00",
           "end_time": "2026-09-20T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -5327,6 +5201,132 @@
           "end_time": "2026-10-09T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-0630",
+          "start_time": "2026-10-09T06:30:00+09:00",
+          "end_time": "2026-10-09T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-0730",
+          "start_time": "2026-10-09T07:30:00+09:00",
+          "end_time": "2026-10-09T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-0830",
+          "start_time": "2026-10-09T08:30:00+09:00",
+          "end_time": "2026-10-09T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-0930",
+          "start_time": "2026-10-09T09:30:00+09:00",
+          "end_time": "2026-10-09T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1030",
+          "start_time": "2026-10-09T10:30:00+09:00",
+          "end_time": "2026-10-09T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1130",
+          "start_time": "2026-10-09T11:30:00+09:00",
+          "end_time": "2026-10-09T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1230",
+          "start_time": "2026-10-09T12:30:00+09:00",
+          "end_time": "2026-10-09T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1330",
+          "start_time": "2026-10-09T13:30:00+09:00",
+          "end_time": "2026-10-09T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1430",
+          "start_time": "2026-10-09T14:30:00+09:00",
+          "end_time": "2026-10-09T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1530",
+          "start_time": "2026-10-09T15:30:00+09:00",
+          "end_time": "2026-10-09T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1630",
+          "start_time": "2026-10-09T16:30:00+09:00",
+          "end_time": "2026-10-09T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1730",
+          "start_time": "2026-10-09T17:30:00+09:00",
+          "end_time": "2026-10-09T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1830",
+          "start_time": "2026-10-09T18:30:00+09:00",
+          "end_time": "2026-10-09T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-1930",
+          "start_time": "2026-10-09T19:30:00+09:00",
+          "end_time": "2026-10-09T20:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-2030",
+          "start_time": "2026-10-09T20:30:00+09:00",
+          "end_time": "2026-10-09T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-2130",
+          "start_time": "2026-10-09T21:30:00+09:00",
+          "end_time": "2026-10-09T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-2230",
+          "start_time": "2026-10-09T22:30:00+09:00",
+          "end_time": "2026-10-09T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-502-2026-10-09-2330",
+          "start_time": "2026-10-09T23:30:00+09:00",
+          "end_time": "2026-10-10T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
         }
       ]
     },
@@ -5348,157 +5348,31 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-bot-baba-503-2026-09-18-0630",
-          "start_time": "2026-09-18T06:30:00+09:00",
-          "end_time": "2026-09-18T07:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-0730",
-          "start_time": "2026-09-18T07:30:00+09:00",
-          "end_time": "2026-09-18T08:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-0830",
-          "start_time": "2026-09-18T08:30:00+09:00",
-          "end_time": "2026-09-18T09:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-0930",
-          "start_time": "2026-09-18T09:30:00+09:00",
-          "end_time": "2026-09-18T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1030",
-          "start_time": "2026-09-18T10:30:00+09:00",
-          "end_time": "2026-09-18T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1130",
-          "start_time": "2026-09-18T11:30:00+09:00",
-          "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1230",
-          "start_time": "2026-09-18T12:30:00+09:00",
-          "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1330",
-          "start_time": "2026-09-18T13:30:00+09:00",
-          "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1430",
-          "start_time": "2026-09-18T14:30:00+09:00",
-          "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1530",
-          "start_time": "2026-09-18T15:30:00+09:00",
-          "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1630",
-          "start_time": "2026-09-18T16:30:00+09:00",
-          "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1730",
-          "start_time": "2026-09-18T17:30:00+09:00",
-          "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1830",
-          "start_time": "2026-09-18T18:30:00+09:00",
-          "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-1930",
-          "start_time": "2026-09-18T19:30:00+09:00",
-          "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-2030",
-          "start_time": "2026-09-18T20:30:00+09:00",
-          "end_time": "2026-09-18T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-2130",
-          "start_time": "2026-09-18T21:30:00+09:00",
-          "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-2230",
-          "start_time": "2026-09-18T22:30:00+09:00",
-          "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-503-2026-09-18-2330",
-          "start_time": "2026-09-18T23:30:00+09:00",
-          "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3100
-        },
-        {
           "id": "slot-bot-baba-503-2026-09-19-0630",
           "start_time": "2026-09-19T06:30:00+09:00",
           "end_time": "2026-09-19T07:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-09-19-0730",
           "start_time": "2026-09-19T07:30:00+09:00",
           "end_time": "2026-09-19T08:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-09-19-0830",
           "start_time": "2026-09-19T08:30:00+09:00",
           "end_time": "2026-09-19T09:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-09-19-0930",
           "start_time": "2026-09-19T09:30:00+09:00",
           "end_time": "2026-09-19T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -5540,7 +5414,7 @@
           "id": "slot-bot-baba-503-2026-09-19-1530",
           "start_time": "2026-09-19T15:30:00+09:00",
           "end_time": "2026-09-19T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -5617,28 +5491,28 @@
           "id": "slot-bot-baba-503-2026-09-20-0830",
           "start_time": "2026-09-20T08:30:00+09:00",
           "end_time": "2026-09-20T09:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-09-20-0930",
           "start_time": "2026-09-20T09:30:00+09:00",
           "end_time": "2026-09-20T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-09-20-1030",
           "start_time": "2026-09-20T10:30:00+09:00",
           "end_time": "2026-09-20T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-09-20-1130",
           "start_time": "2026-09-20T11:30:00+09:00",
           "end_time": "2026-09-20T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -7080,14 +6954,14 @@
           "id": "slot-bot-baba-503-2026-10-01-1930",
           "start_time": "2026-10-01T19:30:00+09:00",
           "end_time": "2026-10-01T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-10-01-2030",
           "start_time": "2026-10-01T20:30:00+09:00",
           "end_time": "2026-10-01T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -7206,14 +7080,14 @@
           "id": "slot-bot-baba-503-2026-10-02-1930",
           "start_time": "2026-10-02T19:30:00+09:00",
           "end_time": "2026-10-02T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-503-2026-10-02-2030",
           "start_time": "2026-10-02T20:30:00+09:00",
           "end_time": "2026-10-02T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -7992,6 +7866,132 @@
           "end_time": "2026-10-09T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-0630",
+          "start_time": "2026-10-09T06:30:00+09:00",
+          "end_time": "2026-10-09T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-0730",
+          "start_time": "2026-10-09T07:30:00+09:00",
+          "end_time": "2026-10-09T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-0830",
+          "start_time": "2026-10-09T08:30:00+09:00",
+          "end_time": "2026-10-09T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-0930",
+          "start_time": "2026-10-09T09:30:00+09:00",
+          "end_time": "2026-10-09T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1030",
+          "start_time": "2026-10-09T10:30:00+09:00",
+          "end_time": "2026-10-09T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1130",
+          "start_time": "2026-10-09T11:30:00+09:00",
+          "end_time": "2026-10-09T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1230",
+          "start_time": "2026-10-09T12:30:00+09:00",
+          "end_time": "2026-10-09T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1330",
+          "start_time": "2026-10-09T13:30:00+09:00",
+          "end_time": "2026-10-09T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1430",
+          "start_time": "2026-10-09T14:30:00+09:00",
+          "end_time": "2026-10-09T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1530",
+          "start_time": "2026-10-09T15:30:00+09:00",
+          "end_time": "2026-10-09T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1630",
+          "start_time": "2026-10-09T16:30:00+09:00",
+          "end_time": "2026-10-09T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1730",
+          "start_time": "2026-10-09T17:30:00+09:00",
+          "end_time": "2026-10-09T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1830",
+          "start_time": "2026-10-09T18:30:00+09:00",
+          "end_time": "2026-10-09T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-1930",
+          "start_time": "2026-10-09T19:30:00+09:00",
+          "end_time": "2026-10-09T20:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-2030",
+          "start_time": "2026-10-09T20:30:00+09:00",
+          "end_time": "2026-10-09T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-2130",
+          "start_time": "2026-10-09T21:30:00+09:00",
+          "end_time": "2026-10-09T22:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-2230",
+          "start_time": "2026-10-09T22:30:00+09:00",
+          "end_time": "2026-10-09T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-503-2026-10-09-2330",
+          "start_time": "2026-10-09T23:30:00+09:00",
+          "end_time": "2026-10-10T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
         }
       ]
     },
@@ -8012,150 +8012,24 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-bot-baba-504-2026-09-18-0600",
-          "start_time": "2026-09-18T06:00:00+09:00",
-          "end_time": "2026-09-18T07:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-0700",
-          "start_time": "2026-09-18T07:00:00+09:00",
-          "end_time": "2026-09-18T08:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-0800",
-          "start_time": "2026-09-18T08:00:00+09:00",
-          "end_time": "2026-09-18T09:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-0900",
-          "start_time": "2026-09-18T09:00:00+09:00",
-          "end_time": "2026-09-18T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1000",
-          "start_time": "2026-09-18T10:00:00+09:00",
-          "end_time": "2026-09-18T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1100",
-          "start_time": "2026-09-18T11:00:00+09:00",
-          "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1200",
-          "start_time": "2026-09-18T12:00:00+09:00",
-          "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1300",
-          "start_time": "2026-09-18T13:00:00+09:00",
-          "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1400",
-          "start_time": "2026-09-18T14:00:00+09:00",
-          "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1500",
-          "start_time": "2026-09-18T15:00:00+09:00",
-          "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1600",
-          "start_time": "2026-09-18T16:00:00+09:00",
-          "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1700",
-          "start_time": "2026-09-18T17:00:00+09:00",
-          "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1800",
-          "start_time": "2026-09-18T18:00:00+09:00",
-          "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-1900",
-          "start_time": "2026-09-18T19:00:00+09:00",
-          "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-2000",
-          "start_time": "2026-09-18T20:00:00+09:00",
-          "end_time": "2026-09-18T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-2100",
-          "start_time": "2026-09-18T21:00:00+09:00",
-          "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-2200",
-          "start_time": "2026-09-18T22:00:00+09:00",
-          "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-504-2026-09-18-2300",
-          "start_time": "2026-09-18T23:00:00+09:00",
-          "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
           "id": "slot-bot-baba-504-2026-09-19-0600",
           "start_time": "2026-09-19T06:00:00+09:00",
           "end_time": "2026-09-19T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-504-2026-09-19-0700",
           "start_time": "2026-09-19T07:00:00+09:00",
           "end_time": "2026-09-19T08:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-504-2026-09-19-0800",
           "start_time": "2026-09-19T08:00:00+09:00",
           "end_time": "2026-09-19T09:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -8309,14 +8183,14 @@
           "id": "slot-bot-baba-504-2026-09-20-1200",
           "start_time": "2026-09-20T12:00:00+09:00",
           "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-504-2026-09-20-1300",
           "start_time": "2026-09-20T13:00:00+09:00",
           "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -9170,14 +9044,14 @@
           "id": "slot-bot-baba-504-2026-09-27-0900",
           "start_time": "2026-09-27T09:00:00+09:00",
           "end_time": "2026-09-27T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-504-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -10656,6 +10530,132 @@
           "end_time": "2026-10-09T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-0600",
+          "start_time": "2026-10-09T06:00:00+09:00",
+          "end_time": "2026-10-09T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-0700",
+          "start_time": "2026-10-09T07:00:00+09:00",
+          "end_time": "2026-10-09T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-0800",
+          "start_time": "2026-10-09T08:00:00+09:00",
+          "end_time": "2026-10-09T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-0900",
+          "start_time": "2026-10-09T09:00:00+09:00",
+          "end_time": "2026-10-09T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1000",
+          "start_time": "2026-10-09T10:00:00+09:00",
+          "end_time": "2026-10-09T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1100",
+          "start_time": "2026-10-09T11:00:00+09:00",
+          "end_time": "2026-10-09T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1200",
+          "start_time": "2026-10-09T12:00:00+09:00",
+          "end_time": "2026-10-09T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1300",
+          "start_time": "2026-10-09T13:00:00+09:00",
+          "end_time": "2026-10-09T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1400",
+          "start_time": "2026-10-09T14:00:00+09:00",
+          "end_time": "2026-10-09T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1500",
+          "start_time": "2026-10-09T15:00:00+09:00",
+          "end_time": "2026-10-09T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1600",
+          "start_time": "2026-10-09T16:00:00+09:00",
+          "end_time": "2026-10-09T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1700",
+          "start_time": "2026-10-09T17:00:00+09:00",
+          "end_time": "2026-10-09T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1800",
+          "start_time": "2026-10-09T18:00:00+09:00",
+          "end_time": "2026-10-09T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-1900",
+          "start_time": "2026-10-09T19:00:00+09:00",
+          "end_time": "2026-10-09T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-2000",
+          "start_time": "2026-10-09T20:00:00+09:00",
+          "end_time": "2026-10-09T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-2100",
+          "start_time": "2026-10-09T21:00:00+09:00",
+          "end_time": "2026-10-09T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-2200",
+          "start_time": "2026-10-09T22:00:00+09:00",
+          "end_time": "2026-10-09T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-504-2026-10-09-2300",
+          "start_time": "2026-10-09T23:00:00+09:00",
+          "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
         }
       ]
     },
@@ -10678,150 +10678,24 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-bot-baba-505-2026-09-18-0600",
-          "start_time": "2026-09-18T06:00:00+09:00",
-          "end_time": "2026-09-18T07:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-0700",
-          "start_time": "2026-09-18T07:00:00+09:00",
-          "end_time": "2026-09-18T08:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-0800",
-          "start_time": "2026-09-18T08:00:00+09:00",
-          "end_time": "2026-09-18T09:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-0900",
-          "start_time": "2026-09-18T09:00:00+09:00",
-          "end_time": "2026-09-18T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1000",
-          "start_time": "2026-09-18T10:00:00+09:00",
-          "end_time": "2026-09-18T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1100",
-          "start_time": "2026-09-18T11:00:00+09:00",
-          "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1200",
-          "start_time": "2026-09-18T12:00:00+09:00",
-          "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1300",
-          "start_time": "2026-09-18T13:00:00+09:00",
-          "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1400",
-          "start_time": "2026-09-18T14:00:00+09:00",
-          "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1500",
-          "start_time": "2026-09-18T15:00:00+09:00",
-          "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1600",
-          "start_time": "2026-09-18T16:00:00+09:00",
-          "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1700",
-          "start_time": "2026-09-18T17:00:00+09:00",
-          "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1800",
-          "start_time": "2026-09-18T18:00:00+09:00",
-          "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-1900",
-          "start_time": "2026-09-18T19:00:00+09:00",
-          "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-2000",
-          "start_time": "2026-09-18T20:00:00+09:00",
-          "end_time": "2026-09-18T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-2100",
-          "start_time": "2026-09-18T21:00:00+09:00",
-          "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-2200",
-          "start_time": "2026-09-18T22:00:00+09:00",
-          "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-505-2026-09-18-2300",
-          "start_time": "2026-09-18T23:00:00+09:00",
-          "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
           "id": "slot-bot-baba-505-2026-09-19-0600",
           "start_time": "2026-09-19T06:00:00+09:00",
           "end_time": "2026-09-19T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-505-2026-09-19-0700",
           "start_time": "2026-09-19T07:00:00+09:00",
           "end_time": "2026-09-19T08:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-505-2026-09-19-0800",
           "start_time": "2026-09-19T08:00:00+09:00",
           "end_time": "2026-09-19T09:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
@@ -10968,7 +10842,7 @@
           "id": "slot-bot-baba-505-2026-09-20-1100",
           "start_time": "2026-09-20T11:00:00+09:00",
           "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
@@ -12606,21 +12480,21 @@
           "id": "slot-bot-baba-505-2026-10-03-1100",
           "start_time": "2026-10-03T11:00:00+09:00",
           "end_time": "2026-10-03T12:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-505-2026-10-03-1200",
           "start_time": "2026-10-03T12:00:00+09:00",
           "end_time": "2026-10-03T13:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-505-2026-10-03-1300",
           "start_time": "2026-10-03T13:00:00+09:00",
           "end_time": "2026-10-03T14:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3500
         },
         {
@@ -13322,6 +13196,132 @@
           "end_time": "2026-10-09T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-0600",
+          "start_time": "2026-10-09T06:00:00+09:00",
+          "end_time": "2026-10-09T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-0700",
+          "start_time": "2026-10-09T07:00:00+09:00",
+          "end_time": "2026-10-09T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-0800",
+          "start_time": "2026-10-09T08:00:00+09:00",
+          "end_time": "2026-10-09T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-0900",
+          "start_time": "2026-10-09T09:00:00+09:00",
+          "end_time": "2026-10-09T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1000",
+          "start_time": "2026-10-09T10:00:00+09:00",
+          "end_time": "2026-10-09T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1100",
+          "start_time": "2026-10-09T11:00:00+09:00",
+          "end_time": "2026-10-09T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1200",
+          "start_time": "2026-10-09T12:00:00+09:00",
+          "end_time": "2026-10-09T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1300",
+          "start_time": "2026-10-09T13:00:00+09:00",
+          "end_time": "2026-10-09T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1400",
+          "start_time": "2026-10-09T14:00:00+09:00",
+          "end_time": "2026-10-09T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1500",
+          "start_time": "2026-10-09T15:00:00+09:00",
+          "end_time": "2026-10-09T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1600",
+          "start_time": "2026-10-09T16:00:00+09:00",
+          "end_time": "2026-10-09T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1700",
+          "start_time": "2026-10-09T17:00:00+09:00",
+          "end_time": "2026-10-09T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1800",
+          "start_time": "2026-10-09T18:00:00+09:00",
+          "end_time": "2026-10-09T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-1900",
+          "start_time": "2026-10-09T19:00:00+09:00",
+          "end_time": "2026-10-09T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-2000",
+          "start_time": "2026-10-09T20:00:00+09:00",
+          "end_time": "2026-10-09T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-2100",
+          "start_time": "2026-10-09T21:00:00+09:00",
+          "end_time": "2026-10-09T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-2200",
+          "start_time": "2026-10-09T22:00:00+09:00",
+          "end_time": "2026-10-09T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-505-2026-10-09-2300",
+          "start_time": "2026-10-09T23:00:00+09:00",
+          "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
         }
       ]
     },
@@ -13344,136 +13344,10 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-bot-baba-506-2026-09-18-0600",
-          "start_time": "2026-09-18T06:00:00+09:00",
-          "end_time": "2026-09-18T07:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-0700",
-          "start_time": "2026-09-18T07:00:00+09:00",
-          "end_time": "2026-09-18T08:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-0800",
-          "start_time": "2026-09-18T08:00:00+09:00",
-          "end_time": "2026-09-18T09:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-0900",
-          "start_time": "2026-09-18T09:00:00+09:00",
-          "end_time": "2026-09-18T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1000",
-          "start_time": "2026-09-18T10:00:00+09:00",
-          "end_time": "2026-09-18T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1100",
-          "start_time": "2026-09-18T11:00:00+09:00",
-          "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1200",
-          "start_time": "2026-09-18T12:00:00+09:00",
-          "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1300",
-          "start_time": "2026-09-18T13:00:00+09:00",
-          "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1400",
-          "start_time": "2026-09-18T14:00:00+09:00",
-          "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1500",
-          "start_time": "2026-09-18T15:00:00+09:00",
-          "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1600",
-          "start_time": "2026-09-18T16:00:00+09:00",
-          "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1700",
-          "start_time": "2026-09-18T17:00:00+09:00",
-          "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1800",
-          "start_time": "2026-09-18T18:00:00+09:00",
-          "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-1900",
-          "start_time": "2026-09-18T19:00:00+09:00",
-          "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-2000",
-          "start_time": "2026-09-18T20:00:00+09:00",
-          "end_time": "2026-09-18T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-2100",
-          "start_time": "2026-09-18T21:00:00+09:00",
-          "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-2200",
-          "start_time": "2026-09-18T22:00:00+09:00",
-          "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
-          "id": "slot-bot-baba-506-2026-09-18-2300",
-          "start_time": "2026-09-18T23:00:00+09:00",
-          "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 3500
-        },
-        {
           "id": "slot-bot-baba-506-2026-09-19-0600",
           "start_time": "2026-09-19T06:00:00+09:00",
           "end_time": "2026-09-19T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
@@ -13620,21 +13494,21 @@
           "id": "slot-bot-baba-506-2026-09-20-0900",
           "start_time": "2026-09-20T09:00:00+09:00",
           "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-506-2026-09-20-1000",
           "start_time": "2026-09-20T10:00:00+09:00",
           "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-506-2026-09-20-1100",
           "start_time": "2026-09-20T11:00:00+09:00",
           "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
@@ -13830,14 +13704,14 @@
           "id": "slot-bot-baba-506-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
           "id": "slot-bot-baba-506-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
@@ -15069,7 +14943,7 @@
           "id": "slot-bot-baba-506-2026-10-01-1800",
           "start_time": "2026-10-01T18:00:00+09:00",
           "end_time": "2026-10-01T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3500
         },
         {
@@ -15988,6 +15862,132 @@
           "end_time": "2026-10-09T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-0600",
+          "start_time": "2026-10-09T06:00:00+09:00",
+          "end_time": "2026-10-09T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-0700",
+          "start_time": "2026-10-09T07:00:00+09:00",
+          "end_time": "2026-10-09T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-0800",
+          "start_time": "2026-10-09T08:00:00+09:00",
+          "end_time": "2026-10-09T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-0900",
+          "start_time": "2026-10-09T09:00:00+09:00",
+          "end_time": "2026-10-09T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1000",
+          "start_time": "2026-10-09T10:00:00+09:00",
+          "end_time": "2026-10-09T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1100",
+          "start_time": "2026-10-09T11:00:00+09:00",
+          "end_time": "2026-10-09T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1200",
+          "start_time": "2026-10-09T12:00:00+09:00",
+          "end_time": "2026-10-09T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1300",
+          "start_time": "2026-10-09T13:00:00+09:00",
+          "end_time": "2026-10-09T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1400",
+          "start_time": "2026-10-09T14:00:00+09:00",
+          "end_time": "2026-10-09T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1500",
+          "start_time": "2026-10-09T15:00:00+09:00",
+          "end_time": "2026-10-09T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1600",
+          "start_time": "2026-10-09T16:00:00+09:00",
+          "end_time": "2026-10-09T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1700",
+          "start_time": "2026-10-09T17:00:00+09:00",
+          "end_time": "2026-10-09T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1800",
+          "start_time": "2026-10-09T18:00:00+09:00",
+          "end_time": "2026-10-09T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-1900",
+          "start_time": "2026-10-09T19:00:00+09:00",
+          "end_time": "2026-10-09T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-2000",
+          "start_time": "2026-10-09T20:00:00+09:00",
+          "end_time": "2026-10-09T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-2100",
+          "start_time": "2026-10-09T21:00:00+09:00",
+          "end_time": "2026-10-09T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-2200",
+          "start_time": "2026-10-09T22:00:00+09:00",
+          "end_time": "2026-10-09T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
+        },
+        {
+          "id": "slot-bot-baba-506-2026-10-09-2300",
+          "start_time": "2026-10-09T23:00:00+09:00",
+          "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3500
         }
       ]
     },
@@ -16008,150 +16008,24 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-bot-baba-507-2026-09-18-0600",
-          "start_time": "2026-09-18T06:00:00+09:00",
-          "end_time": "2026-09-18T07:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-0700",
-          "start_time": "2026-09-18T07:00:00+09:00",
-          "end_time": "2026-09-18T08:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-0800",
-          "start_time": "2026-09-18T08:00:00+09:00",
-          "end_time": "2026-09-18T09:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-0900",
-          "start_time": "2026-09-18T09:00:00+09:00",
-          "end_time": "2026-09-18T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1000",
-          "start_time": "2026-09-18T10:00:00+09:00",
-          "end_time": "2026-09-18T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1100",
-          "start_time": "2026-09-18T11:00:00+09:00",
-          "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1200",
-          "start_time": "2026-09-18T12:00:00+09:00",
-          "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1300",
-          "start_time": "2026-09-18T13:00:00+09:00",
-          "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1400",
-          "start_time": "2026-09-18T14:00:00+09:00",
-          "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1500",
-          "start_time": "2026-09-18T15:00:00+09:00",
-          "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1600",
-          "start_time": "2026-09-18T16:00:00+09:00",
-          "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1700",
-          "start_time": "2026-09-18T17:00:00+09:00",
-          "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1800",
-          "start_time": "2026-09-18T18:00:00+09:00",
-          "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-1900",
-          "start_time": "2026-09-18T19:00:00+09:00",
-          "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-2000",
-          "start_time": "2026-09-18T20:00:00+09:00",
-          "end_time": "2026-09-18T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-2100",
-          "start_time": "2026-09-18T21:00:00+09:00",
-          "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-2200",
-          "start_time": "2026-09-18T22:00:00+09:00",
-          "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-507-2026-09-18-2300",
-          "start_time": "2026-09-18T23:00:00+09:00",
-          "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
           "id": "slot-bot-baba-507-2026-09-19-0600",
           "start_time": "2026-09-19T06:00:00+09:00",
           "end_time": "2026-09-19T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-507-2026-09-19-0700",
           "start_time": "2026-09-19T07:00:00+09:00",
           "end_time": "2026-09-19T08:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-507-2026-09-19-0800",
           "start_time": "2026-09-19T08:00:00+09:00",
           "end_time": "2026-09-19T09:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -16284,7 +16158,7 @@
           "id": "slot-bot-baba-507-2026-09-20-0900",
           "start_time": "2026-09-20T09:00:00+09:00",
           "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -16312,14 +16186,14 @@
           "id": "slot-bot-baba-507-2026-09-20-1300",
           "start_time": "2026-09-20T13:00:00+09:00",
           "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-507-2026-09-20-1400",
           "start_time": "2026-09-20T14:00:00+09:00",
           "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -16361,21 +16235,21 @@
           "id": "slot-bot-baba-507-2026-09-20-2000",
           "start_time": "2026-09-20T20:00:00+09:00",
           "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-507-2026-09-20-2100",
           "start_time": "2026-09-20T21:00:00+09:00",
           "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-507-2026-09-20-2200",
           "start_time": "2026-09-20T22:00:00+09:00",
           "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -18652,6 +18526,132 @@
           "end_time": "2026-10-09T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-0600",
+          "start_time": "2026-10-09T06:00:00+09:00",
+          "end_time": "2026-10-09T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-0700",
+          "start_time": "2026-10-09T07:00:00+09:00",
+          "end_time": "2026-10-09T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-0800",
+          "start_time": "2026-10-09T08:00:00+09:00",
+          "end_time": "2026-10-09T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-0900",
+          "start_time": "2026-10-09T09:00:00+09:00",
+          "end_time": "2026-10-09T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1000",
+          "start_time": "2026-10-09T10:00:00+09:00",
+          "end_time": "2026-10-09T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1100",
+          "start_time": "2026-10-09T11:00:00+09:00",
+          "end_time": "2026-10-09T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1200",
+          "start_time": "2026-10-09T12:00:00+09:00",
+          "end_time": "2026-10-09T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1300",
+          "start_time": "2026-10-09T13:00:00+09:00",
+          "end_time": "2026-10-09T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1400",
+          "start_time": "2026-10-09T14:00:00+09:00",
+          "end_time": "2026-10-09T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1500",
+          "start_time": "2026-10-09T15:00:00+09:00",
+          "end_time": "2026-10-09T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1600",
+          "start_time": "2026-10-09T16:00:00+09:00",
+          "end_time": "2026-10-09T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1700",
+          "start_time": "2026-10-09T17:00:00+09:00",
+          "end_time": "2026-10-09T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1800",
+          "start_time": "2026-10-09T18:00:00+09:00",
+          "end_time": "2026-10-09T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-1900",
+          "start_time": "2026-10-09T19:00:00+09:00",
+          "end_time": "2026-10-09T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-2000",
+          "start_time": "2026-10-09T20:00:00+09:00",
+          "end_time": "2026-10-09T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-2100",
+          "start_time": "2026-10-09T21:00:00+09:00",
+          "end_time": "2026-10-09T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-2200",
+          "start_time": "2026-10-09T22:00:00+09:00",
+          "end_time": "2026-10-09T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-507-2026-10-09-2300",
+          "start_time": "2026-10-09T23:00:00+09:00",
+          "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
         }
       ]
     },
@@ -18672,136 +18672,10 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-bot-baba-508-2026-09-18-0600",
-          "start_time": "2026-09-18T06:00:00+09:00",
-          "end_time": "2026-09-18T07:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-0700",
-          "start_time": "2026-09-18T07:00:00+09:00",
-          "end_time": "2026-09-18T08:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-0800",
-          "start_time": "2026-09-18T08:00:00+09:00",
-          "end_time": "2026-09-18T09:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-0900",
-          "start_time": "2026-09-18T09:00:00+09:00",
-          "end_time": "2026-09-18T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1000",
-          "start_time": "2026-09-18T10:00:00+09:00",
-          "end_time": "2026-09-18T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1100",
-          "start_time": "2026-09-18T11:00:00+09:00",
-          "end_time": "2026-09-18T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1200",
-          "start_time": "2026-09-18T12:00:00+09:00",
-          "end_time": "2026-09-18T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1300",
-          "start_time": "2026-09-18T13:00:00+09:00",
-          "end_time": "2026-09-18T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1400",
-          "start_time": "2026-09-18T14:00:00+09:00",
-          "end_time": "2026-09-18T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1500",
-          "start_time": "2026-09-18T15:00:00+09:00",
-          "end_time": "2026-09-18T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1600",
-          "start_time": "2026-09-18T16:00:00+09:00",
-          "end_time": "2026-09-18T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1700",
-          "start_time": "2026-09-18T17:00:00+09:00",
-          "end_time": "2026-09-18T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1800",
-          "start_time": "2026-09-18T18:00:00+09:00",
-          "end_time": "2026-09-18T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-1900",
-          "start_time": "2026-09-18T19:00:00+09:00",
-          "end_time": "2026-09-18T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-2000",
-          "start_time": "2026-09-18T20:00:00+09:00",
-          "end_time": "2026-09-18T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-2100",
-          "start_time": "2026-09-18T21:00:00+09:00",
-          "end_time": "2026-09-18T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-2200",
-          "start_time": "2026-09-18T22:00:00+09:00",
-          "end_time": "2026-09-18T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-508-2026-09-18-2300",
-          "start_time": "2026-09-18T23:00:00+09:00",
-          "end_time": "2026-09-19T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
           "id": "slot-bot-baba-508-2026-09-19-0600",
           "start_time": "2026-09-19T06:00:00+09:00",
           "end_time": "2026-09-19T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -18955,14 +18829,14 @@
           "id": "slot-bot-baba-508-2026-09-20-1000",
           "start_time": "2026-09-20T10:00:00+09:00",
           "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-508-2026-09-20-1100",
           "start_time": "2026-09-20T11:00:00+09:00",
           "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -18976,21 +18850,21 @@
           "id": "slot-bot-baba-508-2026-09-20-1300",
           "start_time": "2026-09-20T13:00:00+09:00",
           "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-508-2026-09-20-1400",
           "start_time": "2026-09-20T14:00:00+09:00",
           "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-508-2026-09-20-1500",
           "start_time": "2026-09-20T15:00:00+09:00",
           "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -21316,6 +21190,132 @@
           "end_time": "2026-10-09T00:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-0600",
+          "start_time": "2026-10-09T06:00:00+09:00",
+          "end_time": "2026-10-09T07:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-0700",
+          "start_time": "2026-10-09T07:00:00+09:00",
+          "end_time": "2026-10-09T08:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-0800",
+          "start_time": "2026-10-09T08:00:00+09:00",
+          "end_time": "2026-10-09T09:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-0900",
+          "start_time": "2026-10-09T09:00:00+09:00",
+          "end_time": "2026-10-09T10:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1000",
+          "start_time": "2026-10-09T10:00:00+09:00",
+          "end_time": "2026-10-09T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1100",
+          "start_time": "2026-10-09T11:00:00+09:00",
+          "end_time": "2026-10-09T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1200",
+          "start_time": "2026-10-09T12:00:00+09:00",
+          "end_time": "2026-10-09T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1300",
+          "start_time": "2026-10-09T13:00:00+09:00",
+          "end_time": "2026-10-09T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1400",
+          "start_time": "2026-10-09T14:00:00+09:00",
+          "end_time": "2026-10-09T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1500",
+          "start_time": "2026-10-09T15:00:00+09:00",
+          "end_time": "2026-10-09T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1600",
+          "start_time": "2026-10-09T16:00:00+09:00",
+          "end_time": "2026-10-09T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1700",
+          "start_time": "2026-10-09T17:00:00+09:00",
+          "end_time": "2026-10-09T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1800",
+          "start_time": "2026-10-09T18:00:00+09:00",
+          "end_time": "2026-10-09T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-1900",
+          "start_time": "2026-10-09T19:00:00+09:00",
+          "end_time": "2026-10-09T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-2000",
+          "start_time": "2026-10-09T20:00:00+09:00",
+          "end_time": "2026-10-09T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-2100",
+          "start_time": "2026-10-09T21:00:00+09:00",
+          "end_time": "2026-10-09T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-2200",
+          "start_time": "2026-10-09T22:00:00+09:00",
+          "end_time": "2026-10-09T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-508-2026-10-09-2300",
+          "start_time": "2026-10-09T23:00:00+09:00",
+          "end_time": "2026-10-10T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
         }
       ]
     },
@@ -21337,143 +21337,17 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-bot-baba-509-2026-09-18-0630",
-          "start_time": "2026-09-18T06:30:00+09:00",
-          "end_time": "2026-09-18T07:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-0730",
-          "start_time": "2026-09-18T07:30:00+09:00",
-          "end_time": "2026-09-18T08:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-0830",
-          "start_time": "2026-09-18T08:30:00+09:00",
-          "end_time": "2026-09-18T09:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-0930",
-          "start_time": "2026-09-18T09:30:00+09:00",
-          "end_time": "2026-09-18T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1030",
-          "start_time": "2026-09-18T10:30:00+09:00",
-          "end_time": "2026-09-18T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1130",
-          "start_time": "2026-09-18T11:30:00+09:00",
-          "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1230",
-          "start_time": "2026-09-18T12:30:00+09:00",
-          "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1330",
-          "start_time": "2026-09-18T13:30:00+09:00",
-          "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1430",
-          "start_time": "2026-09-18T14:30:00+09:00",
-          "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1530",
-          "start_time": "2026-09-18T15:30:00+09:00",
-          "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1630",
-          "start_time": "2026-09-18T16:30:00+09:00",
-          "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1730",
-          "start_time": "2026-09-18T17:30:00+09:00",
-          "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1830",
-          "start_time": "2026-09-18T18:30:00+09:00",
-          "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-1930",
-          "start_time": "2026-09-18T19:30:00+09:00",
-          "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-2030",
-          "start_time": "2026-09-18T20:30:00+09:00",
-          "end_time": "2026-09-18T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-2130",
-          "start_time": "2026-09-18T21:30:00+09:00",
-          "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-2230",
-          "start_time": "2026-09-18T22:30:00+09:00",
-          "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-509-2026-09-18-2330",
-          "start_time": "2026-09-18T23:30:00+09:00",
-          "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2800
-        },
-        {
           "id": "slot-bot-baba-509-2026-09-19-0630",
           "start_time": "2026-09-19T06:30:00+09:00",
           "end_time": "2026-09-19T07:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-509-2026-09-19-0730",
           "start_time": "2026-09-19T07:30:00+09:00",
           "end_time": "2026-09-19T08:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -21683,14 +21557,14 @@
           "id": "slot-bot-baba-509-2026-09-20-1930",
           "start_time": "2026-09-20T19:30:00+09:00",
           "end_time": "2026-09-20T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-509-2026-09-20-2030",
           "start_time": "2026-09-20T20:30:00+09:00",
           "end_time": "2026-09-20T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -23981,6 +23855,132 @@
           "end_time": "2026-10-09T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-0630",
+          "start_time": "2026-10-09T06:30:00+09:00",
+          "end_time": "2026-10-09T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-0730",
+          "start_time": "2026-10-09T07:30:00+09:00",
+          "end_time": "2026-10-09T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-0830",
+          "start_time": "2026-10-09T08:30:00+09:00",
+          "end_time": "2026-10-09T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-0930",
+          "start_time": "2026-10-09T09:30:00+09:00",
+          "end_time": "2026-10-09T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1030",
+          "start_time": "2026-10-09T10:30:00+09:00",
+          "end_time": "2026-10-09T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1130",
+          "start_time": "2026-10-09T11:30:00+09:00",
+          "end_time": "2026-10-09T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1230",
+          "start_time": "2026-10-09T12:30:00+09:00",
+          "end_time": "2026-10-09T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1330",
+          "start_time": "2026-10-09T13:30:00+09:00",
+          "end_time": "2026-10-09T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1430",
+          "start_time": "2026-10-09T14:30:00+09:00",
+          "end_time": "2026-10-09T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1530",
+          "start_time": "2026-10-09T15:30:00+09:00",
+          "end_time": "2026-10-09T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1630",
+          "start_time": "2026-10-09T16:30:00+09:00",
+          "end_time": "2026-10-09T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1730",
+          "start_time": "2026-10-09T17:30:00+09:00",
+          "end_time": "2026-10-09T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1830",
+          "start_time": "2026-10-09T18:30:00+09:00",
+          "end_time": "2026-10-09T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-1930",
+          "start_time": "2026-10-09T19:30:00+09:00",
+          "end_time": "2026-10-09T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-2030",
+          "start_time": "2026-10-09T20:30:00+09:00",
+          "end_time": "2026-10-09T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-2130",
+          "start_time": "2026-10-09T21:30:00+09:00",
+          "end_time": "2026-10-09T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-2230",
+          "start_time": "2026-10-09T22:30:00+09:00",
+          "end_time": "2026-10-09T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-509-2026-10-09-2330",
+          "start_time": "2026-10-09T23:30:00+09:00",
+          "end_time": "2026-10-10T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
         }
       ]
     },
@@ -24001,132 +24001,6 @@
       ],
       "start_time_offset": 30,
       "slots": [
-        {
-          "id": "slot-bot-baba-510-2026-09-18-0630",
-          "start_time": "2026-09-18T06:30:00+09:00",
-          "end_time": "2026-09-18T07:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-0730",
-          "start_time": "2026-09-18T07:30:00+09:00",
-          "end_time": "2026-09-18T08:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-0830",
-          "start_time": "2026-09-18T08:30:00+09:00",
-          "end_time": "2026-09-18T09:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-0930",
-          "start_time": "2026-09-18T09:30:00+09:00",
-          "end_time": "2026-09-18T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1030",
-          "start_time": "2026-09-18T10:30:00+09:00",
-          "end_time": "2026-09-18T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1130",
-          "start_time": "2026-09-18T11:30:00+09:00",
-          "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1230",
-          "start_time": "2026-09-18T12:30:00+09:00",
-          "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1330",
-          "start_time": "2026-09-18T13:30:00+09:00",
-          "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1430",
-          "start_time": "2026-09-18T14:30:00+09:00",
-          "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1530",
-          "start_time": "2026-09-18T15:30:00+09:00",
-          "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1630",
-          "start_time": "2026-09-18T16:30:00+09:00",
-          "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1730",
-          "start_time": "2026-09-18T17:30:00+09:00",
-          "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1830",
-          "start_time": "2026-09-18T18:30:00+09:00",
-          "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-1930",
-          "start_time": "2026-09-18T19:30:00+09:00",
-          "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-2030",
-          "start_time": "2026-09-18T20:30:00+09:00",
-          "end_time": "2026-09-18T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-2130",
-          "start_time": "2026-09-18T21:30:00+09:00",
-          "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-2230",
-          "start_time": "2026-09-18T22:30:00+09:00",
-          "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-bot-baba-510-2026-09-18-2330",
-          "start_time": "2026-09-18T23:30:00+09:00",
-          "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 2800
-        },
         {
           "id": "slot-bot-baba-510-2026-09-19-0630",
           "start_time": "2026-09-19T06:30:00+09:00",
@@ -24152,7 +24026,7 @@
           "id": "slot-bot-baba-510-2026-09-19-0930",
           "start_time": "2026-09-19T09:30:00+09:00",
           "end_time": "2026-09-19T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -24208,7 +24082,7 @@
           "id": "slot-bot-baba-510-2026-09-19-1730",
           "start_time": "2026-09-19T17:30:00+09:00",
           "end_time": "2026-09-19T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -24334,14 +24208,14 @@
           "id": "slot-bot-baba-510-2026-09-20-1730",
           "start_time": "2026-09-20T17:30:00+09:00",
           "end_time": "2026-09-20T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-510-2026-09-20-1830",
           "start_time": "2026-09-20T18:30:00+09:00",
           "end_time": "2026-09-20T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -25069,14 +24943,14 @@
           "id": "slot-bot-baba-510-2026-09-26-1430",
           "start_time": "2026-09-26T14:30:00+09:00",
           "end_time": "2026-09-26T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-bot-baba-510-2026-09-26-1530",
           "start_time": "2026-09-26T15:30:00+09:00",
           "end_time": "2026-09-26T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -26646,6 +26520,132 @@
           "end_time": "2026-10-09T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-0630",
+          "start_time": "2026-10-09T06:30:00+09:00",
+          "end_time": "2026-10-09T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-0730",
+          "start_time": "2026-10-09T07:30:00+09:00",
+          "end_time": "2026-10-09T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-0830",
+          "start_time": "2026-10-09T08:30:00+09:00",
+          "end_time": "2026-10-09T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-0930",
+          "start_time": "2026-10-09T09:30:00+09:00",
+          "end_time": "2026-10-09T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1030",
+          "start_time": "2026-10-09T10:30:00+09:00",
+          "end_time": "2026-10-09T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1130",
+          "start_time": "2026-10-09T11:30:00+09:00",
+          "end_time": "2026-10-09T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1230",
+          "start_time": "2026-10-09T12:30:00+09:00",
+          "end_time": "2026-10-09T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1330",
+          "start_time": "2026-10-09T13:30:00+09:00",
+          "end_time": "2026-10-09T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1430",
+          "start_time": "2026-10-09T14:30:00+09:00",
+          "end_time": "2026-10-09T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1530",
+          "start_time": "2026-10-09T15:30:00+09:00",
+          "end_time": "2026-10-09T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1630",
+          "start_time": "2026-10-09T16:30:00+09:00",
+          "end_time": "2026-10-09T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1730",
+          "start_time": "2026-10-09T17:30:00+09:00",
+          "end_time": "2026-10-09T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1830",
+          "start_time": "2026-10-09T18:30:00+09:00",
+          "end_time": "2026-10-09T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-1930",
+          "start_time": "2026-10-09T19:30:00+09:00",
+          "end_time": "2026-10-09T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-2030",
+          "start_time": "2026-10-09T20:30:00+09:00",
+          "end_time": "2026-10-09T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-2130",
+          "start_time": "2026-10-09T21:30:00+09:00",
+          "end_time": "2026-10-09T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-2230",
+          "start_time": "2026-10-09T22:30:00+09:00",
+          "end_time": "2026-10-09T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-bot-baba-510-2026-10-09-2330",
+          "start_time": "2026-10-09T23:30:00+09:00",
+          "end_time": "2026-10-10T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
         }
       ]
     },
@@ -26667,150 +26667,24 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-bot-baba-511-2026-09-18-0630",
-          "start_time": "2026-09-18T06:30:00+09:00",
-          "end_time": "2026-09-18T07:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-0730",
-          "start_time": "2026-09-18T07:30:00+09:00",
-          "end_time": "2026-09-18T08:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-0830",
-          "start_time": "2026-09-18T08:30:00+09:00",
-          "end_time": "2026-09-18T09:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-0930",
-          "start_time": "2026-09-18T09:30:00+09:00",
-          "end_time": "2026-09-18T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1030",
-          "start_time": "2026-09-18T10:30:00+09:00",
-          "end_time": "2026-09-18T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1130",
-          "start_time": "2026-09-18T11:30:00+09:00",
-          "end_time": "2026-09-18T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1230",
-          "start_time": "2026-09-18T12:30:00+09:00",
-          "end_time": "2026-09-18T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1330",
-          "start_time": "2026-09-18T13:30:00+09:00",
-          "end_time": "2026-09-18T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1430",
-          "start_time": "2026-09-18T14:30:00+09:00",
-          "end_time": "2026-09-18T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1530",
-          "start_time": "2026-09-18T15:30:00+09:00",
-          "end_time": "2026-09-18T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1630",
-          "start_time": "2026-09-18T16:30:00+09:00",
-          "end_time": "2026-09-18T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1730",
-          "start_time": "2026-09-18T17:30:00+09:00",
-          "end_time": "2026-09-18T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1830",
-          "start_time": "2026-09-18T18:30:00+09:00",
-          "end_time": "2026-09-18T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-1930",
-          "start_time": "2026-09-18T19:30:00+09:00",
-          "end_time": "2026-09-18T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-2030",
-          "start_time": "2026-09-18T20:30:00+09:00",
-          "end_time": "2026-09-18T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-2130",
-          "start_time": "2026-09-18T21:30:00+09:00",
-          "end_time": "2026-09-18T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-2230",
-          "start_time": "2026-09-18T22:30:00+09:00",
-          "end_time": "2026-09-18T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 3100
-        },
-        {
-          "id": "slot-bot-baba-511-2026-09-18-2330",
-          "start_time": "2026-09-18T23:30:00+09:00",
-          "end_time": "2026-09-19T00:30:00+09:00",
-          "status": "AVAILABLE",
-          "price": 3100
-        },
-        {
           "id": "slot-bot-baba-511-2026-09-19-0630",
           "start_time": "2026-09-19T06:30:00+09:00",
           "end_time": "2026-09-19T07:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-511-2026-09-19-0730",
           "start_time": "2026-09-19T07:30:00+09:00",
           "end_time": "2026-09-19T08:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-511-2026-09-19-0830",
           "start_time": "2026-09-19T08:30:00+09:00",
           "end_time": "2026-09-19T09:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -26936,21 +26810,21 @@
           "id": "slot-bot-baba-511-2026-09-20-0830",
           "start_time": "2026-09-20T08:30:00+09:00",
           "end_time": "2026-09-20T09:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-511-2026-09-20-0930",
           "start_time": "2026-09-20T09:30:00+09:00",
           "end_time": "2026-09-20T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-bot-baba-511-2026-09-20-1030",
           "start_time": "2026-09-20T10:30:00+09:00",
           "end_time": "2026-09-20T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -26985,7 +26859,7 @@
           "id": "slot-bot-baba-511-2026-09-20-1530",
           "start_time": "2026-09-20T15:30:00+09:00",
           "end_time": "2026-09-20T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -27013,7 +26887,7 @@
           "id": "slot-bot-baba-511-2026-09-20-1930",
           "start_time": "2026-09-20T19:30:00+09:00",
           "end_time": "2026-09-20T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -29309,6 +29183,132 @@
           "id": "slot-bot-baba-511-2026-10-08-2330",
           "start_time": "2026-10-08T23:30:00+09:00",
           "end_time": "2026-10-09T00:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-0630",
+          "start_time": "2026-10-09T06:30:00+09:00",
+          "end_time": "2026-10-09T07:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-0730",
+          "start_time": "2026-10-09T07:30:00+09:00",
+          "end_time": "2026-10-09T08:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-0830",
+          "start_time": "2026-10-09T08:30:00+09:00",
+          "end_time": "2026-10-09T09:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-0930",
+          "start_time": "2026-10-09T09:30:00+09:00",
+          "end_time": "2026-10-09T10:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1030",
+          "start_time": "2026-10-09T10:30:00+09:00",
+          "end_time": "2026-10-09T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1130",
+          "start_time": "2026-10-09T11:30:00+09:00",
+          "end_time": "2026-10-09T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1230",
+          "start_time": "2026-10-09T12:30:00+09:00",
+          "end_time": "2026-10-09T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1330",
+          "start_time": "2026-10-09T13:30:00+09:00",
+          "end_time": "2026-10-09T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1430",
+          "start_time": "2026-10-09T14:30:00+09:00",
+          "end_time": "2026-10-09T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1530",
+          "start_time": "2026-10-09T15:30:00+09:00",
+          "end_time": "2026-10-09T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1630",
+          "start_time": "2026-10-09T16:30:00+09:00",
+          "end_time": "2026-10-09T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1730",
+          "start_time": "2026-10-09T17:30:00+09:00",
+          "end_time": "2026-10-09T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1830",
+          "start_time": "2026-10-09T18:30:00+09:00",
+          "end_time": "2026-10-09T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-1930",
+          "start_time": "2026-10-09T19:30:00+09:00",
+          "end_time": "2026-10-09T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-2030",
+          "start_time": "2026-10-09T20:30:00+09:00",
+          "end_time": "2026-10-09T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-2130",
+          "start_time": "2026-10-09T21:30:00+09:00",
+          "end_time": "2026-10-09T22:30:00+09:00",
+          "status": "BOOKED",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-2230",
+          "start_time": "2026-10-09T22:30:00+09:00",
+          "end_time": "2026-10-09T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 3100
+        },
+        {
+          "id": "slot-bot-baba-511-2026-10-09-2330",
+          "start_time": "2026-10-09T23:30:00+09:00",
+          "end_time": "2026-10-10T00:30:00+09:00",
           "status": "AVAILABLE",
           "price": 3100
         }
