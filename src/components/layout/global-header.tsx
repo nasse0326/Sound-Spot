@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Music, Radio, ChevronRight, Store } from 'lucide-react';
 import { SupportedStudiosModal } from '@/components/studio/supported-studios-modal';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
+import { ThemeToggle } from './theme-toggle';
 
 export const GlobalHeader: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,7 +30,7 @@ export const GlobalHeader: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-4 lg:px-8 py-3.5">
+      <header className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-stone-200 dark:border-slate-800 px-4 lg:px-8 py-3.5">
         {/* ロゴ側と稼働状況ピルの合計幅が狭いスマホ幅では収まりきらないため、
             はみ出た場合は画面外に切れず2段目に折り返すようflex-wrapを付ける */}
         <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-y-2">
@@ -40,48 +41,49 @@ export const GlobalHeader: React.FC = () => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-lg tracking-tight text-white">
+                <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">
                   SoundSpot
                 </span>
-                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
+                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
                   MVP
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400 hidden sm:block">
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block">
                 音楽リハーサルスタジオ 横断空き状況・機材比較
               </p>
             </div>
           </div>
 
-          {/* 稼働状況ボタン（クリックで対応スタジオ一覧モーダル表示） */}
-          <div className="flex items-center gap-3 text-xs">
+          {/* 稼働状況ボタン（クリックで対応スタジオ一覧モーダル表示）＆テーマ切り替え */}
+          <div className="flex items-center gap-2 sm:gap-3 text-xs">
             <button
               type="button"
               onClick={() => {
                 setInitialArea('all');
                 setIsModalOpen(true);
               }}
-              className="group flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 hover:border-emerald-500/60 text-slate-300 hover:text-white transition-all shadow-sm hover:shadow-emerald-950/40 cursor-pointer text-left"
+              className="group flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-stone-100 dark:bg-slate-800/90 hover:bg-stone-200 dark:hover:bg-slate-700/90 border border-stone-200 dark:border-slate-700/80 hover:border-emerald-400 dark:hover:border-emerald-500/60 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all shadow-sm hover:shadow-emerald-950/10 dark:hover:shadow-emerald-950/40 cursor-pointer text-left"
               title={`クリックして現在対応している${studioCount}店舗・${roomCount}部屋のスタジオ一覧を表示`}
             >
-              <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse group-hover:scale-110 transition-transform flex-shrink-0" />
+              <Radio className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 animate-pulse group-hover:scale-110 transition-transform flex-shrink-0" />
               <div className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-slate-400 hidden md:inline">稼働状況:</span>
+                <span className="text-slate-500 dark:text-slate-400 hidden md:inline">稼働状況:</span>
                 {/* スマホ幅ではロゴと横並びで収まりきらず画面外に切れていたため、
                     sm未満は「都内」「稼働中」を省いた短縮表記にする */}
-                <span className="font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors sm:hidden">
+                <span className="font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors sm:hidden">
                   {studioCount}店舗/{roomCount}部屋
                 </span>
-                <span className="hidden sm:inline font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors">
+                <span className="hidden sm:inline font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">
                   都内 {studioCount}店舗 / {roomCount}部屋 稼働中
                 </span>
-                <span className="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-semibold text-slate-400 group-hover:text-emerald-300 pl-1.5 border-l border-slate-700">
+                <span className="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-semibold text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 pl-1.5 border-l border-stone-300 dark:border-slate-700">
                   <span>一覧を見る</span>
                   <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </span>
-                <ChevronRight className="w-3 h-3 sm:hidden text-slate-400 group-hover:text-emerald-300 transition-transform flex-shrink-0" />
+                <ChevronRight className="w-3 h-3 sm:hidden text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-transform flex-shrink-0" />
               </div>
             </button>
+            <ThemeToggle />
           </div>
         </div>
       </header>

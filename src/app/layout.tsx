@@ -15,8 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <head>
+        {/* ライト/ダーク切り替え: localStorageの保存値（無ければダーク＝現行デフォルト）を
+            ペイント前に<html>へ同期する。next/scriptは非同期のためチラつき防止には使えず、
+            素の<script>で最速に実行する必要がある。 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var isDark=t?t==='dark':true;document.documentElement.classList.toggle('dark',isDark);}catch(e){}})();`,
+          }}
+        />
         {/* Google tag (gtag.js) */}
         {GA_MEASUREMENT_ID && (
           <>
@@ -41,7 +49,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="bg-[#0b0f17] text-slate-100 min-h-screen flex flex-col">
+      <body className="bg-[#F6F5F1] dark:bg-[#0b0f17] text-slate-800 dark:text-slate-100 min-h-screen flex flex-col">
         {/* ヘッダーナビゲーション（稼働状況クリックで対応スタジオ一覧表示） */}
         <GlobalHeader />
 
@@ -51,9 +59,9 @@ export default function RootLayout({
         </main>
 
         {/* フッター */}
-        <footer className="border-t border-slate-800/80 bg-slate-950 py-6 text-center text-xs text-slate-500">
+        <footer className="border-t border-stone-200 dark:border-slate-800/80 bg-white dark:bg-slate-950 py-6 text-center text-xs text-slate-500 dark:text-slate-500">
           <p>© 2026 SoundSpot - 音楽スタジオ横断空き枠検索アプリ (MVP)</p>
-          <p className="mt-1 text-slate-600">
+          <p className="mt-1 text-slate-400 dark:text-slate-600">
             ※空き状況はスタジオ公式サイトの情報を元に定期取得・更新しています。予約完了は各スタジオの公式WEBサイトにて行ってください。
           </p>
         </footer>

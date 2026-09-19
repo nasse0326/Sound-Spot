@@ -204,24 +204,24 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
         className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/80 backdrop-blur-sm animate-fadeIn"
         onClick={onClose}
       >
-        <div 
-          className="relative w-full max-w-4xl h-[94vh] sm:h-auto sm:max-h-[92vh] flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden text-slate-100"
+        <div
+          className="relative w-full max-w-4xl h-[94vh] sm:h-auto sm:max-h-[92vh] flex flex-col bg-white border border-stone-200 dark:bg-slate-900 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden text-slate-800 dark:text-slate-100"
           onClick={(e) => e.stopPropagation()}
         >
           {/* モーダルヘッダー（スマホではスリム化し、不要なカード固定を完全排除） */}
-          <div className="p-3.5 sm:p-5 border-b border-slate-800/80 bg-slate-950/70 flex-shrink-0">
+          <div className="p-3.5 sm:p-5 border-b border-stone-200 dark:border-slate-800/80 bg-stone-50 dark:bg-slate-950/70 flex-shrink-0">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/80 shrink-0">
-                    <Radio className="w-2.5 h-2.5 sm:w-3 sm:h-3 animate-pulse text-emerald-400" />
+                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-300 dark:bg-emerald-950 dark:text-emerald-400 dark:border-emerald-800/80 shrink-0">
+                    <Radio className="w-2.5 h-2.5 sm:w-3 sm:h-3 animate-pulse text-emerald-600 dark:text-emerald-400" />
                     稼働中スタジオ
                   </span>
-                  <span className="text-[11px] text-slate-400 hidden sm:inline">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:inline">
                     都内6エリア・{areaCounts.all}店舗 / {totalRooms}部屋 実データ対応
                   </span>
                 </div>
-                <h2 className="text-base sm:text-xl font-black tracking-tight text-white mt-1 truncate">
+                <h2 className="text-base sm:text-xl font-black tracking-tight text-slate-900 dark:text-white mt-1 truncate">
                   SoundSpot 対応スタジオ・部屋機材一覧
                 </h2>
               </div>
@@ -230,7 +230,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="p-1.5 sm:p-2 text-slate-400 hover:text-white rounded-full bg-slate-800/80 hover:bg-slate-700 transition flex-shrink-0 cursor-pointer"
+                className="p-1.5 sm:p-2 text-slate-500 hover:text-slate-900 bg-stone-100 hover:bg-stone-200 dark:text-slate-400 dark:hover:text-white rounded-full dark:bg-slate-800/80 dark:hover:bg-slate-700 transition flex-shrink-0 cursor-pointer"
                 aria-label="閉じる"
               >
                 <X className="w-5 h-5" />
@@ -253,7 +253,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === 'all'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   すべて ({areaCounts.all})
@@ -264,7 +264,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === '渋谷'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   渋谷 ({areaCounts['渋谷']})
@@ -275,7 +275,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === '新宿'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   新宿 ({areaCounts['新宿']})
@@ -286,7 +286,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === '秋葉原'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   秋葉原 ({areaCounts['秋葉原']})
@@ -297,7 +297,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === '高田馬場'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   高田馬場 ({areaCounts['高田馬場']})
@@ -308,7 +308,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === '池袋'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   池袋 ({areaCounts['池袋']})
@@ -319,17 +319,17 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
                     selectedArea === '下北沢'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
                   下北沢 ({areaCounts['下北沢']})
                 </button>
               </div>
               {showLeftFade && (
-                <div className="pointer-events-none absolute left-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-r from-slate-950/90 to-transparent" />
+                <div className="pointer-events-none absolute left-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-r from-stone-50 dark:from-slate-950/90 to-transparent" />
               )}
               {showRightFade && (
-                <div className="pointer-events-none absolute right-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-l from-slate-950/90 to-transparent" />
+                <div className="pointer-events-none absolute right-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-l from-stone-50 dark:from-slate-950/90 to-transparent" />
               )}
               </div>
 
@@ -341,12 +341,12 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="店舗名・機材名 (Marshall/JC-120等)..."
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-8 pr-7 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500/70"
+                  className="w-full bg-white border border-stone-300 dark:bg-slate-950 dark:border-slate-800 rounded-xl pl-8 pr-7 py-1.5 text-xs text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500/70"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 cursor-pointer"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 cursor-pointer"
                   >
                     <X className="w-3 h-3" />
                   </button>
@@ -359,51 +359,51 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
           <div className="flex-1 overflow-y-auto p-3.5 sm:p-6 space-y-4">
             {/* サマリーカード（スクロール可能エリアに配置し、スマホの画面を圧迫しないよう改善） */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
-              <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
-                <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">対応エリア</span>
-                <p className="text-sm sm:text-base font-extrabold text-white mt-0.5">6 エリア</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-500">渋谷・新宿・秋葉原・高田馬場・池袋・下北沢</span>
+              <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応エリア</span>
+                <p className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-0.5">6 エリア</p>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">渋谷・新宿・秋葉原・高田馬場・池袋・下北沢</span>
               </div>
-              <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
-                <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">対応スタジオ数</span>
-                <p className="text-sm sm:text-base font-extrabold text-emerald-400 mt-0.5">{areaCounts.all} 店舗</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-500">
+              <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応スタジオ数</span>
+                <p className="text-sm sm:text-base font-extrabold text-emerald-700 dark:text-emerald-400 mt-0.5">{areaCounts.all} 店舗</p>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">
                   渋{areaCounts['渋谷']} / 新{areaCounts['新宿']} / 秋{areaCounts['秋葉原']} / 高{areaCounts['高田馬場']} / 池{areaCounts['池袋']} / 下{areaCounts['下北沢']}
                 </span>
               </div>
-              <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
-                <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">対応部屋総数</span>
-                <p className="text-sm sm:text-base font-extrabold text-teal-300 mt-0.5">{totalRooms} 部屋</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-500">8〜50帖・ゲネプロ対応</span>
+              <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応部屋総数</span>
+                <p className="text-sm sm:text-base font-extrabold text-teal-700 dark:text-teal-300 mt-0.5">{totalRooms} 部屋</p>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">8〜50帖・ゲネプロ対応</span>
               </div>
-              <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-2 sm:p-2.5">
-                <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium">予約連携仕様</span>
-                <p className="text-sm sm:text-base font-extrabold text-cyan-300 mt-0.5">{webSyncCount}店 Web / {phoneSyncCount}店 電話</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-500">定期更新</span>
+              <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">予約連携仕様</span>
+                <p className="text-sm sm:text-base font-extrabold text-cyan-700 dark:text-cyan-300 mt-0.5">{webSyncCount}店 Web / {phoneSyncCount}店 電話</p>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">定期更新</span>
               </div>
             </div>
 
             {/* 一括開閉トグルボタン & ヒント */}
-            <div className="flex items-center justify-between text-xs text-slate-400 pt-1">
+            <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-1">
               <span className="text-[11px]">
                 {filteredStudios.length} 店舗中 {filteredStudios.reduce((acc, s) => acc + (roomsByStudioId.get(s.id)?.length || s.roomCount), 0)} 部屋を表示
               </span>
               <button
                 type="button"
                 onClick={toggleExpandAll}
-                className="text-xs text-emerald-400 hover:text-emerald-300 hover:underline font-semibold cursor-pointer"
+                className="text-xs text-emerald-700 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 hover:underline font-semibold cursor-pointer"
               >
                 {expandedStudioIds.size > 0 ? 'すべて閉じる' : '全店舗の部屋・機材を展開'}
               </button>
             </div>
 
             {filteredStudios.length === 0 ? (
-              <div className="py-12 text-center text-slate-500">
+              <div className="py-12 text-center text-slate-400 dark:text-slate-500">
                 <Building2 className="w-10 h-10 mx-auto mb-2 opacity-40" />
                 <p className="text-sm">該当するスタジオまたは機材が見つかりませんでした。</p>
                 <button
                   onClick={() => { setSelectedArea('all'); setSelectedSyncType('all'); setSearchQuery(''); }}
-                  className="mt-3 text-xs text-emerald-400 hover:underline"
+                  className="mt-3 text-xs text-emerald-700 dark:text-emerald-400 hover:underline"
                 >
                   条件をリセットする
                 </button>
@@ -415,22 +415,22 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   const isExpanded = expandedStudioIds.has(studio.id);
 
                   return (
-                    <div 
+                    <div
                       key={studio.id}
-                      className="bg-slate-950/70 border border-slate-800 hover:border-slate-700/80 rounded-xl p-3.5 sm:p-4 transition-all hover:shadow-lg flex flex-col justify-between"
+                      className="bg-stone-50 border border-stone-200 hover:border-stone-300 dark:bg-slate-950/70 dark:border-slate-800 dark:hover:border-slate-700/80 rounded-xl p-3.5 sm:p-4 transition-all hover:shadow-lg flex flex-col justify-between"
                     >
                       <div>
                         {/* 上段バッジ群 */}
                         <div className="flex items-center justify-between gap-2 mb-2 flex-wrap">
                           <div className="flex items-center gap-1.5">
-                            <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wide bg-slate-800 text-slate-300 border border-slate-700/60">
+                            <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wide bg-stone-100 text-slate-600 border border-stone-300 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700/60">
                               {studio.chainName}
                             </span>
-                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800/80 text-emerald-400 border border-emerald-800/40">
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-white text-emerald-700 border border-emerald-300 dark:bg-slate-800/80 dark:text-emerald-400 dark:border-emerald-800/40">
                               {studio.area}
                             </span>
                             {studio.is24Hours && (
-                              <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-800/60">
+                              <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-cyan-50 text-cyan-700 border border-cyan-300 dark:bg-cyan-950 dark:text-cyan-300 dark:border-cyan-800/60">
                                 24h
                               </span>
                             )}
@@ -438,45 +438,45 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
 
                           {/* 同期ステータスバッジ */}
                           {studio.syncType === 'phone' ? (
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-950/80 text-amber-400 border border-amber-800/60 flex items-center gap-1">
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-300 dark:bg-amber-950/80 dark:text-amber-400 dark:border-amber-800/60 flex items-center gap-1">
                               <Phone className="w-2.5 h-2.5" />
                               電話予約
                             </span>
                           ) : (
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950/80 text-emerald-400 border border-emerald-800/60 flex items-center gap-1">
-                              <Zap className="w-2.5 h-2.5 text-emerald-400" />
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-300 dark:bg-emerald-950/80 dark:text-emerald-400 dark:border-emerald-800/60 flex items-center gap-1">
+                              <Zap className="w-2.5 h-2.5 text-emerald-600 dark:text-emerald-400" />
                               Web空き状況
                             </span>
                           )}
                         </div>
 
                         {/* スタジオ名 */}
-                        <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                        <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight">
                           {studio.name}
                         </h3>
 
                         {/* 最寄り駅・部屋数 */}
-                        <div className="mt-1.5 space-y-1 text-xs text-slate-400">
+                        <div className="mt-1.5 space-y-1 text-xs text-slate-500 dark:text-slate-400">
                           <div className="flex items-center gap-1.5">
-                            <MapPin className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
+                            <MapPin className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 flex-shrink-0" />
                             <span>{studio.nearestStation}</span>
                           </div>
                           <div className="flex items-center gap-1.5 flex-wrap">
-                            <Layers className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
-                            <span className="font-semibold text-slate-200">全 {rooms.length || studio.roomCount} 部屋</span>
-                            <span className="text-slate-600">•</span>
-                            <span className="text-[11px] text-slate-400">{studio.systemName}</span>
-                            <span className="text-slate-600">•</span>
-                            <span className="text-[11px] text-slate-400">{studio.businessHours}</span>
+                            <Layers className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 flex-shrink-0" />
+                            <span className="font-semibold text-slate-700 dark:text-slate-200">全 {rooms.length || studio.roomCount} 部屋</span>
+                            <span className="text-stone-300 dark:text-slate-600">•</span>
+                            <span className="text-[11px] text-slate-500 dark:text-slate-400">{studio.systemName}</span>
+                            <span className="text-stone-300 dark:text-slate-600">•</span>
+                            <span className="text-[11px] text-slate-500 dark:text-slate-400">{studio.businessHours}</span>
                           </div>
                         </div>
 
                         {/* 特徴タグ */}
                         <div className="flex flex-wrap gap-1.5 mt-2.5">
                           {studio.features.map((feature, idx) => (
-                            <span 
+                            <span
                               key={idx}
-                              className="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-900 border border-slate-800 text-slate-300"
+                              className="px-2 py-0.5 rounded text-[10px] font-medium bg-white border border-stone-200 text-slate-600 dark:bg-slate-900 dark:border-slate-800 dark:text-slate-300"
                             >
                               {feature}
                             </span>
@@ -485,19 +485,19 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                       </div>
 
                       {/* 部屋・機材一覧のアコーディオン展開ボタン */}
-                      <div className="mt-3 pt-2.5 border-t border-slate-800/80">
+                      <div className="mt-3 pt-2.5 border-t border-stone-200 dark:border-slate-800/80">
                         <button
                           type="button"
                           onClick={() => toggleExpand(studio.id)}
-                          className="w-full flex items-center justify-between gap-2 flex-wrap px-3 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-800/90 hover:border-emerald-600/50 text-xs font-bold text-slate-200 hover:text-white transition cursor-pointer group"
+                          className="w-full flex items-center justify-between gap-2 flex-wrap px-3 py-2 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 hover:border-emerald-400 dark:bg-slate-900/90 dark:hover:bg-slate-850 dark:border-slate-800/90 dark:hover:border-emerald-600/50 text-xs font-bold text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white transition cursor-pointer group"
                         >
                           {/* 左右どちらのテキストも折り返さず一塊のまま扱い、幅が足りない場合は
                               右側のラベルごと2段目に落とす（文字やアイコンの途中で崩れるのを防ぐ） */}
                           <span className="flex items-center gap-1.5 whitespace-nowrap">
-                            <Music className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform flex-shrink-0" />
+                            <Music className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform flex-shrink-0" />
                             <span>常設部屋・機材一覧（全 {rooms.length || studio.roomCount} 部屋）</span>
                           </span>
-                          <span className="flex items-center gap-1 text-slate-400 group-hover:text-emerald-400 text-[11px] whitespace-nowrap">
+                          <span className="flex items-center gap-1 text-slate-500 group-hover:text-emerald-600 dark:text-slate-400 dark:group-hover:text-emerald-400 text-[11px] whitespace-nowrap">
                             {isExpanded ? (
                               <>閉じる <ChevronUp className="w-3.5 h-3.5 flex-shrink-0" /></>
                             ) : (
@@ -510,7 +510,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                         {isExpanded && (
                           <div className="mt-2.5 space-y-2 pt-1 animate-fadeIn">
                             {rooms.length === 0 ? (
-                              <p className="text-xs text-slate-500 py-2 text-center">
+                              <p className="text-xs text-slate-400 dark:text-slate-500 py-2 text-center">
                                 部屋スペックの詳細は公式HPをご確認ください。
                               </p>
                             ) : (
@@ -518,45 +518,45 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                                 {rooms.map((room) => {
                                   const eq = room.equipment;
                                   return (
-                                    <div 
+                                    <div
                                       key={room.id}
                                       onClick={() => setDetailRoom(room)}
-                                      className="p-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-800/90 hover:border-slate-700 transition cursor-pointer group/room flex flex-col justify-between"
+                                      className="p-2.5 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 hover:border-stone-300 dark:bg-slate-900/90 dark:hover:bg-slate-850 dark:border-slate-800/90 dark:hover:border-slate-700 transition cursor-pointer group/room flex flex-col justify-between"
                                       title="クリックして部屋・機材の詳細を表示"
                                     >
                                       <div>
                                         {/* 部屋名・帖数・料金 */}
                                         <div className="flex items-center justify-between gap-1.5 mb-1.5">
                                           <div className="flex items-center gap-1.5 min-w-0">
-                                            <span className="font-bold text-xs text-white group-hover/room:text-emerald-400 transition truncate">
+                                            <span className="font-bold text-xs text-slate-900 group-hover/room:text-emerald-600 dark:text-white dark:group-hover/room:text-emerald-400 transition truncate">
                                               {room.name}
                                             </span>
-                                            <span className="text-[10px] px-1.5 py-0.2 rounded bg-slate-800 text-slate-300 shrink-0">
+                                            <span className="text-[10px] px-1.5 py-0.2 rounded bg-stone-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 shrink-0">
                                               {room.sizeTatami}帖
                                             </span>
                                             {room.floor && (
-                                              <span className="text-[9px] text-slate-500 shrink-0">
+                                              <span className="text-[9px] text-slate-400 dark:text-slate-500 shrink-0">
                                                 {room.floor}
                                               </span>
                                             )}
                                           </div>
                                           <div className="text-right shrink-0">
-                                            <span className="font-mono text-xs font-bold text-emerald-400">
+                                            <span className="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400">
                                               ¥{room.pricePerHourRegular.toLocaleString()}
                                             </span>
-                                            <span className="text-[9px] text-slate-500 block">/h(通常)</span>
+                                            <span className="text-[9px] text-slate-400 dark:text-slate-500 block">/h(通常)</span>
                                           </div>
                                         </div>
 
                                         {/* 機材リスト */}
-                                        <div className="space-y-1 text-[11px] text-slate-300 mt-2">
+                                        <div className="space-y-1 text-[11px] text-slate-600 dark:text-slate-300 mt-2">
                                           {/* ギターアンプ */}
                                           {eq && eq.guitarAmps.length > 0 && (
                                             <div className="flex items-start gap-1">
-                                              <span className="text-[9px] uppercase font-bold text-slate-500 px-1 py-0.2 rounded bg-slate-950 shrink-0">
+                                              <span className="text-[9px] uppercase font-bold text-slate-400 px-1 py-0.2 rounded bg-stone-100 dark:text-slate-500 dark:bg-slate-950 shrink-0">
                                                 GUITAR
                                               </span>
-                                              <span className="text-slate-300 text-[10.5px] truncate">
+                                              <span className="text-slate-600 dark:text-slate-300 text-[10.5px] truncate">
                                                 {eq.guitarAmps.join(', ')}
                                               </span>
                                             </div>
@@ -565,10 +565,10 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                                           {/* ベースアンプ */}
                                           {eq?.bassAmp && (
                                             <div className="flex items-start gap-1">
-                                              <span className="text-[9px] uppercase font-bold text-slate-500 px-1 py-0.2 rounded bg-slate-950 shrink-0">
+                                              <span className="text-[9px] uppercase font-bold text-slate-400 px-1 py-0.2 rounded bg-stone-100 dark:text-slate-500 dark:bg-slate-950 shrink-0">
                                                 BASS
                                               </span>
-                                              <span className="text-slate-300 text-[10.5px] truncate">
+                                              <span className="text-slate-600 dark:text-slate-300 text-[10.5px] truncate">
                                                 {eq.bassAmp}
                                               </span>
                                             </div>
@@ -577,10 +577,10 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                                           {/* ドラム */}
                                           {eq?.drumSet && (
                                             <div className="flex items-start gap-1">
-                                              <span className="text-[9px] uppercase font-bold text-slate-500 px-1 py-0.2 rounded bg-slate-950 shrink-0">
+                                              <span className="text-[9px] uppercase font-bold text-slate-400 px-1 py-0.2 rounded bg-stone-100 dark:text-slate-500 dark:bg-slate-950 shrink-0">
                                                 DRUM
                                               </span>
-                                              <span className="text-slate-300 text-[10.5px] truncate">
+                                              <span className="text-slate-600 dark:text-slate-300 text-[10.5px] truncate">
                                                 {eq.drumSet}
                                               </span>
                                             </div>
@@ -589,10 +589,10 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                                           {/* 鍵盤・キーボード */}
                                           {eq?.keyboards && eq.keyboards.length > 0 && (
                                             <div className="flex items-start gap-1">
-                                              <span className="text-[9px] uppercase font-bold text-slate-500 px-1 py-0.2 rounded bg-slate-950 shrink-0">
+                                              <span className="text-[9px] uppercase font-bold text-slate-400 px-1 py-0.2 rounded bg-stone-100 dark:text-slate-500 dark:bg-slate-950 shrink-0">
                                                 KEYS
                                               </span>
-                                              <span className="text-slate-300 text-[10.5px] truncate">
+                                              <span className="text-slate-600 dark:text-slate-300 text-[10.5px] truncate">
                                                 {eq.keyboards.join(', ')}
                                               </span>
                                             </div>
@@ -601,9 +601,9 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                                       </div>
 
                                       {/* 個人練習料金 & 詳細案内 */}
-                                      <div className="mt-2 pt-1.5 border-t border-slate-800/60 flex items-center justify-between text-[10px] text-slate-400">
+                                      <div className="mt-2 pt-1.5 border-t border-stone-200 dark:border-slate-800/60 flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-400">
                                         <span>個人: ¥{room.pricePerHourSolo.toLocaleString()}/h</span>
-                                        <span className="text-emerald-400 group-hover/room:underline">詳細スペック ↗</span>
+                                        <span className="text-emerald-700 dark:text-emerald-400 group-hover/room:underline">詳細スペック ↗</span>
                                       </div>
                                     </div>
                                   );
@@ -615,15 +615,15 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                       </div>
 
                       {/* アクションボタン */}
-                      <div className="mt-3 pt-2.5 border-t border-slate-800/80 flex items-center justify-between gap-2">
-                        <span className="text-[11px] text-slate-500 truncate">
+                      <div className="mt-3 pt-2.5 border-t border-stone-200 dark:border-slate-800/80 flex items-center justify-between gap-2">
+                        <span className="text-[11px] text-slate-400 dark:text-slate-500 truncate">
                           {studio.address}
                         </span>
                         <div className="flex items-center gap-2 shrink-0">
                           {studio.syncType === 'phone' ? (
                             <a
                               href={`tel:${studio.tel}`}
-                              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold transition"
+                              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-300 dark:bg-amber-500/10 dark:hover:bg-amber-500/20 dark:text-amber-300 dark:border-amber-500/30 text-xs font-semibold transition"
                             >
                               <Phone className="w-3 h-3" />
                               電話予約
@@ -633,7 +633,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                             href={studio.websiteUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 text-slate-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-200 text-xs font-semibold transition"
                           >
                             公式HP
                             <ExternalLink className="w-3 h-3 text-slate-400" />
@@ -648,9 +648,9 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
           </div>
 
           {/* モーダルフッター（安心・同期ポリシー説明） */}
-          <div className="p-3 sm:p-4 border-t border-slate-800/80 bg-slate-950/80 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs flex-shrink-0">
-            <div className="flex items-center gap-2 text-slate-400 text-[11px] sm:text-xs">
-              <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+          <div className="p-3 sm:p-4 border-t border-stone-200 dark:border-slate-800/80 bg-stone-50 dark:bg-slate-950/80 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs flex-shrink-0">
+            <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-[11px] sm:text-xs">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
               <p className="leading-snug">
                 各スタジオ公式システムから空き情報を定期取得。都内全{areaCounts.all}店舗の常設機材スペックを網羅しています。
               </p>
@@ -658,7 +658,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="w-full sm:w-auto px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition cursor-pointer flex-shrink-0"
+              className="w-full sm:w-auto px-4 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-200 font-bold text-xs transition cursor-pointer flex-shrink-0"
             >
               閉じる
             </button>

@@ -296,38 +296,38 @@ export default function HomePage() {
     <div className="space-y-6">
       {/* ヒーローセクション */}
       <div className="text-center sm:text-left py-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           スタジオ空き枠を横断検索
         </h1>
-        <p className="text-sm text-slate-400 mt-1">
+        <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
           指定の日時・エリア・部屋の広さ・常設アンプから、今すぐ予約可能なスタジオを一括比較できます。
         </p>
 
         {/* クイック日程ボタン & 対応スタジオショートカット */}
         <div className="flex flex-wrap items-center justify-between gap-2 mt-3 text-xs">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-slate-500 font-medium">ショートカット:</span>
+            <span className="text-slate-500 dark:text-slate-500 font-medium">ショートカット:</span>
             <button
               onClick={() => handleQuickDate('today')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+              className="px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer"
             >
               今日
             </button>
             <button
               onClick={() => handleQuickDate('tomorrow')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+              className="px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer"
             >
               明日
             </button>
             <button
               onClick={() => handleQuickDate('sat')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+              className="px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer"
             >
               今週末（土）
             </button>
             <button
               onClick={() => handleQuickDate('sun')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+              className="px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer"
             >
               今週末（日）
             </button>
@@ -336,11 +336,11 @@ export default function HomePage() {
           <button
             type="button"
             onClick={() => handleOpenSupportedStudios()}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/40 hover:bg-emerald-900/50 text-emerald-400 border border-emerald-800/60 transition cursor-pointer text-xs font-semibold"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 transition cursor-pointer text-xs font-semibold"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400 animate-pulse" />
             <span>対応スタジオ一覧 ({SUPPORTED_STUDIOS.length}店舗) を見る</span>
-            <span className="text-[10px] text-emerald-500">↗</span>
+            <span className="text-[10px] text-emerald-600 dark:text-emerald-500">↗</span>
           </button>
         </div>
       </div>
@@ -355,13 +355,13 @@ export default function HomePage() {
       {/* 表示切替 & 検索結果数 & ソートバー */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-sm font-bold text-slate-200">
+          <span className="text-sm font-bold text-slate-700 dark:text-slate-200">
             検索結果:
           </span>
-          <span className="text-base font-extrabold text-emerald-400">
+          <span className="text-base font-extrabold text-emerald-700 dark:text-emerald-400">
             {sortedRooms.length}
           </span>
-          <span className="text-xs text-slate-400">
+          <span className="text-xs text-slate-500 dark:text-slate-400">
             部屋が該当（{filters.area === 'all' ? '全エリア' : `${filters.area}エリア`} / {filters.date} {filters.startTime}〜{filters.endTime}
             {hideFullyBooked && ' • 満室除外'}）
           </span>
@@ -374,38 +374,38 @@ export default function HomePage() {
             onClick={() => setHideFullyBooked(!hideFullyBooked)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
               hideFullyBooked
-                ? 'bg-emerald-950/80 text-emerald-400 border-emerald-700/80 shadow-sm shadow-emerald-950/40 hover:bg-emerald-900/60'
-                : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700'
+                ? 'bg-emerald-50 text-emerald-700 border-emerald-300 shadow-sm hover:bg-emerald-100 dark:bg-emerald-950/80 dark:text-emerald-400 dark:border-emerald-700/80 dark:shadow-emerald-950/40 dark:hover:bg-emerald-900/60'
+                : 'bg-white text-slate-500 border-stone-200 hover:text-slate-700 hover:border-stone-300 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800 dark:hover:text-slate-200 dark:hover:border-slate-700'
             }`}
             title="指定した時間帯に空きが1つもない部屋の表示・非表示を切り替えます"
           >
-            <span className={`w-2 h-2 rounded-full ${hideFullyBooked ? 'bg-emerald-400 animate-pulse' : 'bg-slate-600'}`} />
+            <span className={`w-2 h-2 rounded-full ${hideFullyBooked ? 'bg-emerald-600 dark:bg-emerald-400 animate-pulse' : 'bg-stone-300 dark:bg-slate-600'}`} />
             <span>{hideFullyBooked ? '満室を非表示中' : '満室も表示中'}</span>
           </button>
 
           {/* ソートセレクタ */}
-          <div className="flex items-center gap-1.5 bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-300">
+          <div className="flex items-center gap-1.5 bg-white border border-stone-200 dark:bg-slate-900 dark:border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-600 dark:text-slate-300">
             <ArrowUpDown className="w-3.5 h-3.5 text-slate-400" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-transparent border-none text-slate-200 focus:outline-none cursor-pointer"
+              className="bg-transparent border-none text-slate-700 dark:text-slate-200 focus:outline-none cursor-pointer"
             >
-              <option value="standard" className="bg-slate-900">スタジオ・部屋順（公式）</option>
-              <option value="availability" className="bg-slate-900">空き枠優先</option>
-              <option value="priceAsc" className="bg-slate-900">料金が安い順</option>
-              <option value="sizeDesc" className="bg-slate-900">部屋が広い順</option>
+              <option value="standard" className="bg-white dark:bg-slate-900">スタジオ・部屋順（公式）</option>
+              <option value="availability" className="bg-white dark:bg-slate-900">空き枠優先</option>
+              <option value="priceAsc" className="bg-white dark:bg-slate-900">料金が安い順</option>
+              <option value="sizeDesc" className="bg-white dark:bg-slate-900">部屋が広い順</option>
             </select>
           </div>
 
           {/* リスト vs タイムライン 切り替え */}
-          <div className="flex bg-slate-900 p-1 rounded-xl border border-slate-800">
+          <div className="flex bg-white p-1 rounded-xl border border-stone-200 dark:bg-slate-900 dark:border-slate-800">
             <button
               onClick={() => setViewMode('card')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 viewMode === 'card'
-                  ? 'bg-slate-800 text-white shadow-sm'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-stone-100 text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white'
+                  : 'text-slate-400 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
               }`}
             >
               <List className="w-3.5 h-3.5" />
@@ -415,8 +415,8 @@ export default function HomePage() {
               onClick={() => setViewMode('timeline')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 viewMode === 'timeline'
-                  ? 'bg-slate-800 text-white shadow-sm'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-stone-100 text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white'
+                  : 'text-slate-400 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
               }`}
             >
               <AlignLeft className="w-3.5 h-3.5" />
@@ -428,10 +428,10 @@ export default function HomePage() {
 
       {/* 検索結果コンテンツ */}
       {sortedRooms.length === 0 ? (
-        <div className="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-12 text-center">
-          <FilterX className="w-12 h-12 text-slate-600 mx-auto mb-3" />
-          <h3 className="text-lg font-bold text-slate-300">条件に合致するスタジオが見つかりませんでした</h3>
-          <p className="text-sm text-slate-500 mt-1 max-w-md mx-auto">
+        <div className="bg-white/70 border border-stone-200 dark:bg-slate-900/50 dark:border-slate-800/80 rounded-2xl p-12 text-center">
+          <FilterX className="w-12 h-12 text-stone-300 dark:text-slate-600 mx-auto mb-3" />
+          <h3 className="text-lg font-bold text-slate-700 dark:text-slate-300">条件に合致するスタジオが見つかりませんでした</h3>
+          <p className="text-sm text-slate-500 dark:text-slate-500 mt-1 max-w-md mx-auto">
             エリアの絞り込みを解除するか、機材条件（JC-120、Marshall等）の指定を緩めて再度お試しください。
           </p>
           <button
@@ -443,7 +443,7 @@ export default function HomePage() {
               requireMarshall: false,
               requireRecording: false,
             })}
-            className="mt-4 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition"
+            className="mt-4 px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 transition"
           >
             フィルター条件をリセット
           </button>

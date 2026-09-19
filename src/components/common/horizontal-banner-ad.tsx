@@ -6,14 +6,14 @@ import { BannerAdItem } from '@/config/banner-ads';
 const getBadgeClasses = (color: BannerAdItem['accentColor']) => {
   switch (color) {
     case 'cyan':
-      return 'bg-cyan-950/90 text-cyan-300 border-cyan-700/70';
+      return 'bg-cyan-50 text-cyan-700 border-cyan-300 dark:bg-cyan-950/90 dark:text-cyan-300 dark:border-cyan-700/70';
     case 'purple':
-      return 'bg-purple-950/90 text-purple-300 border-purple-800/70';
+      return 'bg-purple-50 text-purple-700 border-purple-300 dark:bg-purple-950/90 dark:text-purple-300 dark:border-purple-800/70';
     case 'emerald':
-      return 'bg-emerald-950/90 text-emerald-300 border-emerald-700/70';
+      return 'bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-950/90 dark:text-emerald-300 dark:border-emerald-700/70';
     case 'amber':
     default:
-      return 'bg-amber-950/90 text-amber-300 border-amber-800/70';
+      return 'bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950/90 dark:text-amber-300 dark:border-amber-800/70';
   }
 };
 
@@ -26,15 +26,15 @@ interface HorizontalBannerAdProps {
  *  どの広告を渡すかを決める。 */
 export const HorizontalBannerAd: React.FC<HorizontalBannerAdProps> = ({ ad }) => {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-      <div className="px-3.5 py-2 border-b border-slate-800/80 bg-slate-950/40 flex items-center gap-1.5 min-w-0">
+    <div className="bg-white border border-stone-200 dark:bg-slate-900 dark:border-slate-800 rounded-2xl overflow-hidden shadow-md dark:shadow-xl">
+      <div className="px-3.5 py-2 border-b border-stone-200 dark:border-slate-800/80 bg-stone-50 dark:bg-slate-950/40 flex items-center gap-1.5 min-w-0">
         <span className={`text-[10px] font-black px-2 py-0.5 rounded border shrink-0 ${getBadgeClasses(ad.accentColor)}`}>
           {ad.badge}
         </span>
-        <span className="text-[10px] font-semibold text-slate-300 truncate">{ad.advertiserName}</span>
+        <span className="text-[10px] font-semibold text-slate-600 dark:text-slate-300 truncate">{ad.advertiserName}</span>
       </div>
 
-      <div className="flex items-center justify-center bg-slate-950/30 p-2">
+      <div className="flex items-center justify-center bg-stone-100 dark:bg-slate-950/30 p-2">
         <a href={ad.clickUrl} target="_blank" rel="noopener noreferrer sponsored">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -48,7 +48,7 @@ export const HorizontalBannerAd: React.FC<HorizontalBannerAdProps> = ({ ad }) =>
       </div>
 
       <div className="px-3.5 py-1.5">
-        <span className="text-[10px] text-slate-500">広告</span>
+        <span className="text-[10px] text-slate-400 dark:text-slate-500">広告</span>
       </div>
 
       {ad.trackingPixel && (

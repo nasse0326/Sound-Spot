@@ -73,58 +73,58 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+    <div className="bg-white border border-stone-200 dark:bg-slate-900 dark:border-slate-800 rounded-2xl shadow-md dark:shadow-xl overflow-hidden">
       {/* 凡例 & 早朝トグル & 説明（上部パディング領域） */}
-      <div className="p-3 sm:p-5 pb-3 sm:pb-4 border-b border-slate-800">
+      <div className="p-3 sm:p-5 pb-3 sm:pb-4 border-b border-stone-200 dark:border-slate-800">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs">
             <div className="flex items-center gap-1.5">
-              <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-emerald-500/30 text-emerald-400 font-bold text-[10px] border border-emerald-500/50">
+              <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-emerald-100 text-emerald-700 font-bold text-[10px] border border-emerald-300 dark:bg-emerald-500/30 dark:text-emerald-400 dark:border-emerald-500/50">
                 ○
               </span>
-              <span className="text-slate-300 font-medium">空き枠 (予約可)</span>
+              <span className="text-slate-600 dark:text-slate-300 font-medium">空き枠 (予約可)</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-slate-800 text-slate-400 font-bold text-[10px] border border-slate-700">
+              <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-stone-100 text-slate-500 font-bold text-[10px] border border-stone-300 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700">
                 ×
               </span>
-              <span className="text-slate-400">予約済み</span>
+              <span className="text-slate-500 dark:text-slate-400">予約済み</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-slate-950 text-slate-500 text-[10px] border border-dashed border-slate-700">
+              <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-stone-50 text-slate-400 text-[10px] border border-dashed border-stone-300 dark:bg-slate-950 dark:text-slate-500 dark:border-slate-700">
                 —
               </span>
-              <span className="text-slate-400">データ未取得</span>
+              <span className="text-slate-500 dark:text-slate-400">データ未取得</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="inline-flex items-center justify-center px-1 h-4 rounded bg-amber-950/60 text-amber-300 text-[9px] font-bold border border-amber-800/50">
+              <span className="inline-flex items-center justify-center px-1 h-4 rounded bg-amber-50 text-amber-700 text-[9px] font-bold border border-amber-300 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800/50">
                 TEL
               </span>
-              <span className="text-slate-400">電話受付</span>
+              <span className="text-slate-500 dark:text-slate-400">電話受付</span>
             </div>
 
-            <div className="hidden sm:flex items-center gap-1.5 pl-2 border-l border-slate-700 text-slate-400">
-              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-800/60">
+            <div className="hidden sm:flex items-center gap-1.5 pl-2 border-l border-stone-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-cyan-50 text-cyan-700 border border-cyan-300 dark:bg-cyan-950/80 dark:text-cyan-300 dark:border-cyan-800/60">
                 :15
               </span>
-              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-purple-950/80 text-purple-300 border border-purple-800/60">
+              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-purple-50 text-purple-700 border border-purple-300 dark:bg-purple-950/80 dark:text-purple-300 dark:border-purple-800/60">
                 :30
               </span>
-              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-rose-950/80 text-rose-300 border border-rose-800/60">
+              <span className="px-1.5 py-0.2 rounded font-mono text-[9px] font-bold bg-rose-50 text-rose-700 border border-rose-300 dark:bg-rose-950/80 dark:text-rose-300 dark:border-rose-800/60">
                 :45
               </span>
               <span className="text-[11px]">時差枠 (毎時15/30/45分開始の部屋あり)</span>
             </div>
 
             {/* 強調ハイライト枠の凡例（緑＝完全一致、青＝前後30分枠） */}
-            <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-950/80 border border-emerald-500/80 text-emerald-300 text-xs font-bold shadow-sm shadow-emerald-950/40">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-50 border border-emerald-400 text-emerald-700 text-xs font-bold shadow-sm dark:bg-emerald-950/80 dark:border-emerald-500/80 dark:text-emerald-300 dark:shadow-emerald-950/40">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
               <span>完全一致 ({targetStartTime}〜{targetEndTime})</span>
             </div>
 
             {allowAdjacent30Min && (
-              <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-950/80 border border-blue-500/80 text-blue-300 text-xs font-bold shadow-sm shadow-blue-950/40">
-                <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse" />
+              <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-50 border border-blue-400 text-blue-700 text-xs font-bold shadow-sm dark:bg-blue-950/80 dark:border-blue-500/80 dark:text-blue-300 dark:shadow-blue-950/40">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-500 dark:bg-blue-400 animate-pulse" />
                 <span>前後30分枠 (調整候補)</span>
               </div>
             )}
@@ -137,19 +137,19 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
               onClick={() => onToggleEarlyMorning(!showEarlyMorning)}
               className={`flex items-center gap-1.5 px-2.5 py-1 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
                 showEarlyMorning
-                  ? 'bg-amber-950/80 text-amber-300 border-amber-600/70 shadow-sm shadow-amber-950/40'
-                  : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700'
+                  ? 'bg-amber-50 text-amber-700 border-amber-400 shadow-sm dark:bg-amber-950/80 dark:text-amber-300 dark:border-amber-600/70 dark:shadow-amber-950/40'
+                  : 'bg-white text-slate-500 border-stone-200 hover:text-slate-700 hover:border-stone-300 dark:bg-slate-950 dark:text-slate-400 dark:border-slate-800 dark:hover:text-slate-200 dark:hover:border-slate-700'
               }`}
             >
               <span>🌅 早朝(6〜9時):</span>
               <span className={`px-1.5 py-0.2 rounded text-[10px] font-bold ${
-                showEarlyMorning ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-400'
+                showEarlyMorning ? 'bg-amber-500 text-slate-950' : 'bg-stone-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400'
               }`}>
                 {showEarlyMorning ? 'ON' : 'OFF'}
               </span>
             </button>
 
-            <div className="text-[11px] text-slate-500 hidden xl:flex items-center gap-1">
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 hidden xl:flex items-center gap-1">
               <Info className="w-3.5 h-3.5" />
               <span>マスをクリックで時間指定 / 部屋名で詳細</span>
             </div>
@@ -169,14 +169,14 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
           className={`${showEarlyMorning ? 'min-w-[1000px] sm:min-w-[1300px]' : 'min-w-[860px] sm:min-w-[1100px]'} [--col-room-w:135px] sm:[--col-room-w:220px]`}
         >
           {/* 時間軸ヘッダー */}
-          <div 
-            className="grid text-xs font-semibold text-slate-400 pb-2 border-b border-slate-800 items-center sticky top-0 bg-slate-900 z-40"
+          <div
+            className="grid text-xs font-semibold text-slate-500 dark:text-slate-400 pb-2 border-b border-stone-200 dark:border-slate-800 items-center sticky top-0 bg-white dark:bg-slate-900 z-40"
             style={{
               gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 4}, minmax(0, 1fr))`
             }}
           >
             {/* 部屋一覧固定列（スマホ135px / PC220px、完全不透明bg-slate-900、z-50） */}
-            <div className="w-[135px] sm:w-[220px] px-2.5 sm:px-3 flex items-center gap-1.5 text-slate-300 sticky left-0 bg-slate-900 z-50 border-r border-slate-800 shrink-0">
+            <div className="w-[135px] sm:w-[220px] px-2.5 sm:px-3 flex items-center gap-1.5 text-slate-600 dark:text-slate-300 sticky left-0 bg-white dark:bg-slate-900 z-50 border-r border-stone-200 dark:border-slate-800 shrink-0">
               <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
               <span className="truncate">部屋一覧</span>
             </div>
@@ -188,14 +188,14 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                 <div
                   key={hour}
                   className={`col-span-4 text-left pl-1 font-mono text-[11px] border-l transition-colors ${
-                    isTargetHour 
-                      ? 'text-emerald-300 font-bold bg-emerald-950/30 border-emerald-600/60 rounded-t' 
-                      : 'text-slate-400 border-slate-800/80'
+                    isTargetHour
+                      ? 'text-emerald-700 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/30 border-emerald-400 dark:border-emerald-600/60 rounded-t'
+                      : 'text-slate-400 border-stone-200 dark:border-slate-800/80'
                   }`}
                 >
                   {hour}:00
                   {isTargetHour && (
-                    <span className="ml-1 text-[9px] text-emerald-400 font-normal">◀指定</span>
+                    <span className="ml-1 text-[9px] text-emerald-600 dark:text-emerald-400 font-normal">◀指定</span>
                   )}
                 </div>
               );
@@ -209,45 +209,45 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
               const isLong = group.studio.name.includes('ベースオントップ') || group.studio.name.includes('音楽館');
 
               return (
-                <div key={group.studio.id} className="rounded-xl border border-slate-800/80 bg-slate-950/40">
+                <div key={group.studio.id} className="rounded-xl border border-stone-200 dark:border-slate-800/80 bg-stone-50 dark:bg-slate-950/40">
                   {/* スタジオ見出しヘッダー行 */}
-                  <div 
-                    className="grid py-1.5 bg-slate-800 border-b border-slate-700/80 items-center text-xs rounded-t-xl"
+                  <div
+                    className="grid py-1.5 bg-stone-100 dark:bg-slate-800 border-b border-stone-200 dark:border-slate-700/80 items-center text-xs rounded-t-xl"
                     style={{
                       gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 4}, minmax(0, 1fr))`
                     }}
                   >
                     {/* スタジオ名 & 24hバッジ（完全不透明 bg-slate-800, z-30 で固定、左端密着） */}
-                    <div className="w-[135px] sm:w-[220px] col-span-1 flex items-center gap-1.5 px-2.5 sm:px-3 sticky left-0 bg-slate-800 z-30 border-r border-slate-700 min-w-0 shrink-0">
-                      <span 
-                        className="font-bold text-white truncate text-xs" 
+                    <div className="w-[135px] sm:w-[220px] col-span-1 flex items-center gap-1.5 px-2.5 sm:px-3 sticky left-0 bg-stone-100 dark:bg-slate-800 z-30 border-r border-stone-200 dark:border-slate-700 min-w-0 shrink-0">
+                      <span
+                        className="font-bold text-slate-900 dark:text-white truncate text-xs"
                         title={group.studio.name}
                       >
                         {group.studio.name}
                       </span>
                       {is24h ? (
-                        <span className="shrink-0 px-1 py-0.2 rounded text-[8px] font-black bg-cyan-950 text-cyan-300 border border-cyan-700/60" title={group.studio.businessHoursSummary || '24時間営業'}>
+                        <span className="shrink-0 px-1 py-0.2 rounded text-[8px] font-black bg-cyan-50 text-cyan-700 border border-cyan-300 dark:bg-cyan-950 dark:text-cyan-300 dark:border-cyan-700/60" title={group.studio.businessHoursSummary || '24時間営業'}>
                           24h
                         </span>
                       ) : isLong ? (
-                        <span className="shrink-0 px-1 py-0.2 rounded text-[8px] font-bold bg-indigo-950 text-indigo-300 border border-indigo-700/60" title={group.studio.businessHoursSummary || '長時間営業'}>
+                        <span className="shrink-0 px-1 py-0.2 rounded text-[8px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-300 dark:bg-indigo-950 dark:text-indigo-300 dark:border-indigo-700/60" title={group.studio.businessHoursSummary || '長時間営業'}>
                           深夜早朝
                         </span>
                       ) : null}
                     </div>
 
                     {/* スタジオ補足情報（駅・部屋数・公式予約リンク、横スクロール時にスタジオ名の裏へ潜り込む） */}
-                    <div 
-                      className="flex items-center justify-between text-[11px] text-slate-400 pl-3 pr-2 min-w-0"
+                    <div
+                      className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 pl-3 pr-2 min-w-0"
                       style={{ gridColumn: `2 / span ${HOURS.length * 4}` }}
                     >
                       <div className="flex items-center gap-2 truncate">
-                        <span className="flex items-center gap-1 text-slate-400 truncate">
-                          <MapPin className="w-3 h-3 text-slate-500 shrink-0" />
+                        <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400 truncate">
+                          <MapPin className="w-3 h-3 text-slate-400 dark:text-slate-500 shrink-0" />
                           {group.studio.nearestStation}
                         </span>
-                        <span className="text-slate-600">・</span>
-                        <span className="text-slate-400 shrink-0">{group.rooms.length}部屋</span>
+                        <span className="text-stone-300 dark:text-slate-600">・</span>
+                        <span className="text-slate-500 dark:text-slate-400 shrink-0">{group.rooms.length}部屋</span>
                       </div>
 
                       {group.studio.bookingUrl && (
@@ -255,7 +255,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                           href={group.studio.bookingUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-emerald-400 hover:text-emerald-300 hover:underline inline-flex items-center gap-1 text-[10px] font-semibold bg-emerald-950/60 hover:bg-emerald-950 px-2 py-0.5 rounded border border-emerald-700/50 shrink-0 transition ml-2"
+                          className="text-emerald-700 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 hover:underline inline-flex items-center gap-1 text-[10px] font-semibold bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/60 dark:hover:bg-emerald-950 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-700/50 shrink-0 transition ml-2"
                         >
                           <span>公式予約</span>
                           <ExternalLink className="w-2.5 h-2.5" />
@@ -265,7 +265,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                   </div>
 
                   {/* 各部屋の行 */}
-                  <div className="divide-y divide-slate-800/40">
+                  <div className="divide-y divide-stone-200 dark:divide-slate-800/40">
                     {group.rooms.map((room, rIdx) => {
                       // 部屋ごとの開始オフセット（0/15/30/45分）。1コマ=15分（4コマ/時間）の
                       // グリッド上で、オフセット分だけ先頭にスペーサーを入れて全体をずらすことで
@@ -314,9 +314,9 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                               style={{ gridColumn: `span ${spanCols} / span ${spanCols}` }}
                               className={`h-7 ${roundRight ? 'rounded-r' : 'rounded'} border flex items-center justify-center select-none ${
                                 isPhoneOnly
-                                  ? 'border-amber-900/40 bg-amber-950/20 text-amber-400/90 text-[9px] font-bold'
-                                  : 'border-dashed border-slate-800/80 bg-slate-950/40 text-slate-600 text-[10px]'
-                              } ${isExact ? 'ring-1 ring-slate-700' : ''}`}
+                                  ? 'border-amber-300 bg-amber-50 text-amber-600 dark:border-amber-900/40 dark:bg-amber-950/20 dark:text-amber-400/90 text-[9px] font-bold'
+                                  : 'border-dashed border-stone-300 bg-stone-50 text-stone-300 dark:border-slate-800/80 dark:bg-slate-950/40 dark:text-slate-600 text-[10px]'
+                              } ${isExact ? 'ring-1 ring-stone-300 dark:ring-slate-700' : ''}`}
                               title={
                                 isPhoneOnly
                                   ? `${room.studio.name} ${room.name} ${titleTimeRange} - 電話予約店舗（公式へお電話でお問い合わせください）`
@@ -340,34 +340,34 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             title={`${room.studio.name} ${room.name} ${titleTimeRange} (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
                             className={`h-7 ${roundRight ? 'rounded-r' : 'rounded'} text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
                               isExact && isAvailable
-                                ? 'bg-emerald-500/35 text-emerald-100 ring-2 ring-emerald-400 border border-emerald-300 shadow-lg shadow-emerald-500/30 z-0 scale-[1.03]'
+                                ? 'bg-emerald-200 text-emerald-900 ring-2 ring-emerald-500 border border-emerald-400 shadow-lg shadow-emerald-500/20 z-0 scale-[1.03] dark:bg-emerald-500/35 dark:text-emerald-100 dark:ring-emerald-400 dark:border-emerald-300 dark:shadow-emerald-500/30'
                                 : isAdjacent && isAvailable
-                                ? 'bg-blue-900/85 hover:bg-blue-800 text-blue-100 ring-2 ring-blue-400 border border-blue-300 shadow-lg shadow-blue-500/30 z-0 scale-[1.02]'
+                                ? 'bg-blue-200 hover:bg-blue-300 text-blue-900 ring-2 ring-blue-500 border border-blue-400 shadow-lg shadow-blue-500/20 z-0 scale-[1.02] dark:bg-blue-900/85 dark:hover:bg-blue-800 dark:text-blue-100 dark:ring-blue-400 dark:border-blue-300 dark:shadow-blue-500/30'
                                 : isAvailable
-                                ? 'bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-300 border border-emerald-500/40 hover:scale-[1.02]'
+                                ? 'bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 hover:scale-[1.02] dark:bg-emerald-500/20 dark:hover:bg-emerald-500/40 dark:text-emerald-300 dark:border-emerald-500/40'
                                 : isBooked
-                                ? 'bg-slate-850 hover:bg-slate-800 text-slate-600 border border-slate-800/50'
-                                : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40'
+                                ? 'bg-stone-100 hover:bg-stone-200 text-stone-400 border border-stone-200 dark:bg-slate-850 dark:hover:bg-slate-800 dark:text-slate-600 dark:border-slate-800/50'
+                                : 'bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-300 dark:bg-amber-500/20 dark:hover:bg-amber-500/30 dark:text-amber-300 dark:border-amber-500/40'
                             }`}
                           >
                             {isExact && isAvailable ? (
                               <>
-                                <span className={`tracking-tight ${spanCols <= 2 ? 'text-[8px]' : 'text-[9px]'} font-mono font-bold text-emerald-200`}>
+                                <span className={`tracking-tight ${spanCols <= 2 ? 'text-[8px]' : 'text-[9px]'} font-mono font-bold text-emerald-800 dark:text-emerald-200`}>
                                   {slotTimeStr}
                                 </span>
-                                <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
                               </>
                             ) : isAdjacent && isAvailable ? (
                               <>
-                                <span className={`tracking-tight ${spanCols <= 2 ? 'text-[8px]' : 'text-[9px]'} font-mono font-bold text-blue-200`}>
+                                <span className={`tracking-tight ${spanCols <= 2 ? 'text-[8px]' : 'text-[9px]'} font-mono font-bold text-blue-800 dark:text-blue-200`}>
                                   {slotTimeStr}
                                 </span>
-                                <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                                <span className="absolute top-0.5 right-1 w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 animate-pulse" />
                               </>
                             ) : isAvailable ? (
-                              <span className="text-[11px] font-bold text-emerald-400/90">○</span>
+                              <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400/90">○</span>
                             ) : (
-                              <span className="text-[10px] font-bold text-slate-500">×</span>
+                              <span className="text-[10px] font-bold text-stone-300 dark:text-slate-500">×</span>
                             )}
                           </button>
                         );
@@ -376,7 +376,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                       return (
                         <div
                           key={room.id}
-                          className={`grid py-1.5 items-center hover:bg-slate-850/40 transition-colors group ${
+                          className={`grid py-1.5 items-center hover:bg-stone-100 dark:hover:bg-slate-850/40 transition-colors group ${
                             isLastRoom ? 'rounded-b-xl' : ''
                           }`}
                           style={{
@@ -384,31 +384,31 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                           }}
                         >
                           {/* 部屋情報（完全不透明 bg-slate-900, z-20 で固定、左端密着、右側境界線でスロットを遮断） */}
-                          <div 
-                            className="w-[135px] sm:w-[220px] px-2 sm:px-3 cursor-pointer select-none sticky left-0 bg-slate-900 hover:bg-slate-850 z-20 flex items-center justify-between transition-colors border-r border-slate-800 min-w-0 shrink-0"
+                          <div
+                            className="w-[135px] sm:w-[220px] px-2 sm:px-3 cursor-pointer select-none sticky left-0 bg-white hover:bg-stone-100 dark:bg-slate-900 dark:hover:bg-slate-850 z-20 flex items-center justify-between transition-colors border-r border-stone-200 dark:border-slate-800 min-w-0 shrink-0"
                             onClick={() => onOpenDetail(room)}
                             title={`${room.name} (${room.sizeTatami}帖) - クリックで部屋詳細`}
                           >
                             <div className="flex items-center gap-1 sm:gap-1.5 min-w-0 truncate">
-                              <span className="font-semibold text-xs text-slate-200 group-hover:text-emerald-400 transition truncate">
+                              <span className="font-semibold text-xs text-slate-700 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition truncate">
                                 {room.name}
                               </span>
-                              <span className="text-[9px] sm:text-[10px] text-slate-400 bg-slate-800 px-1 py-0.2 rounded shrink-0">
+                              <span className="text-[9px] sm:text-[10px] text-slate-500 bg-stone-100 dark:text-slate-400 dark:bg-slate-800 px-1 py-0.2 rounded shrink-0">
                                 {room.sizeTatami}帖
                               </span>
                               {offsetMin !== 0 && (
                                 <span className={`px-1 py-0.2 rounded font-mono text-[8px] sm:text-[9px] font-bold shrink-0 ${
                                   offsetMin === 15
-                                    ? 'bg-cyan-950 text-cyan-300 border border-cyan-800/60'
+                                    ? 'bg-cyan-50 text-cyan-700 border border-cyan-300 dark:bg-cyan-950 dark:text-cyan-300 dark:border-cyan-800/60'
                                     : offsetMin === 45
-                                    ? 'bg-rose-950 text-rose-300 border border-rose-800/60'
-                                    : 'bg-purple-950 text-purple-300 border border-purple-800/60'
+                                    ? 'bg-rose-50 text-rose-700 border border-rose-300 dark:bg-rose-950 dark:text-rose-300 dark:border-rose-800/60'
+                                    : 'bg-purple-50 text-purple-700 border border-purple-300 dark:bg-purple-950 dark:text-purple-300 dark:border-purple-800/60'
                                 }`}>
                                   :{String(offsetMin).padStart(2, '0')}
                                 </span>
                               )}
                             </div>
-                            <span className="text-[9px] sm:text-[10px] text-slate-400 font-mono shrink-0 pl-1">
+                            <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 font-mono shrink-0 pl-1">
                               ¥{(bookingType === 'solo' ? room.pricePerHourSolo : room.pricePerHourRegular).toLocaleString()}
                             </span>
                           </div>
@@ -428,7 +428,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                               {/* 開始オフセットがある場合：先頭に該当分数（15分刻み）の空きスペーサー */}
                               {offsetCols > 0 && (
                                 <div
-                                  className="h-7 border-r border-dashed border-slate-800/40 bg-slate-950/20"
+                                  className="h-7 border-r border-dashed border-stone-200 bg-stone-50 dark:border-slate-800/40 dark:bg-slate-950/20"
                                   style={{ gridColumn: `span ${offsetCols} / span ${offsetCols}` }}
                                 />
                               )}
