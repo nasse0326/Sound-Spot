@@ -62,13 +62,32 @@ async function upsertAvailabilitySlots(label: string, rawDbSlots: any[]): Promis
   let failedCount = 0;
   let firstError: string | null = null;
 
+  // GitHub Actionsランナーの一部の外部ホスト（Supabase等）向けIPv6経路が不安定で
+  // "TypeError: fetch failed" のような一過性のネットワークエラーが起きることが
+  // 既知（.github/workflows/crawl-studios.ymlのNODE_OPTIONSコメント参照）。
+  // 以前はチャンクが1回失敗したら即座に諦めて次のチャンクへ進んでいたため、
+  // 一過性のエラーでもそのチャンク分のデータが恒久的に欠落し、10/11のGOODMAN
+  // AKIBA等で部屋ごとにバラバラの件数しか同期されない実害が出た。各チャンクに
+  // 最大3回・短い間隔でのリトライを入れ、一過性の失敗を吸収する。
   for (let i = 0; i < dbSlots.length; i += 200) {
     const chunk = dbSlots.slice(i, i + 200);
-    const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
-    if (error) {
+    let lastError: string | null = null;
+    let chunkSucceeded = false;
+    for (let attempt = 1; attempt <= 3 && !chunkSucceeded; attempt++) {
+      const { error } = await supabase.from('availability_slots').upsert(chunk, { onConflict: 'room_id,start_time,end_time' });
+      if (!error) {
+        chunkSucceeded = true;
+        break;
+      }
+      lastError = error.message;
+      if (attempt < 3) {
+        await new Promise((r) => setTimeout(r, attempt * 1000));
+      }
+    }
+    if (!chunkSucceeded) {
       failedCount += chunk.length;
-      firstError ??= error.message;
-      console.error(`  ❌ [Supabase Sync] ${label}チャンク同期エラー: ${error.message}`);
+      firstError ??= lastError;
+      console.error(`  ❌ [Supabase Sync] ${label}チャンク同期エラー（3回リトライ後も失敗）: ${lastError}`);
     }
   }
 

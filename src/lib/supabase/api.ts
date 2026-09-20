@@ -32,7 +32,13 @@ export async function getRoomsWithSlotsFromSupabase(targetDate: string, area: st
 
     // 2. 指定日のスロットを取得 (JST 00:00〜23:59:59 に相当する範囲)
     // PostgRESTは1回のクエリで最大1000行までしか返さないため、1日分のスロットが
-    // 1000件を超える場合（全店舗合計では容易に超える）に備えてrangeでページングする。
+    // 1000件を超える場合（全店舗合計では容易に超える。実測で1日6,500件超）に備えて
+    // rangeでページングする。
+    // ⚠️ .order()を指定せずに.range()でページングすると、PostgreSQLはORDER BY無しの
+    // 行順序を一切保証しないため、ページ間で同じ行が重複したり、逆に一部の行が
+    // どのページにも現れず欠落したりする（実際にGOODMAN AKIBA等で特定の部屋だけ
+    // 空き枠が「未取得」扱いになる形で発生した）。決定的な順序を強制するため
+    // 主キーのidで安定ソートしてからページングする。
     const startRange = `${targetDate}T00:00:00+09:00`;
     const endRange = `${targetDate}T23:59:59+09:00`;
 
@@ -45,6 +51,7 @@ export async function getRoomsWithSlotsFromSupabase(targetDate: string, area: st
         .select('*')
         .gte('start_time', startRange)
         .lte('start_time', endRange)
+        .order('id', { ascending: true })
         .range(from, from + pageSize - 1);
       if (error) {
         slotsError = error;
