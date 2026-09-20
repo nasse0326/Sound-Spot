@@ -16,7 +16,7 @@
   "group_booking_lead_months": 3,
   "solo_booking_rule": "前日のオープン（09:00）よりWEB/電話受付開始 (1名770円/h、2名1,210円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-20T16:26:25.469Z",
+  "scraped_at": "2026-09-20T23:26:02.359Z",
   "dates_available": [
     "2026-09-20",
     "2026-09-21",
@@ -6259,14 +6259,14 @@
           "id": "slot-gw-shibu-3st-slot-3st-2026-10-08-2000",
           "start_time": "2026-10-08T20:00:00+09:00",
           "end_time": "2026-10-08T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2750
         },
         {
           "id": "slot-gw-shibu-3st-slot-3st-2026-10-08-2100",
           "start_time": "2026-10-08T21:00:00+09:00",
           "end_time": "2026-10-08T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2750
         },
         {
@@ -13266,7 +13266,7 @@
           "id": "slot-gw-shibu-7st-slot-7st-2026-09-21-1600",
           "start_time": "2026-09-21T16:00:00+09:00",
           "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3300
         },
         {
@@ -13364,14 +13364,14 @@
           "id": "slot-gw-shibu-7st-slot-7st-2026-09-22-1600",
           "start_time": "2026-09-22T16:00:00+09:00",
           "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3300
         },
         {
           "id": "slot-gw-shibu-7st-slot-7st-2026-09-22-1700",
           "start_time": "2026-09-22T17:00:00+09:00",
           "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3300
         },
         {
