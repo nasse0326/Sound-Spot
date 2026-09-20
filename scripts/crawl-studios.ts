@@ -85,7 +85,12 @@ async function upsertAvailabilitySlots(label: string, rawDbSlots: any[]): Promis
 /**
  * 毎日固定スケジュール判定ガード
  * 曜日を問わず毎日 06:33, 11:48, 17:18, 21:33 (JST) の4回のみ巡回を許可します。
- * GitHub Actionsの実行遅延（5〜20分程度）を吸収するため、前後ウィンドウで判定します。
+ * GitHub Actionsのスケジュール実行はベストエフォートで、実行時刻が数十分〜数時間
+ * 遅延することが公式に説明されている（2026-09-20実測: 06:33発火予定のRunが
+ * 08:26 JSTまで約1時間53分遅延し、当時の±45分の許容幅を超えてガードに弾かれた結果、
+ * 巡回が一切実行されないまま20秒で終了 = Supabaseへの同期が長期間止まっていた実例あり）。
+ * そのため許容ウィンドウは前後大きめ（-30分/+180分）に取り、多少の重複は許容する
+ * （「巡回しすぎる」ことより「本来の定時巡回が丸ごと欠落する」ことの方が実害が大きいため）。
  */
 export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: boolean; reason?: string } {
   if (process.env.IGNORE_GUARDS === 'true') {
@@ -110,9 +115,11 @@ export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: 
   // 21:33 -> 1293
   const targets = [393, 708, 1038, 1293];
 
-  // 各目標時刻に対して [-15分, +45分] の許容ウィンドウ（GitHub Actions のキュー遅延を余裕を持って吸収）
+  // 各目標時刻に対して [-30分, +180分] の許容ウィンドウ（GitHub Actionsのベストエフォート
+  // スケジューリングによる数時間規模の遅延を吸収する。狭すぎるウィンドウは「本来の定時巡回が
+  // 遅延で丸ごとスキップされる」実害の方が大きいと判明したため、意図的に広めに取っている）
   const isMatched = targets.some(target => {
-    return currentMinutes >= target - 15 && currentMinutes <= target + 45;
+    return currentMinutes >= target - 30 && currentMinutes <= target + 180;
   });
 
   const jstTimeStr = `${String(jstDate.getHours()).padStart(2, '0')}:${String(jstDate.getMinutes()).padStart(2, '0')}`;
