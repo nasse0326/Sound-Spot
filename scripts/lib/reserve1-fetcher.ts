@@ -165,8 +165,11 @@ export async function fetchReserve1Days(
         // 高田馬場3号店等の新形式: "２階／２B（１０畳）00分～" や "５C／ツインドラム45分～" のように
         // 全角の「部屋番号+アルファベット」コードが部屋名の先頭付近に含まれる
         const codeMatch = firstCell.match(/([0-9０-９]+[A-Za-zＡ-Ｚａ-ｚ])/);
+        // ヨコハマセーラスタジオ等の新形式: "A-STUDIO"のように数字を含まないアルファベット
+        // 1文字+STUDIOの部屋名（stMatch/codeMatchいずれも数字前提のため拾えない）
+        const letterStudioMatch = firstCell.match(/^([A-Za-z])[-\s]?STUDIO\b/i);
 
-        if (!stMatch && !codeMatch && !firstCell.includes('SUBROOM')) continue;
+        if (!stMatch && !codeMatch && !letterStudioMatch && !firstCell.includes('SUBROOM')) continue;
 
         // 部屋ラベル自体に「30分～」「45分～」のように実際の開始分が明記されている店舗がある
         // （MUSIC MANのLst/Bst系、高田馬場3号店の一部部屋等）。この表記を見落として常に
@@ -180,7 +183,7 @@ export async function fetchReserve1Days(
         const slotCells = cells.slice(1, cells.length - 1);
         const slotAttrs = cellAttrs.slice(1, cellAttrs.length - 1);
 
-        const roomKey = stMatch ? stMatch[1] : (codeMatch ? toHalfWidth(codeMatch[1]).toUpperCase() : firstCell);
+        const roomKey = stMatch ? stMatch[1] : (codeMatch ? toHalfWidth(codeMatch[1]).toUpperCase() : (letterStudioMatch ? `${letterStudioMatch[1].toUpperCase()}-STUDIO` : firstCell));
 
         if (!roomMap[roomKey]) {
           roomMap[roomKey] = { rawName: firstCell, slots: [] };

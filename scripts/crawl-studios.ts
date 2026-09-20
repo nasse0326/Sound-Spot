@@ -1436,6 +1436,114 @@ export async function crawlStudioBaydKoenji(baseDate: Date, dayCount: number = C
   }
 }
 
+// -------------------------------------------------------------
+// ヨコハマ・セーラスタジオ (Reserve1.jp / ReserveMart, ゲスト閲覧可能インスタンス)
+// -------------------------------------------------------------
+const SAILA_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  features: string[];
+}> = {
+  'A-STUDIO': { name: 'Ast (16畳)', tatami: 16, capacity: 10, hourlyWeekend: 3300, hourlyWeekday: 3190, soloRate: 880, offset: 0, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl Export Series', 'NOTE::片面前面鏡、10人以上のバンドにも対応'] },
+  'B-STUDIO': { name: 'Bst (14畳)', tatami: 14, capacity: 8, hourlyWeekend: 3190, hourlyWeekday: 2970, soloRate: 880, offset: 0, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl Export Series', 'NOTE::ミキシングルーム隣接、レコーディング収録用'] },
+  'C-STUDIO': { name: 'Cst (11.5畳)', tatami: 12, capacity: 6, hourlyWeekend: 2970, hourlyWeekday: 2750, soloRate: 880, offset: 0, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl Export Series'] },
+  'D-STUDIO': { name: 'Dst (9.5畳)', tatami: 10, capacity: 4, hourlyWeekend: 2640, hourlyWeekday: 2420, soloRate: 880, offset: 0, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl Export Series', 'NOTE::天井が一番高く開放的な音、学生バンドに人気'] },
+};
+
+export async function crawlYokohamaSaila(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n🎸 [ヨコハマ・セーラスタジオ] スケジュール巡回を開始します (Node fetch / ' + dayCount + '日間)...');
+
+  try {
+    const fetchedRooms = await fetchReserve1Days({
+      name: 'ヨコハマ・セーラスタジオ',
+      loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=llcacvmsv&mn=1&gr=1',
+      openHour: 9,
+    }, baseDate, dayCount);
+
+    const targetDates: string[] = [];
+    for (let i = 0; i < dayCount; i++) {
+      targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+    }
+
+    const studioObject = {
+      id: 'yokohama-saila',
+      name: 'ヨコハマ・セーラスタジオ',
+      chain_name: 'ヨコハマセーラスタジオ',
+      area: '横浜',
+      prefecture: '神奈川県',
+      nearest_station: '横浜駅 徒歩圏内',
+      address: '神奈川県横浜市',
+      tel: '045-201-4988',
+      url: 'https://saila-s.jp/',
+      booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=llcacvmsv&mn=1&gr=1',
+      business_hours_summary: '9:00〜24:00',
+      is_24hours: false,
+      group_booking_rule: 'WEB（バンド会員）にて随時予約受付可能',
+      group_booking_lead_months: 2,
+      solo_booking_rule: '個人練習・24時以降の予約は電話のみ',
+      solo_booking_lead_hours: 24,
+      scraped_at: new Date().toISOString(),
+      dates_available: targetDates,
+      rooms: [] as any[],
+    };
+
+    Object.keys(SAILA_ROOM_SPECS).forEach((key) => {
+      const spec = SAILA_ROOM_SPECS[key];
+      const roomId = `saila-${key.toLowerCase().replace('-studio', '')}`;
+      const matchedRoom = fetchedRooms.find((r) => r.id === key);
+
+      const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+        id: `slot-${roomId}-${s.id || sIdx}`,
+        start_time: s.start_time,
+        end_time: s.end_time,
+        status: s.status,
+      }));
+
+      studioObject.rooms.push({
+        id: roomId,
+        studio_id: studioObject.id,
+        name: spec.name,
+        size_tatami: spec.tatami,
+        capacity: spec.capacity,
+        hourly_rate: spec.hourlyWeekend,
+        day_rate: spec.hourlyWeekday,
+        individual_rate: spec.soloRate,
+        features: spec.features,
+        start_time_offset: spec.offset,
+        slots: roomSlots,
+      });
+    });
+
+    const outPath = path.join(process.cwd(), 'src', 'data', 'yokohama-saila-real.json');
+    fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+    console.log(`✅ [ヨコハマ・セーラスタジオ] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+    if (supabase) {
+      console.log('⚡ [Supabase Sync] ヨコハマ・セーラスタジオの最新スロットをSupabaseに同期中...');
+      const dbSlots: any[] = [];
+      studioObject.rooms.forEach((r: any) => {
+        const roomUUID = toUUID(r.id);
+        (r.slots || []).forEach((s: any) => {
+          dbSlots.push({
+            room_id: roomUUID,
+            start_time: s.start_time,
+            end_time: s.end_time,
+            status: s.status.toLowerCase(),
+          });
+        });
+      });
+      await upsertAvailabilitySlots('ヨコハマ・セーラスタジオ', dbSlots);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [ヨコハマ・セーラスタジオ 取得エラー] ${err.message}`);
+  }
+}
+
 async function runNoahWithStealthSafeguards(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   if (process.env.GITHUB_ACTIONS === 'true') {
     console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
@@ -1537,6 +1645,7 @@ async function main() {
       crawlMusira(now, CRAWL_DAY_COUNT),
       crawlStudioBaydKoenji(now, CRAWL_DAY_COUNT),
       crawlStudioSunNishiFunabashi(now, CRAWL_DAY_COUNT),
+      crawlYokohamaSaila(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

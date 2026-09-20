@@ -4,7 +4,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -869,6 +869,61 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '047-425-5833',
     websiteUrl: 'https://www.studio-packs.jp/funabashi',
     features: ['24時間営業', '音楽スタジオ10部屋＋ダンススタジオ2部屋の大型施設', '学割対応'],
+  },
+
+  // -------------------------------------------------------------
+  // 横浜エリア (3店舗 / 計21部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'penta-yokohama',
+    name: 'スタジオペンタ横浜店',
+    chainName: 'STUDIO PENTA',
+    area: '横浜',
+    nearestStation: 'JR横浜駅西口 徒歩5分',
+    address: '神奈川県横浜市西区南幸2-8-9',
+    roomCount: 6,
+    syncType: 'phone',
+    syncLabel: '電話予約スタジオ',
+    systemName: '電話・LINE・店頭受付 (オンライン予約非対応)',
+    is24Hours: true,
+    businessHours: '24時間営業（基本営業時間10:00〜24:00）',
+    tel: '045-313-3399',
+    websiteUrl: 'https://studiopenta.jp/rehearsal/yokohama/',
+    features: ['駅徒歩5分', '全6スタジオ個性的な機材構成', 'エンジニア付き本格Rec対応'],
+  },
+  {
+    id: 'cloud9-yokohama-kitaguchi',
+    name: 'クラウドナインスタジオ 横浜北口店',
+    chainName: 'クラウドナインスタジオ',
+    area: '横浜',
+    nearestStation: '各線横浜駅 きた西口 徒歩5分',
+    address: '神奈川県横浜市',
+    roomCount: 11,
+    syncType: 'phone',
+    syncLabel: '電話予約スタジオ',
+    systemName: '会員制オンライン予約 (要店頭登録)',
+    is24Hours: false,
+    businessHours: '平日10:00〜 / 土日祝9:00〜（最大翌朝6:30まで）',
+    tel: '045-624-9499',
+    websiteUrl: 'https://www.cloud-9-studio.com/studio/yokohama_n.html',
+    features: ['駅徒歩5分', '音楽スタジオ11部屋＋ダンススタジオ1部屋', '00分/15分/30分開始混在'],
+  },
+  {
+    id: 'yokohama-saila',
+    name: 'ヨコハマ・セーラスタジオ',
+    chainName: 'ヨコハマセーラスタジオ',
+    area: '横浜',
+    nearestStation: '横浜駅 徒歩圏内',
+    address: '神奈川県横浜市',
+    roomCount: 4,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'Reserve1.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '9:00〜24:00',
+    tel: '045-201-4988',
+    websiteUrl: 'https://saila-s.jp/',
+    features: ['バンド会員はネット予約可', 'レコーディング対応(Bst)', '個人練習・深夜は電話予約のみ'],
   },
 ];
 

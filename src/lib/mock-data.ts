@@ -39,6 +39,11 @@ import {
   getStudioSunNishiFunabashiRealRooms, STUDIOSUN_NISHIFUNABASHI_STUDIO,
   getPacksFunabashiRooms, PACKS_FUNABASHI_STUDIO,
 } from './funabashi-converter';
+import {
+  getPentaYokohamaRooms, PENTA_YOKOHAMA_STUDIO,
+  getCloud9YokohamaKitaguchiRooms, CLOUD9_YOKOHAMA_KITAGUCHI_STUDIO,
+  getYokohamaSailaRealRooms, YOKOHAMA_SAILA_STUDIO,
+} from './yokohama-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -105,6 +110,11 @@ export const MOCK_STUDIOS: Studio[] = [
   // 船橋エリア (2店舗)
   STUDIOSUN_NISHIFUNABASHI_STUDIO,
   PACKS_FUNABASHI_STUDIO,
+
+  // 横浜エリア (3店舗)
+  PENTA_YOKOHAMA_STUDIO,
+  CLOUD9_YOKOHAMA_KITAGUCHI_STUDIO,
+  YOKOHAMA_SAILA_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -181,6 +191,12 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const studioSunNishiFunabashiRooms = getStudioSunNishiFunabashiRealRooms(dateStr);
   const packsFunabashiRooms = getPacksFunabashiRooms();
 
+  // 13. 横浜エリア (3店舗 / スタジオペンタ横浜店6室・クラウドナイン横浜北口店11室・
+  //     ヨコハマ・セーラスタジオ4室)
+  const pentaYokohamaRooms = getPentaYokohamaRooms();
+  const cloud9YokohamaKitaguchiRooms = getCloud9YokohamaKitaguchiRooms();
+  const yokohamaSailaRooms = getYokohamaSailaRealRooms(dateStr);
+
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...museumShinjukuRooms, ...hillvalleyRooms, ...vantageRooms, ...musicManRooms,
@@ -191,5 +207,6 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
     ...soundStudioDomRooms, ...pigStudioRooms, ...sonicBandStudioRooms,
     ...koyamaMainRooms, ...koyamaRRooms, ...musiraRooms, ...studioBaydKoenjiRooms,
     ...studioSunNishiFunabashiRooms, ...packsFunabashiRooms,
+    ...pentaYokohamaRooms, ...cloud9YokohamaKitaguchiRooms, ...yokohamaSailaRooms,
   ];
 }

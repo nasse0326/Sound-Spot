@@ -737,7 +737,7 @@ flowchart TD
 | `src/lib/bazooka-converter.ts` | データ変換 | BAZOOKA STUDIO（6部屋・自動巡回非対応の静的リスティング）のコンバーター |
 | `scripts/lib/id-utils.ts` | モジュール (単一の真実源) | **`rooms.id` / `availability_slots.room_id`共通の決定的UUID採番関数**（`toUUID(canonicalId)`）。`scripts/crawl-studios.ts`と`supabase/seed.sql`生成の両方がこの関数の入出力に一致させる前提 |
 | `scripts/crawl-ongakukan-shinjuku.ts` | スクリプト | **スタジオ音楽館 新宿西口店専用巡回スクリプト**（ajg.jp / 21日間全7部屋自動パース） |
-| `scripts/lib/reserve1-fetcher.ts` | モジュール | **Reserve1 ASP用超軽量スクレイパー**（Node fetch / GOODMAN、ゲートウェイ渋谷） |
+| `scripts/lib/reserve1-fetcher.ts` | モジュール | **Reserve1 ASP用超軽量スクレイパー**（Node fetch / GOODMAN、ゲートウェイ渋谷、Music man、ヨコハマ・セーラスタジオ等）。部屋名は"1st"系・全角コード系に加え、"A-STUDIO"のような数字を含まないアルファベット1文字+STUDIO形式（`letterStudioMatch`）にも対応 |
 | `scripts/lib/bot-fetcher.ts` | モジュール | **BASS ON TOP（スタジオル）用超軽量スクレイパー**（Node fetch / 秋葉原昭和通り口店） |
 | `scripts/lib/ongakukan-fetcher.ts` | モジュール | **スタジオ音楽館（ajg.jp）用超軽量スクレイパー**（Node fetch / アキバ店・新宿西口店両対応・全室21日間自動パース） |
 | `src/config/noah-master.ts` | 設定 (マスター・単一の真実源) | **ノア全7店舗・101部屋の部屋マスター**（`studioId`・畳数・開始オフセット・ログイン要否・実料金・実機材）。`scripts/lib/noah-fetcher.ts`（クロール）と `src/lib/noah-tokyo-converter.ts`（表示）の双方がここを読み込む |
@@ -769,6 +769,8 @@ flowchart TD
 | `src/data/studiosun-nishifunabashi-real.json` | データ | STUDIO SUN 西船橋店（webtoru.com自動同期）全7部屋・22日間の実データ |
 | `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する |
 | `src/lib/funabashi-converter.ts` | コンバーター | STUDIO SUN 西船橋店の実データJSONを `RoomWithSlots` 形式へ正規化変換、およびスタジオパックス船橋店（会員ログイン必須のため静的リスティング、10部屋）を定義するロジック |
+| `src/data/yokohama-saila-real.json` | データ | ヨコハマ・セーラスタジオ（Reserve1.jp自動同期）全4部屋・22日間の実データ |
+| `src/lib/yokohama-converter.ts` | コンバーター | ヨコハマ・セーラスタジオの実データJSONを正規化変換、およびスタジオペンタ横浜店（電話予約のみ静的リスティング、6部屋）・クラウドナインスタジオ横浜北口店（会員登録必須のため静的リスティング、11部屋）を定義するロジック |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |
