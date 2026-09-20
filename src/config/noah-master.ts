@@ -257,4 +257,27 @@ export const NOAH_ALL_STORES: NoahStoreMaster[] = [
       { id: 'noah-shimokitazawa-a6st', studioId: 3256, name: 'A6st (8帖)', tatami: 8, offset: 0, loginRequired: false, priceRegular: 2750, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'MARKBASS LITTLE MARK IV Standard 104 HR', drumSet: 'TAMA Starclassic Walnut/Birch LPO (HT10,LO12,FT16,BD22)' },
     ],
   },
+
+  // 11. 吉祥寺店 (11室) - scripts/scan-noah-branch.ts kichijoji (branch_id=12) で実データ確認済み。
+  // 料金は https://www.studionoah.jp/kichijoji/price/ の料金表、機材は各部屋の
+  // https://www.studionoah.jp/kichijoji/<room>/ ページ掲載の実機材（2026-09-20時点）。
+  // 同建物内の「ピアノ専用スタジオ」（P1st〜P10st, CONCERTst等）は別電話番号(0422-28-5661)の
+  // 別ブランドのため対象外。
+  {
+    key: 'kichijoji',
+    name: 'サウンドスタジオノア 吉祥寺店',
+    rooms: [
+      { id: 'noah-kichijoji-sst', studioId: 131, name: 'Sst (7帖)', tatami: 7, offset: 30, loginRequired: false, priceRegular: 2420, priceDaytime: 1650, priceSolo: 770, guitarAmps: [JCM900], bassAmp: 'MARKBASS Little Mark 58R + Standard 104HF', drumSet: 'Pearl MCX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-a1st', studioId: 132, name: 'A1st (9帖)', tatami: 9, offset: 0, loginRequired: false, priceRegular: 2640, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg Venture V3 + SVT810E', drumSet: 'Pearl SMX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-a2st', studioId: 133, name: 'A2st (9帖)', tatami: 9, offset: 0, loginRequired: false, priceRegular: 2640, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT3pro + SVT810E', drumSet: 'Pearl BRX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-a3st', studioId: 134, name: 'A3st (9帖)', tatami: 9, offset: 30, loginRequired: false, priceRegular: 2640, priceDaytime: 1760, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg B2RE + SVT810E', drumSet: 'Pearl BRX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-g1st', studioId: 135, name: 'G1st (11帖)', tatami: 11, offset: 0, loginRequired: false, priceRegular: 2860, priceDaytime: 1870, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT3pro + SVT810E', drumSet: 'Pearl MCX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-g2st', studioId: 136, name: 'G2st (11帖)', tatami: 11, offset: 30, loginRequired: false, priceRegular: 2860, priceDaytime: 1870, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro + SVT810E', drumSet: 'Pearl MCX series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-g3st', studioId: 137, name: 'G3st (13帖)', tatami: 13, offset: 0, loginRequired: false, priceRegular: 2970, priceDaytime: 2090, priceSolo: 770, guitarAmps: [JCM900, JC120], bassAmp: 'Ampeg SVT-3pro + SVT810E', drumSet: 'SAKAE (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-bst', studioId: 138, name: 'Bst (15帖)', tatami: 15, offset: 0, loginRequired: true, priceRegular: 3300, priceDaytime: 2420, priceSolo: 880, guitarAmps: [JCM900, 'Fender Twin Reverb 65"', JC120], bassAmp: 'Ampeg SVT-3pro', drumSet: 'Pearl reference series (12"HT+13"LT+16"FT+22"BD)' },
+      { id: 'noah-kichijoji-gsstsub', studioId: 139, name: 'GSst+Sub (11+4.5帖)', tatami: 16, offset: 30, loginRequired: false, priceRegular: 3300, priceDaytime: 2310, priceSolo: 880, guitarAmps: ['Marshall JCM2000 DSL100+1960A', JC120], bassAmp: 'Ampeg SVT-3pro + SVT810E', drumSet: 'YAMAHA Recording Custom (10"+12"+16"+22")' },
+      { id: 'noah-kichijoji-est', studioId: 140, name: 'Est (18帖)', tatami: 18, offset: 0, loginRequired: true, priceRegular: 3740, priceDaytime: 2860, priceSolo: 990, guitarAmps: ['Marshall JCM2000 DSL100+1960A', 'Fender Twin Reverb 65"', JC120], bassAmp: 'Ampeg SVT-450H', drumSet: "DW Collector's Maple Set (12x9,13x10,16x14,22x18)" },
+      { id: 'noah-kichijoji-vobooth', studioId: 141, name: 'Vo.Booth (5帖)', tatami: 5, offset: 0, loginRequired: false, priceRegular: 770, priceDaytime: 770, priceSolo: 770, guitarAmps: [], bassAmp: '', drumSet: '' },
+    ],
+  },
 ];

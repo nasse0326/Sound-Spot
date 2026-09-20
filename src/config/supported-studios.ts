@@ -2,7 +2,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -583,5 +583,60 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-3414-9833',
     websiteUrl: 'http://gourdisland-music.jp/shimokitazawa/',
     features: ['駅徒歩2分', '学割・早割あり', '9帖/12帖の6部屋'],
+  },
+
+  // -------------------------------------------------------------
+  // 吉祥寺エリア (3店舗 / 計32部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'noah-kichijoji',
+    name: 'サウンドスタジオノア 吉祥寺店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '吉祥寺',
+    nearestStation: 'JR中央線・京王井の頭線 吉祥寺駅 徒歩5分',
+    address: '東京都武蔵野市吉祥寺東町1-4-27-B1F',
+    roomCount: 11,
+    syncType: 'web_api',
+    syncLabel: 'Web空き状況',
+    systemName: 'ノア公式API連携',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '0422-23-1741',
+    websiteUrl: 'https://www.studionoah.jp/kichijoji/',
+    features: ['24時間営業', '駅徒歩5分', 'セルフレコ対応(GSst+Sub)', '00分/30分開始混在'],
+  },
+  {
+    id: 'rinkydink-kichijoji-ores',
+    name: 'リンキィディンク 吉祥寺スタジオORES',
+    chainName: 'Rinky Dink Studio',
+    area: '吉祥寺',
+    nearestStation: 'JR中央線・京王井の頭線 吉祥寺駅 北口 徒歩2分',
+    address: '東京都武蔵野市吉祥寺本町1-7-8 第一マーブルビル3F',
+    roomCount: 7,
+    syncType: 'phone',
+    syncLabel: '電話予約スタジオ',
+    systemName: '会員制オンライン予約 (要事前登録) / 電話受付',
+    is24Hours: false,
+    businessHours: '平日10:00〜23:00・土日祝9:00〜23:00',
+    tel: '0422-20-2355',
+    websiteUrl: 'https://rinky.info/studio/ores/',
+    features: ['駅徒歩2分', 'ビッグバンド対応(Sst/6st)', 'ハイエンド機材(TAMA/Ampeg)'],
+  },
+  {
+    id: 'penta-kichijoji',
+    name: 'スタジオペンタ 吉祥寺店',
+    chainName: 'STUDIO PENTA',
+    area: '吉祥寺',
+    nearestStation: 'JR中央線・京王井の頭線 吉祥寺駅 公園口 徒歩30秒',
+    address: '東京都武蔵野市吉祥寺南町1-1-4',
+    roomCount: 14,
+    syncType: 'phone',
+    syncLabel: '電話予約スタジオ',
+    systemName: 'ワンタップ電話受付 (tel:) / LINE予約',
+    is24Hours: true,
+    businessHours: '24時間営業',
+    tel: '0422-42-0765',
+    websiteUrl: 'https://studiopenta.jp/rehearsal/south/',
+    features: ['駅徒歩30秒', '全14スタジオ', 'LINE予約対応', '個人練習は平日1週間前から予約可'],
   },
 ];

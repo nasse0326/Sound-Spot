@@ -189,6 +189,24 @@ export const NOAH_STUDIOS_META: Record<string, Studio> = {
     soloBookingRule: '前日21:00よりWEB/電話にて受付開始',
     soloBookingLeadHours: 27,
   },
+  kichijoji: {
+    id: 'noah-kichijoji',
+    name: 'サウンドスタジオノア 吉祥寺店',
+    chainName: 'SOUND STUDIO NOAH',
+    area: '吉祥寺',
+    prefecture: '東京都',
+    nearestStation: 'JR中央線・京王井の頭線 吉祥寺駅 徒歩5分',
+    address: '東京都武蔵野市吉祥寺東町1-4-27-B1F',
+    tel: '0422-23-1741',
+    bookingUrl: 'https://www.studionoah.jp/kichijoji/',
+    websiteUrl: 'https://www.studionoah.jp/kichijoji/',
+    businessHoursSummary: '24時間営業',
+    is24Hours: true,
+    groupBookingRule: '4ヶ月前よりWEB予約可能',
+    groupBookingLeadMonths: 4,
+    soloBookingRule: '前日21:30よりWEB/電話にて受付開始（バンドスタジオは2名様まで）',
+    soloBookingLeadHours: 27,
+  },
 };
 
 /**

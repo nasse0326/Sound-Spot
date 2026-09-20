@@ -229,7 +229,7 @@ export default function HomePage() {
   }, [filteredRooms, sortBy, filters.startTime, filters.endTime, filters.bookingType, filters.allowAdjacent30Min]);
 
   // エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）
-  const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢'];
+  const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺'];
 
   // スタジオごとの部屋総数（現在の絞り込み条件に左右されないよう、日付以外の
   // フィルタを適用する前のallRoomsから算出。サイズ/機材/満室非表示等の絞り込みで

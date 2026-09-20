@@ -18,6 +18,8 @@ import {
   getGourdislandWestRealRooms, GOURDISLAND_WEST_STUDIO,
   getGourdislandSouthRealRooms, GOURDISLAND_SOUTH_STUDIO,
 } from './shimokitazawa-studiol-converter';
+import { getRinkyDinkKichijojiRooms, RINKYDINK_KICHIJOJI_STUDIO } from './rinkydink-converter';
+import { getPentaKichijojiRooms, PENTA_KICHIJOJI_STUDIO } from './penta-kichijoji-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -62,6 +64,11 @@ export const MOCK_STUDIOS: Studio[] = [
   STANDBY_STUDIO,
   GOURDISLAND_WEST_STUDIO,
   GOURDISLAND_SOUTH_STUDIO,
+
+  // 吉祥寺エリア (3店舗)
+  NOAH_STUDIOS_META['kichijoji'],
+  RINKYDINK_KICHIJOJI_STUDIO,
+  PENTA_KICHIJOJI_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -87,7 +94,8 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   // ※NOAH秋葉原店もこちらから供給される（akihabara-real.jsonには含まれない）
   const noahRooms = getNoahAllTokyoRealRooms(dateStr);
 
-  // 5. ペンタ店舗群 (渋谷シティ 7室, 渋谷ジューク 7室, 渋谷ムーン 6室, 新宿店 19室: 計39部屋)
+  // 5. ペンタ店舗群 (渋谷シティ 7室, 渋谷ジューク 7室, 新宿店 19室: 計33部屋。
+  //    渋谷ムーンサイド店は2025年4月29日閉店のため対象外)
   const pentaRooms = getPentaRealRooms(dateStr);
 
   // 6. 音楽館 新宿西口店 (1店舗 / 7部屋)
@@ -112,10 +120,16 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const gourdislandWestRooms = getGourdislandWestRealRooms(dateStr);
   const gourdislandSouthRooms = getGourdislandSouthRealRooms(dateStr);
 
+  // 10. 吉祥寺エリア (2店舗 / リンキィディンクORES 7室・ペンタ吉祥寺店 14室。
+  //     ノアは上記noahRoomsに含む。両店ともゲスト閲覧不可/電話予約のため静的リスティング)
+  const rinkyDinkKichijojiRooms = getRinkyDinkKichijojiRooms();
+  const pentaKichijojiRooms = getPentaKichijojiRooms();
+
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...gatewayBabaRooms, ...ongakukanBabaRooms, ...botBabaRooms, ...bazookaRooms,
     ...botIkebukuroRooms, ...vivoRooms, ...gatewayIkebukuroRooms,
     ...andysRooms, ...standbyRooms, ...gourdislandWestRooms, ...gourdislandSouthRooms,
+    ...rinkyDinkKichijojiRooms, ...pentaKichijojiRooms,
   ];
 }
