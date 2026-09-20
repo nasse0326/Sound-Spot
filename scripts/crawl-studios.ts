@@ -16,7 +16,7 @@ import path from 'path';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
-import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays } from './lib/bot-fetcher';
+import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays } from './lib/bot-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -1037,6 +1037,217 @@ export async function crawlGourdislandSouth(baseDate: Date, dayCount: number = C
   }
 }
 
+export async function crawlMuseumShinjuku(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n--- スタジオミュージアム新宿店 (studi-ol.com) ---');
+  try {
+    const rooms = await fetchMuseumShinjukuDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/museum-shinjuku-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [スタジオミュージアム新宿店] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] スタジオミュージアム新宿店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('スタジオミュージアム新宿店', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [スタジオミュージアム新宿店 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlHillvalley(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n--- ヒルバレースタジオ (studi-ol.com) ---');
+  try {
+    const rooms = await fetchHillvalleyDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/hillvalley-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [ヒルバレースタジオ] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] ヒルバレースタジオのスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('ヒルバレースタジオ', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [ヒルバレースタジオ 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlVantage(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n--- Sound Studio Vantage (studi-ol.com) ---');
+  try {
+    const rooms = await fetchVantageDays(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/vantage-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [Sound Studio Vantage] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] Sound Studio Vantageのスロットを Supabase に同期中...');
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('Sound Studio Vantage', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [Sound Studio Vantage 取得エラー] ${err.message}`);
+  }
+}
+
+// -------------------------------------------------------------
+// Music man サウンドスタジオ (Reserve1.jp / ReserveMart, ゲスト閲覧可能インスタンス)
+// -------------------------------------------------------------
+const MUSIC_MAN_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  floor: string;
+  features: string[];
+}> = {
+  'Lst': { name: 'Lst (11畳)', tatami: 11, capacity: 6, hourlyWeekend: 2950, hourlyWeekday: 1970, soloRate: 690, offset: 30, floor: '2F', features: ['Marshall JCM2000 DSL100 + 1960A', 'Roland JC-120', 'BASS::HARTKE 3500A + 4.5XL', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  '3-Lst': { name: '3Lst (11畳)', tatami: 11, capacity: 6, hourlyWeekend: 2950, hourlyWeekday: 1970, soloRate: 690, offset: 30, floor: '3F', features: ['Marshall JCM2000 DSL100 + 1960A', 'Roland JC-120', 'BASS::HARTKE 3500A + 4.5XL', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  'Bst': { name: 'Bst (7畳)', tatami: 7, capacity: 4, hourlyWeekend: 2350, hourlyWeekday: 1580, soloRate: 690, offset: 30, floor: '2F', features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::HARTKE 2500A 410TP', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  '3-Bst': { name: '3Bst (7畳)', tatami: 7, capacity: 4, hourlyWeekend: 2350, hourlyWeekday: 1580, soloRate: 690, offset: 30, floor: '3F', features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::HARTKE 2500A 410TP', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  'Gst': { name: 'Gst (13畳)', tatami: 13, capacity: 7, hourlyWeekend: 3200, hourlyWeekday: 2190, soloRate: 690, offset: 0, floor: '2F', features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT350H + SVT810E', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  '3-Gst': { name: '3Gst (13畳)', tatami: 13, capacity: 7, hourlyWeekend: 3200, hourlyWeekday: 2190, soloRate: 690, offset: 0, floor: '3F', features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg B2R + SVT810E', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)', 'NOTE::Fender Rhodes常設（レンタル1h¥440）'] },
+  'Ast': { name: 'Ast (10畳)', tatami: 10, capacity: 5, hourlyWeekend: 2850, hourlyWeekday: 1860, soloRate: 690, offset: 0, floor: '2F', features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::HARTKE 3500A + 4.5XL', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  '3-Ast': { name: '3Ast (10畳)', tatami: 10, capacity: 5, hourlyWeekend: 2850, hourlyWeekday: 1860, soloRate: 690, offset: 0, floor: '3F', features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::HARTKE 3500A + 4.5XL', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)'] },
+  'Cst': { name: 'Cst (11畳)', tatami: 11, capacity: 6, hourlyWeekend: 2950, hourlyWeekday: 1970, soloRate: 690, offset: 0, floor: '2F', features: ['Marshall JCM2000 DSL100 + 1960A', 'Roland JC-120', 'BASS::HARTKE 3500A + 4.5XL', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)', 'NOTE::エレピ常設（レンタル1h¥220）'] },
+  '3-Cst': { name: '3Cst (11畳)', tatami: 11, capacity: 6, hourlyWeekend: 2950, hourlyWeekday: 1970, soloRate: 690, offset: 0, floor: '3F', features: ['Marshall JCM2000 DSL100 + 1960A', 'Roland JC-120', 'BASS::HARTKE 3500A + 4.5XL', 'DRUM::PEARL Masters(22/16/13/12) + Zildjian(14/16/18/20)', 'NOTE::エレピ常設（レンタル1h¥220）'] },
+};
+
+export async function crawlMusicMan(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n🎸 [Music man サウンドスタジオ] スケジュール巡回を開始します (Node fetch / ' + dayCount + '日間)...');
+
+  try {
+    const fetchedRooms = await fetchReserve1Days({
+      name: 'Music man サウンドスタジオ',
+      loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=alcacsdol&mn=1&gr=1',
+      openHour: 9,
+    }, baseDate, dayCount);
+
+    const studioObject = {
+      id: 'music-man-shinjuku',
+      name: 'Music man サウンドスタジオ',
+      chain_name: 'Music man',
+      area: '新宿',
+      prefecture: '東京都',
+      nearest_station: 'JR新宿駅 西口 徒歩4分',
+      address: '東京都新宿区西新宿7-10-13 ガイアビル2F・3F',
+      tel: '03-3367-2727',
+      url: 'https://www.music-man.jp/index.php',
+      booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=alcacsdol&mn=1&gr=1',
+      business_hours_summary: '9:30〜24:00（予約により深夜営業あり）',
+      is_24hours: false,
+      group_booking_rule: '前日21:00までのWEB/電話予約を推奨（オンライン会員登録要）',
+      group_booking_lead_months: 2,
+      solo_booking_rule: '前日21:00よりWEB/電話にて受付開始（全室一律1名690円/h）',
+      solo_booking_lead_hours: 27,
+      rooms: [] as any[],
+    };
+
+    Object.keys(MUSIC_MAN_ROOM_SPECS).forEach((key) => {
+      const spec = MUSIC_MAN_ROOM_SPECS[key];
+      const roomId = `musicman-${key.toLowerCase()}`;
+      const matchedRoom = fetchedRooms.find((r) => r.id === key);
+
+      const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+        id: `slot-${roomId}-${s.id || sIdx}`,
+        start_time: s.start_time,
+        end_time: s.end_time,
+        status: s.status,
+      }));
+
+      studioObject.rooms.push({
+        id: roomId,
+        studio_id: studioObject.id,
+        name: spec.name,
+        floor: spec.floor,
+        size_tatami: spec.tatami,
+        capacity: spec.capacity,
+        hourly_rate: spec.hourlyWeekend,
+        day_rate: spec.hourlyWeekday,
+        individual_rate: spec.soloRate,
+        features: spec.features,
+        start_time_offset: spec.offset,
+        slots: roomSlots,
+      });
+    });
+
+    const outPath = path.join(process.cwd(), 'src', 'data', 'music-man-real.json');
+    fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+    console.log(`✅ [Music man] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+    if (supabase) {
+      console.log('⚡ [Supabase Sync] Music manの最新スロットをSupabaseに同期中...');
+      const dbSlots: any[] = [];
+      studioObject.rooms.forEach((r: any) => {
+        const roomUUID = toUUID(r.id);
+        (r.slots || []).forEach((s: any) => {
+          dbSlots.push({
+            room_id: roomUUID,
+            start_time: s.start_time,
+            end_time: s.end_time,
+            status: s.status.toLowerCase(),
+          });
+        });
+      });
+      await upsertAvailabilitySlots('Music man', dbSlots);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [Music man 取得エラー] ${err.message}`);
+  }
+}
+
 async function runNoahWithStealthSafeguards(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   if (process.env.GITHUB_ACTIONS === 'true') {
     console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
@@ -1126,6 +1337,10 @@ async function main() {
       crawlStandby(now, CRAWL_DAY_COUNT),
       crawlGourdislandWest(now, CRAWL_DAY_COUNT),
       crawlGourdislandSouth(now, CRAWL_DAY_COUNT),
+      crawlMuseumShinjuku(now, CRAWL_DAY_COUNT),
+      crawlHillvalley(now, CRAWL_DAY_COUNT),
+      crawlVantage(now, CRAWL_DAY_COUNT),
+      crawlMusicMan(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

@@ -268,11 +268,15 @@ flowchart TD
   - スタジオペンタ 渋谷シティサイド店 (7室 / 電話予約)
   - スタジオペンタ 渋谷ジュークハウス店 (7室 / 電話予約)
   - スタジオペンタ 渋谷ムーンサイド店 (6室 / 電話予約)
-- **新宿エリア (4店舗 / 計54部屋)**:
+- **新宿エリア (8店舗 / 計79部屋・2026-09-20に4店舗追加)**:
   - ノア新宿店 (21室 / Web自動同期)
   - STUDIO NODE 新宿店 (7室 / Web自動同期・00分/30分開始混在)
   - スタジオペンタ 新宿店 (19室 / 土日祝リアルタイム空き状況Web同期・平日電話予約)
   - スタジオ音楽館 新宿西口店 (7室 / ajg.jp Web自動同期)
+  - スタジオミュージアム新宿店 (9室 / studi-ol.com自動同期・shop 637・1F00分/2F30分開始混在)
+  - ヒルバレースタジオ (3室 / studi-ol.com自動同期・shop 515)
+  - Sound Studio Vantage (3室 / studi-ol.com自動同期・shop 817)
+  - Music man サウンドスタジオ (10室 / Reserve1自動同期・ゲスト閲覧可能インスタンス・5タイプ×2フロア、同名部屋はフロア番号プレフィックスで区別)
 - **秋葉原エリア (5店舗 / 計51部屋)**:
   - ノア秋葉原店 (14室 / Web自動同期)
   - ノア御茶ノ水店 (11室 / Web自動同期)
@@ -752,7 +756,11 @@ flowchart TD
 | `src/lib/gateway-converter.ts` | コンバーター | ゲートウェイ渋谷実データJSONをアプリ共通の `RoomWithSlots` 形式へ正規化変換するロジック |
 | `src/data/noah-tokyo-real.json` | データ | ノア都内全7店舗（渋谷4店、新宿1店、秋葉原2店）全101部屋・21日間の実データ |
 | `src/lib/noah-tokyo-converter.ts` | コンバーター | ノア全7店舗（秋葉原店含む）の実データをアプリ共通の `RoomWithSlots` 形式に正規化変換するロジック。部屋マスター・実料金・実機材は `src/config/noah-master.ts` を参照 |
-| `src/lib/mock-data.ts` | データソース | 全スタジオの統合データハブ。ダミーデータを全廃し、都内22店舗（渋谷・新宿・秋葉原・高田馬場）の実データ・正規スペックのみを配信 |
+| `src/lib/mock-data.ts` | データソース | 全スタジオの統合データハブ。ダミーデータを全廃し、都内実店舗の実データ・正規スペックのみを配信 |
+| `src/data/museum-shinjuku-real.json` / `hillvalley-real.json` / `vantage-real.json` | データ | 新宿エリア追加分3店舗（studi-ol.com自動同期）の全部屋・22日間の実データ |
+| `src/lib/shinjuku-studiol-converter.ts` | コンバーター | スタジオミュージアム新宿店・ヒルバレースタジオ・Sound Studio Vantageの実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック（下北沢のstudi-ol系コンバータと同じBASS::/DRUM::プレフィックス方式） |
+| `src/data/music-man-real.json` | データ | Music man サウンドスタジオ（Reserve1自動同期）全10部屋・22日間の実データ |
+| `src/lib/music-man-converter.ts` | コンバーター | Music manの実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

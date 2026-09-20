@@ -297,3 +297,60 @@ export async function fetchGourdislandSouthDays(
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/591', GOURDISLAND_SOUTH_ROOMS, 'ガードアイランドスタジオ下北沢南口店', baseDate, dayCount);
 }
+
+// 以下、新宿エリア追加分（2026-09-20）。BASS ON TOP系列ではないが、いずれも
+// 同じstudi-ol.com ASPを使っておりログイン不要でカレンダーが閲覧できることを
+// ブラウザで実地確認済み。
+
+// room_idはstudi-ol.com/shop/637のページソース内<li room-id="...">から実値を確認済み。
+// 1F（B-1/C-1/C-2/F-1）は00分スタート、2F（A/B-2/C-3/C-4/F-2）は30分スタート。
+export const MUSEUM_SHINJUKU_ROOMS: BotRoomSpec[] = [
+  { id: 'museum-a', roomIdNum: 2619, name: 'A (9畳)', size_sqm: 15, capacity: 4, hourly_rate: 2400, day_rate: 1550, individual_rate: 600, start_time_offset: 30, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::Markbass Little Mark 250 + TRACE 2103H+1153', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-b1', roomIdNum: 2624, name: 'B-1 (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2500, day_rate: 1650, individual_rate: 600, start_time_offset: 0, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::Hartke HA2500 + HARTKE 410XL', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-b2', roomIdNum: 2620, name: 'B-2 (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2500, day_rate: 1650, individual_rate: 600, start_time_offset: 30, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::Hartke HA2500 + HARTKE 410XL', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-c1', roomIdNum: 2625, name: 'C-1 (11畳)', size_sqm: 18, capacity: 5, hourly_rate: 2600, day_rate: 1750, individual_rate: 600, start_time_offset: 0, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::EBS REIDMAR250 + AMPEG BSE410H+BSE115T', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-c2', roomIdNum: 2626, name: 'C-2 (11畳)', size_sqm: 18, capacity: 5, hourly_rate: 2600, day_rate: 1750, individual_rate: 600, start_time_offset: 0, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::EBS REIDMAR250 + AMPEG BSE410H+BSE115T', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-c3', roomIdNum: 2621, name: 'C-3 (11畳)', size_sqm: 18, capacity: 5, hourly_rate: 2600, day_rate: 1750, individual_rate: 600, start_time_offset: 30, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::EBS REIDMAR250 + AMPEG BSE410H+BSE115T', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-c4', roomIdNum: 2622, name: 'C-4 (11畳)', size_sqm: 18, capacity: 5, hourly_rate: 2600, day_rate: 1750, individual_rate: 600, start_time_offset: 30, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::EBS REIDMAR250 + AMPEG BSE410H+BSE115T', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-f1', roomIdNum: 2627, name: 'F-1 (12畳)', size_sqm: 20, capacity: 6, hourly_rate: 2700, day_rate: 1850, individual_rate: 600, start_time_offset: 0, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::ORANGE OB1-300 + AMPEG BSE410H+BSE115T', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+  { id: 'museum-f2', roomIdNum: 2623, name: 'F-2 (12畳)', size_sqm: 20, capacity: 6, hourly_rate: 2700, day_rate: 1850, individual_rate: 600, start_time_offset: 30, features: ['Marshall JCM900 4100+1960A', 'Fender TWIN REVERB', 'Roland JC-120', 'BASS::ORANGE OB1-300 + AMPEG BSE410H+BSE115T', 'DRUM::PEARL 3TOM+ZILDJIAN+PAISTE'] },
+];
+
+export async function fetchMuseumShinjukuDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/637', MUSEUM_SHINJUKU_ROOMS, 'スタジオミュージアム新宿店', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/515のページソース内<li room-id="...">から実値を確認済み
+// （starttime="60"は「60分刻み＝00分スタート」を意味し、offset相当は0）。
+export const HILLVALLEY_ROOMS: BotRoomSpec[] = [
+  { id: 'hillvalley-ast', roomIdNum: 2046, name: 'Ast (12帖)', size_sqm: 20, capacity: 5, hourly_rate: 3100, day_rate: 2600, individual_rate: 800, start_time_offset: 0, features: ['Marshall JCM900 HI GAIN DUAL REVERB(50W) + 1960A', 'Roland JC-120B', 'BASS::GALLIEN-KRUEGER 700RB-II + Ampeg SVT610HLF', 'DRUM::Pearl MCX SHELL PACK(12/13/16/22) + Paiste 900 Series'] },
+  { id: 'hillvalley-bst', roomIdNum: 2047, name: 'Bst (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 3000, day_rate: 2500, individual_rate: 800, start_time_offset: 0, features: ['Marshall JCM900 HI GAIN DUAL REVERB(100W) + 1960AV', 'Roland JC-120B', 'BASS::GALLIEN-KRUEGER 700RB-II + Ampeg SVT610HLF', 'DRUM::Pearl MCX SHELL PACK(12/13/16/22) + Paiste 900 Series'] },
+  { id: 'hillvalley-cst', roomIdNum: 2048, name: 'Cst (18帖)', size_sqm: 30, capacity: 8, hourly_rate: 3600, day_rate: 3100, individual_rate: 800, start_time_offset: 0, features: ['Marshall JCM900 HI GAIN DUAL REVERB(100W) + 1960A', 'Marshall JCM900 SL-X + 1960A JCM800', 'Roland JC-120B', 'BASS::GALLIEN-KRUEGER 700RB-II + Ampeg SVT810E', 'DRUM::Pearl MCX SHELL PACK(12/13/16/22) + Sabian AA Series'] },
+];
+
+export async function fetchHillvalleyDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/515', HILLVALLEY_ROOMS, 'ヒルバレースタジオ', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/817のページソース内<li room-id="...">から実値を確認済み。
+// 料金はstudi-ol.com上のライブ表示額（公式サイトreserve.phpの「フェア」割引後価格と一致）を
+// 正として採用。[B]st・[C]stの常設機材詳細ページはJS動的タブでテキスト抽出できなかったため、
+// [A]stで確認済みの機材（Marshall/Roland JC-120/Hartke/TAMA系）を代表値として使用する。
+export const VANTAGE_ROOMS: BotRoomSpec[] = [
+  { id: 'vantage-cst', roomIdNum: 3645, name: 'Cst (約10帖)', size_sqm: 17, capacity: 4, hourly_rate: 2860, day_rate: 1980, individual_rate: 770, start_time_offset: 0, features: ['Marshall DSL100H + 1960A', 'Roland JC-120', 'BASS::Hartke HA5500 + 4.5XL', 'DRUM::TAMA STARDRUM Bubinga Series'] },
+  { id: 'vantage-bst', roomIdNum: 3644, name: 'Bst (約13帖)', size_sqm: 21, capacity: 6, hourly_rate: 3278, day_rate: 2178, individual_rate: 770, start_time_offset: 0, features: ['Marshall DSL100H + 1960A', 'Roland JC-120', 'BASS::Hartke HA5500 + 4.5XL', 'DRUM::TAMA STARDRUM Bubinga Series'] },
+  { id: 'vantage-ast', roomIdNum: 3643, name: 'Ast (約18帖)', size_sqm: 30, capacity: 8, hourly_rate: 4125, day_rate: 3025, individual_rate: 770, start_time_offset: 0, features: ['Marshall JVM410H + 1960AV(Vintage30)', 'Marshall DSL100H + 1960A', 'Roland JC-120', 'BASS::Hartke HA5500 + 4.5XL ×2', 'DRUM::TAMA STARDRUM Bubinga Series + Zildjian A Custom'] },
+];
+
+export async function fetchVantageDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/817', VANTAGE_ROOMS, 'Sound Studio Vantage', baseDate, dayCount);
+}

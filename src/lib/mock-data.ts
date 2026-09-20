@@ -20,6 +20,12 @@ import {
 } from './shimokitazawa-studiol-converter';
 import { getRinkyDinkKichijojiRooms, RINKYDINK_KICHIJOJI_STUDIO } from './rinkydink-converter';
 import { getPentaKichijojiRooms, PENTA_KICHIJOJI_STUDIO } from './penta-kichijoji-converter';
+import {
+  getMuseumShinjukuRealRooms, MUSEUM_SHINJUKU_STUDIO,
+  getHillvalleyRealRooms, HILLVALLEY_STUDIO,
+  getVantageRealRooms, VANTAGE_STUDIO,
+} from './shinjuku-studiol-converter';
+import { getMusicManRealRooms, MUSIC_MAN_STUDIO } from './music-man-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -37,11 +43,15 @@ export const MOCK_STUDIOS: Studio[] = [
   PENTA_STUDIOS['shibuya-penta-city'],
   PENTA_STUDIOS['shibuya-penta-juke'],
 
-  // 新宿エリア (4店舗)
+  // 新宿エリア (8店舗)
   NOAH_STUDIOS_META['shinjuku'],
   NODE_SHINJUKU_STUDIO,
   PENTA_STUDIOS['shinjuku-penta-main'],
   ONGAKUKAN_SHINJUKU_STUDIO,
+  MUSEUM_SHINJUKU_STUDIO,
+  HILLVALLEY_STUDIO,
+  VANTAGE_STUDIO,
+  MUSIC_MAN_STUDIO,
 
   // 高田馬場エリア (5店舗)
   NOAH_STUDIOS_META['takadanobaba'],
@@ -101,6 +111,12 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   // 6. 音楽館 新宿西口店 (1店舗 / 7部屋)
   const ongakukanShinjukuRooms = getOngakukanShinjukuRealRooms(dateStr);
 
+  // 6b. 新宿エリア追加分 (4店舗 / スタジオミュージアム9室・ヒルバレー3室・Vantage3室・Music man10室)
+  const museumShinjukuRooms = getMuseumShinjukuRealRooms(dateStr);
+  const hillvalleyRooms = getHillvalleyRealRooms(dateStr);
+  const vantageRooms = getVantageRealRooms(dateStr);
+  const musicManRooms = getMusicManRealRooms(dateStr);
+
   // 7. 高田馬場エリア (4店舗 / ゲートウェイ15室・音楽館6室・BOT11室・BAZOOKA6室 ※ノアは上記noahRoomsに含む)
   const gatewayBabaRooms = getGatewayTakadanobabaRealRooms(dateStr);
   const ongakukanBabaRooms = getOngakukanTakadanobabaRealRooms(dateStr);
@@ -127,6 +143,7 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
 
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
+    ...museumShinjukuRooms, ...hillvalleyRooms, ...vantageRooms, ...musicManRooms,
     ...gatewayBabaRooms, ...ongakukanBabaRooms, ...botBabaRooms, ...bazookaRooms,
     ...botIkebukuroRooms, ...vivoRooms, ...gatewayIkebukuroRooms,
     ...andysRooms, ...standbyRooms, ...gourdislandWestRooms, ...gourdislandSouthRooms,

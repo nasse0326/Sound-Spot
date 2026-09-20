@@ -157,8 +157,11 @@ export async function fetchReserve1Days(
 
         const firstCell = cells[0].replace(/<[^>]*>/g, '').trim();
 
-        // 従来形式（渋谷/秋葉原ゲートウェイ・GOODMAN等）: "1st", "2st" のように末尾が st
-        const stMatch = firstCell.match(/(\d+st)/) || firstCell.match(/([A-Za-z0-9]+st)/);
+        // 従来形式（渋谷/秋葉原ゲートウェイ・GOODMAN等）: "1st", "2st" のように末尾が st。
+        // MUSIC MANのように同じ部屋タイプ名を複数フロアで使い回す店舗（"Lst"と"3-Lst"等）は、
+        // 汎用パターン（[A-Za-z0-9]+st）だけだと両方とも"Lst"に丸められて別フロアの部屋が
+        // 同一roomKeyに統合されてしまうため、先頭の「フロア番号-」を含む形を優先的に拾う。
+        const stMatch = firstCell.match(/(\d+-[A-Za-z0-9]+st)/) || firstCell.match(/(\d+st)/) || firstCell.match(/([A-Za-z0-9]+st)/);
         // 高田馬場3号店等の新形式: "２階／２B（１０畳）00分～" や "５C／ツインドラム45分～" のように
         // 全角の「部屋番号+アルファベット」コードが部屋名の先頭付近に含まれる
         const codeMatch = firstCell.match(/([0-9０-９]+[A-Za-zＡ-Ｚａ-ｚ])/);
