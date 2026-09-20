@@ -2,7 +2,8 @@
 
 import React, { useMemo } from 'react';
 import { RoomWithSlots, BookingType, AvailabilitySlot } from '@/types/studio';
-import { Info, Clock, ExternalLink, MapPin } from 'lucide-react';
+import { Info, Clock, ExternalLink, MapPin, ChevronDown, ChevronUp, Phone } from 'lucide-react';
+import { isPhoneOnlyStudio, AREA_DISPLAY_ORDER } from '@/lib/slot-utils';
 
 interface StudioTimelineViewProps {
   rooms: RoomWithSlots[];
@@ -30,22 +31,32 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
   // 全部屋をタイムラインに表示（スロット未取得や電話予約も状態を明示）
   const activeRooms = rooms;
 
-  // スタジオごとに部屋をグループ化（スタジオ名の重複を排除）
-  const studioGroups = useMemo(() => {
-    const groups: {
-      studio: RoomWithSlots['studio'];
-      rooms: RoomWithSlots[];
-    }[] = [];
+  // 電話予約のみの店舗（ペンタ系等）はデフォルトで折りたたんでおく（部屋ごとの
+  // 行を展開したい場合だけ個別にトグルできるよう、店舗idをキーに管理する）
+  const [expandedPhoneOnly, setExpandedPhoneOnly] = React.useState<Record<string, boolean>>({});
 
+  // スタジオごとに部屋をグループ化（スタジオ名の重複を排除）し、カード一覧と
+  // 同じ並び順（エリア → 電話予約のみの店舗は一番下 → 部屋数が多い順）に揃える
+  const studioGroups = useMemo(() => {
     const map = new Map<string, { studio: RoomWithSlots['studio']; rooms: RoomWithSlots[] }>();
     activeRooms.forEach((room) => {
       const sid = room.studio.id;
       if (!map.has(sid)) {
-        const entry = { studio: room.studio, rooms: [] };
-        map.set(sid, entry);
-        groups.push(entry);
+        map.set(sid, { studio: room.studio, rooms: [] });
       }
       map.get(sid)!.rooms.push(room);
+    });
+
+    const groups = Array.from(map.values());
+    groups.sort((a, b) => {
+      const areaDiff = AREA_DISPLAY_ORDER.indexOf(a.studio.area) - AREA_DISPLAY_ORDER.indexOf(b.studio.area);
+      if (areaDiff !== 0) return areaDiff;
+      const aPhoneOnly = isPhoneOnlyStudio(a.studio) ? 1 : 0;
+      const bPhoneOnly = isPhoneOnlyStudio(b.studio) ? 1 : 0;
+      if (aPhoneOnly !== bPhoneOnly) return aPhoneOnly - bPhoneOnly;
+      const countDiff = b.rooms.length - a.rooms.length;
+      if (countDiff !== 0) return countDiff;
+      return a.studio.id.localeCompare(b.studio.id);
     });
 
     return groups;
@@ -207,6 +218,8 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
             {studioGroups.map((group) => {
               const is24h = group.studio.is24Hours || group.studio.name.includes('ノア');
               const isLong = group.studio.name.includes('ベースオントップ') || group.studio.name.includes('音楽館');
+              const isPhoneOnly = isPhoneOnlyStudio(group.studio);
+              const isExpanded = expandedPhoneOnly[group.studio.id] ?? false;
 
               return (
                 <div key={group.studio.id} className="rounded-xl border border-stone-200 dark:border-slate-800/80 bg-stone-50 dark:bg-slate-950/40">
@@ -264,8 +277,36 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                     </div>
                   </div>
 
-                  {/* 各部屋の行 */}
+                  {/* 各部屋の行。電話予約のみの店舗（ペンタ系等）は全室「TEL」で
+                      並ぶだけの行を見ても比較の役に立たないため、デフォルトで
+                      折りたたんで注釈だけを表示する。 */}
+                  {isPhoneOnly && !isExpanded ? (
+                    <div className="px-3 sm:px-4 py-3">
+                      <button
+                        type="button"
+                        onClick={() => setExpandedPhoneOnly((prev) => ({ ...prev, [group.studio.id]: true }))}
+                        className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg border border-dashed border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-800/50 dark:bg-amber-950/20 dark:text-amber-300 text-[11px] sm:text-xs font-medium hover:bg-amber-100 dark:hover:bg-amber-950/40 transition cursor-pointer"
+                      >
+                        <span className="flex items-center gap-1.5">
+                          <Phone className="w-3.5 h-3.5 shrink-0" />
+                          <span>空き情報取得不可。TELでご確認ください。（{group.rooms.length}部屋）</span>
+                        </span>
+                        <span className="flex items-center gap-1 shrink-0 underline">
+                          部屋一覧を表示 <ChevronDown className="w-3.5 h-3.5" />
+                        </span>
+                      </button>
+                    </div>
+                  ) : (
                   <div className="divide-y divide-stone-200 dark:divide-slate-800/40">
+                    {isPhoneOnly && (
+                      <button
+                        type="button"
+                        onClick={() => setExpandedPhoneOnly((prev) => ({ ...prev, [group.studio.id]: false }))}
+                        className="w-full flex items-center gap-1 px-3 sm:px-4 py-1.5 text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition cursor-pointer"
+                      >
+                        <ChevronUp className="w-3 h-3" /> 空き情報取得不可のため部屋一覧を隠す
+                      </button>
+                    )}
                     {group.rooms.map((room, rIdx) => {
                       // 部屋ごとの開始オフセット（0/15/30/45分）。1コマ=15分（4コマ/時間）の
                       // グリッド上で、オフセット分だけ先頭にスペーサーを入れて全体をずらすことで
@@ -346,7 +387,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                                 : isAvailable
                                 ? 'bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 hover:scale-[1.02] dark:bg-emerald-500/20 dark:hover:bg-emerald-500/40 dark:text-emerald-300 dark:border-emerald-500/40'
                                 : isBooked
-                                ? 'bg-stone-100 hover:bg-stone-200 text-stone-400 border border-stone-200 dark:bg-slate-850 dark:hover:bg-slate-800 dark:text-slate-600 dark:border-slate-800/50'
+                                ? 'bg-stone-100 hover:bg-stone-200 text-stone-400 border border-stone-200 dark:bg-slate-800/70 dark:hover:bg-slate-700/70 dark:text-slate-500 dark:border-slate-700/50'
                                 : 'bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-300 dark:bg-amber-500/20 dark:hover:bg-amber-500/30 dark:text-amber-300 dark:border-amber-500/40'
                             }`}
                           >
@@ -376,7 +417,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                       return (
                         <div
                           key={room.id}
-                          className={`grid py-1.5 items-center hover:bg-stone-100 dark:hover:bg-slate-850/40 transition-colors group ${
+                          className={`grid py-1.5 items-center hover:bg-stone-100 dark:hover:bg-slate-800/40 transition-colors group ${
                             isLastRoom ? 'rounded-b-xl' : ''
                           }`}
                           style={{
@@ -385,7 +426,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                         >
                           {/* 部屋情報（完全不透明 bg-slate-900, z-20 で固定、左端密着、右側境界線でスロットを遮断） */}
                           <div
-                            className="w-[135px] sm:w-[220px] px-2 sm:px-3 cursor-pointer select-none sticky left-0 bg-white hover:bg-stone-100 dark:bg-slate-900 dark:hover:bg-slate-850 z-20 flex items-center justify-between transition-colors border-r border-stone-200 dark:border-slate-800 min-w-0 shrink-0"
+                            className="w-[135px] sm:w-[220px] px-2 sm:px-3 cursor-pointer select-none sticky left-0 bg-white hover:bg-stone-100 dark:bg-slate-900 dark:hover:bg-slate-800 z-20 flex items-center justify-between transition-colors border-r border-stone-200 dark:border-slate-800 min-w-0 shrink-0"
                             onClick={() => onOpenDetail(room)}
                             title={`${room.name} (${room.sizeTatami}帖) - クリックで部屋詳細`}
                           >
@@ -453,6 +494,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                       );
                     })}
                   </div>
+                  )}
                 </div>
               );
             })}

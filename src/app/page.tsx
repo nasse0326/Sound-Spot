@@ -16,7 +16,7 @@ import { HORIZONTAL_BANNER_ADS } from '@/config/banner-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
-import { checkRoomAvailability, naturalCompareRoomNames } from '@/lib/slot-utils';
+import { checkRoomAvailability, naturalCompareRoomNames, isPhoneOnlyStudio, AREA_DISPLAY_ORDER } from '@/lib/slot-utils';
 import { CRAWL_DAY_COUNT } from '@/config/crawl-schedule';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
 import {
@@ -228,9 +228,6 @@ export default function HomePage() {
     });
   }, [filteredRooms, sortBy, filters.startTime, filters.endTime, filters.bookingType, filters.allowAdjacent30Min]);
 
-  // エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）
-  const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺'];
-
   // スタジオごとの部屋総数（現在の絞り込み条件に左右されないよう、日付以外の
   // フィルタを適用する前のallRoomsから算出。サイズ/機材/満室非表示等の絞り込みで
   // カードの並び順がガタガタ変わらないようにするため）
@@ -263,6 +260,12 @@ export default function HomePage() {
       groups.sort((a, b) => {
         const areaDiff = AREA_DISPLAY_ORDER.indexOf(a.studio.area) - AREA_DISPLAY_ORDER.indexOf(b.studio.area);
         if (areaDiff !== 0) return areaDiff;
+        // 電話予約のみでリアルタイム空き状況を取得できない店舗（ペンタ系等）は、
+        // そのエリア内では常に一番下に沈める（一覧の主目的である「空き状況比較」に
+        // 寄与しないため、実際に比較できる店舗を優先して見せたいという要望）
+        const aPhoneOnly = isPhoneOnlyStudio(a.studio) ? 1 : 0;
+        const bPhoneOnly = isPhoneOnlyStudio(b.studio) ? 1 : 0;
+        if (aPhoneOnly !== bPhoneOnly) return aPhoneOnly - bPhoneOnly;
         const countDiff = (studioRoomCounts.get(b.studio.id) ?? 0) - (studioRoomCounts.get(a.studio.id) ?? 0);
         if (countDiff !== 0) return countDiff;
         return a.studio.id.localeCompare(b.studio.id);

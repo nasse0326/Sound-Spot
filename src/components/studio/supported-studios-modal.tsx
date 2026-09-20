@@ -500,7 +500,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                         <button
                           type="button"
                           onClick={() => toggleExpand(studio.id)}
-                          className="w-full flex items-center justify-between gap-2 flex-wrap px-3 py-2 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 hover:border-emerald-400 dark:bg-slate-900/90 dark:hover:bg-slate-850 dark:border-slate-800/90 dark:hover:border-emerald-600/50 text-xs font-bold text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white transition cursor-pointer group"
+                          className="w-full flex items-center justify-between gap-2 flex-wrap px-3 py-2 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 hover:border-emerald-400 dark:bg-slate-900/90 dark:hover:bg-slate-800 dark:border-slate-800/90 dark:hover:border-emerald-600/50 text-xs font-bold text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white transition cursor-pointer group"
                         >
                           {/* 左右どちらのテキストも折り返さず一塊のまま扱い、幅が足りない場合は
                               右側のラベルごと2段目に落とす（文字やアイコンの途中で崩れるのを防ぐ） */}
@@ -532,7 +532,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                                     <div
                                       key={room.id}
                                       onClick={() => setDetailRoom(room)}
-                                      className="p-2.5 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 hover:border-stone-300 dark:bg-slate-900/90 dark:hover:bg-slate-850 dark:border-slate-800/90 dark:hover:border-slate-700 transition cursor-pointer group/room flex flex-col justify-between"
+                                      className="p-2.5 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 hover:border-stone-300 dark:bg-slate-900/90 dark:hover:bg-slate-800 dark:border-slate-800/90 dark:hover:border-slate-700 transition cursor-pointer group/room flex flex-col justify-between"
                                       title="クリックして部屋・機材の詳細を表示"
                                     >
                                       <div>

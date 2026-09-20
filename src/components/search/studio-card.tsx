@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Studio, RoomWithSlots, BookingType } from '@/types/studio';
-import { checkRoomAvailability } from '@/lib/slot-utils';
+import { checkRoomAvailability, isPhoneOnlyStudio } from '@/lib/slot-utils';
 import {
   MapPin,
   ExternalLink,
@@ -41,6 +41,11 @@ export const StudioCard: React.FC<StudioCardProps> = ({
 }) => {
   const { studio, rooms } = studioGroup;
 
+  // 電話予約のみでリアルタイム空き状況を取得できない店舗は、部屋一覧を見ても
+  // 全室「要TEL」で並ぶだけで比較の役に立たないため、デフォルトで折りたたんでおく。
+  const isPhoneOnly = isPhoneOnlyStudio(studio);
+  const [showRooms, setShowRooms] = React.useState(false);
+
   // 曜日・時間帯に応じた動的料金判定
   const dateObj = new Date(targetDate);
   const dayOfWeek = dateObj.getDay();
@@ -65,7 +70,6 @@ export const StudioCard: React.FC<StudioCardProps> = ({
 
   const roomAvails = rooms.map(getRoomAvailability);
   const availableCount = roomAvails.filter((r) => r.isAvailable).length;
-  const isPhoneOnly = studio.chainName.includes('PENTA') || (!studio.bookingUrl && !!studio.tel);
   const allUnfetched = !isPhoneOnly && roomAvails.every((r) => r.matchType === 'unfetched');
 
   // 価格帯サマリー（¥2,200〜3,500/h）
@@ -155,8 +159,34 @@ export const StudioCard: React.FC<StudioCardProps> = ({
         </div>
       </div>
 
-      {/* 2. 部屋一覧リスト: 部屋名・畳数・機材・料金・空き状況を1行にまとめた表示 */}
+      {/* 2. 部屋一覧リスト: 部屋名・畳数・機材・料金・空き状況を1行にまとめた表示。
+          電話予約のみの店舗は、全室「要TEL」で並ぶだけの部屋一覧を見ても比較の
+          役に立たないため、デフォルトで折りたたんで注釈だけを表示する。 */}
+      {isPhoneOnly && !showRooms ? (
+        <div className="p-3 sm:p-4 flex-1">
+          <button
+            type="button"
+            onClick={() => setShowRooms(true)}
+            className="w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl border border-dashed border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-800/50 dark:bg-amber-950/20 dark:text-amber-300 text-[11px] sm:text-xs font-medium hover:bg-amber-100 dark:hover:bg-amber-950/40 transition cursor-pointer"
+          >
+            <span className="flex items-center gap-1.5 text-left">
+              <Info className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span>空き情報取得不可。TELでご確認ください。（{rooms.length}部屋）</span>
+            </span>
+            <span className="text-[10px] sm:text-[11px] underline shrink-0">部屋一覧を表示</span>
+          </button>
+        </div>
+      ) : (
       <div className="p-2 sm:p-3 divide-y divide-stone-100 dark:divide-slate-800/60 flex-1">
+        {isPhoneOnly && (
+          <button
+            type="button"
+            onClick={() => setShowRooms(false)}
+            className="w-full text-left px-2.5 py-1.5 mb-1 text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition cursor-pointer"
+          >
+            ▲ 空き情報取得不可のため部屋一覧を隠す
+          </button>
+        )}
         {rooms.map((room) => {
           const price = getRoomPrice(room);
           const availResult = getRoomAvailability(room);
@@ -340,6 +370,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
           );
         })}
       </div>
+      )}
 
       {/* 3. カード下部CTA（スマホ親指タップしやすいサイズ） */}
       <div className="p-2.5 sm:p-3 bg-stone-50 dark:bg-slate-950/60 border-t border-stone-200 dark:border-slate-800/80">

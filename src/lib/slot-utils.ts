@@ -1,4 +1,21 @@
-import { RoomWithSlots, AvailabilitySlot } from '@/types/studio';
+import { RoomWithSlots, AvailabilitySlot, Studio } from '@/types/studio';
+
+/**
+ * 電話予約のみでリアルタイム空き状況を取得できない店舗かどうかを判定する
+ * （ペンタ系チェーン、またはWEB予約URLが無く電話番号のみ登録されている店舗）。
+ * カード表示・タイムライン表示・空き状況判定の3箇所で同じ条件を使うため、
+ * 個別に重複させず必ずここを参照する。
+ */
+export function isPhoneOnlyStudio(studio: Pick<Studio, 'chainName' | 'bookingUrl' | 'tel'> | null | undefined): boolean {
+  if (!studio) return false;
+  return Boolean(studio.chainName?.includes('PENTA')) || (!studio.bookingUrl && !!studio.tel);
+}
+
+/**
+ * エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）。
+ * カード一覧・タイムラインビュー双方のスタジオ並び順で共通して使う。
+ */
+export const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺'];
 
 export interface RoomAvailabilityMatch {
   isAvailable: boolean;
@@ -150,7 +167,7 @@ export function checkRoomAvailability(
   targetEndTime: string,
   allowAdjacent30Min: boolean = true
 ): RoomAvailabilityMatch {
-  const isPhoneOnly = room.studio?.chainName?.includes('PENTA') || (!room.studio?.bookingUrl && !!room.studio?.tel);
+  const isPhoneOnly = isPhoneOnlyStudio(room.studio);
 
   if (!room.slots || room.slots.length === 0) {
     if (isPhoneOnly) {
