@@ -477,18 +477,27 @@ export default function HomePage() {
           </aside>
         </div>
       ) : (
-        <div className="space-y-4">
-          <StudioTimelineView
-            rooms={sortedRooms}
-            bookingType={filters.bookingType}
-            showEarlyMorning={filters.showEarlyMorning}
-            onToggleEarlyMorning={(show) => setFilters({ ...filters, showEarlyMorning: show })}
-            targetStartTime={filters.startTime}
-            targetEndTime={filters.endTime}
-            allowAdjacent30Min={filters.allowAdjacent30Min}
-            onSelectTime={(startTime, endTime) => setFilters({ ...filters, startTime, endTime })}
-            onOpenDetail={setSelectedRoom}
-          />
+        <div className="flex flex-col lg:flex-row gap-5 items-start">
+          {/* リスト表示と同様、PC(lg+)では右端にバナー広告レールを固定する */}
+          <div className="flex-1 min-w-0 w-full space-y-4">
+            <StudioTimelineView
+              rooms={sortedRooms}
+              bookingType={filters.bookingType}
+              showEarlyMorning={filters.showEarlyMorning}
+              onToggleEarlyMorning={(show) => setFilters({ ...filters, showEarlyMorning: show })}
+              targetStartTime={filters.startTime}
+              targetEndTime={filters.endTime}
+              allowAdjacent30Min={filters.allowAdjacent30Min}
+              onSelectTime={(startTime, endTime) => setFilters({ ...filters, startTime, endTime })}
+              onOpenDetail={setSelectedRoom}
+            />
+          </div>
+
+          {/* PCのみ: リスト表示と同じバナー広告レール2枠 */}
+          <aside className="hidden lg:block w-[320px] shrink-0 sticky top-6 space-y-4">
+            <SidebarBannerAd startIndex={0} />
+            <SidebarBannerAd startIndex={1} />
+          </aside>
         </div>
       )}
 
