@@ -3414,6 +3414,14 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .lg\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:pb-8 {
+    padding-bottom: 2rem;
+  }
 }
 
 @media (min-width: 1280px) {
