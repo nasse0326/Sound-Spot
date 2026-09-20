@@ -12,6 +12,21 @@ export function isPhoneOnlyStudio(studio: Pick<Studio, 'chainName' | 'bookingUrl
 }
 
 /**
+ * ペンタ系チェーンの中で唯一、スタジオペンタ新宿店だけは土日祝限定でリアルタイム
+ * 空き状況を取得できている（他のペンタ店舗は完全に電話予約のみ）。isPhoneOnlyStudio
+ * の判定上は他のペンタ店舗と同じく「電話予約のみ」扱いで部屋一覧を折りたたむが、
+ * この店舗だけは実際に見る価値のあるデータがあるため、折りたたみのデフォルトを
+ * 開いた状態にする。
+ * studio.idで判定しないのは、Supabase経由（source: 'supabase'）ではidがtoUUID済みの
+ * ランダムなUUID（例: a9336dba-...）に置き換わり、mock側のスラグid
+ * （'shinjuku-penta-main'）と一致しなくなるため。店舗名はどちらの経路でも
+ * 同じ文字列で保たれるので、名前で判定する。
+ */
+export function shouldDefaultExpandRoomList(studio: Pick<Studio, 'name'> | null | undefined): boolean {
+  return studio?.name === 'スタジオペンタ 新宿店';
+}
+
+/**
  * エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）。
  * カード一覧・タイムラインビュー双方のスタジオ並び順で共通して使う。
  */

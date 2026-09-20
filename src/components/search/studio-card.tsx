@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Studio, RoomWithSlots, BookingType } from '@/types/studio';
-import { checkRoomAvailability, isPhoneOnlyStudio } from '@/lib/slot-utils';
+import { checkRoomAvailability, isPhoneOnlyStudio, shouldDefaultExpandRoomList } from '@/lib/slot-utils';
 import {
   MapPin,
   ExternalLink,
@@ -44,7 +44,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
   // 電話予約のみでリアルタイム空き状況を取得できない店舗は、部屋一覧を見ても
   // 全室「要TEL」で並ぶだけで比較の役に立たないため、デフォルトで折りたたんでおく。
   const isPhoneOnly = isPhoneOnlyStudio(studio);
-  const [showRooms, setShowRooms] = React.useState(false);
+  const [showRooms, setShowRooms] = React.useState(shouldDefaultExpandRoomList(studio));
 
   // 曜日・時間帯に応じた動的料金判定
   const dateObj = new Date(targetDate);

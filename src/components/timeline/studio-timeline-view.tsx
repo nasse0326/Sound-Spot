@@ -3,7 +3,7 @@
 import React, { useMemo } from 'react';
 import { RoomWithSlots, BookingType, AvailabilitySlot } from '@/types/studio';
 import { Info, Clock, ExternalLink, MapPin, ChevronDown, ChevronUp, Phone } from 'lucide-react';
-import { isPhoneOnlyStudio, AREA_DISPLAY_ORDER } from '@/lib/slot-utils';
+import { isPhoneOnlyStudio, AREA_DISPLAY_ORDER, shouldDefaultExpandRoomList } from '@/lib/slot-utils';
 
 interface StudioTimelineViewProps {
   rooms: RoomWithSlots[];
@@ -219,7 +219,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
               const is24h = group.studio.is24Hours || group.studio.name.includes('ノア');
               const isLong = group.studio.name.includes('ベースオントップ') || group.studio.name.includes('音楽館');
               const isPhoneOnly = isPhoneOnlyStudio(group.studio);
-              const isExpanded = expandedPhoneOnly[group.studio.id] ?? false;
+              const isExpanded = expandedPhoneOnly[group.studio.id] ?? shouldDefaultExpandRoomList(group.studio);
 
               return (
                 <div key={group.studio.id} className="rounded-xl border border-stone-200 dark:border-slate-800/80 bg-stone-50 dark:bg-slate-950/40">
