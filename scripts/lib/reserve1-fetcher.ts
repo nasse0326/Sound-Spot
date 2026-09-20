@@ -168,8 +168,15 @@ export async function fetchReserve1Days(
 
         if (!stMatch && !codeMatch && !firstCell.includes('SUBROOM')) continue;
 
+        // 部屋ラベル自体に「30分～」「45分～」のように実際の開始分が明記されている店舗がある
+        // （MUSIC MANのLst/Bst系、高田馬場3号店の一部部屋等）。この表記を見落として常に
+        // openHourの0分始まりとして計算すると、グリッド上の位置と実際の予約開始時刻が
+        // ズレてしまい（例: グリッド上「11:00」の枠が実際は「11:30」開始の予約になる）、
+        // 当該部屋だけ空き状況が正しく突き合わせられなくなる不具合が過去に発生した。
+        // ラベルに分数の明記が無い店舗（渋谷ゲートウェイ等）は従来通り0分始まりとして扱う。
+        const minuteMatch = firstCell.match(/(\d{1,2})分[～~]/);
         let currentHour = config.openHour;
-        let currentMin = 0;
+        let currentMin = minuteMatch ? parseInt(minuteMatch[1], 10) : 0;
         const slotCells = cells.slice(1, cells.length - 1);
         const slotAttrs = cellAttrs.slice(1, cellAttrs.length - 1);
 
