@@ -766,6 +766,9 @@ flowchart TD
 | `src/data/studio-bayd-koenji-real.json` | データ | STUDIO BAYD 高円寺店（WnSpaceMusic公開API自動同期）全5部屋・22日間の実データ |
 | `src/lib/studio-bayd-converter.ts` | コンバーター | STUDIO BAYD 高円寺店の実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック |
 | `scripts/lib/wnspace-fetcher.ts` | フェッチャー | WnSpaceMusic（STUDIO BAYDチェーン等）向け。ログイン不要の公開REST API (`/api/studios/bookings`) から確定予約一覧を直接取得し、24時間分の空き/予約済みを算出する（HTMLスクレイピング不要） |
+| `src/data/studiosun-nishifunabashi-real.json` | データ | STUDIO SUN 西船橋店（webtoru.com自動同期）全7部屋・22日間の実データ |
+| `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する |
+| `src/lib/funabashi-converter.ts` | コンバーター | STUDIO SUN 西船橋店の実データJSONを `RoomWithSlots` 形式へ正規化変換、およびスタジオパックス船橋店（会員ログイン必須のため静的リスティング、10部屋）を定義するロジック |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

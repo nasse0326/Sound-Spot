@@ -4,7 +4,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -831,6 +831,44 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '',
     websiteUrl: 'https://wnspacemusic.jp/studios/9',
     features: ['24時間営業', '完全無人・スマホ予約でオートロック解錠', 'イベント/ライブ対応(Aスタ最大60名)'],
+  },
+
+  // -------------------------------------------------------------
+  // 船橋エリア (2店舗 / 計17部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'studiosun-nishifunabashi',
+    name: 'STUDIO SUN 西船橋店',
+    chainName: 'STUDIO SUN',
+    area: '船橋',
+    nearestStation: 'JR西船橋駅 南口 徒歩3分',
+    address: '千葉県船橋市印内町570-1 鎌倉ビル1F',
+    roomCount: 7,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'webtoru.com (自動巡回)',
+    is24Hours: false,
+    businessHours: '9:00〜24:00（無人時間帯は6:00〜9:00も一部利用可）',
+    tel: '047-431-9753',
+    websiteUrl: 'https://studiosun1987.com/',
+    features: ['駅徒歩3分', '無料駐車場10台完備', '00分/30分開始混在'],
+  },
+  {
+    id: 'packs-funabashi',
+    name: 'スタジオパックス船橋店',
+    chainName: 'sound studio PACKS',
+    area: '船橋',
+    nearestStation: 'JR総武線 船橋駅 徒歩5分 / 京成本線 京成船橋駅 徒歩3分',
+    address: '千葉県船橋市本町3-2-2 丸善ビル2F',
+    roomCount: 10,
+    syncType: 'phone',
+    syncLabel: '電話予約スタジオ',
+    systemName: '会員制オンライン予約 (要事前登録) / 初回電話受付',
+    is24Hours: true,
+    businessHours: '24時間営業・年中無休',
+    tel: '047-425-5833',
+    websiteUrl: 'https://www.studio-packs.jp/funabashi',
+    features: ['24時間営業', '音楽スタジオ10部屋＋ダンススタジオ2部屋の大型施設', '学割対応'],
   },
 ];
 

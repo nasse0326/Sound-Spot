@@ -18,6 +18,7 @@ import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
 import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
+import { fetchStudioSunNishiFunabashiDays } from './lib/webtoru-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -1262,9 +1263,10 @@ async function crawlStudiOlKoenjiShop(
   fetchFn: (baseDate: Date, dayCount?: number) => Promise<any[]>,
   outFileName: string,
   baseDate: Date,
-  dayCount: number = CRAWL_DAY_COUNT
+  dayCount: number = CRAWL_DAY_COUNT,
+  sourceLabel: string = 'studi-ol.com'
 ) {
-  console.log(`\n--- ${label} (studi-ol.com) ---`);
+  console.log(`\n--- ${label} (${sourceLabel}) ---`);
   try {
     const rooms = await fetchFn(baseDate, dayCount);
     if (rooms && rooms.length > 0) {
@@ -1319,6 +1321,15 @@ export async function crawlKoyamaR(baseDate: Date, dayCount: number = CRAWL_DAY_
 
 export async function crawlMusira(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
   await crawlStudiOlKoenjiShop('MUSIRA Studio', fetchMusiraDays, 'musira-real', baseDate, dayCount);
+}
+
+// -------------------------------------------------------------
+// 船橋エリア追加分（2026-09-20）。STUDIO SUN西船橋店はwebtoru.com ASPを使っており
+// ログイン不要でカレンダーが閲覧できることをブラウザで実地確認済み（パックス船橋店は
+// 会員ログイン必須のためクロール非対応・静的リスティングのみ、詳細はfunabashi-converter.ts）。
+// -------------------------------------------------------------
+export async function crawlStudioSunNishiFunabashi(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('STUDIO SUN 西船橋店', fetchStudioSunNishiFunabashiDays, 'studiosun-nishifunabashi-real', baseDate, dayCount, 'webtoru.com');
 }
 
 // -------------------------------------------------------------
@@ -1525,6 +1536,7 @@ async function main() {
       crawlKoyamaR(now, CRAWL_DAY_COUNT),
       crawlMusira(now, CRAWL_DAY_COUNT),
       crawlStudioBaydKoenji(now, CRAWL_DAY_COUNT),
+      crawlStudioSunNishiFunabashi(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

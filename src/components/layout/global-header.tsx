@@ -66,12 +66,12 @@ export const GlobalHeader: React.FC = () => {
               <div className="flex items-center gap-1.5 whitespace-nowrap">
                 <span className="text-slate-500 dark:text-slate-400 hidden md:inline">稼働状況:</span>
                 {/* スマホ幅ではロゴと横並びで収まりきらず画面外に切れていたため、
-                    sm未満は「都内」「稼働中」を省いた短縮表記にする */}
+                    sm未満は「首都圏」「稼働中」を省いた短縮表記にする */}
                 <span className="font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors sm:hidden">
                   {studioCount}店舗/{roomCount}部屋
                 </span>
                 <span className="hidden sm:inline font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">
-                  都内 {studioCount}店舗 / {roomCount}部屋 稼働中
+                  首都圏 {studioCount}店舗 / {roomCount}部屋 稼働中
                 </span>
                 <span className="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-semibold text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 pl-1.5 border-l border-stone-300 dark:border-slate-700">
                   <span>一覧を見る</span>
