@@ -1,3 +1,5 @@
+import { TEMP_HIDDEN_STUDIO_NAMES } from './hidden-studios';
+
 export interface SupportedStudio {
   id: string;
   name: string;
@@ -16,7 +18,7 @@ export interface SupportedStudio {
   features: string[];
 }
 
-export const SUPPORTED_STUDIOS: SupportedStudio[] = [
+const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
   // -------------------------------------------------------------
   // 渋谷エリア (7店舗 / 計81部屋)
   // ※スタジオペンタ渋谷ムーンサイド店は2025年4月29日閉店のため掲載終了
@@ -640,3 +642,7 @@ export const SUPPORTED_STUDIOS: SupportedStudio[] = [
     features: ['駅徒歩30秒', '全14スタジオ', 'LINE予約対応', '個人練習は平日1週間前から予約可'],
   },
 ];
+
+export const SUPPORTED_STUDIOS: SupportedStudio[] = ALL_SUPPORTED_STUDIOS.filter(
+  (s) => !TEMP_HIDDEN_STUDIO_NAMES.includes(s.name)
+);

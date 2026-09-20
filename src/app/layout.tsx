@@ -6,7 +6,7 @@ import { FixedBottomAdBanner } from '@/components/common/fixed-bottom-ad-banner'
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 
 export const metadata: Metadata = {
-  title: 'SoundSpot - 音楽スタジオ横断空き枠検索',
+  title: 'Sound Spot - 音楽スタジオ横断空き枠検索',
   description: 'ノア・ペンタ・音楽館など複数リハーサルスタジオの空き枠・広さ・常設機材を一括検索比較',
 };
 
@@ -62,7 +62,7 @@ export default function RootLayout({
 
         {/* フッター */}
         <footer className="border-t border-stone-200 dark:border-slate-800/80 bg-white dark:bg-slate-950 py-6 text-center text-xs text-slate-500 dark:text-slate-500 pb-20 lg:pb-6">
-          <p>© 2026 SoundSpot - 音楽スタジオ横断空き枠検索アプリ (MVP)</p>
+          <p>© 2026 Sound Spot - 音楽スタジオ横断空き枠検索アプリ</p>
           <p className="mt-1 text-slate-400 dark:text-slate-600">
             ※空き状況はスタジオ公式サイトの情報を元に定期取得・更新しています。予約完了は各スタジオの公式WEBサイトにて行ってください。
           </p>

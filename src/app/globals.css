@@ -1156,8 +1156,16 @@ video {
   white-space: nowrap;
 }
 
+.whitespace-normal {
+  white-space: normal;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .rounded {
@@ -1768,6 +1776,10 @@ video {
   line-height: 1.375;
 }
 
+.leading-tight {
+  line-height: 1.25;
+}
+
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -2100,24 +2112,42 @@ body {
   min-height: 100vh;
 }
 
-/* スクロールバーのカスタマイズ */
+/* スクロールバーのカスタマイズ。以前はライト/ダーク共通で track:#111827・thumb:#374151と
+   どちらも暗い同系色で明度差がほとんど無く、タイムラインの横スクロール等で今どの位置に
+   いるか（つまみ=thumbの位置）が分かりづらかったため、track/thumbの明度差を十分に確保し、
+   ライト/ダークそれぞれのテーマに合わせた配色にする。 */
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111827;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #374151;
+  background: #e7e5e4;
   border-radius: 4px;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #a8a29e;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #4b5563;
+  background: #78716c;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #64748b;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 .hover\:-translate-y-0\.5:hover {

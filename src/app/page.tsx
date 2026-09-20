@@ -12,6 +12,7 @@ import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
 import { checkRoomAvailability, naturalCompareRoomNames, isPhoneOnlyStudio, AREA_DISPLAY_ORDER } from '@/lib/slot-utils';
 import { CRAWL_DAY_COUNT } from '@/config/crawl-schedule';
+import { TEMP_HIDDEN_STUDIO_NAMES } from '@/config/hidden-studios';
 import { format, addDays, nextSaturday, nextSunday } from 'date-fns';
 import {
   AlignLeft,
@@ -100,7 +101,12 @@ export default function HomePage() {
     };
   }, [filters.date]);
 
-  const allRooms = liveRooms;
+  // 会員登録待ち等で一時非表示にしたいスタジオを、データソース（モック初期描画/
+  // Supabase取得後どちらでも）問わずここで一律に除外する
+  const allRooms = useMemo(
+    () => liveRooms.filter((room) => !TEMP_HIDDEN_STUDIO_NAMES.includes(room.studio.name)),
+    [liveRooms]
+  );
 
   // フィルタリング処理
   const filteredRooms = useMemo(() => {

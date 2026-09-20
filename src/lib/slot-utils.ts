@@ -5,10 +5,18 @@ import { RoomWithSlots, AvailabilitySlot, Studio } from '@/types/studio';
  * （ペンタ系チェーン、またはWEB予約URLが無く電話番号のみ登録されている店舗）。
  * カード表示・タイムライン表示・空き状況判定の3箇所で同じ条件を使うため、
  * 個別に重複させず必ずここを参照する。
+ * Vivo Sound Studioはbookingurlに公式サイトURLを設定しているため上記の
+ * 「bookingUrlが無い」判定には引っかからないが、実際はゲスト閲覧不可・
+ * 会員登録必須のオンライン予約のため自動巡回非対応＝電話/LINE予約のみの
+ * 店舗と同じ扱いにする必要があり、chainName名で個別に例外指定する。
  */
 export function isPhoneOnlyStudio(studio: Pick<Studio, 'chainName' | 'bookingUrl' | 'tel'> | null | undefined): boolean {
   if (!studio) return false;
-  return Boolean(studio.chainName?.includes('PENTA')) || (!studio.bookingUrl && !!studio.tel);
+  return (
+    Boolean(studio.chainName?.includes('PENTA')) ||
+    studio.chainName === 'Vivo Sound Studio' ||
+    (!studio.bookingUrl && !!studio.tel)
+  );
 }
 
 /**

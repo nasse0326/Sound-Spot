@@ -230,10 +230,14 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                       gridTemplateColumns: `var(--col-room-w) repeat(${HOURS.length * 4}, minmax(0, 1fr))`
                     }}
                   >
-                    {/* スタジオ名 & 24hバッジ（完全不透明 bg-slate-800, z-30 で固定、左端密着） */}
-                    <div className="w-[135px] sm:w-[220px] col-span-1 flex items-center gap-1.5 px-2.5 sm:px-3 sticky left-0 bg-stone-100 dark:bg-slate-800 z-30 border-r border-stone-200 dark:border-slate-700 min-w-0 shrink-0">
+                    {/* スタジオ名 & 24hバッジ（完全不透明 bg-slate-800, z-30 で固定、左端密着）。
+                        列幅は他の行（時間軸ヘッダー・部屋名行）とグリッド位置を揃えるため固定だが、
+                        店舗名が長い場合に単純truncateで省略すると読めなくなるため、この見出し行
+                        だけは折り返しを許可して2行以上になっても良いようにする（下段は補足情報
+                        テキストのみなので、行全体が伸びても他要素とズレない）。 */}
+                    <div className="w-[135px] sm:w-[220px] col-span-1 flex items-start gap-1.5 px-2.5 sm:px-3 py-0.5 sticky left-0 bg-stone-100 dark:bg-slate-800 z-30 border-r border-stone-200 dark:border-slate-700 min-w-0 shrink-0">
                       <span
-                        className="font-bold text-slate-900 dark:text-white truncate text-xs"
+                        className="font-bold text-slate-900 dark:text-white text-xs leading-tight whitespace-normal break-words"
                         title={group.studio.name}
                       >
                         {group.studio.name}
@@ -341,7 +345,10 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                         // 前後30分以内ズレ判定 (:00/:30グリッド前提を置かず、この部屋の実際の
                         // 開始時刻が検索時刻の±30分以内に収まっていれば候補として青強調する)
                         const isAdjacent = allowAdjacent30Min && !isExact && Math.abs(slotStartMin - targetStartMin) <= 30;
-                        const isPhoneOnly = room.studio.chainName.includes('PENTA') || (!room.studio.bookingUrl && !!room.studio.tel);
+                        // グループ単位で既に算出済みのisPhoneOnly（isPhoneOnlyStudio()経由）をそのまま使う。
+                        // 以前はここでPENTA判定だけを個別に再計算しており、Vivo Sound Studioのような
+                        // 「bookingUrlはあるが実質電話予約のみ」の例外が反映されずセルが「TEL」ではなく
+                        // 「—」（未取得）表示になってしまっていた。
 
                         const slot = room.slots?.find((s) => {
                           const d = new Date(s.startTime);

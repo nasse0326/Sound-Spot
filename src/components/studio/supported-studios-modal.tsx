@@ -222,7 +222,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                   </span>
                 </div>
                 <h2 className="text-base sm:text-xl font-black tracking-tight text-slate-900 dark:text-white mt-1 truncate">
-                  SoundSpot 対応スタジオ・部屋機材一覧
+                  Sound Spot 対応スタジオ・部屋機材一覧
                 </h2>
               </div>
 
