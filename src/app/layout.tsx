@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import { GlobalHeader } from '@/components/layout/global-header';
+import { FixedBottomAdBanner } from '@/components/common/fixed-bottom-ad-banner';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 
 export const metadata: Metadata = {
@@ -53,18 +54,21 @@ export default function RootLayout({
         {/* ヘッダーナビゲーション（稼働状況クリックで対応スタジオ一覧表示） */}
         <GlobalHeader />
 
-        {/* メインコンテンツ */}
-        <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 lg:p-8">
+        {/* メインコンテンツ（下部固定バナーの高さ分、余白を確保して隠れないようにする） */}
+        <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 lg:p-8 pb-20">
           {children}
         </main>
 
         {/* フッター */}
-        <footer className="border-t border-stone-200 dark:border-slate-800/80 bg-white dark:bg-slate-950 py-6 text-center text-xs text-slate-500 dark:text-slate-500">
+        <footer className="border-t border-stone-200 dark:border-slate-800/80 bg-white dark:bg-slate-950 py-6 text-center text-xs text-slate-500 dark:text-slate-500 pb-20">
           <p>© 2026 SoundSpot - 音楽スタジオ横断空き枠検索アプリ (MVP)</p>
           <p className="mt-1 text-slate-400 dark:text-slate-600">
             ※空き状況はスタジオ公式サイトの情報を元に定期取得・更新しています。予約完了は各スタジオの公式WEBサイトにて行ってください。
           </p>
         </footer>
+
+        {/* 画面下部に常時固定表示する横長バナー広告（PC・スマホ共通、フィード内広告は廃止して一本化） */}
+        <FixedBottomAdBanner />
       </body>
     </html>
   );

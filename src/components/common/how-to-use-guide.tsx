@@ -65,8 +65,11 @@ export const HowToUseGuide: React.FC = () => {
         <X className="w-4 h-4" />
       </button>
 
-      <p className="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2.5 pr-6">
+      <p className="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1 pr-6">
         SoundSpotの使い方
+      </p>
+      <p className="text-[11px] text-slate-500 dark:text-slate-500 mb-2.5">
+        今日から約3週間先までの空き状況をまとめて比較できます。
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">

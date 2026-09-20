@@ -5,14 +5,8 @@ import { SearchFilterBar } from '@/components/search/search-filter-bar';
 import { StudioCard } from '@/components/search/studio-card';
 import { StudioTimelineView } from '@/components/timeline/studio-timeline-view';
 import { RoomDetailModal } from '@/components/studio/room-detail-modal';
-import { NativeAdCard } from '@/components/search/native-ad-card';
 import { SidebarBannerAd } from '@/components/search/sidebar-banner-ad';
-import { NativeAdBanner } from '@/components/timeline/native-ad-banner';
-import { MobileHorizontalAdBanner } from '@/components/timeline/mobile-horizontal-ad-banner';
-import { HorizontalBannerAd } from '@/components/common/horizontal-banner-ad';
 import { HowToUseGuide } from '@/components/common/how-to-use-guide';
-import { NATIVE_ADS } from '@/config/native-ads';
-import { HORIZONTAL_BANNER_ADS } from '@/config/banner-ads';
 import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
@@ -462,45 +456,18 @@ export default function HomePage() {
               PC(lg+)ではバナー広告レールを右端に固定し、リスト側はmax-w-noneでその手前まで
               目一杯広げる（モバイル/タブレットはサイドバーが無いのでmax-w-2xlのまま維持）。 */}
           <div className="flex-1 min-w-0 w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0 space-y-4">
-            {studioGroups.map((group, index) => (
-              <React.Fragment key={group.studio.id}>
-                <StudioCard
-                  studioGroup={group}
-                  bookingType={filters.bookingType}
-                  targetDate={filters.date}
-                  targetStartTime={filters.startTime}
-                  targetEndTime={filters.endTime}
-                  allowAdjacent30Min={filters.allowAdjacent30Min}
-                  onOpenDetail={setSelectedRoom}
-                />
-                {/* PC: 7スタジオごとにネイティブPRカードを自然に挿入
-                    （以前は4件に1件と頻度が高すぎたため間隔を空けた） */}
-                {(index + 1) % 7 === 0 && (
-                  <div className="hidden lg:block">
-                    <NativeAdCard ad={NATIVE_ADS[Math.floor(index / 7) % NATIVE_ADS.length]} />
-                  </div>
-                )}
-                {/* スマホ: 5スタジオごとに横長バナー広告を挿入（テキスト広告の代わり。
-                    以前は3件に1件と頻度が高すぎたため間隔を空けた） */}
-                {(index + 1) % 5 === 0 && HORIZONTAL_BANNER_ADS.length > 0 && (
-                  <div className="lg:hidden">
-                    <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[Math.floor(index / 5) % HORIZONTAL_BANNER_ADS.length]} />
-                  </div>
-                )}
-              </React.Fragment>
+            {studioGroups.map((group) => (
+              <StudioCard
+                key={group.studio.id}
+                studioGroup={group}
+                bookingType={filters.bookingType}
+                targetDate={filters.date}
+                targetStartTime={filters.startTime}
+                targetEndTime={filters.endTime}
+                allowAdjacent30Min={filters.allowAdjacent30Min}
+                onOpenDetail={setSelectedRoom}
+              />
             ))}
-            {/* スタジオ数が7件未満の場合でも、末尾に1つ自然に提案（PC） */}
-            {studioGroups.length > 0 && studioGroups.length < 7 && (
-              <div className="hidden lg:block">
-                <NativeAdCard ad={NATIVE_ADS[0]} />
-              </div>
-            )}
-            {/* スタジオ数が5件未満の場合でも、末尾に1つ自然に提案（スマホ） */}
-            {studioGroups.length > 0 && studioGroups.length < 5 && HORIZONTAL_BANNER_ADS.length > 0 && (
-              <div className="lg:hidden">
-                <HorizontalBannerAd ad={HORIZONTAL_BANNER_ADS[0]} />
-              </div>
-            )}
           </div>
 
           {/* PCのみ: 余った横幅にバナー広告レール2枠（スクロール追従・それぞれ独立ローテーション） */}
@@ -522,13 +489,6 @@ export default function HomePage() {
             onSelectTime={(startTime, endTime) => setFilters({ ...filters, startTime, endTime })}
             onOpenDetail={setSelectedRoom}
           />
-          {/* PC: 手動タブ切替つきのテキスト広告 / スマホ: 自動切替のみの横長バナー */}
-          <div className="hidden lg:block">
-            <NativeAdBanner />
-          </div>
-          <div className="lg:hidden">
-            <MobileHorizontalAdBanner />
-          </div>
         </div>
       )}
 
