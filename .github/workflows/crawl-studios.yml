@@ -49,9 +49,6 @@ jobs:
           # NOAH(studionoah.jp)はGitHub ActionsランナーのIPを403でブロックするため、
           # NOAHのクローリングはscripts/crawl-studios.ts側でGITHUB_ACTIONS=trueを検知してスキップする。
           # NOAH_LOGIN_ID / NOAH_PASSWORD はローカル実行時のみ .env.local から使用する。
-          # 手動実行(workflow_dispatch)時は毎日固定4回スケジュールガードを無視して即時巡回する。
-          # cronによる定時実行時は引き続きガードを適用する。
-          IGNORE_GUARDS: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
         run: npm run crawl
 
       - name: Commit and push updated studio data

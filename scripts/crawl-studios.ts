@@ -82,61 +82,6 @@ async function upsertAvailabilitySlots(label: string, rawDbSlots: any[]): Promis
   }
 }
 
-/**
- * 毎日固定スケジュール判定ガード
- * 曜日を問わず毎日 06:33, 11:48, 17:18, 21:33 (JST) の4回のみ巡回を許可します。
- * GitHub Actionsのスケジュール実行はベストエフォートで、実行時刻が数十分〜数時間
- * 遅延することが公式に説明されている（2026-09-20実測: 06:33発火予定のRunが
- * 08:26 JSTまで約1時間53分遅延し、当時の±45分の許容幅を超えてガードに弾かれた結果、
- * 巡回が一切実行されないまま20秒で終了 = Supabaseへの同期が長期間止まっていた実例あり）。
- * そのため許容ウィンドウは前後大きめ（-30分/+180分）に取り、多少の重複は許容する
- * （「巡回しすぎる」ことより「本来の定時巡回が丸ごと欠落する」ことの方が実害が大きいため）。
- */
-export function isScheduledCrawlTime(nowDate: Date = new Date()): { canProceed: boolean; reason?: string } {
-  if (process.env.IGNORE_GUARDS === 'true') {
-    return { canProceed: true, reason: 'IGNORE_GUARDS=true のため即時実行します。' };
-  }
-
-  // 実行環境のローカルタイムゾーンに依存せずJST時刻を求めるトリック:
-  // getTimezoneOffset()でいったんUTC epochへ正規化してから+9時間するため、
-  // 直後のgetHours()/getMinutes()（ローカルタイムゾーン基準）が返す値は
-  // 常にJSTの壁時計時刻と一致する（実行環境がUTCでもJSTでも結果は変わらない）。
-  // 一見「ローカル基準のgetHours()を使っているのに大丈夫か」と誤解しやすいが、
-  // 上のgetTimezoneOffset()による正規化とちょうど打ち消し合う形になっている。
-  const utc = nowDate.getTime() + nowDate.getTimezoneOffset() * 60000;
-  const jstDate = new Date(utc + 3600000 * 9);
-
-  const currentMinutes = jstDate.getHours() * 60 + jstDate.getMinutes();
-
-  // 毎日固定 4回（分換算）
-  // 06:33 -> 393
-  // 11:48 -> 708
-  // 17:18 -> 1038
-  // 21:33 -> 1293
-  const targets = [393, 708, 1038, 1293];
-
-  // 各目標時刻に対して [-30分, +180分] の許容ウィンドウ（GitHub Actionsのベストエフォート
-  // スケジューリングによる数時間規模の遅延を吸収する。狭すぎるウィンドウは「本来の定時巡回が
-  // 遅延で丸ごとスキップされる」実害の方が大きいと判明したため、意図的に広めに取っている）
-  const isMatched = targets.some(target => {
-    return currentMinutes >= target - 30 && currentMinutes <= target + 180;
-  });
-
-  const jstTimeStr = `${String(jstDate.getHours()).padStart(2, '0')}:${String(jstDate.getMinutes()).padStart(2, '0')}`;
-
-  if (isMatched) {
-    return {
-      canProceed: true,
-      reason: `JST ${jstTimeStr} は毎日定時巡回スケジュール枠（06:33, 11:48, 17:18, 21:33）内に合致しています。`,
-    };
-  }
-
-  return {
-    canProceed: false,
-    reason: `JST ${jstTimeStr} は毎日定時巡回スケジュール（06:33, 11:48, 17:18, 21:33）の対象時間外のためスキップします。`,
-  };
-}
-
 // -------------------------------------------------------------
 // 1. Gateway Studio Shibuya Specs
 // -------------------------------------------------------------
@@ -1134,15 +1079,15 @@ async function main() {
   console.log(`   実行日時: ${new Date().toISOString()}`);
   console.log('====================================================');
 
+  // 以前はここで固定4時刻（06:33/11:48/17:18/21:33 JST）への近さをチェックし、
+  // 外れていれば巡回を丸ごとスキップするガードがあった。しかしGitHub Actionsの
+  // スケジュール実行はベストエフォートで、実測（2026-09-20時点の直近53回の
+  // 定時実行）で平均195分・最大381分もの遅延があり、96%の実行がガードに
+  // 弾かれて巡回が一切行われていなかったことが判明した。1日4回という頻度は
+  // cronの定義（4エントリ）自体がすでに保証しているため、アプリ側の時刻ガードは
+  // 実質的な安全性を追加せず「本来実行すべき巡回を誤って弾く」害の方が大きいと
+  // 判断し、撤廃した。手動実行はworkflow_dispatchでいつでも可能。
   const now = new Date();
-  const scheduleCheck = isScheduledCrawlTime(now);
-  if (!scheduleCheck.canProceed) {
-    console.log(`⏹️ [Schedule Guard] ${scheduleCheck.reason}`);
-    console.log('   (手動実行やテスト時は IGNORE_GUARDS=true を指定することで即時実行可能です)');
-    console.log('====================================================');
-    return;
-  }
-  console.log(`⏰ [Schedule Guard] ${scheduleCheck.reason}`);
 
   try {
     console.log('⚡ [Parallel Execution] 渋谷（ゲートウェイ）、新宿（NODE・ペンタ新宿・音楽館新宿西口）、秋葉原（BOT・GOODMAN・音楽館）、高田馬場（ゲートウェイ・BOT・音楽館）を並行巡回します（ノアはローカル環境実行時のみ、渋谷4店・新宿・秋葉原・御茶ノ水・高田馬場を一括巡回）...');
