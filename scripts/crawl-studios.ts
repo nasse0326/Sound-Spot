@@ -16,7 +16,8 @@ import path from 'path';
 import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
-import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays } from './lib/bot-fetcher';
+import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
+import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -1248,6 +1249,182 @@ export async function crawlMusicMan(baseDate: Date, dayCount: number = CRAWL_DAY
   }
 }
 
+// -------------------------------------------------------------
+// 高円寺エリア追加分（2026-09-20）。うちSound Studio DOM/P.I.G.Studio/
+// SONIC BAND STUDIO/スタジオ・コヤーマ（本店・R店）/MUSIRA Studioの6店舗は
+// studi-ol.com ASPを使っておりログイン不要でカレンダーが閲覧できることを
+// ブラウザで実地確認済み。fetcher自体が価格・帖数・機材込みの完全なRoom
+// オブジェクトを返すため、他のstudi-ol系店舗と同様rooms配列をそのままJSON化する。
+// -------------------------------------------------------------
+
+async function crawlStudiOlKoenjiShop(
+  label: string,
+  fetchFn: (baseDate: Date, dayCount?: number) => Promise<any[]>,
+  outFileName: string,
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+) {
+  console.log(`\n--- ${label} (studi-ol.com) ---`);
+  try {
+    const rooms = await fetchFn(baseDate, dayCount);
+    if (rooms && rooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), `src/data/${outFileName}.json`);
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [${label}] 計${rooms.length}部屋の最新スロットを ${outPath} に保存完了`);
+
+      if (supabase) {
+        console.log(`  ⚡ [Supabase Sync] ${label}のスロットをSupabaseに同期中...`);
+        const dbSlots: any[] = [];
+        rooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots(label, dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [${label} 取得エラー] ${err.message}`);
+  }
+}
+
+export async function crawlSoundStudioDom(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('Sound Studio DOM', fetchSoundStudioDomDays, 'sound-studio-dom-real', baseDate, dayCount);
+}
+
+export async function crawlPigStudio(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('P.I.G.Studio', fetchPigStudioDays, 'pig-studio-real', baseDate, dayCount);
+}
+
+export async function crawlSonicBandStudio(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('SONIC BAND STUDIO', fetchSonicBandStudioDays, 'sonic-band-studio-real', baseDate, dayCount);
+}
+
+export async function crawlKoyamaMain(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('スタジオ・コヤーマ本店', fetchKoyamaMainDays, 'koyama-main-real', baseDate, dayCount);
+}
+
+export async function crawlKoyamaR(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('スタジオ・コヤーマR店', fetchKoyamaRDays, 'koyama-r-real', baseDate, dayCount);
+}
+
+export async function crawlMusira(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('MUSIRA Studio', fetchMusiraDays, 'musira-real', baseDate, dayCount);
+}
+
+// -------------------------------------------------------------
+// STUDIO BAYD 高円寺店 (WnSpaceMusic / 独自プラットフォーム、公開REST API直叩き)
+// -------------------------------------------------------------
+const STUDIO_BAYD_KOENJI_ROOM_SPECS: Record<number, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyRate: number;
+  dayRate: number;
+  soloRate: number;
+  features: string[];
+}> = {
+  54: { name: 'Aスタジオ', tatami: 36, capacity: 60, hourlyRate: 5000, dayRate: 4000, soloRate: 900, features: ['Marshall JCM900', 'Roland JC-120P', 'Fender TwinReverb', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl PROFESSIONAL Series', 'NOTE::イベント・ライブ利用可（最大60名）'] },
+  55: { name: 'Bスタジオ', tatami: 16, capacity: 7, hourlyRate: 2900, dayRate: 2100, soloRate: 770, features: ['Marshall JCM900', 'Roland JC-120P', 'Fender TwinReverb', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl SESSION STUDIO SELECT Series', 'NOTE::深夜割0:00-6:00は1h¥1,000'] },
+  56: { name: 'Cスタジオ', tatami: 14, capacity: 6, hourlyRate: 2700, dayRate: 1900, soloRate: 770, features: ['Marshall JCM900', 'Roland JC-120P', 'Fender TwinReverb', 'BASS::Ampeg SVT-3PRO', 'DRUM::Pearl SESSION STUDIO SELECT Series', 'NOTE::深夜割0:00-6:00は1h¥1,000'] },
+  57: { name: 'Dスタジオ(ドラムルーム)', tatami: 6, capacity: 2, hourlyRate: 1300, dayRate: 1300, soloRate: 770, features: ['DRUM::Pearl REFERENCE ONE Series x2set', 'NOTE::ドラム専用ブース、ギター/ベースアンプなし'] },
+  58: { name: 'Eスタジオ(Vo Booth)', tatami: 0, capacity: 2, hourlyRate: 1200, dayRate: 1200, soloRate: 600, features: ['NOTE::ボーカルブース、深夜割0:00-6:00は1h¥1,000'] },
+};
+
+export async function crawlStudioBaydKoenji(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n🎸 [STUDIO BAYD 高円寺店] スケジュール巡回を開始します (WnSpaceMusic 公開API / ' + dayCount + '日間)...');
+
+  try {
+    const fetchedRooms = await fetchStudioBaydKoenjiDays(baseDate, dayCount);
+
+    const targetDates: string[] = [];
+    for (let i = 0; i < dayCount; i++) {
+      targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+    }
+
+    const studioObject = {
+      id: 'studio-bayd-koenji',
+      name: 'STUDIO BAYD 高円寺店',
+      chain_name: 'STUDIO BAYD',
+      area: '高円寺',
+      prefecture: '東京都',
+      nearest_station: '高円寺駅 徒歩3分',
+      address: '東京都杉並区高円寺南4-30-4 高円寺Kyテラス地下1階',
+      tel: '',
+      url: 'https://wnspacemusic.jp/studios/9',
+      booking_url: 'https://wnspacemusic.jp/studios/9',
+      business_hours_summary: '24時間営業（完全無人店舗）',
+      is_24hours: true,
+      group_booking_rule: 'WEB予約は24時間オンライン受付（要WnSpaceMusic会員登録）',
+      group_booking_lead_months: 6,
+      solo_booking_rule: '1週間前18時よりWEB予約受付開始',
+      solo_booking_lead_hours: 168,
+      scraped_at: new Date().toISOString(),
+      dates_available: targetDates,
+      rooms: [] as any[],
+    };
+
+    Object.entries(STUDIO_BAYD_KOENJI_ROOM_SPECS).forEach(([roomIdStr, spec]) => {
+      const roomIdNum = Number(roomIdStr);
+      const roomId = `studio-bayd-koenji-${roomIdNum}`;
+      const matchedRoom = fetchedRooms.find((r) => r.id === roomIdNum);
+
+      const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+        id: `slot-${roomId}-${s.id || sIdx}`,
+        start_time: s.start_time,
+        end_time: s.end_time,
+        status: s.status,
+      }));
+
+      studioObject.rooms.push({
+        id: roomId,
+        studio_id: studioObject.id,
+        name: spec.name,
+        size_tatami: spec.tatami,
+        capacity: spec.capacity,
+        hourly_rate: spec.hourlyRate,
+        day_rate: spec.dayRate,
+        individual_rate: spec.soloRate,
+        features: spec.features,
+        start_time_offset: 0,
+        slots: roomSlots,
+      });
+    });
+
+    const outPath = path.join(process.cwd(), 'src', 'data', 'studio-bayd-koenji-real.json');
+    fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+    console.log(`✅ [STUDIO BAYD 高円寺店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+    if (supabase) {
+      console.log('⚡ [Supabase Sync] STUDIO BAYD 高円寺店の最新スロットをSupabaseに同期中...');
+      const dbSlots: any[] = [];
+      studioObject.rooms.forEach((r: any) => {
+        const roomUUID = toUUID(r.id);
+        (r.slots || []).forEach((s: any) => {
+          dbSlots.push({
+            room_id: roomUUID,
+            start_time: s.start_time,
+            end_time: s.end_time,
+            status: s.status.toLowerCase(),
+          });
+        });
+      });
+      await upsertAvailabilitySlots('STUDIO BAYD 高円寺店', dbSlots);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [STUDIO BAYD 高円寺店 取得エラー] ${err.message}`);
+  }
+}
+
 async function runNoahWithStealthSafeguards(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   if (process.env.GITHUB_ACTIONS === 'true') {
     console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
@@ -1341,6 +1518,13 @@ async function main() {
       crawlHillvalley(now, CRAWL_DAY_COUNT),
       crawlVantage(now, CRAWL_DAY_COUNT),
       crawlMusicMan(now, CRAWL_DAY_COUNT),
+      crawlSoundStudioDom(now, CRAWL_DAY_COUNT),
+      crawlPigStudio(now, CRAWL_DAY_COUNT),
+      crawlSonicBandStudio(now, CRAWL_DAY_COUNT),
+      crawlKoyamaMain(now, CRAWL_DAY_COUNT),
+      crawlKoyamaR(now, CRAWL_DAY_COUNT),
+      crawlMusira(now, CRAWL_DAY_COUNT),
+      crawlStudioBaydKoenji(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

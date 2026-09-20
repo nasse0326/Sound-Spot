@@ -354,3 +354,100 @@ export async function fetchVantageDays(
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/817', VANTAGE_ROOMS, 'Sound Studio Vantage', baseDate, dayCount);
 }
+
+// 以下、高円寺エリア追加分（2026-09-20）。BASS ON TOPグループではないが、いずれも
+// 同じstudi-ol.com ASPを使っておりログイン不要でカレンダーが閲覧できることを
+// ブラウザで実地確認済み。
+
+// room_idはstudi-ol.com/shop/550のページソース内<li room-id="...">から実値を確認済み
+export const SOUND_STUDIO_DOM_ROOMS: BotRoomSpec[] = [
+  { id: 'dom-ast', roomIdNum: 2188, name: 'Ast (9畳)', size_sqm: 15, capacity: 4, hourly_rate: 1900, day_rate: 1200, individual_rate: 500, start_time_offset: 0, features: ['Marshall JCM900 model4100 + 1960A', 'Roland JC-120', 'BASS::Acoustic B300HD + EDEN410', 'DRUM::CANOPUS YAIBA2'] },
+  { id: 'dom-bst', roomIdNum: 2189, name: 'Bst (12畳)', size_sqm: 20, capacity: 5, hourly_rate: 2300, day_rate: 1200, individual_rate: 500, start_time_offset: 0, features: ['Marshall JCM900 model4100 + 1960A', 'Roland JC-120', 'BASS::Acoustic B300HD + BERGANTINO AE410', 'DRUM::CANOPUS YAIBA', 'NOTE::YAMAHAピアノ常設'] },
+  { id: 'dom-dst', roomIdNum: 2190, name: 'D.Room (15畳)', size_sqm: 25, capacity: 7, hourly_rate: 2500, day_rate: 1200, individual_rate: 500, start_time_offset: 30, features: ['Marshall JCM900 model4100 + 1960A', 'Roland JC-120', 'BASS::MESA M3 CARBINE + AMPEG SVT-810E', 'DRUM::TAMA Starclassic', '30分スタート'] },
+];
+
+export async function fetchSoundStudioDomDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/550', SOUND_STUDIO_DOM_ROOMS, 'Sound Studio DOM', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/626のページソース内<li room-id="...">から実値を確認済み
+export const PIG_STUDIO_ROOMS: BotRoomSpec[] = [
+  { id: 'pig-ast', roomIdNum: 2577, name: 'Ast (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 2480, day_rate: 1350, individual_rate: 500, start_time_offset: 0, features: ['Marshall 900 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT-7PRO + AMPEG 215', 'DRUM::TAMA Starclassic Maple'] },
+  { id: 'pig-bst', roomIdNum: 2578, name: 'Bst (13帖)', size_sqm: 21, capacity: 7, hourly_rate: 2690, day_rate: 1400, individual_rate: 500, start_time_offset: 30, features: ['Marshall JVM410H + 1960A', 'Roland JC-120', 'BASS::AMPEG SVT-3PRO + Eden D410XST8 x2', 'DRUM::DW Design Series Acrylic', '30分スタート'] },
+  { id: 'pig-cst', roomIdNum: 2579, name: 'Cst (11帖)', size_sqm: 18, capacity: 5, hourly_rate: 2480, day_rate: 1350, individual_rate: 500, start_time_offset: 0, features: ['Marshall900 + 1960A', 'Roland JC-120', 'BASS::EBSHD660 + PROLINE2000', 'DRUM::Gretsch Renown Series'] },
+  { id: 'pig-dst', roomIdNum: 2580, name: 'Dst (13帖)', size_sqm: 21, capacity: 7, hourly_rate: 2690, day_rate: 1400, individual_rate: 500, start_time_offset: 30, features: ['Marshall 2000 + 1960A', 'Roland JC-120', 'BASS::Ampeg BR5 + AMPEG 215', 'DRUM::TAMA Starclassic Maple', '30分スタート'] },
+  { id: 'pig-est', roomIdNum: 2581, name: 'Est (11帖・レコーディング対応)', size_sqm: 18, capacity: 5, hourly_rate: 2480, day_rate: 1350, individual_rate: 500, start_time_offset: 0, features: ['Marshall 900 + 1960A', 'Roland JC-120', 'BASS::HARTKE HA2500 + HARTKE 4.5XL', 'DRUM::CANOPUS Birch Series', 'セルフレコ対応'] },
+];
+
+export async function fetchPigStudioDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/626', PIG_STUDIO_ROOMS, 'P.I.G.Studio', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/623のページソース内<li room-id="...">から実値を確認済み
+export const SONIC_BAND_STUDIO_ROOMS: BotRoomSpec[] = [
+  { id: 'sonic-ast', roomIdNum: 2560, name: 'Ast (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 1800, day_rate: 1000, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM2000 + 1960A', 'Roland JC-120', 'BASS::MARKBASS LITTLE MARK III + MARKBASS Standard 104 HF', 'DRUM::Pearl VBL'] },
+  { id: 'sonic-bst', roomIdNum: 2561, name: 'Bst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 1800, day_rate: 1000, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM2000 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT7PRO + SVT-410HE x2', 'DRUM::Pearl VBL'] },
+  { id: 'sonic-cst', roomIdNum: 2562, name: 'Cst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 1800, day_rate: 1000, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM2000 + 1960A', 'Roland JC-120', 'BASS::ORANGE AD200B Black + ORANGE OBC410 + ORANGE OBC115', 'DRUM::Pearl VBL'] },
+];
+
+export async function fetchSonicBandStudioDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/623', SONIC_BAND_STUDIO_ROOMS, 'SONIC BAND STUDIO', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/2245のページソース内<li room-id="...">から実値を確認済み
+// （starttime="60"は「60分刻み＝00分スタート」を意味し、offset相当は0）。
+export const KOYAMA_MAIN_ROOMS: BotRoomSpec[] = [
+  { id: 'koyama-main-ast', roomIdNum: 3937, name: 'Ast (14帖)', size_sqm: 23, capacity: 6, hourly_rate: 2700, day_rate: 1350, individual_rate: 520, start_time_offset: 0, features: ['Marshall JVM 210H + 1960A', 'Roland JC-120', 'Fender TWIN REVERB', 'BASS::Hartke HA3500', 'DRUM::Pearl MCX', 'NOTE::YAMAHA P-225電子ピアノ常設'] },
+  { id: 'koyama-main-bst', roomIdNum: 3938, name: 'Bst (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 2200, day_rate: 1100, individual_rate: 520, start_time_offset: 0, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Hartke HA2500', 'DRUM::Pearl MX'] },
+  { id: 'koyama-main-cst', roomIdNum: 3939, name: 'Cst (13帖)', size_sqm: 21, capacity: 6, hourly_rate: 2600, day_rate: 1300, individual_rate: 520, start_time_offset: 0, features: ['Marshall DSL 100H + 1960A', 'Roland JC-120', 'Fender TWIN REVERB', 'BASS::Hartke HA3500', 'DRUM::Pearl MX', 'NOTE::YAMAHA P-225電子ピアノ常設'] },
+  { id: 'koyama-main-fst', roomIdNum: 3940, name: 'Fst (6.5帖)', size_sqm: 11, capacity: 3, hourly_rate: 1800, day_rate: 900, individual_rate: 520, start_time_offset: 0, features: ['Marshall JCM900 + Roland JC-40', 'BASS::Hartke HA2000', 'DRUM::Pearl MCX'] },
+  { id: 'koyama-main-control', roomIdNum: 3941, name: 'コントロールルーム', size_sqm: 10, capacity: 3, hourly_rate: 1100, day_rate: 1100, individual_rate: 1100, start_time_offset: 0, features: ['AVID Protools 12 / Apple Logic Pro X / STEINBERG Cubase Pro 9', 'RME Fireface 800', 'RME Octamic II x2', 'YAMAHA HS-5 / JBL 4312MkII', 'NOTE::Ast・Fstと隣接、レコーディング用途'] },
+];
+
+export async function fetchKoyamaMainDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/2245', KOYAMA_MAIN_ROOMS, 'スタジオ・コヤーマ本店', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/812のページソース内<li room-id="...">から実値を確認済み。
+// R店は無人営業店舗。
+export const KOYAMA_R_ROOMS: BotRoomSpec[] = [
+  { id: 'koyama-r-1st', roomIdNum: 3627, name: '1st (12帖)', size_sqm: 20, capacity: 6, hourly_rate: 2300, day_rate: 1150, individual_rate: 450, start_time_offset: 0, features: ['Marshall DSL 100H', 'Roland JC-120', 'BASS::Ampeg SVT-350H', 'DRUM::Pearl ELX', 'NOTE::YAMAHA P-225電子ピアノ常設'] },
+  { id: 'koyama-r-2st', roomIdNum: 3628, name: '2st (11帖)', size_sqm: 18, capacity: 6, hourly_rate: 2200, day_rate: 1100, individual_rate: 450, start_time_offset: 0, features: ['Marshall DSL 100H', 'Roland JC-120', 'BASS::Ampeg SVT-350H', 'DRUM::Pearl ELX', 'NOTE::YAMAHA P-515電子ピアノ常設'] },
+  { id: 'koyama-r-3st', roomIdNum: 3629, name: '3st (9帖)', size_sqm: 15, capacity: 4, hourly_rate: 2000, day_rate: 1000, individual_rate: 450, start_time_offset: 0, features: ['Marshall DSL 100H', 'Roland JC-120', 'BASS::Hartke HA2500', 'DRUM::Pearl ELX'] },
+  { id: 'koyama-r-4st', roomIdNum: 3630, name: '4st (8.5帖)', size_sqm: 14, capacity: 4, hourly_rate: 1900, day_rate: 950, individual_rate: 450, start_time_offset: 0, features: ['Marshall DSL 100H', 'Roland JC-120', 'BASS::Ampeg SVT-350H', 'DRUM::Pearl ELX', 'NOTE::YAMAHA P-115電子ピアノ常設'] },
+  { id: 'koyama-r-piano', roomIdNum: 3631, name: 'ピアノルーム (5帖)', size_sqm: 8, capacity: 2, hourly_rate: 1400, day_rate: 700, individual_rate: 450, start_time_offset: 0, features: ['Roland JC-22', 'BASS::Ampeg BA-108V2', 'NOTE::YAMAHA YUS3アップライトピアノ常設'] },
+  { id: 'koyama-r-lesson', roomIdNum: 3632, name: 'レッスンルーム (8帖)', size_sqm: 13, capacity: 2, hourly_rate: 1400, day_rate: 700, individual_rate: 450, start_time_offset: 0, features: ['ミニギターアンプ x2', 'BASS::ミニベースアンプ', 'NOTE::YAMAHA CLP-685電子ピアノ常設、防音室ではないため外音が入る場合あり'] },
+];
+
+export async function fetchKoyamaRDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/812', KOYAMA_R_ROOMS, 'スタジオ・コヤーマR店', baseDate, dayCount);
+}
+
+// room_idはstudi-ol.com/shop/703のページソース内<li room-id="...">から実値を確認済み
+export const MUSIRA_ROOMS: BotRoomSpec[] = [
+  { id: 'musira-a', roomIdNum: 3100, name: 'A Studio (16帖)', size_sqm: 26, capacity: 8, hourly_rate: 3850, day_rate: 2400, individual_rate: 650, start_time_offset: 0, features: ['Marshall JCM900 SL-X', 'Fender Twinreverb', 'Roland Jazz Chorus 120', 'BASS::Ampeg SVT-450H + SVT-810AV', 'DRUM::Ludwig', 'NOTE::YAMAHA Upright YM5アップライトピアノ常設（1h/220円）'] },
+  { id: 'musira-b', roomIdNum: 3101, name: 'B Studio (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 3350, day_rate: 2200, individual_rate: 650, start_time_offset: 0, features: ['Marshall JCM900 Dual Reverb', 'Fender Twinreverb', 'Roland Jazz Chorus 120', 'BASS::Ampeg SVT-450H + SVT-810AV', 'DRUM::Rogers'] },
+  { id: 'musira-c', roomIdNum: 3102, name: 'C Studio (8帖)', size_sqm: 13, capacity: 3, hourly_rate: 2850, day_rate: 2000, individual_rate: 650, start_time_offset: 0, features: ['Marshall JCM900 SL-X', 'Roland Jazz Chorus 120', 'Fender Vibroverb', 'BASS::Ampeg SVT-450H + SVT-810AV', 'DRUM::Rogers'] },
+];
+
+export async function fetchMusiraDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/703', MUSIRA_ROOMS, 'MUSIRA Studio', baseDate, dayCount);
+}

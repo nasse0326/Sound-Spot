@@ -761,6 +761,11 @@ flowchart TD
 | `src/lib/shinjuku-studiol-converter.ts` | コンバーター | スタジオミュージアム新宿店・ヒルバレースタジオ・Sound Studio Vantageの実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック（下北沢のstudi-ol系コンバータと同じBASS::/DRUM::プレフィックス方式） |
 | `src/data/music-man-real.json` | データ | Music man サウンドスタジオ（Reserve1自動同期）全10部屋・22日間の実データ |
 | `src/lib/music-man-converter.ts` | コンバーター | Music manの実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック |
+| `src/data/sound-studio-dom-real.json` / `pig-studio-real.json` / `sonic-band-studio-real.json` / `koyama-main-real.json` / `koyama-r-real.json` / `musira-real.json` | データ | 高円寺エリア追加分6店舗（studi-ol.com自動同期）の全部屋・22日間の実データ |
+| `src/lib/koenji-studiol-converter.ts` | コンバーター | 上記6店舗の実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック（BASS::/DRUM::/NOTE::プレフィックス方式） |
+| `src/data/studio-bayd-koenji-real.json` | データ | STUDIO BAYD 高円寺店（WnSpaceMusic公開API自動同期）全5部屋・22日間の実データ |
+| `src/lib/studio-bayd-converter.ts` | コンバーター | STUDIO BAYD 高円寺店の実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック |
+| `scripts/lib/wnspace-fetcher.ts` | フェッチャー | WnSpaceMusic（STUDIO BAYDチェーン等）向け。ログイン不要の公開REST API (`/api/studios/bookings`) から確定予約一覧を直接取得し、24時間分の空き/予約済みを算出する（HTMLスクレイピング不要） |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

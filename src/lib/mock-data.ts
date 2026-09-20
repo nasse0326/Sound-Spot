@@ -26,6 +26,15 @@ import {
   getVantageRealRooms, VANTAGE_STUDIO,
 } from './shinjuku-studiol-converter';
 import { getMusicManRealRooms, MUSIC_MAN_STUDIO } from './music-man-converter';
+import {
+  getSoundStudioDomRealRooms, SOUND_STUDIO_DOM_STUDIO,
+  getPigStudioRealRooms, PIG_STUDIO_STUDIO,
+  getSonicBandStudioRealRooms, SONIC_BAND_STUDIO_STUDIO,
+  getKoyamaMainRealRooms, KOYAMA_MAIN_STUDIO,
+  getKoyamaRRealRooms, KOYAMA_R_STUDIO,
+  getMusiraRealRooms, MUSIRA_STUDIO,
+} from './koenji-studiol-converter';
+import { getStudioBaydKoenjiRealRooms, STUDIO_BAYD_KOENJI_STUDIO } from './studio-bayd-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -79,6 +88,15 @@ export const MOCK_STUDIOS: Studio[] = [
   NOAH_STUDIOS_META['kichijoji'],
   RINKYDINK_KICHIJOJI_STUDIO,
   PENTA_KICHIJOJI_STUDIO,
+
+  // 高円寺エリア (7店舗)
+  SOUND_STUDIO_DOM_STUDIO,
+  PIG_STUDIO_STUDIO,
+  SONIC_BAND_STUDIO_STUDIO,
+  KOYAMA_MAIN_STUDIO,
+  KOYAMA_R_STUDIO,
+  MUSIRA_STUDIO,
+  STUDIO_BAYD_KOENJI_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -141,6 +159,16 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const rinkyDinkKichijojiRooms = getRinkyDinkKichijojiRooms();
   const pentaKichijojiRooms = getPentaKichijojiRooms();
 
+  // 11. 高円寺エリア (7店舗 / DOM3室・P.I.G.5室・SONIC BAND3室・コヤーマ本店5室・
+  //     コヤーマR店6室・MUSIRA3室・STUDIO BAYD5室)
+  const soundStudioDomRooms = getSoundStudioDomRealRooms(dateStr);
+  const pigStudioRooms = getPigStudioRealRooms(dateStr);
+  const sonicBandStudioRooms = getSonicBandStudioRealRooms(dateStr);
+  const koyamaMainRooms = getKoyamaMainRealRooms(dateStr);
+  const koyamaRRooms = getKoyamaRRealRooms(dateStr);
+  const musiraRooms = getMusiraRealRooms(dateStr);
+  const studioBaydKoenjiRooms = getStudioBaydKoenjiRealRooms(dateStr);
+
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...museumShinjukuRooms, ...hillvalleyRooms, ...vantageRooms, ...musicManRooms,
@@ -148,5 +176,7 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
     ...botIkebukuroRooms, ...vivoRooms, ...gatewayIkebukuroRooms,
     ...andysRooms, ...standbyRooms, ...gourdislandWestRooms, ...gourdislandSouthRooms,
     ...rinkyDinkKichijojiRooms, ...pentaKichijojiRooms,
+    ...soundStudioDomRooms, ...pigStudioRooms, ...sonicBandStudioRooms,
+    ...koyamaMainRooms, ...koyamaRRooms, ...musiraRooms, ...studioBaydKoenjiRooms,
   ];
 }
