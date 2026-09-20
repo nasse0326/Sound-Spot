@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T13:05:36.967Z",
+  "updatedAt": "2026-09-20T16:26:35.625Z",
   "rooms": [
     {
       "id": "node-shinjuku-3Cst",
@@ -2077,7 +2077,7 @@
           "id": "node-3Dst-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3Dst-2026-09-24-1600",
@@ -3843,7 +3843,7 @@
           "id": "node-4Est-2026-09-24-2200",
           "start_time": "2026-09-24T22:00:00+09:00",
           "end_time": "2026-09-24T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-4Est-2026-09-25-1000",
@@ -7153,13 +7153,13 @@
           "id": "node-2Ast-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-2Ast-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-2Ast-2026-09-23-1430",
@@ -10451,19 +10451,19 @@
           "id": "node-5Gst-2026-09-21-1330",
           "start_time": "2026-09-21T13:30:00+09:00",
           "end_time": "2026-09-21T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-5Gst-2026-09-21-1430",
           "start_time": "2026-09-21T14:30:00+09:00",
           "end_time": "2026-09-21T15:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-5Gst-2026-09-21-1530",
           "start_time": "2026-09-21T15:30:00+09:00",
           "end_time": "2026-09-21T16:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-5Gst-2026-09-21-1630",
