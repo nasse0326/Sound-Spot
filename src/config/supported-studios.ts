@@ -913,7 +913,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     name: 'ヨコハマ・セーラスタジオ',
     chainName: 'ヨコハマセーラスタジオ',
     area: '横浜',
-    nearestStation: '横浜駅 徒歩圏内',
+    nearestStation: '桜木町駅 徒歩3分',
     address: '神奈川県横浜市',
     roomCount: 4,
     syncType: 'web_calendar',

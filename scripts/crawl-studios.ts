@@ -1486,7 +1486,7 @@ export async function crawlYokohamaSaila(baseDate: Date, dayCount: number = CRAW
       chain_name: 'ヨコハマセーラスタジオ',
       area: '横浜',
       prefecture: '神奈川県',
-      nearest_station: '横浜駅 徒歩圏内',
+      nearest_station: '桜木町駅 徒歩3分',
       address: '神奈川県横浜市',
       tel: '045-201-4988',
       url: 'https://saila-s.jp/',
