@@ -770,7 +770,9 @@ flowchart TD
 | `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する |
 | `src/lib/funabashi-converter.ts` | コンバーター | STUDIO SUN 西船橋店の実データJSONを `RoomWithSlots` 形式へ正規化変換、およびスタジオパックス船橋店（会員ログイン必須のため静的リスティング、10部屋）を定義するロジック |
 | `src/data/yokohama-saila-real.json` | データ | ヨコハマ・セーラスタジオ（Reserve1.jp自動同期）全4部屋・22日間の実データ |
-| `src/lib/yokohama-converter.ts` | コンバーター | ヨコハマ・セーラスタジオの実データJSONを正規化変換、およびスタジオペンタ横浜店（電話予約のみ静的リスティング、6部屋）・クラウドナインスタジオ横浜北口店（会員登録必須のため静的リスティング、11部屋）を定義するロジック |
+| `src/data/cloud9-yokohama-kitaguchi-real.json` | データ | クラウドナインスタジオ横浜北口店（cloud9-web.jp公開API自動同期）全11部屋・22日間の実データ |
+| `scripts/lib/cloud9-fetcher.ts` | フェッチャー | クラウドナインスタジオ（cloud9-web.jp、2026年2月更新の新予約システム）向け。ログイン不要の公開API (`/api/studio-room-reserved-times`、payload: `{studio_id, reservation_start_at}`）から部屋ごとの15分単位予約済み時刻を取得する。payload形式はNext.jsのJSバンドル（`studio.rooms.reserved.times`のAPI呼び出し実装）を解析して特定した |
+| `src/lib/yokohama-converter.ts` | コンバーター | ヨコハマ・セーラスタジオ、クラウドナインスタジオ横浜北口店の実データJSONを正規化変換、およびスタジオペンタ横浜店（電話予約のみ静的リスティング、6部屋）を定義するロジック |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

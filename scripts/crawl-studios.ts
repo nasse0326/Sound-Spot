@@ -19,6 +19,7 @@ import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
 import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
 import { fetchStudioSunNishiFunabashiDays } from './lib/webtoru-fetcher';
+import { fetchCloud9YokohamaKitaguchiDays } from './lib/cloud9-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -1333,6 +1334,15 @@ export async function crawlStudioSunNishiFunabashi(baseDate: Date, dayCount: num
 }
 
 // -------------------------------------------------------------
+// 横浜エリア追加分（2026-09-21）のうちクラウドナインスタジオ横浜北口店。
+// cloud9-web.jp（2026年2月更新の新予約システム）の公開API（ログイン不要）で
+// 自動巡回可能なことをブラウザでJSバンドル解析の上確認済み（詳細はcloud9-fetcher.ts）。
+// -------------------------------------------------------------
+export async function crawlCloud9YokohamaKitaguchi(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('クラウドナインスタジオ 横浜北口店', fetchCloud9YokohamaKitaguchiDays, 'cloud9-yokohama-kitaguchi-real', baseDate, dayCount, 'cloud9-web.jp');
+}
+
+// -------------------------------------------------------------
 // STUDIO BAYD 高円寺店 (WnSpaceMusic / 独自プラットフォーム、公開REST API直叩き)
 // -------------------------------------------------------------
 const STUDIO_BAYD_KOENJI_ROOM_SPECS: Record<number, {
@@ -1646,6 +1656,7 @@ async function main() {
       crawlStudioBaydKoenji(now, CRAWL_DAY_COUNT),
       crawlStudioSunNishiFunabashi(now, CRAWL_DAY_COUNT),
       crawlYokohamaSaila(now, CRAWL_DAY_COUNT),
+      crawlCloud9YokohamaKitaguchi(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

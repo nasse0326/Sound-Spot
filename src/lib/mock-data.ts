@@ -41,7 +41,7 @@ import {
 } from './funabashi-converter';
 import {
   getPentaYokohamaRooms, PENTA_YOKOHAMA_STUDIO,
-  getCloud9YokohamaKitaguchiRooms, CLOUD9_YOKOHAMA_KITAGUCHI_STUDIO,
+  getCloud9YokohamaKitaguchiRealRooms, CLOUD9_YOKOHAMA_KITAGUCHI_STUDIO,
   getYokohamaSailaRealRooms, YOKOHAMA_SAILA_STUDIO,
 } from './yokohama-converter';
 
@@ -194,7 +194,7 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   // 13. 横浜エリア (3店舗 / スタジオペンタ横浜店6室・クラウドナイン横浜北口店11室・
   //     ヨコハマ・セーラスタジオ4室)
   const pentaYokohamaRooms = getPentaYokohamaRooms();
-  const cloud9YokohamaKitaguchiRooms = getCloud9YokohamaKitaguchiRooms();
+  const cloud9YokohamaKitaguchiRooms = getCloud9YokohamaKitaguchiRealRooms(dateStr);
   const yokohamaSailaRooms = getYokohamaSailaRealRooms(dateStr);
 
   return [
