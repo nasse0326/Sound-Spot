@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T08:13:51.131Z",
+  "updatedAt": "2026-09-21T15:09:01.926Z",
   "rooms": [
     {
       "id": "koyama-main-ast",
@@ -107,7 +107,7 @@
           "id": "slot-koyama-main-ast-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -177,7 +177,7 @@
           "id": "slot-koyama-main-ast-2026-09-22-1000",
           "start_time": "2026-09-22T10:00:00+09:00",
           "end_time": "2026-09-22T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -303,21 +303,21 @@
           "id": "slot-koyama-main-ast-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-koyama-main-ast-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-koyama-main-ast-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -2897,14 +2897,14 @@
           "id": "slot-koyama-main-bst-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
           "id": "slot-koyama-main-bst-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -5403,14 +5403,14 @@
           "id": "slot-koyama-main-bst-2026-10-11-1600",
           "start_time": "2026-10-11T16:00:00+09:00",
           "end_time": "2026-10-11T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
           "id": "slot-koyama-main-bst-2026-10-11-1700",
           "start_time": "2026-10-11T17:00:00+09:00",
           "end_time": "2026-10-11T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -5717,14 +5717,14 @@
           "id": "slot-koyama-main-cst-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-koyama-main-cst-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -5829,14 +5829,14 @@
           "id": "slot-koyama-main-cst-2026-09-22-2000",
           "start_time": "2026-09-22T20:00:00+09:00",
           "end_time": "2026-09-22T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-koyama-main-cst-2026-09-22-2100",
           "start_time": "2026-09-22T21:00:00+09:00",
           "end_time": "2026-09-22T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -5892,7 +5892,7 @@
           "id": "slot-koyama-main-cst-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -8069,14 +8069,14 @@
           "id": "slot-koyama-main-cst-2026-10-10-1600",
           "start_time": "2026-10-10T16:00:00+09:00",
           "end_time": "2026-10-10T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-koyama-main-cst-2026-10-10-1700",
           "start_time": "2026-10-10T17:00:00+09:00",
           "end_time": "2026-10-10T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -8478,14 +8478,14 @@
           "id": "slot-koyama-main-fst-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
           "id": "slot-koyama-main-fst-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
@@ -8513,7 +8513,7 @@
           "id": "slot-koyama-main-fst-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1800
         },
         {
@@ -11269,42 +11269,42 @@
           "id": "slot-koyama-main-control-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
@@ -11381,21 +11381,21 @@
           "id": "slot-koyama-main-control-2026-09-22-1600",
           "start_time": "2026-09-22T16:00:00+09:00",
           "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-22-1700",
           "start_time": "2026-09-22T17:00:00+09:00",
           "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-22-1800",
           "start_time": "2026-09-22T18:00:00+09:00",
           "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
@@ -11633,14 +11633,14 @@
           "id": "slot-koyama-main-control-2026-09-24-1600",
           "start_time": "2026-09-24T16:00:00+09:00",
           "end_time": "2026-09-24T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {
           "id": "slot-koyama-main-control-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1100
         },
         {

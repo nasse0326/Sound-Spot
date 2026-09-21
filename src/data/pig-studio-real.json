@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T08:13:52.907Z",
+  "updatedAt": "2026-09-21T15:09:02.776Z",
   "rooms": [
     {
       "id": "pig-ast",
@@ -126,21 +126,21 @@
           "id": "slot-pig-ast-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-ast-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-ast-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
@@ -189,7 +189,7 @@
           "id": "slot-pig-ast-2026-09-22-1200",
           "start_time": "2026-09-22T12:00:00+09:00",
           "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
@@ -847,14 +847,14 @@
           "id": "slot-pig-ast-2026-09-27-1600",
           "start_time": "2026-09-27T16:00:00+09:00",
           "end_time": "2026-09-27T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-ast-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
@@ -2917,21 +2917,21 @@
           "id": "slot-pig-bst-2026-09-21-2130",
           "start_time": "2026-09-21T21:30:00+09:00",
           "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
           "id": "slot-pig-bst-2026-09-21-2230",
           "start_time": "2026-09-21T22:30:00+09:00",
           "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
           "id": "slot-pig-bst-2026-09-21-2330",
           "start_time": "2026-09-21T23:30:00+09:00",
           "end_time": "2026-09-22T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
@@ -3008,7 +3008,7 @@
           "id": "slot-pig-bst-2026-09-22-1630",
           "start_time": "2026-09-22T16:30:00+09:00",
           "end_time": "2026-09-22T17:30:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2690
         },
         {
@@ -5700,35 +5700,35 @@
           "id": "slot-pig-cst-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-cst-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-cst-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-cst-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-cst-2026-09-22-0600",
           "start_time": "2026-09-22T06:00:00+09:00",
           "end_time": "2026-09-22T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
@@ -6421,14 +6421,14 @@
           "id": "slot-pig-cst-2026-09-27-1500",
           "start_time": "2026-09-27T15:00:00+09:00",
           "end_time": "2026-09-27T16:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2480
         },
         {
           "id": "slot-pig-cst-2026-09-27-1600",
           "start_time": "2026-09-27T16:00:00+09:00",
           "end_time": "2026-09-27T17:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2480
         },
         {
@@ -8498,21 +8498,21 @@
           "id": "slot-pig-dst-2026-09-21-2130",
           "start_time": "2026-09-21T21:30:00+09:00",
           "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
           "id": "slot-pig-dst-2026-09-21-2230",
           "start_time": "2026-09-21T22:30:00+09:00",
           "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
           "id": "slot-pig-dst-2026-09-21-2330",
           "start_time": "2026-09-21T23:30:00+09:00",
           "end_time": "2026-09-22T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
@@ -8547,7 +8547,7 @@
           "id": "slot-pig-dst-2026-09-22-1030",
           "start_time": "2026-09-22T10:30:00+09:00",
           "end_time": "2026-09-22T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
@@ -8624,7 +8624,7 @@
           "id": "slot-pig-dst-2026-09-22-2130",
           "start_time": "2026-09-22T21:30:00+09:00",
           "end_time": "2026-09-22T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2690
         },
         {
@@ -11275,28 +11275,28 @@
           "id": "slot-pig-est-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-est-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-est-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
           "id": "slot-pig-est-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
@@ -11366,7 +11366,7 @@
           "id": "slot-pig-est-2026-09-22-1400",
           "start_time": "2026-09-22T14:00:00+09:00",
           "end_time": "2026-09-22T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {
@@ -11457,7 +11457,7 @@
           "id": "slot-pig-est-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
           "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2480
         },
         {

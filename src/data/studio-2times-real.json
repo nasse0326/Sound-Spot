@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T08:13:50.904Z",
+  "updatedAt": "2026-09-21T15:09:01.933Z",
   "rooms": [
     {
       "id": "2times-ast",
@@ -105,42 +105,42 @@
           "id": "slot-2times-ast-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -623,21 +623,21 @@
           "id": "slot-2times-ast-2026-09-25-2000",
           "start_time": "2026-09-25T20:00:00+09:00",
           "end_time": "2026-09-25T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-25-2100",
           "start_time": "2026-09-25T21:00:00+09:00",
           "end_time": "2026-09-25T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-2times-ast-2026-09-25-2200",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -2909,28 +2909,28 @@
           "id": "slot-2times-bst-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
           "id": "slot-2times-bst-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
           "id": "slot-2times-bst-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
           "id": "slot-2times-bst-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
@@ -2979,14 +2979,14 @@
           "id": "slot-2times-bst-2026-09-22-1200",
           "start_time": "2026-09-22T12:00:00+09:00",
           "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
           "id": "slot-2times-bst-2026-09-22-1300",
           "start_time": "2026-09-22T13:00:00+09:00",
           "end_time": "2026-09-22T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
@@ -5685,42 +5685,42 @@
           "id": "slot-2times-cst-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
@@ -8475,42 +8475,42 @@
           "id": "slot-2times-dst-2026-09-21-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-21-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-21-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-21-2100",
           "start_time": "2026-09-21T21:00:00+09:00",
           "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-21-2200",
           "start_time": "2026-09-21T22:00:00+09:00",
           "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-21-2300",
           "start_time": "2026-09-21T23:00:00+09:00",
           "end_time": "2026-09-22T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
