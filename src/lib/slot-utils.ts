@@ -38,7 +38,7 @@ export function shouldDefaultExpandRoomList(studio: Pick<Studio, 'name'> | null 
  * エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）。
  * カード一覧・タイムラインビュー双方のスタジオ並び順で共通して使う。
  */
-export const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺', '高円寺', '船橋', '横浜'];
+export const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺', '高円寺', '船橋', '横浜', '亀戸・小岩'];
 
 export interface RoomAvailabilityMatch {
   isAvailable: boolean;

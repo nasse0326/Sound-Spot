@@ -767,12 +767,15 @@ flowchart TD
 | `src/lib/studio-bayd-converter.ts` | コンバーター | STUDIO BAYD 高円寺店の実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック |
 | `scripts/lib/wnspace-fetcher.ts` | フェッチャー | WnSpaceMusic（STUDIO BAYDチェーン等）向け。ログイン不要の公開REST API (`/api/studios/bookings`) から確定予約一覧を直接取得し、24時間分の空き/予約済みを算出する（HTMLスクレイピング不要） |
 | `src/data/studiosun-nishifunabashi-real.json` | データ | STUDIO SUN 西船橋店（webtoru.com自動同期）全7部屋・22日間の実データ |
-| `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する |
+| `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する。グリッドの起点時刻（06:00開始/10:00開始等）は店舗ごとに異なるため、レスポンス内のヘッダーラベルから都度自動検出する |
 | `src/lib/funabashi-converter.ts` | コンバーター | STUDIO SUN 西船橋店の実データJSONを `RoomWithSlots` 形式へ正規化変換、およびスタジオパックス船橋店（会員ログイン必須のため静的リスティング、10部屋）を定義するロジック |
 | `src/data/yokohama-saila-real.json` | データ | ヨコハマ・セーラスタジオ（Reserve1.jp自動同期）全4部屋・22日間の実データ |
 | `src/data/cloud9-yokohama-kitaguchi-real.json` | データ | クラウドナインスタジオ横浜北口店（cloud9-web.jp公開API自動同期）全11部屋・22日間の実データ |
 | `scripts/lib/cloud9-fetcher.ts` | フェッチャー | クラウドナインスタジオ（cloud9-web.jp、2026年2月更新の新予約システム）向け。ログイン不要の公開API (`/api/studio-room-reserved-times`、payload: `{studio_id, reservation_start_at}`）から部屋ごとの15分単位予約済み時刻を取得する。payload形式はNext.jsのJSバンドル（`studio.rooms.reserved.times`のAPI呼び出し実装）を解析して特定した |
 | `src/lib/yokohama-converter.ts` | コンバーター | ヨコハマ・セーラスタジオ、クラウドナインスタジオ横浜北口店の実データJSONを正規化変換、およびスタジオペンタ横浜店（電話予約のみ静的リスティング、6部屋）を定義するロジック |
+| `src/data/studio-divo-kameido-real.json` / `studio-2times-real.json` / `soundstudio-m-koiwa-real.json` | データ | 亀戸・小岩エリア追加分3店舗（webtoru.com/studi-ol.com/orpheusrecords.info自動同期）の全部屋・22日間の実データ |
+| `scripts/lib/orpheus-fetcher.ts` | フェッチャー | オルフェウスレコーズ系列（SOUND STUDIO M）向け。ログイン不要のGET (`RoomSituation.php?pno=&yyear=&ymonth=&yday=`) で全室・全日の空き状況HTMLを取得する。同チェーンはstudi-ol.comも別途使うが無人営業時間帯専用のため、有人時間帯を含む全日データが必要な場合はこちらを使う |
+| `src/lib/kameido-koiwa-converter.ts` | コンバーター | Studio DIVO 亀戸・Studio 2Times・SOUND STUDIO M 小岩店の実データJSONを正規化変換するロジック |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

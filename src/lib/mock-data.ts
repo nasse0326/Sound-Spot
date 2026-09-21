@@ -44,6 +44,11 @@ import {
   getCloud9YokohamaKitaguchiRealRooms, CLOUD9_YOKOHAMA_KITAGUCHI_STUDIO,
   getYokohamaSailaRealRooms, YOKOHAMA_SAILA_STUDIO,
 } from './yokohama-converter';
+import {
+  getStudioDivoKameidoRealRooms, STUDIO_DIVO_KAMEIDO_STUDIO,
+  getStudio2TimesRealRooms, STUDIO_2TIMES_STUDIO,
+  getSoundStudioMKoiwaRealRooms, SOUND_STUDIO_M_KOIWA_STUDIO,
+} from './kameido-koiwa-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -115,6 +120,11 @@ export const MOCK_STUDIOS: Studio[] = [
   PENTA_YOKOHAMA_STUDIO,
   CLOUD9_YOKOHAMA_KITAGUCHI_STUDIO,
   YOKOHAMA_SAILA_STUDIO,
+
+  // 亀戸・小岩エリア (3店舗)
+  STUDIO_DIVO_KAMEIDO_STUDIO,
+  STUDIO_2TIMES_STUDIO,
+  SOUND_STUDIO_M_KOIWA_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -197,6 +207,12 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const cloud9YokohamaKitaguchiRooms = getCloud9YokohamaKitaguchiRealRooms(dateStr);
   const yokohamaSailaRooms = getYokohamaSailaRealRooms(dateStr);
 
+  // 14. 亀戸・小岩エリア (3店舗 / Studio DIVO亀戸5室・Studio 2Times4室・
+  //     SOUND STUDIO M小岩店12室)
+  const studioDivoKameidoRooms = getStudioDivoKameidoRealRooms(dateStr);
+  const studio2TimesRooms = getStudio2TimesRealRooms(dateStr);
+  const soundStudioMKoiwaRooms = getSoundStudioMKoiwaRealRooms(dateStr);
+
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...museumShinjukuRooms, ...hillvalleyRooms, ...vantageRooms, ...musicManRooms,
@@ -208,5 +224,6 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
     ...koyamaMainRooms, ...koyamaRRooms, ...musiraRooms, ...studioBaydKoenjiRooms,
     ...studioSunNishiFunabashiRooms, ...packsFunabashiRooms,
     ...pentaYokohamaRooms, ...cloud9YokohamaKitaguchiRooms, ...yokohamaSailaRooms,
+    ...studioDivoKameidoRooms, ...studio2TimesRooms, ...soundStudioMKoiwaRooms,
   ];
 }

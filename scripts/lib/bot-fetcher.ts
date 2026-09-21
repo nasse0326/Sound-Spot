@@ -451,3 +451,20 @@ export async function fetchMusiraDays(
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/703', MUSIRA_ROOMS, 'MUSIRA Studio', baseDate, dayCount);
 }
+
+// 亀戸〜小岩エリア追加分（2026-09-21）。room_idはstudi-ol.com/shop/613のページソース内
+// <li room-id="...">から実値を確認済み。Rec Roomはレコーディング専用（時間単価モデルに
+// 合わないパッケージ料金制の可能性があるが、他店同様hourly_rateモデルで代表値を掲載）。
+export const STUDIO_2TIMES_ROOMS: BotRoomSpec[] = [
+  { id: '2times-ast', roomIdNum: 2507, name: 'Ast (13畳)', size_sqm: 21, capacity: 6, hourly_rate: 2600, day_rate: 2200, individual_rate: 550, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg B2R', 'DRUM::Pearl Export Series'] },
+  { id: '2times-bst', roomIdNum: 2508, name: 'Bst (11畳)', size_sqm: 18, capacity: 5, hourly_rate: 2350, day_rate: 1900, individual_rate: 550, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg B2R', 'DRUM::Pearl Export Series'] },
+  { id: '2times-cst', roomIdNum: 2509, name: 'Cst (9畳)', size_sqm: 15, capacity: 4, hourly_rate: 2100, day_rate: 1600, individual_rate: 550, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg B2R', 'DRUM::Pearl Export Series'] },
+  { id: '2times-dst', roomIdNum: 2510, name: 'Dst (9畳)', size_sqm: 15, capacity: 4, hourly_rate: 2100, day_rate: 1600, individual_rate: 550, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg B2R', 'DRUM::Pearl Export Series'] },
+];
+
+export async function fetchStudio2TimesDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/613', STUDIO_2TIMES_ROOMS, 'Studio 2Times', baseDate, dayCount);
+}

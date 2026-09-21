@@ -4,7 +4,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -924,6 +924,61 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '045-201-4988',
     websiteUrl: 'https://saila-s.jp/',
     features: ['バンド会員はネット予約可', 'レコーディング対応(Bst)', '個人練習・深夜は電話予約のみ'],
+  },
+
+  // -------------------------------------------------------------
+  // 亀戸・小岩エリア (3店舗 / 計21部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'studio-divo-kameido',
+    name: 'Studio DIVO 亀戸',
+    chainName: 'Studio DIVO',
+    area: '亀戸・小岩',
+    nearestStation: 'JR亀戸駅 徒歩4分',
+    address: '東京都江東区亀戸1-34-11',
+    roomCount: 5,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'webtoru.com (自動巡回)',
+    is24Hours: false,
+    businessHours: '月火水土日14:00〜22:00 / 木13:00〜22:00 / 金13:00〜23:00',
+    tel: '03-5858-9197',
+    websiteUrl: 'https://studio-divo.com/',
+    features: ['駅徒歩4分', 'レコーディング併設(D-Lab)', '楽器レンタル無料'],
+  },
+  {
+    id: 'studio-2times',
+    name: 'Studio 2Times',
+    chainName: 'Studio 2Times',
+    area: '亀戸・小岩',
+    nearestStation: 'JR小岩駅 南口 徒歩4分',
+    address: '東京都江戸川区南小岩8丁目10-2',
+    roomCount: 4,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'studi-ol.com (自動巡回)',
+    is24Hours: false,
+    businessHours: '12:00〜24:00（時間外は電話・店頭のみ）',
+    tel: '03-3672-8607',
+    websiteUrl: 'https://studio2times.fc2.page/',
+    features: ['駅徒歩4分', 'セルフレコーディング対応', '喫煙可'],
+  },
+  {
+    id: 'soundstudio-m-koiwa',
+    name: 'SOUND STUDIO M 小岩店',
+    chainName: 'SOUND STUDIO M',
+    area: '亀戸・小岩',
+    nearestStation: 'JR小岩駅 北口 徒歩3分',
+    address: '東京都江戸川区西小岩1-27-16 オルフェウスビル3〜4F',
+    roomCount: 12,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'orpheusrecords.info (自動巡回)',
+    is24Hours: true,
+    businessHours: '有人：平日12:00〜23:00・土日祝9:00〜23:00 / 無人：深夜〜早朝',
+    tel: '03-3672-6316',
+    websiteUrl: 'https://orpheusrecords.jp/ssm/koiwa/',
+    features: ['駅徒歩3分', '全12部屋の大型施設', '深夜・早朝はスマートロック無人営業'],
   },
 ];
 

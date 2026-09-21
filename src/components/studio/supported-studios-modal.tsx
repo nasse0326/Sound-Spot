@@ -156,7 +156,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
 
   // エリアごとの店舗数
   const areaCounts = useMemo(() => {
-    const counts = { all: SUPPORTED_STUDIOS.length, '渋谷': 0, '新宿': 0, '秋葉原': 0, '高田馬場': 0, '池袋': 0, '下北沢': 0, '吉祥寺': 0, '高円寺': 0, '船橋': 0, '横浜': 0 };
+    const counts = { all: SUPPORTED_STUDIOS.length, '渋谷': 0, '新宿': 0, '秋葉原': 0, '高田馬場': 0, '池袋': 0, '下北沢': 0, '吉祥寺': 0, '高円寺': 0, '船橋': 0, '横浜': 0, '亀戸・小岩': 0 };
     SUPPORTED_STUDIOS.forEach((st) => {
       if (st.area in counts) {
         counts[st.area as keyof typeof counts]++;
@@ -218,7 +218,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                     稼働中スタジオ
                   </span>
                   <span className="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:inline">
-                    首都圏10エリア・{areaCounts.all}店舗 / {totalRooms}部屋 実データ対応
+                    首都圏11エリア・{areaCounts.all}店舗 / {totalRooms}部屋 実データ対応
                   </span>
                 </div>
                 <h2 className="text-base sm:text-xl font-black tracking-tight text-slate-900 dark:text-white mt-1 truncate">
@@ -368,6 +368,17 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                 >
                   横浜 ({areaCounts['横浜']})
                 </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedArea('亀戸・小岩')}
+                  className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
+                    selectedArea === '亀戸・小岩'
+                      ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
+                      : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
+                  }`}
+                >
+                  亀戸・小岩 ({areaCounts['亀戸・小岩']})
+                </button>
               </div>
               {showLeftFade && (
                 <div className="pointer-events-none absolute left-0 top-0 bottom-0.5 sm:bottom-0 w-6 bg-gradient-to-r from-stone-50 dark:from-slate-950/90 to-transparent" />
@@ -405,14 +416,14 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
               <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応エリア</span>
-                <p className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-0.5">10 エリア</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">渋谷・新宿・秋葉原・高田馬場・池袋・下北沢・吉祥寺・高円寺・船橋・横浜</span>
+                <p className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-0.5">11 エリア</p>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">渋谷・新宿・秋葉原・高田馬場・池袋・下北沢・吉祥寺・高円寺・船橋・横浜・亀戸・小岩</span>
               </div>
               <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応スタジオ数</span>
                 <p className="text-sm sm:text-base font-extrabold text-emerald-700 dark:text-emerald-400 mt-0.5">{areaCounts.all} 店舗</p>
                 <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">
-                  渋{areaCounts['渋谷']} / 新{areaCounts['新宿']} / 秋{areaCounts['秋葉原']} / 馬{areaCounts['高田馬場']} / 池{areaCounts['池袋']} / 下{areaCounts['下北沢']} / 吉{areaCounts['吉祥寺']} / 高{areaCounts['高円寺']} / 船{areaCounts['船橋']} / 横{areaCounts['横浜']}
+                  渋{areaCounts['渋谷']} / 新{areaCounts['新宿']} / 秋{areaCounts['秋葉原']} / 馬{areaCounts['高田馬場']} / 池{areaCounts['池袋']} / 下{areaCounts['下北沢']} / 吉{areaCounts['吉祥寺']} / 高{areaCounts['高円寺']} / 船{areaCounts['船橋']} / 横{areaCounts['横浜']} / 亀{areaCounts['亀戸・小岩']}
                 </span>
               </div>
               <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">

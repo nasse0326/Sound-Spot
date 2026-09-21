@@ -75,6 +75,12 @@ export async function fetchWebtoruShopDays(
 
       const html = await res.text();
 
+      // グリッドの起点時刻は店舗により異なる（STUDIO SUN西船橋店は06:00始まりだが、
+      // Studio DIVO亀戸は10:00始まり等）。決め打ちにせず、レスポンス内のヘッダーラベル
+      // （最初の<td class="hour-label">）から都度検出する。
+      const headerHourMatch = html.match(/<td class="hour-label">(\d{2})<\/td>/);
+      const baseHour = headerHourMatch ? parseInt(headerHourMatch[1], 10) : 6;
+
       // 部屋ごとの行を「<button ... data="X">...</button>」〜次の</tr>までの範囲で抽出し、
       // その中の <div class="reserve" style="...width:A%;left:B%;"> を全て拾う。
       const roomRowMatches = [...html.matchAll(/<button class="room[^"]*"\s+data="(\d+)">([\s\S]*?)<\/tr>/g)];
@@ -86,7 +92,7 @@ export async function fetchWebtoruShopDays(
         const rowHtml = rowMatch[2];
         const barMatches = [...rowHtml.matchAll(/<div class="reserve" style="[^"]*width:([\d.]+)%;left:([\d.]+)%;"><\/div>/g)];
 
-        // 06:00起点、24時間(1440分)グリッド上の占有区間（予約済み or 営業時間外、いずれも「空きなし」扱い）。
+        // baseHour起点、24時間(1440分)グリッド上の占有区間（予約済み or 営業時間外、いずれも「空きなし」扱い）。
         const occupied: { start: number; end: number }[] = barMatches.map((m) => {
           const widthPct = parseFloat(m[1]);
           const leftPct = parseFloat(m[2]);
@@ -105,7 +111,7 @@ export async function fetchWebtoruShopDays(
           const colStartMin = colIdx * 60;
           const colEndMin = colStartMin + 60;
           const isOccupied = occupied.some((o) => o.start < colEndMin && o.end > colStartMin);
-          const hour = 6 + colIdx; // 列0 = 06:00
+          const hour = baseHour + colIdx; // 列0 = baseHour（店舗ごとにヘッダーから検出）
 
           slotsByRoom[roomIdNum].push({
             id: `slot-webtoru-${shopId}-${roomIdNum}-${dateStr}-${String(colIdx).padStart(2, '0')}`,
@@ -158,4 +164,24 @@ export async function fetchStudioSunNishiFunabashiDays(
   dayCount: number = CRAWL_DAY_COUNT
 ): Promise<WebtoruRoomData[]> {
   return fetchWebtoruShopDays(3, STUDIOSUN_NISHIFUNABASHI_ROOMS, 'STUDIO SUN 西船橋店', baseDate, dayCount);
+}
+
+// 亀戸〜小岩エリア追加分（2026-09-21）。room_idはwebtoru.com/shop/169/calendarのPOST
+// レスポンス内<button class="room" data="...">から実値を確認済み。全室00分スタート
+// （このカレンダーは10:00始まりのグリッドで、fetchWebtoruShopDaysがヘッダーラベルから
+// 自動検出するため店舗差異を個別対応する必要はない）。Ast(D-amp記載なし＝公式サイトの
+// 機材リストページに常設ドラム記載が無い、他室と異なり実際に無い可能性がある)。
+export const STUDIO_DIVO_KAMEIDO_ROOMS: WebtoruRoomSpec[] = [
+  { id: 'divo-ast', roomIdNum: 427, name: 'Ast (14帖)', size_sqm: 23, capacity: 6, hourly_rate: 2600, day_rate: 1800, individual_rate: 800, start_time_offset: 0, features: ['Peavey 5150', 'Marshall JCM900', 'Roland JC-120', 'BASS::ULTRABASS BXD3000H', 'NOTE::Yamaha P-225B電子ピアノ常設（無料）、常設ドラムセットの記載なし'] },
+  { id: 'divo-bst', roomIdNum: 429, name: 'Bst (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2300, day_rate: 1600, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3 PRO', 'DRUM::TAMA STARCLASSIC', 'NOTE::Yamaha P-105電子ピアノ常設（無料）'] },
+  { id: 'divo-cst', roomIdNum: 430, name: 'Cst (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2300, day_rate: 1600, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Peavey Deltabass + 810TVX', 'DRUM::TAMA STARCLASSIC', 'NOTE::Korg SP-280電子ピアノ常設（無料）'] },
+  { id: 'divo-dst', roomIdNum: 431, name: 'Dst (18帖)', size_sqm: 30, capacity: 8, hourly_rate: 3200, day_rate: 2400, individual_rate: 800, start_time_offset: 0, features: ['Peavey 5150', 'Marshall JCM900', 'Roland JC-120', 'BASS::BEHRINGER ULTRABASS BX4500H', 'DRUM::TAMA STARCLASSIC', 'NOTE::Yamaha P-515電子ピアノ常設（無料）'] },
+  { id: 'divo-est', roomIdNum: 428, name: 'Est (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2300, day_rate: 1600, individual_rate: 700, start_time_offset: 0, features: ['Marshall JCM900 sl-x', 'Roland JC-120', 'BASS::BEHRINGER ULTRABASS BX4500H', 'DRUM::TAMA ROCKSTAR', 'NOTE::Yamaha YDP-131電子ピアノ常設（無料）'] },
+];
+
+export async function fetchStudioDivoKameidoDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<WebtoruRoomData[]> {
+  return fetchWebtoruShopDays(169, STUDIO_DIVO_KAMEIDO_ROOMS, 'Studio DIVO 亀戸', baseDate, dayCount);
 }

@@ -18,8 +18,10 @@ import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
 import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
-import { fetchStudioSunNishiFunabashiDays } from './lib/webtoru-fetcher';
+import { fetchStudioSunNishiFunabashiDays, fetchStudioDivoKameidoDays } from './lib/webtoru-fetcher';
 import { fetchCloud9YokohamaKitaguchiDays } from './lib/cloud9-fetcher';
+import { fetchStudio2TimesDays } from './lib/bot-fetcher';
+import { fetchSoundStudioMKoiwaDays } from './lib/orpheus-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -1343,6 +1345,26 @@ export async function crawlCloud9YokohamaKitaguchi(baseDate: Date, dayCount: num
 }
 
 // -------------------------------------------------------------
+// 亀戸〜小岩エリア追加分（2026-09-21）。
+// ・Studio DIVO 亀戸: webtoru.com（ログイン不要でカレンダー閲覧可能）
+// ・Studio 2Times: studi-ol.com（ログイン不要でカレンダー閲覧可能）
+// ・SOUND STUDIO M 小岩店: studi-ol.com（無人営業時間帯のみ）とorpheusrecords.info
+//   （有人営業時間帯を含む全室・全日データ）のハイブリッド構成。後者の方が全日を
+//   カバーできるためorpheusrecords.infoを採用（詳細はorpheus-fetcher.ts）。
+// -------------------------------------------------------------
+export async function crawlStudioDivoKameido(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('Studio DIVO 亀戸', fetchStudioDivoKameidoDays, 'studio-divo-kameido-real', baseDate, dayCount, 'webtoru.com');
+}
+
+export async function crawlStudio2Times(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('Studio 2Times', fetchStudio2TimesDays, 'studio-2times-real', baseDate, dayCount, 'studi-ol.com');
+}
+
+export async function crawlSoundStudioMKoiwa(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('SOUND STUDIO M 小岩店', fetchSoundStudioMKoiwaDays, 'soundstudio-m-koiwa-real', baseDate, dayCount, 'orpheusrecords.info');
+}
+
+// -------------------------------------------------------------
 // STUDIO BAYD 高円寺店 (WnSpaceMusic / 独自プラットフォーム、公開REST API直叩き)
 // -------------------------------------------------------------
 const STUDIO_BAYD_KOENJI_ROOM_SPECS: Record<number, {
@@ -1657,6 +1679,9 @@ async function main() {
       crawlStudioSunNishiFunabashi(now, CRAWL_DAY_COUNT),
       crawlYokohamaSaila(now, CRAWL_DAY_COUNT),
       crawlCloud9YokohamaKitaguchi(now, CRAWL_DAY_COUNT),
+      crawlStudioDivoKameido(now, CRAWL_DAY_COUNT),
+      crawlStudio2Times(now, CRAWL_DAY_COUNT),
+      crawlSoundStudioMKoiwa(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');
