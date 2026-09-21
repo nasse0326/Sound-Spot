@@ -178,10 +178,26 @@ export async function fetchReserve1Days(
         // 当該部屋だけ空き状況が正しく突き合わせられなくなる不具合が過去に発生した。
         // ラベルに分数の明記が無い店舗（渋谷ゲートウェイ等）は従来通り0分始まりとして扱う。
         const minuteMatch = firstCell.match(/(\d{1,2})分[～~]/);
-        let currentHour = config.openHour;
-        let currentMin = minuteMatch ? parseInt(minuteMatch[1], 10) : 0;
         const slotCells = cells.slice(1, cells.length - 1);
         const slotAttrs = cellAttrs.slice(1, cellAttrs.length - 1);
+
+        // ゲートウェイ柏店のように、ラベルの「30分～」表記と、実データセル側の先頭
+        // koma_spNフィラーセル（この端数分だけ時刻を進めるためのプレースホルダ）の
+        // 両方で同じオフセットを表現している店舗がある。この場合ラベルからも
+        // currentMinを30分に設定した上で、さらにフィラーセルの30分も加算してしまうと
+        // 合計60分分ズレて（例: 実際は9:30開始の部屋が10:00開始として記録されてしまい）、
+        // start_time_offset=30の期待値と実データの時刻が食い違い、フロント側のスロット
+        // 突き合わせで該当枠が「未取得」扱いになる不具合が発生した（ゲートウェイ柏店
+        // 5st/6st/7stで実際に発生、2026-09-21）。先頭セルが既にkoma_spNフィラーの場合は
+        // そちらだけでオフセットが表現されるため、ラベル側の分数は二重加算を避けるため
+        // 使わない（0分始まりのまま渡し、フィラーセル自身の消費で正しく前進させる）。
+        const firstSlotClassName = slotAttrs.length > 0
+          ? (((slotAttrs[0] || '') + ' ' + (slotCells[0] || '')).match(/class=["']([^"']+)["']/i)?.[1] || '')
+          : '';
+        const hasLeadingFillerCell = /koma_sp\d+/.test(firstSlotClassName);
+
+        let currentHour = config.openHour;
+        let currentMin = (minuteMatch && !hasLeadingFillerCell) ? parseInt(minuteMatch[1], 10) : 0;
 
         const roomKey = stMatch ? stMatch[1] : (codeMatch ? toHalfWidth(codeMatch[1]).toUpperCase() : (letterStudioMatch ? `${letterStudioMatch[1].toUpperCase()}-STUDIO` : firstCell));
 
