@@ -1,155 +1,11 @@
 {
-  "updatedAt": "2026-09-20T23:28:04.016Z",
+  "updatedAt": "2026-09-21T08:16:18.107Z",
   "rooms": [
     {
       "id": "og-baba-break",
       "name": "Break (7帖)",
       "staffId": 2,
       "slots": [
-        {
-          "id": "slot-og-baba-break-20260920-0000",
-          "start_time": "2026-09-20T00:00:00+09:00",
-          "end_time": "2026-09-20T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0100",
-          "start_time": "2026-09-20T01:00:00+09:00",
-          "end_time": "2026-09-20T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0200",
-          "start_time": "2026-09-20T02:00:00+09:00",
-          "end_time": "2026-09-20T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0300",
-          "start_time": "2026-09-20T03:00:00+09:00",
-          "end_time": "2026-09-20T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0400",
-          "start_time": "2026-09-20T04:00:00+09:00",
-          "end_time": "2026-09-20T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0500",
-          "start_time": "2026-09-20T05:00:00+09:00",
-          "end_time": "2026-09-20T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0600",
-          "start_time": "2026-09-20T06:00:00+09:00",
-          "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0700",
-          "start_time": "2026-09-20T07:00:00+09:00",
-          "end_time": "2026-09-20T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0800",
-          "start_time": "2026-09-20T08:00:00+09:00",
-          "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-0900",
-          "start_time": "2026-09-20T09:00:00+09:00",
-          "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1000",
-          "start_time": "2026-09-20T10:00:00+09:00",
-          "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1100",
-          "start_time": "2026-09-20T11:00:00+09:00",
-          "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1200",
-          "start_time": "2026-09-20T12:00:00+09:00",
-          "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1300",
-          "start_time": "2026-09-20T13:00:00+09:00",
-          "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1400",
-          "start_time": "2026-09-20T14:00:00+09:00",
-          "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1500",
-          "start_time": "2026-09-20T15:00:00+09:00",
-          "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1600",
-          "start_time": "2026-09-20T16:00:00+09:00",
-          "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1700",
-          "start_time": "2026-09-20T17:00:00+09:00",
-          "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1800",
-          "start_time": "2026-09-20T18:00:00+09:00",
-          "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-1900",
-          "start_time": "2026-09-20T19:00:00+09:00",
-          "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-2000",
-          "start_time": "2026-09-20T20:00:00+09:00",
-          "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-2100",
-          "start_time": "2026-09-20T21:00:00+09:00",
-          "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-2200",
-          "start_time": "2026-09-20T22:00:00+09:00",
-          "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-break-20260920-2300",
-          "start_time": "2026-09-20T23:00:00+09:00",
-          "end_time": "2026-09-21T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-baba-break-20260921-0000",
           "start_time": "2026-09-21T00:00:00+09:00",
@@ -226,7 +82,7 @@
           "id": "slot-og-baba-break-20260921-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-1300",
@@ -244,37 +100,37 @@
           "id": "slot-og-baba-break-20260921-1500",
           "start_time": "2026-09-21T15:00:00+09:00",
           "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-1600",
           "start_time": "2026-09-21T16:00:00+09:00",
           "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-1700",
           "start_time": "2026-09-21T17:00:00+09:00",
           "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260921-2100",
@@ -940,19 +796,19 @@
           "id": "slot-og-baba-break-20260926-1100",
           "start_time": "2026-09-26T11:00:00+09:00",
           "end_time": "2026-09-26T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260926-1200",
           "start_time": "2026-09-26T12:00:00+09:00",
           "end_time": "2026-09-26T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260926-1300",
           "start_time": "2026-09-26T13:00:00+09:00",
           "end_time": "2026-09-26T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260926-1400",
@@ -982,13 +838,13 @@
           "id": "slot-og-baba-break-20260926-1800",
           "start_time": "2026-09-26T18:00:00+09:00",
           "end_time": "2026-09-26T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260926-1900",
           "start_time": "2026-09-26T19:00:00+09:00",
           "end_time": "2026-09-26T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-break-20260926-2000",
@@ -3173,6 +3029,150 @@
           "start_time": "2026-10-11T23:00:00+09:00",
           "end_time": "2026-10-12T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0000",
+          "start_time": "2026-10-12T00:00:00+09:00",
+          "end_time": "2026-10-12T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0100",
+          "start_time": "2026-10-12T01:00:00+09:00",
+          "end_time": "2026-10-12T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0200",
+          "start_time": "2026-10-12T02:00:00+09:00",
+          "end_time": "2026-10-12T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0300",
+          "start_time": "2026-10-12T03:00:00+09:00",
+          "end_time": "2026-10-12T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0400",
+          "start_time": "2026-10-12T04:00:00+09:00",
+          "end_time": "2026-10-12T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0500",
+          "start_time": "2026-10-12T05:00:00+09:00",
+          "end_time": "2026-10-12T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0600",
+          "start_time": "2026-10-12T06:00:00+09:00",
+          "end_time": "2026-10-12T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0700",
+          "start_time": "2026-10-12T07:00:00+09:00",
+          "end_time": "2026-10-12T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0800",
+          "start_time": "2026-10-12T08:00:00+09:00",
+          "end_time": "2026-10-12T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-0900",
+          "start_time": "2026-10-12T09:00:00+09:00",
+          "end_time": "2026-10-12T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1000",
+          "start_time": "2026-10-12T10:00:00+09:00",
+          "end_time": "2026-10-12T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1100",
+          "start_time": "2026-10-12T11:00:00+09:00",
+          "end_time": "2026-10-12T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1200",
+          "start_time": "2026-10-12T12:00:00+09:00",
+          "end_time": "2026-10-12T13:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1300",
+          "start_time": "2026-10-12T13:00:00+09:00",
+          "end_time": "2026-10-12T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1400",
+          "start_time": "2026-10-12T14:00:00+09:00",
+          "end_time": "2026-10-12T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1500",
+          "start_time": "2026-10-12T15:00:00+09:00",
+          "end_time": "2026-10-12T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1600",
+          "start_time": "2026-10-12T16:00:00+09:00",
+          "end_time": "2026-10-12T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1700",
+          "start_time": "2026-10-12T17:00:00+09:00",
+          "end_time": "2026-10-12T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1800",
+          "start_time": "2026-10-12T18:00:00+09:00",
+          "end_time": "2026-10-12T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-1900",
+          "start_time": "2026-10-12T19:00:00+09:00",
+          "end_time": "2026-10-12T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-2000",
+          "start_time": "2026-10-12T20:00:00+09:00",
+          "end_time": "2026-10-12T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-2100",
+          "start_time": "2026-10-12T21:00:00+09:00",
+          "end_time": "2026-10-12T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-2200",
+          "start_time": "2026-10-12T22:00:00+09:00",
+          "end_time": "2026-10-12T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-break-20261012-2300",
+          "start_time": "2026-10-12T23:00:00+09:00",
+          "end_time": "2026-10-13T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -3181,150 +3181,6 @@
       "name": "Conect (7帖・30分スタート)",
       "staffId": 3,
       "slots": [
-        {
-          "id": "slot-og-baba-conect-20260920-0000",
-          "start_time": "2026-09-20T00:00:00+09:00",
-          "end_time": "2026-09-20T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0100",
-          "start_time": "2026-09-20T01:00:00+09:00",
-          "end_time": "2026-09-20T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0200",
-          "start_time": "2026-09-20T02:00:00+09:00",
-          "end_time": "2026-09-20T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0300",
-          "start_time": "2026-09-20T03:00:00+09:00",
-          "end_time": "2026-09-20T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0400",
-          "start_time": "2026-09-20T04:00:00+09:00",
-          "end_time": "2026-09-20T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0500",
-          "start_time": "2026-09-20T05:00:00+09:00",
-          "end_time": "2026-09-20T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0600",
-          "start_time": "2026-09-20T06:00:00+09:00",
-          "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0700",
-          "start_time": "2026-09-20T07:00:00+09:00",
-          "end_time": "2026-09-20T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0800",
-          "start_time": "2026-09-20T08:00:00+09:00",
-          "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-0900",
-          "start_time": "2026-09-20T09:00:00+09:00",
-          "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1000",
-          "start_time": "2026-09-20T10:00:00+09:00",
-          "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1100",
-          "start_time": "2026-09-20T11:00:00+09:00",
-          "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1200",
-          "start_time": "2026-09-20T12:00:00+09:00",
-          "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1300",
-          "start_time": "2026-09-20T13:00:00+09:00",
-          "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1400",
-          "start_time": "2026-09-20T14:00:00+09:00",
-          "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1500",
-          "start_time": "2026-09-20T15:00:00+09:00",
-          "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1600",
-          "start_time": "2026-09-20T16:00:00+09:00",
-          "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1700",
-          "start_time": "2026-09-20T17:00:00+09:00",
-          "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1800",
-          "start_time": "2026-09-20T18:00:00+09:00",
-          "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-1900",
-          "start_time": "2026-09-20T19:00:00+09:00",
-          "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-2000",
-          "start_time": "2026-09-20T20:00:00+09:00",
-          "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-2100",
-          "start_time": "2026-09-20T21:00:00+09:00",
-          "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-2200",
-          "start_time": "2026-09-20T22:00:00+09:00",
-          "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-conect-20260920-2300",
-          "start_time": "2026-09-20T23:00:00+09:00",
-          "end_time": "2026-09-21T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-baba-conect-20260921-0000",
           "start_time": "2026-09-21T00:00:00+09:00",
@@ -3401,7 +3257,7 @@
           "id": "slot-og-baba-conect-20260921-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-1300",
@@ -3419,37 +3275,37 @@
           "id": "slot-og-baba-conect-20260921-1500",
           "start_time": "2026-09-21T15:00:00+09:00",
           "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-1600",
           "start_time": "2026-09-21T16:00:00+09:00",
           "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-1700",
           "start_time": "2026-09-21T17:00:00+09:00",
           "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-conect-20260921-2100",
@@ -6348,6 +6204,150 @@
           "start_time": "2026-10-11T23:00:00+09:00",
           "end_time": "2026-10-12T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0000",
+          "start_time": "2026-10-12T00:00:00+09:00",
+          "end_time": "2026-10-12T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0100",
+          "start_time": "2026-10-12T01:00:00+09:00",
+          "end_time": "2026-10-12T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0200",
+          "start_time": "2026-10-12T02:00:00+09:00",
+          "end_time": "2026-10-12T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0300",
+          "start_time": "2026-10-12T03:00:00+09:00",
+          "end_time": "2026-10-12T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0400",
+          "start_time": "2026-10-12T04:00:00+09:00",
+          "end_time": "2026-10-12T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0500",
+          "start_time": "2026-10-12T05:00:00+09:00",
+          "end_time": "2026-10-12T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0600",
+          "start_time": "2026-10-12T06:00:00+09:00",
+          "end_time": "2026-10-12T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0700",
+          "start_time": "2026-10-12T07:00:00+09:00",
+          "end_time": "2026-10-12T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0800",
+          "start_time": "2026-10-12T08:00:00+09:00",
+          "end_time": "2026-10-12T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-0900",
+          "start_time": "2026-10-12T09:00:00+09:00",
+          "end_time": "2026-10-12T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1000",
+          "start_time": "2026-10-12T10:00:00+09:00",
+          "end_time": "2026-10-12T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1100",
+          "start_time": "2026-10-12T11:00:00+09:00",
+          "end_time": "2026-10-12T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1200",
+          "start_time": "2026-10-12T12:00:00+09:00",
+          "end_time": "2026-10-12T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1300",
+          "start_time": "2026-10-12T13:00:00+09:00",
+          "end_time": "2026-10-12T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1400",
+          "start_time": "2026-10-12T14:00:00+09:00",
+          "end_time": "2026-10-12T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1500",
+          "start_time": "2026-10-12T15:00:00+09:00",
+          "end_time": "2026-10-12T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1600",
+          "start_time": "2026-10-12T16:00:00+09:00",
+          "end_time": "2026-10-12T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1700",
+          "start_time": "2026-10-12T17:00:00+09:00",
+          "end_time": "2026-10-12T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1800",
+          "start_time": "2026-10-12T18:00:00+09:00",
+          "end_time": "2026-10-12T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-1900",
+          "start_time": "2026-10-12T19:00:00+09:00",
+          "end_time": "2026-10-12T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-2000",
+          "start_time": "2026-10-12T20:00:00+09:00",
+          "end_time": "2026-10-12T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-2100",
+          "start_time": "2026-10-12T21:00:00+09:00",
+          "end_time": "2026-10-12T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-2200",
+          "start_time": "2026-10-12T22:00:00+09:00",
+          "end_time": "2026-10-12T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-conect-20261012-2300",
+          "start_time": "2026-10-12T23:00:00+09:00",
+          "end_time": "2026-10-13T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -6356,150 +6356,6 @@
       "name": "Digi (11帖)",
       "staffId": 4,
       "slots": [
-        {
-          "id": "slot-og-baba-digi-20260920-0000",
-          "start_time": "2026-09-20T00:00:00+09:00",
-          "end_time": "2026-09-20T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0100",
-          "start_time": "2026-09-20T01:00:00+09:00",
-          "end_time": "2026-09-20T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0200",
-          "start_time": "2026-09-20T02:00:00+09:00",
-          "end_time": "2026-09-20T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0300",
-          "start_time": "2026-09-20T03:00:00+09:00",
-          "end_time": "2026-09-20T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0400",
-          "start_time": "2026-09-20T04:00:00+09:00",
-          "end_time": "2026-09-20T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0500",
-          "start_time": "2026-09-20T05:00:00+09:00",
-          "end_time": "2026-09-20T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0600",
-          "start_time": "2026-09-20T06:00:00+09:00",
-          "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0700",
-          "start_time": "2026-09-20T07:00:00+09:00",
-          "end_time": "2026-09-20T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0800",
-          "start_time": "2026-09-20T08:00:00+09:00",
-          "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-0900",
-          "start_time": "2026-09-20T09:00:00+09:00",
-          "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1000",
-          "start_time": "2026-09-20T10:00:00+09:00",
-          "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1100",
-          "start_time": "2026-09-20T11:00:00+09:00",
-          "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1200",
-          "start_time": "2026-09-20T12:00:00+09:00",
-          "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1300",
-          "start_time": "2026-09-20T13:00:00+09:00",
-          "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1400",
-          "start_time": "2026-09-20T14:00:00+09:00",
-          "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1500",
-          "start_time": "2026-09-20T15:00:00+09:00",
-          "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1600",
-          "start_time": "2026-09-20T16:00:00+09:00",
-          "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1700",
-          "start_time": "2026-09-20T17:00:00+09:00",
-          "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1800",
-          "start_time": "2026-09-20T18:00:00+09:00",
-          "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-1900",
-          "start_time": "2026-09-20T19:00:00+09:00",
-          "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-2000",
-          "start_time": "2026-09-20T20:00:00+09:00",
-          "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-2100",
-          "start_time": "2026-09-20T21:00:00+09:00",
-          "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-2200",
-          "start_time": "2026-09-20T22:00:00+09:00",
-          "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-digi-20260920-2300",
-          "start_time": "2026-09-20T23:00:00+09:00",
-          "end_time": "2026-09-21T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-baba-digi-20260921-0000",
           "start_time": "2026-09-21T00:00:00+09:00",
@@ -6576,13 +6432,13 @@
           "id": "slot-og-baba-digi-20260921-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260921-1300",
           "start_time": "2026-09-21T13:00:00+09:00",
           "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260921-1400",
@@ -6606,7 +6462,7 @@
           "id": "slot-og-baba-digi-20260921-1700",
           "start_time": "2026-09-21T17:00:00+09:00",
           "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260921-1800",
@@ -6618,13 +6474,13 @@
           "id": "slot-og-baba-digi-20260921-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260921-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260921-2100",
@@ -7050,13 +6906,13 @@
           "id": "slot-og-baba-digi-20260924-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260924-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-digi-20260924-2100",
@@ -9523,6 +9379,150 @@
           "start_time": "2026-10-11T23:00:00+09:00",
           "end_time": "2026-10-12T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0000",
+          "start_time": "2026-10-12T00:00:00+09:00",
+          "end_time": "2026-10-12T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0100",
+          "start_time": "2026-10-12T01:00:00+09:00",
+          "end_time": "2026-10-12T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0200",
+          "start_time": "2026-10-12T02:00:00+09:00",
+          "end_time": "2026-10-12T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0300",
+          "start_time": "2026-10-12T03:00:00+09:00",
+          "end_time": "2026-10-12T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0400",
+          "start_time": "2026-10-12T04:00:00+09:00",
+          "end_time": "2026-10-12T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0500",
+          "start_time": "2026-10-12T05:00:00+09:00",
+          "end_time": "2026-10-12T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0600",
+          "start_time": "2026-10-12T06:00:00+09:00",
+          "end_time": "2026-10-12T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0700",
+          "start_time": "2026-10-12T07:00:00+09:00",
+          "end_time": "2026-10-12T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0800",
+          "start_time": "2026-10-12T08:00:00+09:00",
+          "end_time": "2026-10-12T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-0900",
+          "start_time": "2026-10-12T09:00:00+09:00",
+          "end_time": "2026-10-12T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1000",
+          "start_time": "2026-10-12T10:00:00+09:00",
+          "end_time": "2026-10-12T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1100",
+          "start_time": "2026-10-12T11:00:00+09:00",
+          "end_time": "2026-10-12T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1200",
+          "start_time": "2026-10-12T12:00:00+09:00",
+          "end_time": "2026-10-12T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1300",
+          "start_time": "2026-10-12T13:00:00+09:00",
+          "end_time": "2026-10-12T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1400",
+          "start_time": "2026-10-12T14:00:00+09:00",
+          "end_time": "2026-10-12T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1500",
+          "start_time": "2026-10-12T15:00:00+09:00",
+          "end_time": "2026-10-12T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1600",
+          "start_time": "2026-10-12T16:00:00+09:00",
+          "end_time": "2026-10-12T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1700",
+          "start_time": "2026-10-12T17:00:00+09:00",
+          "end_time": "2026-10-12T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1800",
+          "start_time": "2026-10-12T18:00:00+09:00",
+          "end_time": "2026-10-12T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-1900",
+          "start_time": "2026-10-12T19:00:00+09:00",
+          "end_time": "2026-10-12T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-2000",
+          "start_time": "2026-10-12T20:00:00+09:00",
+          "end_time": "2026-10-12T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-2100",
+          "start_time": "2026-10-12T21:00:00+09:00",
+          "end_time": "2026-10-12T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-2200",
+          "start_time": "2026-10-12T22:00:00+09:00",
+          "end_time": "2026-10-12T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-digi-20261012-2300",
+          "start_time": "2026-10-12T23:00:00+09:00",
+          "end_time": "2026-10-13T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -9531,150 +9531,6 @@
       "name": "Elegy (13帖)",
       "staffId": 5,
       "slots": [
-        {
-          "id": "slot-og-baba-elegy-20260920-0000",
-          "start_time": "2026-09-20T00:00:00+09:00",
-          "end_time": "2026-09-20T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0100",
-          "start_time": "2026-09-20T01:00:00+09:00",
-          "end_time": "2026-09-20T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0200",
-          "start_time": "2026-09-20T02:00:00+09:00",
-          "end_time": "2026-09-20T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0300",
-          "start_time": "2026-09-20T03:00:00+09:00",
-          "end_time": "2026-09-20T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0400",
-          "start_time": "2026-09-20T04:00:00+09:00",
-          "end_time": "2026-09-20T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0500",
-          "start_time": "2026-09-20T05:00:00+09:00",
-          "end_time": "2026-09-20T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0600",
-          "start_time": "2026-09-20T06:00:00+09:00",
-          "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0700",
-          "start_time": "2026-09-20T07:00:00+09:00",
-          "end_time": "2026-09-20T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0800",
-          "start_time": "2026-09-20T08:00:00+09:00",
-          "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-0900",
-          "start_time": "2026-09-20T09:00:00+09:00",
-          "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1000",
-          "start_time": "2026-09-20T10:00:00+09:00",
-          "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1100",
-          "start_time": "2026-09-20T11:00:00+09:00",
-          "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1200",
-          "start_time": "2026-09-20T12:00:00+09:00",
-          "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1300",
-          "start_time": "2026-09-20T13:00:00+09:00",
-          "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1400",
-          "start_time": "2026-09-20T14:00:00+09:00",
-          "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1500",
-          "start_time": "2026-09-20T15:00:00+09:00",
-          "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1600",
-          "start_time": "2026-09-20T16:00:00+09:00",
-          "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1700",
-          "start_time": "2026-09-20T17:00:00+09:00",
-          "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1800",
-          "start_time": "2026-09-20T18:00:00+09:00",
-          "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-1900",
-          "start_time": "2026-09-20T19:00:00+09:00",
-          "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-2000",
-          "start_time": "2026-09-20T20:00:00+09:00",
-          "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-2100",
-          "start_time": "2026-09-20T21:00:00+09:00",
-          "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-2200",
-          "start_time": "2026-09-20T22:00:00+09:00",
-          "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-elegy-20260920-2300",
-          "start_time": "2026-09-20T23:00:00+09:00",
-          "end_time": "2026-09-21T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-baba-elegy-20260921-0000",
           "start_time": "2026-09-21T00:00:00+09:00",
@@ -9751,7 +9607,7 @@
           "id": "slot-og-baba-elegy-20260921-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260921-1300",
@@ -9793,13 +9649,13 @@
           "id": "slot-og-baba-elegy-20260921-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260921-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260921-2100",
@@ -10465,25 +10321,25 @@
           "id": "slot-og-baba-elegy-20260926-1100",
           "start_time": "2026-09-26T11:00:00+09:00",
           "end_time": "2026-09-26T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260926-1200",
           "start_time": "2026-09-26T12:00:00+09:00",
           "end_time": "2026-09-26T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260926-1300",
           "start_time": "2026-09-26T13:00:00+09:00",
           "end_time": "2026-09-26T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260926-1400",
           "start_time": "2026-09-26T14:00:00+09:00",
           "end_time": "2026-09-26T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-elegy-20260926-1500",
@@ -12698,6 +12554,150 @@
           "start_time": "2026-10-11T23:00:00+09:00",
           "end_time": "2026-10-12T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0000",
+          "start_time": "2026-10-12T00:00:00+09:00",
+          "end_time": "2026-10-12T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0100",
+          "start_time": "2026-10-12T01:00:00+09:00",
+          "end_time": "2026-10-12T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0200",
+          "start_time": "2026-10-12T02:00:00+09:00",
+          "end_time": "2026-10-12T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0300",
+          "start_time": "2026-10-12T03:00:00+09:00",
+          "end_time": "2026-10-12T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0400",
+          "start_time": "2026-10-12T04:00:00+09:00",
+          "end_time": "2026-10-12T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0500",
+          "start_time": "2026-10-12T05:00:00+09:00",
+          "end_time": "2026-10-12T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0600",
+          "start_time": "2026-10-12T06:00:00+09:00",
+          "end_time": "2026-10-12T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0700",
+          "start_time": "2026-10-12T07:00:00+09:00",
+          "end_time": "2026-10-12T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0800",
+          "start_time": "2026-10-12T08:00:00+09:00",
+          "end_time": "2026-10-12T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-0900",
+          "start_time": "2026-10-12T09:00:00+09:00",
+          "end_time": "2026-10-12T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1000",
+          "start_time": "2026-10-12T10:00:00+09:00",
+          "end_time": "2026-10-12T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1100",
+          "start_time": "2026-10-12T11:00:00+09:00",
+          "end_time": "2026-10-12T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1200",
+          "start_time": "2026-10-12T12:00:00+09:00",
+          "end_time": "2026-10-12T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1300",
+          "start_time": "2026-10-12T13:00:00+09:00",
+          "end_time": "2026-10-12T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1400",
+          "start_time": "2026-10-12T14:00:00+09:00",
+          "end_time": "2026-10-12T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1500",
+          "start_time": "2026-10-12T15:00:00+09:00",
+          "end_time": "2026-10-12T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1600",
+          "start_time": "2026-10-12T16:00:00+09:00",
+          "end_time": "2026-10-12T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1700",
+          "start_time": "2026-10-12T17:00:00+09:00",
+          "end_time": "2026-10-12T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1800",
+          "start_time": "2026-10-12T18:00:00+09:00",
+          "end_time": "2026-10-12T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-1900",
+          "start_time": "2026-10-12T19:00:00+09:00",
+          "end_time": "2026-10-12T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-2000",
+          "start_time": "2026-10-12T20:00:00+09:00",
+          "end_time": "2026-10-12T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-2100",
+          "start_time": "2026-10-12T21:00:00+09:00",
+          "end_time": "2026-10-12T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-2200",
+          "start_time": "2026-10-12T22:00:00+09:00",
+          "end_time": "2026-10-12T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-elegy-20261012-2300",
+          "start_time": "2026-10-12T23:00:00+09:00",
+          "end_time": "2026-10-13T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -12706,150 +12706,6 @@
       "name": "Flash (14帖)",
       "staffId": 6,
       "slots": [
-        {
-          "id": "slot-og-baba-flash-20260920-0000",
-          "start_time": "2026-09-20T00:00:00+09:00",
-          "end_time": "2026-09-20T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0100",
-          "start_time": "2026-09-20T01:00:00+09:00",
-          "end_time": "2026-09-20T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0200",
-          "start_time": "2026-09-20T02:00:00+09:00",
-          "end_time": "2026-09-20T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0300",
-          "start_time": "2026-09-20T03:00:00+09:00",
-          "end_time": "2026-09-20T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0400",
-          "start_time": "2026-09-20T04:00:00+09:00",
-          "end_time": "2026-09-20T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0500",
-          "start_time": "2026-09-20T05:00:00+09:00",
-          "end_time": "2026-09-20T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0600",
-          "start_time": "2026-09-20T06:00:00+09:00",
-          "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0700",
-          "start_time": "2026-09-20T07:00:00+09:00",
-          "end_time": "2026-09-20T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0800",
-          "start_time": "2026-09-20T08:00:00+09:00",
-          "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-0900",
-          "start_time": "2026-09-20T09:00:00+09:00",
-          "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1000",
-          "start_time": "2026-09-20T10:00:00+09:00",
-          "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1100",
-          "start_time": "2026-09-20T11:00:00+09:00",
-          "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1200",
-          "start_time": "2026-09-20T12:00:00+09:00",
-          "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1300",
-          "start_time": "2026-09-20T13:00:00+09:00",
-          "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1400",
-          "start_time": "2026-09-20T14:00:00+09:00",
-          "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1500",
-          "start_time": "2026-09-20T15:00:00+09:00",
-          "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1600",
-          "start_time": "2026-09-20T16:00:00+09:00",
-          "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1700",
-          "start_time": "2026-09-20T17:00:00+09:00",
-          "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1800",
-          "start_time": "2026-09-20T18:00:00+09:00",
-          "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-1900",
-          "start_time": "2026-09-20T19:00:00+09:00",
-          "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-2000",
-          "start_time": "2026-09-20T20:00:00+09:00",
-          "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-2100",
-          "start_time": "2026-09-20T21:00:00+09:00",
-          "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-2200",
-          "start_time": "2026-09-20T22:00:00+09:00",
-          "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-flash-20260920-2300",
-          "start_time": "2026-09-20T23:00:00+09:00",
-          "end_time": "2026-09-21T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-baba-flash-20260921-0000",
           "start_time": "2026-09-21T00:00:00+09:00",
@@ -12926,13 +12782,13 @@
           "id": "slot-og-baba-flash-20260921-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260921-1300",
           "start_time": "2026-09-21T13:00:00+09:00",
           "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260921-1400",
@@ -12956,25 +12812,25 @@
           "id": "slot-og-baba-flash-20260921-1700",
           "start_time": "2026-09-21T17:00:00+09:00",
           "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260921-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260921-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260921-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260921-2100",
@@ -13688,13 +13544,13 @@
           "id": "slot-og-baba-flash-20260926-1900",
           "start_time": "2026-09-26T19:00:00+09:00",
           "end_time": "2026-09-26T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260926-2000",
           "start_time": "2026-09-26T20:00:00+09:00",
           "end_time": "2026-09-26T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-flash-20260926-2100",
@@ -15873,6 +15729,150 @@
           "start_time": "2026-10-11T23:00:00+09:00",
           "end_time": "2026-10-12T00:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0000",
+          "start_time": "2026-10-12T00:00:00+09:00",
+          "end_time": "2026-10-12T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0100",
+          "start_time": "2026-10-12T01:00:00+09:00",
+          "end_time": "2026-10-12T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0200",
+          "start_time": "2026-10-12T02:00:00+09:00",
+          "end_time": "2026-10-12T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0300",
+          "start_time": "2026-10-12T03:00:00+09:00",
+          "end_time": "2026-10-12T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0400",
+          "start_time": "2026-10-12T04:00:00+09:00",
+          "end_time": "2026-10-12T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0500",
+          "start_time": "2026-10-12T05:00:00+09:00",
+          "end_time": "2026-10-12T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0600",
+          "start_time": "2026-10-12T06:00:00+09:00",
+          "end_time": "2026-10-12T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0700",
+          "start_time": "2026-10-12T07:00:00+09:00",
+          "end_time": "2026-10-12T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0800",
+          "start_time": "2026-10-12T08:00:00+09:00",
+          "end_time": "2026-10-12T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-0900",
+          "start_time": "2026-10-12T09:00:00+09:00",
+          "end_time": "2026-10-12T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1000",
+          "start_time": "2026-10-12T10:00:00+09:00",
+          "end_time": "2026-10-12T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1100",
+          "start_time": "2026-10-12T11:00:00+09:00",
+          "end_time": "2026-10-12T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1200",
+          "start_time": "2026-10-12T12:00:00+09:00",
+          "end_time": "2026-10-12T13:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1300",
+          "start_time": "2026-10-12T13:00:00+09:00",
+          "end_time": "2026-10-12T14:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1400",
+          "start_time": "2026-10-12T14:00:00+09:00",
+          "end_time": "2026-10-12T15:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1500",
+          "start_time": "2026-10-12T15:00:00+09:00",
+          "end_time": "2026-10-12T16:00:00+09:00",
+          "status": "BOOKED"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1600",
+          "start_time": "2026-10-12T16:00:00+09:00",
+          "end_time": "2026-10-12T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1700",
+          "start_time": "2026-10-12T17:00:00+09:00",
+          "end_time": "2026-10-12T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1800",
+          "start_time": "2026-10-12T18:00:00+09:00",
+          "end_time": "2026-10-12T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-1900",
+          "start_time": "2026-10-12T19:00:00+09:00",
+          "end_time": "2026-10-12T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-2000",
+          "start_time": "2026-10-12T20:00:00+09:00",
+          "end_time": "2026-10-12T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-2100",
+          "start_time": "2026-10-12T21:00:00+09:00",
+          "end_time": "2026-10-12T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-2200",
+          "start_time": "2026-10-12T22:00:00+09:00",
+          "end_time": "2026-10-12T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-flash-20261012-2300",
+          "start_time": "2026-10-12T23:00:00+09:00",
+          "end_time": "2026-10-13T00:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -15881,150 +15881,6 @@
       "name": "Grosso (15帖)",
       "staffId": 7,
       "slots": [
-        {
-          "id": "slot-og-baba-grosso-20260920-0000",
-          "start_time": "2026-09-20T00:00:00+09:00",
-          "end_time": "2026-09-20T01:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0100",
-          "start_time": "2026-09-20T01:00:00+09:00",
-          "end_time": "2026-09-20T02:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0200",
-          "start_time": "2026-09-20T02:00:00+09:00",
-          "end_time": "2026-09-20T03:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0300",
-          "start_time": "2026-09-20T03:00:00+09:00",
-          "end_time": "2026-09-20T04:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0400",
-          "start_time": "2026-09-20T04:00:00+09:00",
-          "end_time": "2026-09-20T05:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0500",
-          "start_time": "2026-09-20T05:00:00+09:00",
-          "end_time": "2026-09-20T06:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0600",
-          "start_time": "2026-09-20T06:00:00+09:00",
-          "end_time": "2026-09-20T07:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0700",
-          "start_time": "2026-09-20T07:00:00+09:00",
-          "end_time": "2026-09-20T08:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0800",
-          "start_time": "2026-09-20T08:00:00+09:00",
-          "end_time": "2026-09-20T09:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-0900",
-          "start_time": "2026-09-20T09:00:00+09:00",
-          "end_time": "2026-09-20T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1000",
-          "start_time": "2026-09-20T10:00:00+09:00",
-          "end_time": "2026-09-20T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1100",
-          "start_time": "2026-09-20T11:00:00+09:00",
-          "end_time": "2026-09-20T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1200",
-          "start_time": "2026-09-20T12:00:00+09:00",
-          "end_time": "2026-09-20T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1300",
-          "start_time": "2026-09-20T13:00:00+09:00",
-          "end_time": "2026-09-20T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1400",
-          "start_time": "2026-09-20T14:00:00+09:00",
-          "end_time": "2026-09-20T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1500",
-          "start_time": "2026-09-20T15:00:00+09:00",
-          "end_time": "2026-09-20T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1600",
-          "start_time": "2026-09-20T16:00:00+09:00",
-          "end_time": "2026-09-20T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1700",
-          "start_time": "2026-09-20T17:00:00+09:00",
-          "end_time": "2026-09-20T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1800",
-          "start_time": "2026-09-20T18:00:00+09:00",
-          "end_time": "2026-09-20T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-1900",
-          "start_time": "2026-09-20T19:00:00+09:00",
-          "end_time": "2026-09-20T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-2000",
-          "start_time": "2026-09-20T20:00:00+09:00",
-          "end_time": "2026-09-20T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-2100",
-          "start_time": "2026-09-20T21:00:00+09:00",
-          "end_time": "2026-09-20T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-2200",
-          "start_time": "2026-09-20T22:00:00+09:00",
-          "end_time": "2026-09-20T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-og-baba-grosso-20260920-2300",
-          "start_time": "2026-09-20T23:00:00+09:00",
-          "end_time": "2026-09-21T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-og-baba-grosso-20260921-0000",
           "start_time": "2026-09-21T00:00:00+09:00",
@@ -16101,55 +15957,55 @@
           "id": "slot-og-baba-grosso-20260921-1200",
           "start_time": "2026-09-21T12:00:00+09:00",
           "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1300",
           "start_time": "2026-09-21T13:00:00+09:00",
           "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1400",
           "start_time": "2026-09-21T14:00:00+09:00",
           "end_time": "2026-09-21T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1500",
           "start_time": "2026-09-21T15:00:00+09:00",
           "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1600",
           "start_time": "2026-09-21T16:00:00+09:00",
           "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1700",
           "start_time": "2026-09-21T17:00:00+09:00",
           "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1800",
           "start_time": "2026-09-21T18:00:00+09:00",
           "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-1900",
           "start_time": "2026-09-21T19:00:00+09:00",
           "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-2000",
           "start_time": "2026-09-21T20:00:00+09:00",
           "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-og-baba-grosso-20260921-2100",
@@ -19047,6 +18903,150 @@
           "id": "slot-og-baba-grosso-20261011-2300",
           "start_time": "2026-10-11T23:00:00+09:00",
           "end_time": "2026-10-12T00:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0000",
+          "start_time": "2026-10-12T00:00:00+09:00",
+          "end_time": "2026-10-12T01:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0100",
+          "start_time": "2026-10-12T01:00:00+09:00",
+          "end_time": "2026-10-12T02:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0200",
+          "start_time": "2026-10-12T02:00:00+09:00",
+          "end_time": "2026-10-12T03:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0300",
+          "start_time": "2026-10-12T03:00:00+09:00",
+          "end_time": "2026-10-12T04:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0400",
+          "start_time": "2026-10-12T04:00:00+09:00",
+          "end_time": "2026-10-12T05:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0500",
+          "start_time": "2026-10-12T05:00:00+09:00",
+          "end_time": "2026-10-12T06:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0600",
+          "start_time": "2026-10-12T06:00:00+09:00",
+          "end_time": "2026-10-12T07:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0700",
+          "start_time": "2026-10-12T07:00:00+09:00",
+          "end_time": "2026-10-12T08:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0800",
+          "start_time": "2026-10-12T08:00:00+09:00",
+          "end_time": "2026-10-12T09:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-0900",
+          "start_time": "2026-10-12T09:00:00+09:00",
+          "end_time": "2026-10-12T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1000",
+          "start_time": "2026-10-12T10:00:00+09:00",
+          "end_time": "2026-10-12T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1100",
+          "start_time": "2026-10-12T11:00:00+09:00",
+          "end_time": "2026-10-12T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1200",
+          "start_time": "2026-10-12T12:00:00+09:00",
+          "end_time": "2026-10-12T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1300",
+          "start_time": "2026-10-12T13:00:00+09:00",
+          "end_time": "2026-10-12T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1400",
+          "start_time": "2026-10-12T14:00:00+09:00",
+          "end_time": "2026-10-12T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1500",
+          "start_time": "2026-10-12T15:00:00+09:00",
+          "end_time": "2026-10-12T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1600",
+          "start_time": "2026-10-12T16:00:00+09:00",
+          "end_time": "2026-10-12T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1700",
+          "start_time": "2026-10-12T17:00:00+09:00",
+          "end_time": "2026-10-12T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1800",
+          "start_time": "2026-10-12T18:00:00+09:00",
+          "end_time": "2026-10-12T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-1900",
+          "start_time": "2026-10-12T19:00:00+09:00",
+          "end_time": "2026-10-12T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-2000",
+          "start_time": "2026-10-12T20:00:00+09:00",
+          "end_time": "2026-10-12T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-2100",
+          "start_time": "2026-10-12T21:00:00+09:00",
+          "end_time": "2026-10-12T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-2200",
+          "start_time": "2026-10-12T22:00:00+09:00",
+          "end_time": "2026-10-12T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-og-baba-grosso-20261012-2300",
+          "start_time": "2026-10-12T23:00:00+09:00",
+          "end_time": "2026-10-13T00:00:00+09:00",
           "status": "AVAILABLE"
         }
       ]
