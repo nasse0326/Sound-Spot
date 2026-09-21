@@ -989,6 +989,16 @@ video {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1216,6 +1226,10 @@ video {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1280,6 +1294,10 @@ video {
   border-color: rgb(52 211 153 / var(--tw-border-opacity, 1));
 }
 
+.border-emerald-500\/30 {
+  border-color: rgb(16 185 129 / 0.3);
+}
+
 .border-indigo-300 {
   --tw-border-opacity: 1;
   border-color: rgb(165 180 252 / var(--tw-border-opacity, 1));
@@ -1303,6 +1321,11 @@ video {
 .border-stone-300 {
   --tw-border-opacity: 1;
   border-color: rgb(214 211 209 / var(--tw-border-opacity, 1));
+}
+
+.border-t-emerald-500 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(16 185 129 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#F6F5F1\] {

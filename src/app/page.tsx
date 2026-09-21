@@ -70,25 +70,14 @@ export default function HomePage() {
     return Array.from(new Set(SUPPORTED_STUDIOS.map((s) => s.area)));
   }, []);
 
-  // 選択日時のスロット付き部屋データ（初期値は空、ローカルキャッシュ描画とAPIフェッチが
-  // それぞれ完了ししだい更新される）
+  // 選択日時のスロット付き部屋データ。ローカルJSONフォールバック層は撤去済み
+  // （2026-09-21）で、Supabaseが唯一のデータソース。/api/studiosのフェッチが
+  // 完了するまでは空のまま。
   const [liveRooms, setLiveRooms] = useState<RoomWithSlots[]>([]);
+  // 初回フェッチ未完了か（「0件ヒット」表示と区別するためのローディング表示用）
+  const [isLoadingRooms, setIsLoadingRooms] = useState(true);
 
-  // 日付変更時に初期ローカルデータで即時描画（体感遅延ゼロ化）。
-  // mock-data.ts一式（全店舗分のJSON、現在約43MB）はCloudflare WorkerのRAM上限を
-  // 超過した実績があるため（2026-09-21）、動的importでこのモジュールを別chunkへ分離し、
-  // 実際に必要になるこの瞬間まで読み込みを遅延させる。
-  useEffect(() => {
-    let isMounted = true;
-    import('@/lib/mock-data').then(({ getMockRoomsWithSlots }) => {
-      if (isMounted) setLiveRooms(getMockRoomsWithSlots(filters.date));
-    });
-    return () => {
-      isMounted = false;
-    };
-  }, [filters.date]);
-
-  // バックグラウンドで /api/studios から最新データをフェッチ
+  // /api/studios (Supabase) から空き枠データを取得
   useEffect(() => {
     let isMounted = true;
     const fetchLiveRooms = async () => {
@@ -96,12 +85,14 @@ export default function HomePage() {
         const res = await fetch(`/api/studios?date=${encodeURIComponent(filters.date)}&area=all`);
         if (res.ok) {
           const json = await res.json();
-          if (isMounted && json.data && Array.isArray(json.data) && json.data.length > 0) {
+          if (isMounted && json.data && Array.isArray(json.data)) {
             setLiveRooms(json.data);
           }
         }
       } catch (e) {
-        // エラー時は初期ローカルキャッシュが維持されるため安全
+        // 取得失敗時は空のまま（UI側で「0件」と区別できるようisLoadingRoomsで制御）
+      } finally {
+        if (isMounted) setIsLoadingRooms(false);
       }
     };
     fetchLiveRooms();
@@ -443,7 +434,12 @@ export default function HomePage() {
       </div>
 
       {/* 検索結果コンテンツ */}
-      {sortedRooms.length === 0 ? (
+      {isLoadingRooms && sortedRooms.length === 0 ? (
+        <div className="bg-white/70 border border-stone-200 dark:bg-slate-900/50 dark:border-slate-800/80 rounded-2xl p-12 text-center">
+          <div className="w-8 h-8 mx-auto mb-3 rounded-full border-2 border-emerald-500/30 border-t-emerald-500 animate-spin" />
+          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400">空き状況を取得中です…</h3>
+        </div>
+      ) : sortedRooms.length === 0 ? (
         <div className="bg-white/70 border border-stone-200 dark:bg-slate-900/50 dark:border-slate-800/80 rounded-2xl p-12 text-center">
           <FilterX className="w-12 h-12 text-stone-300 dark:text-slate-600 mx-auto mb-3" />
           <h3 className="text-lg font-bold text-slate-700 dark:text-slate-300">条件に合致するスタジオが見つかりませんでした</h3>

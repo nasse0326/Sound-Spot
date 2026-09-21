@@ -726,6 +726,18 @@ flowchart TD
 
 ## 8. 主要ファイル・コード構成マップ
 
+> **2026-09-21追記: ローカルJSONモックフォールバック層を全廃した。** 以下の表には
+> `src/lib/mock-data.ts`および各エリアの`src/lib/*-converter.ts`（`getXRealRooms()`で
+> JSONをアプリの`RoomWithSlots`形式に変換していたファイル群）への言及が多数残っているが、
+> これらは全て削除済みで現存しない。原因は、これらのファイルが`import`文で全店舗分の
+> JSON（当時約43MB）を静的に読み込んでおり、Cloudflare WorkerのRAM上限（既定128MB）を
+> 超過して`/api/studios`が全エリアで500エラーになる障害を起こしたため（詳細は
+> ローカルメモリの`project_cloudflare_asset_size_limit`参照）。現在`/api/studios`
+> (`src/app/api/studios/route.ts`)はSupabaseのみを直接参照する。`src/data/*.json`
+> 自体は`scripts/crawl-studios.ts`の出力物として引き続き存在し、Supabaseへの
+> 同期（surgical insert）時の中間ファイルとして使われる。表内の当該行は
+> エリア追加時の変遷を示す歴史的記録として残す。
+
 | パス | 種別 | 役割・概要 |
 |---|---|---|
 | `docs/SYSTEM_DESIGN_AND_SPECS.md` | ドキュメント | **本ドキュメント**（設計仕様・運用ルール・エリア調査マップ） |

@@ -58,29 +58,39 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
     setShowRightFade(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
   };
 
-  // 本日の日付基準で全店舗の部屋・機材スペックを取得。
-  // mock-data.ts一式（全店舗分のJSON、現在約43MB）はCloudflare WorkerのRAM上限を
-  // 超過した実績があるため（2026-09-21）、動的importで別chunkへ分離し、このモーダルが
-  // 実際に開かれたタイミングでのみ読み込む（常時マウントされるグローバルヘッダーの一部
-  // のため、useMemoでの即時読み込みは避ける）。
+  // 本日の日付基準で全店舗の部屋・機材スペックを取得。ローカルJSONフォールバック層は
+  // 撤去済み（2026-09-21）で、Supabaseが唯一のデータソース。常時マウントされる
+  // グローバルヘッダーの一部のため、このモーダルが実際に開かれたタイミングでのみ
+  // /api/studiosをフェッチする（開くたびの再フェッチは避け、初回のみ取得）。
   const todayStr = useMemo(() => format(new Date(), 'yyyy-MM-dd'), []);
   const [allRooms, setAllRooms] = useState<RoomWithSlots[]>([]);
+  const hasFetchedRoomsRef = useRef(false);
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || hasFetchedRoomsRef.current) return;
+    hasFetchedRoomsRef.current = true;
     let isMounted = true;
-    import('@/lib/mock-data').then(({ getMockRoomsWithSlots }) => {
-      if (isMounted) setAllRooms(getMockRoomsWithSlots(todayStr));
-    });
+    fetch(`/api/studios?date=${encodeURIComponent(todayStr)}&area=all`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((json) => {
+        if (isMounted && json?.data && Array.isArray(json.data)) {
+          setAllRooms(json.data);
+        }
+      })
+      .catch(() => {
+        hasFetchedRoomsRef.current = false; // 失敗時は次に開いた時に再試行できるようにする
+      });
     return () => {
       isMounted = false;
     };
   }, [isOpen, todayStr]);
 
-  // スタジオIDごとの部屋マッピング
+  // スタジオ名ごとの部屋マッピング。/api/studios（Supabase）が返すstudio.idは
+  // toUUID(slug)済みのUUIDである一方、SUPPORTED_STUDIOSのidは元のslugのままで
+  // 直接は一致しないため、両者に共通するstudio名をキーにする。
   const roomsByStudioId = useMemo(() => {
     const map = new Map<string, RoomWithSlots[]>();
     for (const room of allRooms) {
-      const sId = room.studio.id;
+      const sId = room.studio.name;
       if (!map.has(sId)) {
         map.set(sId, []);
       }
@@ -147,7 +157,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
         const matchFeatures = st.features.some(f => f.toLowerCase().includes(q));
 
         // 所属部屋の機材（JC-120, Marshall, Ampeg, ドラム等）にヒットするか判定
-        const rooms = roomsByStudioId.get(st.id) || [];
+        const rooms = roomsByStudioId.get(st.name) || [];
         const matchEquipment = rooms.some(r => {
           const roomNameMatch = r.name.toLowerCase().includes(q);
           const eq = r.equipment;
@@ -465,7 +475,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
             {/* 一括開閉トグルボタン & ヒント */}
             <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-1">
               <span className="text-[11px]">
-                {filteredStudios.length} 店舗中 {filteredStudios.reduce((acc, s) => acc + (roomsByStudioId.get(s.id)?.length || s.roomCount), 0)} 部屋を表示
+                {filteredStudios.length} 店舗中 {filteredStudios.reduce((acc, s) => acc + (roomsByStudioId.get(s.name)?.length || s.roomCount), 0)} 部屋を表示
               </span>
               <button
                 type="button"
@@ -490,7 +500,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
             ) : (
               <div className="grid grid-cols-1 gap-3.5">
                 {filteredStudios.map((studio) => {
-                  const rooms = roomsByStudioId.get(studio.id) || [];
+                  const rooms = roomsByStudioId.get(studio.name) || [];
                   const isExpanded = expandedStudioIds.has(studio.id);
 
                   return (
