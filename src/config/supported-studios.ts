@@ -4,7 +4,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩' | '松戸・柏';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -979,6 +979,95 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-3672-6316',
     websiteUrl: 'https://orpheusrecords.jp/ssm/koiwa/',
     features: ['駅徒歩3分', '全12部屋の大型施設', '深夜・早朝はスマートロック無人営業'],
+  },
+
+  // -------------------------------------------------------------
+  // 松戸・柏エリア (5店舗 / 計36部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'musicbank-matsudo',
+    name: '伊藤楽器 MUSIC BANK 松戸',
+    chainName: '伊藤楽器 MUSIC BANK',
+    area: '松戸・柏',
+    nearestStation: 'JR松戸駅 東口 徒歩1分',
+    address: '千葉県松戸市松戸1174-1',
+    roomCount: 12,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'studi-ol.com (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日11:00〜20:00 / 土日祝10:00〜19:00',
+    tel: '047-368-1161',
+    websiteUrl: 'https://www.ito-ongaku.com/rental/musicbank-matsudo/',
+    features: ['駅徒歩1分', 'バンドスタジオ3室＋練習室9室の大型施設', 'グランド/アップライトピアノ常設室あり'],
+  },
+  {
+    id: 'studio-dugout2-matsudo',
+    name: 'スタジオ ダグアウト2',
+    chainName: 'スタジオ ダグアウト',
+    area: '松戸・柏',
+    nearestStation: 'JR松戸駅 西口 徒歩5分',
+    address: '千葉県松戸市根本6-5 2F',
+    roomCount: 7,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'webtoru.com (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日12:00〜24:00 / 土日祝10:00〜24:00',
+    tel: '04-7718-2633',
+    websiteUrl: 'https://www.studiodugout2.com/',
+    features: ['駅徒歩5分', '天井高3500mmの開放的な空間', '全7部屋'],
+  },
+  {
+    id: 'packs-shinmatsudo',
+    name: 'サウンドスタジオパックス 新松戸店',
+    chainName: 'sound studio PACKS',
+    area: '松戸・柏',
+    nearestStation: 'JR新松戸駅 徒歩3分',
+    address: '千葉県松戸市新松戸4-14-2 KARAFUビル2F',
+    roomCount: 5,
+    syncType: 'phone',
+    syncLabel: '電話予約スタジオ',
+    systemName: '会員制オンライン予約 (要事前登録) / 初回電話受付',
+    is24Hours: true,
+    businessHours: '24時間営業・年中無休',
+    tel: '047-711-5002',
+    websiteUrl: 'https://www.studio-packs.jp/shinmatsudo',
+    features: ['24時間営業', 'グランドピアノ常設室あり', 'ダンススタジオ2部屋併設'],
+  },
+  {
+    id: 'gateway-kashiwa',
+    name: 'ゲートウェイスタジオ 柏店',
+    chainName: 'GATEWAY STUDIO',
+    area: '松戸・柏',
+    nearestStation: '柏駅 西口 徒歩2分',
+    address: '千葉県柏市旭町1-2-1 第11関口ビルB1',
+    roomCount: 7,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'Reserve1.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日10:00〜23:00 / 土日祝9:00〜23:00',
+    tel: '04-7144-9993',
+    websiteUrl: 'http://www.gw-studio.com/studios/studio_kashi/index',
+    features: ['駅徒歩2分', '入会金・年会費無料', '学割10%OFF対応'],
+  },
+  {
+    id: 'soundstudio-m-kashiwa',
+    name: 'SOUND STUDIO M 柏店',
+    chainName: 'SOUND STUDIO M',
+    area: '松戸・柏',
+    nearestStation: 'JR柏駅 東口 徒歩10分',
+    address: '千葉県柏市泉町16-30 大東ビル3F',
+    roomCount: 5,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'orpheusrecords.info (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日12:00〜23:00 / 土日祝10:00〜23:00',
+    tel: '04-7164-9413',
+    websiteUrl: 'https://orpheusrecords.jp/ssm/kashiwa/',
+    features: ['駅徒歩10分', 'ボーカルブース利用可(Bst)', '20時以降は無料駐車場あり'],
   },
 ];
 

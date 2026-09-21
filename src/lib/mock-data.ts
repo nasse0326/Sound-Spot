@@ -49,6 +49,13 @@ import {
   getStudio2TimesRealRooms, STUDIO_2TIMES_STUDIO,
   getSoundStudioMKoiwaRealRooms, SOUND_STUDIO_M_KOIWA_STUDIO,
 } from './kameido-koiwa-converter';
+import {
+  getMusicBankMatsudoRealRooms, MUSICBANK_MATSUDO_STUDIO,
+  getStudioDugout2MatsudoRealRooms, STUDIO_DUGOUT2_MATSUDO_STUDIO,
+  getGatewayKashiwaRealRooms, GATEWAY_KASHIWA_STUDIO,
+  getSoundStudioMKashiwaRealRooms, SOUND_STUDIO_M_KASHIWA_STUDIO,
+  getPacksShinmatsudoRooms, PACKS_SHINMATSUDO_STUDIO,
+} from './matsudo-kashiwa-converter';
 
 // 都内3大エリア（渋谷・新宿・秋葉原）計17店舗の正規スタジオマスター
 export const MOCK_STUDIOS: Studio[] = [
@@ -125,6 +132,13 @@ export const MOCK_STUDIOS: Studio[] = [
   STUDIO_DIVO_KAMEIDO_STUDIO,
   STUDIO_2TIMES_STUDIO,
   SOUND_STUDIO_M_KOIWA_STUDIO,
+
+  // 松戸・柏エリア (5店舗)
+  MUSICBANK_MATSUDO_STUDIO,
+  STUDIO_DUGOUT2_MATSUDO_STUDIO,
+  PACKS_SHINMATSUDO_STUDIO,
+  GATEWAY_KASHIWA_STUDIO,
+  SOUND_STUDIO_M_KASHIWA_STUDIO,
 ];
 
 // 互換性のための空スロット関数
@@ -213,6 +227,15 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
   const studio2TimesRooms = getStudio2TimesRealRooms(dateStr);
   const soundStudioMKoiwaRooms = getSoundStudioMKoiwaRealRooms(dateStr);
 
+  // 15. 松戸・柏エリア (5店舗 / 伊藤楽器MUSIC BANK松戸12室・スタジオダグアウト2 7室・
+  //     サウンドスタジオパックス新松戸店5室・ゲートウェイスタジオ柏店7室・
+  //     SOUND STUDIO M柏店5室)
+  const musicBankMatsudoRooms = getMusicBankMatsudoRealRooms(dateStr);
+  const studioDugout2MatsudoRooms = getStudioDugout2MatsudoRealRooms(dateStr);
+  const packsShinmatsudoRooms = getPacksShinmatsudoRooms();
+  const gatewayKashiwaRooms = getGatewayKashiwaRealRooms(dateStr);
+  const soundStudioMKashiwaRooms = getSoundStudioMKashiwaRealRooms(dateStr);
+
   return [
     ...akibaRooms, ...gatewayRooms, ...nodeRooms, ...noahRooms, ...pentaRooms, ...ongakukanShinjukuRooms,
     ...museumShinjukuRooms, ...hillvalleyRooms, ...vantageRooms, ...musicManRooms,
@@ -225,5 +248,7 @@ export function getMockRoomsWithSlots(dateStr: string): RoomWithSlots[] {
     ...studioSunNishiFunabashiRooms, ...packsFunabashiRooms,
     ...pentaYokohamaRooms, ...cloud9YokohamaKitaguchiRooms, ...yokohamaSailaRooms,
     ...studioDivoKameidoRooms, ...studio2TimesRooms, ...soundStudioMKoiwaRooms,
+    ...musicBankMatsudoRooms, ...studioDugout2MatsudoRooms, ...packsShinmatsudoRooms,
+    ...gatewayKashiwaRooms, ...soundStudioMKashiwaRooms,
   ];
 }

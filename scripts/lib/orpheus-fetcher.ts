@@ -74,7 +74,10 @@ export async function fetchOrpheusStudioDays(
       const html = await res.text();
 
       // 部屋ごとの行を「<TH...>部屋名</TH>」〜次の</TR>までの範囲で抽出する。
-      const roomRowMatches = [...html.matchAll(/<TH[^>]*>\s*([0-9]{3}[A-Z])\s*<\/TH>[\s\S]*?<\/TR>/gi)];
+      // 部屋ラベルは店舗により「301A」形式（数字3桁+英字1文字、小岩店等）と
+      // 「Ast」形式（英字+st、柏店等）の2パターンがあるため、汎用的な英数字パターンで
+      // 拾い、実在する部屋ラベル（slotsByRoomのキー）かどうかで後段フィルタする。
+      const roomRowMatches = [...html.matchAll(/<TH[^>]*>\s*([0-9A-Za-z]{2,6})\s*<\/TH>[\s\S]*?<\/TR>/gi)];
 
       for (const rowMatch of roomRowMatches) {
         const roomLabel = rowMatch[1];
@@ -158,4 +161,24 @@ export async function fetchSoundStudioMKoiwaDays(
   dayCount: number = CRAWL_DAY_COUNT
 ): Promise<OrpheusRoomData[]> {
   return fetchOrpheusStudioDays(1, SOUND_STUDIO_M_KOIWA_ROOMS, 'SOUND STUDIO M 小岩店', baseDate, dayCount);
+}
+
+// pno=5はorpheusrecords.info上でSOUND STUDIO M柏店（柏Part2）を指す（ブラウザ実地確認済み）。
+// 小岩店と異なり部屋ラベルは「Ast」形式（数字プレフィックス無し）で、有人営業のみの
+// 単一システム（studi-ol.comとのハイブリッド構成ではない）。全室0分スタート
+// （RoomSituation.php上の「開始」列で確認済み）。料金・機材はorpheusrecords.jp/ssm/kashiwa/
+// のcharge.html・equipment.htmlから取得。
+export const SOUND_STUDIO_M_KASHIWA_ROOMS: OrpheusRoomSpec[] = [
+  { id: 'soundm-kashiwa-a', roomLabel: 'Ast', name: 'Ast (12畳)', size_sqm: 20, capacity: 6, hourly_rate: 3300, day_rate: 2530, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM2000 DSL100', 'Mesa Boogie Dual Rectifire', 'Roland JC-120', 'BASS::Ampeg SVT350', 'DRUM::TAMA starclassic bubinga'] },
+  { id: 'soundm-kashiwa-b', roomLabel: 'Bst', name: 'Bst (12畳)', size_sqm: 20, capacity: 6, hourly_rate: 3300, day_rate: 2530, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM900', 'Orange AD30', 'Roland JC120', 'BASS::Ampeg SVT350', 'DRUM::Pearl Referrence', 'NOTE::Vocal Booth利用可（Bstのみ、¥300/h）'] },
+  { id: 'soundm-kashiwa-c', roomLabel: 'Cst', name: 'Cst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2750, day_rate: 1980, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM-900', 'Roland JC-120', 'BASS::Ampeg SVT350', 'DRUM::TAMA starclassic maple'] },
+  { id: 'soundm-kashiwa-g', roomLabel: 'Gst', name: 'Gst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2750, day_rate: 1980, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM-900', 'Roland JC-120', 'BASS::Markbass little mark rocker 500', 'DRUM::TAMA starclassic maple'] },
+  { id: 'soundm-kashiwa-r', roomLabel: 'Rst', name: 'Rst (8畳)', size_sqm: 13, capacity: 4, hourly_rate: 2420, day_rate: 1650, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM-900', 'Roland JC-120', 'BASS::Gallien Krueger 400RB', 'DRUM::TAMA starclassic birch'] },
+];
+
+export async function fetchSoundStudioMKashiwaDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<OrpheusRoomData[]> {
+  return fetchOrpheusStudioDays(5, SOUND_STUDIO_M_KASHIWA_ROOMS, 'SOUND STUDIO M 柏店', baseDate, dayCount);
 }

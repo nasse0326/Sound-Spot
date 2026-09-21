@@ -776,6 +776,8 @@ flowchart TD
 | `src/data/studio-divo-kameido-real.json` / `studio-2times-real.json` / `soundstudio-m-koiwa-real.json` | データ | 亀戸・小岩エリア追加分3店舗（webtoru.com/studi-ol.com/orpheusrecords.info自動同期）の全部屋・22日間の実データ |
 | `scripts/lib/orpheus-fetcher.ts` | フェッチャー | オルフェウスレコーズ系列（SOUND STUDIO M）向け。ログイン不要のGET (`RoomSituation.php?pno=&yyear=&ymonth=&yday=`) で全室・全日の空き状況HTMLを取得する。同チェーンはstudi-ol.comも別途使うが無人営業時間帯専用のため、有人時間帯を含む全日データが必要な場合はこちらを使う |
 | `src/lib/kameido-koiwa-converter.ts` | コンバーター | Studio DIVO 亀戸・Studio 2Times・SOUND STUDIO M 小岩店の実データJSONを正規化変換するロジック |
+| `src/data/musicbank-matsudo-real.json` / `studio-dugout2-matsudo-real.json` / `gateway-kashiwa-real.json` / `soundstudio-m-kashiwa-real.json` | データ | 松戸・柏エリア追加分4店舗（studi-ol.com/webtoru.com/Reserve1.jp/orpheusrecords.info自動同期）の全部屋・22日間の実データ |
+| `src/lib/matsudo-kashiwa-converter.ts` | コンバーター | 伊藤楽器MUSIC BANK松戸・スタジオダグアウト2・ゲートウェイスタジオ柏店・SOUND STUDIO M柏店の実データJSONを正規化変換、およびサウンドスタジオパックス新松戸店（会員ログイン必須のため静的リスティング、バンド利用可能な5部屋）を定義するロジック |
 | `src/components/timeline/studio-timeline-view.tsx` | UI | 26列グリッドによる30分開始枠の物理シフトタイムライン表示 |
 | `src/components/search/studio-card.tsx` | UI | スタジオ・部屋の一覧カード。空き状況や電話予約CTAの動的切り替え |
 | `src/components/studio/room-detail-modal.tsx` | UI | 部屋詳細モーダル（常設機材、帖数、個人練習料金、予約リンク/電話発信） |

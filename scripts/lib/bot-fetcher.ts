@@ -468,3 +468,30 @@ export async function fetchStudio2TimesDays(
 ): Promise<BotRoomData[]> {
   return fetchBotStoreDays('https://studi-ol.com/shop/613', STUDIO_2TIMES_ROOMS, 'Studio 2Times', baseDate, dayCount);
 }
+
+// 松戸・柏エリア追加分（2026-09-21）。room_idはstudi-ol.com/shop/558のページソース内
+// <li room-id="...">から実値を確認済み。全室00分スタート。D〜8stは公式サイトに
+// 帖数・人数・機材が個別記載されているが、アンプ/ドラムセット等の常設楽器機材は
+// バンドスタジオ(A/B/C)のみで、個人・アンサンブル練習室(D,1-8)は電子ピアノ・鏡・
+// 譜面台中心の構成のため、featuresはNOTE::プレフィックスで代表的な備品を記載する。
+export const ITO_ONGAKU_MUSICBANK_MATSUDO_ROOMS: BotRoomSpec[] = [
+  { id: 'musicbank-matsudo-ast', roomIdNum: 2219, name: 'Ast (17.5帖)', size_sqm: 29, capacity: 8, hourly_rate: 2500, day_rate: 2100, individual_rate: 600, start_time_offset: 0, features: ['Marshall JVM 205H', 'Roland JC-120', 'VOX AC30', 'BASS::Ampeg SVT200T', 'DRUM::YAMAHA Maple Custom + Zildjian', 'NOTE::YAMAHA CP300キーボード常設、鏡あり、Bluetooth対応'] },
+  { id: 'musicbank-matsudo-bst', roomIdNum: 2220, name: 'Bst (15.5帖)', size_sqm: 26, capacity: 7, hourly_rate: 2200, day_rate: 1800, individual_rate: 600, start_time_offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', 'BASS::Markbass Little MarkII', 'DRUM::YAMAHA Oak Custom + Zildjian', 'NOTE::YAMAHA P105キーボード常設、鏡あり、+1000円でツインドラム対応可'] },
+  { id: 'musicbank-matsudo-cst', roomIdNum: 2221, name: 'Cst (5.5帖)', size_sqm: 9, capacity: 3, hourly_rate: 1500, day_rate: 1100, individual_rate: 500, start_time_offset: 0, features: ['Ibanez TSA15H', 'BASS::Markbass CMD121', 'DRUM::Pearl Vision + Zildjian', 'NOTE::CASIO PX110キーボード常設'] },
+  { id: 'musicbank-matsudo-dst', roomIdNum: 2230, name: 'Dst (8帖)', size_sqm: 13, capacity: 5, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHAクラビノーバ電子ピアノ、鏡（壁掛け）、譜面台、簡易PA・スピーカー、CDデッキ'] },
+  { id: 'musicbank-matsudo-1st', roomIdNum: 2231, name: '1st (8帖)', size_sqm: 13, capacity: 4, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHAクラビノーバ電子ピアノ、音響機材（マイク・音源再生可）、CDデッキ、鏡、譜面台'] },
+  { id: 'musicbank-matsudo-2st', roomIdNum: 2232, name: '2st (8帖・アップライトピアノ)', size_sqm: 13, capacity: 4, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHA U3Aアップライトピアノ常設、YAMAHAクラビノーバ電子ピアノ、鏡（壁固定）、譜面台'] },
+  { id: 'musicbank-matsudo-3st', roomIdNum: 2233, name: '3st (17帖)', size_sqm: 28, capacity: 10, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHAクラビノーバ電子ピアノ、音響機材（マイク・音源再生可）、CDデッキ、鏡、譜面台、マイクスタンド'] },
+  { id: 'musicbank-matsudo-4st', roomIdNum: 2234, name: '4st (4帖・グランドピアノ)', size_sqm: 7, capacity: 2, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHA C1Xグランドピアノ常設、譜面台'] },
+  { id: 'musicbank-matsudo-5st', roomIdNum: 2235, name: '5st (9帖)', size_sqm: 15, capacity: 5, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHAクラビノーバ電子ピアノ、鏡（壁掛け小さめ）、譜面台'] },
+  { id: 'musicbank-matsudo-6st', roomIdNum: 2277, name: '6st (7帖)', size_sqm: 12, capacity: 3, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHAクラビノーバ電子ピアノ、鏡（壁掛け固定）、譜面台'] },
+  { id: 'musicbank-matsudo-7st', roomIdNum: 2236, name: '7st (4帖)', size_sqm: 7, capacity: 3, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::YAMAHAクラビノーバ電子ピアノ、鏡（スタンドタイプ）、譜面台'] },
+  { id: 'musicbank-matsudo-8st', roomIdNum: 2278, name: '8st (7帖)', size_sqm: 12, capacity: 4, hourly_rate: 1700, day_rate: 1700, individual_rate: 500, start_time_offset: 0, features: ['NOTE::PA・スピーカー等の音響機材、CDデッキ、家庭サイズのギターアンプ、譜面台'] },
+];
+
+export async function fetchMusicBankMatsudoDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<BotRoomData[]> {
+  return fetchBotStoreDays('https://studi-ol.com/shop/558', ITO_ONGAKU_MUSICBANK_MATSUDO_ROOMS, '伊藤楽器 MUSIC BANK 松戸', baseDate, dayCount);
+}

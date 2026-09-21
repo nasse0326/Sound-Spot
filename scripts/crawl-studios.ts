@@ -18,10 +18,10 @@ import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
 import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
-import { fetchStudioSunNishiFunabashiDays, fetchStudioDivoKameidoDays } from './lib/webtoru-fetcher';
+import { fetchStudioSunNishiFunabashiDays, fetchStudioDivoKameidoDays, fetchStudioDugout2MatsudoDays } from './lib/webtoru-fetcher';
 import { fetchCloud9YokohamaKitaguchiDays } from './lib/cloud9-fetcher';
-import { fetchStudio2TimesDays } from './lib/bot-fetcher';
-import { fetchSoundStudioMKoiwaDays } from './lib/orpheus-fetcher';
+import { fetchStudio2TimesDays, fetchMusicBankMatsudoDays } from './lib/bot-fetcher';
+import { fetchSoundStudioMKoiwaDays, fetchSoundStudioMKashiwaDays } from './lib/orpheus-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
@@ -1365,6 +1365,135 @@ export async function crawlSoundStudioMKoiwa(baseDate: Date, dayCount: number = 
 }
 
 // -------------------------------------------------------------
+// 松戸・柏エリア追加分（2026-09-21）。
+// ・伊藤楽器 MUSIC BANK 松戸: studi-ol.com（ログイン不要）
+// ・スタジオ ダグアウト2: webtoru.com（ログイン不要）
+// ・サウンドスタジオパックス新松戸店: 会員ログイン必須のため静的リスティング
+//   （船橋店と同じbrovalapp.netシステム、ゲスト閲覧不可を確認済み）
+// ・ゲートウェイスタジオ柏店: Reserve1.jp（ゲスト閲覧可能、他のGateway店舗と同じ）
+// ・SOUND STUDIO M 柏店: orpheusrecords.info（小岩店と同じ、有人営業のみでハイブリッド
+//   構成ではないことを確認済み）
+// -------------------------------------------------------------
+export async function crawlMusicBankMatsudo(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('伊藤楽器 MUSIC BANK 松戸', fetchMusicBankMatsudoDays, 'musicbank-matsudo-real', baseDate, dayCount, 'studi-ol.com');
+}
+
+export async function crawlStudioDugout2Matsudo(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('スタジオ ダグアウト2', fetchStudioDugout2MatsudoDays, 'studio-dugout2-matsudo-real', baseDate, dayCount, 'webtoru.com');
+}
+
+export async function crawlSoundStudioMKashiwa(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('SOUND STUDIO M 柏店', fetchSoundStudioMKashiwaDays, 'soundstudio-m-kashiwa-real', baseDate, dayCount, 'orpheusrecords.info');
+}
+
+const GATEWAY_KASHIWA_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  features: string[];
+}> = {
+  '1st': { name: '1st (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2640, hourlyWeekday: 2090, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', "Fender 65 TWINREVERB", 'BASS::Ampeg SVT-3PRO + 810E', 'DRUM::PEARL RF + SABIAN AA'] },
+  '2st': { name: '2st (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2640, hourlyWeekday: 2090, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', "Fender 65 TWINREVERB", 'BASS::Ampeg Venture V3 + 810E', 'DRUM::PEARL CC + SABIAN AA'] },
+  '3st': { name: '3st (11帖)', tatami: 11, capacity: 5, hourlyWeekend: 2310, hourlyWeekday: 1760, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', "Fender 65 TWINREVERB", 'BASS::Ampeg SVT-3PRO + 810E', 'DRUM::Pearl RFP + SABIAN AA'] },
+  '4st': { name: '4st (9帖)', tatami: 9, capacity: 4, hourlyWeekend: 1980, hourlyWeekday: 1430, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Markbass LMR500 + ST108HR', 'DRUM::Pearl MRP + SABIAN AA'] },
+  '5st': { name: '5st (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2310, hourlyWeekday: 1760, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Markbass LMR500 + ST108HR', 'DRUM::Pearl MRP + SABIAN AA', '30分スタート'] },
+  '6st': { name: '6st (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2640, hourlyWeekday: 2090, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', "Fender 65 TWINREVERB", 'BASS::Ampeg SVT-3PRO + 810E', 'DRUM::Pearl RF + SABIAN AA', '30分スタート'] },
+  '7st': { name: '7st (10帖)', tatami: 10, capacity: 5, hourlyWeekend: 2310, hourlyWeekday: 1760, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Markbass LMR500 + ST108HR', 'DRUM::Pearl MRP + SABIAN AA', '30分スタート'] },
+};
+
+export async function crawlGatewayKashiwa(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log(`🎸 [Gateway 柏店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
+
+  const fetchedRooms = await fetchReserve1Days({
+    name: 'ゲートウェイ柏店',
+    loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=14',
+    openHour: 9,
+  }, baseDate, dayCount);
+
+  const targetDates: string[] = [];
+  for (let i = 0; i < dayCount; i++) {
+    targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+  }
+
+  const studioObject = {
+    id: 'gateway-kashiwa',
+    name: 'ゲートウェイスタジオ 柏店',
+    slug: 'gateway-kashiwa',
+    chain_name: 'GATEWAY STUDIO',
+    area: '松戸・柏',
+    prefecture: '千葉県',
+    nearest_station: '柏駅 西口 徒歩2分',
+    address: '千葉県柏市旭町1-2-1 第11関口ビルB1',
+    tel: '04-7144-9993',
+    url: 'http://www.gw-studio.com/studios/studio_kashi/index',
+    booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=14',
+    business_hours_summary: '平日10:00〜23:00 / 土日祝9:00〜23:00',
+    is_24hours: false,
+    group_booking_rule: '2ヶ月前よりWEB/電話にて予約可能',
+    group_booking_lead_months: 2,
+    solo_booking_rule: '前日10:00よりWEB/電話受付開始 (1名770円/h、2名1,320円/h)',
+    solo_booking_lead_hours: 24,
+    scraped_at: new Date().toISOString(),
+    dates_available: targetDates,
+    rooms: [] as any[]
+  };
+
+  Object.keys(GATEWAY_KASHIWA_ROOM_SPECS).forEach(stKey => {
+    const spec = GATEWAY_KASHIWA_ROOM_SPECS[stKey];
+    const roomId = `gw-kashiwa-${stKey.toLowerCase()}`;
+    const matchedRoom = fetchedRooms.find(r => r.id === stKey);
+
+    const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+      id: `slot-${roomId}-${s.id || sIdx}`,
+      start_time: s.start_time,
+      end_time: s.end_time,
+      status: s.status,
+      price: spec.hourlyWeekend
+    }));
+
+    studioObject.rooms.push({
+      id: roomId,
+      studio_id: studioObject.id,
+      name: spec.name,
+      size_sqm: Math.round(spec.tatami * 1.65),
+      size_tatami: spec.tatami,
+      capacity: spec.capacity,
+      hourly_rate: spec.hourlyWeekend,
+      day_rate: spec.hourlyWeekday,
+      individual_rate: spec.soloRate,
+      features: spec.features,
+      start_time_offset: spec.offset,
+      slots: roomSlots
+    });
+  });
+
+  const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-kashiwa-real.json');
+  fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+  console.log(`✅ [Gateway 柏店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] ゲートウェイ柏店の最新スロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    studioObject.rooms.forEach((r: any) => {
+      const roomUUID = toUUID(r.id);
+      (r.slots || []).forEach((s: any) => {
+        dbSlots.push({
+          room_id: roomUUID,
+          start_time: s.start_time,
+          end_time: s.end_time,
+          status: s.status,
+        });
+      });
+    });
+    await upsertAvailabilitySlots('ゲートウェイ柏店', dbSlots);
+  }
+}
+
+// -------------------------------------------------------------
 // STUDIO BAYD 高円寺店 (WnSpaceMusic / 独自プラットフォーム、公開REST API直叩き)
 // -------------------------------------------------------------
 const STUDIO_BAYD_KOENJI_ROOM_SPECS: Record<number, {
@@ -1682,6 +1811,10 @@ async function main() {
       crawlStudioDivoKameido(now, CRAWL_DAY_COUNT),
       crawlStudio2Times(now, CRAWL_DAY_COUNT),
       crawlSoundStudioMKoiwa(now, CRAWL_DAY_COUNT),
+      crawlMusicBankMatsudo(now, CRAWL_DAY_COUNT),
+      crawlStudioDugout2Matsudo(now, CRAWL_DAY_COUNT),
+      crawlGatewayKashiwa(now, CRAWL_DAY_COUNT),
+      crawlSoundStudioMKashiwa(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

@@ -185,3 +185,23 @@ export async function fetchStudioDivoKameidoDays(
 ): Promise<WebtoruRoomData[]> {
   return fetchWebtoruShopDays(169, STUDIO_DIVO_KAMEIDO_ROOMS, 'Studio DIVO 亀戸', baseDate, dayCount);
 }
+
+// 松戸・柏エリア追加分（2026-09-21）。room_idはwebtoru.com/shop/173/calendarのPOST
+// レスポンス内<button class="room" data="...">から実値を確認済み。A,B,F,Gは00分スタート、
+// C,D,Eは30分スタート（公式サイトの明記と一致）。
+export const STUDIO_DUGOUT2_MATSUDO_ROOMS: WebtoruRoomSpec[] = [
+  { id: 'dugout2-ast', roomIdNum: 445, name: 'Ast (17畳)', size_sqm: 28, capacity: 9, hourly_rate: 3200, day_rate: 2700, individual_rate: 1100, start_time_offset: 0, features: ['アップライトピアノ YAMAHA U3', 'Marshall 2000 TSL100 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT3-PRO + SVT-810E', 'DRUM::Pearl Session Studio Classic', 'NOTE::天井高3500mm、CD再生可'] },
+  { id: 'dugout2-bst', roomIdNum: 446, name: 'Bst (14畳)', size_sqm: 23, capacity: 8, hourly_rate: 2900, day_rate: 2400, individual_rate: 880, start_time_offset: 0, features: ['Marshall JVM205H + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT3-PRO + SVT-810E', 'DRUM::Pearl Session Studio Classic', 'NOTE::天井高3500mm、CD再生可'] },
+  { id: 'dugout2-cst', roomIdNum: 447, name: 'Cst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2400, day_rate: 1900, individual_rate: 770, start_time_offset: 30, features: ['Marshall JCM2000DSL + 1960A', 'Roland JC-120', 'BASS::HARTKE HA3500 + 4.5XL', 'DRUM::Pearl Session Studio Classic', 'NOTE::CD再生可'] },
+  { id: 'dugout2-dst', roomIdNum: 448, name: 'Dst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2400, day_rate: 1900, individual_rate: 770, start_time_offset: 30, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Ampeg PF-500 + SVT410HE', 'DRUM::Pearl Session Studio Classic', 'NOTE::CD再生可'] },
+  { id: 'dugout2-est', roomIdNum: 449, name: 'Est (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2400, day_rate: 1900, individual_rate: 770, start_time_offset: 30, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::HARTKE HA3500 + 4.5XL', 'DRUM::Pearl Session Studio Classic', 'NOTE::CD再生可'] },
+  { id: 'dugout2-fst', roomIdNum: 450, name: 'Fst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2400, day_rate: 1900, individual_rate: 770, start_time_offset: 0, features: ['Marshall JCM2000DSL + 1960A', 'Roland JC-120', 'BASS::Ampeg PF-500 + SVT410HE', 'DRUM::Pearl Session Studio Classic', 'NOTE::CD再生可'] },
+  { id: 'dugout2-gst', roomIdNum: 451, name: 'Gst (10畳)', size_sqm: 17, capacity: 5, hourly_rate: 2400, day_rate: 1900, individual_rate: 770, start_time_offset: 0, features: ['Marshall 900 + 1960A', 'Roland JC-120', 'BASS::HARTKE HA3500 + 4.5XL', 'DRUM::Pearl Session Studio Classic', 'NOTE::CD再生可'] },
+];
+
+export async function fetchStudioDugout2MatsudoDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<WebtoruRoomData[]> {
+  return fetchWebtoruShopDays(173, STUDIO_DUGOUT2_MATSUDO_ROOMS, 'スタジオ ダグアウト2', baseDate, dayCount);
+}
