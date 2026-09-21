@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getRoomsWithSlotsFromSupabase } from '@/lib/supabase/api';
-import { getMockRoomsWithSlots } from '@/lib/mock-data';
+import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { toUUID } from '@/lib/id-utils';
 import { format } from 'date-fns';
 
@@ -9,10 +9,15 @@ export async function GET(request: NextRequest) {
   const dateStr = searchParams.get('date') || format(new Date(), 'yyyy-MM-dd');
   const area = searchParams.get('area') || 'all';
 
-  const mockRooms = getMockRoomsWithSlots(dateStr);
-  const filtered = area === 'all'
-    ? mockRooms
-    : mockRooms.filter((r) => r.studio.area === area);
+  // モックデータ（全店舗・全部屋・全日程分をJSONから読み込んで組み立てる処理）はCPU負荷が
+  // 高く、店舗数増加に伴いCloudflare WorkersのCPU時間制限を超過する事例が発生した
+  // （2026-09-21、松戸・柏エリア追加後）。Supabase側が十分なデータを返せる通常時は
+  // 一切不要な計算のため、フォールバックが実際に必要になった場合のみ遅延計算する。
+  let mockRoomsCache: ReturnType<typeof getMockRoomsWithSlots> | null = null;
+  const getFilteredMockRooms = () => {
+    if (!mockRoomsCache) mockRoomsCache = getMockRoomsWithSlots(dateStr);
+    return area === 'all' ? mockRoomsCache : mockRoomsCache.filter((r) => r.studio.area === area);
+  };
 
   // 1. Supabaseからリアル空き枠データを取得
   try {
@@ -32,7 +37,9 @@ export async function GET(request: NextRequest) {
       // 1件でも丸ごと欠けていればモックへフォールバックする。
       // Supabase側のstudios.idはseed.sql生成時にtoUUID(元のslug)へ変換済みのため、
       // モック側のslug idと直接比較すると常に不一致になる。比較前にtoUUID()で揃える。
-      const expectedStudioIds = new Set(filtered.map((r) => toUUID(r.studio.id)));
+      const expectedStudioIds = new Set(
+        MOCK_STUDIOS.filter((s) => area === 'all' || s.area === area).map((s) => toUUID(s.id))
+      );
       const supabaseStudioIds = new Set(supabaseRooms.map((r) => r.studio.id));
       const missingStudioCount = [...expectedStudioIds].filter((id) => !supabaseStudioIds.has(id)).length;
 
@@ -52,6 +59,6 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({
     source: 'mock',
-    data: filtered,
+    data: getFilteredMockRooms(),
   });
 }
