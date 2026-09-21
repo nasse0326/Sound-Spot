@@ -19,7 +19,7 @@ import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
 import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
 import { fetchStudioSunNishiFunabashiDays, fetchStudioDivoKameidoDays, fetchStudioDugout2MatsudoDays } from './lib/webtoru-fetcher';
-import { fetchCloud9YokohamaKitaguchiDays } from './lib/cloud9-fetcher';
+import { fetchCloud9YokohamaKitaguchiDays, fetchCloud9MachidaDays } from './lib/cloud9-fetcher';
 import { fetchStudio2TimesDays, fetchMusicBankMatsudoDays } from './lib/bot-fetcher';
 import { fetchSoundStudioMKoiwaDays, fetchSoundStudioMKashiwaDays } from './lib/orpheus-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
@@ -1494,6 +1494,243 @@ export async function crawlGatewayKashiwa(baseDate: Date, dayCount: number = CRA
 }
 
 // -------------------------------------------------------------
+// 町田エリア追加分（2026-09-21）。
+// ・クラウドナインスタジオ 町田店: cloud9-web.jp（studio_id=3、自動巡回対応）
+// ・ゲートウェイスタジオ 町田店: Reserve1.jp（gr=11、自動巡回対応、他のGateway店舗と同じ）
+// ・スタジオアクト町田店: 同じくReserve1.jp（別事業者アカウント lc=dlsccvatc・gr=1、
+//   ブラウザ実地確認でゲスト閲覧可能なことを確認済み。全14部屋・2F/3F/B1Fの3フロア構成）
+// -------------------------------------------------------------
+export async function crawlCloud9Machida(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('クラウドナインスタジオ 町田店', fetchCloud9MachidaDays, 'cloud9-machida-real', baseDate, dayCount, 'cloud9-web.jp');
+}
+
+const GATEWAY_MACHIDA_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  features: string[];
+}> = {
+  '1st': { name: '1st (11帖)', tatami: 11, capacity: 6, hourlyWeekend: 2310, hourlyWeekday: 1760, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl MRX + SABIAN AA'] },
+  '2st': { name: '2st (9帖)', tatami: 9, capacity: 5, hourlyWeekend: 2090, hourlyWeekday: 1540, soloRate: 770, offset: 30, features: ['Marshall JCM2000', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl MRX + SABIAN AA', '30分スタート'] },
+  '3st': { name: '3st (9帖)', tatami: 9, capacity: 5, hourlyWeekend: 2090, hourlyWeekday: 1540, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl MRX + SABIAN AA'] },
+  '5st': { name: '5st (11帖)', tatami: 11, capacity: 6, hourlyWeekend: 2310, hourlyWeekday: 1760, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl MSX + SABIAN AA', '30分スタート'] },
+  '6st': { name: '6st (13帖)', tatami: 13, capacity: 7, hourlyWeekend: 2530, hourlyWeekday: 1980, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-450H', 'DRUM::Pearl RF + SABIAN AA', '30分スタート'] },
+  '7st': { name: '7st (13帖)', tatami: 13, capacity: 7, hourlyWeekend: 2530, hourlyWeekday: 1980, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl MMX + SABIAN AA'] },
+  '8st': { name: '8st (11帖)', tatami: 11, capacity: 6, hourlyWeekend: 2310, hourlyWeekday: 1760, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-450H', 'DRUM::Canopus Birch', '30分スタート'] },
+  '9st': { name: '9st (9帖)', tatami: 9, capacity: 5, hourlyWeekend: 2090, hourlyWeekday: 1540, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-450H', 'DRUM::Pearl MRP Maple'] },
+  '10st': { name: '10st (12帖)', tatami: 12, capacity: 6, hourlyWeekend: 2420, hourlyWeekday: 1870, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl MRX'] },
+  '11st': { name: '11st (18帖)', tatami: 18, capacity: 9, hourlyWeekend: 2860, hourlyWeekday: 2310, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl Reference', 'NOTE::Power Amp AMCRON XLS602、TC Electronics M350、Electra-Voice Force iモニター常設', '30分スタート'] },
+  '12st': { name: '12st (13帖)', tatami: 13, capacity: 7, hourlyWeekend: 2530, hourlyWeekday: 1980, soloRate: 770, offset: 30, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-450H', 'DRUM::Pearl MRP Maple', '30分スタート'] },
+  '13st': { name: '13st (18帖)', tatami: 18, capacity: 9, hourlyWeekend: 2860, hourlyWeekday: 2310, soloRate: 770, offset: 0, features: ['Marshall JCM900', 'Roland JC-120', 'BASS::Ampeg SVT-3pro', 'DRUM::Pearl BRP(6PLY BIRCH)', 'NOTE::Power Amp AMCRON XLS602、TC Electronics M350、Electra-Voice Force iモニター常設'] },
+};
+
+export async function crawlGatewayMachida(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log(`🎸 [Gateway 町田店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
+
+  const fetchedRooms = await fetchReserve1Days({
+    name: 'ゲートウェイ町田店',
+    loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=11',
+    openHour: 8,
+  }, baseDate, dayCount);
+
+  const targetDates: string[] = [];
+  for (let i = 0; i < dayCount; i++) {
+    targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+  }
+
+  const studioObject = {
+    id: 'gateway-machida',
+    name: 'ゲートウェイスタジオ 町田店',
+    slug: 'gateway-machida',
+    chain_name: 'GATEWAY STUDIO',
+    area: '町田',
+    prefecture: '神奈川県',
+    nearest_station: 'JR町田駅 徒歩30秒',
+    address: '神奈川県相模原市南区上鶴間本町3-17-3 アルファビル2F3F',
+    tel: '042-747-9990',
+    url: 'http://www.gw-studio.com/studios/studio_machi/index',
+    booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=tlsccmeco&mn=3&gr=11',
+    business_hours_summary: '平日10:00〜23:00 / 土日祝10:00〜24:00',
+    is_24hours: false,
+    group_booking_rule: '2ヶ月前よりWEB/電話にて予約可能',
+    group_booking_lead_months: 2,
+    solo_booking_rule: '前日10:00よりWEB/電話受付開始 (1名770円/h、2名1,320円/h)',
+    solo_booking_lead_hours: 24,
+    scraped_at: new Date().toISOString(),
+    dates_available: targetDates,
+    rooms: [] as any[]
+  };
+
+  Object.keys(GATEWAY_MACHIDA_ROOM_SPECS).forEach(stKey => {
+    const spec = GATEWAY_MACHIDA_ROOM_SPECS[stKey];
+    const roomId = `gw-machida-${stKey.toLowerCase()}`;
+    const matchedRoom = fetchedRooms.find(r => r.id === stKey);
+
+    const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+      id: `slot-${roomId}-${s.id || sIdx}`,
+      start_time: s.start_time,
+      end_time: s.end_time,
+      status: s.status,
+      price: spec.hourlyWeekend
+    }));
+
+    studioObject.rooms.push({
+      id: roomId,
+      studio_id: studioObject.id,
+      name: spec.name,
+      size_sqm: Math.round(spec.tatami * 1.65),
+      size_tatami: spec.tatami,
+      capacity: spec.capacity,
+      hourly_rate: spec.hourlyWeekend,
+      day_rate: spec.hourlyWeekday,
+      individual_rate: spec.soloRate,
+      features: spec.features,
+      start_time_offset: spec.offset,
+      slots: roomSlots
+    });
+  });
+
+  const outPath = path.join(process.cwd(), 'src', 'data', 'gateway-machida-real.json');
+  fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+  console.log(`✅ [Gateway 町田店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] ゲートウェイ町田店の最新スロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    studioObject.rooms.forEach((r: any) => {
+      const roomUUID = toUUID(r.id);
+      (r.slots || []).forEach((s: any) => {
+        dbSlots.push({
+          room_id: roomUUID,
+          start_time: s.start_time,
+          end_time: s.end_time,
+          status: s.status,
+        });
+      });
+    });
+    await upsertAvailabilitySlots('ゲートウェイ町田店', dbSlots);
+  }
+}
+
+const STUDIOACT_MACHIDA_ROOM_SPECS: Record<string, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyWeekend: number;
+  hourlyWeekday: number;
+  soloRate: number;
+  offset: number;
+  features: string[];
+}> = {
+  '201st': { name: '201st (18畳)', tatami: 18, capacity: 9, hourlyWeekend: 2700, hourlyWeekday: 2000, soloRate: 700, offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', "Fender '65 TwinReverb", 'BASS::Ampeg SVT450', 'DRUM::Pearl MXseries + Zildjian A', 'NOTE::キーボードROLAND XP-10/YAMAHA P-115常設'] },
+  '202st': { name: '202st (17畳)', tatami: 17, capacity: 8, hourlyWeekend: 2700, hourlyWeekday: 2000, soloRate: 700, offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', "Fender '65 TwinReverb", 'BASS::Ampeg SVT350', 'DRUM::Pearl MXseries + Zildjian A'] },
+  '203st': { name: '203st (17畳)', tatami: 17, capacity: 8, hourlyWeekend: 2700, hourlyWeekday: 2000, soloRate: 700, offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', "Fender '65 TwinReverb", 'BASS::Ampeg SVT350', 'DRUM::Pearl MXseries + Zildjian A'] },
+  '204st': { name: '204st (20畳)', tatami: 20, capacity: 10, hourlyWeekend: 2700, hourlyWeekday: 2000, soloRate: 700, offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', "Fender '65 TwinReverb", 'BASS::Ampeg SVT450', 'DRUM::Pearl MXseries + Zildjian A'] },
+  '205st': { name: '205st (18畳)', tatami: 18, capacity: 9, hourlyWeekend: 2700, hourlyWeekday: 2000, soloRate: 700, offset: 0, features: ['Marshall JCM2000', 'Roland JC-120', "Fender '65 TwinReverb", 'BASS::Ampeg SVT450', 'DRUM::Pearl MXseries + Zildjian A'] },
+  '301st': { name: '301st (18畳)', tatami: 18, capacity: 9, hourlyWeekend: 2400, hourlyWeekday: 1700, soloRate: 700, offset: 15, features: ['Marshall DSL100H', 'Roland JC-120', 'MesaBoogie DC-5', 'BASS::Ampeg SVT450', 'DRUM::Pearl MRseries + MXseries + Zildjian A', 'NOTE::キーボードROLAND XP-10/JUNO-DS常設'] },
+  '302st': { name: '302st (17畳)', tatami: 17, capacity: 8, hourlyWeekend: 2400, hourlyWeekday: 1700, soloRate: 700, offset: 15, features: ['Marshall DSL100H', 'Roland JC-120', 'MesaBoogie DC-5', 'BASS::Ampeg B5R', 'DRUM::Pearl MXseries + Zildjian A'] },
+  '303st': { name: '303st (17畳)', tatami: 17, capacity: 8, hourlyWeekend: 2400, hourlyWeekday: 1700, soloRate: 700, offset: 15, features: ['Marshall DSL100H', 'Roland JC-120', 'MesaBoogie DC-5', 'BASS::Ampeg Venture V3', 'DRUM::Pearl MRseries + MXseries + Zildjian A'] },
+  '304st': { name: '304st (20畳)', tatami: 20, capacity: 10, hourlyWeekend: 2400, hourlyWeekday: 1700, soloRate: 700, offset: 15, features: ['Marshall DSL100H', 'Roland JC-120', 'MesaBoogie DC-5', 'BASS::Ampeg SVT450', 'DRUM::Pearl MRseries + MXseries + Zildjian A', 'NOTE::キーボードROLAND XP-10/JUNO-DS常設'] },
+  '305st': { name: '305st (18畳)', tatami: 18, capacity: 9, hourlyWeekend: 2400, hourlyWeekday: 1700, soloRate: 700, offset: 15, features: ['Marshall DSL100H', 'Roland JC-120', 'MesaBoogie DC-5', 'BASS::Ampeg Venture V3', 'DRUM::Pearl MRseries + MXseries + Zildjian A'] },
+  '101st': { name: '101st (20畳)', tatami: 20, capacity: 10, hourlyWeekend: 2800, hourlyWeekday: 2100, soloRate: 700, offset: 30, features: ['Marshall JCM2000', 'Marshall JCM900-SLX', 'Roland JC-120', "Fender '65 TwinReverb", 'Soldano HotRod100', 'BASS::Ampeg SVT350', 'DRUM::Pearl MXseries + Zildjian A', 'NOTE::キーボードROLAND XP-10/YAMAHA P-225常設、スネアLudwig Steel Shell', '30分スタート'] },
+  '102st': { name: '102st (21畳)', tatami: 21, capacity: 10, hourlyWeekend: 2800, hourlyWeekday: 2100, soloRate: 700, offset: 30, features: ['Marshall JCM2000', 'Marshall JCM900-SLX', 'Roland JC-120', "Fender '65 TwinReverb", 'Soldano HotRod100', 'BASS::Ampeg SVT350', 'DRUM::Pearl MXseries + Zildjian A', '30分スタート'] },
+  '103st': { name: '103st (21畳)', tatami: 21, capacity: 10, hourlyWeekend: 2800, hourlyWeekday: 2100, soloRate: 700, offset: 30, features: ['Marshall JCM2000', 'Marshall JCM900-SLX', 'Roland JC-120', "Fender '65 TwinReverb", 'Soldano HotRod100', 'BASS::Ampeg SVT450', 'DRUM::Pearl MXseries + Zildjian A', '30分スタート'] },
+  '104st': { name: '104st (22畳)', tatami: 22, capacity: 11, hourlyWeekend: 2800, hourlyWeekday: 2100, soloRate: 700, offset: 30, features: ['Marshall JCM2000', 'Marshall JCM900-SLX', 'Roland JC-120', "Fender '65 TwinReverb", 'Soldano HotRod100', 'BASS::Ampeg SVT450', 'DRUM::Pearl MXseries + Zildjian A', '30分スタート'] },
+};
+
+export async function crawlStudioActMachida(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log(`🎸 [スタジオアクト町田店] スケジュール巡回を開始します (Node fetch / ${dayCount}日間)...`);
+
+  const fetchedRooms = await fetchReserve1Days({
+    name: 'スタジオアクト町田店',
+    loginUrl: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=dlsccvatc&mn=3&gr=1',
+    openHour: 9,
+  }, baseDate, dayCount);
+
+  const targetDates: string[] = [];
+  for (let i = 0; i < dayCount; i++) {
+    targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+  }
+
+  const studioObject = {
+    id: 'studioact-machida',
+    name: 'スタジオアクト町田店',
+    slug: 'studioact-machida',
+    chain_name: 'STUDIO ACT',
+    area: '町田',
+    prefecture: '東京都',
+    nearest_station: '小田急線町田駅 徒歩5分 / JR町田駅 徒歩10分',
+    address: '東京都町田市原町田6-29-10',
+    tel: '042-722-0005',
+    url: 'https://www.studioact.co.jp/',
+    booking_url: 'https://www.reserve1.jp/studio/member/VisitorLogin.php?lc=dlsccvatc&mn=3&gr=1',
+    business_hours_summary: '平日12:00〜24:00 / 土日祝9:00〜24:00',
+    is_24hours: false,
+    group_booking_rule: '2ヶ月前よりWEB予約可能（要利用者登録）',
+    group_booking_lead_months: 2,
+    solo_booking_rule: '前日よりWEB予約可能 (1名700円/h、2名1,400円/h)',
+    solo_booking_lead_hours: 24,
+    scraped_at: new Date().toISOString(),
+    dates_available: targetDates,
+    rooms: [] as any[]
+  };
+
+  Object.keys(STUDIOACT_MACHIDA_ROOM_SPECS).forEach(stKey => {
+    const spec = STUDIOACT_MACHIDA_ROOM_SPECS[stKey];
+    const roomId = `studioact-machida-${stKey.toLowerCase()}`;
+    const matchedRoom = fetchedRooms.find(r => r.id === stKey);
+
+    const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+      id: `slot-${roomId}-${s.id || sIdx}`,
+      start_time: s.start_time,
+      end_time: s.end_time,
+      status: s.status,
+      price: spec.hourlyWeekend
+    }));
+
+    studioObject.rooms.push({
+      id: roomId,
+      studio_id: studioObject.id,
+      name: spec.name,
+      size_sqm: Math.round(spec.tatami * 1.65),
+      size_tatami: spec.tatami,
+      capacity: spec.capacity,
+      hourly_rate: spec.hourlyWeekend,
+      day_rate: spec.hourlyWeekday,
+      individual_rate: spec.soloRate,
+      features: spec.features,
+      start_time_offset: spec.offset,
+      slots: roomSlots
+    });
+  });
+
+  const outPath = path.join(process.cwd(), 'src', 'data', 'studioact-machida-real.json');
+  fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+  console.log(`✅ [スタジオアクト町田店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+  if (supabase) {
+    console.log('⚡ [Supabase Sync] スタジオアクト町田店の最新スロットをSupabaseに同期中...');
+    const dbSlots: any[] = [];
+    studioObject.rooms.forEach((r: any) => {
+      const roomUUID = toUUID(r.id);
+      (r.slots || []).forEach((s: any) => {
+        dbSlots.push({
+          room_id: roomUUID,
+          start_time: s.start_time,
+          end_time: s.end_time,
+          status: s.status,
+        });
+      });
+    });
+    await upsertAvailabilitySlots('スタジオアクト町田店', dbSlots);
+  }
+}
+
+// -------------------------------------------------------------
 // STUDIO BAYD 高円寺店 (WnSpaceMusic / 独自プラットフォーム、公開REST API直叩き)
 // -------------------------------------------------------------
 const STUDIO_BAYD_KOENJI_ROOM_SPECS: Record<number, {
@@ -1815,6 +2052,9 @@ async function main() {
       crawlStudioDugout2Matsudo(now, CRAWL_DAY_COUNT),
       crawlGatewayKashiwa(now, CRAWL_DAY_COUNT),
       crawlSoundStudioMKashiwa(now, CRAWL_DAY_COUNT),
+      crawlCloud9Machida(now, CRAWL_DAY_COUNT),
+      crawlGatewayMachida(now, CRAWL_DAY_COUNT),
+      crawlStudioActMachida(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

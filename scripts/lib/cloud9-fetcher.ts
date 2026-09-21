@@ -153,3 +153,32 @@ export async function fetchCloud9YokohamaKitaguchiDays(
 ): Promise<Cloud9RoomData[]> {
   return fetchCloud9StudioDays(4, CLOUD9_YOKOHAMA_KITAGUCHI_ROOMS, 'クラウドナインスタジオ 横浜北口店', baseDate, dayCount);
 }
+
+// 町田エリア追加分（2026-09-21）。studio_id=3、room id群はcloud9-web.jpの
+// /api/studio-rooms レスポンス（ブラウザ実地確認、studio_id=3・団体/個人いずれでも
+// 同一13室）から取得。部屋ラベルはAst(19)を起点に、group（1:A-D室群, 2:ダンス室,
+// 3:Piano1/2室, 4:Piano3室, 5:Est-Gst室群, 6:Hst/Ist室群）とsequenceの組み合わせで
+// 19〜31番まで連番になっており、各室の開始分（studio_room_operating_hour）から
+// A/B/C/D=0分、Piano1/2=0分、Piano3=30分、E/F/G=30分、H/I=15分と一致することを
+// 確認済み（ダンスst=id23は対象外）。
+export const CLOUD9_MACHIDA_ROOMS: Cloud9RoomSpec[] = [
+  { id: 'cloud9-mc-ast', roomIdNum: 19, name: 'Ast (26帖)', size_sqm: 43, capacity: 13, hourly_rate: 3663, day_rate: 3168, individual_rate: 770, start_time_offset: 0, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Marshall JCM2000', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Ampeg SVT-3pro + SVT-810E', 'DRUM::Pearl Reference series + Zildjian A', 'NOTE::YAMAHA CP-5キーボード常設(330円/h)'] },
+  { id: 'cloud9-mc-bst', roomIdNum: 20, name: 'Bst (13帖)', size_sqm: 21, capacity: 7, hourly_rate: 2574, day_rate: 2079, individual_rate: 770, start_time_offset: 0, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Ampeg SVT-450H + SVT-810E', 'DRUM::Pearl BMP series + SABIAN AA'] },
+  { id: 'cloud9-mc-cst', roomIdNum: 21, name: 'Cst (11帖)', size_sqm: 18, capacity: 6, hourly_rate: 2475, day_rate: 1980, individual_rate: 770, start_time_offset: 0, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Ampeg SVT-450H + SVT-810E', 'DRUM::Pearl MRP series + SABIAN AA'] },
+  { id: 'cloud9-mc-dst', roomIdNum: 22, name: 'Dst (15帖)', size_sqm: 25, capacity: 8, hourly_rate: 2871, day_rate: 2376, individual_rate: 770, start_time_offset: 0, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Markbass LittleMarkRocker500 + Standard108HR', 'DRUM::Pearl Carbonply Maple series + SABIAN AA'] },
+  { id: 'cloud9-mc-est', roomIdNum: 27, name: 'Est (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2376, day_rate: 1881, individual_rate: 770, start_time_offset: 30, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Ampeg SVT-450H + SVT-610HLF', 'DRUM::Pearl MMP series + SABIAN AA'] },
+  { id: 'cloud9-mc-fst', roomIdNum: 28, name: 'Fst (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2376, day_rate: 1881, individual_rate: 770, start_time_offset: 30, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Ampeg SVT-450H + SVT-610HLF', 'DRUM::Pearl MMP series + SABIAN AA'] },
+  { id: 'cloud9-mc-gst', roomIdNum: 29, name: 'Gst (15帖)', size_sqm: 25, capacity: 8, hourly_rate: 2871, day_rate: 2376, individual_rate: 770, start_time_offset: 30, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Twin Amp01', 'BASS::Ampeg SVT-450H + SVT-810E', 'DRUM::Pearl MMP series + SABIAN AA', 'NOTE::YAMAHA U3Aアップライトピアノ常設(330円/h)'] },
+  { id: 'cloud9-mc-hst', roomIdNum: 30, name: 'Hst (13帖)', size_sqm: 21, capacity: 7, hourly_rate: 2574, day_rate: 2079, individual_rate: 770, start_time_offset: 15, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Super-Sonic60combo', 'BASS::Ampeg SVT-450H + SVT-810E', 'DRUM::YAMAHA absolute series maple + SABIAN AA'] },
+  { id: 'cloud9-mc-ist', roomIdNum: 31, name: 'Ist (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2376, day_rate: 1881, individual_rate: 770, start_time_offset: 15, weekdayStartHour: 10, weekendStartHour: 9, features: ['Marshall JCM900', 'Roland JC-120', 'Fender Super-Sonic60combo', 'BASS::Ampeg SVT-450H + SVT-610HLF', 'DRUM::YAMAHA absolute series Birch + SABIAN AA'] },
+  { id: 'cloud9-mc-p1st', roomIdNum: 24, name: 'Piano1 st (10帖)', size_sqm: 17, capacity: 5, hourly_rate: 2310, day_rate: 1980, individual_rate: 1650, start_time_offset: 0, weekdayStartHour: 10, weekendStartHour: 9, features: ['Roland JC-120', 'NOTE::YAMAHA G3Eグランドピアノ常設'] },
+  { id: 'cloud9-mc-p2st', roomIdNum: 25, name: 'Piano2 st (4.5帖)', size_sqm: 7, capacity: 2, hourly_rate: 2200, day_rate: 1870, individual_rate: 1540, start_time_offset: 0, weekdayStartHour: 10, weekendStartHour: 9, features: ['NOTE::グランドピアノ常設'] },
+  { id: 'cloud9-mc-p3st', roomIdNum: 26, name: 'Piano3 st (4帖)', size_sqm: 7, capacity: 2, hourly_rate: 2090, day_rate: 1760, individual_rate: 1430, start_time_offset: 30, weekdayStartHour: 10, weekendStartHour: 9, features: ['NOTE::グランドピアノ常設'] },
+];
+
+export async function fetchCloud9MachidaDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<Cloud9RoomData[]> {
+  return fetchCloud9StudioDays(3, CLOUD9_MACHIDA_ROOMS, 'クラウドナインスタジオ 町田店', baseDate, dayCount);
+}

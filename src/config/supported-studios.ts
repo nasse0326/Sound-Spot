@@ -4,7 +4,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩' | '松戸・柏';
+  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩' | '松戸・柏' | '町田';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -1068,6 +1068,61 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '04-7164-9413',
     websiteUrl: 'https://orpheusrecords.jp/ssm/kashiwa/',
     features: ['駅徒歩10分', 'ボーカルブース利用可(Bst)', '20時以降は無料駐車場あり'],
+  },
+
+  // -------------------------------------------------------------
+  // 町田エリア (3店舗 / 計38部屋)
+  // -------------------------------------------------------------
+  {
+    id: 'cloud9-machida',
+    name: 'クラウドナインスタジオ 町田店',
+    chainName: 'クラウドナインスタジオ',
+    area: '町田',
+    nearestStation: '小田急線・JR町田駅 徒歩3分',
+    address: '東京都町田市原町田4-11-14 コロンブスビル6F',
+    roomCount: 12,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'cloud9-web.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日10:00〜 / 土日祝9:00〜（最大翌6:30まで）',
+    tel: '042-721-9091',
+    websiteUrl: 'https://www.cloud-9-studio.com/studio/machida.html',
+    features: ['駅徒歩3分', 'グランドピアノ常設室2部屋', '全12部屋の大型施設'],
+  },
+  {
+    id: 'gateway-machida',
+    name: 'ゲートウェイスタジオ 町田店',
+    chainName: 'GATEWAY STUDIO',
+    area: '町田',
+    nearestStation: 'JR町田駅 徒歩30秒',
+    address: '神奈川県相模原市南区上鶴間本町3-17-3 アルファビル2F3F',
+    roomCount: 12,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'Reserve1.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日10:00〜23:00 / 土日祝10:00〜24:00',
+    tel: '042-747-9990',
+    websiteUrl: 'http://www.gw-studio.com/studios/studio_machi/index',
+    features: ['駅徒歩30秒', '入会金・年会費無料', '学割10%OFF対応'],
+  },
+  {
+    id: 'studioact-machida',
+    name: 'スタジオアクト町田店',
+    chainName: 'STUDIO ACT',
+    area: '町田',
+    nearestStation: '小田急線町田駅 徒歩5分 / JR町田駅 徒歩10分',
+    address: '東京都町田市原町田6-29-10',
+    roomCount: 14,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'Reserve1.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '平日12:00〜24:00 / 土日祝9:00〜24:00',
+    tel: '042-722-0005',
+    websiteUrl: 'https://www.studioact.co.jp/',
+    features: ['町田最大級の全14部屋', '2F/3F/B1Fの3フロア構成', 'ライブホール併設'],
   },
 ];
 
