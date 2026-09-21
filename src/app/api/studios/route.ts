@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getRoomsWithSlotsFromSupabase } from '@/lib/supabase/api';
-import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
+import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { toUUID } from '@/lib/id-utils';
 import { format } from 'date-fns';
 
@@ -9,13 +9,17 @@ export async function GET(request: NextRequest) {
   const dateStr = searchParams.get('date') || format(new Date(), 'yyyy-MM-dd');
   const area = searchParams.get('area') || 'all';
 
-  // モックデータ（全店舗・全部屋・全日程分をJSONから読み込んで組み立てる処理）はCPU負荷が
-  // 高く、店舗数増加に伴いCloudflare WorkersのCPU時間制限を超過する事例が発生した
-  // （2026-09-21、松戸・柏エリア追加後）。Supabase側が十分なデータを返せる通常時は
-  // 一切不要な計算のため、フォールバックが実際に必要になった場合のみ遅延計算する。
-  let mockRoomsCache: ReturnType<typeof getMockRoomsWithSlots> | null = null;
-  const getFilteredMockRooms = () => {
-    if (!mockRoomsCache) mockRoomsCache = getMockRoomsWithSlots(dateStr);
+  // src/lib/mock-data.ts一式（全店舗分のJSON、現在約43MB）を毎リクエスト時にモジュール
+  // 読み込みしていたため、Cloudflare WorkerのRAM上限（既定128MB）を超過し全リクエストが
+  // 500エラーになる障害が発生した（2026-09-21）。静的importをやめ、Supabaseが失敗/不完全な
+  // 場合のフォールバック時にのみ動的importで読み込むことで、Supabaseが正常な通常時は
+  // このモジュール自体を一切ロードしないようにする。
+  let mockRoomsCache: Awaited<ReturnType<typeof import('@/lib/mock-data')['getMockRoomsWithSlots']>> | null = null;
+  const getFilteredMockRooms = async () => {
+    if (!mockRoomsCache) {
+      const { getMockRoomsWithSlots } = await import('@/lib/mock-data');
+      mockRoomsCache = getMockRoomsWithSlots(dateStr);
+    }
     return area === 'all' ? mockRoomsCache : mockRoomsCache.filter((r) => r.studio.area === area);
   };
 
@@ -38,7 +42,7 @@ export async function GET(request: NextRequest) {
       // Supabase側のstudios.idはseed.sql生成時にtoUUID(元のslug)へ変換済みのため、
       // モック側のslug idと直接比較すると常に不一致になる。比較前にtoUUID()で揃える。
       const expectedStudioIds = new Set(
-        MOCK_STUDIOS.filter((s) => area === 'all' || s.area === area).map((s) => toUUID(s.id))
+        SUPPORTED_STUDIOS.filter((s) => area === 'all' || s.area === area).map((s) => toUUID(s.id))
       );
       const supabaseStudioIds = new Set(supabaseRooms.map((r) => r.studio.id));
       const missingStudioCount = [...expectedStudioIds].filter((id) => !supabaseStudioIds.has(id)).length;
@@ -59,6 +63,6 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({
     source: 'mock',
-    data: getFilteredMockRooms(),
+    data: await getFilteredMockRooms(),
   });
 }

@@ -22,7 +22,6 @@ import {
   Info
 } from 'lucide-react';
 import { SUPPORTED_STUDIOS, SupportedStudio } from '@/config/supported-studios';
-import { getMockRoomsWithSlots } from '@/lib/mock-data';
 import { RoomWithSlots } from '@/types/studio';
 import { RoomDetailModal } from './room-detail-modal';
 import { format } from 'date-fns';
@@ -59,9 +58,23 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
     setShowRightFade(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
   };
 
-  // 本日の日付基準で全店舗の部屋・機材スペックを取得
+  // 本日の日付基準で全店舗の部屋・機材スペックを取得。
+  // mock-data.ts一式（全店舗分のJSON、現在約43MB）はCloudflare WorkerのRAM上限を
+  // 超過した実績があるため（2026-09-21）、動的importで別chunkへ分離し、このモーダルが
+  // 実際に開かれたタイミングでのみ読み込む（常時マウントされるグローバルヘッダーの一部
+  // のため、useMemoでの即時読み込みは避ける）。
   const todayStr = useMemo(() => format(new Date(), 'yyyy-MM-dd'), []);
-  const allRooms = useMemo(() => getMockRoomsWithSlots(todayStr), [todayStr]);
+  const [allRooms, setAllRooms] = useState<RoomWithSlots[]>([]);
+  useEffect(() => {
+    if (!isOpen) return;
+    let isMounted = true;
+    import('@/lib/mock-data').then(({ getMockRoomsWithSlots }) => {
+      if (isMounted) setAllRooms(getMockRoomsWithSlots(todayStr));
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, [isOpen, todayStr]);
 
   // スタジオIDごとの部屋マッピング
   const roomsByStudioId = useMemo(() => {

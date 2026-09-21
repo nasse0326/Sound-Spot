@@ -7,7 +7,6 @@ import { StudioTimelineView } from '@/components/timeline/studio-timeline-view';
 import { RoomDetailModal } from '@/components/studio/room-detail-modal';
 import { SidebarBannerAd } from '@/components/search/sidebar-banner-ad';
 import { HowToUseGuide } from '@/components/common/how-to-use-guide';
-import { getMockRoomsWithSlots, MOCK_STUDIOS } from '@/lib/mock-data';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { SearchFilterParams, RoomWithSlots } from '@/types/studio';
 import { checkRoomAvailability, naturalCompareRoomNames, isPhoneOnlyStudio, AREA_DISPLAY_ORDER } from '@/lib/slot-utils';
@@ -68,15 +67,25 @@ export default function HomePage() {
 
   // 利用可能なエリア一覧
   const availableAreas = useMemo(() => {
-    return Array.from(new Set(MOCK_STUDIOS.map((s) => s.area)));
+    return Array.from(new Set(SUPPORTED_STUDIOS.map((s) => s.area)));
   }, []);
 
-  // 選択日時のスロット付き部屋データ（初期値: ローカルキャッシュ、APIフェッチ完了後は最新DBデータ）
-  const [liveRooms, setLiveRooms] = useState<RoomWithSlots[]>(() => getMockRoomsWithSlots(filters.date));
+  // 選択日時のスロット付き部屋データ（初期値は空、ローカルキャッシュ描画とAPIフェッチが
+  // それぞれ完了ししだい更新される）
+  const [liveRooms, setLiveRooms] = useState<RoomWithSlots[]>([]);
 
-  // 日付変更時に初期ローカルデータで即時描画（体感遅延ゼロ化）
+  // 日付変更時に初期ローカルデータで即時描画（体感遅延ゼロ化）。
+  // mock-data.ts一式（全店舗分のJSON、現在約43MB）はCloudflare WorkerのRAM上限を
+  // 超過した実績があるため（2026-09-21）、動的importでこのモジュールを別chunkへ分離し、
+  // 実際に必要になるこの瞬間まで読み込みを遅延させる。
   useEffect(() => {
-    setLiveRooms(getMockRoomsWithSlots(filters.date));
+    let isMounted = true;
+    import('@/lib/mock-data').then(({ getMockRoomsWithSlots }) => {
+      if (isMounted) setLiveRooms(getMockRoomsWithSlots(filters.date));
+    });
+    return () => {
+      isMounted = false;
+    };
   }, [filters.date]);
 
   // バックグラウンドで /api/studios から最新データをフェッチ
