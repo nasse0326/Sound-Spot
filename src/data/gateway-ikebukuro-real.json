@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-22T17:12:51.052Z",
+  "scraped_at": "2026-09-22T23:46:28.566Z",
   "dates_available": [
     "2026-09-22",
     "2026-09-23",
@@ -232,7 +232,7 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-23-1900",
           "start_time": "2026-09-23T19:00:00+09:00",
           "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -246,7 +246,7 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-23-2100",
           "start_time": "2026-09-23T21:00:00+09:00",
           "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -4922,7 +4922,7 @@
           "id": "slot-gw-ike-3st-slot-3st-2026-09-23-2330",
           "start_time": "2026-09-23T23:30:00+09:00",
           "end_time": "2026-09-24T00:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -9500,7 +9500,7 @@
           "id": "slot-gw-ike-5st-slot-5st-2026-09-23-1130",
           "start_time": "2026-09-23T11:30:00+09:00",
           "end_time": "2026-09-23T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -17934,14 +17934,14 @@
           "id": "slot-gw-ike-8st-slot-8st-2026-10-06-2200",
           "start_time": "2026-10-06T22:00:00+09:00",
           "end_time": "2026-10-06T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-8st-slot-8st-2026-10-06-2300",
           "start_time": "2026-10-06T23:00:00+09:00",
           "end_time": "2026-10-07T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -28425,14 +28425,14 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-25-2130",
           "start_time": "2026-09-25T21:30:00+09:00",
           "end_time": "2026-09-25T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-25-2230",
           "start_time": "2026-09-25T22:30:00+09:00",
           "end_time": "2026-09-25T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {

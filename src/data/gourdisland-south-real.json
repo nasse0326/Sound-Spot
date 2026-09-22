@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T17:12:46.813Z",
+  "updatedAt": "2026-09-22T23:46:24.295Z",
   "rooms": [
     {
       "id": "gourdisland-south-ast",
@@ -245,7 +245,7 @@
           "id": "slot-gourdisland-south-ast-2026-09-23-2000",
           "start_time": "2026-09-23T20:00:00+09:00",
           "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
@@ -5756,14 +5756,14 @@
           "id": "slot-gourdisland-south-cst-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2620
         },
         {
           "id": "slot-gourdisland-south-cst-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2620
         },
         {
@@ -5805,7 +5805,7 @@
           "id": "slot-gourdisland-south-cst-2026-09-23-1700",
           "start_time": "2026-09-23T17:00:00+09:00",
           "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2620
         },
         {
@@ -5826,7 +5826,7 @@
           "id": "slot-gourdisland-south-cst-2026-09-23-2000",
           "start_time": "2026-09-23T20:00:00+09:00",
           "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2620
         },
         {
@@ -11337,14 +11337,14 @@
           "id": "slot-gourdisland-south-est-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
           "id": "slot-gourdisland-south-est-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
@@ -11386,7 +11386,7 @@
           "id": "slot-gourdisland-south-est-2026-09-23-1700",
           "start_time": "2026-09-23T17:00:00+09:00",
           "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
@@ -11526,14 +11526,14 @@
           "id": "slot-gourdisland-south-est-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2420
         },
         {
           "id": "slot-gourdisland-south-est-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2420
         },
         {
@@ -14316,14 +14316,14 @@
           "id": "slot-gourdisland-south-fst-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
           "id": "slot-gourdisland-south-fst-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {

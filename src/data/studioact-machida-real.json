@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日よりWEB予約可能 (1名700円/h、2名1,400円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-22T17:12:52.893Z",
+  "scraped_at": "2026-09-22T23:46:32.376Z",
   "dates_available": [
     "2026-09-22",
     "2026-09-23",
@@ -3468,7 +3468,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
           "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -29580,14 +29580,14 @@
           "id": "slot-studioact-machida-305st-slot-305st-2026-09-23-1915",
           "start_time": "2026-09-23T19:15:00+09:00",
           "end_time": "2026-09-23T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-305st-slot-305st-2026-09-23-2015",
           "start_time": "2026-09-23T20:15:00+09:00",
           "end_time": "2026-09-23T21:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {

@@ -16,7 +16,7 @@
   "group_booking_lead_months": 3,
   "solo_booking_rule": "前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-22T17:12:51.083Z",
+  "scraped_at": "2026-09-22T23:46:28.053Z",
   "dates_available": [
     "2026-09-22",
     "2026-09-23",
@@ -12320,7 +12320,7 @@
           "id": "slot-gw-baba-3a-slot-3A-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2750
         },
         {
@@ -14336,7 +14336,7 @@
           "id": "slot-gw-baba-3c-slot-3C-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -27326,21 +27326,21 @@
           "id": "slot-gw-baba-5a-slot-5A-2026-10-02-1745",
           "start_time": "2026-10-02T17:45:00+09:00",
           "end_time": "2026-10-02T18:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-5a-slot-5A-2026-10-02-1845",
           "start_time": "2026-10-02T18:45:00+09:00",
           "end_time": "2026-10-02T19:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-5a-slot-5A-2026-10-02-1945",
           "start_time": "2026-10-02T19:45:00+09:00",
           "end_time": "2026-10-02T20:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
