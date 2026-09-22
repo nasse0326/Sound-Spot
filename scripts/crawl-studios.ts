@@ -1485,7 +1485,7 @@ export async function crawlGatewayKashiwa(baseDate: Date, dayCount: number = CRA
           room_id: roomUUID,
           start_time: s.start_time,
           end_time: s.end_time,
-          status: s.status,
+          status: s.status.toLowerCase(),
         });
       });
     });
@@ -1608,7 +1608,7 @@ export async function crawlGatewayMachida(baseDate: Date, dayCount: number = CRA
           room_id: roomUUID,
           start_time: s.start_time,
           end_time: s.end_time,
-          status: s.status,
+          status: s.status.toLowerCase(),
         });
       });
     });
@@ -1722,7 +1722,7 @@ export async function crawlStudioActMachida(baseDate: Date, dayCount: number = C
           room_id: roomUUID,
           start_time: s.start_time,
           end_time: s.end_time,
-          status: s.status,
+          status: s.status.toLowerCase(),
         });
       });
     });
