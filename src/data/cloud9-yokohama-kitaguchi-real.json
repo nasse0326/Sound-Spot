@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T13:27:38.791Z",
+  "updatedAt": "2026-09-22T17:12:50.319Z",
   "rooms": [
     {
       "id": "cloud9-yn-ast",
@@ -383,19 +383,19 @@
           "id": "slot-cloud9-4-34-2026-09-25-10",
           "start_time": "2026-09-25T10:30:00+09:00",
           "end_time": "2026-09-25T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-34-2026-09-25-11",
           "start_time": "2026-09-25T11:30:00+09:00",
           "end_time": "2026-09-25T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-34-2026-09-25-12",
           "start_time": "2026-09-25T12:30:00+09:00",
           "end_time": "2026-09-25T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-34-2026-09-25-13",
@@ -407,13 +407,13 @@
           "id": "slot-cloud9-4-34-2026-09-25-14",
           "start_time": "2026-09-25T14:30:00+09:00",
           "end_time": "2026-09-25T15:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-34-2026-09-25-15",
           "start_time": "2026-09-25T15:30:00+09:00",
           "end_time": "2026-09-25T16:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-34-2026-09-25-16",
@@ -3078,61 +3078,61 @@
           "id": "slot-cloud9-4-35-2026-09-25-10",
           "start_time": "2026-09-25T10:15:00+09:00",
           "end_time": "2026-09-25T11:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-11",
           "start_time": "2026-09-25T11:15:00+09:00",
           "end_time": "2026-09-25T12:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-12",
           "start_time": "2026-09-25T12:15:00+09:00",
           "end_time": "2026-09-25T13:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-13",
           "start_time": "2026-09-25T13:15:00+09:00",
           "end_time": "2026-09-25T14:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-14",
           "start_time": "2026-09-25T14:15:00+09:00",
           "end_time": "2026-09-25T15:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-15",
           "start_time": "2026-09-25T15:15:00+09:00",
           "end_time": "2026-09-25T16:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-16",
           "start_time": "2026-09-25T16:15:00+09:00",
           "end_time": "2026-09-25T17:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-17",
           "start_time": "2026-09-25T17:15:00+09:00",
           "end_time": "2026-09-25T18:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-18",
           "start_time": "2026-09-25T18:15:00+09:00",
           "end_time": "2026-09-25T19:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-19",
           "start_time": "2026-09-25T19:15:00+09:00",
           "end_time": "2026-09-25T20:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-35-2026-09-25-20",
@@ -5809,13 +5809,13 @@
           "id": "slot-cloud9-4-36-2026-09-25-16",
           "start_time": "2026-09-25T16:15:00+09:00",
           "end_time": "2026-09-25T17:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-36-2026-09-25-17",
           "start_time": "2026-09-25T17:15:00+09:00",
           "end_time": "2026-09-25T18:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-36-2026-09-25-18",
@@ -8468,7 +8468,7 @@
           "id": "slot-cloud9-4-37-2026-09-25-10",
           "start_time": "2026-09-25T10:15:00+09:00",
           "end_time": "2026-09-25T11:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-37-2026-09-25-11",
@@ -8504,7 +8504,7 @@
           "id": "slot-cloud9-4-37-2026-09-25-16",
           "start_time": "2026-09-25T16:15:00+09:00",
           "end_time": "2026-09-25T17:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-37-2026-09-25-17",
@@ -8516,7 +8516,7 @@
           "id": "slot-cloud9-4-37-2026-09-25-18",
           "start_time": "2026-09-25T18:15:00+09:00",
           "end_time": "2026-09-25T19:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-37-2026-09-25-19",
@@ -9116,13 +9116,13 @@
           "id": "slot-cloud9-4-37-2026-09-30-16",
           "start_time": "2026-09-30T16:15:00+09:00",
           "end_time": "2026-09-30T17:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-37-2026-09-30-17",
           "start_time": "2026-09-30T17:15:00+09:00",
           "end_time": "2026-09-30T18:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-37-2026-09-30-18",
@@ -9758,7 +9758,7 @@
           "id": "slot-cloud9-4-37-2026-10-05-21",
           "start_time": "2026-10-05T21:15:00+09:00",
           "end_time": "2026-10-05T22:15:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-37-2026-10-05-22",
@@ -11116,13 +11116,13 @@
           "id": "slot-cloud9-4-38-2026-09-24-22",
           "start_time": "2026-09-24T22:00:00+09:00",
           "end_time": "2026-09-24T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-24-23",
           "start_time": "2026-09-24T23:00:00+09:00",
           "end_time": "2026-09-25T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-24-24",
@@ -11176,7 +11176,7 @@
           "id": "slot-cloud9-4-38-2026-09-25-12",
           "start_time": "2026-09-25T12:00:00+09:00",
           "end_time": "2026-09-25T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-25-13",
@@ -11188,19 +11188,19 @@
           "id": "slot-cloud9-4-38-2026-09-25-14",
           "start_time": "2026-09-25T14:00:00+09:00",
           "end_time": "2026-09-25T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-25-15",
           "start_time": "2026-09-25T15:00:00+09:00",
           "end_time": "2026-09-25T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-25-16",
           "start_time": "2026-09-25T16:00:00+09:00",
           "end_time": "2026-09-25T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-25-17",
@@ -11212,7 +11212,7 @@
           "id": "slot-cloud9-4-38-2026-09-25-18",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-09-25-19",
@@ -12922,13 +12922,13 @@
           "id": "slot-cloud9-4-38-2026-10-09-19",
           "start_time": "2026-10-09T19:00:00+09:00",
           "end_time": "2026-10-09T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-10-09-20",
           "start_time": "2026-10-09T20:00:00+09:00",
           "end_time": "2026-10-09T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-38-2026-10-09-21",
@@ -13883,7 +13883,7 @@
           "id": "slot-cloud9-4-39-2026-09-25-14",
           "start_time": "2026-09-25T14:00:00+09:00",
           "end_time": "2026-09-25T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-39-2026-09-25-15",
@@ -13907,7 +13907,7 @@
           "id": "slot-cloud9-4-39-2026-09-25-18",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-39-2026-09-25-19",
@@ -13931,7 +13931,7 @@
           "id": "slot-cloud9-4-39-2026-09-25-22",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-39-2026-09-25-23",
@@ -16555,25 +16555,25 @@
           "id": "slot-cloud9-4-40-2026-09-25-10",
           "start_time": "2026-09-25T10:30:00+09:00",
           "end_time": "2026-09-25T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-40-2026-09-25-11",
           "start_time": "2026-09-25T11:30:00+09:00",
           "end_time": "2026-09-25T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-40-2026-09-25-12",
           "start_time": "2026-09-25T12:30:00+09:00",
           "end_time": "2026-09-25T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-40-2026-09-25-13",
           "start_time": "2026-09-25T13:30:00+09:00",
           "end_time": "2026-09-25T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-40-2026-09-25-14",
@@ -16591,7 +16591,7 @@
           "id": "slot-cloud9-4-40-2026-09-25-16",
           "start_time": "2026-09-25T16:30:00+09:00",
           "end_time": "2026-09-25T17:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-40-2026-09-25-17",
@@ -19250,31 +19250,31 @@
           "id": "slot-cloud9-4-41-2026-09-25-10",
           "start_time": "2026-09-25T10:30:00+09:00",
           "end_time": "2026-09-25T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-41-2026-09-25-11",
           "start_time": "2026-09-25T11:30:00+09:00",
           "end_time": "2026-09-25T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-41-2026-09-25-12",
           "start_time": "2026-09-25T12:30:00+09:00",
           "end_time": "2026-09-25T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-41-2026-09-25-13",
           "start_time": "2026-09-25T13:30:00+09:00",
           "end_time": "2026-09-25T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-41-2026-09-25-14",
           "start_time": "2026-09-25T14:30:00+09:00",
           "end_time": "2026-09-25T15:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-41-2026-09-25-15",
@@ -21987,13 +21987,13 @@
           "id": "slot-cloud9-4-42-2026-09-25-17",
           "start_time": "2026-09-25T17:30:00+09:00",
           "end_time": "2026-09-25T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-42-2026-09-25-18",
           "start_time": "2026-09-25T18:30:00+09:00",
           "end_time": "2026-09-25T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-42-2026-09-25-19",
@@ -24652,43 +24652,43 @@
           "id": "slot-cloud9-4-32-2026-09-25-12",
           "start_time": "2026-09-25T12:00:00+09:00",
           "end_time": "2026-09-25T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-13",
           "start_time": "2026-09-25T13:00:00+09:00",
           "end_time": "2026-09-25T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-14",
           "start_time": "2026-09-25T14:00:00+09:00",
           "end_time": "2026-09-25T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-15",
           "start_time": "2026-09-25T15:00:00+09:00",
           "end_time": "2026-09-25T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-16",
           "start_time": "2026-09-25T16:00:00+09:00",
           "end_time": "2026-09-25T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-17",
           "start_time": "2026-09-25T17:00:00+09:00",
           "end_time": "2026-09-25T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-18",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-32-2026-09-25-19",
@@ -27348,13 +27348,13 @@
           "id": "slot-cloud9-4-33-2026-09-25-12",
           "start_time": "2026-09-25T12:00:00+09:00",
           "end_time": "2026-09-25T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-09-25-13",
           "start_time": "2026-09-25T13:00:00+09:00",
           "end_time": "2026-09-25T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-09-25-14",
@@ -27384,13 +27384,13 @@
           "id": "slot-cloud9-4-33-2026-09-25-18",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-09-25-19",
           "start_time": "2026-09-25T19:00:00+09:00",
           "end_time": "2026-09-25T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-09-25-20",
@@ -27408,7 +27408,7 @@
           "id": "slot-cloud9-4-33-2026-09-25-22",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-09-25-23",
@@ -28746,13 +28746,13 @@
           "id": "slot-cloud9-4-33-2026-10-06-21",
           "start_time": "2026-10-06T21:00:00+09:00",
           "end_time": "2026-10-06T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-10-06-22",
           "start_time": "2026-10-06T22:00:00+09:00",
           "end_time": "2026-10-06T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-cloud9-4-33-2026-10-06-23",

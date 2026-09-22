@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日よりWEB予約可能 (1名700円/h、2名1,400円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-22T13:27:41.731Z",
+  "scraped_at": "2026-09-22T17:12:52.893Z",
   "dates_available": [
     "2026-09-22",
     "2026-09-23",
@@ -164,7 +164,7 @@
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-2300",
           "start_time": "2026-09-22T23:00:00+09:00",
           "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -3419,7 +3419,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-2300",
           "start_time": "2026-09-22T23:00:00+09:00",
           "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -3538,7 +3538,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-23-1900",
           "start_time": "2026-09-23T19:00:00+09:00",
           "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -6674,7 +6674,7 @@
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-2300",
           "start_time": "2026-09-22T23:00:00+09:00",
           "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -6744,14 +6744,14 @@
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -13184,7 +13184,7 @@
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-2300",
           "start_time": "2026-09-22T23:00:00+09:00",
           "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -16846,28 +16846,28 @@
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-25-1815",
           "start_time": "2026-09-25T18:15:00+09:00",
           "end_time": "2026-09-25T19:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-25-1915",
           "start_time": "2026-09-25T19:15:00+09:00",
           "end_time": "2026-09-25T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-25-2015",
           "start_time": "2026-09-25T20:15:00+09:00",
           "end_time": "2026-09-25T21:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-25-2115",
           "start_time": "2026-09-25T21:15:00+09:00",
           "end_time": "2026-09-25T22:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -19807,14 +19807,14 @@
           "id": "slot-studioact-machida-302st-slot-302st-2026-09-23-1815",
           "start_time": "2026-09-23T18:15:00+09:00",
           "end_time": "2026-09-23T19:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-302st-slot-302st-2026-09-23-1915",
           "start_time": "2026-09-23T19:15:00+09:00",
           "end_time": "2026-09-23T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -26612,7 +26612,7 @@
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-25-1815",
           "start_time": "2026-09-25T18:15:00+09:00",
           "end_time": "2026-09-25T19:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -35971,7 +35971,7 @@
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-2230",
           "start_time": "2026-09-22T22:30:00+09:00",
           "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -39229,7 +39229,7 @@
           "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-2230",
           "start_time": "2026-09-22T22:30:00+09:00",
           "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -42487,7 +42487,7 @@
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-2230",
           "start_time": "2026-09-22T22:30:00+09:00",
           "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -44090,14 +44090,14 @@
           "id": "slot-studioact-machida-104st-slot-104st-2026-10-03-2030",
           "start_time": "2026-10-03T20:30:00+09:00",
           "end_time": "2026-10-03T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-10-03-2130",
           "start_time": "2026-10-03T21:30:00+09:00",
           "end_time": "2026-10-03T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {

@@ -16,7 +16,7 @@
   "group_booking_lead_months": 3,
   "solo_booking_rule": "前日のオープン（09:00）よりWEB/電話受付開始 (1名770円/h、2名1,210円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-22T13:27:39.412Z",
+  "scraped_at": "2026-09-22T17:12:50.445Z",
   "dates_available": [
     "2026-09-22",
     "2026-09-23",
@@ -4656,7 +4656,7 @@
           "id": "slot-gw-shibu-3st-slot-3st-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2750
         },
         {
@@ -8072,14 +8072,14 @@
           "id": "slot-gw-shibu-4st-slot-4st-2026-10-07-1000",
           "start_time": "2026-10-07T10:00:00+09:00",
           "end_time": "2026-10-07T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-shibu-4st-slot-4st-2026-10-07-1100",
           "start_time": "2026-10-07T11:00:00+09:00",
           "end_time": "2026-10-07T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -11102,7 +11102,7 @@
           "id": "slot-gw-shibu-6st-slot-6st-2026-09-23-1730",
           "start_time": "2026-09-23T17:30:00+09:00",
           "end_time": "2026-09-23T18:30:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2420
         },
         {
@@ -11998,14 +11998,14 @@
           "id": "slot-gw-shibu-6st-slot-6st-2026-10-02-1930",
           "start_time": "2026-10-02T19:30:00+09:00",
           "end_time": "2026-10-02T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
           "id": "slot-gw-shibu-6st-slot-6st-2026-10-02-2030",
           "start_time": "2026-10-02T20:30:00+09:00",
           "end_time": "2026-10-02T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
