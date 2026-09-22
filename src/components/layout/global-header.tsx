@@ -53,43 +53,40 @@ export const GlobalHeader: React.FC = () => {
 
           {/* 稼働状況ボタン（クリックで対応スタジオ一覧モーダル表示）＆テーマ切り替え */}
           <div className="flex items-center gap-2 sm:gap-3 text-xs">
+            {/* 稼働状況ピル（対応スタジオ一覧モーダルを開く）。スマホ幅では下の検索条件設定
+                ボタンに右上のスペースを譲り、ロゴ下の「対応スタジオ一覧を見る」ボタンから
+                開けるようにする（機能自体はそちらで引き続き提供）。 */}
             <button
               type="button"
               onClick={() => {
                 setInitialArea('all');
                 setIsModalOpen(true);
               }}
-              className="group flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-stone-100 dark:bg-slate-800/90 hover:bg-stone-200 dark:hover:bg-slate-700/90 border border-stone-200 dark:border-slate-700/80 hover:border-emerald-400 dark:hover:border-emerald-500/60 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all shadow-sm hover:shadow-emerald-950/10 dark:hover:shadow-emerald-950/40 cursor-pointer text-left"
+              className="hidden sm:flex group items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-stone-100 dark:bg-slate-800/90 hover:bg-stone-200 dark:hover:bg-slate-700/90 border border-stone-200 dark:border-slate-700/80 hover:border-emerald-400 dark:hover:border-emerald-500/60 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all shadow-sm hover:shadow-emerald-950/10 dark:hover:shadow-emerald-950/40 cursor-pointer text-left"
               title={`クリックして現在対応している${studioCount}店舗・${roomCount}部屋のスタジオ一覧を表示`}
             >
               <Radio className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 animate-pulse group-hover:scale-110 transition-transform flex-shrink-0" />
               <div className="flex items-center gap-1.5 whitespace-nowrap">
                 <span className="text-slate-500 dark:text-slate-400 hidden md:inline">稼働状況:</span>
-                {/* スマホ幅ではロゴと横並びで収まりきらず画面外に切れていたため、
-                    sm未満は「首都圏」「稼働中」を省いた短縮表記にする */}
-                <span className="font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors sm:hidden">
-                  {studioCount}店舗/{roomCount}部屋
-                </span>
-                <span className="hidden sm:inline font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">
+                <span className="font-bold text-emerald-700 dark:text-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">
                   首都圏 {studioCount}店舗 / {roomCount}部屋 稼働中
                 </span>
                 <span className="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-semibold text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 pl-1.5 border-l border-stone-300 dark:border-slate-700">
                   <span>一覧を見る</span>
                   <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </span>
-                <ChevronRight className="w-3 h-3 sm:hidden text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-transform flex-shrink-0" />
               </div>
             </button>
-            {/* 検索設定ボタン（スマホ専用。押すとpage.tsx側のボトムシートが開く。
-                スクロール位置に関係なく常にここから開けるよう、ヘッダー内に固定配置する） */}
+            {/* 検索条件設定ボタン（スマホ専用。押すとpage.tsx側のボトムシートが開く。
+                スクロール位置に関係なく常にここから開けるよう、ヘッダー内に固定配置する。
+                アイコンのみだと押した先が分かりにくいという指摘を受け、文字表示にした） */}
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent('soundspot:open-filter-modal'))}
-              aria-label="検索設定を開く"
-              title="検索設定を開く"
-              className="sm:hidden flex items-center justify-center w-8 h-8 rounded-full bg-stone-100 dark:bg-slate-800/90 border border-stone-200 dark:border-slate-700/80 text-slate-500 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-300 dark:hover:border-emerald-500/60 transition-colors cursor-pointer flex-shrink-0"
+              className="sm:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-400 font-semibold cursor-pointer flex-shrink-0"
             >
-              <SlidersHorizontal className="w-4 h-4" />
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              <span className="whitespace-nowrap">検索条件設定</span>
             </button>
             <ThemeToggle />
           </div>
