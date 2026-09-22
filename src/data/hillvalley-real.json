@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T00:15:21.557Z",
+  "updatedAt": "2026-09-22T07:57:54.998Z",
   "rooms": [
     {
       "id": "hillvalley-ast",
@@ -175,14 +175,14 @@
           "id": "slot-hillvalley-ast-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
           "id": "slot-hillvalley-ast-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3100
         },
         {
@@ -2366,21 +2366,21 @@
           "id": "slot-hillvalley-ast-2026-10-10-1700",
           "start_time": "2026-10-10T17:00:00+09:00",
           "end_time": "2026-10-10T18:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3100
         },
         {
           "id": "slot-hillvalley-ast-2026-10-10-1800",
           "start_time": "2026-10-10T18:00:00+09:00",
           "end_time": "2026-10-10T19:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3100
         },
         {
           "id": "slot-hillvalley-ast-2026-10-10-1900",
           "start_time": "2026-10-10T19:00:00+09:00",
           "end_time": "2026-10-10T20:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3100
         },
         {
@@ -2965,21 +2965,21 @@
           "id": "slot-hillvalley-bst-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-hillvalley-bst-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
           "id": "slot-hillvalley-bst-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3000
         },
         {
@@ -5770,14 +5770,14 @@
           "id": "slot-hillvalley-cst-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
           "id": "slot-hillvalley-cst-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
@@ -5791,28 +5791,28 @@
           "id": "slot-hillvalley-cst-2026-09-23-1500",
           "start_time": "2026-09-23T15:00:00+09:00",
           "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
           "id": "slot-hillvalley-cst-2026-09-23-1600",
           "start_time": "2026-09-23T16:00:00+09:00",
           "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
           "id": "slot-hillvalley-cst-2026-09-23-1700",
           "start_time": "2026-09-23T17:00:00+09:00",
           "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
           "id": "slot-hillvalley-cst-2026-09-23-1800",
           "start_time": "2026-09-23T18:00:00+09:00",
           "end_time": "2026-09-23T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
@@ -7961,21 +7961,21 @@
           "id": "slot-hillvalley-cst-2026-10-10-1900",
           "start_time": "2026-10-10T19:00:00+09:00",
           "end_time": "2026-10-10T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
           "id": "slot-hillvalley-cst-2026-10-10-2000",
           "start_time": "2026-10-10T20:00:00+09:00",
           "end_time": "2026-10-10T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
           "id": "slot-hillvalley-cst-2026-10-10-2100",
           "start_time": "2026-10-10T21:00:00+09:00",
           "end_time": "2026-10-10T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3600
         },
         {
