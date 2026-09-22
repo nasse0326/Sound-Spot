@@ -385,7 +385,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                             type="button"
                             onClick={() => handleSlotClick(room, cellHour, cellMinute)}
                             style={{ gridColumn: `span ${spanCols} / span ${spanCols}` }}
-                            title={`${room.studio.name} ${room.name} ${titleTimeRange} (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後30分枠・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
+                            title={`${room.studio.name} ${room.name} ${titleTimeRange} (${isAvailable ? isExact ? '完全一致・空きあり' : isAdjacent ? '前後1時間以内・空きあり' : '空きあり' : '予約済'}) - クリックで時間指定`}
                             className={`h-7 ${roundRight ? 'rounded-r' : 'rounded'} text-[10px] font-bold transition-all relative overflow-hidden flex items-center justify-center mx-0.5 cursor-pointer select-none ${
                               isExact && isAvailable
                                 ? 'bg-emerald-200 text-emerald-900 ring-2 ring-emerald-500 border border-emerald-400 shadow-lg shadow-emerald-500/20 z-0 scale-[1.03] dark:bg-emerald-500/35 dark:text-emerald-100 dark:ring-emerald-400 dark:border-emerald-300 dark:shadow-emerald-500/30'

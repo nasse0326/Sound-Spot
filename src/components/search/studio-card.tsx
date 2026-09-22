@@ -63,7 +63,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
     return isDaytime ? room.pricePerHourDaytime : room.pricePerHourRegular;
   };
 
-  // 各部屋の空き状況判定（±30分枠含む）
+  // 各部屋の空き状況判定（±1時間枠含む）
   const getRoomAvailability = (room: RoomWithSlots) => {
     return checkRoomAvailability(room, targetStartTime, targetEndTime, allowAdjacent30Min);
   };

@@ -208,7 +208,7 @@ export default function HomePage() {
         return diff !== 0 ? diff : naturalOrder;
       }
 
-      // 'availability': 空き枠優先 (完全一致 > ±30分ズレ > 電話受付 > 未取得 > 満室)
+      // 'availability': 空き枠優先 (完全一致 > ±1時間ズレ > 電話受付 > 未取得 > 満室)
       const aAvail = checkRoomAvailability(a, filters.startTime, filters.endTime, filters.allowAdjacent30Min);
       const bAvail = checkRoomAvailability(b, filters.startTime, filters.endTime, filters.allowAdjacent30Min);
 

@@ -19,7 +19,7 @@ const STEPS = [
   {
     icon: CheckCircle2,
     title: '空き状況を見比べる',
-    desc: '緑=ぴったり空き、青=前後30分ズレの候補',
+    desc: '緑=ぴったり空き、青=前後1時間以内ズレの候補',
   },
   {
     icon: ExternalLink,
