@@ -20,7 +20,8 @@ import {
   SlidersHorizontal,
   ArrowUpDown,
   Search,
-  FilterX
+  FilterX,
+  X
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -64,6 +65,8 @@ export default function HomePage() {
 
   // 詳細モーダル用
   const [selectedRoom, setSelectedRoom] = useState<RoomWithSlots | null>(null);
+  // スマホ用: 検索設定ポップアップの開閉（PCでは常時インライン表示のため未使用）
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
   // 利用可能なエリア一覧
   const availableAreas = useMemo(() => {
@@ -352,12 +355,56 @@ export default function HomePage() {
       {/* 使い方ガイド（一度閉じると再訪時は非表示） */}
       <HowToUseGuide />
 
-      {/* 検索・条件指定バー */}
-      <SearchFilterBar
-        filters={filters}
-        onChange={handleFiltersChange}
-        availableAreas={availableAreas}
-      />
+      {/* 検索・条件指定バー（PC: 常時インライン表示） */}
+      <div className="hidden sm:block">
+        <SearchFilterBar
+          filters={filters}
+          onChange={handleFiltersChange}
+          availableAreas={availableAreas}
+        />
+      </div>
+
+      {/* 検索・条件指定バー（スマホ: 画面下固定のボタンからポップアップ表示。
+          いちいち画面上部までスクロールしなくても設定を変更できるようにするため） */}
+      <button
+        type="button"
+        onClick={() => setIsFilterModalOpen(true)}
+        className="sm:hidden fixed bottom-20 right-4 z-40 inline-flex items-center gap-1.5 px-4 py-3 rounded-full bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/30 font-bold text-sm cursor-pointer active:scale-95 transition"
+      >
+        <SlidersHorizontal className="w-4 h-4" />
+        検索設定
+      </button>
+
+      {isFilterModalOpen && (
+        <div
+          className="sm:hidden fixed inset-0 z-50 flex items-end bg-black/80 backdrop-blur-sm"
+          onClick={() => setIsFilterModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-h-[88vh] overflow-y-auto bg-white border-t border-stone-200 dark:bg-slate-900 dark:border-slate-800 rounded-t-2xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sticky top-0 flex items-center justify-between px-4 py-3 border-b border-stone-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-t-2xl">
+              <span className="text-sm font-bold text-slate-800 dark:text-slate-100">検索設定</span>
+              <button
+                type="button"
+                onClick={() => setIsFilterModalOpen(false)}
+                aria-label="検索設定を閉じる"
+                className="p-1.5 text-slate-500 hover:text-slate-900 bg-stone-100 hover:bg-stone-200 dark:text-slate-400 dark:hover:text-white dark:bg-slate-800/80 dark:hover:bg-slate-700 rounded-full transition cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="p-3.5">
+              <SearchFilterBar
+                filters={filters}
+                onChange={handleFiltersChange}
+                availableAreas={availableAreas}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 表示切替 & 検索結果数 & ソートバー */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
