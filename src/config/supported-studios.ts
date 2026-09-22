@@ -283,7 +283,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
   },
 
   // -------------------------------------------------------------
-  // 秋葉原・上野エリア (8店舗 / 計57部屋)
+  // 秋葉原・上野エリア (9店舗 / 計69部屋)
   // -------------------------------------------------------------
   {
     id: 'akiba-noah',
@@ -420,6 +420,23 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-5283-1475',
     websiteUrl: 'https://www.hmvp.net/studio/shinokachi_studio.html',
     features: ['ビッグバンドジャズ17名収容可(約35畳)', 'グランドピアノ・ウッドベース・ドラム常設', '最少2時間〜、新御徒町駅徒歩1分'],
+  },
+  {
+    id: 'node-suidobashi',
+    name: 'スタジオノード 水道橋店',
+    chainName: 'STUDIO NODE',
+    area: '秋葉原・上野',
+    nearestStation: 'JR総武線 水道橋駅西口 徒歩1分',
+    address: '東京都千代田区神田三崎町3-7-5',
+    roomCount: 12,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'studio-node.jp (自動巡回)',
+    is24Hours: false,
+    businessHours: '10:00〜23:00（30分スタート室は10:30〜22:30）',
+    tel: '03-3230-4646',
+    websiteUrl: 'https://www.studio-node.com/HomeS.html',
+    features: ['水道橋駅西口徒歩1分', '全12部屋', 'セルフレコーディング room(Vocal Booth付き)あり', '00分/30分開始混在'],
   },
 
   // -------------------------------------------------------------

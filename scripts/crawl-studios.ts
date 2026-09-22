@@ -24,7 +24,7 @@ import { fetchStudio2TimesDays, fetchMusicBankMatsudoDays } from './lib/bot-fetc
 import { fetchSoundStudioMKoiwaDays, fetchSoundStudioMKashiwaDays } from './lib/orpheus-fetcher';
 import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukanTakadanobabaDays } from './lib/ongakukan-fetcher';
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
-import { fetchNodeShinjukuDays } from './lib/node-fetcher';
+import { fetchNodeShinjukuDays, fetchNodeSuidobashiDays } from './lib/node-fetcher';
 import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
 import { fetchEnsembleUenoDays } from './lib/ensemble-fetcher';
 import { fetchHmvpDays } from './lib/hmvp-fetcher';
@@ -734,6 +734,40 @@ async function crawlNodeShinjuku(now: Date, dayCount: number = CRAWL_DAY_COUNT) 
     }
   } catch (err: any) {
     console.error(`  ❌ [NODE Crawl Error] ${err.message}`);
+  }
+}
+
+async function crawlNodeSuidobashi(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  try {
+    console.log('\n📡 [STUDIO NODE 水道橋店] 自動巡回を開始...');
+    const nodeRooms = await fetchNodeSuidobashiDays(now, dayCount);
+    if (nodeRooms && nodeRooms.length > 0) {
+      const outPath = path.resolve(process.cwd(), 'src/data/node-suidobashi-real.json');
+      fs.writeFileSync(outPath, JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        rooms: nodeRooms,
+      }, null, 2), 'utf-8');
+      console.log(`  💾 [NODE] 水道橋店の全スロットデータを ${outPath} に保存しました。`);
+
+      if (supabase) {
+        console.log('  ⚡ [Supabase Sync] STUDIO NODE 水道橋店のスロットをSupabaseに同期中...');
+        const dbSlots: any[] = [];
+        nodeRooms.forEach((r: any) => {
+          const roomUUID = toUUID(r.id);
+          (r.slots || []).forEach((slot: any) => {
+            dbSlots.push({
+              room_id: roomUUID,
+              start_time: slot.start_time,
+              end_time: slot.end_time,
+              status: slot.status.toLowerCase(),
+            });
+          });
+        });
+        await upsertAvailabilitySlots('NODE水道橋', dbSlots);
+      }
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [NODE Suidobashi Crawl Error] ${err.message}`);
   }
 }
 
@@ -2075,6 +2109,7 @@ async function main() {
       crawlStudioActMachida(now, CRAWL_DAY_COUNT),
       crawlEnsembleUeno(now, CRAWL_DAY_COUNT),
       crawlHmvp(now, CRAWL_DAY_COUNT),
+      crawlNodeSuidobashi(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');
