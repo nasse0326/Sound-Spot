@@ -127,7 +127,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
               <span className="text-[11px]">時差枠 (毎時15/30/45分開始の部屋あり)</span>
             </div>
 
-            {/* 強調ハイライト枠の凡例（緑＝完全一致、青＝前後30分枠） */}
+            {/* 強調ハイライト枠の凡例（緑＝完全一致、青＝前後1時間以内の枠） */}
             <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-50 border border-emerald-400 text-emerald-700 text-xs font-bold shadow-sm dark:bg-emerald-950/80 dark:border-emerald-500/80 dark:text-emerald-300 dark:shadow-emerald-950/40">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
               <span>完全一致 ({targetStartTime}〜{targetEndTime})</span>
@@ -136,7 +136,7 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
             {allowAdjacent30Min && (
               <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-50 border border-blue-400 text-blue-700 text-xs font-bold shadow-sm dark:bg-blue-950/80 dark:border-blue-500/80 dark:text-blue-300 dark:shadow-blue-950/40">
                 <span className="w-2.5 h-2.5 rounded-full bg-blue-500 dark:bg-blue-400 animate-pulse" />
-                <span>前後30分枠 (調整候補)</span>
+                <span>前後1時間以内の枠 (調整候補)</span>
               </div>
             )}
           </div>
@@ -342,9 +342,9 @@ export const StudioTimelineView: React.FC<StudioTimelineViewProps> = ({
                         // 30分刻み部屋（GOODMAN AKIBA等）の1.5時間一致（例: 11:00開始で
                         // 11:00/11:30/12:00の3コマとも一致対象）を漏れなく緑強調できる。
                         const isExact = slotStartMin >= targetStartMin && slotStartMin < targetEndMin && ((slotStartMin - targetStartMin) % granularity === 0);
-                        // 前後30分以内ズレ判定 (:00/:30グリッド前提を置かず、この部屋の実際の
-                        // 開始時刻が検索時刻の±30分以内に収まっていれば候補として青強調する)
-                        const isAdjacent = allowAdjacent30Min && !isExact && Math.abs(slotStartMin - targetStartMin) <= 30;
+                        // 前後1時間以内ズレ判定 (:00/:30グリッド前提を置かず、この部屋の実際の
+                        // 開始時刻が検索時刻の±1時間以内に収まっていれば候補として青強調する)
+                        const isAdjacent = allowAdjacent30Min && !isExact && Math.abs(slotStartMin - targetStartMin) <= 60;
                         // グループ単位で既に算出済みのisPhoneOnly（isPhoneOnlyStudio()経由）をそのまま使う。
                         // 以前はここでPENTA判定だけを個別に再計算しており、Vivo Sound Studioのような
                         // 「bookingUrlはあるが実質電話予約のみ」の例外が反映されずセルが「TEL」ではなく

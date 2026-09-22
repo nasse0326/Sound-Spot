@@ -36,8 +36,8 @@ export default function HomePage() {
     startTime: '14:00',
     endTime: '15:00',
     bookingType: 'band',
-    area: '秋葉原',
-    areas: ['秋葉原'],
+    area: '秋葉原・上野',
+    areas: ['秋葉原・上野'],
     minTatami: 0,
     tatamiRanges: [],
     requireJc120: false,
@@ -45,7 +45,7 @@ export default function HomePage() {
     requireRecording: false,
     showEarlyMorning: false, // デフォルト: 9:00〜24:00表示（早朝OFF）
     requireLongHours: false, // 24時間・長時間営業のみ
-    allowAdjacent30Min: true, // 前後30分の枠も含めて検索（デフォルトON）
+    allowAdjacent30Min: true, // 前後1時間の枠も含めて検索（デフォルトON）
   });
 
   const handleFiltersChange = (newFilters: SearchFilterParams) => {

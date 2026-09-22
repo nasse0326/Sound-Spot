@@ -179,7 +179,7 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
 
   // エリアごとの店舗数
   const areaCounts = useMemo(() => {
-    const counts = { all: SUPPORTED_STUDIOS.length, '渋谷': 0, '新宿': 0, '秋葉原': 0, '高田馬場': 0, '池袋': 0, '下北沢': 0, '吉祥寺': 0, '高円寺': 0, '船橋': 0, '横浜': 0, '亀戸・小岩': 0, '松戸・柏': 0, '町田': 0 };
+    const counts = { all: SUPPORTED_STUDIOS.length, '渋谷': 0, '新宿': 0, '秋葉原・上野': 0, '高田馬場': 0, '池袋': 0, '下北沢': 0, '吉祥寺': 0, '高円寺': 0, '船橋': 0, '横浜': 0, '亀戸・小岩': 0, '松戸・柏': 0, '町田': 0 };
     SUPPORTED_STUDIOS.forEach((st) => {
       if (st.area in counts) {
         counts[st.area as keyof typeof counts]++;
@@ -305,14 +305,14 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
                 </button>
                 <button
                   type="button"
-                  onClick={() => setSelectedArea('秋葉原')}
+                  onClick={() => setSelectedArea('秋葉原・上野')}
                   className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex-shrink-0 ${
-                    selectedArea === '秋葉原'
+                    selectedArea === '秋葉原・上野'
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
                       : 'bg-stone-100 text-slate-600 hover:bg-stone-200 hover:text-slate-900 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white'
                   }`}
                 >
-                  秋葉原 ({areaCounts['秋葉原']})
+                  秋葉原・上野 ({areaCounts['秋葉原・上野']})
                 </button>
                 <button
                   type="button"
@@ -462,13 +462,13 @@ export const SupportedStudiosModal: React.FC<SupportedStudiosModalProps> = ({
               <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応エリア</span>
                 <p className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-0.5">13 エリア</p>
-                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">渋谷・新宿・秋葉原・高田馬場・池袋・下北沢・吉祥寺・高円寺・船橋・横浜・亀戸・小岩・松戸・柏・町田</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">渋谷・新宿・秋葉原・上野・高田馬場・池袋・下北沢・吉祥寺・高円寺・船橋・横浜・亀戸・小岩・松戸・柏・町田</span>
               </div>
               <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">
                 <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium">対応スタジオ数</span>
                 <p className="text-sm sm:text-base font-extrabold text-emerald-700 dark:text-emerald-400 mt-0.5">{areaCounts.all} 店舗</p>
                 <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">
-                  渋{areaCounts['渋谷']} / 新{areaCounts['新宿']} / 秋{areaCounts['秋葉原']} / 馬{areaCounts['高田馬場']} / 池{areaCounts['池袋']} / 下{areaCounts['下北沢']} / 吉{areaCounts['吉祥寺']} / 高{areaCounts['高円寺']} / 船{areaCounts['船橋']} / 横{areaCounts['横浜']} / 亀{areaCounts['亀戸・小岩']} / 松{areaCounts['松戸・柏']} / 町{areaCounts['町田']}
+                  渋{areaCounts['渋谷']} / 新{areaCounts['新宿']} / 秋{areaCounts['秋葉原・上野']} / 馬{areaCounts['高田馬場']} / 池{areaCounts['池袋']} / 下{areaCounts['下北沢']} / 吉{areaCounts['吉祥寺']} / 高{areaCounts['高円寺']} / 船{areaCounts['船橋']} / 横{areaCounts['横浜']} / 亀{areaCounts['亀戸・小岩']} / 松{areaCounts['松戸・柏']} / 町{areaCounts['町田']}
                 </span>
               </div>
               <div className="bg-stone-50 border border-stone-200 dark:bg-slate-950/60 dark:border-slate-800/80 rounded-xl p-2 sm:p-2.5">

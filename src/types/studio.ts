@@ -84,7 +84,7 @@ export interface SearchFilterParams {
   requireRecording: boolean;
   showEarlyMorning: boolean; // 6:00〜9:00の早朝枠を表示するか
   requireLongHours: boolean; // 24時間営業または深夜・早朝対応スタジオのみ
-  allowAdjacent30Min: boolean; // 前後30分（±30分）の枠も空きとして含めるか（デフォルトON）
+  allowAdjacent30Min: boolean; // 前後1時間（±1時間、15分刻みのズレも含む）の枠も空きとして含めるか（デフォルトON）
 }
 
 export interface RoomWithSlots extends Room {

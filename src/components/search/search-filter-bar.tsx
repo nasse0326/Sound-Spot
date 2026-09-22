@@ -177,7 +177,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
               })}
             </select>
           </div>
-          {/* 前後30分の枠も含める（±30分）チェックボックス */}
+          {/* 前後1時間の枠も含める（±1時間）チェックボックス */}
           <div className="mt-1.5 flex items-center justify-between">
             <label className="inline-flex items-center gap-1.5 text-[11px] text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 cursor-pointer select-none">
               <input
@@ -187,12 +187,12 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
                 className="rounded border-stone-300 bg-white dark:border-slate-700 dark:bg-slate-950 text-emerald-500 focus:ring-0 w-3.5 h-3.5 cursor-pointer accent-emerald-500"
               />
               <span className={filters.allowAdjacent30Min ? 'text-emerald-700 dark:text-emerald-400 font-semibold' : 'text-slate-500 dark:text-slate-400'}>
-                前後30分の枠も含める (±30分)
+                前後1時間の枠も含める (±1時間)
               </span>
             </label>
             {filters.allowAdjacent30Min && (
               <span className="text-[10px] text-slate-400 dark:text-slate-500 hidden sm:inline">
-                ※30分開始スタジオも網羅
+                ※15/30/45分開始スタジオも網羅
               </span>
             )}
           </div>

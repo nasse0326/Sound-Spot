@@ -258,7 +258,7 @@ export const StudioCard: React.FC<StudioCardProps> = ({
                   ) : availResult.matchType === 'early30' || availResult.matchType === 'late30' ? (
                     <span
                       className="px-2 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-bold bg-blue-50 text-blue-700 border border-blue-400 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-500/80 flex items-center gap-1 shadow-sm dark:shadow-blue-950/40"
-                      title={`指定時間(${targetStartTime})から前後30分ズレた枠に空きがあります (${availResult.availableCandidateTimes.join(', ')}~)`}
+                      title={`指定時間(${targetStartTime})から前後1時間以内ズレた枠に空きがあります (${availResult.availableCandidateTimes.join(', ')}~)`}
                     >
                       <CheckCircle2 className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       <span>

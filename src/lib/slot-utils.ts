@@ -38,7 +38,7 @@ export function shouldDefaultExpandRoomList(studio: Pick<Studio, 'name'> | null 
  * エリアの標準表示順（対応エリア一覧・supported-studios.tsのセクション順に合わせる）。
  * カード一覧・タイムラインビュー双方のスタジオ並び順で共通して使う。
  */
-export const AREA_DISPLAY_ORDER = ['秋葉原', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺', '高円寺', '船橋', '横浜', '亀戸・小岩', '松戸・柏', '町田'];
+export const AREA_DISPLAY_ORDER = ['秋葉原・上野', '渋谷', '新宿', '高田馬場', '池袋', '下北沢', '吉祥寺', '高円寺', '船橋', '横浜', '亀戸・小岩', '松戸・柏', '町田'];
 
 export interface RoomAvailabilityMatch {
   isAvailable: boolean;
@@ -158,13 +158,13 @@ export function isWindowAvailable(slots: AvailabilitySlot[], startMin: number, e
  * Find real available slot start times within ±toleranceMin of targetStartMin that can
  * host the full requested duration, based on the room's actual slot data (not an assumed
  * :00/:30 grid). This is what lets rooms with unusual offsets (:15, :45, etc.) surface as
- * "close enough" candidates instead of only ever matching an exact ±30 minute grid point.
+ * "close enough" candidates instead of only ever matching an exact ±1 hour grid point.
  */
 function findNearbyAvailableStarts(
   slots: AvailabilitySlot[],
   targetStartMin: number,
   duration: number,
-  toleranceMin: number = 30
+  toleranceMin: number = 60
 ): number[] {
   const candidates = new Set<number>();
   for (const slot of slots) {
@@ -239,10 +239,10 @@ export function checkRoomAvailability(
     };
   }
 
-  // 2. ±30分以内の実スロットを直接スキャン（:00/:30グリッド前提を排除し、
+  // 2. ±1時間以内の実スロットを直接スキャン（:00/:30グリッド前提を排除し、
   //    :15/:45等の変則的な開始オフセットの部屋も候補として正しく拾えるようにする）
   if (allowAdjacent30Min) {
-    const nearbyStarts = findNearbyAvailableStarts(room.slots, targetStartMin, duration, 30);
+    const nearbyStarts = findNearbyAvailableStarts(room.slots, targetStartMin, duration, 60);
     if (nearbyStarts.length > 0) {
       const candidateTimes = nearbyStarts.map(minutesToTimeString);
       const firstStart = nearbyStarts[0];

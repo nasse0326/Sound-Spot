@@ -26,6 +26,8 @@ import { fetchOngakukanAkibaDays, fetchOngakukanShinjukuWestDays, fetchOngakukan
 import { fetchAllNoahTokyoDays } from './lib/noah-fetcher';
 import { fetchNodeShinjukuDays } from './lib/node-fetcher';
 import { fetchPentaShinjukuDays } from './lib/penta-fetcher';
+import { fetchEnsembleUenoDays } from './lib/ensemble-fetcher';
+import { fetchHmvpDays } from './lib/hmvp-fetcher';
 import { toUUID } from './lib/id-utils';
 import { CRAWL_DAY_COUNT } from '../src/config/crawl-schedule';
 
@@ -1327,6 +1329,22 @@ export async function crawlMusira(baseDate: Date, dayCount: number = CRAWL_DAY_C
 }
 
 // -------------------------------------------------------------
+// 秋葉原・上野エリア追加分（2026-09-22）。
+// ・音楽スタジオ ensemble（上野）: s-ens.net、ログイン不要でPOST /reserve/index.cgi に
+//   targetDay=YYYYMMDDを送ると日次の空き状況が取得できることを確認済み（詳細はensemble-fetcher.ts）。
+// ・HMVP大手町スタジオ／新御徒町スタジオ: hmvp.net、日付ごとのAPIは無く
+//   schedule.html 1ページに数ヶ月分の静的HTMLスケジュール表が埋め込まれている独自形式
+//   （詳細はhmvp-fetcher.ts）。1店舗=1部屋のビッグバンド練習用スタジオ。
+// -------------------------------------------------------------
+export async function crawlEnsembleUeno(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('音楽スタジオ ensemble', fetchEnsembleUenoDays, 'ensemble-ueno-real', baseDate, dayCount, 's-ens.net');
+}
+
+export async function crawlHmvp(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  await crawlStudiOlKoenjiShop('HMVP大手町・新御徒町スタジオ', fetchHmvpDays, 'hmvp-real', baseDate, dayCount, 'hmvp.net');
+}
+
+// -------------------------------------------------------------
 // 船橋エリア追加分（2026-09-20）。STUDIO SUN西船橋店はwebtoru.com ASPを使っており
 // ログイン不要でカレンダーが閲覧できることをブラウザで実地確認済み（パックス船橋店は
 // 会員ログイン必須のためクロール非対応・静的リスティングのみ、詳細はfunabashi-converter.ts）。
@@ -2055,6 +2073,8 @@ async function main() {
       crawlCloud9Machida(now, CRAWL_DAY_COUNT),
       crawlGatewayMachida(now, CRAWL_DAY_COUNT),
       crawlStudioActMachida(now, CRAWL_DAY_COUNT),
+      crawlEnsembleUeno(now, CRAWL_DAY_COUNT),
+      crawlHmvp(now, CRAWL_DAY_COUNT),
     ]);
 
     const failures = results.filter(r => r.status === 'rejected');

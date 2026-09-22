@@ -4,7 +4,7 @@ export interface SupportedStudio {
   id: string;
   name: string;
   chainName: string;
-  area: '渋谷' | '新宿' | '秋葉原' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩' | '松戸・柏' | '町田';
+  area: '渋谷' | '新宿' | '秋葉原・上野' | '高田馬場' | '池袋' | '下北沢' | '吉祥寺' | '高円寺' | '船橋' | '横浜' | '亀戸・小岩' | '松戸・柏' | '町田';
   nearestStation: string;
   address: string;
   roomCount: number;
@@ -283,13 +283,13 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
   },
 
   // -------------------------------------------------------------
-  // 秋葉原エリア (5店舗 / 計51部屋)
+  // 秋葉原・上野エリア (8店舗 / 計57部屋)
   // -------------------------------------------------------------
   {
     id: 'akiba-noah',
     name: 'サウンドスタジオノア 秋葉原店',
     chainName: 'SOUND STUDIO NOAH',
-    area: '秋葉原',
+    area: '秋葉原・上野',
     nearestStation: '末広町駅 徒歩1分 / 秋葉原駅 徒歩6分',
     address: '東京都千代田区外神田6-14-8',
     roomCount: 14,
@@ -306,7 +306,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     id: 'noah-ochanomizu',
     name: 'サウンドスタジオノア 御茶ノ水店',
     chainName: 'SOUND STUDIO NOAH',
-    area: '秋葉原',
+    area: '秋葉原・上野',
     nearestStation: '御茶ノ水駅 御茶ノ水橋口 徒歩3分 / 神保町駅 A5出口 徒歩5分',
     address: '東京都千代田区神田駿河台2丁目1-17',
     roomCount: 11,
@@ -323,7 +323,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     id: 'bot-akiba-01',
     name: 'ベースオントップ 秋葉原昭和通り口店',
     chainName: 'BASS ON TOP',
-    area: '秋葉原',
+    area: '秋葉原・上野',
     nearestStation: '秋葉原駅 昭和通り口 徒歩2分',
     address: '東京都千代田区神田佐久間町3-37-1',
     roomCount: 8,
@@ -340,7 +340,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     id: 'gm-akiba-01',
     name: 'STUDIO GOODMAN AKIBA',
     chainName: 'STUDIO GOODMAN',
-    area: '秋葉原',
+    area: '秋葉原・上野',
     nearestStation: '秋葉原駅 昭和通り口 徒歩5分 / 岩本町駅 徒歩3分',
     address: '東京都千代田区神田佐久間町3-21-7 熊谷ビルB1F-3F',
     roomCount: 11,
@@ -357,7 +357,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     id: 'og-akiba-01',
     name: 'スタジオ音楽館 アキバ店',
     chainName: 'スタジオ音楽館',
-    area: '秋葉原',
+    area: '秋葉原・上野',
     nearestStation: '秋葉原駅 電気街口 徒歩3分',
     address: '東京都千代田区外神田1-3-13 大森ビル3F-5F',
     roomCount: 7,
@@ -369,6 +369,57 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-3255-0810',
     websiteUrl: 'http://www.st-ongakukan.com/akihabara/akihabara.html',
     features: ['電気街口徒歩3分', '50帖大型Music Innあり', '個人練習21時受付', 'リーズナブルな料金'],
+  },
+  {
+    id: 'ensemble-ueno',
+    name: '音楽スタジオ ensemble',
+    chainName: 'ensemble',
+    area: '秋葉原・上野',
+    nearestStation: 'JR上野駅 入谷口 徒歩3分',
+    address: '東京都台東区東上野4-10-5 下条ビル3F',
+    roomCount: 4,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 's-ens.net (自動巡回)',
+    is24Hours: false,
+    businessHours: '10:00〜23:00（10-17時は予約時営業）、月曜定休',
+    tel: '03-3841-2904',
+    websiteUrl: 'https://s-ens.net',
+    features: ['上野駅徒歩3分', 'Aスタジオはアップライトピアノ常設', '入会金・年会費無料', '会員登録不要'],
+  },
+  {
+    id: 'hmvp-otemachi',
+    name: 'HMVP大手町スタジオ',
+    chainName: 'HMVP',
+    area: '秋葉原・上野',
+    nearestStation: '東京メトロ大手町駅 A1出口 徒歩3分',
+    address: '東京都千代田区内神田1-7-1 鎌倉橋ビルB2',
+    roomCount: 1,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'hmvp.net (自動巡回)',
+    is24Hours: false,
+    businessHours: '10:00〜22:00',
+    tel: '03-5283-1475',
+    websiteUrl: 'https://www.hmvp.net/studio/',
+    features: ['ビッグバンドジャズ17名収容可(約30畳)', 'グランドピアノ・ウッドベース・ドラム常設', '最少2時間〜、平日10-18時は個人利用プランあり'],
+  },
+  {
+    id: 'hmvp-shinokachimachi',
+    name: 'HMVP新御徒町スタジオ',
+    chainName: 'HMVP',
+    area: '秋葉原・上野',
+    nearestStation: '都営大江戸線/つくばエクスプレス 新御徒町駅 A4出口 徒歩1分',
+    address: '東京都台東区小島2-19-16 FK21ビルB1',
+    roomCount: 1,
+    syncType: 'web_calendar',
+    syncLabel: 'Web空き状況',
+    systemName: 'hmvp.net (自動巡回)',
+    is24Hours: false,
+    businessHours: '10:00〜22:00',
+    tel: '03-5283-1475',
+    websiteUrl: 'https://www.hmvp.net/studio/shinokachi_studio.html',
+    features: ['ビッグバンドジャズ17名収容可(約35畳)', 'グランドピアノ・ウッドベース・ドラム常設', '最少2時間〜、新御徒町駅徒歩1分'],
   },
 
   // -------------------------------------------------------------
