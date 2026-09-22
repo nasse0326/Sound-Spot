@@ -16,9 +16,8 @@
   "group_booking_lead_months": 3,
   "solo_booking_rule": "前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-21T18:18:15.227Z",
+  "scraped_at": "2026-09-22T00:15:28.989Z",
   "dates_available": [
-    "2026-09-21",
     "2026-09-22",
     "2026-09-23",
     "2026-09-24",
@@ -39,7 +38,8 @@
     "2026-10-09",
     "2026-10-10",
     "2026-10-11",
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-13"
   ],
   "rooms": [
     {
@@ -60,97 +60,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1000",
-          "start_time": "2026-09-21T10:00:00+09:00",
-          "end_time": "2026-09-21T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1100",
-          "start_time": "2026-09-21T11:00:00+09:00",
-          "end_time": "2026-09-21T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1200",
-          "start_time": "2026-09-21T12:00:00+09:00",
-          "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1300",
-          "start_time": "2026-09-21T13:00:00+09:00",
-          "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1400",
-          "start_time": "2026-09-21T14:00:00+09:00",
-          "end_time": "2026-09-21T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1500",
-          "start_time": "2026-09-21T15:00:00+09:00",
-          "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1600",
-          "start_time": "2026-09-21T16:00:00+09:00",
-          "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1700",
-          "start_time": "2026-09-21T17:00:00+09:00",
-          "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1800",
-          "start_time": "2026-09-21T18:00:00+09:00",
-          "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-1900",
-          "start_time": "2026-09-21T19:00:00+09:00",
-          "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-2000",
-          "start_time": "2026-09-21T20:00:00+09:00",
-          "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-2100",
-          "start_time": "2026-09-21T21:00:00+09:00",
-          "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2b-slot-2B-2026-09-21-2200",
-          "start_time": "2026-09-21T22:00:00+09:00",
-          "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
         {
           "id": "slot-gw-baba-2b-slot-2B-2026-09-22-1000",
           "start_time": "2026-09-22T10:00:00+09:00",
@@ -2061,6 +1970,97 @@
           "end_time": "2026-10-12T23:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1000",
+          "start_time": "2026-10-13T10:00:00+09:00",
+          "end_time": "2026-10-13T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1100",
+          "start_time": "2026-10-13T11:00:00+09:00",
+          "end_time": "2026-10-13T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1200",
+          "start_time": "2026-10-13T12:00:00+09:00",
+          "end_time": "2026-10-13T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1300",
+          "start_time": "2026-10-13T13:00:00+09:00",
+          "end_time": "2026-10-13T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1400",
+          "start_time": "2026-10-13T14:00:00+09:00",
+          "end_time": "2026-10-13T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1500",
+          "start_time": "2026-10-13T15:00:00+09:00",
+          "end_time": "2026-10-13T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1600",
+          "start_time": "2026-10-13T16:00:00+09:00",
+          "end_time": "2026-10-13T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1700",
+          "start_time": "2026-10-13T17:00:00+09:00",
+          "end_time": "2026-10-13T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1800",
+          "start_time": "2026-10-13T18:00:00+09:00",
+          "end_time": "2026-10-13T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-1900",
+          "start_time": "2026-10-13T19:00:00+09:00",
+          "end_time": "2026-10-13T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-2000",
+          "start_time": "2026-10-13T20:00:00+09:00",
+          "end_time": "2026-10-13T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-2100",
+          "start_time": "2026-10-13T21:00:00+09:00",
+          "end_time": "2026-10-13T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2b-slot-2B-2026-10-13-2200",
+          "start_time": "2026-10-13T22:00:00+09:00",
+          "end_time": "2026-10-13T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
         }
       ]
     },
@@ -2083,97 +2083,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1000",
-          "start_time": "2026-09-21T10:00:00+09:00",
-          "end_time": "2026-09-21T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1100",
-          "start_time": "2026-09-21T11:00:00+09:00",
-          "end_time": "2026-09-21T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1200",
-          "start_time": "2026-09-21T12:00:00+09:00",
-          "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1300",
-          "start_time": "2026-09-21T13:00:00+09:00",
-          "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1400",
-          "start_time": "2026-09-21T14:00:00+09:00",
-          "end_time": "2026-09-21T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1500",
-          "start_time": "2026-09-21T15:00:00+09:00",
-          "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1600",
-          "start_time": "2026-09-21T16:00:00+09:00",
-          "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1700",
-          "start_time": "2026-09-21T17:00:00+09:00",
-          "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1800",
-          "start_time": "2026-09-21T18:00:00+09:00",
-          "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-1900",
-          "start_time": "2026-09-21T19:00:00+09:00",
-          "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-2000",
-          "start_time": "2026-09-21T20:00:00+09:00",
-          "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-2100",
-          "start_time": "2026-09-21T21:00:00+09:00",
-          "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-2d-slot-2D-2026-09-21-2200",
-          "start_time": "2026-09-21T22:00:00+09:00",
-          "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
         {
           "id": "slot-gw-baba-2d-slot-2D-2026-09-22-1000",
           "start_time": "2026-09-22T10:00:00+09:00",
@@ -4084,6 +3993,97 @@
           "end_time": "2026-10-12T23:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1000",
+          "start_time": "2026-10-13T10:00:00+09:00",
+          "end_time": "2026-10-13T11:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1100",
+          "start_time": "2026-10-13T11:00:00+09:00",
+          "end_time": "2026-10-13T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1200",
+          "start_time": "2026-10-13T12:00:00+09:00",
+          "end_time": "2026-10-13T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1300",
+          "start_time": "2026-10-13T13:00:00+09:00",
+          "end_time": "2026-10-13T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1400",
+          "start_time": "2026-10-13T14:00:00+09:00",
+          "end_time": "2026-10-13T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1500",
+          "start_time": "2026-10-13T15:00:00+09:00",
+          "end_time": "2026-10-13T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1600",
+          "start_time": "2026-10-13T16:00:00+09:00",
+          "end_time": "2026-10-13T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1700",
+          "start_time": "2026-10-13T17:00:00+09:00",
+          "end_time": "2026-10-13T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1800",
+          "start_time": "2026-10-13T18:00:00+09:00",
+          "end_time": "2026-10-13T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-1900",
+          "start_time": "2026-10-13T19:00:00+09:00",
+          "end_time": "2026-10-13T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-2000",
+          "start_time": "2026-10-13T20:00:00+09:00",
+          "end_time": "2026-10-13T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-2100",
+          "start_time": "2026-10-13T21:00:00+09:00",
+          "end_time": "2026-10-13T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-2d-slot-2D-2026-10-13-2200",
+          "start_time": "2026-10-13T22:00:00+09:00",
+          "end_time": "2026-10-13T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
         }
       ]
     },
@@ -4105,97 +4105,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1000",
-          "start_time": "2026-09-21T10:00:00+09:00",
-          "end_time": "2026-09-21T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1100",
-          "start_time": "2026-09-21T11:00:00+09:00",
-          "end_time": "2026-09-21T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1200",
-          "start_time": "2026-09-21T12:00:00+09:00",
-          "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1300",
-          "start_time": "2026-09-21T13:00:00+09:00",
-          "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1400",
-          "start_time": "2026-09-21T14:00:00+09:00",
-          "end_time": "2026-09-21T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1500",
-          "start_time": "2026-09-21T15:00:00+09:00",
-          "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1600",
-          "start_time": "2026-09-21T16:00:00+09:00",
-          "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1700",
-          "start_time": "2026-09-21T17:00:00+09:00",
-          "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1800",
-          "start_time": "2026-09-21T18:00:00+09:00",
-          "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-1900",
-          "start_time": "2026-09-21T19:00:00+09:00",
-          "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-2000",
-          "start_time": "2026-09-21T20:00:00+09:00",
-          "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-2100",
-          "start_time": "2026-09-21T21:00:00+09:00",
-          "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3b-slot-3B-2026-09-21-2200",
-          "start_time": "2026-09-21T22:00:00+09:00",
-          "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
         {
           "id": "slot-gw-baba-3b-slot-3B-2026-09-22-1000",
           "start_time": "2026-09-22T10:00:00+09:00",
@@ -6106,6 +6015,97 @@
           "end_time": "2026-10-12T23:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1000",
+          "start_time": "2026-10-13T10:00:00+09:00",
+          "end_time": "2026-10-13T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1100",
+          "start_time": "2026-10-13T11:00:00+09:00",
+          "end_time": "2026-10-13T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1200",
+          "start_time": "2026-10-13T12:00:00+09:00",
+          "end_time": "2026-10-13T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1300",
+          "start_time": "2026-10-13T13:00:00+09:00",
+          "end_time": "2026-10-13T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1400",
+          "start_time": "2026-10-13T14:00:00+09:00",
+          "end_time": "2026-10-13T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1500",
+          "start_time": "2026-10-13T15:00:00+09:00",
+          "end_time": "2026-10-13T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1600",
+          "start_time": "2026-10-13T16:00:00+09:00",
+          "end_time": "2026-10-13T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1700",
+          "start_time": "2026-10-13T17:00:00+09:00",
+          "end_time": "2026-10-13T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1800",
+          "start_time": "2026-10-13T18:00:00+09:00",
+          "end_time": "2026-10-13T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-1900",
+          "start_time": "2026-10-13T19:00:00+09:00",
+          "end_time": "2026-10-13T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-2000",
+          "start_time": "2026-10-13T20:00:00+09:00",
+          "end_time": "2026-10-13T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-2100",
+          "start_time": "2026-10-13T21:00:00+09:00",
+          "end_time": "2026-10-13T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3b-slot-3B-2026-10-13-2200",
+          "start_time": "2026-10-13T22:00:00+09:00",
+          "end_time": "2026-10-13T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
         }
       ]
     },
@@ -6128,97 +6128,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1000",
-          "start_time": "2026-09-21T10:00:00+09:00",
-          "end_time": "2026-09-21T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1100",
-          "start_time": "2026-09-21T11:00:00+09:00",
-          "end_time": "2026-09-21T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1200",
-          "start_time": "2026-09-21T12:00:00+09:00",
-          "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1300",
-          "start_time": "2026-09-21T13:00:00+09:00",
-          "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1400",
-          "start_time": "2026-09-21T14:00:00+09:00",
-          "end_time": "2026-09-21T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1500",
-          "start_time": "2026-09-21T15:00:00+09:00",
-          "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1600",
-          "start_time": "2026-09-21T16:00:00+09:00",
-          "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1700",
-          "start_time": "2026-09-21T17:00:00+09:00",
-          "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1800",
-          "start_time": "2026-09-21T18:00:00+09:00",
-          "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-1900",
-          "start_time": "2026-09-21T19:00:00+09:00",
-          "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-2000",
-          "start_time": "2026-09-21T20:00:00+09:00",
-          "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-2100",
-          "start_time": "2026-09-21T21:00:00+09:00",
-          "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
-        {
-          "id": "slot-gw-baba-3d-slot-3D-2026-09-21-2200",
-          "start_time": "2026-09-21T22:00:00+09:00",
-          "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2860
-        },
         {
           "id": "slot-gw-baba-3d-slot-3D-2026-09-22-1000",
           "start_time": "2026-09-22T10:00:00+09:00",
@@ -8129,6 +8038,97 @@
           "end_time": "2026-10-12T23:00:00+09:00",
           "status": "AVAILABLE",
           "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1000",
+          "start_time": "2026-10-13T10:00:00+09:00",
+          "end_time": "2026-10-13T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1100",
+          "start_time": "2026-10-13T11:00:00+09:00",
+          "end_time": "2026-10-13T12:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1200",
+          "start_time": "2026-10-13T12:00:00+09:00",
+          "end_time": "2026-10-13T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1300",
+          "start_time": "2026-10-13T13:00:00+09:00",
+          "end_time": "2026-10-13T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1400",
+          "start_time": "2026-10-13T14:00:00+09:00",
+          "end_time": "2026-10-13T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1500",
+          "start_time": "2026-10-13T15:00:00+09:00",
+          "end_time": "2026-10-13T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1600",
+          "start_time": "2026-10-13T16:00:00+09:00",
+          "end_time": "2026-10-13T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1700",
+          "start_time": "2026-10-13T17:00:00+09:00",
+          "end_time": "2026-10-13T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1800",
+          "start_time": "2026-10-13T18:00:00+09:00",
+          "end_time": "2026-10-13T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-1900",
+          "start_time": "2026-10-13T19:00:00+09:00",
+          "end_time": "2026-10-13T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-2000",
+          "start_time": "2026-10-13T20:00:00+09:00",
+          "end_time": "2026-10-13T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-2100",
+          "start_time": "2026-10-13T21:00:00+09:00",
+          "end_time": "2026-10-13T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
+        },
+        {
+          "id": "slot-gw-baba-3d-slot-3D-2026-10-13-2200",
+          "start_time": "2026-10-13T22:00:00+09:00",
+          "end_time": "2026-10-13T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2860
         }
       ]
     },
@@ -8151,97 +8151,6 @@
       ],
       "start_time_offset": 30,
       "slots": [
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1030",
-          "start_time": "2026-09-21T10:30:00+09:00",
-          "end_time": "2026-09-21T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1130",
-          "start_time": "2026-09-21T11:30:00+09:00",
-          "end_time": "2026-09-21T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1230",
-          "start_time": "2026-09-21T12:30:00+09:00",
-          "end_time": "2026-09-21T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1330",
-          "start_time": "2026-09-21T13:30:00+09:00",
-          "end_time": "2026-09-21T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1430",
-          "start_time": "2026-09-21T14:30:00+09:00",
-          "end_time": "2026-09-21T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1530",
-          "start_time": "2026-09-21T15:30:00+09:00",
-          "end_time": "2026-09-21T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1630",
-          "start_time": "2026-09-21T16:30:00+09:00",
-          "end_time": "2026-09-21T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1730",
-          "start_time": "2026-09-21T17:30:00+09:00",
-          "end_time": "2026-09-21T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1830",
-          "start_time": "2026-09-21T18:30:00+09:00",
-          "end_time": "2026-09-21T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-1930",
-          "start_time": "2026-09-21T19:30:00+09:00",
-          "end_time": "2026-09-21T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-2030",
-          "start_time": "2026-09-21T20:30:00+09:00",
-          "end_time": "2026-09-21T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-2130",
-          "start_time": "2026-09-21T21:30:00+09:00",
-          "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-2a-slot-2A-2026-09-21-2230",
-          "start_time": "2026-09-21T22:30:00+09:00",
-          "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
         {
           "id": "slot-gw-baba-2a-slot-2A-2026-09-22-1030",
           "start_time": "2026-09-22T10:30:00+09:00",
@@ -10152,6 +10061,97 @@
           "end_time": "2026-10-12T23:30:00+09:00",
           "status": "BOOKED",
           "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1030",
+          "start_time": "2026-10-13T10:30:00+09:00",
+          "end_time": "2026-10-13T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1130",
+          "start_time": "2026-10-13T11:30:00+09:00",
+          "end_time": "2026-10-13T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1230",
+          "start_time": "2026-10-13T12:30:00+09:00",
+          "end_time": "2026-10-13T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1330",
+          "start_time": "2026-10-13T13:30:00+09:00",
+          "end_time": "2026-10-13T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1430",
+          "start_time": "2026-10-13T14:30:00+09:00",
+          "end_time": "2026-10-13T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1530",
+          "start_time": "2026-10-13T15:30:00+09:00",
+          "end_time": "2026-10-13T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1630",
+          "start_time": "2026-10-13T16:30:00+09:00",
+          "end_time": "2026-10-13T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1730",
+          "start_time": "2026-10-13T17:30:00+09:00",
+          "end_time": "2026-10-13T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1830",
+          "start_time": "2026-10-13T18:30:00+09:00",
+          "end_time": "2026-10-13T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-1930",
+          "start_time": "2026-10-13T19:30:00+09:00",
+          "end_time": "2026-10-13T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-2030",
+          "start_time": "2026-10-13T20:30:00+09:00",
+          "end_time": "2026-10-13T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-2130",
+          "start_time": "2026-10-13T21:30:00+09:00",
+          "end_time": "2026-10-13T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-2a-slot-2A-2026-10-13-2230",
+          "start_time": "2026-10-13T22:30:00+09:00",
+          "end_time": "2026-10-13T23:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2750
         }
       ]
     },
@@ -10174,97 +10174,6 @@
       ],
       "start_time_offset": 30,
       "slots": [
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1030",
-          "start_time": "2026-09-21T10:30:00+09:00",
-          "end_time": "2026-09-21T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1130",
-          "start_time": "2026-09-21T11:30:00+09:00",
-          "end_time": "2026-09-21T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1230",
-          "start_time": "2026-09-21T12:30:00+09:00",
-          "end_time": "2026-09-21T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1330",
-          "start_time": "2026-09-21T13:30:00+09:00",
-          "end_time": "2026-09-21T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1430",
-          "start_time": "2026-09-21T14:30:00+09:00",
-          "end_time": "2026-09-21T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1530",
-          "start_time": "2026-09-21T15:30:00+09:00",
-          "end_time": "2026-09-21T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1630",
-          "start_time": "2026-09-21T16:30:00+09:00",
-          "end_time": "2026-09-21T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1730",
-          "start_time": "2026-09-21T17:30:00+09:00",
-          "end_time": "2026-09-21T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1830",
-          "start_time": "2026-09-21T18:30:00+09:00",
-          "end_time": "2026-09-21T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-1930",
-          "start_time": "2026-09-21T19:30:00+09:00",
-          "end_time": "2026-09-21T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-2030",
-          "start_time": "2026-09-21T20:30:00+09:00",
-          "end_time": "2026-09-21T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-2130",
-          "start_time": "2026-09-21T21:30:00+09:00",
-          "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-2c-slot-2C-2026-09-21-2230",
-          "start_time": "2026-09-21T22:30:00+09:00",
-          "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
         {
           "id": "slot-gw-baba-2c-slot-2C-2026-09-22-1030",
           "start_time": "2026-09-22T10:30:00+09:00",
@@ -12175,6 +12084,97 @@
           "end_time": "2026-10-12T23:30:00+09:00",
           "status": "BOOKED",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1030",
+          "start_time": "2026-10-13T10:30:00+09:00",
+          "end_time": "2026-10-13T11:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1130",
+          "start_time": "2026-10-13T11:30:00+09:00",
+          "end_time": "2026-10-13T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1230",
+          "start_time": "2026-10-13T12:30:00+09:00",
+          "end_time": "2026-10-13T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1330",
+          "start_time": "2026-10-13T13:30:00+09:00",
+          "end_time": "2026-10-13T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1430",
+          "start_time": "2026-10-13T14:30:00+09:00",
+          "end_time": "2026-10-13T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1530",
+          "start_time": "2026-10-13T15:30:00+09:00",
+          "end_time": "2026-10-13T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1630",
+          "start_time": "2026-10-13T16:30:00+09:00",
+          "end_time": "2026-10-13T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1730",
+          "start_time": "2026-10-13T17:30:00+09:00",
+          "end_time": "2026-10-13T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1830",
+          "start_time": "2026-10-13T18:30:00+09:00",
+          "end_time": "2026-10-13T19:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-1930",
+          "start_time": "2026-10-13T19:30:00+09:00",
+          "end_time": "2026-10-13T20:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-2030",
+          "start_time": "2026-10-13T20:30:00+09:00",
+          "end_time": "2026-10-13T21:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-2130",
+          "start_time": "2026-10-13T21:30:00+09:00",
+          "end_time": "2026-10-13T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-2c-slot-2C-2026-10-13-2230",
+          "start_time": "2026-10-13T22:30:00+09:00",
+          "end_time": "2026-10-13T23:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
         }
       ]
     },
@@ -12197,97 +12197,6 @@
       ],
       "start_time_offset": 30,
       "slots": [
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1030",
-          "start_time": "2026-09-21T10:30:00+09:00",
-          "end_time": "2026-09-21T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1130",
-          "start_time": "2026-09-21T11:30:00+09:00",
-          "end_time": "2026-09-21T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1230",
-          "start_time": "2026-09-21T12:30:00+09:00",
-          "end_time": "2026-09-21T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1330",
-          "start_time": "2026-09-21T13:30:00+09:00",
-          "end_time": "2026-09-21T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1430",
-          "start_time": "2026-09-21T14:30:00+09:00",
-          "end_time": "2026-09-21T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1530",
-          "start_time": "2026-09-21T15:30:00+09:00",
-          "end_time": "2026-09-21T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1630",
-          "start_time": "2026-09-21T16:30:00+09:00",
-          "end_time": "2026-09-21T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1730",
-          "start_time": "2026-09-21T17:30:00+09:00",
-          "end_time": "2026-09-21T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1830",
-          "start_time": "2026-09-21T18:30:00+09:00",
-          "end_time": "2026-09-21T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-1930",
-          "start_time": "2026-09-21T19:30:00+09:00",
-          "end_time": "2026-09-21T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-2030",
-          "start_time": "2026-09-21T20:30:00+09:00",
-          "end_time": "2026-09-21T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-2130",
-          "start_time": "2026-09-21T21:30:00+09:00",
-          "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-3a-slot-3A-2026-09-21-2230",
-          "start_time": "2026-09-21T22:30:00+09:00",
-          "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
         {
           "id": "slot-gw-baba-3a-slot-3A-2026-09-22-1030",
           "start_time": "2026-09-22T10:30:00+09:00",
@@ -14198,6 +14107,97 @@
           "end_time": "2026-10-12T23:30:00+09:00",
           "status": "BOOKED",
           "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1030",
+          "start_time": "2026-10-13T10:30:00+09:00",
+          "end_time": "2026-10-13T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1130",
+          "start_time": "2026-10-13T11:30:00+09:00",
+          "end_time": "2026-10-13T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1230",
+          "start_time": "2026-10-13T12:30:00+09:00",
+          "end_time": "2026-10-13T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1330",
+          "start_time": "2026-10-13T13:30:00+09:00",
+          "end_time": "2026-10-13T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1430",
+          "start_time": "2026-10-13T14:30:00+09:00",
+          "end_time": "2026-10-13T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1530",
+          "start_time": "2026-10-13T15:30:00+09:00",
+          "end_time": "2026-10-13T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1630",
+          "start_time": "2026-10-13T16:30:00+09:00",
+          "end_time": "2026-10-13T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1730",
+          "start_time": "2026-10-13T17:30:00+09:00",
+          "end_time": "2026-10-13T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1830",
+          "start_time": "2026-10-13T18:30:00+09:00",
+          "end_time": "2026-10-13T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-1930",
+          "start_time": "2026-10-13T19:30:00+09:00",
+          "end_time": "2026-10-13T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-2030",
+          "start_time": "2026-10-13T20:30:00+09:00",
+          "end_time": "2026-10-13T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-2130",
+          "start_time": "2026-10-13T21:30:00+09:00",
+          "end_time": "2026-10-13T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-3a-slot-3A-2026-10-13-2230",
+          "start_time": "2026-10-13T22:30:00+09:00",
+          "end_time": "2026-10-13T23:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2750
         }
       ]
     },
@@ -14220,97 +14220,6 @@
       ],
       "start_time_offset": 30,
       "slots": [
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1030",
-          "start_time": "2026-09-21T10:30:00+09:00",
-          "end_time": "2026-09-21T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1130",
-          "start_time": "2026-09-21T11:30:00+09:00",
-          "end_time": "2026-09-21T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1230",
-          "start_time": "2026-09-21T12:30:00+09:00",
-          "end_time": "2026-09-21T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1330",
-          "start_time": "2026-09-21T13:30:00+09:00",
-          "end_time": "2026-09-21T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1430",
-          "start_time": "2026-09-21T14:30:00+09:00",
-          "end_time": "2026-09-21T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1530",
-          "start_time": "2026-09-21T15:30:00+09:00",
-          "end_time": "2026-09-21T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1630",
-          "start_time": "2026-09-21T16:30:00+09:00",
-          "end_time": "2026-09-21T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1730",
-          "start_time": "2026-09-21T17:30:00+09:00",
-          "end_time": "2026-09-21T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1830",
-          "start_time": "2026-09-21T18:30:00+09:00",
-          "end_time": "2026-09-21T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-1930",
-          "start_time": "2026-09-21T19:30:00+09:00",
-          "end_time": "2026-09-21T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-2030",
-          "start_time": "2026-09-21T20:30:00+09:00",
-          "end_time": "2026-09-21T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-2130",
-          "start_time": "2026-09-21T21:30:00+09:00",
-          "end_time": "2026-09-21T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
-        {
-          "id": "slot-gw-baba-3c-slot-3C-2026-09-21-2230",
-          "start_time": "2026-09-21T22:30:00+09:00",
-          "end_time": "2026-09-21T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2530
-        },
         {
           "id": "slot-gw-baba-3c-slot-3C-2026-09-22-1030",
           "start_time": "2026-09-22T10:30:00+09:00",
@@ -14371,14 +14280,14 @@
           "id": "slot-gw-baba-3c-slot-3C-2026-09-22-1830",
           "start_time": "2026-09-22T18:30:00+09:00",
           "end_time": "2026-09-22T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-baba-3c-slot-3C-2026-09-22-1930",
           "start_time": "2026-09-22T19:30:00+09:00",
           "end_time": "2026-09-22T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -16221,6 +16130,97 @@
           "end_time": "2026-10-12T23:30:00+09:00",
           "status": "BOOKED",
           "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1030",
+          "start_time": "2026-10-13T10:30:00+09:00",
+          "end_time": "2026-10-13T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1130",
+          "start_time": "2026-10-13T11:30:00+09:00",
+          "end_time": "2026-10-13T12:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1230",
+          "start_time": "2026-10-13T12:30:00+09:00",
+          "end_time": "2026-10-13T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1330",
+          "start_time": "2026-10-13T13:30:00+09:00",
+          "end_time": "2026-10-13T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1430",
+          "start_time": "2026-10-13T14:30:00+09:00",
+          "end_time": "2026-10-13T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1530",
+          "start_time": "2026-10-13T15:30:00+09:00",
+          "end_time": "2026-10-13T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1630",
+          "start_time": "2026-10-13T16:30:00+09:00",
+          "end_time": "2026-10-13T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1730",
+          "start_time": "2026-10-13T17:30:00+09:00",
+          "end_time": "2026-10-13T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1830",
+          "start_time": "2026-10-13T18:30:00+09:00",
+          "end_time": "2026-10-13T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-1930",
+          "start_time": "2026-10-13T19:30:00+09:00",
+          "end_time": "2026-10-13T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-2030",
+          "start_time": "2026-10-13T20:30:00+09:00",
+          "end_time": "2026-10-13T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-2130",
+          "start_time": "2026-10-13T21:30:00+09:00",
+          "end_time": "2026-10-13T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2530
+        },
+        {
+          "id": "slot-gw-baba-3c-slot-3C-2026-10-13-2230",
+          "start_time": "2026-10-13T22:30:00+09:00",
+          "end_time": "2026-10-13T23:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2530
         }
       ]
     },
@@ -16243,97 +16243,6 @@
       ],
       "start_time_offset": 15,
       "slots": [
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1015",
-          "start_time": "2026-09-21T10:15:00+09:00",
-          "end_time": "2026-09-21T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1115",
-          "start_time": "2026-09-21T11:15:00+09:00",
-          "end_time": "2026-09-21T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1215",
-          "start_time": "2026-09-21T12:15:00+09:00",
-          "end_time": "2026-09-21T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1315",
-          "start_time": "2026-09-21T13:15:00+09:00",
-          "end_time": "2026-09-21T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1415",
-          "start_time": "2026-09-21T14:15:00+09:00",
-          "end_time": "2026-09-21T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1515",
-          "start_time": "2026-09-21T15:15:00+09:00",
-          "end_time": "2026-09-21T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1615",
-          "start_time": "2026-09-21T16:15:00+09:00",
-          "end_time": "2026-09-21T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1715",
-          "start_time": "2026-09-21T17:15:00+09:00",
-          "end_time": "2026-09-21T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1815",
-          "start_time": "2026-09-21T18:15:00+09:00",
-          "end_time": "2026-09-21T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-1915",
-          "start_time": "2026-09-21T19:15:00+09:00",
-          "end_time": "2026-09-21T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-2015",
-          "start_time": "2026-09-21T20:15:00+09:00",
-          "end_time": "2026-09-21T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-2115",
-          "start_time": "2026-09-21T21:15:00+09:00",
-          "end_time": "2026-09-21T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
-        {
-          "id": "slot-gw-baba-1a-slot-1A-2026-09-21-2215",
-          "start_time": "2026-09-21T22:15:00+09:00",
-          "end_time": "2026-09-21T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2750
-        },
         {
           "id": "slot-gw-baba-1a-slot-1A-2026-09-22-1015",
           "start_time": "2026-09-22T10:15:00+09:00",
@@ -18244,6 +18153,97 @@
           "end_time": "2026-10-12T23:15:00+09:00",
           "status": "BOOKED",
           "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1015",
+          "start_time": "2026-10-13T10:15:00+09:00",
+          "end_time": "2026-10-13T11:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1115",
+          "start_time": "2026-10-13T11:15:00+09:00",
+          "end_time": "2026-10-13T12:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1215",
+          "start_time": "2026-10-13T12:15:00+09:00",
+          "end_time": "2026-10-13T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1315",
+          "start_time": "2026-10-13T13:15:00+09:00",
+          "end_time": "2026-10-13T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1415",
+          "start_time": "2026-10-13T14:15:00+09:00",
+          "end_time": "2026-10-13T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1515",
+          "start_time": "2026-10-13T15:15:00+09:00",
+          "end_time": "2026-10-13T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1615",
+          "start_time": "2026-10-13T16:15:00+09:00",
+          "end_time": "2026-10-13T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1715",
+          "start_time": "2026-10-13T17:15:00+09:00",
+          "end_time": "2026-10-13T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1815",
+          "start_time": "2026-10-13T18:15:00+09:00",
+          "end_time": "2026-10-13T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-1915",
+          "start_time": "2026-10-13T19:15:00+09:00",
+          "end_time": "2026-10-13T20:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-2015",
+          "start_time": "2026-10-13T20:15:00+09:00",
+          "end_time": "2026-10-13T21:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-2115",
+          "start_time": "2026-10-13T21:15:00+09:00",
+          "end_time": "2026-10-13T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2750
+        },
+        {
+          "id": "slot-gw-baba-1a-slot-1A-2026-10-13-2215",
+          "start_time": "2026-10-13T22:15:00+09:00",
+          "end_time": "2026-10-13T23:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2750
         }
       ]
     },
@@ -18267,97 +18267,6 @@
       ],
       "start_time_offset": 15,
       "slots": [
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1015",
-          "start_time": "2026-09-21T10:15:00+09:00",
-          "end_time": "2026-09-21T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1115",
-          "start_time": "2026-09-21T11:15:00+09:00",
-          "end_time": "2026-09-21T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1215",
-          "start_time": "2026-09-21T12:15:00+09:00",
-          "end_time": "2026-09-21T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1315",
-          "start_time": "2026-09-21T13:15:00+09:00",
-          "end_time": "2026-09-21T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1415",
-          "start_time": "2026-09-21T14:15:00+09:00",
-          "end_time": "2026-09-21T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1515",
-          "start_time": "2026-09-21T15:15:00+09:00",
-          "end_time": "2026-09-21T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1615",
-          "start_time": "2026-09-21T16:15:00+09:00",
-          "end_time": "2026-09-21T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1715",
-          "start_time": "2026-09-21T17:15:00+09:00",
-          "end_time": "2026-09-21T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1815",
-          "start_time": "2026-09-21T18:15:00+09:00",
-          "end_time": "2026-09-21T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-1915",
-          "start_time": "2026-09-21T19:15:00+09:00",
-          "end_time": "2026-09-21T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-2015",
-          "start_time": "2026-09-21T20:15:00+09:00",
-          "end_time": "2026-09-21T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-2115",
-          "start_time": "2026-09-21T21:15:00+09:00",
-          "end_time": "2026-09-21T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4a-slot-4A-2026-09-21-2215",
-          "start_time": "2026-09-21T22:15:00+09:00",
-          "end_time": "2026-09-21T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
         {
           "id": "slot-gw-baba-4a-slot-4A-2026-09-22-1015",
           "start_time": "2026-09-22T10:15:00+09:00",
@@ -19608,14 +19517,14 @@
           "id": "slot-gw-baba-4a-slot-4A-2026-10-05-1915",
           "start_time": "2026-10-05T19:15:00+09:00",
           "end_time": "2026-10-05T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-4a-slot-4A-2026-10-05-2015",
           "start_time": "2026-10-05T20:15:00+09:00",
           "end_time": "2026-10-05T21:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
@@ -20268,6 +20177,97 @@
           "end_time": "2026-10-12T23:15:00+09:00",
           "status": "BOOKED",
           "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1015",
+          "start_time": "2026-10-13T10:15:00+09:00",
+          "end_time": "2026-10-13T11:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1115",
+          "start_time": "2026-10-13T11:15:00+09:00",
+          "end_time": "2026-10-13T12:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1215",
+          "start_time": "2026-10-13T12:15:00+09:00",
+          "end_time": "2026-10-13T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1315",
+          "start_time": "2026-10-13T13:15:00+09:00",
+          "end_time": "2026-10-13T14:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1415",
+          "start_time": "2026-10-13T14:15:00+09:00",
+          "end_time": "2026-10-13T15:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1515",
+          "start_time": "2026-10-13T15:15:00+09:00",
+          "end_time": "2026-10-13T16:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1615",
+          "start_time": "2026-10-13T16:15:00+09:00",
+          "end_time": "2026-10-13T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1715",
+          "start_time": "2026-10-13T17:15:00+09:00",
+          "end_time": "2026-10-13T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1815",
+          "start_time": "2026-10-13T18:15:00+09:00",
+          "end_time": "2026-10-13T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-1915",
+          "start_time": "2026-10-13T19:15:00+09:00",
+          "end_time": "2026-10-13T20:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-2015",
+          "start_time": "2026-10-13T20:15:00+09:00",
+          "end_time": "2026-10-13T21:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-2115",
+          "start_time": "2026-10-13T21:15:00+09:00",
+          "end_time": "2026-10-13T22:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4a-slot-4A-2026-10-13-2215",
+          "start_time": "2026-10-13T22:15:00+09:00",
+          "end_time": "2026-10-13T23:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
         }
       ]
     },
@@ -20291,97 +20291,6 @@
       ],
       "start_time_offset": 15,
       "slots": [
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1015",
-          "start_time": "2026-09-21T10:15:00+09:00",
-          "end_time": "2026-09-21T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1115",
-          "start_time": "2026-09-21T11:15:00+09:00",
-          "end_time": "2026-09-21T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1215",
-          "start_time": "2026-09-21T12:15:00+09:00",
-          "end_time": "2026-09-21T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1315",
-          "start_time": "2026-09-21T13:15:00+09:00",
-          "end_time": "2026-09-21T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1415",
-          "start_time": "2026-09-21T14:15:00+09:00",
-          "end_time": "2026-09-21T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1515",
-          "start_time": "2026-09-21T15:15:00+09:00",
-          "end_time": "2026-09-21T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1615",
-          "start_time": "2026-09-21T16:15:00+09:00",
-          "end_time": "2026-09-21T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1715",
-          "start_time": "2026-09-21T17:15:00+09:00",
-          "end_time": "2026-09-21T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1815",
-          "start_time": "2026-09-21T18:15:00+09:00",
-          "end_time": "2026-09-21T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-1915",
-          "start_time": "2026-09-21T19:15:00+09:00",
-          "end_time": "2026-09-21T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-2015",
-          "start_time": "2026-09-21T20:15:00+09:00",
-          "end_time": "2026-09-21T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-2115",
-          "start_time": "2026-09-21T21:15:00+09:00",
-          "end_time": "2026-09-21T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4c-slot-4C-2026-09-21-2215",
-          "start_time": "2026-09-21T22:15:00+09:00",
-          "end_time": "2026-09-21T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
         {
           "id": "slot-gw-baba-4c-slot-4C-2026-09-22-1015",
           "start_time": "2026-09-22T10:15:00+09:00",
@@ -22292,6 +22201,97 @@
           "end_time": "2026-10-12T23:15:00+09:00",
           "status": "BOOKED",
           "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1015",
+          "start_time": "2026-10-13T10:15:00+09:00",
+          "end_time": "2026-10-13T11:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1115",
+          "start_time": "2026-10-13T11:15:00+09:00",
+          "end_time": "2026-10-13T12:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1215",
+          "start_time": "2026-10-13T12:15:00+09:00",
+          "end_time": "2026-10-13T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1315",
+          "start_time": "2026-10-13T13:15:00+09:00",
+          "end_time": "2026-10-13T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1415",
+          "start_time": "2026-10-13T14:15:00+09:00",
+          "end_time": "2026-10-13T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1515",
+          "start_time": "2026-10-13T15:15:00+09:00",
+          "end_time": "2026-10-13T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1615",
+          "start_time": "2026-10-13T16:15:00+09:00",
+          "end_time": "2026-10-13T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1715",
+          "start_time": "2026-10-13T17:15:00+09:00",
+          "end_time": "2026-10-13T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1815",
+          "start_time": "2026-10-13T18:15:00+09:00",
+          "end_time": "2026-10-13T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-1915",
+          "start_time": "2026-10-13T19:15:00+09:00",
+          "end_time": "2026-10-13T20:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-2015",
+          "start_time": "2026-10-13T20:15:00+09:00",
+          "end_time": "2026-10-13T21:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-2115",
+          "start_time": "2026-10-13T21:15:00+09:00",
+          "end_time": "2026-10-13T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4c-slot-4C-2026-10-13-2215",
+          "start_time": "2026-10-13T22:15:00+09:00",
+          "end_time": "2026-10-13T23:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
         }
       ]
     },
@@ -22315,97 +22315,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1000",
-          "start_time": "2026-09-21T10:00:00+09:00",
-          "end_time": "2026-09-21T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1100",
-          "start_time": "2026-09-21T11:00:00+09:00",
-          "end_time": "2026-09-21T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1200",
-          "start_time": "2026-09-21T12:00:00+09:00",
-          "end_time": "2026-09-21T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1300",
-          "start_time": "2026-09-21T13:00:00+09:00",
-          "end_time": "2026-09-21T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1400",
-          "start_time": "2026-09-21T14:00:00+09:00",
-          "end_time": "2026-09-21T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1500",
-          "start_time": "2026-09-21T15:00:00+09:00",
-          "end_time": "2026-09-21T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1600",
-          "start_time": "2026-09-21T16:00:00+09:00",
-          "end_time": "2026-09-21T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1700",
-          "start_time": "2026-09-21T17:00:00+09:00",
-          "end_time": "2026-09-21T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1800",
-          "start_time": "2026-09-21T18:00:00+09:00",
-          "end_time": "2026-09-21T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-1900",
-          "start_time": "2026-09-21T19:00:00+09:00",
-          "end_time": "2026-09-21T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-2000",
-          "start_time": "2026-09-21T20:00:00+09:00",
-          "end_time": "2026-09-21T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-2100",
-          "start_time": "2026-09-21T21:00:00+09:00",
-          "end_time": "2026-09-21T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5b-slot-5B-2026-09-21-2200",
-          "start_time": "2026-09-21T22:00:00+09:00",
-          "end_time": "2026-09-21T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
         {
           "id": "slot-gw-baba-5b-slot-5B-2026-09-22-1000",
           "start_time": "2026-09-22T10:00:00+09:00",
@@ -24316,6 +24225,97 @@
           "end_time": "2026-10-12T23:00:00+09:00",
           "status": "BOOKED",
           "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1000",
+          "start_time": "2026-10-13T10:00:00+09:00",
+          "end_time": "2026-10-13T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1100",
+          "start_time": "2026-10-13T11:00:00+09:00",
+          "end_time": "2026-10-13T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1200",
+          "start_time": "2026-10-13T12:00:00+09:00",
+          "end_time": "2026-10-13T13:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1300",
+          "start_time": "2026-10-13T13:00:00+09:00",
+          "end_time": "2026-10-13T14:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1400",
+          "start_time": "2026-10-13T14:00:00+09:00",
+          "end_time": "2026-10-13T15:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1500",
+          "start_time": "2026-10-13T15:00:00+09:00",
+          "end_time": "2026-10-13T16:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1600",
+          "start_time": "2026-10-13T16:00:00+09:00",
+          "end_time": "2026-10-13T17:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1700",
+          "start_time": "2026-10-13T17:00:00+09:00",
+          "end_time": "2026-10-13T18:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1800",
+          "start_time": "2026-10-13T18:00:00+09:00",
+          "end_time": "2026-10-13T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-1900",
+          "start_time": "2026-10-13T19:00:00+09:00",
+          "end_time": "2026-10-13T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-2000",
+          "start_time": "2026-10-13T20:00:00+09:00",
+          "end_time": "2026-10-13T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-2100",
+          "start_time": "2026-10-13T21:00:00+09:00",
+          "end_time": "2026-10-13T22:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5b-slot-5B-2026-10-13-2200",
+          "start_time": "2026-10-13T22:00:00+09:00",
+          "end_time": "2026-10-13T23:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
         }
       ]
     },
@@ -24339,97 +24339,6 @@
       ],
       "start_time_offset": 45,
       "slots": [
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1045",
-          "start_time": "2026-09-21T10:45:00+09:00",
-          "end_time": "2026-09-21T11:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1145",
-          "start_time": "2026-09-21T11:45:00+09:00",
-          "end_time": "2026-09-21T12:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1245",
-          "start_time": "2026-09-21T12:45:00+09:00",
-          "end_time": "2026-09-21T13:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1345",
-          "start_time": "2026-09-21T13:45:00+09:00",
-          "end_time": "2026-09-21T14:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1445",
-          "start_time": "2026-09-21T14:45:00+09:00",
-          "end_time": "2026-09-21T15:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1545",
-          "start_time": "2026-09-21T15:45:00+09:00",
-          "end_time": "2026-09-21T16:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1645",
-          "start_time": "2026-09-21T16:45:00+09:00",
-          "end_time": "2026-09-21T17:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1745",
-          "start_time": "2026-09-21T17:45:00+09:00",
-          "end_time": "2026-09-21T18:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1845",
-          "start_time": "2026-09-21T18:45:00+09:00",
-          "end_time": "2026-09-21T19:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-1945",
-          "start_time": "2026-09-21T19:45:00+09:00",
-          "end_time": "2026-09-21T20:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-2045",
-          "start_time": "2026-09-21T20:45:00+09:00",
-          "end_time": "2026-09-21T21:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-2145",
-          "start_time": "2026-09-21T21:45:00+09:00",
-          "end_time": "2026-09-21T22:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-4b-slot-4B-2026-09-21-2245",
-          "start_time": "2026-09-21T22:45:00+09:00",
-          "end_time": "2026-09-21T23:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
         {
           "id": "slot-gw-baba-4b-slot-4B-2026-09-22-1045",
           "start_time": "2026-09-22T10:45:00+09:00",
@@ -25659,14 +25568,14 @@
           "id": "slot-gw-baba-4b-slot-4B-2026-10-05-1645",
           "start_time": "2026-10-05T16:45:00+09:00",
           "end_time": "2026-10-05T17:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-4b-slot-4B-2026-10-05-1745",
           "start_time": "2026-10-05T17:45:00+09:00",
           "end_time": "2026-10-05T18:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
@@ -26340,6 +26249,97 @@
           "end_time": "2026-10-12T23:45:00+09:00",
           "status": "BOOKED",
           "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1045",
+          "start_time": "2026-10-13T10:45:00+09:00",
+          "end_time": "2026-10-13T11:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1145",
+          "start_time": "2026-10-13T11:45:00+09:00",
+          "end_time": "2026-10-13T12:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1245",
+          "start_time": "2026-10-13T12:45:00+09:00",
+          "end_time": "2026-10-13T13:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1345",
+          "start_time": "2026-10-13T13:45:00+09:00",
+          "end_time": "2026-10-13T14:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1445",
+          "start_time": "2026-10-13T14:45:00+09:00",
+          "end_time": "2026-10-13T15:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1545",
+          "start_time": "2026-10-13T15:45:00+09:00",
+          "end_time": "2026-10-13T16:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1645",
+          "start_time": "2026-10-13T16:45:00+09:00",
+          "end_time": "2026-10-13T17:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1745",
+          "start_time": "2026-10-13T17:45:00+09:00",
+          "end_time": "2026-10-13T18:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1845",
+          "start_time": "2026-10-13T18:45:00+09:00",
+          "end_time": "2026-10-13T19:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-1945",
+          "start_time": "2026-10-13T19:45:00+09:00",
+          "end_time": "2026-10-13T20:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-2045",
+          "start_time": "2026-10-13T20:45:00+09:00",
+          "end_time": "2026-10-13T21:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-2145",
+          "start_time": "2026-10-13T21:45:00+09:00",
+          "end_time": "2026-10-13T22:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-4b-slot-4B-2026-10-13-2245",
+          "start_time": "2026-10-13T22:45:00+09:00",
+          "end_time": "2026-10-13T23:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
         }
       ]
     },
@@ -26363,97 +26363,6 @@
       ],
       "start_time_offset": 45,
       "slots": [
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1045",
-          "start_time": "2026-09-21T10:45:00+09:00",
-          "end_time": "2026-09-21T11:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1145",
-          "start_time": "2026-09-21T11:45:00+09:00",
-          "end_time": "2026-09-21T12:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1245",
-          "start_time": "2026-09-21T12:45:00+09:00",
-          "end_time": "2026-09-21T13:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1345",
-          "start_time": "2026-09-21T13:45:00+09:00",
-          "end_time": "2026-09-21T14:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1445",
-          "start_time": "2026-09-21T14:45:00+09:00",
-          "end_time": "2026-09-21T15:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1545",
-          "start_time": "2026-09-21T15:45:00+09:00",
-          "end_time": "2026-09-21T16:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1645",
-          "start_time": "2026-09-21T16:45:00+09:00",
-          "end_time": "2026-09-21T17:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1745",
-          "start_time": "2026-09-21T17:45:00+09:00",
-          "end_time": "2026-09-21T18:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1845",
-          "start_time": "2026-09-21T18:45:00+09:00",
-          "end_time": "2026-09-21T19:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-1945",
-          "start_time": "2026-09-21T19:45:00+09:00",
-          "end_time": "2026-09-21T20:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-2045",
-          "start_time": "2026-09-21T20:45:00+09:00",
-          "end_time": "2026-09-21T21:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-2145",
-          "start_time": "2026-09-21T21:45:00+09:00",
-          "end_time": "2026-09-21T22:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5a-slot-5A-2026-09-21-2245",
-          "start_time": "2026-09-21T22:45:00+09:00",
-          "end_time": "2026-09-21T23:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
         {
           "id": "slot-gw-baba-5a-slot-5A-2026-09-22-1045",
           "start_time": "2026-09-22T10:45:00+09:00",
@@ -26668,21 +26577,21 @@
           "id": "slot-gw-baba-5a-slot-5A-2026-09-24-1445",
           "start_time": "2026-09-24T14:45:00+09:00",
           "end_time": "2026-09-24T15:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-5a-slot-5A-2026-09-24-1545",
           "start_time": "2026-09-24T15:45:00+09:00",
           "end_time": "2026-09-24T16:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-5a-slot-5A-2026-09-24-1645",
           "start_time": "2026-09-24T16:45:00+09:00",
           "end_time": "2026-09-24T17:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
@@ -28364,6 +28273,97 @@
           "end_time": "2026-10-12T23:45:00+09:00",
           "status": "BOOKED",
           "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1045",
+          "start_time": "2026-10-13T10:45:00+09:00",
+          "end_time": "2026-10-13T11:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1145",
+          "start_time": "2026-10-13T11:45:00+09:00",
+          "end_time": "2026-10-13T12:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1245",
+          "start_time": "2026-10-13T12:45:00+09:00",
+          "end_time": "2026-10-13T13:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1345",
+          "start_time": "2026-10-13T13:45:00+09:00",
+          "end_time": "2026-10-13T14:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1445",
+          "start_time": "2026-10-13T14:45:00+09:00",
+          "end_time": "2026-10-13T15:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1545",
+          "start_time": "2026-10-13T15:45:00+09:00",
+          "end_time": "2026-10-13T16:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1645",
+          "start_time": "2026-10-13T16:45:00+09:00",
+          "end_time": "2026-10-13T17:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1745",
+          "start_time": "2026-10-13T17:45:00+09:00",
+          "end_time": "2026-10-13T18:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1845",
+          "start_time": "2026-10-13T18:45:00+09:00",
+          "end_time": "2026-10-13T19:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-1945",
+          "start_time": "2026-10-13T19:45:00+09:00",
+          "end_time": "2026-10-13T20:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-2045",
+          "start_time": "2026-10-13T20:45:00+09:00",
+          "end_time": "2026-10-13T21:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-2145",
+          "start_time": "2026-10-13T21:45:00+09:00",
+          "end_time": "2026-10-13T22:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5a-slot-5A-2026-10-13-2245",
+          "start_time": "2026-10-13T22:45:00+09:00",
+          "end_time": "2026-10-13T23:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
         }
       ]
     },
@@ -28388,108 +28388,17 @@
       "start_time_offset": 45,
       "slots": [
         {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1045",
-          "start_time": "2026-09-21T10:45:00+09:00",
-          "end_time": "2026-09-21T11:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1145",
-          "start_time": "2026-09-21T11:45:00+09:00",
-          "end_time": "2026-09-21T12:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1245",
-          "start_time": "2026-09-21T12:45:00+09:00",
-          "end_time": "2026-09-21T13:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1345",
-          "start_time": "2026-09-21T13:45:00+09:00",
-          "end_time": "2026-09-21T14:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1445",
-          "start_time": "2026-09-21T14:45:00+09:00",
-          "end_time": "2026-09-21T15:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1545",
-          "start_time": "2026-09-21T15:45:00+09:00",
-          "end_time": "2026-09-21T16:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1645",
-          "start_time": "2026-09-21T16:45:00+09:00",
-          "end_time": "2026-09-21T17:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1745",
-          "start_time": "2026-09-21T17:45:00+09:00",
-          "end_time": "2026-09-21T18:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1845",
-          "start_time": "2026-09-21T18:45:00+09:00",
-          "end_time": "2026-09-21T19:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-1945",
-          "start_time": "2026-09-21T19:45:00+09:00",
-          "end_time": "2026-09-21T20:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-2045",
-          "start_time": "2026-09-21T20:45:00+09:00",
-          "end_time": "2026-09-21T21:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-2145",
-          "start_time": "2026-09-21T21:45:00+09:00",
-          "end_time": "2026-09-21T22:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
-          "id": "slot-gw-baba-5c-slot-5C-2026-09-21-2245",
-          "start_time": "2026-09-21T22:45:00+09:00",
-          "end_time": "2026-09-21T23:45:00+09:00",
-          "status": "BOOKED",
-          "price": 2970
-        },
-        {
           "id": "slot-gw-baba-5c-slot-5C-2026-09-22-1045",
           "start_time": "2026-09-22T10:45:00+09:00",
           "end_time": "2026-09-22T11:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
           "id": "slot-gw-baba-5c-slot-5C-2026-09-22-1145",
           "start_time": "2026-09-22T11:45:00+09:00",
           "end_time": "2026-09-22T12:45:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
@@ -30386,6 +30295,97 @@
           "id": "slot-gw-baba-5c-slot-5C-2026-10-12-2245",
           "start_time": "2026-10-12T22:45:00+09:00",
           "end_time": "2026-10-12T23:45:00+09:00",
+          "status": "BOOKED",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1045",
+          "start_time": "2026-10-13T10:45:00+09:00",
+          "end_time": "2026-10-13T11:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1145",
+          "start_time": "2026-10-13T11:45:00+09:00",
+          "end_time": "2026-10-13T12:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1245",
+          "start_time": "2026-10-13T12:45:00+09:00",
+          "end_time": "2026-10-13T13:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1345",
+          "start_time": "2026-10-13T13:45:00+09:00",
+          "end_time": "2026-10-13T14:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1445",
+          "start_time": "2026-10-13T14:45:00+09:00",
+          "end_time": "2026-10-13T15:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1545",
+          "start_time": "2026-10-13T15:45:00+09:00",
+          "end_time": "2026-10-13T16:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1645",
+          "start_time": "2026-10-13T16:45:00+09:00",
+          "end_time": "2026-10-13T17:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1745",
+          "start_time": "2026-10-13T17:45:00+09:00",
+          "end_time": "2026-10-13T18:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1845",
+          "start_time": "2026-10-13T18:45:00+09:00",
+          "end_time": "2026-10-13T19:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-1945",
+          "start_time": "2026-10-13T19:45:00+09:00",
+          "end_time": "2026-10-13T20:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-2045",
+          "start_time": "2026-10-13T20:45:00+09:00",
+          "end_time": "2026-10-13T21:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-2145",
+          "start_time": "2026-10-13T21:45:00+09:00",
+          "end_time": "2026-10-13T22:45:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2970
+        },
+        {
+          "id": "slot-gw-baba-5c-slot-5C-2026-10-13-2245",
+          "start_time": "2026-10-13T22:45:00+09:00",
+          "end_time": "2026-10-13T23:45:00+09:00",
           "status": "BOOKED",
           "price": 2970
         }
