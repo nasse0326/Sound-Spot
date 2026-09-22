@@ -17,7 +17,7 @@ import { format, addDays } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import { fetchReserve1Days } from './lib/reserve1-fetcher';
 import { fetchBotAkibaDays, fetchBotTakadanobabaDays, fetchBotIkebukuroDays, fetchAndysDays, fetchStandbyDays, fetchGourdislandWestDays, fetchGourdislandSouthDays, fetchMuseumShinjukuDays, fetchHillvalleyDays, fetchVantageDays, fetchSoundStudioDomDays, fetchPigStudioDays, fetchSonicBandStudioDays, fetchKoyamaMainDays, fetchKoyamaRDays, fetchMusiraDays } from './lib/bot-fetcher';
-import { fetchStudioBaydKoenjiDays } from './lib/wnspace-fetcher';
+import { fetchStudioBaydKoenjiDays, fetchStudioBaydShimokitazawaDays } from './lib/wnspace-fetcher';
 import { fetchStudioSunNishiFunabashiDays, fetchStudioDivoKameidoDays, fetchStudioDugout2MatsudoDays } from './lib/webtoru-fetcher';
 import { fetchCloud9YokohamaKitaguchiDays, fetchCloud9MachidaDays } from './lib/cloud9-fetcher';
 import { fetchStudio2TimesDays, fetchMusicBankMatsudoDays } from './lib/bot-fetcher';
@@ -1887,6 +1887,111 @@ export async function crawlStudioBaydKoenji(baseDate: Date, dayCount: number = C
 }
 
 // -------------------------------------------------------------
+// STUDIO BAYD 下北沢店 (WnSpaceMusic 公開API、studioId=7)
+// -------------------------------------------------------------
+const STUDIO_BAYD_SHIMOKITAZAWA_ROOM_SPECS: Record<number, {
+  name: string;
+  tatami: number;
+  capacity: number;
+  hourlyRate: number;
+  dayRate: number;
+  soloRate: number;
+  features: string[];
+}> = {
+  31: { name: 'Aスタジオ', tatami: 12, capacity: 6, hourlyRate: 2800, dayRate: 2100, soloRate: 700, features: ['Roland JC-120', 'Fender 65 TwinReverb', 'BASS::HARTKE HA3500 + Ampeg SVT-810E', 'DRUM::Pearl VBXシリーズ', 'PA::Yamaha EMX5014C 14ch', 'NOTE::鏡貼り壁面+可動カーテンで音響調整可、ダンス練習も可能'] },
+  32: { name: 'Bスタジオ', tatami: 13, capacity: 7, hourlyRate: 2800, dayRate: 2100, soloRate: 700, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'BASS::Markbass Little Mark250 + Ampeg SVT-410HE', 'DRUM::Pearl VBXシリーズ', 'PA::Yamaha EMX5014C 14ch', 'NOTE::鏡貼り壁面+可動カーテンで音響調整可'] },
+  33: { name: 'Cスタジオ', tatami: 13, capacity: 7, hourlyRate: 2800, dayRate: 2100, soloRate: 700, features: ['Marshall JVM210 + 1960A', 'Roland JC-120', 'BASS::Ampeg SVT-3 Pro + SVT-810E', 'DRUM::Pearl VBXシリーズ', 'PA::Yamaha EMX5014C 14ch', 'NOTE::鏡貼り壁面+可動カーテンで音響調整可'] },
+  34: { name: 'Dスタジオ(Dr無・ピアノ常設)', tatami: 5, capacity: 2, hourlyRate: 1600, dayRate: 1400, soloRate: 700, features: ['Roland JC-120', 'PIANO::ヤマハアップライトピアノ常設', 'PA::YAMAHA STAGEPAS300', 'NOTE::ドラムセットなし、ギターアンプ貸出可'] },
+  35: { name: 'Eスタジオ(Dr無・ピアノ常設)', tatami: 5, capacity: 2, hourlyRate: 1600, dayRate: 1400, soloRate: 700, features: ['PIANO::ヤマハアップライトピアノ常設', 'PA::YAMAHA STAGEPAS300', 'NOTE::ドラムセットなし、イベント時は控室兼用（トイレ完備）'] },
+  36: { name: 'Fスタジオ', tatami: 44, capacity: 80, hourlyRate: 6900, dayRate: 4500, soloRate: 800, features: ['Marshall JCM900 + 1960A', 'Roland JC-120', 'Fender 65 TwinReverb', 'BASS::AGUILAR TONE HAMMER 500 V2 + Standard106HF', 'DRUM::Pearl', 'E.PIANO::ROLAND RD-88 EX', 'PA::YAMAHA MG24/14FX + BEHRINGER X32、NEXOスピーカー', 'NOTE::収容人数スタンディング80名/着席40名、150インチスクリーン・プロジェクター完備、イベント利用時は要問合せ'] },
+};
+
+export async function crawlStudioBaydShimokitazawa(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  console.log('\n🎸 [STUDIO BAYD 下北沢店] スケジュール巡回を開始します (WnSpaceMusic 公開API / ' + dayCount + '日間)...');
+
+  try {
+    const fetchedRooms = await fetchStudioBaydShimokitazawaDays(baseDate, dayCount);
+
+    const targetDates: string[] = [];
+    for (let i = 0; i < dayCount; i++) {
+      targetDates.push(format(addDays(baseDate, i), 'yyyy-MM-dd'));
+    }
+
+    const studioObject = {
+      id: 'studio-bayd-shimokitazawa',
+      name: 'STUDIO BAYD 下北沢店',
+      chain_name: 'STUDIO BAYD',
+      area: '下北沢',
+      prefecture: '東京都',
+      nearest_station: '下北沢駅 南西口 徒歩7分',
+      address: '東京都世田谷区代沢5-8-14 岩城ビル地下1階',
+      tel: '',
+      url: 'https://wnspacemusic.jp/studios/7',
+      booking_url: 'https://wnspacemusic.jp/studios/7',
+      business_hours_summary: '24時間営業（完全無人店舗）',
+      is_24hours: true,
+      group_booking_rule: 'WEB予約は24時間オンライン受付（要WnSpaceMusic会員登録）',
+      group_booking_lead_months: 6,
+      solo_booking_rule: '前日17時よりWEB予約受付開始',
+      solo_booking_lead_hours: 24,
+      scraped_at: new Date().toISOString(),
+      dates_available: targetDates,
+      rooms: [] as any[],
+    };
+
+    Object.entries(STUDIO_BAYD_SHIMOKITAZAWA_ROOM_SPECS).forEach(([roomIdStr, spec]) => {
+      const roomIdNum = Number(roomIdStr);
+      const roomId = `studio-bayd-shimokitazawa-${roomIdNum}`;
+      const matchedRoom = fetchedRooms.find((r) => r.id === roomIdNum);
+
+      const roomSlots = (matchedRoom?.slots || []).map((s, sIdx) => ({
+        id: `slot-${roomId}-${s.id || sIdx}`,
+        start_time: s.start_time,
+        end_time: s.end_time,
+        status: s.status,
+      }));
+
+      studioObject.rooms.push({
+        id: roomId,
+        studio_id: studioObject.id,
+        name: spec.name,
+        size_tatami: spec.tatami,
+        capacity: spec.capacity,
+        hourly_rate: spec.hourlyRate,
+        day_rate: spec.dayRate,
+        individual_rate: spec.soloRate,
+        features: spec.features,
+        start_time_offset: 0,
+        slots: roomSlots,
+      });
+    });
+
+    const outPath = path.join(process.cwd(), 'src', 'data', 'studio-bayd-shimokitazawa-real.json');
+    fs.writeFileSync(outPath, JSON.stringify(studioObject, null, 2), 'utf8');
+    console.log(`✅ [STUDIO BAYD 下北沢店] 完了: ${studioObject.rooms.length}部屋（計${studioObject.rooms.reduce((a, b) => a + b.slots.length, 0)}スロット）を ${outPath} に保存しました。`);
+
+    if (supabase) {
+      console.log('⚡ [Supabase Sync] STUDIO BAYD 下北沢店の最新スロットをSupabaseに同期中...');
+      const dbSlots: any[] = [];
+      studioObject.rooms.forEach((r: any) => {
+        const roomUUID = toUUID(r.id);
+        (r.slots || []).forEach((s: any) => {
+          dbSlots.push({
+            room_id: roomUUID,
+            start_time: s.start_time,
+            end_time: s.end_time,
+            status: s.status.toLowerCase(),
+          });
+        });
+      });
+      await upsertAvailabilitySlots('STUDIO BAYD 下北沢店', dbSlots);
+    }
+  } catch (err: any) {
+    console.error(`  ❌ [STUDIO BAYD 下北沢店 取得エラー] ${err.message}`);
+  }
+}
+
+// -------------------------------------------------------------
 // ヨコハマ・セーラスタジオ (Reserve1.jp / ReserveMart, ゲスト閲覧可能インスタンス)
 // -------------------------------------------------------------
 const SAILA_ROOM_SPECS: Record<string, {
@@ -2094,6 +2199,7 @@ async function main() {
       crawlKoyamaR(now, CRAWL_DAY_COUNT),
       crawlMusira(now, CRAWL_DAY_COUNT),
       crawlStudioBaydKoenji(now, CRAWL_DAY_COUNT),
+      crawlStudioBaydShimokitazawa(now, CRAWL_DAY_COUNT),
       crawlStudioSunNishiFunabashi(now, CRAWL_DAY_COUNT),
       crawlYokohamaSaila(now, CRAWL_DAY_COUNT),
       crawlCloud9YokohamaKitaguchi(now, CRAWL_DAY_COUNT),

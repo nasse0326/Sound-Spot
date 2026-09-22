@@ -128,3 +128,11 @@ export async function fetchStudioBaydKoenjiDays(
 ): Promise<WnspaceRoomData[]> {
   return fetchWnspaceStudioDays(9, 'STUDIO BAYD 高円寺店', baseDate, dayCount);
 }
+
+// studioId=7はwnspacemusic.jp/api/studios経由で確認済み（STUDIO BAYD 下北沢店）。
+export async function fetchStudioBaydShimokitazawaDays(
+  baseDate: Date,
+  dayCount: number = CRAWL_DAY_COUNT
+): Promise<WnspaceRoomData[]> {
+  return fetchWnspaceStudioDays(7, 'STUDIO BAYD 下北沢店', baseDate, dayCount);
+}

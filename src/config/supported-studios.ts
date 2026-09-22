@@ -635,7 +635,7 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
   },
 
   // -------------------------------------------------------------
-  // 下北沢エリア (5店舗 / 計34部屋)
+  // 下北沢エリア (6店舗 / 計40部屋)
   // -------------------------------------------------------------
   {
     id: 'noah-shimokitazawa',
@@ -721,6 +721,23 @@ const ALL_SUPPORTED_STUDIOS: SupportedStudio[] = [
     tel: '03-3414-9833',
     websiteUrl: 'http://gourdisland-music.jp/shimokitazawa/',
     features: ['駅徒歩2分', '学割・早割あり', '9帖/12帖の6部屋'],
+  },
+  {
+    id: 'studio-bayd-shimokitazawa',
+    name: 'STUDIO BAYD 下北沢店',
+    chainName: 'STUDIO BAYD',
+    area: '下北沢',
+    nearestStation: '下北沢駅 南西口 徒歩7分',
+    address: '東京都世田谷区代沢5-8-14 岩城ビル地下1階',
+    roomCount: 6,
+    syncType: 'web_api',
+    syncLabel: 'Web空き状況',
+    systemName: 'WnSpaceMusic公開API連携 (自動巡回)',
+    is24Hours: true,
+    businessHours: '24時間営業（完全無人店舗）',
+    tel: '',
+    websiteUrl: 'https://wnspacemusic.jp/studios/7',
+    features: ['24時間営業', '完全無人・スマホ予約でオートロック解錠', 'ピアノ常設(D/Est)', 'イベント/ライブ対応(Fスタ最大80名)'],
   },
 
   // -------------------------------------------------------------
