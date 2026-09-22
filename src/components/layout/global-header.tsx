@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Music, Radio, ChevronRight, Store } from 'lucide-react';
+import { Music, Radio, ChevronRight, Store, SlidersHorizontal } from 'lucide-react';
 import { SupportedStudiosModal } from '@/components/studio/supported-studios-modal';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { ThemeToggle } from './theme-toggle';
@@ -79,6 +79,17 @@ export const GlobalHeader: React.FC = () => {
                 </span>
                 <ChevronRight className="w-3 h-3 sm:hidden text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-transform flex-shrink-0" />
               </div>
+            </button>
+            {/* 検索設定ボタン（スマホ専用。押すとpage.tsx側のボトムシートが開く。
+                スクロール位置に関係なく常にここから開けるよう、ヘッダー内に固定配置する） */}
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('soundspot:open-filter-modal'))}
+              aria-label="検索設定を開く"
+              title="検索設定を開く"
+              className="sm:hidden flex items-center justify-center w-8 h-8 rounded-full bg-stone-100 dark:bg-slate-800/90 border border-stone-200 dark:border-slate-700/80 text-slate-500 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-300 dark:hover:border-emerald-500/60 transition-colors cursor-pointer flex-shrink-0"
+            >
+              <SlidersHorizontal className="w-4 h-4" />
             </button>
             <ThemeToggle />
           </div>

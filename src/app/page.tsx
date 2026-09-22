@@ -17,7 +17,6 @@ import {
   AlignLeft,
   List,
   Sparkles,
-  SlidersHorizontal,
   ArrowUpDown,
   Search,
   FilterX,
@@ -65,8 +64,15 @@ export default function HomePage() {
 
   // 詳細モーダル用
   const [selectedRoom, setSelectedRoom] = useState<RoomWithSlots | null>(null);
-  // スマホ用: 検索設定ポップアップの開閉（PCでは常時インライン表示のため未使用）
+  // スマホ用: 検索設定ポップアップの開閉（PCでは常時インライン表示のため未使用）。
+  // 起動トリガーはヘッダー右上のボタン（global-header.tsx）から
+  // CustomEvent('soundspot:open-filter-modal')経由で行う。
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  useEffect(() => {
+    const handleOpen = () => setIsFilterModalOpen(true);
+    window.addEventListener('soundspot:open-filter-modal', handleOpen);
+    return () => window.removeEventListener('soundspot:open-filter-modal', handleOpen);
+  }, []);
 
   // 利用可能なエリア一覧
   const availableAreas = useMemo(() => {
@@ -364,17 +370,8 @@ export default function HomePage() {
         />
       </div>
 
-      {/* 検索・条件指定バー（スマホ: 画面下固定のボタンからポップアップ表示。
-          いちいち画面上部までスクロールしなくても設定を変更できるようにするため） */}
-      <button
-        type="button"
-        onClick={() => setIsFilterModalOpen(true)}
-        className="sm:hidden fixed bottom-20 right-4 z-40 inline-flex items-center gap-1.5 px-4 py-3 rounded-full bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/30 font-bold text-sm cursor-pointer active:scale-95 transition"
-      >
-        <SlidersHorizontal className="w-4 h-4" />
-        検索設定
-      </button>
-
+      {/* 検索・条件指定バー（スマホ: ヘッダー右上の検索設定ボタン（global-header.tsx）から
+          ポップアップ表示。いちいち画面上部までスクロールしなくても設定を変更できるようにするため） */}
       {isFilterModalOpen && (
         <div
           className="sm:hidden fixed inset-0 z-50 flex items-end bg-black/80 backdrop-blur-sm"
