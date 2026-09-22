@@ -4,6 +4,7 @@ import React, { useMemo } from 'react';
 import { SearchFilterParams, BookingType } from '@/types/studio';
 import { format, addDays } from 'date-fns';
 import { CRAWL_DAY_COUNT } from '@/config/crawl-schedule';
+import { sendGAEvent } from '@/lib/gtag';
 import { 
   Calendar, 
   Clock, 
@@ -36,6 +37,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
   const maxDateStr = useMemo(() => format(addDays(today, CRAWL_DAY_COUNT - 1), 'yyyy-MM-dd'), [today]);
 
   const handleBookingTypeChange = (type: BookingType) => {
+    sendGAEvent({ action: 'change_booking_type', category: 'search_filter', label: type });
     onChange({ ...filters, bookingType: type });
   };
 
@@ -46,6 +48,7 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
     const startM = parseInt(mStr, 10);
     const endH = Math.min(24, startH + 1);
     const newEndTime = `${String(endH).padStart(2, '0')}:${String(startM).padStart(2, '0')}`;
+    sendGAEvent({ action: 'change_start_time', category: 'search_filter', label: newStartTime });
     onChange({
       ...filters,
       startTime: newStartTime,
@@ -162,7 +165,10 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
             </select>
             <select
               value={filters.endTime}
-              onChange={(e) => onChange({ ...filters, endTime: e.target.value })}
+              onChange={(e) => {
+                sendGAEvent({ action: 'change_end_time', category: 'search_filter', label: e.target.value });
+                onChange({ ...filters, endTime: e.target.value });
+              }}
               className="bg-white border border-stone-300 dark:bg-slate-950 dark:border-slate-800 rounded-xl px-2 py-2 sm:py-2.5 text-xs sm:text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:border-emerald-500"
             >
               {Array.from({ length: hourCount }).map((_, i) => {
@@ -227,6 +233,12 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
                     const updated = isChecked
                       ? current.filter((item) => item !== area)
                       : [...current, area];
+                    sendGAEvent({
+                      action: 'toggle_area_filter',
+                      category: 'search_filter',
+                      label: area,
+                      value: isChecked ? 0 : 1,
+                    });
                     onChange({
                       ...filters,
                       areas: updated,
@@ -286,6 +298,12 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
                     const updated = isChecked
                       ? current.filter((item) => item !== opt.id)
                       : [...current, opt.id];
+                    sendGAEvent({
+                      action: 'toggle_tatami_filter',
+                      category: 'search_filter',
+                      label: opt.id,
+                      value: isChecked ? 0 : 1,
+                    });
                     onChange({ ...filters, tatamiRanges: updated });
                   }}
                   className={`flex items-center justify-between px-2 py-1.5 rounded-lg text-xs transition-all text-left cursor-pointer border ${
@@ -317,7 +335,15 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
 
         <button
           type="button"
-          onClick={() => onChange({ ...filters, requireJc120: !filters.requireJc120 })}
+          onClick={() => {
+            sendGAEvent({
+              action: 'toggle_equipment_filter',
+              category: 'search_filter',
+              label: 'jc120',
+              value: filters.requireJc120 ? 0 : 1,
+            });
+            onChange({ ...filters, requireJc120: !filters.requireJc120 });
+          }}
           className={`shrink-0 flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg border transition-all ${
             filters.requireJc120
               ? 'bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-500/20 dark:text-emerald-300 dark:border-emerald-500/50 font-medium'
@@ -330,7 +356,15 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
 
         <button
           type="button"
-          onClick={() => onChange({ ...filters, requireMarshall: !filters.requireMarshall })}
+          onClick={() => {
+            sendGAEvent({
+              action: 'toggle_equipment_filter',
+              category: 'search_filter',
+              label: 'marshall',
+              value: filters.requireMarshall ? 0 : 1,
+            });
+            onChange({ ...filters, requireMarshall: !filters.requireMarshall });
+          }}
           className={`shrink-0 flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg border transition-all ${
             filters.requireMarshall
               ? 'bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-500/20 dark:text-emerald-300 dark:border-emerald-500/50 font-medium'
@@ -343,7 +377,15 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
 
         <button
           type="button"
-          onClick={() => onChange({ ...filters, requireRecording: !filters.requireRecording })}
+          onClick={() => {
+            sendGAEvent({
+              action: 'toggle_equipment_filter',
+              category: 'search_filter',
+              label: 'recording',
+              value: filters.requireRecording ? 0 : 1,
+            });
+            onChange({ ...filters, requireRecording: !filters.requireRecording });
+          }}
           className={`shrink-0 flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg border transition-all ${
             filters.requireRecording
               ? 'bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-500/20 dark:text-emerald-300 dark:border-emerald-500/50 font-medium'
@@ -356,7 +398,15 @@ export const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
 
         <button
           type="button"
-          onClick={() => onChange({ ...filters, requireLongHours: !filters.requireLongHours })}
+          onClick={() => {
+            sendGAEvent({
+              action: 'toggle_equipment_filter',
+              category: 'search_filter',
+              label: 'long_hours',
+              value: filters.requireLongHours ? 0 : 1,
+            });
+            onChange({ ...filters, requireLongHours: !filters.requireLongHours });
+          }}
           className={`shrink-0 flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg border transition-all ${
             filters.requireLongHours
               ? 'bg-cyan-50 text-cyan-700 border-cyan-300 dark:bg-cyan-500/20 dark:text-cyan-300 dark:border-cyan-500/50 font-medium shadow-sm dark:shadow-cyan-500/20'

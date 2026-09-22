@@ -5,6 +5,7 @@ import { Music, Radio, ChevronRight, Store, SlidersHorizontal } from 'lucide-rea
 import { SupportedStudiosModal } from '@/components/studio/supported-studios-modal';
 import { SUPPORTED_STUDIOS } from '@/config/supported-studios';
 import { ThemeToggle } from './theme-toggle';
+import { sendGAEvent } from '@/lib/gtag';
 
 export const GlobalHeader: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,6 +60,7 @@ export const GlobalHeader: React.FC = () => {
             <button
               type="button"
               onClick={() => {
+                sendGAEvent({ action: 'open_studios_modal', category: 'ui_engagement', label: 'header_pill' });
                 setInitialArea('all');
                 setIsModalOpen(true);
               }}
@@ -82,7 +84,10 @@ export const GlobalHeader: React.FC = () => {
                 アイコンのみだと押した先が分かりにくいという指摘を受け、文字表示にした） */}
             <button
               type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent('soundspot:open-filter-modal'))}
+              onClick={() => {
+                sendGAEvent({ action: 'open_filter_modal', category: 'ui_engagement', label: 'header_button' });
+                window.dispatchEvent(new CustomEvent('soundspot:open-filter-modal'));
+              }}
               className="sm:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-400 font-semibold cursor-pointer flex-shrink-0"
             >
               <SlidersHorizontal className="w-3.5 h-3.5" />

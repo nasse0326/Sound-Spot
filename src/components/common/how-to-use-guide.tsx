@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Calendar, SlidersHorizontal, CheckCircle2, ExternalLink, X, HelpCircle } from 'lucide-react';
+import { sendGAEvent } from '@/lib/gtag';
 
 const STEPS = [
   {
@@ -37,7 +38,10 @@ export const HowToUseGuide: React.FC = () => {
     <>
       <button
         type="button"
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          sendGAEvent({ action: 'open_how_to_use_guide', category: 'ui_engagement' });
+          setIsOpen(true);
+        }}
         className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 transition cursor-pointer"
       >
         <HelpCircle className="w-3.5 h-3.5" />
