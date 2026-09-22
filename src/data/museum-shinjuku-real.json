@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T07:57:58.834Z",
+  "updatedAt": "2026-09-22T13:27:36.735Z",
   "rooms": [
     {
       "id": "museum-a",
@@ -211,21 +211,21 @@
           "id": "slot-museum-a-2026-09-23-1530",
           "start_time": "2026-09-23T15:30:00+09:00",
           "end_time": "2026-09-23T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-museum-a-2026-09-23-1630",
           "start_time": "2026-09-23T16:30:00+09:00",
           "end_time": "2026-09-23T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-museum-a-2026-09-23-1730",
           "start_time": "2026-09-23T17:30:00+09:00",
           "end_time": "2026-09-23T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -554,14 +554,14 @@
           "id": "slot-museum-a-2026-09-26-1030",
           "start_time": "2026-09-26T10:30:00+09:00",
           "end_time": "2026-09-26T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-museum-a-2026-09-26-1130",
           "start_time": "2026-09-26T11:30:00+09:00",
           "end_time": "2026-09-26T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -596,14 +596,14 @@
           "id": "slot-museum-a-2026-09-26-1630",
           "start_time": "2026-09-26T16:30:00+09:00",
           "end_time": "2026-09-26T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-museum-a-2026-09-26-1730",
           "start_time": "2026-09-26T17:30:00+09:00",
           "end_time": "2026-09-26T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -1618,7 +1618,7 @@
           "id": "slot-museum-a-2026-10-04-1830",
           "start_time": "2026-10-04T18:30:00+09:00",
           "end_time": "2026-10-04T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -5905,7 +5905,7 @@
           "id": "slot-museum-b2-2026-09-24-1330",
           "start_time": "2026-09-24T13:30:00+09:00",
           "end_time": "2026-09-24T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -5919,14 +5919,14 @@
           "id": "slot-museum-b2-2026-09-24-1530",
           "start_time": "2026-09-24T15:30:00+09:00",
           "end_time": "2026-09-24T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
           "id": "slot-museum-b2-2026-09-24-1630",
           "start_time": "2026-09-24T16:30:00+09:00",
           "end_time": "2026-09-24T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -6010,14 +6010,14 @@
           "id": "slot-museum-b2-2026-09-25-1030",
           "start_time": "2026-09-25T10:30:00+09:00",
           "end_time": "2026-09-25T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
           "id": "slot-museum-b2-2026-09-25-1130",
           "start_time": "2026-09-25T11:30:00+09:00",
           "end_time": "2026-09-25T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -7578,7 +7578,7 @@
           "id": "slot-museum-b2-2026-10-07-1830",
           "start_time": "2026-10-07T18:30:00+09:00",
           "end_time": "2026-10-07T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -8563,14 +8563,14 @@
           "id": "slot-museum-c1-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c1-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -8738,7 +8738,7 @@
           "id": "slot-museum-c1-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -14152,21 +14152,21 @@
           "id": "slot-museum-c3-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c3-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c3-2026-09-23-1530",
           "start_time": "2026-09-23T15:30:00+09:00",
           "end_time": "2026-09-23T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -15524,14 +15524,14 @@
           "id": "slot-museum-c3-2026-10-04-1130",
           "start_time": "2026-10-04T11:30:00+09:00",
           "end_time": "2026-10-04T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c3-2026-10-04-1230",
           "start_time": "2026-10-04T12:30:00+09:00",
           "end_time": "2026-10-04T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -16287,14 +16287,14 @@
           "id": "slot-museum-c3-2026-10-10-1230",
           "start_time": "2026-10-10T12:30:00+09:00",
           "end_time": "2026-10-10T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c3-2026-10-10-1330",
           "start_time": "2026-10-10T13:30:00+09:00",
           "end_time": "2026-10-10T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -16943,21 +16943,21 @@
           "id": "slot-museum-c4-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c4-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
           "id": "slot-museum-c4-2026-09-23-1530",
           "start_time": "2026-09-23T15:30:00+09:00",
           "end_time": "2026-09-23T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -22553,21 +22553,21 @@
           "id": "slot-museum-f2-2026-09-23-1730",
           "start_time": "2026-09-23T17:30:00+09:00",
           "end_time": "2026-09-23T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-museum-f2-2026-09-23-1830",
           "start_time": "2026-09-23T18:30:00+09:00",
           "end_time": "2026-09-23T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-museum-f2-2026-09-23-1930",
           "start_time": "2026-09-23T19:30:00+09:00",
           "end_time": "2026-09-23T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
