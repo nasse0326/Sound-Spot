@@ -16,9 +16,8 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日よりWEB予約可能 (1名700円/h、2名1,400円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-22T23:46:32.376Z",
+  "scraped_at": "2026-09-23T07:59:24.790Z",
   "dates_available": [
-    "2026-09-22",
     "2026-09-23",
     "2026-09-24",
     "2026-09-25",
@@ -39,7 +38,8 @@
     "2026-10-10",
     "2026-10-11",
     "2026-10-12",
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-14"
   ],
   "rooms": [
     {
@@ -63,153 +63,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0900",
-          "start_time": "2026-09-22T09:00:00+09:00",
-          "end_time": "2026-09-22T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1000",
-          "start_time": "2026-09-22T10:00:00+09:00",
-          "end_time": "2026-09-22T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1100",
-          "start_time": "2026-09-22T11:00:00+09:00",
-          "end_time": "2026-09-22T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1200",
-          "start_time": "2026-09-22T12:00:00+09:00",
-          "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1300",
-          "start_time": "2026-09-22T13:00:00+09:00",
-          "end_time": "2026-09-22T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1400",
-          "start_time": "2026-09-22T14:00:00+09:00",
-          "end_time": "2026-09-22T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1500",
-          "start_time": "2026-09-22T15:00:00+09:00",
-          "end_time": "2026-09-22T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1600",
-          "start_time": "2026-09-22T16:00:00+09:00",
-          "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1700",
-          "start_time": "2026-09-22T17:00:00+09:00",
-          "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1800",
-          "start_time": "2026-09-22T18:00:00+09:00",
-          "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-1900",
-          "start_time": "2026-09-22T19:00:00+09:00",
-          "end_time": "2026-09-22T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-2000",
-          "start_time": "2026-09-22T20:00:00+09:00",
-          "end_time": "2026-09-22T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-2100",
-          "start_time": "2026-09-22T21:00:00+09:00",
-          "end_time": "2026-09-22T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-2200",
-          "start_time": "2026-09-22T22:00:00+09:00",
-          "end_time": "2026-09-22T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-2300",
-          "start_time": "2026-09-22T23:00:00+09:00",
-          "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0000",
-          "start_time": "2026-09-23T00:00:00+09:00",
-          "end_time": "2026-09-23T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0100",
-          "start_time": "2026-09-23T01:00:00+09:00",
-          "end_time": "2026-09-23T02:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0200",
-          "start_time": "2026-09-23T02:00:00+09:00",
-          "end_time": "2026-09-23T03:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0300",
-          "start_time": "2026-09-23T03:00:00+09:00",
-          "end_time": "2026-09-23T04:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0400",
-          "start_time": "2026-09-23T04:00:00+09:00",
-          "end_time": "2026-09-23T05:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-201st-slot-201st-2026-09-22-0500",
-          "start_time": "2026-09-23T05:00:00+09:00",
-          "end_time": "2026-09-23T06:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
           "end_time": "2026-09-23T10:00:00+09:00",
@@ -220,14 +73,14 @@
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -262,7 +115,7 @@
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-23-1600",
           "start_time": "2026-09-23T16:00:00+09:00",
           "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -290,14 +143,14 @@
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-23-2000",
           "start_time": "2026-09-23T20:00:00+09:00",
           "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-201st-slot-201st-2026-09-23-2100",
           "start_time": "2026-09-23T21:00:00+09:00",
           "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -3295,6 +3148,153 @@
           "end_time": "2026-10-14T06:00:00+09:00",
           "status": "BOOKED",
           "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0900",
+          "start_time": "2026-10-14T09:00:00+09:00",
+          "end_time": "2026-10-14T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1000",
+          "start_time": "2026-10-14T10:00:00+09:00",
+          "end_time": "2026-10-14T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1100",
+          "start_time": "2026-10-14T11:00:00+09:00",
+          "end_time": "2026-10-14T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1200",
+          "start_time": "2026-10-14T12:00:00+09:00",
+          "end_time": "2026-10-14T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1300",
+          "start_time": "2026-10-14T13:00:00+09:00",
+          "end_time": "2026-10-14T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1400",
+          "start_time": "2026-10-14T14:00:00+09:00",
+          "end_time": "2026-10-14T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1500",
+          "start_time": "2026-10-14T15:00:00+09:00",
+          "end_time": "2026-10-14T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1600",
+          "start_time": "2026-10-14T16:00:00+09:00",
+          "end_time": "2026-10-14T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1700",
+          "start_time": "2026-10-14T17:00:00+09:00",
+          "end_time": "2026-10-14T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1800",
+          "start_time": "2026-10-14T18:00:00+09:00",
+          "end_time": "2026-10-14T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-1900",
+          "start_time": "2026-10-14T19:00:00+09:00",
+          "end_time": "2026-10-14T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-2000",
+          "start_time": "2026-10-14T20:00:00+09:00",
+          "end_time": "2026-10-14T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-2100",
+          "start_time": "2026-10-14T21:00:00+09:00",
+          "end_time": "2026-10-14T22:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-2200",
+          "start_time": "2026-10-14T22:00:00+09:00",
+          "end_time": "2026-10-14T23:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-2300",
+          "start_time": "2026-10-14T23:00:00+09:00",
+          "end_time": "2026-10-15T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0000",
+          "start_time": "2026-10-15T00:00:00+09:00",
+          "end_time": "2026-10-15T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0100",
+          "start_time": "2026-10-15T01:00:00+09:00",
+          "end_time": "2026-10-15T02:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0200",
+          "start_time": "2026-10-15T02:00:00+09:00",
+          "end_time": "2026-10-15T03:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0300",
+          "start_time": "2026-10-15T03:00:00+09:00",
+          "end_time": "2026-10-15T04:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0400",
+          "start_time": "2026-10-15T04:00:00+09:00",
+          "end_time": "2026-10-15T05:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-201st-slot-201st-2026-10-14-0500",
+          "start_time": "2026-10-15T05:00:00+09:00",
+          "end_time": "2026-10-15T06:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
         }
       ]
     },
@@ -3318,153 +3318,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0900",
-          "start_time": "2026-09-22T09:00:00+09:00",
-          "end_time": "2026-09-22T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1000",
-          "start_time": "2026-09-22T10:00:00+09:00",
-          "end_time": "2026-09-22T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1100",
-          "start_time": "2026-09-22T11:00:00+09:00",
-          "end_time": "2026-09-22T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1200",
-          "start_time": "2026-09-22T12:00:00+09:00",
-          "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1300",
-          "start_time": "2026-09-22T13:00:00+09:00",
-          "end_time": "2026-09-22T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1400",
-          "start_time": "2026-09-22T14:00:00+09:00",
-          "end_time": "2026-09-22T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1500",
-          "start_time": "2026-09-22T15:00:00+09:00",
-          "end_time": "2026-09-22T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1600",
-          "start_time": "2026-09-22T16:00:00+09:00",
-          "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1700",
-          "start_time": "2026-09-22T17:00:00+09:00",
-          "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1800",
-          "start_time": "2026-09-22T18:00:00+09:00",
-          "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-1900",
-          "start_time": "2026-09-22T19:00:00+09:00",
-          "end_time": "2026-09-22T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-2000",
-          "start_time": "2026-09-22T20:00:00+09:00",
-          "end_time": "2026-09-22T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-2100",
-          "start_time": "2026-09-22T21:00:00+09:00",
-          "end_time": "2026-09-22T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-2200",
-          "start_time": "2026-09-22T22:00:00+09:00",
-          "end_time": "2026-09-22T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-2300",
-          "start_time": "2026-09-22T23:00:00+09:00",
-          "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0000",
-          "start_time": "2026-09-23T00:00:00+09:00",
-          "end_time": "2026-09-23T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0100",
-          "start_time": "2026-09-23T01:00:00+09:00",
-          "end_time": "2026-09-23T02:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0200",
-          "start_time": "2026-09-23T02:00:00+09:00",
-          "end_time": "2026-09-23T03:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0300",
-          "start_time": "2026-09-23T03:00:00+09:00",
-          "end_time": "2026-09-23T04:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0400",
-          "start_time": "2026-09-23T04:00:00+09:00",
-          "end_time": "2026-09-23T05:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-202st-slot-202st-2026-09-22-0500",
-          "start_time": "2026-09-23T05:00:00+09:00",
-          "end_time": "2026-09-23T06:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
           "end_time": "2026-09-23T10:00:00+09:00",
@@ -3475,7 +3328,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -3510,7 +3363,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-23-1500",
           "start_time": "2026-09-23T15:00:00+09:00",
           "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -3531,7 +3384,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-23-1800",
           "start_time": "2026-09-23T18:00:00+09:00",
           "end_time": "2026-09-23T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -3643,21 +3496,21 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-24-1300",
           "start_time": "2026-09-24T13:00:00+09:00",
           "end_time": "2026-09-24T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-24-1400",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-202st-slot-202st-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -6550,6 +6403,153 @@
           "end_time": "2026-10-14T06:00:00+09:00",
           "status": "BOOKED",
           "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0900",
+          "start_time": "2026-10-14T09:00:00+09:00",
+          "end_time": "2026-10-14T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1000",
+          "start_time": "2026-10-14T10:00:00+09:00",
+          "end_time": "2026-10-14T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1100",
+          "start_time": "2026-10-14T11:00:00+09:00",
+          "end_time": "2026-10-14T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1200",
+          "start_time": "2026-10-14T12:00:00+09:00",
+          "end_time": "2026-10-14T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1300",
+          "start_time": "2026-10-14T13:00:00+09:00",
+          "end_time": "2026-10-14T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1400",
+          "start_time": "2026-10-14T14:00:00+09:00",
+          "end_time": "2026-10-14T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1500",
+          "start_time": "2026-10-14T15:00:00+09:00",
+          "end_time": "2026-10-14T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1600",
+          "start_time": "2026-10-14T16:00:00+09:00",
+          "end_time": "2026-10-14T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1700",
+          "start_time": "2026-10-14T17:00:00+09:00",
+          "end_time": "2026-10-14T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1800",
+          "start_time": "2026-10-14T18:00:00+09:00",
+          "end_time": "2026-10-14T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-1900",
+          "start_time": "2026-10-14T19:00:00+09:00",
+          "end_time": "2026-10-14T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-2000",
+          "start_time": "2026-10-14T20:00:00+09:00",
+          "end_time": "2026-10-14T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-2100",
+          "start_time": "2026-10-14T21:00:00+09:00",
+          "end_time": "2026-10-14T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-2200",
+          "start_time": "2026-10-14T22:00:00+09:00",
+          "end_time": "2026-10-14T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-2300",
+          "start_time": "2026-10-14T23:00:00+09:00",
+          "end_time": "2026-10-15T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0000",
+          "start_time": "2026-10-15T00:00:00+09:00",
+          "end_time": "2026-10-15T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0100",
+          "start_time": "2026-10-15T01:00:00+09:00",
+          "end_time": "2026-10-15T02:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0200",
+          "start_time": "2026-10-15T02:00:00+09:00",
+          "end_time": "2026-10-15T03:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0300",
+          "start_time": "2026-10-15T03:00:00+09:00",
+          "end_time": "2026-10-15T04:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0400",
+          "start_time": "2026-10-15T04:00:00+09:00",
+          "end_time": "2026-10-15T05:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-202st-slot-202st-2026-10-14-0500",
+          "start_time": "2026-10-15T05:00:00+09:00",
+          "end_time": "2026-10-15T06:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
         }
       ]
     },
@@ -6573,153 +6573,6 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0900",
-          "start_time": "2026-09-22T09:00:00+09:00",
-          "end_time": "2026-09-22T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1000",
-          "start_time": "2026-09-22T10:00:00+09:00",
-          "end_time": "2026-09-22T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1100",
-          "start_time": "2026-09-22T11:00:00+09:00",
-          "end_time": "2026-09-22T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1200",
-          "start_time": "2026-09-22T12:00:00+09:00",
-          "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1300",
-          "start_time": "2026-09-22T13:00:00+09:00",
-          "end_time": "2026-09-22T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1400",
-          "start_time": "2026-09-22T14:00:00+09:00",
-          "end_time": "2026-09-22T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1500",
-          "start_time": "2026-09-22T15:00:00+09:00",
-          "end_time": "2026-09-22T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1600",
-          "start_time": "2026-09-22T16:00:00+09:00",
-          "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1700",
-          "start_time": "2026-09-22T17:00:00+09:00",
-          "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1800",
-          "start_time": "2026-09-22T18:00:00+09:00",
-          "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-1900",
-          "start_time": "2026-09-22T19:00:00+09:00",
-          "end_time": "2026-09-22T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-2000",
-          "start_time": "2026-09-22T20:00:00+09:00",
-          "end_time": "2026-09-22T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-2100",
-          "start_time": "2026-09-22T21:00:00+09:00",
-          "end_time": "2026-09-22T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-2200",
-          "start_time": "2026-09-22T22:00:00+09:00",
-          "end_time": "2026-09-22T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-2300",
-          "start_time": "2026-09-22T23:00:00+09:00",
-          "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0000",
-          "start_time": "2026-09-23T00:00:00+09:00",
-          "end_time": "2026-09-23T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0100",
-          "start_time": "2026-09-23T01:00:00+09:00",
-          "end_time": "2026-09-23T02:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0200",
-          "start_time": "2026-09-23T02:00:00+09:00",
-          "end_time": "2026-09-23T03:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0300",
-          "start_time": "2026-09-23T03:00:00+09:00",
-          "end_time": "2026-09-23T04:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0400",
-          "start_time": "2026-09-23T04:00:00+09:00",
-          "end_time": "2026-09-23T05:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-203st-slot-203st-2026-09-22-0500",
-          "start_time": "2026-09-23T05:00:00+09:00",
-          "end_time": "2026-09-23T06:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
           "end_time": "2026-09-23T10:00:00+09:00",
@@ -6730,14 +6583,14 @@
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-23-1100",
           "start_time": "2026-09-23T11:00:00+09:00",
           "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -9805,6 +9658,153 @@
           "end_time": "2026-10-14T06:00:00+09:00",
           "status": "BOOKED",
           "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0900",
+          "start_time": "2026-10-14T09:00:00+09:00",
+          "end_time": "2026-10-14T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1000",
+          "start_time": "2026-10-14T10:00:00+09:00",
+          "end_time": "2026-10-14T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1100",
+          "start_time": "2026-10-14T11:00:00+09:00",
+          "end_time": "2026-10-14T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1200",
+          "start_time": "2026-10-14T12:00:00+09:00",
+          "end_time": "2026-10-14T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1300",
+          "start_time": "2026-10-14T13:00:00+09:00",
+          "end_time": "2026-10-14T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1400",
+          "start_time": "2026-10-14T14:00:00+09:00",
+          "end_time": "2026-10-14T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1500",
+          "start_time": "2026-10-14T15:00:00+09:00",
+          "end_time": "2026-10-14T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1600",
+          "start_time": "2026-10-14T16:00:00+09:00",
+          "end_time": "2026-10-14T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1700",
+          "start_time": "2026-10-14T17:00:00+09:00",
+          "end_time": "2026-10-14T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1800",
+          "start_time": "2026-10-14T18:00:00+09:00",
+          "end_time": "2026-10-14T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-1900",
+          "start_time": "2026-10-14T19:00:00+09:00",
+          "end_time": "2026-10-14T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-2000",
+          "start_time": "2026-10-14T20:00:00+09:00",
+          "end_time": "2026-10-14T21:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-2100",
+          "start_time": "2026-10-14T21:00:00+09:00",
+          "end_time": "2026-10-14T22:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-2200",
+          "start_time": "2026-10-14T22:00:00+09:00",
+          "end_time": "2026-10-14T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-2300",
+          "start_time": "2026-10-14T23:00:00+09:00",
+          "end_time": "2026-10-15T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0000",
+          "start_time": "2026-10-15T00:00:00+09:00",
+          "end_time": "2026-10-15T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0100",
+          "start_time": "2026-10-15T01:00:00+09:00",
+          "end_time": "2026-10-15T02:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0200",
+          "start_time": "2026-10-15T02:00:00+09:00",
+          "end_time": "2026-10-15T03:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0300",
+          "start_time": "2026-10-15T03:00:00+09:00",
+          "end_time": "2026-10-15T04:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0400",
+          "start_time": "2026-10-15T04:00:00+09:00",
+          "end_time": "2026-10-15T05:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-203st-slot-203st-2026-10-14-0500",
+          "start_time": "2026-10-15T05:00:00+09:00",
+          "end_time": "2026-10-15T06:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
         }
       ]
     },
@@ -9827,153 +9827,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0900",
-          "start_time": "2026-09-22T09:00:00+09:00",
-          "end_time": "2026-09-22T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1000",
-          "start_time": "2026-09-22T10:00:00+09:00",
-          "end_time": "2026-09-22T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1100",
-          "start_time": "2026-09-22T11:00:00+09:00",
-          "end_time": "2026-09-22T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1200",
-          "start_time": "2026-09-22T12:00:00+09:00",
-          "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1300",
-          "start_time": "2026-09-22T13:00:00+09:00",
-          "end_time": "2026-09-22T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1400",
-          "start_time": "2026-09-22T14:00:00+09:00",
-          "end_time": "2026-09-22T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1500",
-          "start_time": "2026-09-22T15:00:00+09:00",
-          "end_time": "2026-09-22T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1600",
-          "start_time": "2026-09-22T16:00:00+09:00",
-          "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1700",
-          "start_time": "2026-09-22T17:00:00+09:00",
-          "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1800",
-          "start_time": "2026-09-22T18:00:00+09:00",
-          "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-1900",
-          "start_time": "2026-09-22T19:00:00+09:00",
-          "end_time": "2026-09-22T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-2000",
-          "start_time": "2026-09-22T20:00:00+09:00",
-          "end_time": "2026-09-22T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-2100",
-          "start_time": "2026-09-22T21:00:00+09:00",
-          "end_time": "2026-09-22T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-2200",
-          "start_time": "2026-09-22T22:00:00+09:00",
-          "end_time": "2026-09-22T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-2300",
-          "start_time": "2026-09-22T23:00:00+09:00",
-          "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0000",
-          "start_time": "2026-09-23T00:00:00+09:00",
-          "end_time": "2026-09-23T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0100",
-          "start_time": "2026-09-23T01:00:00+09:00",
-          "end_time": "2026-09-23T02:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0200",
-          "start_time": "2026-09-23T02:00:00+09:00",
-          "end_time": "2026-09-23T03:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0300",
-          "start_time": "2026-09-23T03:00:00+09:00",
-          "end_time": "2026-09-23T04:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0400",
-          "start_time": "2026-09-23T04:00:00+09:00",
-          "end_time": "2026-09-23T05:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-204st-slot-204st-2026-09-22-0500",
-          "start_time": "2026-09-23T05:00:00+09:00",
-          "end_time": "2026-09-23T06:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
         {
           "id": "slot-studioact-machida-204st-slot-204st-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
@@ -9999,7 +9852,7 @@
           "id": "slot-studioact-machida-204st-slot-204st-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -10020,14 +9873,14 @@
           "id": "slot-studioact-machida-204st-slot-204st-2026-09-23-1500",
           "start_time": "2026-09-23T15:00:00+09:00",
           "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-204st-slot-204st-2026-09-23-1600",
           "start_time": "2026-09-23T16:00:00+09:00",
           "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -13060,6 +12913,153 @@
           "end_time": "2026-10-14T06:00:00+09:00",
           "status": "BOOKED",
           "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0900",
+          "start_time": "2026-10-14T09:00:00+09:00",
+          "end_time": "2026-10-14T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1000",
+          "start_time": "2026-10-14T10:00:00+09:00",
+          "end_time": "2026-10-14T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1100",
+          "start_time": "2026-10-14T11:00:00+09:00",
+          "end_time": "2026-10-14T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1200",
+          "start_time": "2026-10-14T12:00:00+09:00",
+          "end_time": "2026-10-14T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1300",
+          "start_time": "2026-10-14T13:00:00+09:00",
+          "end_time": "2026-10-14T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1400",
+          "start_time": "2026-10-14T14:00:00+09:00",
+          "end_time": "2026-10-14T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1500",
+          "start_time": "2026-10-14T15:00:00+09:00",
+          "end_time": "2026-10-14T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1600",
+          "start_time": "2026-10-14T16:00:00+09:00",
+          "end_time": "2026-10-14T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1700",
+          "start_time": "2026-10-14T17:00:00+09:00",
+          "end_time": "2026-10-14T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1800",
+          "start_time": "2026-10-14T18:00:00+09:00",
+          "end_time": "2026-10-14T19:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-1900",
+          "start_time": "2026-10-14T19:00:00+09:00",
+          "end_time": "2026-10-14T20:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-2000",
+          "start_time": "2026-10-14T20:00:00+09:00",
+          "end_time": "2026-10-14T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-2100",
+          "start_time": "2026-10-14T21:00:00+09:00",
+          "end_time": "2026-10-14T22:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-2200",
+          "start_time": "2026-10-14T22:00:00+09:00",
+          "end_time": "2026-10-14T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-2300",
+          "start_time": "2026-10-14T23:00:00+09:00",
+          "end_time": "2026-10-15T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0000",
+          "start_time": "2026-10-15T00:00:00+09:00",
+          "end_time": "2026-10-15T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0100",
+          "start_time": "2026-10-15T01:00:00+09:00",
+          "end_time": "2026-10-15T02:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0200",
+          "start_time": "2026-10-15T02:00:00+09:00",
+          "end_time": "2026-10-15T03:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0300",
+          "start_time": "2026-10-15T03:00:00+09:00",
+          "end_time": "2026-10-15T04:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0400",
+          "start_time": "2026-10-15T04:00:00+09:00",
+          "end_time": "2026-10-15T05:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-204st-slot-204st-2026-10-14-0500",
+          "start_time": "2026-10-15T05:00:00+09:00",
+          "end_time": "2026-10-15T06:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
         }
       ]
     },
@@ -13083,157 +13083,10 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0900",
-          "start_time": "2026-09-22T09:00:00+09:00",
-          "end_time": "2026-09-22T10:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1000",
-          "start_time": "2026-09-22T10:00:00+09:00",
-          "end_time": "2026-09-22T11:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1100",
-          "start_time": "2026-09-22T11:00:00+09:00",
-          "end_time": "2026-09-22T12:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1200",
-          "start_time": "2026-09-22T12:00:00+09:00",
-          "end_time": "2026-09-22T13:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1300",
-          "start_time": "2026-09-22T13:00:00+09:00",
-          "end_time": "2026-09-22T14:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1400",
-          "start_time": "2026-09-22T14:00:00+09:00",
-          "end_time": "2026-09-22T15:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1500",
-          "start_time": "2026-09-22T15:00:00+09:00",
-          "end_time": "2026-09-22T16:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1600",
-          "start_time": "2026-09-22T16:00:00+09:00",
-          "end_time": "2026-09-22T17:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1700",
-          "start_time": "2026-09-22T17:00:00+09:00",
-          "end_time": "2026-09-22T18:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1800",
-          "start_time": "2026-09-22T18:00:00+09:00",
-          "end_time": "2026-09-22T19:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-1900",
-          "start_time": "2026-09-22T19:00:00+09:00",
-          "end_time": "2026-09-22T20:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-2000",
-          "start_time": "2026-09-22T20:00:00+09:00",
-          "end_time": "2026-09-22T21:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-2100",
-          "start_time": "2026-09-22T21:00:00+09:00",
-          "end_time": "2026-09-22T22:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-2200",
-          "start_time": "2026-09-22T22:00:00+09:00",
-          "end_time": "2026-09-22T23:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-2300",
-          "start_time": "2026-09-22T23:00:00+09:00",
-          "end_time": "2026-09-23T00:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0000",
-          "start_time": "2026-09-23T00:00:00+09:00",
-          "end_time": "2026-09-23T01:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0100",
-          "start_time": "2026-09-23T01:00:00+09:00",
-          "end_time": "2026-09-23T02:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0200",
-          "start_time": "2026-09-23T02:00:00+09:00",
-          "end_time": "2026-09-23T03:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0300",
-          "start_time": "2026-09-23T03:00:00+09:00",
-          "end_time": "2026-09-23T04:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0400",
-          "start_time": "2026-09-23T04:00:00+09:00",
-          "end_time": "2026-09-23T05:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
-          "id": "slot-studioact-machida-205st-slot-205st-2026-09-22-0500",
-          "start_time": "2026-09-23T05:00:00+09:00",
-          "end_time": "2026-09-23T06:00:00+09:00",
-          "status": "BOOKED",
-          "price": 2700
-        },
-        {
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-23-0900",
           "start_time": "2026-09-23T09:00:00+09:00",
           "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -13254,21 +13107,21 @@
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-23-1400",
           "start_time": "2026-09-23T14:00:00+09:00",
           "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -16315,6 +16168,153 @@
           "end_time": "2026-10-14T06:00:00+09:00",
           "status": "BOOKED",
           "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0900",
+          "start_time": "2026-10-14T09:00:00+09:00",
+          "end_time": "2026-10-14T10:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1000",
+          "start_time": "2026-10-14T10:00:00+09:00",
+          "end_time": "2026-10-14T11:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1100",
+          "start_time": "2026-10-14T11:00:00+09:00",
+          "end_time": "2026-10-14T12:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1200",
+          "start_time": "2026-10-14T12:00:00+09:00",
+          "end_time": "2026-10-14T13:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1300",
+          "start_time": "2026-10-14T13:00:00+09:00",
+          "end_time": "2026-10-14T14:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1400",
+          "start_time": "2026-10-14T14:00:00+09:00",
+          "end_time": "2026-10-14T15:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1500",
+          "start_time": "2026-10-14T15:00:00+09:00",
+          "end_time": "2026-10-14T16:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1600",
+          "start_time": "2026-10-14T16:00:00+09:00",
+          "end_time": "2026-10-14T17:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1700",
+          "start_time": "2026-10-14T17:00:00+09:00",
+          "end_time": "2026-10-14T18:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1800",
+          "start_time": "2026-10-14T18:00:00+09:00",
+          "end_time": "2026-10-14T19:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-1900",
+          "start_time": "2026-10-14T19:00:00+09:00",
+          "end_time": "2026-10-14T20:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-2000",
+          "start_time": "2026-10-14T20:00:00+09:00",
+          "end_time": "2026-10-14T21:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-2100",
+          "start_time": "2026-10-14T21:00:00+09:00",
+          "end_time": "2026-10-14T22:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-2200",
+          "start_time": "2026-10-14T22:00:00+09:00",
+          "end_time": "2026-10-14T23:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-2300",
+          "start_time": "2026-10-14T23:00:00+09:00",
+          "end_time": "2026-10-15T00:00:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0000",
+          "start_time": "2026-10-15T00:00:00+09:00",
+          "end_time": "2026-10-15T01:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0100",
+          "start_time": "2026-10-15T01:00:00+09:00",
+          "end_time": "2026-10-15T02:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0200",
+          "start_time": "2026-10-15T02:00:00+09:00",
+          "end_time": "2026-10-15T03:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0300",
+          "start_time": "2026-10-15T03:00:00+09:00",
+          "end_time": "2026-10-15T04:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0400",
+          "start_time": "2026-10-15T04:00:00+09:00",
+          "end_time": "2026-10-15T05:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
+        },
+        {
+          "id": "slot-studioact-machida-205st-slot-205st-2026-10-14-0500",
+          "start_time": "2026-10-15T05:00:00+09:00",
+          "end_time": "2026-10-15T06:00:00+09:00",
+          "status": "BOOKED",
+          "price": 2700
         }
       ]
     },
@@ -16338,153 +16338,6 @@
       ],
       "start_time_offset": 15,
       "slots": [
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0915",
-          "start_time": "2026-09-22T09:15:00+09:00",
-          "end_time": "2026-09-22T10:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1015",
-          "start_time": "2026-09-22T10:15:00+09:00",
-          "end_time": "2026-09-22T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1115",
-          "start_time": "2026-09-22T11:15:00+09:00",
-          "end_time": "2026-09-22T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1215",
-          "start_time": "2026-09-22T12:15:00+09:00",
-          "end_time": "2026-09-22T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1315",
-          "start_time": "2026-09-22T13:15:00+09:00",
-          "end_time": "2026-09-22T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1415",
-          "start_time": "2026-09-22T14:15:00+09:00",
-          "end_time": "2026-09-22T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1515",
-          "start_time": "2026-09-22T15:15:00+09:00",
-          "end_time": "2026-09-22T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1615",
-          "start_time": "2026-09-22T16:15:00+09:00",
-          "end_time": "2026-09-22T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1715",
-          "start_time": "2026-09-22T17:15:00+09:00",
-          "end_time": "2026-09-22T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1815",
-          "start_time": "2026-09-22T18:15:00+09:00",
-          "end_time": "2026-09-22T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-1915",
-          "start_time": "2026-09-22T19:15:00+09:00",
-          "end_time": "2026-09-22T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-2015",
-          "start_time": "2026-09-22T20:15:00+09:00",
-          "end_time": "2026-09-22T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-2115",
-          "start_time": "2026-09-22T21:15:00+09:00",
-          "end_time": "2026-09-22T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-2215",
-          "start_time": "2026-09-22T22:15:00+09:00",
-          "end_time": "2026-09-22T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-2315",
-          "start_time": "2026-09-22T23:15:00+09:00",
-          "end_time": "2026-09-23T00:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0015",
-          "start_time": "2026-09-23T00:15:00+09:00",
-          "end_time": "2026-09-23T01:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0115",
-          "start_time": "2026-09-23T01:15:00+09:00",
-          "end_time": "2026-09-23T02:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0215",
-          "start_time": "2026-09-23T02:15:00+09:00",
-          "end_time": "2026-09-23T03:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0315",
-          "start_time": "2026-09-23T03:15:00+09:00",
-          "end_time": "2026-09-23T04:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0415",
-          "start_time": "2026-09-23T04:15:00+09:00",
-          "end_time": "2026-09-23T05:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-301st-slot-301st-2026-09-22-0515",
-          "start_time": "2026-09-23T05:15:00+09:00",
-          "end_time": "2026-09-23T06:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
         {
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-23-0915",
           "start_time": "2026-09-23T09:15:00+09:00",
@@ -19571,6 +19424,153 @@
           "end_time": "2026-10-14T06:15:00+09:00",
           "status": "BOOKED",
           "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0915",
+          "start_time": "2026-10-14T09:15:00+09:00",
+          "end_time": "2026-10-14T10:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1015",
+          "start_time": "2026-10-14T10:15:00+09:00",
+          "end_time": "2026-10-14T11:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1115",
+          "start_time": "2026-10-14T11:15:00+09:00",
+          "end_time": "2026-10-14T12:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1215",
+          "start_time": "2026-10-14T12:15:00+09:00",
+          "end_time": "2026-10-14T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1315",
+          "start_time": "2026-10-14T13:15:00+09:00",
+          "end_time": "2026-10-14T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1415",
+          "start_time": "2026-10-14T14:15:00+09:00",
+          "end_time": "2026-10-14T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1515",
+          "start_time": "2026-10-14T15:15:00+09:00",
+          "end_time": "2026-10-14T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1615",
+          "start_time": "2026-10-14T16:15:00+09:00",
+          "end_time": "2026-10-14T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1715",
+          "start_time": "2026-10-14T17:15:00+09:00",
+          "end_time": "2026-10-14T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1815",
+          "start_time": "2026-10-14T18:15:00+09:00",
+          "end_time": "2026-10-14T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-1915",
+          "start_time": "2026-10-14T19:15:00+09:00",
+          "end_time": "2026-10-14T20:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-2015",
+          "start_time": "2026-10-14T20:15:00+09:00",
+          "end_time": "2026-10-14T21:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-2115",
+          "start_time": "2026-10-14T21:15:00+09:00",
+          "end_time": "2026-10-14T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-2215",
+          "start_time": "2026-10-14T22:15:00+09:00",
+          "end_time": "2026-10-14T23:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-2315",
+          "start_time": "2026-10-14T23:15:00+09:00",
+          "end_time": "2026-10-15T00:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0015",
+          "start_time": "2026-10-15T00:15:00+09:00",
+          "end_time": "2026-10-15T01:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0115",
+          "start_time": "2026-10-15T01:15:00+09:00",
+          "end_time": "2026-10-15T02:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0215",
+          "start_time": "2026-10-15T02:15:00+09:00",
+          "end_time": "2026-10-15T03:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0315",
+          "start_time": "2026-10-15T03:15:00+09:00",
+          "end_time": "2026-10-15T04:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0415",
+          "start_time": "2026-10-15T04:15:00+09:00",
+          "end_time": "2026-10-15T05:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-301st-slot-301st-2026-10-14-0515",
+          "start_time": "2026-10-15T05:15:00+09:00",
+          "end_time": "2026-10-15T06:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
         }
       ]
     },
@@ -19593,153 +19593,6 @@
       ],
       "start_time_offset": 15,
       "slots": [
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0915",
-          "start_time": "2026-09-22T09:15:00+09:00",
-          "end_time": "2026-09-22T10:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1015",
-          "start_time": "2026-09-22T10:15:00+09:00",
-          "end_time": "2026-09-22T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1115",
-          "start_time": "2026-09-22T11:15:00+09:00",
-          "end_time": "2026-09-22T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1215",
-          "start_time": "2026-09-22T12:15:00+09:00",
-          "end_time": "2026-09-22T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1315",
-          "start_time": "2026-09-22T13:15:00+09:00",
-          "end_time": "2026-09-22T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1415",
-          "start_time": "2026-09-22T14:15:00+09:00",
-          "end_time": "2026-09-22T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1515",
-          "start_time": "2026-09-22T15:15:00+09:00",
-          "end_time": "2026-09-22T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1615",
-          "start_time": "2026-09-22T16:15:00+09:00",
-          "end_time": "2026-09-22T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1715",
-          "start_time": "2026-09-22T17:15:00+09:00",
-          "end_time": "2026-09-22T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1815",
-          "start_time": "2026-09-22T18:15:00+09:00",
-          "end_time": "2026-09-22T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-1915",
-          "start_time": "2026-09-22T19:15:00+09:00",
-          "end_time": "2026-09-22T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-2015",
-          "start_time": "2026-09-22T20:15:00+09:00",
-          "end_time": "2026-09-22T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-2115",
-          "start_time": "2026-09-22T21:15:00+09:00",
-          "end_time": "2026-09-22T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-2215",
-          "start_time": "2026-09-22T22:15:00+09:00",
-          "end_time": "2026-09-22T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-2315",
-          "start_time": "2026-09-22T23:15:00+09:00",
-          "end_time": "2026-09-23T00:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0015",
-          "start_time": "2026-09-23T00:15:00+09:00",
-          "end_time": "2026-09-23T01:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0115",
-          "start_time": "2026-09-23T01:15:00+09:00",
-          "end_time": "2026-09-23T02:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0215",
-          "start_time": "2026-09-23T02:15:00+09:00",
-          "end_time": "2026-09-23T03:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0315",
-          "start_time": "2026-09-23T03:15:00+09:00",
-          "end_time": "2026-09-23T04:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0415",
-          "start_time": "2026-09-23T04:15:00+09:00",
-          "end_time": "2026-09-23T05:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-302st-slot-302st-2026-09-22-0515",
-          "start_time": "2026-09-23T05:15:00+09:00",
-          "end_time": "2026-09-23T06:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
         {
           "id": "slot-studioact-machida-302st-slot-302st-2026-09-23-0915",
           "start_time": "2026-09-23T09:15:00+09:00",
@@ -20192,14 +20045,14 @@
           "id": "slot-studioact-machida-302st-slot-302st-2026-09-26-1015",
           "start_time": "2026-09-26T10:15:00+09:00",
           "end_time": "2026-09-26T11:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-302st-slot-302st-2026-09-26-1115",
           "start_time": "2026-09-26T11:15:00+09:00",
           "end_time": "2026-09-26T12:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -22826,6 +22679,153 @@
           "end_time": "2026-10-14T06:15:00+09:00",
           "status": "BOOKED",
           "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0915",
+          "start_time": "2026-10-14T09:15:00+09:00",
+          "end_time": "2026-10-14T10:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1015",
+          "start_time": "2026-10-14T10:15:00+09:00",
+          "end_time": "2026-10-14T11:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1115",
+          "start_time": "2026-10-14T11:15:00+09:00",
+          "end_time": "2026-10-14T12:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1215",
+          "start_time": "2026-10-14T12:15:00+09:00",
+          "end_time": "2026-10-14T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1315",
+          "start_time": "2026-10-14T13:15:00+09:00",
+          "end_time": "2026-10-14T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1415",
+          "start_time": "2026-10-14T14:15:00+09:00",
+          "end_time": "2026-10-14T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1515",
+          "start_time": "2026-10-14T15:15:00+09:00",
+          "end_time": "2026-10-14T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1615",
+          "start_time": "2026-10-14T16:15:00+09:00",
+          "end_time": "2026-10-14T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1715",
+          "start_time": "2026-10-14T17:15:00+09:00",
+          "end_time": "2026-10-14T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1815",
+          "start_time": "2026-10-14T18:15:00+09:00",
+          "end_time": "2026-10-14T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-1915",
+          "start_time": "2026-10-14T19:15:00+09:00",
+          "end_time": "2026-10-14T20:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-2015",
+          "start_time": "2026-10-14T20:15:00+09:00",
+          "end_time": "2026-10-14T21:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-2115",
+          "start_time": "2026-10-14T21:15:00+09:00",
+          "end_time": "2026-10-14T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-2215",
+          "start_time": "2026-10-14T22:15:00+09:00",
+          "end_time": "2026-10-14T23:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-2315",
+          "start_time": "2026-10-14T23:15:00+09:00",
+          "end_time": "2026-10-15T00:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0015",
+          "start_time": "2026-10-15T00:15:00+09:00",
+          "end_time": "2026-10-15T01:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0115",
+          "start_time": "2026-10-15T01:15:00+09:00",
+          "end_time": "2026-10-15T02:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0215",
+          "start_time": "2026-10-15T02:15:00+09:00",
+          "end_time": "2026-10-15T03:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0315",
+          "start_time": "2026-10-15T03:15:00+09:00",
+          "end_time": "2026-10-15T04:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0415",
+          "start_time": "2026-10-15T04:15:00+09:00",
+          "end_time": "2026-10-15T05:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-302st-slot-302st-2026-10-14-0515",
+          "start_time": "2026-10-15T05:15:00+09:00",
+          "end_time": "2026-10-15T06:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
         }
       ]
     },
@@ -22849,157 +22849,10 @@
       "start_time_offset": 15,
       "slots": [
         {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0915",
-          "start_time": "2026-09-22T09:15:00+09:00",
-          "end_time": "2026-09-22T10:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1015",
-          "start_time": "2026-09-22T10:15:00+09:00",
-          "end_time": "2026-09-22T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1115",
-          "start_time": "2026-09-22T11:15:00+09:00",
-          "end_time": "2026-09-22T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1215",
-          "start_time": "2026-09-22T12:15:00+09:00",
-          "end_time": "2026-09-22T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1315",
-          "start_time": "2026-09-22T13:15:00+09:00",
-          "end_time": "2026-09-22T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1415",
-          "start_time": "2026-09-22T14:15:00+09:00",
-          "end_time": "2026-09-22T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1515",
-          "start_time": "2026-09-22T15:15:00+09:00",
-          "end_time": "2026-09-22T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1615",
-          "start_time": "2026-09-22T16:15:00+09:00",
-          "end_time": "2026-09-22T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1715",
-          "start_time": "2026-09-22T17:15:00+09:00",
-          "end_time": "2026-09-22T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1815",
-          "start_time": "2026-09-22T18:15:00+09:00",
-          "end_time": "2026-09-22T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-1915",
-          "start_time": "2026-09-22T19:15:00+09:00",
-          "end_time": "2026-09-22T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-2015",
-          "start_time": "2026-09-22T20:15:00+09:00",
-          "end_time": "2026-09-22T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-2115",
-          "start_time": "2026-09-22T21:15:00+09:00",
-          "end_time": "2026-09-22T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-2215",
-          "start_time": "2026-09-22T22:15:00+09:00",
-          "end_time": "2026-09-22T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-2315",
-          "start_time": "2026-09-22T23:15:00+09:00",
-          "end_time": "2026-09-23T00:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0015",
-          "start_time": "2026-09-23T00:15:00+09:00",
-          "end_time": "2026-09-23T01:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0115",
-          "start_time": "2026-09-23T01:15:00+09:00",
-          "end_time": "2026-09-23T02:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0215",
-          "start_time": "2026-09-23T02:15:00+09:00",
-          "end_time": "2026-09-23T03:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0315",
-          "start_time": "2026-09-23T03:15:00+09:00",
-          "end_time": "2026-09-23T04:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0415",
-          "start_time": "2026-09-23T04:15:00+09:00",
-          "end_time": "2026-09-23T05:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-303st-slot-303st-2026-09-22-0515",
-          "start_time": "2026-09-23T05:15:00+09:00",
-          "end_time": "2026-09-23T06:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-23-0915",
           "start_time": "2026-09-23T09:15:00+09:00",
           "end_time": "2026-09-23T10:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -23069,7 +22922,7 @@
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-23-1915",
           "start_time": "2026-09-23T19:15:00+09:00",
           "end_time": "2026-09-23T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -23356,7 +23209,7 @@
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-25-1815",
           "start_time": "2026-09-25T18:15:00+09:00",
           "end_time": "2026-09-25T19:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -23370,14 +23223,14 @@
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-25-2015",
           "start_time": "2026-09-25T20:15:00+09:00",
           "end_time": "2026-09-25T21:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-25-2115",
           "start_time": "2026-09-25T21:15:00+09:00",
           "end_time": "2026-09-25T22:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -26081,6 +25934,153 @@
           "end_time": "2026-10-14T06:15:00+09:00",
           "status": "BOOKED",
           "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0915",
+          "start_time": "2026-10-14T09:15:00+09:00",
+          "end_time": "2026-10-14T10:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1015",
+          "start_time": "2026-10-14T10:15:00+09:00",
+          "end_time": "2026-10-14T11:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1115",
+          "start_time": "2026-10-14T11:15:00+09:00",
+          "end_time": "2026-10-14T12:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1215",
+          "start_time": "2026-10-14T12:15:00+09:00",
+          "end_time": "2026-10-14T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1315",
+          "start_time": "2026-10-14T13:15:00+09:00",
+          "end_time": "2026-10-14T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1415",
+          "start_time": "2026-10-14T14:15:00+09:00",
+          "end_time": "2026-10-14T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1515",
+          "start_time": "2026-10-14T15:15:00+09:00",
+          "end_time": "2026-10-14T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1615",
+          "start_time": "2026-10-14T16:15:00+09:00",
+          "end_time": "2026-10-14T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1715",
+          "start_time": "2026-10-14T17:15:00+09:00",
+          "end_time": "2026-10-14T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1815",
+          "start_time": "2026-10-14T18:15:00+09:00",
+          "end_time": "2026-10-14T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-1915",
+          "start_time": "2026-10-14T19:15:00+09:00",
+          "end_time": "2026-10-14T20:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-2015",
+          "start_time": "2026-10-14T20:15:00+09:00",
+          "end_time": "2026-10-14T21:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-2115",
+          "start_time": "2026-10-14T21:15:00+09:00",
+          "end_time": "2026-10-14T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-2215",
+          "start_time": "2026-10-14T22:15:00+09:00",
+          "end_time": "2026-10-14T23:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-2315",
+          "start_time": "2026-10-14T23:15:00+09:00",
+          "end_time": "2026-10-15T00:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0015",
+          "start_time": "2026-10-15T00:15:00+09:00",
+          "end_time": "2026-10-15T01:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0115",
+          "start_time": "2026-10-15T01:15:00+09:00",
+          "end_time": "2026-10-15T02:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0215",
+          "start_time": "2026-10-15T02:15:00+09:00",
+          "end_time": "2026-10-15T03:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0315",
+          "start_time": "2026-10-15T03:15:00+09:00",
+          "end_time": "2026-10-15T04:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0415",
+          "start_time": "2026-10-15T04:15:00+09:00",
+          "end_time": "2026-10-15T05:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-303st-slot-303st-2026-10-14-0515",
+          "start_time": "2026-10-15T05:15:00+09:00",
+          "end_time": "2026-10-15T06:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
         }
       ]
     },
@@ -26105,157 +26105,10 @@
       "start_time_offset": 15,
       "slots": [
         {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0915",
-          "start_time": "2026-09-22T09:15:00+09:00",
-          "end_time": "2026-09-22T10:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1015",
-          "start_time": "2026-09-22T10:15:00+09:00",
-          "end_time": "2026-09-22T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1115",
-          "start_time": "2026-09-22T11:15:00+09:00",
-          "end_time": "2026-09-22T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1215",
-          "start_time": "2026-09-22T12:15:00+09:00",
-          "end_time": "2026-09-22T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1315",
-          "start_time": "2026-09-22T13:15:00+09:00",
-          "end_time": "2026-09-22T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1415",
-          "start_time": "2026-09-22T14:15:00+09:00",
-          "end_time": "2026-09-22T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1515",
-          "start_time": "2026-09-22T15:15:00+09:00",
-          "end_time": "2026-09-22T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1615",
-          "start_time": "2026-09-22T16:15:00+09:00",
-          "end_time": "2026-09-22T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1715",
-          "start_time": "2026-09-22T17:15:00+09:00",
-          "end_time": "2026-09-22T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1815",
-          "start_time": "2026-09-22T18:15:00+09:00",
-          "end_time": "2026-09-22T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-1915",
-          "start_time": "2026-09-22T19:15:00+09:00",
-          "end_time": "2026-09-22T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-2015",
-          "start_time": "2026-09-22T20:15:00+09:00",
-          "end_time": "2026-09-22T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-2115",
-          "start_time": "2026-09-22T21:15:00+09:00",
-          "end_time": "2026-09-22T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-2215",
-          "start_time": "2026-09-22T22:15:00+09:00",
-          "end_time": "2026-09-22T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-2315",
-          "start_time": "2026-09-22T23:15:00+09:00",
-          "end_time": "2026-09-23T00:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0015",
-          "start_time": "2026-09-23T00:15:00+09:00",
-          "end_time": "2026-09-23T01:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0115",
-          "start_time": "2026-09-23T01:15:00+09:00",
-          "end_time": "2026-09-23T02:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0215",
-          "start_time": "2026-09-23T02:15:00+09:00",
-          "end_time": "2026-09-23T03:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0315",
-          "start_time": "2026-09-23T03:15:00+09:00",
-          "end_time": "2026-09-23T04:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0415",
-          "start_time": "2026-09-23T04:15:00+09:00",
-          "end_time": "2026-09-23T05:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-304st-slot-304st-2026-09-22-0515",
-          "start_time": "2026-09-23T05:15:00+09:00",
-          "end_time": "2026-09-23T06:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-23-0915",
           "start_time": "2026-09-23T09:15:00+09:00",
           "end_time": "2026-09-23T10:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -26325,7 +26178,7 @@
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-23-1915",
           "start_time": "2026-09-23T19:15:00+09:00",
           "end_time": "2026-09-23T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -26619,21 +26472,21 @@
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-25-1915",
           "start_time": "2026-09-25T19:15:00+09:00",
           "end_time": "2026-09-25T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-25-2015",
           "start_time": "2026-09-25T20:15:00+09:00",
           "end_time": "2026-09-25T21:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-25-2115",
           "start_time": "2026-09-25T21:15:00+09:00",
           "end_time": "2026-09-25T22:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -29083,21 +28936,21 @@
           "id": "slot-studioact-machida-304st-slot-304st-2026-10-12-1415",
           "start_time": "2026-10-12T14:15:00+09:00",
           "end_time": "2026-10-12T15:15:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-304st-slot-304st-2026-10-12-1515",
           "start_time": "2026-10-12T15:15:00+09:00",
           "end_time": "2026-10-12T16:15:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-304st-slot-304st-2026-10-12-1615",
           "start_time": "2026-10-12T16:15:00+09:00",
           "end_time": "2026-10-12T17:15:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2400
         },
         {
@@ -29337,6 +29190,153 @@
           "end_time": "2026-10-14T06:15:00+09:00",
           "status": "BOOKED",
           "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0915",
+          "start_time": "2026-10-14T09:15:00+09:00",
+          "end_time": "2026-10-14T10:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1015",
+          "start_time": "2026-10-14T10:15:00+09:00",
+          "end_time": "2026-10-14T11:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1115",
+          "start_time": "2026-10-14T11:15:00+09:00",
+          "end_time": "2026-10-14T12:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1215",
+          "start_time": "2026-10-14T12:15:00+09:00",
+          "end_time": "2026-10-14T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1315",
+          "start_time": "2026-10-14T13:15:00+09:00",
+          "end_time": "2026-10-14T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1415",
+          "start_time": "2026-10-14T14:15:00+09:00",
+          "end_time": "2026-10-14T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1515",
+          "start_time": "2026-10-14T15:15:00+09:00",
+          "end_time": "2026-10-14T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1615",
+          "start_time": "2026-10-14T16:15:00+09:00",
+          "end_time": "2026-10-14T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1715",
+          "start_time": "2026-10-14T17:15:00+09:00",
+          "end_time": "2026-10-14T18:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1815",
+          "start_time": "2026-10-14T18:15:00+09:00",
+          "end_time": "2026-10-14T19:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-1915",
+          "start_time": "2026-10-14T19:15:00+09:00",
+          "end_time": "2026-10-14T20:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-2015",
+          "start_time": "2026-10-14T20:15:00+09:00",
+          "end_time": "2026-10-14T21:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-2115",
+          "start_time": "2026-10-14T21:15:00+09:00",
+          "end_time": "2026-10-14T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-2215",
+          "start_time": "2026-10-14T22:15:00+09:00",
+          "end_time": "2026-10-14T23:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-2315",
+          "start_time": "2026-10-14T23:15:00+09:00",
+          "end_time": "2026-10-15T00:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0015",
+          "start_time": "2026-10-15T00:15:00+09:00",
+          "end_time": "2026-10-15T01:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0115",
+          "start_time": "2026-10-15T01:15:00+09:00",
+          "end_time": "2026-10-15T02:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0215",
+          "start_time": "2026-10-15T02:15:00+09:00",
+          "end_time": "2026-10-15T03:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0315",
+          "start_time": "2026-10-15T03:15:00+09:00",
+          "end_time": "2026-10-15T04:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0415",
+          "start_time": "2026-10-15T04:15:00+09:00",
+          "end_time": "2026-10-15T05:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-304st-slot-304st-2026-10-14-0515",
+          "start_time": "2026-10-15T05:15:00+09:00",
+          "end_time": "2026-10-15T06:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
         }
       ]
     },
@@ -29359,153 +29359,6 @@
       ],
       "start_time_offset": 15,
       "slots": [
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0915",
-          "start_time": "2026-09-22T09:15:00+09:00",
-          "end_time": "2026-09-22T10:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1015",
-          "start_time": "2026-09-22T10:15:00+09:00",
-          "end_time": "2026-09-22T11:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1115",
-          "start_time": "2026-09-22T11:15:00+09:00",
-          "end_time": "2026-09-22T12:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1215",
-          "start_time": "2026-09-22T12:15:00+09:00",
-          "end_time": "2026-09-22T13:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1315",
-          "start_time": "2026-09-22T13:15:00+09:00",
-          "end_time": "2026-09-22T14:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1415",
-          "start_time": "2026-09-22T14:15:00+09:00",
-          "end_time": "2026-09-22T15:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1515",
-          "start_time": "2026-09-22T15:15:00+09:00",
-          "end_time": "2026-09-22T16:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1615",
-          "start_time": "2026-09-22T16:15:00+09:00",
-          "end_time": "2026-09-22T17:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1715",
-          "start_time": "2026-09-22T17:15:00+09:00",
-          "end_time": "2026-09-22T18:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1815",
-          "start_time": "2026-09-22T18:15:00+09:00",
-          "end_time": "2026-09-22T19:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-1915",
-          "start_time": "2026-09-22T19:15:00+09:00",
-          "end_time": "2026-09-22T20:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-2015",
-          "start_time": "2026-09-22T20:15:00+09:00",
-          "end_time": "2026-09-22T21:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-2115",
-          "start_time": "2026-09-22T21:15:00+09:00",
-          "end_time": "2026-09-22T22:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-2215",
-          "start_time": "2026-09-22T22:15:00+09:00",
-          "end_time": "2026-09-22T23:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-2315",
-          "start_time": "2026-09-22T23:15:00+09:00",
-          "end_time": "2026-09-23T00:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0015",
-          "start_time": "2026-09-23T00:15:00+09:00",
-          "end_time": "2026-09-23T01:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0115",
-          "start_time": "2026-09-23T01:15:00+09:00",
-          "end_time": "2026-09-23T02:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0215",
-          "start_time": "2026-09-23T02:15:00+09:00",
-          "end_time": "2026-09-23T03:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0315",
-          "start_time": "2026-09-23T03:15:00+09:00",
-          "end_time": "2026-09-23T04:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0415",
-          "start_time": "2026-09-23T04:15:00+09:00",
-          "end_time": "2026-09-23T05:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
-        {
-          "id": "slot-studioact-machida-305st-slot-305st-2026-09-22-0515",
-          "start_time": "2026-09-23T05:15:00+09:00",
-          "end_time": "2026-09-23T06:15:00+09:00",
-          "status": "BOOKED",
-          "price": 2400
-        },
         {
           "id": "slot-studioact-machida-305st-slot-305st-2026-09-23-0915",
           "start_time": "2026-09-23T09:15:00+09:00",
@@ -32592,6 +32445,153 @@
           "end_time": "2026-10-14T06:15:00+09:00",
           "status": "BOOKED",
           "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0915",
+          "start_time": "2026-10-14T09:15:00+09:00",
+          "end_time": "2026-10-14T10:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1015",
+          "start_time": "2026-10-14T10:15:00+09:00",
+          "end_time": "2026-10-14T11:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1115",
+          "start_time": "2026-10-14T11:15:00+09:00",
+          "end_time": "2026-10-14T12:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1215",
+          "start_time": "2026-10-14T12:15:00+09:00",
+          "end_time": "2026-10-14T13:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1315",
+          "start_time": "2026-10-14T13:15:00+09:00",
+          "end_time": "2026-10-14T14:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1415",
+          "start_time": "2026-10-14T14:15:00+09:00",
+          "end_time": "2026-10-14T15:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1515",
+          "start_time": "2026-10-14T15:15:00+09:00",
+          "end_time": "2026-10-14T16:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1615",
+          "start_time": "2026-10-14T16:15:00+09:00",
+          "end_time": "2026-10-14T17:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1715",
+          "start_time": "2026-10-14T17:15:00+09:00",
+          "end_time": "2026-10-14T18:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1815",
+          "start_time": "2026-10-14T18:15:00+09:00",
+          "end_time": "2026-10-14T19:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-1915",
+          "start_time": "2026-10-14T19:15:00+09:00",
+          "end_time": "2026-10-14T20:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-2015",
+          "start_time": "2026-10-14T20:15:00+09:00",
+          "end_time": "2026-10-14T21:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-2115",
+          "start_time": "2026-10-14T21:15:00+09:00",
+          "end_time": "2026-10-14T22:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-2215",
+          "start_time": "2026-10-14T22:15:00+09:00",
+          "end_time": "2026-10-14T23:15:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-2315",
+          "start_time": "2026-10-14T23:15:00+09:00",
+          "end_time": "2026-10-15T00:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0015",
+          "start_time": "2026-10-15T00:15:00+09:00",
+          "end_time": "2026-10-15T01:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0115",
+          "start_time": "2026-10-15T01:15:00+09:00",
+          "end_time": "2026-10-15T02:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0215",
+          "start_time": "2026-10-15T02:15:00+09:00",
+          "end_time": "2026-10-15T03:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0315",
+          "start_time": "2026-10-15T03:15:00+09:00",
+          "end_time": "2026-10-15T04:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0415",
+          "start_time": "2026-10-15T04:15:00+09:00",
+          "end_time": "2026-10-15T05:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
+        },
+        {
+          "id": "slot-studioact-machida-305st-slot-305st-2026-10-14-0515",
+          "start_time": "2026-10-15T05:15:00+09:00",
+          "end_time": "2026-10-15T06:15:00+09:00",
+          "status": "BOOKED",
+          "price": 2400
         }
       ]
     },
@@ -32619,153 +32619,6 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0930",
-          "start_time": "2026-09-22T09:30:00+09:00",
-          "end_time": "2026-09-22T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1030",
-          "start_time": "2026-09-22T10:30:00+09:00",
-          "end_time": "2026-09-22T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1130",
-          "start_time": "2026-09-22T11:30:00+09:00",
-          "end_time": "2026-09-22T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1230",
-          "start_time": "2026-09-22T12:30:00+09:00",
-          "end_time": "2026-09-22T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1330",
-          "start_time": "2026-09-22T13:30:00+09:00",
-          "end_time": "2026-09-22T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1430",
-          "start_time": "2026-09-22T14:30:00+09:00",
-          "end_time": "2026-09-22T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1530",
-          "start_time": "2026-09-22T15:30:00+09:00",
-          "end_time": "2026-09-22T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1630",
-          "start_time": "2026-09-22T16:30:00+09:00",
-          "end_time": "2026-09-22T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1730",
-          "start_time": "2026-09-22T17:30:00+09:00",
-          "end_time": "2026-09-22T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1830",
-          "start_time": "2026-09-22T18:30:00+09:00",
-          "end_time": "2026-09-22T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-1930",
-          "start_time": "2026-09-22T19:30:00+09:00",
-          "end_time": "2026-09-22T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-2030",
-          "start_time": "2026-09-22T20:30:00+09:00",
-          "end_time": "2026-09-22T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-2130",
-          "start_time": "2026-09-22T21:30:00+09:00",
-          "end_time": "2026-09-22T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-2230",
-          "start_time": "2026-09-22T22:30:00+09:00",
-          "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-2330",
-          "start_time": "2026-09-22T23:30:00+09:00",
-          "end_time": "2026-09-23T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0030",
-          "start_time": "2026-09-23T00:30:00+09:00",
-          "end_time": "2026-09-23T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0130",
-          "start_time": "2026-09-23T01:30:00+09:00",
-          "end_time": "2026-09-23T02:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0230",
-          "start_time": "2026-09-23T02:30:00+09:00",
-          "end_time": "2026-09-23T03:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0330",
-          "start_time": "2026-09-23T03:30:00+09:00",
-          "end_time": "2026-09-23T04:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0430",
-          "start_time": "2026-09-23T04:30:00+09:00",
-          "end_time": "2026-09-23T05:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-101st-slot-101st-2026-09-22-0530",
-          "start_time": "2026-09-23T05:30:00+09:00",
-          "end_time": "2026-09-23T06:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-0930",
           "start_time": "2026-09-23T09:30:00+09:00",
           "end_time": "2026-09-23T10:30:00+09:00",
@@ -32776,49 +32629,49 @@
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1030",
           "start_time": "2026-09-23T10:30:00+09:00",
           "end_time": "2026-09-23T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1130",
           "start_time": "2026-09-23T11:30:00+09:00",
           "end_time": "2026-09-23T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1530",
           "start_time": "2026-09-23T15:30:00+09:00",
           "end_time": "2026-09-23T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-23-1630",
           "start_time": "2026-09-23T16:30:00+09:00",
           "end_time": "2026-09-23T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -32979,7 +32832,7 @@
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-24-1830",
           "start_time": "2026-09-24T18:30:00+09:00",
           "end_time": "2026-09-24T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -33098,14 +32951,14 @@
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-25-1430",
           "start_time": "2026-09-25T14:30:00+09:00",
           "end_time": "2026-09-25T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-25-1530",
           "start_time": "2026-09-25T15:30:00+09:00",
           "end_time": "2026-09-25T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -33231,14 +33084,14 @@
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-26-1230",
           "start_time": "2026-09-26T12:30:00+09:00",
           "end_time": "2026-09-26T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-09-26-1330",
           "start_time": "2026-09-26T13:30:00+09:00",
           "end_time": "2026-09-26T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -35851,6 +35704,153 @@
           "end_time": "2026-10-14T06:30:00+09:00",
           "status": "BOOKED",
           "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0930",
+          "start_time": "2026-10-14T09:30:00+09:00",
+          "end_time": "2026-10-14T10:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1030",
+          "start_time": "2026-10-14T10:30:00+09:00",
+          "end_time": "2026-10-14T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1130",
+          "start_time": "2026-10-14T11:30:00+09:00",
+          "end_time": "2026-10-14T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1230",
+          "start_time": "2026-10-14T12:30:00+09:00",
+          "end_time": "2026-10-14T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1330",
+          "start_time": "2026-10-14T13:30:00+09:00",
+          "end_time": "2026-10-14T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1430",
+          "start_time": "2026-10-14T14:30:00+09:00",
+          "end_time": "2026-10-14T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1530",
+          "start_time": "2026-10-14T15:30:00+09:00",
+          "end_time": "2026-10-14T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1630",
+          "start_time": "2026-10-14T16:30:00+09:00",
+          "end_time": "2026-10-14T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1730",
+          "start_time": "2026-10-14T17:30:00+09:00",
+          "end_time": "2026-10-14T18:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1830",
+          "start_time": "2026-10-14T18:30:00+09:00",
+          "end_time": "2026-10-14T19:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-1930",
+          "start_time": "2026-10-14T19:30:00+09:00",
+          "end_time": "2026-10-14T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-2030",
+          "start_time": "2026-10-14T20:30:00+09:00",
+          "end_time": "2026-10-14T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-2130",
+          "start_time": "2026-10-14T21:30:00+09:00",
+          "end_time": "2026-10-14T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-2230",
+          "start_time": "2026-10-14T22:30:00+09:00",
+          "end_time": "2026-10-14T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-2330",
+          "start_time": "2026-10-14T23:30:00+09:00",
+          "end_time": "2026-10-15T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0030",
+          "start_time": "2026-10-15T00:30:00+09:00",
+          "end_time": "2026-10-15T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0130",
+          "start_time": "2026-10-15T01:30:00+09:00",
+          "end_time": "2026-10-15T02:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0230",
+          "start_time": "2026-10-15T02:30:00+09:00",
+          "end_time": "2026-10-15T03:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0330",
+          "start_time": "2026-10-15T03:30:00+09:00",
+          "end_time": "2026-10-15T04:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0430",
+          "start_time": "2026-10-15T04:30:00+09:00",
+          "end_time": "2026-10-15T05:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-101st-slot-101st-2026-10-14-0530",
+          "start_time": "2026-10-15T05:30:00+09:00",
+          "end_time": "2026-10-15T06:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
         }
       ]
     },
@@ -35877,213 +35877,66 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0930",
-          "start_time": "2026-09-22T09:30:00+09:00",
-          "end_time": "2026-09-22T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1030",
-          "start_time": "2026-09-22T10:30:00+09:00",
-          "end_time": "2026-09-22T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1130",
-          "start_time": "2026-09-22T11:30:00+09:00",
-          "end_time": "2026-09-22T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1230",
-          "start_time": "2026-09-22T12:30:00+09:00",
-          "end_time": "2026-09-22T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1330",
-          "start_time": "2026-09-22T13:30:00+09:00",
-          "end_time": "2026-09-22T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1430",
-          "start_time": "2026-09-22T14:30:00+09:00",
-          "end_time": "2026-09-22T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1530",
-          "start_time": "2026-09-22T15:30:00+09:00",
-          "end_time": "2026-09-22T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1630",
-          "start_time": "2026-09-22T16:30:00+09:00",
-          "end_time": "2026-09-22T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1730",
-          "start_time": "2026-09-22T17:30:00+09:00",
-          "end_time": "2026-09-22T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1830",
-          "start_time": "2026-09-22T18:30:00+09:00",
-          "end_time": "2026-09-22T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-1930",
-          "start_time": "2026-09-22T19:30:00+09:00",
-          "end_time": "2026-09-22T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-2030",
-          "start_time": "2026-09-22T20:30:00+09:00",
-          "end_time": "2026-09-22T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-2130",
-          "start_time": "2026-09-22T21:30:00+09:00",
-          "end_time": "2026-09-22T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-2230",
-          "start_time": "2026-09-22T22:30:00+09:00",
-          "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-2330",
-          "start_time": "2026-09-22T23:30:00+09:00",
-          "end_time": "2026-09-23T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0030",
-          "start_time": "2026-09-23T00:30:00+09:00",
-          "end_time": "2026-09-23T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0130",
-          "start_time": "2026-09-23T01:30:00+09:00",
-          "end_time": "2026-09-23T02:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0230",
-          "start_time": "2026-09-23T02:30:00+09:00",
-          "end_time": "2026-09-23T03:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0330",
-          "start_time": "2026-09-23T03:30:00+09:00",
-          "end_time": "2026-09-23T04:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0430",
-          "start_time": "2026-09-23T04:30:00+09:00",
-          "end_time": "2026-09-23T05:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-102st-slot-102st-2026-09-22-0530",
-          "start_time": "2026-09-23T05:30:00+09:00",
-          "end_time": "2026-09-23T06:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-0930",
           "start_time": "2026-09-23T09:30:00+09:00",
           "end_time": "2026-09-23T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1030",
           "start_time": "2026-09-23T10:30:00+09:00",
           "end_time": "2026-09-23T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1130",
           "start_time": "2026-09-23T11:30:00+09:00",
           "end_time": "2026-09-23T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1530",
           "start_time": "2026-09-23T15:30:00+09:00",
           "end_time": "2026-09-23T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1630",
           "start_time": "2026-09-23T16:30:00+09:00",
           "end_time": "2026-09-23T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-23-1730",
           "start_time": "2026-09-23T17:30:00+09:00",
           "end_time": "2026-09-23T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -36244,7 +36097,7 @@
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-24-1930",
           "start_time": "2026-09-24T19:30:00+09:00",
           "end_time": "2026-09-24T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -39109,6 +38962,153 @@
           "end_time": "2026-10-14T06:30:00+09:00",
           "status": "BOOKED",
           "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0930",
+          "start_time": "2026-10-14T09:30:00+09:00",
+          "end_time": "2026-10-14T10:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1030",
+          "start_time": "2026-10-14T10:30:00+09:00",
+          "end_time": "2026-10-14T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1130",
+          "start_time": "2026-10-14T11:30:00+09:00",
+          "end_time": "2026-10-14T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1230",
+          "start_time": "2026-10-14T12:30:00+09:00",
+          "end_time": "2026-10-14T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1330",
+          "start_time": "2026-10-14T13:30:00+09:00",
+          "end_time": "2026-10-14T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1430",
+          "start_time": "2026-10-14T14:30:00+09:00",
+          "end_time": "2026-10-14T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1530",
+          "start_time": "2026-10-14T15:30:00+09:00",
+          "end_time": "2026-10-14T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1630",
+          "start_time": "2026-10-14T16:30:00+09:00",
+          "end_time": "2026-10-14T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1730",
+          "start_time": "2026-10-14T17:30:00+09:00",
+          "end_time": "2026-10-14T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1830",
+          "start_time": "2026-10-14T18:30:00+09:00",
+          "end_time": "2026-10-14T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-1930",
+          "start_time": "2026-10-14T19:30:00+09:00",
+          "end_time": "2026-10-14T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-2030",
+          "start_time": "2026-10-14T20:30:00+09:00",
+          "end_time": "2026-10-14T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-2130",
+          "start_time": "2026-10-14T21:30:00+09:00",
+          "end_time": "2026-10-14T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-2230",
+          "start_time": "2026-10-14T22:30:00+09:00",
+          "end_time": "2026-10-14T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-2330",
+          "start_time": "2026-10-14T23:30:00+09:00",
+          "end_time": "2026-10-15T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0030",
+          "start_time": "2026-10-15T00:30:00+09:00",
+          "end_time": "2026-10-15T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0130",
+          "start_time": "2026-10-15T01:30:00+09:00",
+          "end_time": "2026-10-15T02:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0230",
+          "start_time": "2026-10-15T02:30:00+09:00",
+          "end_time": "2026-10-15T03:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0330",
+          "start_time": "2026-10-15T03:30:00+09:00",
+          "end_time": "2026-10-15T04:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0430",
+          "start_time": "2026-10-15T04:30:00+09:00",
+          "end_time": "2026-10-15T05:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-102st-slot-102st-2026-10-14-0530",
+          "start_time": "2026-10-15T05:30:00+09:00",
+          "end_time": "2026-10-15T06:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
         }
       ]
     },
@@ -39135,157 +39135,10 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0930",
-          "start_time": "2026-09-22T09:30:00+09:00",
-          "end_time": "2026-09-22T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1030",
-          "start_time": "2026-09-22T10:30:00+09:00",
-          "end_time": "2026-09-22T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1130",
-          "start_time": "2026-09-22T11:30:00+09:00",
-          "end_time": "2026-09-22T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1230",
-          "start_time": "2026-09-22T12:30:00+09:00",
-          "end_time": "2026-09-22T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1330",
-          "start_time": "2026-09-22T13:30:00+09:00",
-          "end_time": "2026-09-22T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1430",
-          "start_time": "2026-09-22T14:30:00+09:00",
-          "end_time": "2026-09-22T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1530",
-          "start_time": "2026-09-22T15:30:00+09:00",
-          "end_time": "2026-09-22T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1630",
-          "start_time": "2026-09-22T16:30:00+09:00",
-          "end_time": "2026-09-22T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1730",
-          "start_time": "2026-09-22T17:30:00+09:00",
-          "end_time": "2026-09-22T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1830",
-          "start_time": "2026-09-22T18:30:00+09:00",
-          "end_time": "2026-09-22T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-1930",
-          "start_time": "2026-09-22T19:30:00+09:00",
-          "end_time": "2026-09-22T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-2030",
-          "start_time": "2026-09-22T20:30:00+09:00",
-          "end_time": "2026-09-22T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-2130",
-          "start_time": "2026-09-22T21:30:00+09:00",
-          "end_time": "2026-09-22T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-2230",
-          "start_time": "2026-09-22T22:30:00+09:00",
-          "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-2330",
-          "start_time": "2026-09-22T23:30:00+09:00",
-          "end_time": "2026-09-23T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0030",
-          "start_time": "2026-09-23T00:30:00+09:00",
-          "end_time": "2026-09-23T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0130",
-          "start_time": "2026-09-23T01:30:00+09:00",
-          "end_time": "2026-09-23T02:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0230",
-          "start_time": "2026-09-23T02:30:00+09:00",
-          "end_time": "2026-09-23T03:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0330",
-          "start_time": "2026-09-23T03:30:00+09:00",
-          "end_time": "2026-09-23T04:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0430",
-          "start_time": "2026-09-23T04:30:00+09:00",
-          "end_time": "2026-09-23T05:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-103st-slot-103st-2026-09-22-0530",
-          "start_time": "2026-09-23T05:30:00+09:00",
-          "end_time": "2026-09-23T06:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
           "id": "slot-studioact-machida-103st-slot-103st-2026-09-23-0930",
           "start_time": "2026-09-23T09:30:00+09:00",
           "end_time": "2026-09-23T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -39334,7 +39187,7 @@
           "id": "slot-studioact-machida-103st-slot-103st-2026-09-23-1630",
           "start_time": "2026-09-23T16:30:00+09:00",
           "end_time": "2026-09-23T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -39502,14 +39355,14 @@
           "id": "slot-studioact-machida-103st-slot-103st-2026-09-24-1930",
           "start_time": "2026-09-24T19:30:00+09:00",
           "end_time": "2026-09-24T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-103st-slot-103st-2026-09-24-2030",
           "start_time": "2026-09-24T20:30:00+09:00",
           "end_time": "2026-09-24T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -42367,6 +42220,153 @@
           "end_time": "2026-10-14T06:30:00+09:00",
           "status": "BOOKED",
           "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0930",
+          "start_time": "2026-10-14T09:30:00+09:00",
+          "end_time": "2026-10-14T10:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1030",
+          "start_time": "2026-10-14T10:30:00+09:00",
+          "end_time": "2026-10-14T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1130",
+          "start_time": "2026-10-14T11:30:00+09:00",
+          "end_time": "2026-10-14T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1230",
+          "start_time": "2026-10-14T12:30:00+09:00",
+          "end_time": "2026-10-14T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1330",
+          "start_time": "2026-10-14T13:30:00+09:00",
+          "end_time": "2026-10-14T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1430",
+          "start_time": "2026-10-14T14:30:00+09:00",
+          "end_time": "2026-10-14T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1530",
+          "start_time": "2026-10-14T15:30:00+09:00",
+          "end_time": "2026-10-14T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1630",
+          "start_time": "2026-10-14T16:30:00+09:00",
+          "end_time": "2026-10-14T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1730",
+          "start_time": "2026-10-14T17:30:00+09:00",
+          "end_time": "2026-10-14T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1830",
+          "start_time": "2026-10-14T18:30:00+09:00",
+          "end_time": "2026-10-14T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-1930",
+          "start_time": "2026-10-14T19:30:00+09:00",
+          "end_time": "2026-10-14T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-2030",
+          "start_time": "2026-10-14T20:30:00+09:00",
+          "end_time": "2026-10-14T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-2130",
+          "start_time": "2026-10-14T21:30:00+09:00",
+          "end_time": "2026-10-14T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-2230",
+          "start_time": "2026-10-14T22:30:00+09:00",
+          "end_time": "2026-10-14T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-2330",
+          "start_time": "2026-10-14T23:30:00+09:00",
+          "end_time": "2026-10-15T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0030",
+          "start_time": "2026-10-15T00:30:00+09:00",
+          "end_time": "2026-10-15T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0130",
+          "start_time": "2026-10-15T01:30:00+09:00",
+          "end_time": "2026-10-15T02:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0230",
+          "start_time": "2026-10-15T02:30:00+09:00",
+          "end_time": "2026-10-15T03:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0330",
+          "start_time": "2026-10-15T03:30:00+09:00",
+          "end_time": "2026-10-15T04:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0430",
+          "start_time": "2026-10-15T04:30:00+09:00",
+          "end_time": "2026-10-15T05:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-103st-slot-103st-2026-10-14-0530",
+          "start_time": "2026-10-15T05:30:00+09:00",
+          "end_time": "2026-10-15T06:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
         }
       ]
     },
@@ -42393,192 +42393,45 @@
       "start_time_offset": 30,
       "slots": [
         {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0930",
-          "start_time": "2026-09-22T09:30:00+09:00",
-          "end_time": "2026-09-22T10:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1030",
-          "start_time": "2026-09-22T10:30:00+09:00",
-          "end_time": "2026-09-22T11:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1130",
-          "start_time": "2026-09-22T11:30:00+09:00",
-          "end_time": "2026-09-22T12:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1230",
-          "start_time": "2026-09-22T12:30:00+09:00",
-          "end_time": "2026-09-22T13:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1330",
-          "start_time": "2026-09-22T13:30:00+09:00",
-          "end_time": "2026-09-22T14:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1430",
-          "start_time": "2026-09-22T14:30:00+09:00",
-          "end_time": "2026-09-22T15:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1530",
-          "start_time": "2026-09-22T15:30:00+09:00",
-          "end_time": "2026-09-22T16:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1630",
-          "start_time": "2026-09-22T16:30:00+09:00",
-          "end_time": "2026-09-22T17:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1730",
-          "start_time": "2026-09-22T17:30:00+09:00",
-          "end_time": "2026-09-22T18:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1830",
-          "start_time": "2026-09-22T18:30:00+09:00",
-          "end_time": "2026-09-22T19:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-1930",
-          "start_time": "2026-09-22T19:30:00+09:00",
-          "end_time": "2026-09-22T20:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-2030",
-          "start_time": "2026-09-22T20:30:00+09:00",
-          "end_time": "2026-09-22T21:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-2130",
-          "start_time": "2026-09-22T21:30:00+09:00",
-          "end_time": "2026-09-22T22:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-2230",
-          "start_time": "2026-09-22T22:30:00+09:00",
-          "end_time": "2026-09-22T23:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-2330",
-          "start_time": "2026-09-22T23:30:00+09:00",
-          "end_time": "2026-09-23T00:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0030",
-          "start_time": "2026-09-23T00:30:00+09:00",
-          "end_time": "2026-09-23T01:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0130",
-          "start_time": "2026-09-23T01:30:00+09:00",
-          "end_time": "2026-09-23T02:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0230",
-          "start_time": "2026-09-23T02:30:00+09:00",
-          "end_time": "2026-09-23T03:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0330",
-          "start_time": "2026-09-23T03:30:00+09:00",
-          "end_time": "2026-09-23T04:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0430",
-          "start_time": "2026-09-23T04:30:00+09:00",
-          "end_time": "2026-09-23T05:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
-          "id": "slot-studioact-machida-104st-slot-104st-2026-09-22-0530",
-          "start_time": "2026-09-23T05:30:00+09:00",
-          "end_time": "2026-09-23T06:30:00+09:00",
-          "status": "BOOKED",
-          "price": 2800
-        },
-        {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-23-0930",
           "start_time": "2026-09-23T09:30:00+09:00",
           "end_time": "2026-09-23T10:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-23-1030",
           "start_time": "2026-09-23T10:30:00+09:00",
           "end_time": "2026-09-23T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-23-1130",
           "start_time": "2026-09-23T11:30:00+09:00",
           "end_time": "2026-09-23T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -42921,14 +42774,14 @@
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-25-2130",
           "start_time": "2026-09-25T21:30:00+09:00",
           "end_time": "2026-09-25T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-09-25-2230",
           "start_time": "2026-09-25T22:30:00+09:00",
           "end_time": "2026-09-25T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -45623,6 +45476,153 @@
           "id": "slot-studioact-machida-104st-slot-104st-2026-10-13-0530",
           "start_time": "2026-10-14T05:30:00+09:00",
           "end_time": "2026-10-14T06:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0930",
+          "start_time": "2026-10-14T09:30:00+09:00",
+          "end_time": "2026-10-14T10:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1030",
+          "start_time": "2026-10-14T10:30:00+09:00",
+          "end_time": "2026-10-14T11:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1130",
+          "start_time": "2026-10-14T11:30:00+09:00",
+          "end_time": "2026-10-14T12:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1230",
+          "start_time": "2026-10-14T12:30:00+09:00",
+          "end_time": "2026-10-14T13:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1330",
+          "start_time": "2026-10-14T13:30:00+09:00",
+          "end_time": "2026-10-14T14:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1430",
+          "start_time": "2026-10-14T14:30:00+09:00",
+          "end_time": "2026-10-14T15:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1530",
+          "start_time": "2026-10-14T15:30:00+09:00",
+          "end_time": "2026-10-14T16:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1630",
+          "start_time": "2026-10-14T16:30:00+09:00",
+          "end_time": "2026-10-14T17:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1730",
+          "start_time": "2026-10-14T17:30:00+09:00",
+          "end_time": "2026-10-14T18:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1830",
+          "start_time": "2026-10-14T18:30:00+09:00",
+          "end_time": "2026-10-14T19:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-1930",
+          "start_time": "2026-10-14T19:30:00+09:00",
+          "end_time": "2026-10-14T20:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-2030",
+          "start_time": "2026-10-14T20:30:00+09:00",
+          "end_time": "2026-10-14T21:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-2130",
+          "start_time": "2026-10-14T21:30:00+09:00",
+          "end_time": "2026-10-14T22:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-2230",
+          "start_time": "2026-10-14T22:30:00+09:00",
+          "end_time": "2026-10-14T23:30:00+09:00",
+          "status": "AVAILABLE",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-2330",
+          "start_time": "2026-10-14T23:30:00+09:00",
+          "end_time": "2026-10-15T00:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0030",
+          "start_time": "2026-10-15T00:30:00+09:00",
+          "end_time": "2026-10-15T01:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0130",
+          "start_time": "2026-10-15T01:30:00+09:00",
+          "end_time": "2026-10-15T02:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0230",
+          "start_time": "2026-10-15T02:30:00+09:00",
+          "end_time": "2026-10-15T03:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0330",
+          "start_time": "2026-10-15T03:30:00+09:00",
+          "end_time": "2026-10-15T04:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0430",
+          "start_time": "2026-10-15T04:30:00+09:00",
+          "end_time": "2026-10-15T05:30:00+09:00",
+          "status": "BOOKED",
+          "price": 2800
+        },
+        {
+          "id": "slot-studioact-machida-104st-slot-104st-2026-10-14-0530",
+          "start_time": "2026-10-15T05:30:00+09:00",
+          "end_time": "2026-10-15T06:30:00+09:00",
           "status": "BOOKED",
           "price": 2800
         }

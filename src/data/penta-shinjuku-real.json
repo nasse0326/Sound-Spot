@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T23:46:22.451Z",
+  "updatedAt": "2026-09-23T07:59:16.089Z",
   "rooms": [
     {
       "id": "penta-shinjuku-101",
@@ -143,25 +143,25 @@
           "id": "penta-shinjuku-101-2026-09-23-2100",
           "start_time": "2026-09-23T21:00:00+09:00",
           "end_time": "2026-09-23T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-101-2026-09-23-2130",
           "start_time": "2026-09-23T21:30:00+09:00",
           "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-101-2026-09-23-2200",
           "start_time": "2026-09-23T22:00:00+09:00",
           "end_time": "2026-09-23T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-101-2026-09-23-2230",
           "start_time": "2026-09-23T22:30:00+09:00",
           "end_time": "2026-09-23T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-101-2026-09-23-2300",
@@ -347,13 +347,13 @@
           "id": "penta-shinjuku-101-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T10:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-101-2026-09-27-1030",
           "start_time": "2026-09-27T10:30:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-101-2026-09-27-1100",
@@ -4739,25 +4739,25 @@
           "id": "penta-shinjuku-201-2026-10-04-1000",
           "start_time": "2026-10-04T10:00:00+09:00",
           "end_time": "2026-10-04T10:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-201-2026-10-04-1030",
           "start_time": "2026-10-04T10:30:00+09:00",
           "end_time": "2026-10-04T11:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-201-2026-10-04-1100",
           "start_time": "2026-10-04T11:00:00+09:00",
           "end_time": "2026-10-04T11:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-201-2026-10-04-1130",
           "start_time": "2026-10-04T11:30:00+09:00",
           "end_time": "2026-10-04T12:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-201-2026-10-04-1200",
@@ -5255,13 +5255,13 @@
           "id": "penta-shinjuku-201-2026-10-12-1100",
           "start_time": "2026-10-12T11:00:00+09:00",
           "end_time": "2026-10-12T11:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-201-2026-10-12-1130",
           "start_time": "2026-10-12T11:30:00+09:00",
           "end_time": "2026-10-12T12:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-201-2026-10-12-1200",
@@ -6295,25 +6295,25 @@
           "id": "penta-shinjuku-202-2026-10-10-1300",
           "start_time": "2026-10-10T13:00:00+09:00",
           "end_time": "2026-10-10T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-202-2026-10-10-1330",
           "start_time": "2026-10-10T13:30:00+09:00",
           "end_time": "2026-10-10T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-202-2026-10-10-1400",
           "start_time": "2026-10-10T14:00:00+09:00",
           "end_time": "2026-10-10T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-202-2026-10-10-1430",
           "start_time": "2026-10-10T14:30:00+09:00",
           "end_time": "2026-10-10T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-202-2026-10-10-1500",
@@ -6771,13 +6771,13 @@
           "id": "penta-shinjuku-203-2026-09-23-1000",
           "start_time": "2026-09-23T10:00:00+09:00",
           "end_time": "2026-09-23T10:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-203-2026-09-23-1030",
           "start_time": "2026-09-23T10:30:00+09:00",
           "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-203-2026-09-23-1100",
@@ -6843,25 +6843,25 @@
           "id": "penta-shinjuku-203-2026-09-23-1600",
           "start_time": "2026-09-23T16:00:00+09:00",
           "end_time": "2026-09-23T16:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-203-2026-09-23-1630",
           "start_time": "2026-09-23T16:30:00+09:00",
           "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-203-2026-09-23-1700",
           "start_time": "2026-09-23T17:00:00+09:00",
           "end_time": "2026-09-23T17:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-203-2026-09-23-1730",
           "start_time": "2026-09-23T17:30:00+09:00",
           "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-203-2026-09-23-1800",
@@ -8291,13 +8291,13 @@
           "id": "penta-shinjuku-204-2026-09-26-1000",
           "start_time": "2026-09-26T10:00:00+09:00",
           "end_time": "2026-09-26T10:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-204-2026-09-26-1030",
           "start_time": "2026-09-26T10:30:00+09:00",
           "end_time": "2026-09-26T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-204-2026-09-26-1100",
@@ -9589,25 +9589,25 @@
           "id": "penta-shinjuku-301-2026-09-23-1930",
           "start_time": "2026-09-23T19:30:00+09:00",
           "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-301-2026-09-23-2000",
           "start_time": "2026-09-23T20:00:00+09:00",
           "end_time": "2026-09-23T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-301-2026-09-23-2030",
           "start_time": "2026-09-23T20:30:00+09:00",
           "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-301-2026-09-23-2100",
           "start_time": "2026-09-23T21:00:00+09:00",
           "end_time": "2026-09-23T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-301-2026-09-23-2130",
@@ -10857,25 +10857,25 @@
           "id": "penta-shinjuku-302-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-09-23-1400",
           "start_time": "2026-09-23T14:00:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-09-23-1430",
@@ -11337,25 +11337,25 @@
           "id": "penta-shinjuku-302-2026-10-03-1030",
           "start_time": "2026-10-03T10:30:00+09:00",
           "end_time": "2026-10-03T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-10-03-1100",
           "start_time": "2026-10-03T11:00:00+09:00",
           "end_time": "2026-10-03T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-10-03-1130",
           "start_time": "2026-10-03T11:30:00+09:00",
           "end_time": "2026-10-03T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-10-03-1200",
           "start_time": "2026-10-03T12:00:00+09:00",
           "end_time": "2026-10-03T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-302-2026-10-03-1230",
@@ -12521,13 +12521,13 @@
           "id": "penta-shinjuku-303-2026-09-27-1030",
           "start_time": "2026-09-27T10:30:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-303-2026-09-27-1100",
           "start_time": "2026-09-27T11:00:00+09:00",
           "end_time": "2026-09-27T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-303-2026-09-27-1130",
@@ -12629,25 +12629,25 @@
           "id": "penta-shinjuku-303-2026-09-27-1930",
           "start_time": "2026-09-27T19:30:00+09:00",
           "end_time": "2026-09-27T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-303-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-303-2026-09-27-2030",
           "start_time": "2026-09-27T20:30:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-303-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-303-2026-09-27-2130",
@@ -13867,19 +13867,19 @@
           "id": "penta-shinjuku-304-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T10:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-1030",
           "start_time": "2026-09-27T10:30:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-1100",
           "start_time": "2026-09-27T11:00:00+09:00",
           "end_time": "2026-09-27T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-1130",
@@ -13981,37 +13981,37 @@
           "id": "penta-shinjuku-304-2026-09-27-1930",
           "start_time": "2026-09-27T19:30:00+09:00",
           "end_time": "2026-09-27T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-2030",
           "start_time": "2026-09-27T20:30:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-2130",
           "start_time": "2026-09-27T21:30:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-304-2026-09-27-2230",
@@ -14913,25 +14913,25 @@
           "id": "penta-shinjuku-401-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-1400",
           "start_time": "2026-09-23T14:00:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-1430",
@@ -14997,37 +14997,37 @@
           "id": "penta-shinjuku-401-2026-09-23-1930",
           "start_time": "2026-09-23T19:30:00+09:00",
           "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-2000",
           "start_time": "2026-09-23T20:00:00+09:00",
           "end_time": "2026-09-23T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-2030",
           "start_time": "2026-09-23T20:30:00+09:00",
           "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-2100",
           "start_time": "2026-09-23T21:00:00+09:00",
           "end_time": "2026-09-23T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-2130",
           "start_time": "2026-09-23T21:30:00+09:00",
           "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-2200",
           "start_time": "2026-09-23T22:00:00+09:00",
           "end_time": "2026-09-23T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-09-23-2230",
@@ -16137,25 +16137,25 @@
           "id": "penta-shinjuku-401-2026-10-12-1630",
           "start_time": "2026-10-12T16:30:00+09:00",
           "end_time": "2026-10-12T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-1700",
           "start_time": "2026-10-12T17:00:00+09:00",
           "end_time": "2026-10-12T17:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-1730",
           "start_time": "2026-10-12T17:30:00+09:00",
           "end_time": "2026-10-12T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-1800",
           "start_time": "2026-10-12T18:00:00+09:00",
           "end_time": "2026-10-12T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-1830",
@@ -16173,37 +16173,37 @@
           "id": "penta-shinjuku-401-2026-10-12-1930",
           "start_time": "2026-10-12T19:30:00+09:00",
           "end_time": "2026-10-12T20:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-2000",
           "start_time": "2026-10-12T20:00:00+09:00",
           "end_time": "2026-10-12T20:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-2030",
           "start_time": "2026-10-12T20:30:00+09:00",
           "end_time": "2026-10-12T21:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-2100",
           "start_time": "2026-10-12T21:00:00+09:00",
           "end_time": "2026-10-12T21:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-2130",
           "start_time": "2026-10-12T21:30:00+09:00",
           "end_time": "2026-10-12T22:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-2200",
           "start_time": "2026-10-12T22:00:00+09:00",
           "end_time": "2026-10-12T22:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-401-2026-10-12-2230",
@@ -16349,37 +16349,37 @@
           "id": "penta-shinjuku-402-2026-09-23-1930",
           "start_time": "2026-09-23T19:30:00+09:00",
           "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-09-23-2000",
           "start_time": "2026-09-23T20:00:00+09:00",
           "end_time": "2026-09-23T20:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-09-23-2030",
           "start_time": "2026-09-23T20:30:00+09:00",
           "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-09-23-2100",
           "start_time": "2026-09-23T21:00:00+09:00",
           "end_time": "2026-09-23T21:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-09-23-2130",
           "start_time": "2026-09-23T21:30:00+09:00",
           "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-09-23-2200",
           "start_time": "2026-09-23T22:00:00+09:00",
           "end_time": "2026-09-23T22:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-09-23-2230",
@@ -16745,25 +16745,25 @@
           "id": "penta-shinjuku-402-2026-10-03-1030",
           "start_time": "2026-10-03T10:30:00+09:00",
           "end_time": "2026-10-03T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-402-2026-10-03-1100",
           "start_time": "2026-10-03T11:00:00+09:00",
           "end_time": "2026-10-03T11:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-402-2026-10-03-1130",
           "start_time": "2026-10-03T11:30:00+09:00",
           "end_time": "2026-10-03T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-402-2026-10-03-1200",
           "start_time": "2026-10-03T12:00:00+09:00",
           "end_time": "2026-10-03T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-402-2026-10-03-1230",
@@ -17489,37 +17489,37 @@
           "id": "penta-shinjuku-402-2026-10-12-1630",
           "start_time": "2026-10-12T16:30:00+09:00",
           "end_time": "2026-10-12T17:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-10-12-1700",
           "start_time": "2026-10-12T17:00:00+09:00",
           "end_time": "2026-10-12T17:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-10-12-1730",
           "start_time": "2026-10-12T17:30:00+09:00",
           "end_time": "2026-10-12T18:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-10-12-1800",
           "start_time": "2026-10-12T18:00:00+09:00",
           "end_time": "2026-10-12T18:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-10-12-1830",
           "start_time": "2026-10-12T18:30:00+09:00",
           "end_time": "2026-10-12T19:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-10-12-1900",
           "start_time": "2026-10-12T19:00:00+09:00",
           "end_time": "2026-10-12T19:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "penta-shinjuku-402-2026-10-12-1930",
@@ -18865,49 +18865,49 @@
           "id": "penta-shinjuku-403-2026-10-12-1830",
           "start_time": "2026-10-12T18:30:00+09:00",
           "end_time": "2026-10-12T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-1900",
           "start_time": "2026-10-12T19:00:00+09:00",
           "end_time": "2026-10-12T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-1930",
           "start_time": "2026-10-12T19:30:00+09:00",
           "end_time": "2026-10-12T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-2000",
           "start_time": "2026-10-12T20:00:00+09:00",
           "end_time": "2026-10-12T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-2030",
           "start_time": "2026-10-12T20:30:00+09:00",
           "end_time": "2026-10-12T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-2100",
           "start_time": "2026-10-12T21:00:00+09:00",
           "end_time": "2026-10-12T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-2130",
           "start_time": "2026-10-12T21:30:00+09:00",
           "end_time": "2026-10-12T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-2200",
           "start_time": "2026-10-12T22:00:00+09:00",
           "end_time": "2026-10-12T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-403-2026-10-12-2230",
@@ -20139,31 +20139,31 @@
           "id": "penta-shinjuku-404-2026-10-12-1200",
           "start_time": "2026-10-12T12:00:00+09:00",
           "end_time": "2026-10-12T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-404-2026-10-12-1230",
           "start_time": "2026-10-12T12:30:00+09:00",
           "end_time": "2026-10-12T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-404-2026-10-12-1300",
           "start_time": "2026-10-12T13:00:00+09:00",
           "end_time": "2026-10-12T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-404-2026-10-12-1330",
           "start_time": "2026-10-12T13:30:00+09:00",
           "end_time": "2026-10-12T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-404-2026-10-12-1400",
           "start_time": "2026-10-12T14:00:00+09:00",
           "end_time": "2026-10-12T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-404-2026-10-12-1430",
@@ -20315,25 +20315,25 @@
           "id": "penta-shinjuku-501-2026-09-23-1200",
           "start_time": "2026-09-23T12:00:00+09:00",
           "end_time": "2026-09-23T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-501-2026-09-23-1230",
           "start_time": "2026-09-23T12:30:00+09:00",
           "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-501-2026-09-23-1300",
           "start_time": "2026-09-23T13:00:00+09:00",
           "end_time": "2026-09-23T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-501-2026-09-23-1330",
           "start_time": "2026-09-23T13:30:00+09:00",
           "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-501-2026-09-23-1400",
@@ -23463,37 +23463,37 @@
           "id": "penta-shinjuku-503-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-09-27-2130",
           "start_time": "2026-09-27T21:30:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-09-27-2230",
           "start_time": "2026-09-27T22:30:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-09-27-2300",
           "start_time": "2026-09-27T23:00:00+09:00",
           "end_time": "2026-09-27T23:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-09-27-2330",
           "start_time": "2026-09-27T23:30:00+09:00",
           "end_time": "2026-09-28T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-10-03-1000",
@@ -23631,25 +23631,25 @@
           "id": "penta-shinjuku-503-2026-10-03-2100",
           "start_time": "2026-10-03T21:00:00+09:00",
           "end_time": "2026-10-03T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-10-03-2130",
           "start_time": "2026-10-03T21:30:00+09:00",
           "end_time": "2026-10-03T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-10-03-2200",
           "start_time": "2026-10-03T22:00:00+09:00",
           "end_time": "2026-10-03T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-10-03-2230",
           "start_time": "2026-10-03T22:30:00+09:00",
           "end_time": "2026-10-03T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-503-2026-10-03-2300",
@@ -24395,25 +24395,25 @@
           "id": "penta-shinjuku-504-2026-09-23-1400",
           "start_time": "2026-09-23T14:00:00+09:00",
           "end_time": "2026-09-23T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-504-2026-09-23-1430",
           "start_time": "2026-09-23T14:30:00+09:00",
           "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-504-2026-09-23-1500",
           "start_time": "2026-09-23T15:00:00+09:00",
           "end_time": "2026-09-23T15:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-504-2026-09-23-1530",
           "start_time": "2026-09-23T15:30:00+09:00",
           "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "penta-shinjuku-504-2026-09-23-1600",
