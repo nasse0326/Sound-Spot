@@ -15,7 +15,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "個人練習・24時以降の予約は電話のみ",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-23T13:41:50.232Z",
+  "scraped_at": "2026-09-23T17:25:33.620Z",
   "dates_available": [
     "2026-09-23",
     "2026-09-24",
@@ -147,7 +147,7 @@
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-2300",
           "start_time": "2026-09-23T23:00:00+09:00",
           "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-0900",
@@ -2063,7 +2063,7 @@
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-2300",
           "start_time": "2026-09-23T23:00:00+09:00",
           "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-0900",
@@ -2093,13 +2093,13 @@
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1300",
           "start_time": "2026-09-24T13:00:00+09:00",
           "end_time": "2026-09-24T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1400",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1500",
@@ -5894,7 +5894,7 @@
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-2300",
           "start_time": "2026-09-23T23:00:00+09:00",
           "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-0900",
