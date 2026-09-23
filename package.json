@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "crawl": "tsx scripts/crawl-studios.ts",
+    "crawl:noah": "tsx scripts/crawl-noah-only.ts",
     "scan:noah": "tsx scripts/scan-noah-branch.ts",
     "cf:build": "opennextjs-cloudflare build --build-command \"npm run build\"",
     "cf:preview": "npm run cf:build && opennextjs-cloudflare preview",

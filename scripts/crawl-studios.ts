@@ -2099,7 +2099,7 @@ export async function crawlYokohamaSaila(baseDate: Date, dayCount: number = CRAW
   }
 }
 
-async function runNoahWithStealthSafeguards(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
+export async function runNoahWithStealthSafeguards(now: Date, dayCount: number = CRAWL_DAY_COUNT) {
   if (process.env.GITHUB_ACTIONS === 'true') {
     console.log('\n⏭️ [NOAH Skip] GitHub Actionsのランナーは studionoah.jp からIPブロック(403)を受けるため、'
       + 'ノアのクローリングはGitHub上では実行しません。ノアの巡回はローカル環境から `npm run crawl` を実行してください。');
