@@ -15,9 +15,8 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "個人練習・24時以降の予約は電話のみ",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-23T23:55:15.661Z",
+  "scraped_at": "2026-09-24T07:50:30.807Z",
   "dates_available": [
-    "2026-09-23",
     "2026-09-24",
     "2026-09-25",
     "2026-09-26",
@@ -38,7 +37,8 @@
     "2026-10-11",
     "2026-10-12",
     "2026-10-13",
-    "2026-10-14"
+    "2026-10-14",
+    "2026-10-15"
   ],
   "rooms": [
     {
@@ -60,100 +60,10 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-0900",
-          "start_time": "2026-09-23T09:00:00+09:00",
-          "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1000",
-          "start_time": "2026-09-23T10:00:00+09:00",
-          "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1100",
-          "start_time": "2026-09-23T11:00:00+09:00",
-          "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1200",
-          "start_time": "2026-09-23T12:00:00+09:00",
-          "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1300",
-          "start_time": "2026-09-23T13:00:00+09:00",
-          "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1400",
-          "start_time": "2026-09-23T14:00:00+09:00",
-          "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1500",
-          "start_time": "2026-09-23T15:00:00+09:00",
-          "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1600",
-          "start_time": "2026-09-23T16:00:00+09:00",
-          "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1700",
-          "start_time": "2026-09-23T17:00:00+09:00",
-          "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1800",
-          "start_time": "2026-09-23T18:00:00+09:00",
-          "end_time": "2026-09-23T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-1900",
-          "start_time": "2026-09-23T19:00:00+09:00",
-          "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-2000",
-          "start_time": "2026-09-23T20:00:00+09:00",
-          "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-2100",
-          "start_time": "2026-09-23T21:00:00+09:00",
-          "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-2200",
-          "start_time": "2026-09-23T22:00:00+09:00",
-          "end_time": "2026-09-23T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-a-slot-A-STUDIO-2026-09-23-2300",
-          "start_time": "2026-09-23T23:00:00+09:00",
-          "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-0900",
           "start_time": "2026-09-24T09:00:00+09:00",
           "end_time": "2026-09-24T10:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-1000",
@@ -183,25 +93,25 @@
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-1400",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-1600",
           "start_time": "2026-09-24T16:00:00+09:00",
           "end_time": "2026-09-24T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-a-slot-A-STUDIO-2026-09-24-1800",
@@ -1954,6 +1864,90 @@
           "start_time": "2026-10-14T22:00:00+09:00",
           "end_time": "2026-10-14T23:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-0900",
+          "start_time": "2026-10-15T09:00:00+09:00",
+          "end_time": "2026-10-15T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1000",
+          "start_time": "2026-10-15T10:00:00+09:00",
+          "end_time": "2026-10-15T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1100",
+          "start_time": "2026-10-15T11:00:00+09:00",
+          "end_time": "2026-10-15T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1200",
+          "start_time": "2026-10-15T12:00:00+09:00",
+          "end_time": "2026-10-15T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1300",
+          "start_time": "2026-10-15T13:00:00+09:00",
+          "end_time": "2026-10-15T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1400",
+          "start_time": "2026-10-15T14:00:00+09:00",
+          "end_time": "2026-10-15T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1500",
+          "start_time": "2026-10-15T15:00:00+09:00",
+          "end_time": "2026-10-15T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1600",
+          "start_time": "2026-10-15T16:00:00+09:00",
+          "end_time": "2026-10-15T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1700",
+          "start_time": "2026-10-15T17:00:00+09:00",
+          "end_time": "2026-10-15T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1800",
+          "start_time": "2026-10-15T18:00:00+09:00",
+          "end_time": "2026-10-15T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-1900",
+          "start_time": "2026-10-15T19:00:00+09:00",
+          "end_time": "2026-10-15T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-2000",
+          "start_time": "2026-10-15T20:00:00+09:00",
+          "end_time": "2026-10-15T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-2100",
+          "start_time": "2026-10-15T21:00:00+09:00",
+          "end_time": "2026-10-15T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-a-slot-A-STUDIO-2026-10-15-2200",
+          "start_time": "2026-10-15T22:00:00+09:00",
+          "end_time": "2026-10-15T23:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -1975,96 +1969,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-0900",
-          "start_time": "2026-09-23T09:00:00+09:00",
-          "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1000",
-          "start_time": "2026-09-23T10:00:00+09:00",
-          "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1100",
-          "start_time": "2026-09-23T11:00:00+09:00",
-          "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1200",
-          "start_time": "2026-09-23T12:00:00+09:00",
-          "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1300",
-          "start_time": "2026-09-23T13:00:00+09:00",
-          "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1400",
-          "start_time": "2026-09-23T14:00:00+09:00",
-          "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1500",
-          "start_time": "2026-09-23T15:00:00+09:00",
-          "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1600",
-          "start_time": "2026-09-23T16:00:00+09:00",
-          "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1700",
-          "start_time": "2026-09-23T17:00:00+09:00",
-          "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1800",
-          "start_time": "2026-09-23T18:00:00+09:00",
-          "end_time": "2026-09-23T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-1900",
-          "start_time": "2026-09-23T19:00:00+09:00",
-          "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-2000",
-          "start_time": "2026-09-23T20:00:00+09:00",
-          "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-2100",
-          "start_time": "2026-09-23T21:00:00+09:00",
-          "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-2200",
-          "start_time": "2026-09-23T22:00:00+09:00",
-          "end_time": "2026-09-23T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-b-slot-B-STUDIO-2026-09-23-2300",
-          "start_time": "2026-09-23T23:00:00+09:00",
-          "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-0900",
           "start_time": "2026-09-24T09:00:00+09:00",
@@ -2105,19 +2009,19 @@
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1600",
           "start_time": "2026-09-24T16:00:00+09:00",
           "end_time": "2026-09-24T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-1800",
@@ -2141,7 +2045,7 @@
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-b-slot-B-STUDIO-2026-09-24-2200",
@@ -3870,6 +3774,90 @@
           "start_time": "2026-10-14T22:00:00+09:00",
           "end_time": "2026-10-14T23:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-0900",
+          "start_time": "2026-10-15T09:00:00+09:00",
+          "end_time": "2026-10-15T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1000",
+          "start_time": "2026-10-15T10:00:00+09:00",
+          "end_time": "2026-10-15T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1100",
+          "start_time": "2026-10-15T11:00:00+09:00",
+          "end_time": "2026-10-15T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1200",
+          "start_time": "2026-10-15T12:00:00+09:00",
+          "end_time": "2026-10-15T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1300",
+          "start_time": "2026-10-15T13:00:00+09:00",
+          "end_time": "2026-10-15T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1400",
+          "start_time": "2026-10-15T14:00:00+09:00",
+          "end_time": "2026-10-15T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1500",
+          "start_time": "2026-10-15T15:00:00+09:00",
+          "end_time": "2026-10-15T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1600",
+          "start_time": "2026-10-15T16:00:00+09:00",
+          "end_time": "2026-10-15T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1700",
+          "start_time": "2026-10-15T17:00:00+09:00",
+          "end_time": "2026-10-15T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1800",
+          "start_time": "2026-10-15T18:00:00+09:00",
+          "end_time": "2026-10-15T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-1900",
+          "start_time": "2026-10-15T19:00:00+09:00",
+          "end_time": "2026-10-15T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-2000",
+          "start_time": "2026-10-15T20:00:00+09:00",
+          "end_time": "2026-10-15T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-2100",
+          "start_time": "2026-10-15T21:00:00+09:00",
+          "end_time": "2026-10-15T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-b-slot-B-STUDIO-2026-10-15-2200",
+          "start_time": "2026-10-15T22:00:00+09:00",
+          "end_time": "2026-10-15T23:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -3890,96 +3878,6 @@
       ],
       "start_time_offset": 0,
       "slots": [
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-0900",
-          "start_time": "2026-09-23T09:00:00+09:00",
-          "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1000",
-          "start_time": "2026-09-23T10:00:00+09:00",
-          "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1100",
-          "start_time": "2026-09-23T11:00:00+09:00",
-          "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1200",
-          "start_time": "2026-09-23T12:00:00+09:00",
-          "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1300",
-          "start_time": "2026-09-23T13:00:00+09:00",
-          "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1400",
-          "start_time": "2026-09-23T14:00:00+09:00",
-          "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1500",
-          "start_time": "2026-09-23T15:00:00+09:00",
-          "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1600",
-          "start_time": "2026-09-23T16:00:00+09:00",
-          "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1700",
-          "start_time": "2026-09-23T17:00:00+09:00",
-          "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1800",
-          "start_time": "2026-09-23T18:00:00+09:00",
-          "end_time": "2026-09-23T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-1900",
-          "start_time": "2026-09-23T19:00:00+09:00",
-          "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-2000",
-          "start_time": "2026-09-23T20:00:00+09:00",
-          "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-2100",
-          "start_time": "2026-09-23T21:00:00+09:00",
-          "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-2200",
-          "start_time": "2026-09-23T22:00:00+09:00",
-          "end_time": "2026-09-23T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-c-slot-C-STUDIO-2026-09-23-2300",
-          "start_time": "2026-09-23T23:00:00+09:00",
-          "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "BOOKED"
-        },
         {
           "id": "slot-saila-c-slot-C-STUDIO-2026-09-24-0900",
           "start_time": "2026-09-24T09:00:00+09:00",
@@ -5785,6 +5683,90 @@
           "start_time": "2026-10-14T22:00:00+09:00",
           "end_time": "2026-10-14T23:00:00+09:00",
           "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-0900",
+          "start_time": "2026-10-15T09:00:00+09:00",
+          "end_time": "2026-10-15T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1000",
+          "start_time": "2026-10-15T10:00:00+09:00",
+          "end_time": "2026-10-15T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1100",
+          "start_time": "2026-10-15T11:00:00+09:00",
+          "end_time": "2026-10-15T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1200",
+          "start_time": "2026-10-15T12:00:00+09:00",
+          "end_time": "2026-10-15T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1300",
+          "start_time": "2026-10-15T13:00:00+09:00",
+          "end_time": "2026-10-15T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1400",
+          "start_time": "2026-10-15T14:00:00+09:00",
+          "end_time": "2026-10-15T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1500",
+          "start_time": "2026-10-15T15:00:00+09:00",
+          "end_time": "2026-10-15T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1600",
+          "start_time": "2026-10-15T16:00:00+09:00",
+          "end_time": "2026-10-15T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1700",
+          "start_time": "2026-10-15T17:00:00+09:00",
+          "end_time": "2026-10-15T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1800",
+          "start_time": "2026-10-15T18:00:00+09:00",
+          "end_time": "2026-10-15T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-1900",
+          "start_time": "2026-10-15T19:00:00+09:00",
+          "end_time": "2026-10-15T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-2000",
+          "start_time": "2026-10-15T20:00:00+09:00",
+          "end_time": "2026-10-15T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-2100",
+          "start_time": "2026-10-15T21:00:00+09:00",
+          "end_time": "2026-10-15T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-c-slot-C-STUDIO-2026-10-15-2200",
+          "start_time": "2026-10-15T22:00:00+09:00",
+          "end_time": "2026-10-15T23:00:00+09:00",
+          "status": "AVAILABLE"
         }
       ]
     },
@@ -5807,118 +5789,28 @@
       "start_time_offset": 0,
       "slots": [
         {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-0900",
-          "start_time": "2026-09-23T09:00:00+09:00",
-          "end_time": "2026-09-23T10:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1000",
-          "start_time": "2026-09-23T10:00:00+09:00",
-          "end_time": "2026-09-23T11:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1100",
-          "start_time": "2026-09-23T11:00:00+09:00",
-          "end_time": "2026-09-23T12:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1200",
-          "start_time": "2026-09-23T12:00:00+09:00",
-          "end_time": "2026-09-23T13:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1300",
-          "start_time": "2026-09-23T13:00:00+09:00",
-          "end_time": "2026-09-23T14:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1400",
-          "start_time": "2026-09-23T14:00:00+09:00",
-          "end_time": "2026-09-23T15:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1500",
-          "start_time": "2026-09-23T15:00:00+09:00",
-          "end_time": "2026-09-23T16:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1600",
-          "start_time": "2026-09-23T16:00:00+09:00",
-          "end_time": "2026-09-23T17:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1700",
-          "start_time": "2026-09-23T17:00:00+09:00",
-          "end_time": "2026-09-23T18:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1800",
-          "start_time": "2026-09-23T18:00:00+09:00",
-          "end_time": "2026-09-23T19:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-1900",
-          "start_time": "2026-09-23T19:00:00+09:00",
-          "end_time": "2026-09-23T20:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-2000",
-          "start_time": "2026-09-23T20:00:00+09:00",
-          "end_time": "2026-09-23T21:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-2100",
-          "start_time": "2026-09-23T21:00:00+09:00",
-          "end_time": "2026-09-23T22:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-2200",
-          "start_time": "2026-09-23T22:00:00+09:00",
-          "end_time": "2026-09-23T23:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
-          "id": "slot-saila-d-slot-D-STUDIO-2026-09-23-2300",
-          "start_time": "2026-09-23T23:00:00+09:00",
-          "end_time": "2026-09-24T00:00:00+09:00",
-          "status": "BOOKED"
-        },
-        {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-0900",
           "start_time": "2026-09-24T09:00:00+09:00",
           "end_time": "2026-09-24T10:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1000",
           "start_time": "2026-09-24T10:00:00+09:00",
           "end_time": "2026-09-24T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1100",
           "start_time": "2026-09-24T11:00:00+09:00",
           "end_time": "2026-09-24T12:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1200",
           "start_time": "2026-09-24T12:00:00+09:00",
           "end_time": "2026-09-24T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1300",
@@ -5930,13 +5822,13 @@
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1400",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1500",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-saila-d-slot-D-STUDIO-2026-09-24-1600",
@@ -7700,6 +7592,90 @@
           "id": "slot-saila-d-slot-D-STUDIO-2026-10-14-2200",
           "start_time": "2026-10-14T22:00:00+09:00",
           "end_time": "2026-10-14T23:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-0900",
+          "start_time": "2026-10-15T09:00:00+09:00",
+          "end_time": "2026-10-15T10:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1000",
+          "start_time": "2026-10-15T10:00:00+09:00",
+          "end_time": "2026-10-15T11:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1100",
+          "start_time": "2026-10-15T11:00:00+09:00",
+          "end_time": "2026-10-15T12:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1200",
+          "start_time": "2026-10-15T12:00:00+09:00",
+          "end_time": "2026-10-15T13:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1300",
+          "start_time": "2026-10-15T13:00:00+09:00",
+          "end_time": "2026-10-15T14:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1400",
+          "start_time": "2026-10-15T14:00:00+09:00",
+          "end_time": "2026-10-15T15:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1500",
+          "start_time": "2026-10-15T15:00:00+09:00",
+          "end_time": "2026-10-15T16:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1600",
+          "start_time": "2026-10-15T16:00:00+09:00",
+          "end_time": "2026-10-15T17:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1700",
+          "start_time": "2026-10-15T17:00:00+09:00",
+          "end_time": "2026-10-15T18:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1800",
+          "start_time": "2026-10-15T18:00:00+09:00",
+          "end_time": "2026-10-15T19:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-1900",
+          "start_time": "2026-10-15T19:00:00+09:00",
+          "end_time": "2026-10-15T20:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-2000",
+          "start_time": "2026-10-15T20:00:00+09:00",
+          "end_time": "2026-10-15T21:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-2100",
+          "start_time": "2026-10-15T21:00:00+09:00",
+          "end_time": "2026-10-15T22:00:00+09:00",
+          "status": "AVAILABLE"
+        },
+        {
+          "id": "slot-saila-d-slot-D-STUDIO-2026-10-15-2200",
+          "start_time": "2026-10-15T22:00:00+09:00",
+          "end_time": "2026-10-15T23:00:00+09:00",
           "status": "AVAILABLE"
         }
       ]
