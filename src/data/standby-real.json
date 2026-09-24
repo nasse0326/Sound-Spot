@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:36:02.685Z",
+  "updatedAt": "2026-09-24T17:30:37.281Z",
   "rooms": [
     {
       "id": "standby-a",
@@ -2212,21 +2212,21 @@
           "id": "slot-standby-a-2026-10-11-1300",
           "start_time": "2026-10-11T13:00:00+09:00",
           "end_time": "2026-10-11T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-10-11-1400",
           "start_time": "2026-10-11T14:00:00+09:00",
           "end_time": "2026-10-11T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
           "id": "slot-standby-a-2026-10-11-1500",
           "start_time": "2026-10-11T15:00:00+09:00",
           "end_time": "2026-10-11T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3200
         },
         {
@@ -6889,7 +6889,7 @@
           "id": "slot-standby-c-2026-10-04-1000",
           "start_time": "2026-10-04T10:00:00+09:00",
           "end_time": "2026-10-04T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {

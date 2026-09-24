@@ -15,7 +15,7 @@
   "group_booking_lead_months": 6,
   "solo_booking_rule": "前日17時よりWEB予約受付開始",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-24T13:36:09.228Z",
+  "scraped_at": "2026-09-24T17:30:42.621Z",
   "dates_available": [
     "2026-09-24",
     "2026-09-25",
@@ -544,19 +544,19 @@
           "id": "slot-studio-bayd-shimokitazawa-31-slot-wnspace-7-31-2026-09-27-0800",
           "start_time": "2026-09-27T08:00:00+09:00",
           "end_time": "2026-09-27T09:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-31-slot-wnspace-7-31-2026-09-27-0900",
           "start_time": "2026-09-27T09:00:00+09:00",
           "end_time": "2026-09-27T10:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-31-slot-wnspace-7-31-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-31-slot-wnspace-7-31-2026-09-27-1100",
@@ -3757,13 +3757,13 @@
           "id": "slot-studio-bayd-shimokitazawa-32-slot-wnspace-7-32-2026-09-27-1200",
           "start_time": "2026-09-27T12:00:00+09:00",
           "end_time": "2026-09-27T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-32-slot-wnspace-7-32-2026-09-27-1300",
           "start_time": "2026-09-27T13:00:00+09:00",
           "end_time": "2026-09-27T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-32-slot-wnspace-7-32-2026-09-27-1400",
@@ -16012,13 +16012,13 @@
           "id": "slot-studio-bayd-shimokitazawa-36-slot-wnspace-7-36-2026-09-24-0100",
           "start_time": "2026-09-24T01:00:00+09:00",
           "end_time": "2026-09-24T02:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-36-slot-wnspace-7-36-2026-09-24-0200",
           "start_time": "2026-09-24T02:00:00+09:00",
           "end_time": "2026-09-24T03:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-studio-bayd-shimokitazawa-36-slot-wnspace-7-36-2026-09-24-0300",

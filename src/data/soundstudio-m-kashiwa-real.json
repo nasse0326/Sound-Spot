@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:36:08.113Z",
+  "updatedAt": "2026-09-24T17:30:41.802Z",
   "rooms": [
     {
       "id": "soundm-kashiwa-a",
@@ -94,7 +94,7 @@
           "id": "slot-orpheus-5-Ast-2026-09-24-12",
           "start_time": "2026-09-24T12:00:00+09:00",
           "end_time": "2026-09-24T13:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Ast-2026-09-24-13",
@@ -130,7 +130,7 @@
           "id": "slot-orpheus-5-Ast-2026-09-24-18",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Ast-2026-09-24-19",
@@ -154,7 +154,7 @@
           "id": "slot-orpheus-5-Ast-2026-09-24-22",
           "start_time": "2026-09-24T22:00:00+09:00",
           "end_time": "2026-09-24T23:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Ast-2026-09-24-23",
@@ -1150,19 +1150,19 @@
           "id": "slot-orpheus-5-Ast-2026-10-01-20",
           "start_time": "2026-10-01T20:00:00+09:00",
           "end_time": "2026-10-01T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-orpheus-5-Ast-2026-10-01-21",
           "start_time": "2026-10-01T21:00:00+09:00",
           "end_time": "2026-10-01T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-orpheus-5-Ast-2026-10-01-22",
           "start_time": "2026-10-01T22:00:00+09:00",
           "end_time": "2026-10-01T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-orpheus-5-Ast-2026-10-01-23",
@@ -3294,31 +3294,31 @@
           "id": "slot-orpheus-5-Bst-2026-09-24-14",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-24-15",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-24-16",
           "start_time": "2026-09-24T16:00:00+09:00",
           "end_time": "2026-09-24T17:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-24-17",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-24-18",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-24-19",
@@ -3426,13 +3426,13 @@
           "id": "slot-orpheus-5-Bst-2026-09-25-12",
           "start_time": "2026-09-25T12:00:00+09:00",
           "end_time": "2026-09-25T13:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-25-13",
           "start_time": "2026-09-25T13:00:00+09:00",
           "end_time": "2026-09-25T14:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-orpheus-5-Bst-2026-09-25-14",
@@ -9654,7 +9654,7 @@
           "id": "slot-orpheus-5-Gst-2026-09-24-12",
           "start_time": "2026-09-24T12:00:00+09:00",
           "end_time": "2026-09-24T13:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Gst-2026-09-24-13",
@@ -9672,7 +9672,7 @@
           "id": "slot-orpheus-5-Gst-2026-09-24-15",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Gst-2026-09-24-16",
@@ -9690,7 +9690,7 @@
           "id": "slot-orpheus-5-Gst-2026-09-24-18",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Gst-2026-09-24-19",
@@ -9714,7 +9714,7 @@
           "id": "slot-orpheus-5-Gst-2026-09-24-22",
           "start_time": "2026-09-24T22:00:00+09:00",
           "end_time": "2026-09-24T23:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Gst-2026-09-24-23",
@@ -12840,43 +12840,43 @@
           "id": "slot-orpheus-5-Rst-2026-09-24-12",
           "start_time": "2026-09-24T12:00:00+09:00",
           "end_time": "2026-09-24T13:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-13",
           "start_time": "2026-09-24T13:00:00+09:00",
           "end_time": "2026-09-24T14:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-14",
           "start_time": "2026-09-24T14:00:00+09:00",
           "end_time": "2026-09-24T15:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-15",
           "start_time": "2026-09-24T15:00:00+09:00",
           "end_time": "2026-09-24T16:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-16",
           "start_time": "2026-09-24T16:00:00+09:00",
           "end_time": "2026-09-24T17:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-17",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-18",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-19",
@@ -12900,7 +12900,7 @@
           "id": "slot-orpheus-5-Rst-2026-09-24-22",
           "start_time": "2026-09-24T22:00:00+09:00",
           "end_time": "2026-09-24T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-orpheus-5-Rst-2026-09-24-23",
