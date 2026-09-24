@@ -143,7 +143,7 @@ export async function fetchNoahStoreDays(
   for (const st of targetRooms) {
     rawData[st.studioId] = [];
     // ログイン必須部屋のみCookieを付与。ログイン不要部屋はゲストアクセスで100%確実に取得！
-    const effectiveCookie = st.loginRequired ? cookieHeader : '';
+    let effectiveCookie = st.loginRequired ? cookieHeader : '';
 
     for (const m of mondays) {
       try {
@@ -174,6 +174,7 @@ export async function fetchNoahStoreDays(
           const newCookie = await getOrRefreshNoahCookie(true);
           if (newCookie) {
             cookieHeader = newCookie;
+            effectiveCookie = newCookie;
             res = await fetchSchedule(newCookie);
             json = res.status === 200 ? await res.json() : null;
           }

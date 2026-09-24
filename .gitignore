@@ -32,10 +32,14 @@ yarn-error.log*
 .env
 storageState.json
 /auth/
+.claude/settings.local.json
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local cron/launchd runtime logs (Mac miniのNOAHローカルBot用)
+/logs/
 
 # debug dumps and root exploration files
 /*.png

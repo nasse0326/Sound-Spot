@@ -325,6 +325,23 @@ flowchart TD
 | **スタジオペンタ 池袋ハンズサイド店** | 7部屋 | 電話予約 (03-3984-2811) | サンシャイン通り。空き状況ボードなし・電話受付のみ確認済。 |
 | **ゲートウェイスタジオ 池袋北口店** | 16部屋 | Reserve1.jp (`lc=tlsccmeco&mn=3&gr=1`) | 西池袋1-43-7 福住ビル5F・6F。5F(Ast〜Gst)/6F(1st〜8st+SUBROOM)が同一カレンダーを共有。2026-09-17に実装・稼働確認済。 |
 
+### 4.11 音楽スタジオ ensemble（上野）の予約可能日数の制約
+- **対象**: `scripts/lib/ensemble-fetcher.ts`（4部屋: A/B/C/D studio）。
+- **2026-09-24追記: 予約枠登録は「当日から7日後（次の同じ曜日）まで」に限定される仕様と判明。** それ以降の日付にアクセスしても、この店舗の予約システム側にまだ枠自体が登録されていない（空き/満室いずれの実データも存在しない）。
+- **対応**: `fetchEnsembleUenoDays()`側で`ENSEMBLE_UENO_MAX_DAY_COUNT = 8`（当日〜7日後の8日分）を上限とし、共通の`CRAWL_DAY_COUNT`（22日）を渡されても内部でこれにクランプしてそれ以降はアクセスしない。
+  - UI側の変更は不要。`src/lib/slot-utils.ts`の`checkRoomAvailability()`は該当日時のスロットが1件も存在しない場合、自動的に`matchType: 'unfetched'`（表示ラベル「未取得」＝タイムライン上は「ー」）として扱う既存ロジックがあるため、8日目以降は取得しないだけで自然に「未取得」表示になる。
+  - **一度きりの対応として**、本仕様変更前に22日分取得してしまっていたSupabase上の8日目以降（2026-10-02以降）の古いスロットデータ1,456件（4部屋×364件）を削除済み。今後はそもそも8日目以降のデータが書き込まれないため、再発しない。
+
+### 4.12 サウンドスタジオノア: ローカルBot自動巡回（Mac mini常時稼働）
+- **背景**: NOAHはGitHub ActionsのランナーIPからは403ブロックを受けるため（4.6節）、従来は`npm run crawl:noah`の手動実行のみに限定されていた。2026-09-24、Mac mini常時稼働環境が整ったことに伴い、macOSの`launchd`によるスケジュール実行（＝ローカルBot化）を導入。
+- **実行方式**:
+  - ラッパースクリプト: `scripts/run-noah-cron.sh`（Homebrew版Node.jsへのPATHを明示的に通した上で`npm run crawl:noah`を実行し、`logs/noah-cron.log`にログを追記。`logs/`はGit管理対象外）。
+  - launchd plist: `~/Library/LaunchAgents/com.soundspot.noah-crawler.plist`（このMac mini上のユーザーごとの設定であり、リポジトリには含まれない）。
+- **巡回頻度・時刻**: **1日2回、07:09 と 18:24 (JST)**。
+  - 意図的に4.9節記載のGitHub Actions側の巡回時刻（06:33/11:48/17:18/21:33）とも、キリの良い分（00/15/30/45分）とも重ならない半端な分に設定し、bot的な規則性を避けている。
+  - **2026-09-24時点でBAN対策のため、意図的に低頻度（1日2回）からスタート**。GitHub Actions側の他店舗（1日4回）より少ない頻度。様子を見て頻度調整の可能性あり。
+- **Cookie保持方針のバグ修正**: `scripts/lib/noah-fetcher.ts`の`fetchNoahStoreDays()`にて、店舗内の同一部屋に対する5週分（月曜起点）のループ中、途中でセッション自動修復（再ログイン）が発生しても、直後の週の取得には修復前の古いCookie（`effectiveCookie`が`const`で固定されていた）を使い続けてしまい、同一部屋だけで最大5回連続の無駄な再ログインが発生するバグを修正（`effectiveCookie`を`let`にし、Cookie修復のたびに反映するよう変更）。無駄なログインリクエストの削減はBANリスク低減に直結する。
+
 ---
 
 ## 5. UI / タイムライン設計ロジック
@@ -752,8 +769,10 @@ flowchart TD
 | `scripts/lib/reserve1-fetcher.ts` | モジュール | **Reserve1 ASP用超軽量スクレイパー**（Node fetch / GOODMAN、ゲートウェイ渋谷、Music man、ヨコハマ・セーラスタジオ等）。部屋名は"1st"系・全角コード系に加え、"A-STUDIO"のような数字を含まないアルファベット1文字+STUDIO形式（`letterStudioMatch`）にも対応 |
 | `scripts/lib/bot-fetcher.ts` | モジュール | **BASS ON TOP（スタジオル）用超軽量スクレイパー**（Node fetch / 秋葉原昭和通り口店） |
 | `scripts/lib/ongakukan-fetcher.ts` | モジュール | **スタジオ音楽館（ajg.jp）用超軽量スクレイパー**（Node fetch / アキバ店・新宿西口店両対応・全室21日間自動パース） |
+| `scripts/lib/ensemble-fetcher.ts` | モジュール | **音楽スタジオ ensemble（上野）用スクレイパー**（Node fetch / 全4部屋。予約枠が当日〜7日後までしか登録されないため`ENSEMBLE_UENO_MAX_DAY_COUNT=8`で取得を打ち切り、以降は自然に「未取得」表示になる。詳細は4.11節） |
 | `src/config/noah-master.ts` | 設定 (マスター・単一の真実源) | **ノア全7店舗・101部屋の部屋マスター**（`studioId`・畳数・開始オフセット・ログイン要否・実料金・実機材）。`scripts/lib/noah-fetcher.ts`（クロール）と `src/lib/noah-tokyo-converter.ts`（表示）の双方がここを読み込む |
 | `scripts/lib/noah-fetcher.ts` | モジュール | **サウンドスタジオノア用スクレイパー**（公式Schedule API / 都内全7店舗・101部屋・21日間自動パース。部屋マスターは `src/config/noah-master.ts` を参照） |
+| `scripts/run-noah-cron.sh` | スクリプト (Mac mini launchd用) | **NOAHローカルBot巡回のラッパー**。`~/Library/LaunchAgents/com.soundspot.noah-crawler.plist`から1日2回(07:09/18:24 JST)起動され、Homebrew版Node.jsへのPATHを通した上で`npm run crawl:noah`を実行し`logs/noah-cron.log`へ記録（4.12節参照） |
 | `scripts/lib/node-fetcher.ts` | モジュール | **STUDIO NODE 新宿店用スクレイパー**（Node fetch / 全7部屋・00分/30分開始混在・21日間自動パース） |
 | `scripts/lib/penta-fetcher.ts` | モジュール | **スタジオペンタ新宿店用スクレイパー**（Supabase Edge Functions KV-API / 全19部屋・土日祝リアルタイム空き状況自動パース） |
 | `src/data/penta-shinjuku-real.json` | データ | スタジオペンタ新宿店 全19部屋・土日祝日の実データ（機材・料金・リアルタイム空き状況スロット） |

@@ -46,6 +46,12 @@ export interface EnsembleRoomSpec {
 
 const GRID_START_HOUR = 10;
 
+// 上野店（s-ens.net）は予約システム側の仕様上、当日から7日後（次の同じ曜日）までしか
+// 予約枠が登録されておらず、それ以降の日付はアクセスしても空き状況が存在しない。
+// それ以降を取得しようとするとデータの無い日を誤って「空き」or「満室」と解釈しかねないため、
+// 意図的にここで打ち切り、以降はフロント側の「スロット0件＝未取得（ー）」表示に委ねる。
+const ENSEMBLE_UENO_MAX_DAY_COUNT = 8;
+
 export const ENSEMBLE_UENO_ROOMS: EnsembleRoomSpec[] = [
   { letter: 'A', id: 'ensemble-ueno-ast', name: 'Ast (11帖)', size_sqm: 18, capacity: 6, hourly_rate: 2600, day_rate: 1600, individual_rate: 700, start_time_offset: 0, features: ['アップライトピアノ常設'] },
   { letter: 'B', id: 'ensemble-ueno-bst', name: 'Bst (11帖)', size_sqm: 18, capacity: 6, hourly_rate: 2600, day_rate: 1600, individual_rate: 700, start_time_offset: 0, features: ['正方形に近い部屋形状でバンドの音合わせに最適'] },
@@ -57,11 +63,12 @@ export async function fetchEnsembleUenoDays(
   baseDate: Date = new Date(),
   dayCount: number = CRAWL_DAY_COUNT
 ): Promise<EnsembleRoomData[]> {
-  console.log(`📡 [ensemble] 音楽スタジオ ensemble（上野）の高速取得（Node fetch / ${dayCount}日間）を開始...`);
+  const effectiveDayCount = Math.min(dayCount, ENSEMBLE_UENO_MAX_DAY_COUNT);
+  console.log(`📡 [ensemble] 音楽スタジオ ensemble（上野）の高速取得（Node fetch / ${effectiveDayCount}日間・予約システムの登録上限に合わせて打ち切り）を開始...`);
 
   const slotsByLetter: Record<string, EnsembleSlot[]> = { A: [], B: [], C: [], D: [] };
 
-  for (let d = 0; d < dayCount; d++) {
+  for (let d = 0; d < effectiveDayCount; d++) {
     const dateStr = format(addDays(baseDate, d), 'yyyy-MM-dd');
     const targetDay = dateStr.replace(/-/g, '');
     try {
