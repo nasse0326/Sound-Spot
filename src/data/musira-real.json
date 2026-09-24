@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T07:50:23.918Z",
+  "updatedAt": "2026-09-24T13:36:03.414Z",
   "rooms": [
     {
       "id": "musira-a",
@@ -107,21 +107,21 @@
           "id": "slot-musira-a-2026-09-24-1800",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
           "id": "slot-musira-a-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
           "id": "slot-musira-a-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
@@ -212,7 +212,7 @@
           "id": "slot-musira-a-2026-09-25-1500",
           "start_time": "2026-09-25T15:00:00+09:00",
           "end_time": "2026-09-25T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
@@ -1339,21 +1339,21 @@
           "id": "slot-musira-a-2026-10-04-1400",
           "start_time": "2026-10-04T14:00:00+09:00",
           "end_time": "2026-10-04T15:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3850
         },
         {
           "id": "slot-musira-a-2026-10-04-1500",
           "start_time": "2026-10-04T15:00:00+09:00",
           "end_time": "2026-10-04T16:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3850
         },
         {
           "id": "slot-musira-a-2026-10-04-1600",
           "start_time": "2026-10-04T16:00:00+09:00",
           "end_time": "2026-10-04T17:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 3850
         },
         {
@@ -2095,21 +2095,21 @@
           "id": "slot-musira-a-2026-10-10-1400",
           "start_time": "2026-10-10T14:00:00+09:00",
           "end_time": "2026-10-10T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
           "id": "slot-musira-a-2026-10-10-1500",
           "start_time": "2026-10-10T15:00:00+09:00",
           "end_time": "2026-10-10T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
           "id": "slot-musira-a-2026-10-10-1600",
           "start_time": "2026-10-10T16:00:00+09:00",
           "end_time": "2026-10-10T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3850
         },
         {
@@ -2898,14 +2898,14 @@
           "id": "slot-musira-b-2026-09-24-1800",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
           "id": "slot-musira-b-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
@@ -2933,7 +2933,7 @@
           "id": "slot-musira-b-2026-09-24-2300",
           "start_time": "2026-09-24T23:00:00+09:00",
           "end_time": "2026-09-25T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
@@ -2996,7 +2996,7 @@
           "id": "slot-musira-b-2026-09-25-1400",
           "start_time": "2026-09-25T14:00:00+09:00",
           "end_time": "2026-09-25T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
@@ -3045,7 +3045,7 @@
           "id": "slot-musira-b-2026-09-25-2100",
           "start_time": "2026-09-25T21:00:00+09:00",
           "end_time": "2026-09-25T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
@@ -4550,14 +4550,14 @@
           "id": "slot-musira-b-2026-10-07-2000",
           "start_time": "2026-10-07T20:00:00+09:00",
           "end_time": "2026-10-07T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
           "id": "slot-musira-b-2026-10-07-2100",
           "start_time": "2026-10-07T21:00:00+09:00",
           "end_time": "2026-10-07T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3350
         },
         {
@@ -5682,28 +5682,28 @@
           "id": "slot-musira-c-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2850
         },
         {
           "id": "slot-musira-c-2026-09-24-1800",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2850
         },
         {
           "id": "slot-musira-c-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2850
         },
         {
           "id": "slot-musira-c-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2850
         },
         {
@@ -5724,7 +5724,7 @@
           "id": "slot-musira-c-2026-09-24-2300",
           "start_time": "2026-09-24T23:00:00+09:00",
           "end_time": "2026-09-25T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2850
         },
         {

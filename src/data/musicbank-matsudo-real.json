@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T07:50:27.675Z",
+  "updatedAt": "2026-09-24T13:36:08.043Z",
   "rooms": [
     {
       "id": "musicbank-matsudo-ast",
@@ -100,14 +100,14 @@
           "id": "slot-musicbank-matsudo-ast-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
           "id": "slot-musicbank-matsudo-ast-2026-09-24-1800",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -121,14 +121,14 @@
           "id": "slot-musicbank-matsudo-ast-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
           "id": "slot-musicbank-matsudo-ast-2026-09-24-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -177,7 +177,7 @@
           "id": "slot-musicbank-matsudo-ast-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2500
         },
         {
@@ -2891,7 +2891,7 @@
           "id": "slot-musicbank-matsudo-bst-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -2912,14 +2912,14 @@
           "id": "slot-musicbank-matsudo-bst-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
           "id": "slot-musicbank-matsudo-bst-2026-09-24-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -2968,7 +2968,7 @@
           "id": "slot-musicbank-matsudo-bst-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -5688,7 +5688,7 @@
           "id": "slot-musicbank-matsudo-cst-2026-09-24-1800",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1500
         },
         {
@@ -8545,7 +8545,7 @@
           "id": "slot-musicbank-matsudo-dst-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -11332,7 +11332,7 @@
           "id": "slot-musicbank-matsudo-1st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -11346,14 +11346,14 @@
           "id": "slot-musicbank-matsudo-1st-2026-09-25-1200",
           "start_time": "2026-09-25T12:00:00+09:00",
           "end_time": "2026-09-25T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-1st-2026-09-25-1300",
           "start_time": "2026-09-25T13:00:00+09:00",
           "end_time": "2026-09-25T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -11465,7 +11465,7 @@
           "id": "slot-musicbank-matsudo-1st-2026-09-26-1100",
           "start_time": "2026-09-26T11:00:00+09:00",
           "end_time": "2026-09-26T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -11500,21 +11500,21 @@
           "id": "slot-musicbank-matsudo-1st-2026-09-26-1600",
           "start_time": "2026-09-26T16:00:00+09:00",
           "end_time": "2026-09-26T17:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-1st-2026-09-26-1700",
           "start_time": "2026-09-26T17:00:00+09:00",
           "end_time": "2026-09-26T18:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-1st-2026-09-26-1800",
           "start_time": "2026-09-26T18:00:00+09:00",
           "end_time": "2026-09-26T19:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
@@ -14119,7 +14119,7 @@
           "id": "slot-musicbank-matsudo-2st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -14175,7 +14175,7 @@
           "id": "slot-musicbank-matsudo-2st-2026-09-25-1800",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -14189,7 +14189,7 @@
           "id": "slot-musicbank-matsudo-2st-2026-09-25-2000",
           "start_time": "2026-09-25T20:00:00+09:00",
           "end_time": "2026-09-25T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -16843,21 +16843,21 @@
           "id": "slot-musicbank-matsudo-3st-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-3st-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-3st-2026-09-24-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -16906,7 +16906,7 @@
           "id": "slot-musicbank-matsudo-3st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -18082,28 +18082,28 @@
           "id": "slot-musicbank-matsudo-3st-2026-10-04-1600",
           "start_time": "2026-10-04T16:00:00+09:00",
           "end_time": "2026-10-04T17:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-3st-2026-10-04-1700",
           "start_time": "2026-10-04T17:00:00+09:00",
           "end_time": "2026-10-04T18:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-3st-2026-10-04-1800",
           "start_time": "2026-10-04T18:00:00+09:00",
           "end_time": "2026-10-04T19:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-3st-2026-10-04-1900",
           "start_time": "2026-10-04T19:00:00+09:00",
           "end_time": "2026-10-04T20:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
@@ -19616,35 +19616,35 @@
           "id": "slot-musicbank-matsudo-4st-2026-09-24-1700",
           "start_time": "2026-09-24T17:00:00+09:00",
           "end_time": "2026-09-24T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-4st-2026-09-24-1800",
           "start_time": "2026-09-24T18:00:00+09:00",
           "end_time": "2026-09-24T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-4st-2026-09-24-1900",
           "start_time": "2026-09-24T19:00:00+09:00",
           "end_time": "2026-09-24T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-4st-2026-09-24-2000",
           "start_time": "2026-09-24T20:00:00+09:00",
           "end_time": "2026-09-24T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-4st-2026-09-24-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -19693,7 +19693,7 @@
           "id": "slot-musicbank-matsudo-4st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -19735,14 +19735,14 @@
           "id": "slot-musicbank-matsudo-4st-2026-09-25-1600",
           "start_time": "2026-09-25T16:00:00+09:00",
           "end_time": "2026-09-25T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
           "id": "slot-musicbank-matsudo-4st-2026-09-25-1700",
           "start_time": "2026-09-25T17:00:00+09:00",
           "end_time": "2026-09-25T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -22480,7 +22480,7 @@
           "id": "slot-musicbank-matsudo-5st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -25267,7 +25267,7 @@
           "id": "slot-musicbank-matsudo-6st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -28005,7 +28005,7 @@
           "id": "slot-musicbank-matsudo-7st-2026-09-24-2100",
           "start_time": "2026-09-24T21:00:00+09:00",
           "end_time": "2026-09-24T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -28054,7 +28054,7 @@
           "id": "slot-musicbank-matsudo-7st-2026-09-25-1000",
           "start_time": "2026-09-25T10:00:00+09:00",
           "end_time": "2026-09-25T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1700
         },
         {
@@ -28327,7 +28327,7 @@
           "id": "slot-musicbank-matsudo-7st-2026-09-27-1300",
           "start_time": "2026-09-27T13:00:00+09:00",
           "end_time": "2026-09-27T14:00:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 1700
         },
         {
