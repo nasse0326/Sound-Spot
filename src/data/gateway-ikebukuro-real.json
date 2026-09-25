@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-24T17:30:43.259Z",
+  "scraped_at": "2026-09-24T23:58:55.095Z",
   "dates_available": [
     "2026-09-24",
     "2026-09-25",
@@ -232,7 +232,7 @@
           "id": "slot-gw-ike-1st-slot-1st-2026-09-25-1900",
           "start_time": "2026-09-25T19:00:00+09:00",
           "end_time": "2026-09-25T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -23504,7 +23504,7 @@
           "id": "slot-gw-ike-bst-slot-Bst-2026-09-25-1430",
           "start_time": "2026-09-25T14:30:00+09:00",
           "end_time": "2026-09-25T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -27774,14 +27774,14 @@
           "id": "slot-gw-ike-cst-slot-Cst-2026-10-13-2130",
           "start_time": "2026-10-13T21:30:00+09:00",
           "end_time": "2026-10-13T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
           "id": "slot-gw-ike-cst-slot-Cst-2026-10-13-2230",
           "start_time": "2026-10-13T22:30:00+09:00",
           "end_time": "2026-10-13T23:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3190
         },
         {
@@ -28166,14 +28166,14 @@
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-25-1430",
           "start_time": "2026-09-25T14:30:00+09:00",
           "end_time": "2026-09-25T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-ike-dst-slot-Dst-2026-09-25-1530",
           "start_time": "2026-09-25T15:30:00+09:00",
           "end_time": "2026-09-25T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {

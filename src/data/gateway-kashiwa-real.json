@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日10:00よりWEB/電話受付開始 (1名770円/h、2名1,320円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-24T17:30:43.736Z",
+  "scraped_at": "2026-09-24T23:58:55.899Z",
   "dates_available": [
     "2026-09-24",
     "2026-09-25",
@@ -2592,7 +2592,7 @@
           "id": "slot-gw-kashiwa-2st-slot-2st-2026-09-25-2200",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2640
         },
         {
@@ -4083,14 +4083,14 @@
           "id": "slot-gw-kashiwa-2st-slot-2st-2026-10-10-1000",
           "start_time": "2026-10-10T10:00:00+09:00",
           "end_time": "2026-10-10T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2640
         },
         {
           "id": "slot-gw-kashiwa-2st-slot-2st-2026-10-10-1100",
           "start_time": "2026-10-10T11:00:00+09:00",
           "end_time": "2026-10-10T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2640
         },
         {
@@ -4923,7 +4923,7 @@
           "id": "slot-gw-kashiwa-3st-slot-3st-2026-09-25-2200",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {

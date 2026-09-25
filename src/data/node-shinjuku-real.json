@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T17:31:00.901Z",
+  "updatedAt": "2026-09-24T23:59:10.247Z",
   "rooms": [
     {
       "id": "node-shinjuku-3Cst",
@@ -371,7 +371,7 @@
           "id": "node-3-3Cst-2026-09-28-1800",
           "start_time": "2026-09-28T18:00:00+09:00",
           "end_time": "2026-09-28T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-3Cst-2026-09-28-1900",
@@ -773,13 +773,13 @@
           "id": "node-3-3Cst-2026-10-03-2000",
           "start_time": "2026-10-03T20:00:00+09:00",
           "end_time": "2026-10-03T21:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-3-3Cst-2026-10-03-2100",
           "start_time": "2026-10-03T21:00:00+09:00",
           "end_time": "2026-10-03T22:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-3-3Cst-2026-10-03-2200",
@@ -2269,13 +2269,13 @@
           "id": "node-3-3Dst-2026-09-30-2100",
           "start_time": "2026-09-30T21:00:00+09:00",
           "end_time": "2026-09-30T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-3Dst-2026-09-30-2200",
           "start_time": "2026-09-30T22:00:00+09:00",
           "end_time": "2026-09-30T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-3Dst-2026-10-01-1000",
@@ -3981,25 +3981,25 @@
           "id": "node-3-4Est-2026-09-30-1900",
           "start_time": "2026-09-30T19:00:00+09:00",
           "end_time": "2026-09-30T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-4Est-2026-09-30-2000",
           "start_time": "2026-09-30T20:00:00+09:00",
           "end_time": "2026-09-30T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-4Est-2026-09-30-2100",
           "start_time": "2026-09-30T21:00:00+09:00",
           "end_time": "2026-09-30T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-4Est-2026-09-30-2200",
           "start_time": "2026-09-30T22:00:00+09:00",
           "end_time": "2026-09-30T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-3-4Est-2026-10-01-1000",
