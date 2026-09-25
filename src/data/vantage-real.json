@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T08:12:50.344Z",
+  "updatedAt": "2026-09-25T13:54:08.432Z",
   "rooms": [
     {
       "id": "vantage-cst",
@@ -119,21 +119,21 @@
           "id": "slot-vantage-cst-2026-09-25-2000",
           "start_time": "2026-09-25T20:00:00+09:00",
           "end_time": "2026-09-25T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-25-2100",
           "start_time": "2026-09-25T21:00:00+09:00",
           "end_time": "2026-09-25T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-25-2200",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -168,7 +168,7 @@
           "id": "slot-vantage-cst-2026-09-26-0900",
           "start_time": "2026-09-26T09:00:00+09:00",
           "end_time": "2026-09-26T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -189,42 +189,42 @@
           "id": "slot-vantage-cst-2026-09-26-1200",
           "start_time": "2026-09-26T12:00:00+09:00",
           "end_time": "2026-09-26T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-26-1300",
           "start_time": "2026-09-26T13:00:00+09:00",
           "end_time": "2026-09-26T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-26-1400",
           "start_time": "2026-09-26T14:00:00+09:00",
           "end_time": "2026-09-26T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-26-1500",
           "start_time": "2026-09-26T15:00:00+09:00",
           "end_time": "2026-09-26T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-26-1600",
           "start_time": "2026-09-26T16:00:00+09:00",
           "end_time": "2026-09-26T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-09-26-1700",
           "start_time": "2026-09-26T17:00:00+09:00",
           "end_time": "2026-09-26T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -357,7 +357,7 @@
           "id": "slot-vantage-cst-2026-09-27-1800",
           "start_time": "2026-09-27T18:00:00+09:00",
           "end_time": "2026-09-27T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -1883,14 +1883,14 @@
           "id": "slot-vantage-cst-2026-10-09-2000",
           "start_time": "2026-10-09T20:00:00+09:00",
           "end_time": "2026-10-09T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-vantage-cst-2026-10-09-2100",
           "start_time": "2026-10-09T21:00:00+09:00",
           "end_time": "2026-10-09T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -2895,7 +2895,7 @@
           "id": "slot-vantage-bst-2026-09-25-1800",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3278
         },
         {
@@ -2916,14 +2916,14 @@
           "id": "slot-vantage-bst-2026-09-25-2100",
           "start_time": "2026-09-25T21:00:00+09:00",
           "end_time": "2026-09-25T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3278
         },
         {
           "id": "slot-vantage-bst-2026-09-25-2200",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3278
         },
         {
@@ -2958,7 +2958,7 @@
           "id": "slot-vantage-bst-2026-09-26-0900",
           "start_time": "2026-09-26T09:00:00+09:00",
           "end_time": "2026-09-26T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 3278
         },
         {
@@ -5686,14 +5686,14 @@
           "id": "slot-vantage-ast-2026-09-25-1800",
           "start_time": "2026-09-25T18:00:00+09:00",
           "end_time": "2026-09-25T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 4125
         },
         {
           "id": "slot-vantage-ast-2026-09-25-1900",
           "start_time": "2026-09-25T19:00:00+09:00",
           "end_time": "2026-09-25T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 4125
         },
         {
@@ -5714,7 +5714,7 @@
           "id": "slot-vantage-ast-2026-09-25-2200",
           "start_time": "2026-09-25T22:00:00+09:00",
           "end_time": "2026-09-25T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 4125
         },
         {
@@ -5749,7 +5749,7 @@
           "id": "slot-vantage-ast-2026-09-26-0900",
           "start_time": "2026-09-26T09:00:00+09:00",
           "end_time": "2026-09-26T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 4125
         },
         {
