@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T13:54:10.975Z",
+  "updatedAt": "2026-09-25T17:29:53.564Z",
   "rooms": [
     {
       "id": "koyama-r-1st",
@@ -344,14 +344,14 @@
           "id": "slot-koyama-r-1st-2026-09-27-1600",
           "start_time": "2026-09-27T16:00:00+09:00",
           "end_time": "2026-09-27T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
           "id": "slot-koyama-r-1st-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
@@ -5883,7 +5883,7 @@
           "id": "slot-koyama-r-3st-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -5911,7 +5911,7 @@
           "id": "slot-koyama-r-3st-2026-09-27-1400",
           "start_time": "2026-09-27T14:00:00+09:00",
           "end_time": "2026-09-27T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -5932,7 +5932,7 @@
           "id": "slot-koyama-r-3st-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -5953,7 +5953,7 @@
           "id": "slot-koyama-r-3st-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -8674,7 +8674,7 @@
           "id": "slot-koyama-r-4st-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -8702,14 +8702,14 @@
           "id": "slot-koyama-r-4st-2026-09-27-1400",
           "start_time": "2026-09-27T14:00:00+09:00",
           "end_time": "2026-09-27T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-koyama-r-4st-2026-09-27-1500",
           "start_time": "2026-09-27T15:00:00+09:00",
           "end_time": "2026-09-27T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -8744,21 +8744,21 @@
           "id": "slot-koyama-r-4st-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-koyama-r-4st-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-koyama-r-4st-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -11358,7 +11358,7 @@
           "id": "slot-koyama-r-piano-2026-09-26-1300",
           "start_time": "2026-09-26T13:00:00+09:00",
           "end_time": "2026-09-26T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -11512,14 +11512,14 @@
           "id": "slot-koyama-r-piano-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-piano-2026-09-27-1800",
           "start_time": "2026-09-27T18:00:00+09:00",
           "end_time": "2026-09-27T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -14252,21 +14252,21 @@
           "id": "slot-koyama-r-lesson-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-09-27-1100",
           "start_time": "2026-09-27T11:00:00+09:00",
           "end_time": "2026-09-27T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-09-27-1200",
           "start_time": "2026-09-27T12:00:00+09:00",
           "end_time": "2026-09-27T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -14315,7 +14315,7 @@
           "id": "slot-koyama-r-lesson-2026-09-27-1900",
           "start_time": "2026-09-27T19:00:00+09:00",
           "end_time": "2026-09-27T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -16142,14 +16142,14 @@
           "id": "slot-koyama-r-lesson-2026-10-12-1000",
           "start_time": "2026-10-12T10:00:00+09:00",
           "end_time": "2026-10-12T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-10-12-1100",
           "start_time": "2026-10-12T11:00:00+09:00",
           "end_time": "2026-10-12T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {

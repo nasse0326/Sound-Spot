@@ -16,7 +16,7 @@
   "group_booking_lead_months": 3,
   "solo_booking_rule": "前日のオープン（10:00）よりWEB/電話受付開始 (1名700円/h、2名1,100円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-25T13:54:15.309Z",
+  "scraped_at": "2026-09-25T17:29:58.501Z",
   "dates_available": [
     "2026-09-25",
     "2026-09-26",
@@ -4515,14 +4515,14 @@
           "id": "slot-gw-baba-3b-slot-3B-2026-09-29-1600",
           "start_time": "2026-09-29T16:00:00+09:00",
           "end_time": "2026-09-29T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-baba-3b-slot-3B-2026-09-29-1700",
           "start_time": "2026-09-29T17:00:00+09:00",
           "end_time": "2026-09-29T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -4634,14 +4634,14 @@
           "id": "slot-gw-baba-3b-slot-3B-2026-09-30-2000",
           "start_time": "2026-09-30T20:00:00+09:00",
           "end_time": "2026-09-30T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-baba-3b-slot-3B-2026-09-30-2100",
           "start_time": "2026-09-30T21:00:00+09:00",
           "end_time": "2026-09-30T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -10374,7 +10374,7 @@
           "id": "slot-gw-baba-2c-slot-2C-2026-09-27-1230",
           "start_time": "2026-09-27T12:30:00+09:00",
           "end_time": "2026-09-27T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -20498,7 +20498,7 @@
           "id": "slot-gw-baba-4c-slot-4C-2026-09-27-1315",
           "start_time": "2026-09-27T13:15:00+09:00",
           "end_time": "2026-09-27T14:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2970
         },
         {
