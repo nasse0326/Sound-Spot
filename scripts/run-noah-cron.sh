@@ -4,7 +4,7 @@
 # Homebrew版Node.jsへのPATHをここで明示的に通す。
 set -uo pipefail
 
-PROJECT_DIR="/Users/nasse0326/Downloads/Antigravity/006_Band Studio Search"
+PROJECT_DIR="/Users/nasse0326/Developer/006_Band Studio Search"
 export PATH="/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:$PATH"
 
 cd "$PROJECT_DIR" || exit 1

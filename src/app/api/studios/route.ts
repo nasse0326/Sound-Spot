@@ -9,6 +9,13 @@ import { format } from 'date-fns';
 // （経緯は project_cloudflare_asset_size_limit メモリ参照）。現在はエリア追加のたびに
 // 即座にSupabaseへ反映する運用（surgical insert）が定着しているため、Supabaseが
 // 唯一のデータソースとなる。Supabase未設定・クエリ失敗時は空配列を返す。
+
+// 2026-09-26追記: Cache-Controlヘッダーが一切無かったため、ブラウザ（またはCDN）が
+// このAPIレスポンスをヒューリスティックにキャッシュしてしまい、Supabase側は最新でも
+// 画面が古い空き状況を表示し続ける事故が発生（西船橋店で目視確認・リロードで解消）。
+// 空き状況は1日に何度も変動するため、明示的にキャッシュ禁止を指示する。
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const dateStr = searchParams.get('date') || format(new Date(), 'yyyy-MM-dd');
@@ -16,8 +23,15 @@ export async function GET(request: NextRequest) {
 
   const supabaseRooms = await getRoomsWithSlotsFromSupabase(dateStr, area);
 
-  return NextResponse.json({
-    source: 'supabase',
-    data: supabaseRooms || [],
-  });
+  return NextResponse.json(
+    {
+      source: 'supabase',
+      data: supabaseRooms || [],
+    },
+    {
+      headers: {
+        'Cache-Control': 'no-store, must-revalidate',
+      },
+    }
+  );
 }

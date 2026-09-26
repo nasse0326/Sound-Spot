@@ -134,6 +134,10 @@ flowchart TD
 > `scripts/lib/id-utils.ts`の`toUUID(canonicalId)`に採番方式を一本化し、各クローラー（Gateway・Penta等に存在した二重プレフィックスのバグも含め）が使う`canonicalId`文字列と、`supabase/seed.sql`が`rooms.id`を生成する際の入力文字列を完全に一致させた。今後、部屋を追加・変更する際は各スタジオのマスターデータ（`src/config/noah-master.ts`や各`*-real.json`）の`id`フィールドを変更したら、`supabase/seed.sql`側も対応する`toUUID(id)`で再生成すること。
 > 併せて、PostgRESTの1クエリ最大1000行制限により1日分のスロットが1000件を超える場合にデータが欠落する問題（`src/lib/supabase/api.ts`）も`range`によるページングで解消した。
 
+> **`/api/studios` に明示的なキャッシュ禁止ヘッダーを追加（2026-09-26）**:
+> STUDIO SUN 西船橋店で、Supabase側は最新の空き状況（24時間分すべて正常）にもかかわらず、本番サイト（Cloudflare）の画面が古いデータ（未取得＝「ー」表示）を表示し続ける事象が発生。ブラウザで再読み込みすると即座に正しいデータへ戻ったため、原因は`/api/studios`のレスポンスに`Cache-Control`が一切設定されておらず、ブラウザ側がヒューリスティックにレスポンスをキャッシュしていたことと判明。
+> `src/app/api/studios/route.ts`に`export const dynamic = 'force-dynamic'`と`Cache-Control: no-store, must-revalidate`ヘッダーを追加し、空き状況データ（1日に何度も変動する動的データ）がブラウザ・CDNいずれにもキャッシュされないよう明示した。
+
 ---
 
 ## 4. スタジオ別データ仕様・連携方針
