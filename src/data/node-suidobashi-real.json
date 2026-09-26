@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T13:11:23.848Z",
+  "updatedAt": "2026-09-26T16:41:29.997Z",
   "rooms": [
     {
       "id": "node-suidobashi-201st",
@@ -1307,13 +1307,13 @@
           "id": "node-1-201st-2026-10-12-1800",
           "start_time": "2026-10-12T18:00:00+09:00",
           "end_time": "2026-10-12T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-201st-2026-10-12-1900",
           "start_time": "2026-10-12T19:00:00+09:00",
           "end_time": "2026-10-12T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-201st-2026-10-12-2000",
@@ -3597,13 +3597,13 @@
           "id": "node-1-301st-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-301st-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-301st-2026-09-27-2200",
@@ -4011,19 +4011,19 @@
           "id": "node-1-301st-2026-10-03-1100",
           "start_time": "2026-10-03T11:00:00+09:00",
           "end_time": "2026-10-03T12:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-1-301st-2026-10-03-1200",
           "start_time": "2026-10-03T12:00:00+09:00",
           "end_time": "2026-10-03T13:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-1-301st-2026-10-03-1300",
           "start_time": "2026-10-03T13:00:00+09:00",
           "end_time": "2026-10-03T14:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-1-301st-2026-10-03-1400",
@@ -4053,13 +4053,13 @@
           "id": "node-1-301st-2026-10-03-1800",
           "start_time": "2026-10-03T18:00:00+09:00",
           "end_time": "2026-10-03T19:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-1-301st-2026-10-03-1900",
           "start_time": "2026-10-03T19:00:00+09:00",
           "end_time": "2026-10-03T20:00:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "node-1-301st-2026-10-03-2000",
@@ -4119,13 +4119,13 @@
           "id": "node-1-301st-2026-10-04-1600",
           "start_time": "2026-10-04T16:00:00+09:00",
           "end_time": "2026-10-04T17:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-301st-2026-10-04-1700",
           "start_time": "2026-10-04T17:00:00+09:00",
           "end_time": "2026-10-04T18:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-301st-2026-10-04-1800",
@@ -5393,7 +5393,7 @@
           "id": "node-1-302st-2026-09-28-1900",
           "start_time": "2026-09-28T19:00:00+09:00",
           "end_time": "2026-09-28T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-302st-2026-09-28-2000",
@@ -6323,13 +6323,13 @@
           "id": "node-1-302st-2026-10-10-1800",
           "start_time": "2026-10-10T18:00:00+09:00",
           "end_time": "2026-10-10T19:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-302st-2026-10-10-1900",
           "start_time": "2026-10-10T19:00:00+09:00",
           "end_time": "2026-10-10T20:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-302st-2026-10-10-2000",
@@ -10709,31 +10709,31 @@
           "id": "node-1-203st-2026-09-30-1730",
           "start_time": "2026-09-30T17:30:00+09:00",
           "end_time": "2026-09-30T18:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-203st-2026-09-30-1830",
           "start_time": "2026-09-30T18:30:00+09:00",
           "end_time": "2026-09-30T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-203st-2026-09-30-1930",
           "start_time": "2026-09-30T19:30:00+09:00",
           "end_time": "2026-09-30T20:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-203st-2026-09-30-2030",
           "start_time": "2026-09-30T20:30:00+09:00",
           "end_time": "2026-09-30T21:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-203st-2026-09-30-2130",
           "start_time": "2026-09-30T21:30:00+09:00",
           "end_time": "2026-09-30T22:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-203st-2026-09-30-2230",
@@ -13965,19 +13965,19 @@
           "id": "node-1-303st-2026-09-28-1130",
           "start_time": "2026-09-28T11:30:00+09:00",
           "end_time": "2026-09-28T12:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-303st-2026-09-28-1230",
           "start_time": "2026-09-28T12:30:00+09:00",
           "end_time": "2026-09-28T13:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-303st-2026-09-28-1330",
           "start_time": "2026-09-28T13:30:00+09:00",
           "end_time": "2026-09-28T14:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "node-1-303st-2026-09-28-1430",

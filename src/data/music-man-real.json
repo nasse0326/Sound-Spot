@@ -122,7 +122,7 @@
           "id": "slot-musicman-lst-slot-Lst-2026-09-26-2330",
           "start_time": "2026-09-26T23:30:00+09:00",
           "end_time": "2026-09-27T00:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-lst-slot-Lst-2026-09-26-0030",
@@ -2254,7 +2254,7 @@
           "id": "slot-musicman-3-lst-slot-3-Lst-2026-09-26-2330",
           "start_time": "2026-09-26T23:30:00+09:00",
           "end_time": "2026-09-27T00:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-lst-slot-3-Lst-2026-09-26-0030",
@@ -2320,7 +2320,7 @@
           "id": "slot-musicman-3-lst-slot-3-Lst-2026-09-27-1830",
           "start_time": "2026-09-27T18:30:00+09:00",
           "end_time": "2026-09-27T19:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-lst-slot-3-Lst-2026-09-27-1930",
@@ -4386,7 +4386,7 @@
           "id": "slot-musicman-bst-slot-Bst-2026-09-26-2330",
           "start_time": "2026-09-26T23:30:00+09:00",
           "end_time": "2026-09-27T00:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-bst-slot-Bst-2026-09-26-0030",
@@ -6518,7 +6518,7 @@
           "id": "slot-musicman-3-bst-slot-3-Bst-2026-09-26-2330",
           "start_time": "2026-09-26T23:30:00+09:00",
           "end_time": "2026-09-27T00:30:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-bst-slot-3-Bst-2026-09-26-0030",
@@ -7232,7 +7232,7 @@
           "id": "slot-musicman-3-bst-slot-3-Bst-2026-10-04-1430",
           "start_time": "2026-10-04T14:30:00+09:00",
           "end_time": "2026-10-04T15:30:00+09:00",
-          "status": "BOOKED"
+          "status": "AVAILABLE"
         },
         {
           "id": "slot-musicman-3-bst-slot-3-Bst-2026-10-04-1530",
@@ -8656,7 +8656,7 @@
           "id": "slot-musicman-gst-slot-Gst-2026-09-26-0000",
           "start_time": "2026-09-27T00:00:00+09:00",
           "end_time": "2026-09-27T01:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-gst-slot-Gst-2026-09-27-0900",
@@ -10789,7 +10789,7 @@
           "id": "slot-musicman-3-gst-slot-3-Gst-2026-09-26-0000",
           "start_time": "2026-09-27T00:00:00+09:00",
           "end_time": "2026-09-27T01:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-gst-slot-3-Gst-2026-09-27-0900",
@@ -11827,13 +11827,13 @@
           "id": "slot-musicman-3-gst-slot-3-Gst-2026-10-07-2100",
           "start_time": "2026-10-07T21:00:00+09:00",
           "end_time": "2026-10-07T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-gst-slot-3-Gst-2026-10-07-2200",
           "start_time": "2026-10-07T22:00:00+09:00",
           "end_time": "2026-10-07T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-gst-slot-3-Gst-2026-10-07-2300",
@@ -12921,7 +12921,7 @@
           "id": "slot-musicman-ast-slot-Ast-2026-09-26-0000",
           "start_time": "2026-09-27T00:00:00+09:00",
           "end_time": "2026-09-27T01:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-ast-slot-Ast-2026-09-27-0900",
@@ -15053,7 +15053,7 @@
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-09-26-0000",
           "start_time": "2026-09-27T00:00:00+09:00",
           "end_time": "2026-09-27T01:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-09-27-0900",
@@ -16757,25 +16757,25 @@
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-10-14-2000",
           "start_time": "2026-10-14T20:00:00+09:00",
           "end_time": "2026-10-14T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-10-14-2100",
           "start_time": "2026-10-14T21:00:00+09:00",
           "end_time": "2026-10-14T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-10-14-2200",
           "start_time": "2026-10-14T22:00:00+09:00",
           "end_time": "2026-10-14T23:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-10-14-2300",
           "start_time": "2026-10-14T23:00:00+09:00",
           "end_time": "2026-10-15T00:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-ast-slot-3-Ast-2026-10-14-0000",
@@ -17186,7 +17186,7 @@
           "id": "slot-musicman-cst-slot-Cst-2026-09-26-0000",
           "start_time": "2026-09-27T00:00:00+09:00",
           "end_time": "2026-09-27T01:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-cst-slot-Cst-2026-09-27-0900",
@@ -19319,7 +19319,7 @@
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-09-26-0000",
           "start_time": "2026-09-27T00:00:00+09:00",
           "end_time": "2026-09-27T01:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-09-27-0900",
@@ -19391,13 +19391,13 @@
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-09-27-2200",
@@ -21215,13 +21215,13 @@
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-10-16-2000",
           "start_time": "2026-10-16T20:00:00+09:00",
           "end_time": "2026-10-16T21:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-10-16-2100",
           "start_time": "2026-10-16T21:00:00+09:00",
           "end_time": "2026-10-16T22:00:00+09:00",
-          "status": "AVAILABLE"
+          "status": "BOOKED"
         },
         {
           "id": "slot-musicman-3-cst-slot-3-Cst-2026-10-16-2200",
