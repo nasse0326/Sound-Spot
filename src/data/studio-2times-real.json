@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T00:06:14.913Z",
+  "updatedAt": "2026-09-26T08:01:19.853Z",
   "rooms": [
     {
       "id": "2times-ast",
@@ -63,7 +63,7 @@
           "id": "slot-2times-ast-2026-09-26-1200",
           "start_time": "2026-09-26T12:00:00+09:00",
           "end_time": "2026-09-26T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -84,7 +84,7 @@
           "id": "slot-2times-ast-2026-09-26-1500",
           "start_time": "2026-09-26T15:00:00+09:00",
           "end_time": "2026-09-26T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -105,7 +105,7 @@
           "id": "slot-2times-ast-2026-09-26-1800",
           "start_time": "2026-09-26T18:00:00+09:00",
           "end_time": "2026-09-26T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2600
         },
         {
@@ -2909,7 +2909,7 @@
           "id": "slot-2times-bst-2026-09-26-2000",
           "start_time": "2026-09-26T20:00:00+09:00",
           "end_time": "2026-09-26T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2350
         },
         {
@@ -5671,7 +5671,7 @@
           "id": "slot-2times-cst-2026-09-26-1600",
           "start_time": "2026-09-26T16:00:00+09:00",
           "end_time": "2026-09-26T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
@@ -6539,14 +6539,14 @@
           "id": "slot-2times-cst-2026-10-03-1400",
           "start_time": "2026-10-03T14:00:00+09:00",
           "end_time": "2026-10-03T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-10-03-1500",
           "start_time": "2026-10-03T15:00:00+09:00",
           "end_time": "2026-10-03T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
@@ -8303,14 +8303,14 @@
           "id": "slot-2times-cst-2026-10-17-1400",
           "start_time": "2026-10-17T14:00:00+09:00",
           "end_time": "2026-10-17T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-cst-2026-10-17-1500",
           "start_time": "2026-10-17T15:00:00+09:00",
           "end_time": "2026-10-17T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
@@ -8433,7 +8433,7 @@
           "id": "slot-2times-dst-2026-09-26-1200",
           "start_time": "2026-09-26T12:00:00+09:00",
           "end_time": "2026-09-26T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
@@ -8489,14 +8489,14 @@
           "id": "slot-2times-dst-2026-09-26-2000",
           "start_time": "2026-09-26T20:00:00+09:00",
           "end_time": "2026-09-26T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-26-2100",
           "start_time": "2026-09-26T21:00:00+09:00",
           "end_time": "2026-09-26T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
@@ -8594,14 +8594,14 @@
           "id": "slot-2times-dst-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {
           "id": "slot-2times-dst-2026-09-27-1800",
           "start_time": "2026-09-27T18:00:00+09:00",
           "end_time": "2026-09-27T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2100
         },
         {

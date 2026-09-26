@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日10:00よりWEB/電話受付開始 (1名770円/h、2名1,320円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-26T00:06:22.110Z",
+  "scraped_at": "2026-09-26T08:01:26.136Z",
   "dates_available": [
     "2026-09-26",
     "2026-09-27",
@@ -260,21 +260,21 @@
           "id": "slot-gw-machida-1st-slot-1st-2026-09-27-1100",
           "start_time": "2026-09-27T11:00:00+09:00",
           "end_time": "2026-09-27T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-1st-slot-1st-2026-09-27-1200",
           "start_time": "2026-09-27T12:00:00+09:00",
           "end_time": "2026-09-27T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-1st-slot-1st-2026-09-27-1300",
           "start_time": "2026-09-27T13:00:00+09:00",
           "end_time": "2026-09-27T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -302,7 +302,7 @@
           "id": "slot-gw-machida-1st-slot-1st-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -330,14 +330,14 @@
           "id": "slot-gw-machida-1st-slot-1st-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-1st-slot-1st-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -4138,14 +4138,14 @@
           "id": "slot-gw-machida-2st-slot-2st-2026-09-27-1230",
           "start_time": "2026-09-27T12:30:00+09:00",
           "end_time": "2026-09-27T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-2st-slot-2st-2026-09-27-1330",
           "start_time": "2026-09-27T13:30:00+09:00",
           "end_time": "2026-09-27T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -4194,7 +4194,7 @@
           "id": "slot-gw-machida-2st-slot-2st-2026-09-27-2030",
           "start_time": "2026-09-27T20:30:00+09:00",
           "end_time": "2026-09-27T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -5195,21 +5195,21 @@
           "id": "slot-gw-machida-2st-slot-2st-2026-10-03-1330",
           "start_time": "2026-10-03T13:30:00+09:00",
           "end_time": "2026-10-03T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-2st-slot-2st-2026-10-03-1430",
           "start_time": "2026-10-03T14:30:00+09:00",
           "end_time": "2026-10-03T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-2st-slot-2st-2026-10-03-1530",
           "start_time": "2026-10-03T15:30:00+09:00",
           "end_time": "2026-10-03T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -6791,7 +6791,7 @@
           "id": "slot-gw-machida-2st-slot-2st-2026-10-12-1630",
           "start_time": "2026-10-12T16:30:00+09:00",
           "end_time": "2026-10-12T17:30:00+09:00",
-          "status": "BOOKED",
+          "status": "AVAILABLE",
           "price": 2090
         },
         {
@@ -7994,7 +7994,7 @@
           "id": "slot-gw-machida-3st-slot-3st-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -8036,14 +8036,14 @@
           "id": "slot-gw-machida-3st-slot-3st-2026-09-27-1600",
           "start_time": "2026-09-27T16:00:00+09:00",
           "end_time": "2026-09-27T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-3st-slot-3st-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -8071,21 +8071,21 @@
           "id": "slot-gw-machida-3st-slot-3st-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-3st-slot-3st-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-3st-slot-3st-2026-09-27-2300",
           "start_time": "2026-09-27T23:00:00+09:00",
           "end_time": "2026-09-28T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -11865,14 +11865,14 @@
           "id": "slot-gw-machida-5st-slot-5st-2026-09-27-1030",
           "start_time": "2026-09-27T10:30:00+09:00",
           "end_time": "2026-09-27T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-5st-slot-5st-2026-09-27-1130",
           "start_time": "2026-09-27T11:30:00+09:00",
           "end_time": "2026-09-27T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -11900,28 +11900,28 @@
           "id": "slot-gw-machida-5st-slot-5st-2026-09-27-1530",
           "start_time": "2026-09-27T15:30:00+09:00",
           "end_time": "2026-09-27T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-5st-slot-5st-2026-09-27-1630",
           "start_time": "2026-09-27T16:30:00+09:00",
           "end_time": "2026-09-27T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-5st-slot-5st-2026-09-27-1730",
           "start_time": "2026-09-27T17:30:00+09:00",
           "end_time": "2026-09-27T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-5st-slot-5st-2026-09-27-1830",
           "start_time": "2026-09-27T18:30:00+09:00",
           "end_time": "2026-09-27T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -12271,21 +12271,21 @@
           "id": "slot-gw-machida-5st-slot-5st-2026-09-29-1830",
           "start_time": "2026-09-29T18:30:00+09:00",
           "end_time": "2026-09-29T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-5st-slot-5st-2026-09-29-1930",
           "start_time": "2026-09-29T19:30:00+09:00",
           "end_time": "2026-09-29T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-5st-slot-5st-2026-09-29-2030",
           "start_time": "2026-09-29T20:30:00+09:00",
           "end_time": "2026-09-29T21:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -15736,28 +15736,28 @@
           "id": "slot-gw-machida-6st-slot-6st-2026-09-27-1030",
           "start_time": "2026-09-27T10:30:00+09:00",
           "end_time": "2026-09-27T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-6st-slot-6st-2026-09-27-1130",
           "start_time": "2026-09-27T11:30:00+09:00",
           "end_time": "2026-09-27T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-6st-slot-6st-2026-09-27-1230",
           "start_time": "2026-09-27T12:30:00+09:00",
           "end_time": "2026-09-27T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-6st-slot-6st-2026-09-27-1330",
           "start_time": "2026-09-27T13:30:00+09:00",
           "end_time": "2026-09-27T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -15778,14 +15778,14 @@
           "id": "slot-gw-machida-6st-slot-6st-2026-09-27-1630",
           "start_time": "2026-09-27T16:30:00+09:00",
           "end_time": "2026-09-27T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-6st-slot-6st-2026-09-27-1730",
           "start_time": "2026-09-27T17:30:00+09:00",
           "end_time": "2026-09-27T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -19655,14 +19655,14 @@
           "id": "slot-gw-machida-7st-slot-7st-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-7st-slot-7st-2026-09-27-1800",
           "start_time": "2026-09-27T18:00:00+09:00",
           "end_time": "2026-09-27T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -23477,28 +23477,28 @@
           "id": "slot-gw-machida-8st-slot-8st-2026-09-27-1030",
           "start_time": "2026-09-27T10:30:00+09:00",
           "end_time": "2026-09-27T11:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-8st-slot-8st-2026-09-27-1130",
           "start_time": "2026-09-27T11:30:00+09:00",
           "end_time": "2026-09-27T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-8st-slot-8st-2026-09-27-1230",
           "start_time": "2026-09-27T12:30:00+09:00",
           "end_time": "2026-09-27T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
           "id": "slot-gw-machida-8st-slot-8st-2026-09-27-1330",
           "start_time": "2026-09-27T13:30:00+09:00",
           "end_time": "2026-09-27T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2310
         },
         {
@@ -27403,14 +27403,14 @@
           "id": "slot-gw-machida-9st-slot-9st-2026-09-27-1800",
           "start_time": "2026-09-27T18:00:00+09:00",
           "end_time": "2026-09-27T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-9st-slot-9st-2026-09-27-1900",
           "start_time": "2026-09-27T19:00:00+09:00",
           "end_time": "2026-09-27T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -27704,14 +27704,14 @@
           "id": "slot-gw-machida-9st-slot-9st-2026-09-29-1100",
           "start_time": "2026-09-29T11:00:00+09:00",
           "end_time": "2026-09-29T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-9st-slot-9st-2026-09-29-1200",
           "start_time": "2026-09-29T12:00:00+09:00",
           "end_time": "2026-09-29T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -28411,14 +28411,14 @@
           "id": "slot-gw-machida-9st-slot-9st-2026-10-03-1200",
           "start_time": "2026-10-03T12:00:00+09:00",
           "end_time": "2026-10-03T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
           "id": "slot-gw-machida-9st-slot-9st-2026-10-03-1300",
           "start_time": "2026-10-03T13:00:00+09:00",
           "end_time": "2026-10-03T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2090
         },
         {
@@ -31217,21 +31217,21 @@
           "id": "slot-gw-machida-10st-slot-10st-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
           "id": "slot-gw-machida-10st-slot-10st-2026-09-27-1100",
           "start_time": "2026-09-27T11:00:00+09:00",
           "end_time": "2026-09-27T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
           "id": "slot-gw-machida-10st-slot-10st-2026-09-27-1200",
           "start_time": "2026-09-27T12:00:00+09:00",
           "end_time": "2026-09-27T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2420
         },
         {
@@ -35145,7 +35145,7 @@
           "id": "slot-gw-machida-11st-slot-11st-2026-09-27-1830",
           "start_time": "2026-09-27T18:30:00+09:00",
           "end_time": "2026-09-27T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -35166,7 +35166,7 @@
           "id": "slot-gw-machida-11st-slot-11st-2026-09-27-2130",
           "start_time": "2026-09-27T21:30:00+09:00",
           "end_time": "2026-09-27T22:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -38981,21 +38981,21 @@
           "id": "slot-gw-machida-12st-slot-12st-2026-09-27-1330",
           "start_time": "2026-09-27T13:30:00+09:00",
           "end_time": "2026-09-27T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-12st-slot-12st-2026-09-27-1430",
           "start_time": "2026-09-27T14:30:00+09:00",
           "end_time": "2026-09-27T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
           "id": "slot-gw-machida-12st-slot-12st-2026-09-27-1530",
           "start_time": "2026-09-27T15:30:00+09:00",
           "end_time": "2026-09-27T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2530
         },
         {
@@ -42845,14 +42845,14 @@
           "id": "slot-gw-machida-13st-slot-13st-2026-09-27-1200",
           "start_time": "2026-09-27T12:00:00+09:00",
           "end_time": "2026-09-27T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-gw-machida-13st-slot-13st-2026-09-27-1300",
           "start_time": "2026-09-27T13:00:00+09:00",
           "end_time": "2026-09-27T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
@@ -42880,14 +42880,14 @@
           "id": "slot-gw-machida-13st-slot-13st-2026-09-27-1700",
           "start_time": "2026-09-27T17:00:00+09:00",
           "end_time": "2026-09-27T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {
           "id": "slot-gw-machida-13st-slot-13st-2026-09-27-1800",
           "start_time": "2026-09-27T18:00:00+09:00",
           "end_time": "2026-09-27T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2860
         },
         {

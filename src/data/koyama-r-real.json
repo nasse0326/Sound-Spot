@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T00:06:15.715Z",
+  "updatedAt": "2026-09-26T08:01:21.215Z",
   "rooms": [
     {
       "id": "koyama-r-1st",
@@ -253,14 +253,14 @@
           "id": "slot-koyama-r-1st-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
           "id": "slot-koyama-r-1st-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
@@ -631,14 +631,14 @@
           "id": "slot-koyama-r-1st-2026-09-30-2100",
           "start_time": "2026-09-30T21:00:00+09:00",
           "end_time": "2026-09-30T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
           "id": "slot-koyama-r-1st-2026-09-30-2200",
           "start_time": "2026-09-30T22:00:00+09:00",
           "end_time": "2026-09-30T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
@@ -3422,14 +3422,14 @@
           "id": "slot-koyama-r-2st-2026-09-30-2100",
           "start_time": "2026-09-30T21:00:00+09:00",
           "end_time": "2026-09-30T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
           "id": "slot-koyama-r-2st-2026-09-30-2200",
           "start_time": "2026-09-30T22:00:00+09:00",
           "end_time": "2026-09-30T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -4766,21 +4766,21 @@
           "id": "slot-koyama-r-2st-2026-10-11-1500",
           "start_time": "2026-10-11T15:00:00+09:00",
           "end_time": "2026-10-11T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
           "id": "slot-koyama-r-2st-2026-10-11-1600",
           "start_time": "2026-10-11T16:00:00+09:00",
           "end_time": "2026-10-11T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
           "id": "slot-koyama-r-2st-2026-10-11-1700",
           "start_time": "2026-10-11T17:00:00+09:00",
           "end_time": "2026-10-11T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2200
         },
         {
@@ -5841,7 +5841,7 @@
           "id": "slot-koyama-r-3st-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -6548,28 +6548,28 @@
           "id": "slot-koyama-r-3st-2026-10-03-1500",
           "start_time": "2026-10-03T15:00:00+09:00",
           "end_time": "2026-10-03T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
           "id": "slot-koyama-r-3st-2026-10-03-1600",
           "start_time": "2026-10-03T16:00:00+09:00",
           "end_time": "2026-10-03T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
           "id": "slot-koyama-r-3st-2026-10-03-1700",
           "start_time": "2026-10-03T17:00:00+09:00",
           "end_time": "2026-10-03T18:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
           "id": "slot-koyama-r-3st-2026-10-03-1800",
           "start_time": "2026-10-03T18:00:00+09:00",
           "end_time": "2026-10-03T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -7416,7 +7416,7 @@
           "id": "slot-koyama-r-3st-2026-10-10-1300",
           "start_time": "2026-10-10T13:00:00+09:00",
           "end_time": "2026-10-10T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2000
         },
         {
@@ -8688,21 +8688,21 @@
           "id": "slot-koyama-r-4st-2026-09-28-1200",
           "start_time": "2026-09-28T12:00:00+09:00",
           "end_time": "2026-09-28T13:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-koyama-r-4st-2026-09-28-1300",
           "start_time": "2026-09-28T13:00:00+09:00",
           "end_time": "2026-09-28T14:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-koyama-r-4st-2026-09-28-1400",
           "start_time": "2026-09-28T14:00:00+09:00",
           "end_time": "2026-09-28T15:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -11211,7 +11211,7 @@
           "id": "slot-koyama-r-piano-2026-09-26-1000",
           "start_time": "2026-09-26T10:00:00+09:00",
           "end_time": "2026-09-26T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -11407,21 +11407,21 @@
           "id": "slot-koyama-r-piano-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-piano-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-piano-2026-09-27-2200",
           "start_time": "2026-09-27T22:00:00+09:00",
           "end_time": "2026-09-27T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -11519,14 +11519,14 @@
           "id": "slot-koyama-r-piano-2026-09-28-1800",
           "start_time": "2026-09-28T18:00:00+09:00",
           "end_time": "2026-09-28T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-piano-2026-09-28-1900",
           "start_time": "2026-09-28T19:00:00+09:00",
           "end_time": "2026-09-28T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -14000,14 +14000,14 @@
           "id": "slot-koyama-r-lesson-2026-09-26-1000",
           "start_time": "2026-09-26T10:00:00+09:00",
           "end_time": "2026-09-26T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-09-26-1100",
           "start_time": "2026-09-26T11:00:00+09:00",
           "end_time": "2026-09-26T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -14077,14 +14077,14 @@
           "id": "slot-koyama-r-lesson-2026-09-26-2100",
           "start_time": "2026-09-26T21:00:00+09:00",
           "end_time": "2026-09-26T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-09-26-2200",
           "start_time": "2026-09-26T22:00:00+09:00",
           "end_time": "2026-09-26T23:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -14196,14 +14196,14 @@
           "id": "slot-koyama-r-lesson-2026-09-27-2000",
           "start_time": "2026-09-27T20:00:00+09:00",
           "end_time": "2026-09-27T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-09-27-2100",
           "start_time": "2026-09-27T21:00:00+09:00",
           "end_time": "2026-09-27T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
@@ -15673,14 +15673,14 @@
           "id": "slot-koyama-r-lesson-2026-10-09-1500",
           "start_time": "2026-10-09T15:00:00+09:00",
           "end_time": "2026-10-09T16:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
           "id": "slot-koyama-r-lesson-2026-10-09-1600",
           "start_time": "2026-10-09T16:00:00+09:00",
           "end_time": "2026-10-09T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1400
         },
         {
