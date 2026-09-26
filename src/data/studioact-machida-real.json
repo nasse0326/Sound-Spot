@@ -16,7 +16,7 @@
   "group_booking_lead_months": 2,
   "solo_booking_rule": "前日よりWEB予約可能 (1名700円/h、2名1,400円/h)",
   "solo_booking_lead_hours": 24,
-  "scraped_at": "2026-09-26T08:01:26.707Z",
+  "scraped_at": "2026-09-26T13:11:05.222Z",
   "dates_available": [
     "2026-09-26",
     "2026-09-27",
@@ -4252,7 +4252,7 @@
           "id": "slot-studioact-machida-202st-slot-202st-2026-10-02-1600",
           "start_time": "2026-10-02T16:00:00+09:00",
           "end_time": "2026-10-02T17:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -6730,7 +6730,7 @@
           "id": "slot-studioact-machida-203st-slot-203st-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -13233,21 +13233,21 @@
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-27-0900",
           "start_time": "2026-09-27T09:00:00+09:00",
           "end_time": "2026-09-27T10:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-27-1000",
           "start_time": "2026-09-27T10:00:00+09:00",
           "end_time": "2026-09-27T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
           "id": "slot-studioact-machida-205st-slot-205st-2026-09-27-1100",
           "start_time": "2026-09-27T11:00:00+09:00",
           "end_time": "2026-09-27T12:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2700
         },
         {
@@ -16503,14 +16503,14 @@
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-27-1115",
           "start_time": "2026-09-27T11:15:00+09:00",
           "end_time": "2026-09-27T12:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-301st-slot-301st-2026-09-27-1215",
           "start_time": "2026-09-27T12:15:00+09:00",
           "end_time": "2026-09-27T13:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -22922,28 +22922,28 @@
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-26-1915",
           "start_time": "2026-09-26T19:15:00+09:00",
           "end_time": "2026-09-26T20:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-26-2015",
           "start_time": "2026-09-26T20:15:00+09:00",
           "end_time": "2026-09-26T21:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-26-2115",
           "start_time": "2026-09-26T21:15:00+09:00",
           "end_time": "2026-09-26T22:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-303st-slot-303st-2026-09-26-2215",
           "start_time": "2026-09-26T22:15:00+09:00",
           "end_time": "2026-09-26T23:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -26276,14 +26276,14 @@
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-27-1215",
           "start_time": "2026-09-27T12:15:00+09:00",
           "end_time": "2026-09-27T13:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-304st-slot-304st-2026-09-27-1315",
           "start_time": "2026-09-27T13:15:00+09:00",
           "end_time": "2026-09-27T14:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -29447,14 +29447,14 @@
           "id": "slot-studioact-machida-305st-slot-305st-2026-09-26-2115",
           "start_time": "2026-09-26T21:15:00+09:00",
           "end_time": "2026-09-26T22:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
           "id": "slot-studioact-machida-305st-slot-305st-2026-09-26-2215",
           "start_time": "2026-09-26T22:15:00+09:00",
           "end_time": "2026-09-26T23:15:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2400
         },
         {
@@ -33812,28 +33812,28 @@
           "id": "slot-studioact-machida-101st-slot-101st-2026-10-04-1130",
           "start_time": "2026-10-04T11:30:00+09:00",
           "end_time": "2026-10-04T12:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-10-04-1230",
           "start_time": "2026-10-04T12:30:00+09:00",
           "end_time": "2026-10-04T13:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-10-04-1330",
           "start_time": "2026-10-04T13:30:00+09:00",
           "end_time": "2026-10-04T14:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-101st-slot-101st-2026-10-04-1430",
           "start_time": "2026-10-04T14:30:00+09:00",
           "end_time": "2026-10-04T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -36083,14 +36083,14 @@
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-27-1730",
           "start_time": "2026-09-27T17:30:00+09:00",
           "end_time": "2026-09-27T18:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-27-1830",
           "start_time": "2026-09-27T18:30:00+09:00",
           "end_time": "2026-09-27T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -36237,14 +36237,14 @@
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-28-1830",
           "start_time": "2026-09-28T18:30:00+09:00",
           "end_time": "2026-09-28T19:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-102st-slot-102st-2026-09-28-1930",
           "start_time": "2026-09-28T19:30:00+09:00",
           "end_time": "2026-09-28T20:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -39320,7 +39320,7 @@
           "id": "slot-studioact-machida-103st-slot-103st-2026-09-27-1430",
           "start_time": "2026-09-27T14:30:00+09:00",
           "end_time": "2026-09-27T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
@@ -44636,21 +44636,21 @@
           "id": "slot-studioact-machida-104st-slot-104st-2026-10-11-1430",
           "start_time": "2026-10-11T14:30:00+09:00",
           "end_time": "2026-10-11T15:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-10-11-1530",
           "start_time": "2026-10-11T15:30:00+09:00",
           "end_time": "2026-10-11T16:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {
           "id": "slot-studioact-machida-104st-slot-104st-2026-10-11-1630",
           "start_time": "2026-10-11T16:30:00+09:00",
           "end_time": "2026-10-11T17:30:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2800
         },
         {

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T08:01:20.341Z",
+  "updatedAt": "2026-09-26T13:10:57.130Z",
   "rooms": [
     {
       "id": "dom-ast",
@@ -161,7 +161,7 @@
           "id": "slot-dom-ast-2026-09-27-0800",
           "start_time": "2026-09-27T08:00:00+09:00",
           "end_time": "2026-09-27T09:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -749,14 +749,14 @@
           "id": "slot-dom-ast-2026-10-01-2000",
           "start_time": "2026-10-01T20:00:00+09:00",
           "end_time": "2026-10-01T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-dom-ast-2026-10-01-2100",
           "start_time": "2026-10-01T21:00:00+09:00",
           "end_time": "2026-10-01T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -868,21 +868,21 @@
           "id": "slot-dom-ast-2026-10-02-1900",
           "start_time": "2026-10-02T19:00:00+09:00",
           "end_time": "2026-10-02T20:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-dom-ast-2026-10-02-2000",
           "start_time": "2026-10-02T20:00:00+09:00",
           "end_time": "2026-10-02T21:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
           "id": "slot-dom-ast-2026-10-02-2100",
           "start_time": "2026-10-02T21:00:00+09:00",
           "end_time": "2026-10-02T22:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -1939,7 +1939,7 @@
           "id": "slot-dom-ast-2026-10-11-1000",
           "start_time": "2026-10-11T10:00:00+09:00",
           "end_time": "2026-10-11T11:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 1900
         },
         {
@@ -2931,28 +2931,28 @@
           "id": "slot-dom-bst-2026-09-26-2300",
           "start_time": "2026-09-26T23:00:00+09:00",
           "end_time": "2026-09-27T00:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
           "id": "slot-dom-bst-2026-09-27-0600",
           "start_time": "2026-09-27T06:00:00+09:00",
           "end_time": "2026-09-27T07:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
           "id": "slot-dom-bst-2026-09-27-0700",
           "start_time": "2026-09-27T07:00:00+09:00",
           "end_time": "2026-09-27T08:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
           "id": "slot-dom-bst-2026-09-27-0800",
           "start_time": "2026-09-27T08:00:00+09:00",
           "end_time": "2026-09-27T09:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
@@ -4786,7 +4786,7 @@
           "id": "slot-dom-bst-2026-10-11-1800",
           "start_time": "2026-10-11T18:00:00+09:00",
           "end_time": "2026-10-11T19:00:00+09:00",
-          "status": "AVAILABLE",
+          "status": "BOOKED",
           "price": 2300
         },
         {
