@@ -345,6 +345,16 @@ flowchart TD
   - 意図的に4.9節記載のGitHub Actions側の巡回時刻（06:33/11:48/17:18/21:33）とも、キリの良い分（00/15/30/45分）とも重ならない半端な分に設定し、bot的な規則性を避けている。
   - **2026-09-24時点でBAN対策のため、意図的に低頻度（1日2回）からスタート**。GitHub Actions側の他店舗（1日4回）より少ない頻度。様子を見て頻度調整の可能性あり。
 - **Cookie保持方針のバグ修正**: `scripts/lib/noah-fetcher.ts`の`fetchNoahStoreDays()`にて、店舗内の同一部屋に対する5週分（月曜起点）のループ中、途中でセッション自動修復（再ログイン）が発生しても、直後の週の取得には修復前の古いCookie（`effectiveCookie`が`const`で固定されていた）を使い続けてしまい、同一部屋だけで最大5回連続の無駄な再ログインが発生するバグを修正（`effectiveCookie`を`let`にし、Cookie修復のたびに反映するよう変更）。無駄なログインリクエストの削減はBANリスク低減に直結する。
+- **プロジェクト配置場所の移動（2026-09-25）**: リポジトリが`~/Downloads/Antigravity/...`配下にあったため、macOSのTCC（プライバシー保護）機能によりDownloadsフォルダへの`launchd`バックグラウンドアクセスが`Operation not permitted`でブロックされ、スケジュール実行が3回連続で失敗する障害が発生（ターミナルからの手動実行は許可されるため気づきにくい）。`~/Developer/006_Band Studio Search`へプロジェクト全体を移動し、launchd plist・`scripts/run-noah-cron.sh`のパスを追従させて解消した。TCC保護対象フォルダ（Desktop・Documents・Downloads・iCloud Drive）にプロジェクトを置くと同種の問題が再発するため、以後はこれらのフォルダを避けること。
+
+### 4.13 webtoru.com系3店舗: ローカルBot自動巡回（Mac mini常時稼働）
+- **背景**: 2026-09-26、webtoru.com（STUDIO SUN西船橋店・Studio DIVO亀戸・スタジオ ダグアウト2の3店舗が使用するASP）がGitHub ActionsのランナーIPを403で一律ブロックするようになり、22日間巡回対象の全日程で取得0件という障害が発生（西船橋店の巡回窓の一番先の日付から順に「未取得」が広がる形でユーザーが気付いた）。このMac miniの自宅IPからは正常に200 OKで疎通することを確認済み。挙動検知による狙い撃ちというより、GitHub Actions等データセンターIPレンジに対するインフラ側の機械的ブロックである可能性が高い（根拠: 22日分全リクエストが即座かつ一律403・無関係な3店舗で同時発生・全く別サービスのNOAHでも同型の事象が既発生）。
+- **対応**: NOAH（4.12節）と同じ「GitHub Actionsではスキップしローカル実行に切り替える」パターンを踏襲。
+  - `scripts/crawl-studios.ts`の`crawlStudioSunNishiFunabashi()`・`crawlStudioDivoKameido()`・`crawlStudioDugout2Matsudo()`各関数の冒頭に`GITHUB_ACTIONS==='true'`時の早期returnを追加。
+  - 単独実行エントリポイント`scripts/crawl-webtoru-only.ts`（`npm run crawl:webtoru`）を新設。
+  - ラッパースクリプト`scripts/run-webtoru-cron.sh` + launchd plist `~/Library/LaunchAgents/com.soundspot.webtoru-crawler.plist`。
+- **巡回頻度・時刻**: **GitHub Actionsと同じ1日4回、06:33/11:48/17:18/21:33 (JST)**。今回のブロックは挙動検知型ではなくIPレンジの機械的ブロックと推測されるため、NOAHのような頻度抑制（BAN対策）は不要と判断し、他店舗と同じ鮮度を維持する頻度とした。
+- **リクエスト間隔の緩和**: `scripts/lib/webtoru-fetcher.ts`の`fetchWebtoruShopDays()`内、1日分取得ごとの待機時間を100ms→**1000ms**に引き上げ。ローカル実行に移行したことでGitHub Actionsの実行時間制約が無くなったため、相手サーバー負荷を抑える方向に倒した（ユーザー指示）。
 
 ---
 
@@ -802,7 +812,9 @@ flowchart TD
 | `src/lib/studio-bayd-converter.ts` | コンバーター | STUDIO BAYD 高円寺店の実データJSONを `RoomWithSlots` 形式へ正規化変換するロジック |
 | `scripts/lib/wnspace-fetcher.ts` | フェッチャー | WnSpaceMusic（STUDIO BAYDチェーン等）向け。ログイン不要の公開REST API (`/api/studios/bookings`) から確定予約一覧を直接取得し、24時間分の空き/予約済みを算出する（HTMLスクレイピング不要） |
 | `src/data/studiosun-nishifunabashi-real.json` | データ | STUDIO SUN 西船橋店（webtoru.com自動同期）全7部屋・22日間の実データ |
-| `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する。グリッドの起点時刻（06:00開始/10:00開始等）は店舗ごとに異なるため、レスポンス内のヘッダーラベルから都度自動検出する |
+| `scripts/lib/webtoru-fetcher.ts` | フェッチャー | webtoru.com（ウェブトル）向け。ログイン不要のPOST APIから日別タイムラインHTMLを取得し、絶対配置バー（予約済み/営業時間外）の位置から空き状況を算出する。グリッドの起点時刻（06:00開始/10:00開始等）は店舗ごとに異なるため、レスポンス内のヘッダーラベルから都度自動検出する。2026-09-26以降GitHub ActionsブロックによりMac miniローカル実行限定（4.13節） |
+| `scripts/crawl-webtoru-only.ts` | スクリプト | **webtoru.com系3店舗（西船橋・亀戸・松戸ダグアウト2）単独巡回エントリポイント**（`npm run crawl:webtoru`）。GitHub ActionsのIPブロックのためローカル実行専用（4.13節） |
+| `scripts/run-webtoru-cron.sh` | スクリプト (Mac mini launchd用) | **webtoru系ローカルBot巡回のラッパー**。`~/Library/LaunchAgents/com.soundspot.webtoru-crawler.plist`からGitHub Actionsと同じ1日4回(06:33/11:48/17:18/21:33 JST)起動され、`npm run crawl:webtoru`を実行し`logs/webtoru-cron.log`へ記録（4.13節） |
 | `src/lib/funabashi-converter.ts` | コンバーター | STUDIO SUN 西船橋店の実データJSONを `RoomWithSlots` 形式へ正規化変換、およびスタジオパックス船橋店（会員ログイン必須のため静的リスティング、10部屋）を定義するロジック |
 | `src/data/yokohama-saila-real.json` | データ | ヨコハマ・セーラスタジオ（Reserve1.jp自動同期）全4部屋・22日間の実データ |
 | `src/data/cloud9-yokohama-kitaguchi-real.json` | データ | クラウドナインスタジオ横浜北口店（cloud9-web.jp公開API自動同期）全11部屋・22日間の実データ |

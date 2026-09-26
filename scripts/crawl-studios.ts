@@ -1384,6 +1384,11 @@ export async function crawlHmvp(baseDate: Date, dayCount: number = CRAWL_DAY_COU
 // 会員ログイン必須のためクロール非対応・静的リスティングのみ、詳細はfunabashi-converter.ts）。
 // -------------------------------------------------------------
 export async function crawlStudioSunNishiFunabashi(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    console.log('\n⏭️ [webtoru Skip] GitHub Actionsのランナーはwebtoru.comからIPブロック(403)を受けるため、'
+      + 'STUDIO SUN 西船橋店の巡回はGitHub上では実行しません。ローカル環境から `npm run crawl:webtoru` を実行してください。');
+    return;
+  }
   await crawlStudiOlKoenjiShop('STUDIO SUN 西船橋店', fetchStudioSunNishiFunabashiDays, 'studiosun-nishifunabashi-real', baseDate, dayCount, 'webtoru.com');
 }
 
@@ -1405,6 +1410,11 @@ export async function crawlCloud9YokohamaKitaguchi(baseDate: Date, dayCount: num
 //   カバーできるためorpheusrecords.infoを採用（詳細はorpheus-fetcher.ts）。
 // -------------------------------------------------------------
 export async function crawlStudioDivoKameido(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    console.log('\n⏭️ [webtoru Skip] GitHub Actionsのランナーはwebtoru.comからIPブロック(403)を受けるため、'
+      + 'Studio DIVO 亀戸の巡回はGitHub上では実行しません。ローカル環境から `npm run crawl:webtoru` を実行してください。');
+    return;
+  }
   await crawlStudiOlKoenjiShop('Studio DIVO 亀戸', fetchStudioDivoKameidoDays, 'studio-divo-kameido-real', baseDate, dayCount, 'webtoru.com');
 }
 
@@ -1431,6 +1441,11 @@ export async function crawlMusicBankMatsudo(baseDate: Date, dayCount: number = C
 }
 
 export async function crawlStudioDugout2Matsudo(baseDate: Date, dayCount: number = CRAWL_DAY_COUNT) {
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    console.log('\n⏭️ [webtoru Skip] GitHub Actionsのランナーはwebtoru.comからIPブロック(403)を受けるため、'
+      + 'スタジオ ダグアウト2の巡回はGitHub上では実行しません。ローカル環境から `npm run crawl:webtoru` を実行してください。');
+    return;
+  }
   await crawlStudiOlKoenjiShop('スタジオ ダグアウト2', fetchStudioDugout2MatsudoDays, 'studio-dugout2-matsudo-real', baseDate, dayCount, 'webtoru.com');
 }
 

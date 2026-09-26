@@ -122,7 +122,10 @@ export async function fetchWebtoruShopDays(
         }
       }
 
-      await new Promise((r) => setTimeout(r, 100));
+      // 2026-09-26: webtoru.comがGitHub ActionsのIPを403で一律ブロックするようになったため
+      // ローカル実行（Mac mini）専用に移行。GitHub Actionsの実行時間制約が無くなったので、
+      // 相手サーバー負荷を抑えるためリクエスト間隔を100ms→1000msへ引き上げた。
+      await new Promise((r) => setTimeout(r, 1000));
     } catch (err: any) {
       console.error(`  ❌ [webtoru] ${storeLabel} ${dateStr} 取得エラー:`, err.message);
     }
